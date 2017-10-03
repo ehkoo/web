@@ -1,0 +1,39 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Lato, Roboto, 'Source Sans Pro', Ubuntu, Droid Sans,
+    Helvetica Neue, sans-serif;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  max-width: 100%;
+}
+
+.translate-y-m50 {
+  transform: translateY(-50%);
+}
+
+.last-child-no-border > *:last-child {
+  border: none;
+}
+
+.gradient-blue-violet {
+  background: #3494e6;
+  background: linear-gradient(to top, #ec6ead, #3494e6);
+}
+
+.gradient-green-cyan {
+  background: #67b26f;
+  background: linear-gradient(to top, #4ca2cd, #67b26f);
+}
+
+.gradient-pink-cyan {
+  background: #be93c5;
+  background: linear-gradient(to top, #7bc6cc, #be93c5);
+}

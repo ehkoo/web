@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include "layouts/el/head.njk" %}
+  <title>{{ title }}</title>
+</head>
+<body class="bg-near-white dark-gray">
+  <header class="ph3 bb b--light-gray bg-white">
+    <div class="mw8 mw9-l center flex items-center">
+      <a href="/" class="pa2 mw3"><img src="/img/logo.png" alt="Ehkoo" class="br1"></a>
+      <ul class="list f6">
+        <li class="dib mh3"><a href="/gioi-thieu" class="near-black fw3 ttu f5">Giới Thiệu</a></li>
+        <li class="dib mh3"><a href="/cong-tac" class="near-black fw3 ttu f5">Cộng tác</a></li>
+        <li class="dib mh3"><a href="/lien-he" class="near-black fw3 ttu f5">Liên hệ</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="mw8 mw9-l center">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="mw8 mw9-l mt5 mb3 f6 gray center ph3">
+    <p class="lh-copy">&copy; 2017 Ehkoo. Tác giả giữ bản quyền.</p>
+    <p class="lh-copy">Ghi rõ nguồn "ehkoo.com" khi phát hành lại nội dung từ website này. Không sử dụng cho mục đích thương mại khi chưa có sự đồng ý chính thức.</p>
+  </footer>
+</body>
+</html>
