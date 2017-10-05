@@ -33,6 +33,9 @@ module.exports = Metalsmith(__dirname)
         sortBy: 'date',
         refer: false,
         reverse: true
+      },
+      pages: {
+        pattern: 'pages/**/*.md'
       }
     })
   )
@@ -52,7 +55,13 @@ module.exports = Metalsmith(__dirname)
   .use(wordcount())
   .use(
     permalinks({
-      pattern: 'bai-viet/:slug'
+      pattern: 'bai-viet/:slug',
+      linksets: [
+        {
+          match: { collection: 'pages' },
+          pattern: ':slug'
+        }
+      ]
     })
   )
   .use(layouts('nunjucks'))

@@ -1,0 +1,26 @@
+{% extends "layouts/index.njk" %}
+
+{% block content %}
+<div class="flex flex-column flex-row-ns pa3">
+  <div class="w-70-m w-60-l pr3-ns">
+    <article class="bg-white pv3 ph4">
+      <h1 class="blue f2 mb4">{{ title }}</h1>
+      <div class="content lh-copy dark-gray f4">{{ contents | safe }}</div>
+    </article>
+  </div>
+
+  <div class="w-30-m w-40-l">
+    <div class="flex flex-column flex-row-ns top-1 sticky">
+      <div class="w-50-l mr3-ns">
+        {% include "layouts/el/widgets/subscription.njk" %}
+      </div>
+
+      <div class="w-50-l">
+        {% include "layouts/el/widgets/social.njk" %}
+        {% include "layouts/el/widgets/recruit.njk" %}
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
