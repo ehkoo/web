@@ -25,6 +25,10 @@ svg {
   border: none;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .hljs {
   border-radius: 0.15rem;
   font-size: 1rem;
