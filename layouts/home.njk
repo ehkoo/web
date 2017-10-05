@@ -4,6 +4,21 @@
 <div class="flex flex-column flex-row-ns pa3">
   <div class="w-70-m w-60-l pr3-ns">
   {% for post in lastPosts %}
+    {% if post.type === 'quote' %}
+    <div class="bg-light-gray mb3">
+      <div class="flex items-center">
+        <div class="w-50">
+          <div class="bg-center cover h5" style="background-image: url({{ post.cover }})"></div>
+        </div>
+        <div class="w-50">
+          <blockquote class="ph3 fw3 f4 f3-ns i mid-gray serif quote">
+            {{ post.contents | safe }}
+            <p class="lh-copy">&ndash; {{ post.author }}</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    {% else %}
     <div class="bg-white mb3">
       <div class="flex">
         <div class="w-80-ns pa3">
@@ -23,121 +38,12 @@
           <p class="mv2 lh-copy silver f4">{{ post.excerpt or 'hello world' }}</p>
         </div>
         <div class="w-20-ns">
-          <div class="bg-center cover h-100" style="background-image: url(https://i.imgur.com/J0MSG2U.png)"></div>
+          <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
         </div>
       </div>
     </div>
-    {% endfor %}
-
-    <div class="bg-white mb3">
-      <div class="flex">
-        <div class="w-80-ns pa3">
-          <div class="flex items-center justify-between">
-            <ul class="list">
-              <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">JavaScript</a></li>
-              <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">Front-end</a></li>
-            </ul>
-            <span class="gray f6">
-              17/10/2017 &bull; 2018 words
-            </span>
-          </div>
-          <a href="#" class="navy"><h1 class="mv3 f3 fw7">Làm quen với MithrilJS -Phần 1</h1></a>
-          <p class="mv2 lh-copy silver f4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo quam, quasi similique! Magni quia aliquid, provident tenetur corrupti veritatis ut et error natus, veniam at iste. Magni, perferendis, similique.</p>
-        </div>
-        <div class="w-20-ns">
-          <div class="bg-center cover h-100" style="background-image: url(https://i.imgur.com/3xHPfiA.jpg)"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-white mb3">
-      <div class="flex">
-        <div class="w-80-ns pa3">
-          <div class="flex items-center justify-between">
-            <ul class="list">
-              <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">PHP</a></li>
-            </ul>
-            <span class="gray f6">
-              17/10/2017 &bull; 2018 words
-            </span>
-          </div>
-          <a href="#" class="navy"><h1 class="mv3 f3 fw7">Những tính năng mới trong PHP 7</h1></a>
-          <p class="mv2 lh-copy silver f4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo quam, quasi similique! Magni quia aliquid, provident tenetur corrupti veritatis ut et error natus, veniam at iste. Magni, perferendis, similique.</p>
-        </div>
-        <div class="w-20-ns">
-          <div class="bg-center cover h-100" style="background-image: url(https://cdn-images-1.medium.com/max/1920/1*iWS1FXC2s98r37HTQRayFw.png)"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-light-gray mb3">
-      <div class="flex items-center">
-        <div class="w-50">
-          <div class="bg-center cover h5" style="background-image: url(http://americanhistory.si.edu/sites/default/files/exhibitions/cobol_b_1.jpg)"></div>
-        </div>
-        <div class="w-50">
-          <blockquote class="ph3 fw3 f4 f3-ns i mid-gray serif">
-            “No computer is ever going to ask a new, reasonable question. It takes trained people to do that” &ndash; Grace Hopper
-          </blockquote>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-white mb3">
-      <div class="flex">
-        <div class="w-80-ns pa3">
-          <div class="flex items-center justify-between">
-            <ul class="list">
-              <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">JavaScript</a></li>
-              <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">Serverless</a></li>
-            </ul>
-            <span class="gray f6">
-              17/10/2017 &bull; 2018 words
-            </span>
-          </div>
-          <a href="#" class="navy"><h1 class="mv3 f3 fw7">Viết lamda function dễ dàng hơn với serverless-webpack</h1></a>
-          <p class="mv2 lh-copy silver f4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo quam, quasi similique! Magni quia aliquid, provident tenetur corrupti veritatis ut et error natus, veniam at iste. Magni, perferendis, similique.</p>
-        </div>
-        <div class="w-20-ns">
-          <div class="bg-center cover h-100" style="background-image: url(http://unsplash.it/300/400)"></div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="bg-white mb3">
-      <div class="pa3">
-        <div class="flex items-center justify-between">
-          <ul class="list">
-            <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">PHP</a></li>
-          </ul>
-          <span class="gray f6">
-            17/10/2017 &bull; 2018 words
-          </span>
-        </div>
-        <a href="#" class="navy"><h1 class="mv3 f3 fw7">Những tính năng mới trong PHP 7</h1></a>
-        <p class="mv2 lh-copy silver f4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo quam, quasi similique! Magni quia aliquid, provident tenetur corrupti veritatis ut et error natus, veniam at iste. Magni, perferendis, similique.</p>
-      </div>
-    </div>
-
-
-    <div class="bg-white mb3">
-      <div class="flex">
-        <div class="w-80-ns pa3">
-          <div class="flex items-center justify-between">
-            <ul class="list">
-              <li class="dib"><a href="#" class="ph2 pv1 db br2 bg-lightest-blue blue">PHP</a></li>
-            </ul>
-          </div>
-          <a href="#" class="navy"><h1 class="mv3 f3 fw7">Những tính năng mới trong PHP 7</h1></a>
-          <p class="mv2 lh-copy silver f4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo quam, quasi similique! Magni quia aliquid, provident tenetur corrupti veritatis ut et error natus, veniam at iste. Magni, perferendis, similique.</p>
-        </div>
-        <div class="w-20-ns">
-          <div class="bg-center cover h-100" style="background-image: url(http://unsplash.it/350/400)"></div>
-        </div>
-      </div>
-    </div>
-
+    {% endif %}
+  {% endfor %}
   </div>
 
   <div class="w-30-m w-40-l">

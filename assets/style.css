@@ -77,3 +77,29 @@ svg {
 .content h6 {
   font-weight: 600;
 }
+
+.quote {
+  position: relative;
+}
+
+.quote::before {
+  content: '“';
+  font-family: georgia, times, serif;
+  font-weight: 700;
+  color: #aaa;
+  font-size: 2em;
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+
+.quote::after {
+  content: '”';
+  font-family: georgia, times, serif;
+  font-weight: 700;
+  color: #aaa;
+  font-size: 2em;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+}
