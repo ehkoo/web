@@ -1,7 +1,23 @@
 {% extends "layouts/index.njk" %}
 
 {% block content %}
-<div class="hello">
-  {{ contents | safe }}
+<div class="flex flex-column flex-row-ns pa3">
+  <div class="w-70-m w-60-l pr3-ns">
+    {{ content | safe }}
+  </div>
+
+  <div class="w-30-m w-40-l">
+    <div class="flex flex-column flex-row-ns">
+      <div class="w-50-l mr3-ns">
+      </div>
+
+      <div class="w-50-l">
+        {% include "layouts/el/widgets/subscription.njk" %}
+        {% include "layouts/el/widgets/social.njk" %}
+        {% include "layouts/el/widgets/recruit.njk" %}
+      </div>
+    </div>
+
+  </div>
 </div>
 {% endblock %}
