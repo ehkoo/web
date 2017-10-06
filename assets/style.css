@@ -78,6 +78,11 @@ svg {
   font-weight: 600;
 }
 
+.content ul,
+.content ol {
+  margin: 1rem;
+}
+
 .quote {
   position: relative;
 }

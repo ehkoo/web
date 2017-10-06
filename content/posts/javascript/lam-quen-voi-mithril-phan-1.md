@@ -3,9 +3,9 @@ layout: post.njk
 title: Làm quen với MithrilJS - Phần 1
 slug: lam-quen-voi-mithriljs-phan-1
 date: 2017-10-02
-cover: https://media.giphy.com/media/3o7aD5aKrNI8LH4Xqo/giphy.gif
+cover: http://res.cloudinary.com/duqeezi8j/image/upload/v1507304123/mithril_iecaug.jpg
 tags: JavaScript, Frontend, MithrilJS
-excerpt: Cùng tìm hiểu MithrilJS, một front-end framework nhỏ nhưng có võ.
+excerpt: Cùng tìm hiểu MithrilJS, một framework xây dựng UI siêu nhỏ hỗ trợ routing, virtual DOM và được viết hoàn toàn bằng ES5.
 ---
 Ngày xưa xửa xừa xưa cách đây chắc hơn 2 năm có lẻ, mình đã viết một bài giới thiệu về mithril v0.2.x. Không ngờ bài viết về một framework ít người quan tâm, giấu ở chốn khỉ ho cò gáy vậy mà vẫn bị rinh đi (và cắt cúp) không một lời thông báo. Buồn vui lẫn lộn.
 
