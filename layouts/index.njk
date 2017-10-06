@@ -2,6 +2,7 @@
 <html>
 <head>
   {% include "layouts/el/head.njk" %}
+  {% block head %}{% endblock %}
   <title>{{ title }}</title>
 </head>
 <body class="bg-near-white dark-gray">
@@ -11,7 +12,6 @@
       <ul class="list f6">
         <li class="dib mh3"><a href="/gioi-thieu" class="near-black fw3 ttu f5">Giới Thiệu</a></li>
         <li class="dib mh3"><a href="/cong-tac" class="near-black fw3 ttu f5">Cộng tác</a></li>
-        <li class="dib mh3"><a href="/lien-he" class="near-black fw3 ttu f5">Liên hệ</a></li>
       </ul>
     </div>
   </header>
@@ -25,5 +25,6 @@
   </footer>
 
   {% include "layouts/el/bottom.njk" %}
+  {% block bottom %}{% endblock %}
 </body>
 </html>

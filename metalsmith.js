@@ -12,6 +12,16 @@ const wordcount = require('metalsmith-word-count')
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
 module.exports = Metalsmith(__dirname)
+  .metadata({
+    siteName: 'Ehkoo',
+    social: {
+      twitterHandle: '@ehkoo',
+      facebook: 'https://facebook.com/ehkoo.com',
+      twitter: 'https://twitter.com/ehkoo',
+      github: 'https://github.com/ehkoo',
+      gitter: 'https://gitter.im/ehkoo/web'
+    }
+  })
   .source(path.resolve(__dirname, 'content'))
   .destination(OUTPUT_PATH)
   .use(
