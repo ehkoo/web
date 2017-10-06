@@ -8,6 +8,7 @@ const markdown = require('metalsmith-markdown-remarkable')
 const permalinks = require('metalsmith-permalinks')
 const tags = require('metalsmith-tags')
 const wordcount = require('metalsmith-word-count')
+const quickNews = require('./plugins/quicknews')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
@@ -75,6 +76,10 @@ module.exports = Metalsmith(__dirname)
       ]
     })
   )
+  .use(quickNews({
+    path: 'quicknews/**',
+    limit: 8
+  }))
   .use((files, metalsmith, done) => {
     files = Object.keys(files).reduce((acc, key) => {
       const data = files[key]

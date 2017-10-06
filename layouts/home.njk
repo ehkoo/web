@@ -7,6 +7,7 @@
 {% block content %}
 <div class="flex flex-column flex-row-ns pa3">
   <div class="w-70-m w-60-l pr3-ns">
+
   {% for post in lastPosts %}
     {% if post.type === 'quote' %}
     <div class="bg-light-gray mb3">
@@ -39,7 +40,7 @@
               {{ post.date }} &mdash; {{ post.wordCount }} từ &mdash; {{ post.readingTime }}
             </span>
           </div>
-          <h1 class="mv3 f3 fw7"><a href="/{{ post.path }}" class="navy">{{ post.title }}</a></h1>
+          <h2 class="mv3 f3 fw7"><a href="/{{ post.path }}" class="navy">{{ post.title }}</a></h2>
           <p class="mv2 lh-copy silver f4">{{ post.excerpt }}</p>
         </div>
         <div class="w-20-ns">
@@ -48,7 +49,12 @@
       </div>
     </div>
     {% endif %}
+
+    {% if loop.index === 3 %}
+    {% include "layouts/el/widgets/quicknews.njk" %}
+    {% endif %}
   {% endfor %}
+
   </div>
 
   <div class="w-30-m w-40-l">
