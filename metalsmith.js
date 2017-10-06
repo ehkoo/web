@@ -14,6 +14,7 @@ const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 module.exports = Metalsmith(__dirname)
   .metadata({
     siteName: 'Ehkoo',
+    siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
       twitterHandle: '@ehkoo',
       facebook: 'https://facebook.com/ehkoo.com',
@@ -74,4 +75,16 @@ module.exports = Metalsmith(__dirname)
       ]
     })
   )
+  .use((files, metalsmith, done) => {
+    files = Object.keys(files).reduce((acc, key) => {
+      const data = files[key]
+      if (data.tag != null) {
+        data.title = `Bài viết thuộc chủ đề: ${data.tag}`
+        data.excerpt = `Những bài viết thuộc chủ đề ${data.tag} trên Ehkoo`
+      }
+
+      return Object.assign({}, acc, { [key]: data })
+    }, {})
+    done()
+  })
   .use(layouts('nunjucks'))

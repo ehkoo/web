@@ -1,6 +1,5 @@
 ---
 layout: home.njk
-title: Ehkoo
+title: Trang chủ
 permalinks: false
 ---
-Hello World

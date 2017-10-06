@@ -28,18 +28,19 @@
         <div class="w-80-ns pa3">
           <div class="flex items-center">
           {% if post.tags %}
+            {% set postTags = post.tags | slice(3) | first if post.tags.length > 3 else post.tags %}
             <ul class="list">
-            {% for tag in post.tags | slice(3) | first %}
+            {% for tag in postTags %}
               <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
             {% endfor %}
             </ul>
           {% endif %}
             <span class="gray f6 ml-auto">
-              {{ post.date }} &mdash; {{ post.wordCount }} từ
+              {{ post.date }} &mdash; {{ post.wordCount }} từ &mdash; {{ post.readingTime }}
             </span>
           </div>
           <h1 class="mv3 f3 fw7"><a href="/{{ post.path }}" class="navy">{{ post.title }}</a></h1>
-          <p class="mv2 lh-copy silver f4">{{ post.excerpt or 'hello world' }}</p>
+          <p class="mv2 lh-copy silver f4">{{ post.excerpt }}</p>
         </div>
         <div class="w-20-ns">
           <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
