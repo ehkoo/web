@@ -1,3 +1,4 @@
+const url = require('url')
 const path = require('path')
 const Metalsmith = require('metalsmith')
 const asset = require('metalsmith-static')
@@ -8,7 +9,9 @@ const markdown = require('metalsmith-markdown-remarkable')
 const permalinks = require('metalsmith-permalinks')
 const tags = require('metalsmith-tags')
 const wordcount = require('metalsmith-word-count')
+
 const quickNews = require('./plugins/quicknews')
+const readJson = require('./plugins/read-json')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
@@ -79,6 +82,14 @@ module.exports = Metalsmith(__dirname)
   .use(quickNews({
     path: 'quicknews/**',
     limit: 8
+  }))
+  .use(readJson({
+    links: {
+      path: path.resolve(__dirname, 'content/links/links.json'),
+      limit: 10,
+      parser: item => Object.assign({}, item, { hostname: url.parse(item.url).hostname })
+    },
+    tools: { path: path.resolve(__dirname, 'content/links/tools.json') }
   }))
   .use((files, metalsmith, done) => {
     files = Object.keys(files).reduce((acc, key) => {

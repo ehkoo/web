@@ -1,23 +1,15 @@
+{% if arbitraryData.tools %}
 <section class="br1 bg-white pa3 mb3">
   <h1 class="mb4 mt2 fw7 code tracked ttu blue pb2 f4 bw1 bb b--blue">Đồ chơi mới</h1>
   <ul class="list last-child-no-border">
+  {% for item in arbitraryData.tools %}
     <li class="bb b--light-gray pb3 mv2">
-      <a href="#" class="db">
-        <span class="lh-copy fw6 dark-gray">tipsy/bubbly-bg</span>
-        <span class="db gray f6 lh-copy">Beautiful bubbly backgrounds in less than 1kB (662 bytes gzipped)</span>
+      <a href="{{ item.url }}" class="db" target="_blank">
+        <span class="lh-copy fw6 dark-gray">{{ item.name }}</span>
+        <span class="db gray f6 lh-copy">{{ item.desc}}</span>
       </a>
     </li>
-    <li class="bb b--light-gray pb3 mv2">
-      <a href="#" class="db">
-        <span class="lh-copy fw6 dark-gray">dollarshaveclub/stickybits </span>
-        <span class="db gray f6 lh-copy">Stickybits is a lightweight alternative to <code>position: sticky</code> polyfills 🍬 </span>
-      </a>
-    </li>
-    <li class="bb b--light-gray pb3 mv2">
-      <a href="#" class="db">
-        <span class="lh-copy fw6 dark-gray">nzambello/ellipsed </span>
-        <span class="db gray f6 lh-copy">A JavaScript library for multilined ellipsis </span>
-      </a>
-    </li>
+  {% endfor %}
   </ul>
 </section>
+{% endif %}

@@ -20,7 +20,7 @@ Bạn sẽ giúp Ehkoo viết các bài về lập trình (dĩ nhiên) một cá
 
 Hoặc bạn sẽ kể về những lập trình viên gạo cội mà thành tựu của họ đã và đang thay đổi thế giới của chúng ta. Bạn chuyển tải những câu chuyện khác về các lập trình viên, để thế giới (thật ra là Việt Nam) biết rằng họ không chỉ là những con khỉ biết gõ bàn phím, mà là những anh chị sênh đệp, thông minh, có khiếu hài hước khi ở cùng với nhau.
 
-Với mỗi bài viết được xuất bản, Ehkoo hỗ trợ bạn 200.000đ &ndash; 400.000đ để trả tiền cà phê, tiền điện, Internet và tiền ủng hộ trẻ em nghèo hiếu học. Ngoài ra bạn còn được 15% cổ phần khi Ehkoo lên sàn chứng khoán sao Hỏa (tùy thuộc vào anh Musk).
+Với mỗi bài viết được xuất bản, Ehkoo hỗ trợ bạn 200.000đ &ndash; 400.000đ để trả tiền cà phê, tiền điện, Internet và tiền mua tã cho con (nếu có). Ngoài ra bạn còn được chia cổ phần khi Ehkoo lên sàn chứng khoán sao Hỏa (tùy thuộc vào anh Musk).
 
 ## Về bạn
 
