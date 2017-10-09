@@ -1,4 +1,11 @@
 [
-  {"title": "Node8's util.promisify is so awesome", "url": "https://google.com"},
-  {"title": "I'm breaking up with Higher-Order Components", "url": "https://medium.com"}
+  {
+    "title": "A Five Minutes Guide to Better Typography",
+    "url": "http://pierrickcalvez.com/journal/a-five-minutes-guide-to-better-typography"
+  },
+  {
+    "title": "Đừng public .git, hoặc đây là 3 cách download cả website của bạn",
+    "url": "http://vothevinh.com/2017-09-28/do-not-host-your-git-folder.html"
+  },
+  { "title": "Đôi điều về Regex", "url": "https://thefullsnack.com/posts/regex.html?t=1507491566300" }
 ]

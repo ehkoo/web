@@ -1,5 +1,10 @@
 [
   {
+    "name": "httpie",
+    "desc": "Ứng dụng dòng lệnh để gửi yêu cầu HTTP với giao diện thân thiện, hỗ trợ JSON, plugins và hơn thế nữa",
+    "url": "https://httpie.org/"
+  },
+  {
     "name": "haltu/muuri",
     "desc": "Thư viện tạo grid layout hỗ trợ responsive, sắp xếp, lọc và kéo thả.",
     "url": "https://haltu.github.io/muuri/"

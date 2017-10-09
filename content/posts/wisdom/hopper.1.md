@@ -1,7 +1,7 @@
 ---
 type: quote
 permalinks: false
-date: 2017-10-01
+date: 2017-10-03
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507303256/grace-hopper.jpg
 author: Grace Hopper
 ---
