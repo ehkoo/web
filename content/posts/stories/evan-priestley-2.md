@@ -4,7 +4,7 @@ title: Evan Priestley đã học lập trình như thế nào? – Phần 2
 slug: evan-priestley-da-hoc-lap-trinh-nhu-the-nao-phan-2
 date: 2014-04-13
 tags: Nhân vật, Evan Priestley, Phabricator
-cover: http://res.cloudinary.com/duqeezi8j/image/upload/v1507302887/phabricator.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507302887/phabricator.jpg
 translation: http://www.quora.com/How-did-Evan-Priestley-learn-to-program
 excerpt: Trong phần 2 này, Evan kể về những ngày đầu của anh ở Facebook và đưa ra một số lời khuyên để nâng cao kỹ năng lập trình.
 ---

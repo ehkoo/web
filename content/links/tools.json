@@ -1,7 +1,12 @@
 [
   {
-    "name": "tipsy/bubbly-bg",
-    "desc": "Beautiful bubbly backgrounds in less than 1kB (662 bytes gzipped)",
-    "url": "https://github.com"
+    "name": "haltu/muuri",
+    "desc": "Thư viện tạo grid layout hỗ trợ responsive, sắp xếp, lọc và kéo thả.",
+    "url": "https://haltu.github.io/muuri/"
+  },
+  {
+    "name": "GoogleChrome/workbox",
+    "desc": "Tập hợp các thư viện và công cụ cần thiết để xây dựng PWAs",
+    "url": "https://workboxjs.org/"
   }
 ]

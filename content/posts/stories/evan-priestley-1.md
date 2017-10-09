@@ -4,7 +4,7 @@ title: Evan Priestley đã học lập trình như thế nào? – Phần 1
 slug: evan-priestley-da-hoc-lap-trinh-nhu-the-nao-phan-1
 date: 2014-04-12
 tags: Nhân vật, Evan Priestley, Phabricator
-cover: http://res.cloudinary.com/duqeezi8j/image/upload/v1507302455/evan-priestley.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507302455/evan-priestley.jpg
 translation: http://www.quora.com/How-did-Evan-Priestley-learn-to-program
 excerpt: Evan Priestley, từng làm việc cho Facebook và là tác giả của phần mềm nguồn mở Phabricator, chia sẻ câu chuyện trở thành lập trình viên của mình.
 ---
