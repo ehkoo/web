@@ -17,6 +17,7 @@ const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
 module.exports = Metalsmith(__dirname)
   .metadata({
+    siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
     siteName: 'Ehkoo',
     siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
