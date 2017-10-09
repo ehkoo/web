@@ -19,6 +19,8 @@ module.exports = Metalsmith(__dirname)
   .metadata({
     siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
     siteName: 'Ehkoo',
+    siteDesc:
+      'Tin tức lập trình web cập nhật liên tục. Đầy đủ các chủ đề PHP, JavaScript, CSS, PWA, front-end, back-end...',
     siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
       twitterHandle: '@ehkoo',
@@ -80,19 +82,25 @@ module.exports = Metalsmith(__dirname)
       ]
     })
   )
-  .use(quickNews({
-    path: 'quicknews/**',
-    limit: 8
-  }))
-  .use(readJson({
-    links: {
-      path: path.resolve(__dirname, 'content/links/links.json'),
-      limit: 10,
-      parser: item => Object.assign({}, item, { hostname: url.parse(item.url).hostname })
-    },
-    tools: { path: path.resolve(__dirname, 'content/links/tools.json') }
-  }))
+  .use(
+    quickNews({
+      path: 'quicknews/**',
+      limit: 8
+    })
+  )
+  .use(
+    readJson({
+      links: {
+        path: path.resolve(__dirname, 'content/links/links.json'),
+        limit: 10,
+        parser: item => Object.assign({}, item, { hostname: url.parse(item.url).hostname })
+      },
+      tools: { path: path.resolve(__dirname, 'content/links/tools.json') }
+    })
+  )
   .use((files, metalsmith, done) => {
+    const { siteUrl } = metalsmith.metadata()
+
     files = Object.keys(files).reduce((acc, key) => {
       const data = files[key]
       if (data.tag != null) {
@@ -100,7 +108,10 @@ module.exports = Metalsmith(__dirname)
         data.excerpt = `Những bài viết thuộc chủ đề ${data.tag} trên Ehkoo`
       }
 
-      return Object.assign({}, acc, { [key]: data })
+      data.fullUrl = `${siteUrl}/${data.path}`
+
+      acc[key] = data
+      return acc
     }, {})
     done()
   })
