@@ -6,11 +6,19 @@
   "description": "Ehkoo website",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ehkoo/web"
+  },
+  "watch": {
+    "build:dev": {
+      "patterns": ["content/**/*", "assets/**/*", "layouts/**/*"],
+      "extensions": "md,css,njk,js"
+    }
   },
   "scripts": {
     "build": "rimraf dist/* -rf && node build.js",
-    "start": "node watch.js"
+    "build:dev": "node build.js",
+    "start": "npm-watch build:dev",
+    "serve": "http-server dist"
   },
   "devDependencies": {
     "eslint": "^4.8.0",
@@ -20,6 +28,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "handlebars": "^4.0.10",
+    "http-server": "^0.10.0",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-date-formatter": "^1.0.2",
@@ -33,6 +42,7 @@
     "metalsmith-tags": "^2.0.0",
     "metalsmith-watch": "^1.0.3",
     "metalsmith-word-count": "0.0.4",
+    "npm-watch": "^0.3.0",
     "nunjucks": "^3.0.1",
     "rimraf": "^2.6.2"
   }
