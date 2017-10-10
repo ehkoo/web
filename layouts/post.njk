@@ -2,6 +2,11 @@
 
 {% block head %}
 {% include "layouts/el/opengraph.njk" %}
+<link rel="stylesheet" href="//cdn.rawgit.com/kcjpop/zoom-image/2fa0895c/css/zoom-image.css">
+{% endblock %}
+
+{% block bottom %}
+<script src="//cdn.rawgit.com/kcjpop/zoom-image/43e7f849/js/zoom-image.min.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -9,13 +14,20 @@
   <div class="w-70-m w-60-l pr3-ns">
     <article class="bg-white pv3 ph4">
       <h1 class="blue f2 mb4">{{ title }}</h1>
-      <p class="lh-copy mb3 tr silver">{{ date }} &mdash; {{ wordCount }} từ &mdash; Đọc trong {{ readingTime }} </p>
+      <p class="lh-copy mb3 tr silver">
+        {{ date }}
+        {% if author %}
+        &mdash; <a href="https://github.com/{{ author }}" target="_blank">@{{ author }}</a>
+        {% endif %}
+
+         &mdash; {{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}
+      </p>
 
     {% if translation %}
       <p class="lh-copy i f4 mid-gray">Bài viết được dịch từ <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a></p>    
     {% endif %}
 
-      <div class="content lh-copy dark-gray f4">{{ contents | safe }}</div>
+      <div id="js-content" class="content lh-copy dark-gray f4">{{ contents | safe }}</div>
 
       <hr class="mw3 center db bg-silver">
   
