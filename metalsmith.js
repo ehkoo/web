@@ -24,8 +24,8 @@ module.exports = Metalsmith(__dirname)
     siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
       twitterHandle: '@ehkoo',
-      facebook: 'https://facebook.com/ehkoo.com',
-      twitter: 'https://twitter.com/ehkoo',
+      facebook: 'https://facebook.com/ehkoo.dev',
+      twitter: 'https://twitter.com/EhkooDev',
       github: 'https://github.com/ehkoo',
       gitter: 'https://gitter.im/ehkoo/web'
     }
