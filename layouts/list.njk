@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="flex flex-column flex-row-ns pa3">
-  <div class="w-70-m w-60-l pr3-ns">
+  <div class="w-60-l pr3-ns">
   {% for post in pagination.files %}
     <div class="bg-white mb3">
       <div class="flex">
@@ -35,8 +35,6 @@
   {% endfor %}
   </div>
 
-  <div class="w-30-m w-40-l">
-    {% include "layouts/el/sidebar.njk" %}
-  </div>
+  {% include "layouts/el/sidebar.njk" %}
 </div>
 {% endblock %}

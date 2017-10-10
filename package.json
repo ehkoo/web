@@ -10,12 +10,8 @@
   },
   "watch": {
     "build:dev": {
-      "patterns": [
-        "content/**/*",
-        "assets/**/*",
-        "layouts/**/*"
-      ],
-      "extensions": "md,css,njk,js"
+      "patterns": ["content/**/*", "assets/**/*", "layouts/**/*"],
+      "extensions": "md,css,njk,js,json"
     }
   },
   "scripts": {
