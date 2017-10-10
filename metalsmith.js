@@ -9,6 +9,7 @@ const markdown = require('metalsmith-markdown-remarkable')
 const permalinks = require('metalsmith-permalinks')
 const tags = require('metalsmith-tags')
 const wordcount = require('metalsmith-word-count')
+const drafts = require('metalsmith-drafts')
 
 const quickNews = require('./plugins/quicknews')
 const readJson = require('./plugins/read-json')
@@ -38,6 +39,7 @@ module.exports = Metalsmith(__dirname)
       dest: '.'
     })
   )
+  .use(drafts())
   .use(
     tags({
       path: 'chu-de/:tag.html',

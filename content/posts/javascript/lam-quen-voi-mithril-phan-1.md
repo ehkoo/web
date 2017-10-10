@@ -37,7 +37,7 @@ Mithril cũng không giới thiệu bất cứ khái niệm nào mới. Mọi th
 
 #### Nhanh vừa phải 
 
-Theo benchmark trên website của mithril thì hiệu suất của mithril vượt trội so với Vue, React, hay Angular, nhưng so sánh với Preact, Inferno hay RE:DOM thì mithril vẫn thuộc kèo dưới. Trên thực tế, mithril nhanh vừa phải để được sử dụng bởi các công ty như Vimeo và Nike, trong game Guild Wars 2 hay các ứng dụng mã nguồn mở như Lichess hay Flarum.
+Theo benchmark trên website của mithril thì hiệu suất của mithril vượt trội so với Vue, React, hay Angular, nhưng so sánh với Preact, Inferno hay RE:DOM thì mithril vẫn thuộc kèo dưới. Trên thực tế, mithril nhanh vừa phải để được sử dụng bởi các công ty như Vimeo, Nike hay Memrise, trong game Guild Wars 2 hay các ứng dụng mã nguồn mở như Lichess hay Flarum [[nguồn]](https://github.com/MithrilJS/mithril.js/wiki/Who-Uses-Mithril).
 
 Tác giả [@lhorie](https://github.com/lhorie) có đôi lời thảo luận [ở đây](https://mithril.js.org/framework-comparison.html) về chuyện so sánh các framework, nếu có thời gian bạn nên đọc. Nhìn chung, tất cả framework đều nhanh và đủ mạnh để xây dựng các ứng dụng phức tạp. Việc quyết định sử dụng framework nào tùy thuộc vào trình độ, kinh nghiệm, và khả năng thích ứng + tiếp thu framework mới trong team của bạn mà thôi.
 
@@ -70,7 +70,7 @@ Trước tiên, cần nói về vnode. Với mithril thì vnode là một JavaSc
 
 ```javascript 
 /**
- * selector   (String|Object)                 REQUIRED
+ * selector   (String|Object) REQUIRED
  * attributes (Object)                
  * children   (Vnode[]|String|Number|Boolean)
  */
@@ -283,7 +283,7 @@ const List = {
           )
         ),
         m('tbody', this.items.map(item =>
-            m('tr',
+            m('tr', { key: item.id },
               m('td', item.id),
               m('td', item.name),
               m('td', `${item.price} gil`),
@@ -348,7 +348,7 @@ const Cart = {
 }
 ```
 
-Xong rồi. Bạn có thể xem toàn bộ code và thử click lung tung ở đây https://jsfiddle.net/6ednpwy6/. Bạn có thể cải tiến bản demo này, thêm vài tính năng đơn giản cho nó, chẳng hạn như xóa sản phẩm ra khỏi giỏ hàng (và xem tổng giá trị đơn hàng tự động thay đổi như thế nào), hay xử lý thêm khi một sản phẩm được thêm vào giỏ hàng nhiều lần. *Bạn's biết's đấy's, giới's hạn's chỉ's là's bầu's trời's, Sếp's muôn's năm's.*
+Xong rồi. Bạn có thể xem toàn bộ code và thử click lung tung ở đây [https://jsfiddle.net/6ednpwy6/](https://jsfiddle.net/6ednpwy6/). Bạn có thể cải tiến bản demo này, thêm vài tính năng đơn giản cho nó, chẳng hạn như xóa sản phẩm ra khỏi giỏ hàng (và xem tổng giá trị đơn hàng tự động thay đổi như thế nào), hay xử lý thêm khi một sản phẩm được thêm vào giỏ hàng nhiều lần. *Bạn's biết's đấy's, giới's hạn's chỉ's là's bầu's trời's, Sếp's muôn's năm's.*
 
 ## Tạm kết
 

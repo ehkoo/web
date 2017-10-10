@@ -33,7 +33,7 @@ Với mỗi bài viết được xuất bản, Ehkoo hỗ trợ bạn 200.000đ 
 
 ## Ứng tuyển
 
-Cách nhanh nhất là nhắn cho [@kcjpop](https://gitter.im/kcjpop) trên Gitter. Cách nhanh thứ hai là gửi email về `chao [at] ehkoo [dot] com`.
+Cách nhanh nhất là nhắn cho [@kcjpop](https://gitter.im/kcjpop) trên Gitter. Cách nhanh thứ hai là gửi email về `chao [at] ehkoo.com`.
 
 Dù bạn chọn cách nào, đừng quên có đôi lời giới thiệu bản thân nhé. Không cần cover letter đâu. Nếu bạn có thể gửi theo 1-2 bài đã viết từ blog của bạn, kipalog, hay bất cứ đâu thì quá tốt.
 
