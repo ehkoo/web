@@ -1,5 +1,10 @@
 [
   {
+    "name": "dollarshaveclub/stickybits",
+    "desc": "Polyfill cho `position: sticky` chỉ với 3KB gzipped",
+    "url": "https://dollarshaveclub.github.io/stickybits/"
+  },
+  {
     "name": "httpie",
     "desc": "Ứng dụng dòng lệnh để gửi yêu cầu HTTP với giao diện thân thiện, hỗ trợ JSON, plugins và hơn thế nữa",
     "url": "https://httpie.org/"

@@ -5,17 +5,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-column flex-row-ns pa3">
-  <div class="w-70-m w-60-l pr3-ns">
+<div class="flex flex-column flex-row-l pa3">
+  <div class="w-60-l pr3-ns">
 
   {% for post in lastPosts %}
     {% if post.type === 'quote' %}
     <div class="bg-light-gray mb3">
       <div class="flex items-center">
-        <div class="w-50">
+        <div class="w-30 w-50-l">
           <div class="bg-center cover h5" style="background-image: url({{ post.cover }})"></div>
         </div>
-        <div class="w-50">
+        <div class="w-70 w-50-l">
           <blockquote class="ph3 fw3 f4 f3-ns i mid-gray serif quote">
             {{ post.contents | safe }}
             <p class="lh-copy">&ndash; {{ post.author }}</p>
@@ -26,13 +26,13 @@
     {% else %}
     <div class="bg-white mb3">
       <div class="flex">
-        <div class="w-80-ns pa3">
+        <div class="w-75-l pa3">
           <div class="flex items-center">
           {% if post.tags %}
             {% set postTags = post.tags | slice(3) | first if post.tags.length > 3 else post.tags %}
             <ul class="list">
             {% for tag in postTags %}
-              <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
+              <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="mb1 ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
             {% endfor %}
             </ul>
           {% endif %}
@@ -43,7 +43,7 @@
           <h2 class="mv3 f3 fw7"><a href="/{{ post.path }}" class="navy">{{ post.title }}</a></h2>
           <p class="mv2 lh-copy silver f4">{{ post.excerpt }}</p>
         </div>
-        <div class="w-20-ns">
+        <div class="w-25-l clip-m">
           <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
         </div>
       </div>
@@ -57,7 +57,7 @@
 
   </div>
 
-  <div class="w-30-m w-40-l">
+  <div class="w-40-l">
     <div class="top-1 sticky">
       {% include "layouts/el/sidebar.njk" %}
     </div>
