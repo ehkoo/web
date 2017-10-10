@@ -6,6 +6,7 @@ date: 2014-04-17
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507300408/tweet-editorconfig_lssmtc.png
 tags: TextEditor, IDE, SublimeText, Atom, VSCode, vim, emacs
 excerpt: EditorConfig giúp thiết lập một format chung cho tất cả các text editor và IDE, nhờ đó giúp nâng cao tính thống nhất, giúp việc đọc, hiểu và bảo trì code dễ dàng hơn.
+author: kcjpop
 ---
 ![Imgur](http://i.imgur.com/hXZDHDI.png)
 EditorConfig giúp thiết lập một format chung cho tất cả các text editor và IDE, nhờ đó giúp nâng cao tính thống nhất, giúp việc đọc, hiểu và bảo trì code dễ dàng hơn. 

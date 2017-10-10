@@ -7,6 +7,7 @@ tags: Nhân vật, Evan Priestley, Phabricator
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507302455/evan-priestley.jpg
 translation: http://www.quora.com/How-did-Evan-Priestley-learn-to-program
 excerpt: Evan Priestley, từng làm việc cho Facebook và là tác giả của phần mềm nguồn mở Phabricator, chia sẻ câu chuyện trở thành lập trình viên của mình.
+author: kcjpop
 ---
 
 > Evan Priestley là kỹ sư của Facebook từ năm 2007 đến 2011. Evan được bình chọn là Top Writer 2012 của Quora, và những câu trả lời của anh đa phần liên quan đến [Phabricator](https://www.phacility.com/phabricator), một ứng dụng mã nguồn mở được viết bằng PHP giúp cho việc quản lý dự án phần mềm dễ dàng hơn. Evan cũng đừng đề cập đến Facebook như là “chương trình có nhiều bug nhất trên thế giới”.

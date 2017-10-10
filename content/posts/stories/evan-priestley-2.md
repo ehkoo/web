@@ -7,6 +7,7 @@ tags: Nhân vật, Evan Priestley, Phabricator
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507302887/phabricator.jpg
 translation: http://www.quora.com/How-did-Evan-Priestley-learn-to-program
 excerpt: Trong phần 2 này, Evan kể về những ngày đầu của anh ở Facebook và đưa ra một số lời khuyên để nâng cao kỹ năng lập trình.
+author: kcjpop
 ---
 
 Tôi đã mong chờ mình sẽ phải xoay sở để có thể làm việc ở Facebook, vì tôi chỉ là một kẻ bỏ học và tự học là chính mà không được đào tạo bài bản gì cả. Trước đó, tôi đã gặp những người giỏi hơn tôi nhiều ở những lĩnh vực khác. Ví dụ như năm lớp 7, tôi tham gia cuộc thi MathCounts vòng quốc gia trong một nhóm bốn người trong toàn bang ở Maine. Tôi cũng khá, nhưng có một học sinh khác trong nhóm mà tôi nghĩ giỏi hơn tôi ít nhất là mười lần. Tôi mong chờ mọi người ở Facebook cũng vậy.
