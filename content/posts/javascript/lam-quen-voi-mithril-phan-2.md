@@ -10,7 +10,7 @@ author: kcjpop
 ---
 ### Các hooks trong vòng đời của vnode và component
 
-Trong bài viết trước mình đã nói sơ về vnode, là cách thức mithril xây dựng cây DOM trong trang. Bạn dùng hàm `m(selector, attributes, children)` để tạo ra vnode.
+Trong [bài viết trước](/bai-viet/lam-quen-voi-mithriljs-phan-1) mình đã nói sơ về vnode, là cách thức mithril xây dựng cây DOM trong trang. Bạn dùng hàm `m(selector, attributes, children)` để tạo ra vnode.
 
 ```javascript
 // <h1 class="title" id="123">Hello World</h1>

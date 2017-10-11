@@ -7,6 +7,7 @@
 {% block content %}
 <div class="flex flex-column flex-row-l pa3">
   <div class="w-60-l pr3-ns">
+    {% include "layouts/el/widgets/quicknews.njk" %}
 
   {% for post in lastPosts %}
     {% if post.type === 'quote' %}
@@ -48,10 +49,6 @@
         </div>
       </div>
     </div>
-    {% endif %}
-
-    {% if loop.index === 3 %}
-    {% include "layouts/el/widgets/quicknews.njk" %}
     {% endif %}
   {% endfor %}
 

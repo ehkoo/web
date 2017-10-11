@@ -35,7 +35,7 @@ Bản thân mithril được viết hoàn toàn bằng ES5, do đó bạn gần 
 ```
 Mithril cũng không giới thiệu bất cứ khái niệm nào mới. Mọi thứ đều là JavaScript, không JSX, không directive, không custom attribute, thành ra nếu bạn đã biết JavaScript thì bạn chỉ tốn khoảng vài tiếng đến 1 ngày là có thể nắm bắt mithril.
 
-#### Nhanh vừa phải 
+#### Nhanh vừa phải
 
 Theo benchmark trên website của mithril thì hiệu suất của mithril vượt trội so với Vue, React, hay Angular, nhưng so sánh với Preact, Inferno hay RE:DOM thì mithril vẫn thuộc kèo dưới. Trên thực tế, mithril nhanh vừa phải để được sử dụng bởi các công ty như Vimeo, Nike hay Memrise, trong game Guild Wars 2 hay các ứng dụng mã nguồn mở như Lichess hay Flarum [[nguồn]](https://github.com/MithrilJS/mithril.js/wiki/Who-Uses-Mithril).
 
@@ -61,17 +61,17 @@ render(Widget, document.getElementById('js-widget'))
 
 Điều này hữu ích với các website có thiết kế "truyền thống" với một phần hay toàn bộ view được trả về từ phía backend server. Một ví dụ là khi dòng đời đưa đẩy bạn phải bảo trì một website PHP 5.2 viết từ hồi tận thế 2012. Bằng cách này bạn có thể quá độ từ "truyền thống" sang thiết kế "nửa nạc nửa mỡ" với một phần của website là ứng dụng JavaScript tương tác với API ở phía server.
 
-## Viết thôi 
+## Viết thôi
 
 Giới thiệu cho dài mà không khoe code cũng bằng thừa. Thay vì [TodoMVC](http://todomvc.com/examples/mithril/#/), mình sẽ viết một ứng dụng bán hàng đơn giản. Tính năng bao gồm: hiển thị danh sách hàng, thêm hàng vào giỏ (cart), và xem giỏ hàng. Thế thôi.
 
 #### Virtual node (vnode)
 Trước tiên, cần nói về vnode. Với mithril thì vnode là một JavaScript object được dùng để thể hiện các DOM elements trong một trang. Thư viện virtual DOM của mithril sẽ nhận vào vnode và tạo thay đổi tương ứng trên trang. Bạn dùng hàm `m()` để tạo ra vnode, và hàm này có chữ ký như sau:
 
-```javascript 
+```javascript
 /**
  * selector   (String|Object) REQUIRED
- * attributes (Object)                
+ * attributes (Object)
  * children   (Vnode[]|String|Number|Boolean)
  */
 m(selector, attributes, children)
@@ -92,7 +92,7 @@ m('h1.title#heading[title="Hello"][data-lang="en"]')
 
 // <div></div> là thẻ mặc định
 m('')
-``` 
+```
 Để khai báo các thuộc tính theo hướng lập trình, bạn có thể dùng `attributes`, là một JavaScript object. Ví dụ như:
 ```javascript
 m('h1.title', {
@@ -144,7 +144,7 @@ m('', null)
 </body>
 ```
   Yep, tập tin HTML trên hoàn toàn hợp lệ :D
-  
+
 `m.render(rootNode, vnodes)` giúp bạn gắn vnode h1 đó vào `rootNode`, ở đây là `document.body`. Bạn có thể thay `rootNode` bằng `document.getElementById('js-app')` hay bất cứ [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/element) nào. Kết quả hiển thị là "Hello World" được in ra trong trang.
 
 >Nếu bạn dùng npm thì có thể cài đặt với `npm i -S mithril` và `import m from 'mithril'` để sử dụng.
@@ -354,4 +354,4 @@ Xong rồi. Bạn có thể xem toàn bộ code và thử click lung tung ở đ
 
 Hi vọng bài viết trên đã đủ lôi kéo bạn bỏ chút thời gian thử sức với mithril. Nếu có điều gì không rõ hoặc ý kiến đóng góp để bài viết hoàn thiện hơn, vui lòng kiếm mình trên Twitter, hoặc nhảy thẳng vào chatroom của mithril trên [Gitter](https://gitter.im/mithriljs/mithril.js). Huynh đệ nào có hảo tâm muốn post lại, vui lòng nhắn mình một tiếng để mình biết thôi chứ không có gì.
 
-Trong bài viết sau mình sẽ đi sâu hơn về component và life-cycle hooks của nó, đồng thời giới thiệu cách tích hợp thư viện của bên thứ ba vào ứng dụng mithril. Hãy đón đọc.
+Trong [bài viết sau](/bai-viet/lam-quen-voi-mithriljs-phan-2/) mình sẽ đi sâu hơn về component và life-cycle hooks của nó, đồng thời giới thiệu cách tích hợp thư viện của bên thứ ba vào ứng dụng mithril. Hãy đón đọc.
