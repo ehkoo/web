@@ -3,6 +3,6 @@
   window.onload = () => {
     stickybits('.sticky', { noStyles: true })
     // zoom image
-    zoom(document.querySelector('#js-content img'))
+    if (window.zoom != null) window.zoom(document.querySelector('#js-content img'))
   }
 })()
