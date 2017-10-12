@@ -36,7 +36,14 @@ svg {
 }
 
 .content a {
-  text-decoration: underline;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid #1b6ec2;
+}
+
+.content p {
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .content code:not([class~='hljs']) {
@@ -72,14 +79,43 @@ svg {
   transform: translateY(50%) rotate(15deg);
 }
 
-.content h4,
-.content h5,
-.content h6 {
+.content h1 {
+  margin: 1rem 0;
   font-weight: 600;
+  font-size: 3rem;
+}
+.content h2 {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+.content h3 {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.content h4 {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.content h5 {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.content h6 {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
-.content ul,
+.content ul {
+  margin: 1rem;
+  list-style-type: circle;
+}
 .content ol {
+  list-style-type: decimal;
   margin: 1rem;
 }
 

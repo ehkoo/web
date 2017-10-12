@@ -13,6 +13,7 @@ const drafts = require('metalsmith-drafts')
 
 const quickNews = require('./plugins/quicknews')
 const readJson = require('./plugins/read-json')
+const toc = require('./plugins/toc')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
@@ -57,11 +58,15 @@ module.exports = Metalsmith(__dirname)
       },
       pages: {
         pattern: 'pages/**/*.md'
+      },
+      series: {
+        pattern: 'series/**/*.md'
       }
     })
   )
   .use(
     markdown('full', {
+      html: true,
       breaks: true,
       quotes: '“”‘’',
       langPrefix: 'language-',
@@ -81,6 +86,10 @@ module.exports = Metalsmith(__dirname)
         {
           match: { collection: 'pages' },
           pattern: ':slug'
+        },
+        {
+          match: { collection: 'series' },
+          pattern: 'series/:series/:slug'
         }
       ]
     })
@@ -89,6 +98,13 @@ module.exports = Metalsmith(__dirname)
     quickNews({
       path: 'quicknews/**',
       limit: 8
+    })
+  )
+  .use(
+    toc({
+      path: 'series/**/*.html',
+      url: '/series/:series/:slug',
+      tocFilename: 'series/:series/toc.json'
     })
   )
   .use(

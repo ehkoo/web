@@ -11,9 +11,23 @@
 
 {% block content %}
 <div class="flex flex-column flex-row-ns pa3">
+  <div class="w-30-ns">
+    <div class="top-1 sticky">
+      <h1 class="f2 fw6 navy "><a href="{{ toc.url }}">{{ toc.name }}</a></h1>
+    {% for section in toc.sections %}
+      <h2 class="fw6 f4 dark-red">{{ section.section }}</h2>
+      <ul class="ml4-ns list">
+      {% for item in section.children %}
+        <li><a class="f4 db mv3 {% if item.slug === slug %} blue fw7 {% else %} navy {% endif %}" href="{{ item.url }}">{{ item.name | safe }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endfor %}
+    </div>
+  </div>
+
   <div class="w-70-m w-60-l pr3-ns">
     <article class="bg-white pv3 ph4">
-      <h1 class="blue f2 mb4">{{ title }}</h1>
+      <h1 class="blue f2 mb4 fw3">{{ title }}</h1>
       <p class="lh-copy mb3 tr silver">
         {{ date }}
         {% if author %}
@@ -24,7 +38,7 @@
       </p>
 
     {% if translation %}
-      <p class="mb3 lh-copy i f4 mid-gray">Bài viết được dịch từ <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a></p>
+      <p class="lh-copy i f4 mid-gray">Bài viết được dịch từ <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a></p>
     {% endif %}
 
       <div id="js-content" class="content lh-copy dark-gray f4">{{ contents | safe }}</div>
@@ -44,21 +58,6 @@
     </article>
 
     <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
-  </div>
-
-  <div class="w-30-m w-40-l">
-    <div class="flex flex-column flex-row-ns top-1 sticky">
-      <div class="w-50-l mr3-ns">
-        {% include "layouts/el/widgets/tools.njk" %}
-      </div>
-
-      <div class="w-50-l">
-        {% include "layouts/el/widgets/subscription.njk" %}
-        {% include "layouts/el/widgets/social.njk" %}
-        {% include "layouts/el/widgets/recruit.njk" %}
-      </div>
-    </div>
-
   </div>
 </div>
 {% endblock %}

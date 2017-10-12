@@ -10,9 +10,7 @@ module.exports = options => (files, metalsmith, done) => {
       return acc
     }, [])
 
-    metalsmith.metadata(Object.assign(
-      {}, metalsmith.metadata(), { quickNews }
-    ))
+    metalsmith.metadata({ ...metalsmith.metadata(), quickNews })
   }
 
   done()
