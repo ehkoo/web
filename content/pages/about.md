@@ -10,7 +10,7 @@ Là một trang về lập trình mới toanh "như mọi trang web khác", như
 
 ### Vậy có gì hay?
 
-Mục tiêu ban đầu của Ehkoo là tạo ra một trang tài liệu kỹ thuật bằng tiếng Việt để trả lời cho câu hỏi `<Redis|MongoDB|Vagrant hay những công nghệ khác> là gì?`. Nhưng đó là chuyện xưa rồi. Giờ đây ở Ehkoo bạn có thể tìm thấy một loạt bài viết chi tiết bằng tiếng Việt về Laravel, hay  một bài giới thiệu ngắn gọn về PreactJS, hoặc một bài lảm nhảm về TDD, v.v...tùy vào mức độ may mắn của bạn. Ngoài ra Ehkoo còn giới thiệu những thư viện mới, bài viết hay bằng cả tiếng Việt lẫn tiếng Anh.
+Mục tiêu ban đầu của Ehkoo là tạo ra một trang tài liệu kỹ thuật bằng tiếng Việt để trả lời cho câu hỏi `<Redis|MongoDB|Vagrant hay những công nghệ khác> là gì?`. Nhưng đó là chuyện xưa rồi. Giờ thì Ehkoo chỉ tập trung nói về công nghệ web thôi, bởi vì [JavaScript quá dễ mà](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f). Mặc dù vậy, lâu lâu bạn vẫn sẽ thấy có những bài lấn sân sang back-end nhưng đó không phải là trọng tâm chính. Bên cạnh đó Ehkoo còn giới thiệu những thư viện mới, bài viết hay bằng cả tiếng Việt lẫn tiếng Anh.
 
 Vì Ehkoo biết rằng đời "thảo chương viên" không chỉ là ngày ngày viết mã, website cũng cố gắng tập hợp những tin tức hay ho liên quan tới công nghệ web, chia sẻ những kinh nghiệm của các lập trình viên gạo cội trên thế giới, hay đôi khi chỉ là một mẩu truyện vui vô tình tìm thấy trên Internet.
 

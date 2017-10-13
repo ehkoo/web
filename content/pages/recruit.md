@@ -6,11 +6,11 @@ permalinks: false
 ---
 Xin chào,
 
-Cám ơn bạn đã có ý định trở thành cộng tác viên cho Ehkoo. Thật ra việc này cũng đơn giản thôi.
+Cám ơn bạn đã có ý định trở thành cộng tác viên cho Ehkoo. Thật ra việc này vô cùng đơn giản.
 
 ## Về Ehkoo
 
-Một cách ngắn gọn, Ehkoo là trang tin tức chuyên về lập trình mới toe. Hiện tại đa phần nội dung là tập trung về lập trình web với PHP và JavaScript, nhưng trong tương lai, Ehkoo mong muốn có thêm nội dung về các ngôn ngữ khác, cũng như lấn sang mảng lập trình mobile, devops, v.v...Ngoài ra Ehkoo cũng muốn kể về cuộc sống của các lập trình viên khi rời bàn phím, họ đọc gì, xem gì, có ăn uống đầy đủ và hay bị tạ đè hay không.
+Một cách ngắn gọn, Ehkoo là trang tin tức chuyên về công nghệ web mới keng xà beng. Đa phần nội dung là tập trung về lập trình web với JavaScript, nhưng thỉnh thoảng cũng lấn sân sang back-end với node.js và những ngôn ngữ hay ho khác. Ngoài ra Ehkoo cũng muốn kể về cuộc sống của các lập trình viên khi rời bàn phím, họ đọc gì, xem gì, có ăn uống đầy đủ và hay bị tạ đè hay không.
 
 Và Ehkoo không thể đạt được mục tiêu đó nếu thiếu bạn.
 
