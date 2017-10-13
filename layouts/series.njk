@@ -18,7 +18,7 @@
       <h2 class="fw6 f4 dark-red">{{ section.section }}</h2>
       <ul class="ml4-ns list">
       {% for item in section.children %}
-        <li><a class="f4 db mv3 {% if item.slug === slug %} blue fw7 {% else %} navy {% endif %}" href="{{ item.url }}">{{ item.name | safe }}</a></li>
+        <li><a class="f4 db mv3 {% if item.slug === slug %} blue fw7 {% else %} mid-gray {% endif %}" href="{{ item.url }}">{{ item.name | safe }}</a></li>
       {% endfor %}
       </ul>
     {% endfor %}
