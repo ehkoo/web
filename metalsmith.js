@@ -8,6 +8,7 @@ const wordcount = require('metalsmith-word-count')
 const collections = require('metalsmith-collections')
 const feed = require('metalsmith-feed')
 
+const toc = require('./plugins/toc')
 const tags = require('./plugins/metalsmith-tags')
 const dates = require('./plugins/metalsmith-date-formatter')
 const related = require('./plugins/related')
@@ -137,6 +138,13 @@ const builder = Metalsmith(__dirname)
   })
   .use(feed({ collection: 'feed' }))
   .use(dates({ dates: [{ key: 'date', format: 'DD/MM/YYYY' }] }))
+  .use(
+    toc({
+      path: 'series/**/*.html',
+      urlGenerator: (series, slug) => `/series/${series}/${slug}`,
+      tocFilename: 'series/:series/toc.json'
+    })
+  )
   .use((files, metalsmith, done) => {
     const { collections } = metalsmith.metadata()
     const TOP_POSTS = 5

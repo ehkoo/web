@@ -1,0 +1,94 @@
+---
+layout: series.njk
+title: JSX
+date: 2017-10-12
+tags: JavaScript, React, Frontend
+slug: jsx
+series: react-tu-a-den-y
+author: kcjpop
+---
+JSX - Javascript Syntax Extension, hơi giống giống HTML nhưng không phải HTML. Nó là một dạng cú pháp mở rộng (không chính thức) của JavaScript và được sử dụng rộng rãi trong các ứng dụng React. JSX giúp bạn xây dựng giao diện với cú pháp HTML quen thuộc, lại kèm bên trong những đặc trưng của JavaScript, chẳng hạn như:
+
+#### Khai báo biến
+
+```javascript
+const hello = <h1>Hello World</h1>
+```
+
+Dùng `/>` nếu thẻ HTML không cần thẻ đóng
+
+```javascript
+const img = <img src="//localhost:3000/logo.png" alt="My Logo" />
+```
+
+Bạn cũng có thể kết hợp nhiều thẻ với nhau, như trong HTML.
+
+```javascript
+const block = (
+  <div>
+    <img src="" alt="" />
+    <h1>Hello World</h1>
+    <img src="//localhost:3000/logo.png" alt="My Logo" />
+  </div>
+)
+```
+
+#### Là kết quả trả về của hàm
+
+```javascript
+function sayHello() {
+  return <h1>Hello World</h1>
+}
+```
+
+#### Kết hợp với các biểu thức (expressions) JavaScript
+
+Bạn dùng cặp ngoặc nhọn để bao biểu thức lại, giống như vầy  `{expression}`.
+
+```javascript
+function sayHello(user) {
+  return <h1>Hello {user.name}</h1>
+}
+
+function sayHi(animal) {
+  return <h1>Hi {animal === DOG ? 'Woof' : 'Meow'}</h1>
+}
+
+sayHello({ name: 'John' })
+sayHi(PIG)
+```
+
+Khai báo thuộc tính cho thẻ HTML cũng tương tự, chỉ khác một chút là bạn dùng thuộc tính của [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/Element) được viết theo kiểu `camelCase`, chứ không phải chữ thường như trong HTML. Ví dụ, `class` sẽ trở thành `className`, `tabindex` sẽ là `tabIndex`.
+
+```javascript
+const link = <a className="link" tabIndex="-1" href="https://ehkoo.com">Ehkoo</a>
+```
+
+Theo mặc định, dữ liệu được gắn vào JSX sẽ được tự động "escaped" để phòng tránh tấn công kiểu XSS. Do đó bạn có thể an tâm là người dùng khó có thể chèn mã độc vào ứng dụng của bạn.
+
+
+### Ngoài lề: Sử dụng Emmet với JSX trong Sublime Text (ST) và Atom
+
+Dân lập trình web mà không biết đến [Emmet](https://emmet.io/) thì đúng là thiếu sót lớn. Để có thể sử dụng Emmet trong JSX, trước tiên bạn cần cài plugin/package Emmet cho ST/Atom. Sau đó:
+
+Với Sublime Text, bạn vào menu _Preferences - Key Bindings_ và thêm vào đoạn sau:
+
+```json
+{ "keys": ["tab"], "command": "expand_abbreviation_by_tab", "context":
+    [
+        { "operand": "source.js", "operator": "equal", "match_all": true, "key": "selector" },
+        { "match_all": true, "key": "selection_empty" },
+        { "operator": "equal", "operand": false, "match_all": true, "key": "has_next_field" },
+        { "operand": false, "operator": "equal", "match_all": true, "key": "auto_complete_visible" },
+        { "match_all": true, "key": "is_abbreviation" }
+    ]
+}
+```
+
+Riêng với Atom, bạn vào menu _Edit - Keymap..._ và thêm vào:
+```
+'atom-text-editor[data-grammar="source js jsx"]':
+     'tab': 'emmet:expand-abbreviation-with-tab'
+```
+
+Bạn có thể thử gõ `h1` sau đó nhấn `Tab`. Nếu thấy `<h1></h1>` thì coi như đã xong.

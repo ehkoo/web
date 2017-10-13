@@ -1,0 +1,24 @@
+{
+  "name": "ReactJS từ A đến Y",
+  "slug": "react-tu-a-den-y",
+  "index": { "name": "Giới thiệu" },
+  "sections": [
+    {
+      "section": "React căn bản",
+      "children": [
+        { "name": "Cài đặt", "slug": "hello-world" },
+        { "name": "JSX", "slug": "jsx" },
+        {
+          "name": "Component và `props`",
+          "slug": "component-props"
+        },
+        { "name": "Viết unit tests", "slug": "viet-unit-tests" },
+        {
+          "name": "`state`, xử lý sự kiện và vòng đời của component",
+          "slug": "state-event-handlers-life-cycles"
+        },
+        { "name": "`ref` và cách tích hợp với thư viện ngoài", "slug": "ref" }
+      ]
+    }
+  ]
+}

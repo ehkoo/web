@@ -1,0 +1,143 @@
+---
+layout: series.njk
+title: Cài đặt và chương trình đầu tiên
+date: 2017-10-12
+tags: JavaScript, React, Frontend
+slug: hello-world
+series: react-tu-a-den-y
+author: kcjpop
+---
+
+Đối với người mới bắt đầu, cách đơn giản nhất để học React là dùng gói `create-react-app`. Công cụ sẽ giúp thiết lập một môi trường phát triển trên máy bạn với những tính năng JavaScript mới nhất, cùng với những thư viện chuyên dùng trong hệ sinh thái của React. Lẽ dĩ nhiên bạn càng tiếp cận dễ dàng với một công nghệ mới chừng nào thì mức độ hứng thú cũng như phụ thuộc của bạn vào công nghệ đó càng tăng. Đơn giản là vậy.
+
+Bạn mở terminal lên và gõ lệnh sau để cài đặt và tạo ứng dụng đầu tiên:
+
+```bash
+npm install -g create-react-app
+create-react-app my-app
+
+cd my-app
+npm start
+```
+
+Bùm, trình duyệt bỗng nhiên được khởi động và trỏ đến `localhost:3000`. Bạn sẽ thấy logo React quay quay và chúc mừng, bạn đã tạo được chương trình React đầu tiên. Bây giờ là lúc tốt nhất để lên Facebook và tạo một Sự kiện trong đời (Life Event). Sau khi làm xong thì hãy đọc tiếp nhé.
+
+> `create-react-app` hoàn toàn phù hợp để tạo dự án React hoàn toàn mới. Trong trường hợp bạn bị/được đưa vào một team đang làm việc với dự án có sẵn, khả năng cao dự án đó đã được cấu hình sẵn luôn rồi. Nên gần như bạn không cần quan tâm bên dưới `create-react-app` là cái gì.
+
+### Cấu trúc thư mục
+
+`create-react-app` đã giúp chúng ta tạo ứng dụng React đầu tiên. Ứng dụng này có cấu trúc như sau:
+
+```
+my-app
+├── node_modules
+├── package.json
+├── package-lock.json
+├── README.md
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── registerServiceWorker.js
+
+```
+
+Bạn chỉ cần quan tâm `public/index.html` và `src/index.js` vì 2 tập tin này đóng vai trò khởi động cho ứng dụng của chúng ta. `index.html` có nội dung đã được đơn giản hóa như sau:
+
+```html
+<body>
+  <div id="root"></div>
+</body>
+```
+
+và `src/index.js`
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+Bạn cũng có thể đoán được, React sẽ render nội dung của `App` vào thẻ DIV có ID là `root`. Nội dung của `src/App.js`:
+
+
+```javascript
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+Quào, cái gì mà HTML trộn chung với JavaScript vầy nè. Phần bạn thấy trong hàm `render()` nhìn rất giống HTML nhưng nó được gọi là JSX - Javascript Syntax Extension. Chúng ta sẽ nói về JSX ở phần sau. Bây giờ bạn sửa hàm `render()` thành như sau:
+
+```javascript
+render() {
+  return <h1>Hello World</h1>
+}
+```
+
+“Y chang HTML”, bạn có thể nghĩ vậy. Nếu trình duyệt vẫn đang mở, bạn sẽ thấy `localhost:3000` đã tự động “Xin chào thế giới”.
+
+Nếu để ý bạn sẽ thấy `App` là một ES6 class được kế thừa từ `Component`. Chúng ta gọi `App` là một...React component và sẽ tìm hiểu sâu hơn về component ở phần sau nữa.
+
+Có lẽ chúng ta nên dọn dẹp thư mục `src` một chút, vì xuyên suốt loạt bài này chúng ta sẽ tạo một ứng dụng hoàn toàn khác. Bạn chạy lệnh hốt rác sau từ terminal:
+
+```bash
+cd src
+rm App.css App.test.js index.css logo.svg registerServiceWorker.js
+```
+
+Và sửa `src/index.js` lại thành:
+
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+
+ReactDOM.render(<App />, document.getElementById('root'))
+```
+
+`src/App.js`
+
+```javascript
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    return <h1>Hello World</h1>
+  }
+}
+
+export default App
+```
+
+Nhìn gọn gàng và thuần túy React hơn hẳn.
+
+### Tạm kết
+
+Như vậy bạn đã biết tạo một ứng dụng React bằng `create-react-app` và đã thử phá phách một chút với JSX. Ở phần kế tiếp chúng ta sẽ đi sâu vào JSX và React component.

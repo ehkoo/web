@@ -44,18 +44,20 @@
       <div id="js-content" class="content lh-copy dark-gray f4">{{ contents | safe }}</div>
 
       <hr class="mw3 center db bg-silver">
-
-      {% if tags %}
-      <div class="lh-copy mt3 flex items-center">
-        <span class="silver mr3">Tags:</span>
-        <ul class="list">
-        {% for tag in tags %}
-          <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
     </article>
+
+    <section class="flex">
+      <div class="pa3 f3 fw6 w-50">
+        {% if prevArticle %}
+          <span class="silver">Bài trước: </span><a class="dark-green" href="{{ prevArticle.url }}">{{ prevArticle.name }}</a>
+        {% endif %}
+      </div>
+      <div class="pa3 f3 fw6 w-50 tr">
+        {% if nextArticle %}
+          <span class="silver">Bài sau: </span> <a class="dark-green" href="{{ nextArticle.url }}">{{ nextArticle.name }}</a>
+        {% endif %}
+      </div>
+    </section>
 
     <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
   </div>
