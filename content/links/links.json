@@ -1,5 +1,17 @@
 [
   {
+    "title": "Why and How We Migrated from AngularJS to VueJS",
+    "url": "https://blog.holistics.io/why-and-how-we-migrated-from-angularjs-to-vuejs/"
+  },
+  {
+    "title": "Rebuilding slack.com",
+    "url": "https://slack.engineering/rebuilding-slack-com-b124c405c193"
+  },
+  {
+    "title": "Tìm hiểu quy trình TC39",
+    "url": "https://kipalog.com/posts/Tim-hieu-quy-trinh-TC39"
+  },
+  {
     "title": "The state of the web",
     "url": "https://medium.com/@fox/talk-the-state-of-the-web-3e12f8e413b3"
   },
