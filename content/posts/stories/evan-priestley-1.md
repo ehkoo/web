@@ -10,7 +10,7 @@ excerpt: Evan Priestley, từng làm việc cho Facebook và là tác giả củ
 author: kcjpop
 ---
 
-> Evan Priestley là kỹ sư của Facebook từ năm 2007 đến 2011. Evan được bình chọn là Top Writer 2012 của Quora, và những câu trả lời của anh đa phần liên quan đến [Phabricator](https://www.phacility.com/phabricator), một ứng dụng mã nguồn mở được viết bằng PHP giúp cho việc quản lý dự án phần mềm dễ dàng hơn. Evan cũng đừng đề cập đến Facebook như là “chương trình có nhiều bug nhất trên thế giới”.
+> Evan Priestley là kỹ sư của Facebook từ năm 2007 đến 2011. Evan được bình chọn là Top Writer 2012 của Quora, và những câu trả lời của anh đa phần liên quan đến [Phabricator](https://www.phacility.com/phabricator), một ứng dụng mã nguồn mở được viết bằng PHP giúp cho việc quản lý dự án phần mềm dễ dàng hơn. Evan cũng từng đề cập đến Facebook như là “chương trình có nhiều bug nhất trên thế giới”.
 
 ### Và câu chuyện bắt đầu
 

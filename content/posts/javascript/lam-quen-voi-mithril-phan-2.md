@@ -102,7 +102,7 @@ m(ComponentWithState, { data: 'Hello' })
 
 #### `oncreate`
 
-Hàm `oncreate (vnode)` được kích hoạt **sau** khi vnode được gắn vào cây DOM. Vì lúc này element đã tồn tại trong cây DOM, bạn có thể dùng `vnode.dom` để đọc những thuộc tính về bố cục, ví dụ như `vnode.dom.offsetHeight` hay `vnode.dom.getBoundingClientRect()`. `oncreate` rất hữu dụng khi bạn cần truy xuất những thuộc tính trên, kích hoạt animation hay tích hợp thư viên ngoài.
+Hàm `oncreate (vnode)` được kích hoạt **sau** khi vnode được gắn vào cây DOM. Vì lúc này element đã tồn tại trong cây DOM, bạn có thể dùng `vnode.dom` để đọc những thuộc tính về bố cục, ví dụ như `vnode.dom.offsetHeight` hay `vnode.dom.getBoundingClientRect()`. `oncreate` rất hữu dụng khi bạn cần truy xuất những thuộc tính trên, kích hoạt animation hay tích hợp thư viện ngoài.
 
 Hàm `oncreate()` sẽ không được gọi khi vnode được cập nhật.
 
@@ -119,7 +119,7 @@ m(HeightReporter, { data: 'Hello' })
 
 #### `onbeforeupdate`
 
-Hàm `onbeforeupdate(vnode, old)` được gọi trước khi một vnode được so sánh trong quá trình redraw. Nếu hàm này được khai báo và trả về giá trị `false`, mithril sẽ không cập nhật giao diện cho vnode/component này. Trên [trang chủ của mithril](https://mithril.js.org/lifecycle-methods.html#avoid-premature-optimizations), `onbeforeupdate()` được khuyến cáo nên sử dụng cẩn thận hoặc không dùng luôn để tránh trường hợp "tối ưu hóa một cách vội vã".
+Hàm `onbeforeupdate(vnode, old)` được gọi trước khi một vnode được so sánh trong quá trình redraw. Nếu hàm này được khai báo và trả về giá trị `false`, mithril sẽ không cập nhật giao diện cho vnode/component này. Trên [trang chủ của mithril](https://mithril.js.org/lifecycle-methods.html#avoid-premature-optimizations), `onbeforeupdate()` được khuyến cáo nên sử dụng cẩn thận hoặc không dùng luôn để tránh trường hợp "tối ưu hóa quá sớm" (premature optimization).
 
 #### `onupdate`
 
@@ -155,7 +155,7 @@ const Fader = {
 }
 ```
 
-### `onremove`
+#### `onremove`
 
 Cuối cùng là `onremove(dom)`. Hàm này cũng được gọi **trước** khi element được gỡ ra khỏi cây DOM, nhưng chạy sau `onbeforeremove()`. Nếu `onbeforeremove()` trả về một Promise, `onremove()` sẽ chạy sau khi Promise đó hoàn thành. Hàm `onremove()` rất hữu ích để làm những công việc "hốt rác", ví dụ như `clearTimeout()`.
 
@@ -235,7 +235,7 @@ function Item (vnode) {
 }
 ```
 
-Code sạch sẽ khô thoáng hơn nhiều.
+Code [sạch sẽ khô thoáng](https://kipalog.com/posts/0--Kotexcode--code-la-phai-kho-thoang-sach-se) hơn nhiều.
 
 ### Tích hợp thư viện ngoài
 
