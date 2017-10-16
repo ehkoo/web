@@ -1,5 +1,10 @@
 [
   {
+    "name": "webpackmonitor/webpackmonitor",
+    "desc": "Plugin cho webpack để tạo dashboard giúp phân tích bản build trên production.",
+    "url": "https://github.com/webpackmonitor/webpackmonitor"
+  },
+  {
     "name": "dollarshaveclub/stickybits",
     "desc": "Polyfill cho `position: sticky` chỉ với 3KB gzipped",
     "url": "https://dollarshaveclub.github.io/stickybits/"
