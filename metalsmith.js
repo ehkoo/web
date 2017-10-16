@@ -122,7 +122,7 @@ module.exports = Metalsmith(__dirname)
       links: {
         path: path.resolve(__dirname, 'content/links/links.json'),
         limit: 10,
-        parser: item => Object.assign({}, item, { hostname: url.parse(item.url).hostname })
+        parser: item => ({ ...item, hostname: url.parse(item.url).hostname })
       },
       tools: { path: path.resolve(__dirname, 'content/links/tools.json') }
     })
