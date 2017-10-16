@@ -1,19 +1,20 @@
 const url = require('url')
 const path = require('path')
 const Metalsmith = require('metalsmith')
+const tags = require('metalsmith-tags')
 const asset = require('metalsmith-static')
-const collections = require('metalsmith-collections')
 const dates = require('metalsmith-date-formatter')
+const drafts = require('metalsmith-drafts')
 const layouts = require('metalsmith-layouts')
 const markdown = require('metalsmith-markdown-remarkable')
-const permalinks = require('metalsmith-permalinks')
-const tags = require('metalsmith-tags')
 const wordcount = require('metalsmith-word-count')
-const drafts = require('metalsmith-drafts')
+const permalinks = require('metalsmith-permalinks')
+const collections = require('metalsmith-collections')
 
+const toc = require('./plugins/toc')
+const related = require('./plugins/related')
 const quickNews = require('./plugins/quicknews')
 const readJson = require('./plugins/read-json')
-const toc = require('./plugins/toc')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
@@ -39,6 +40,11 @@ module.exports = Metalsmith(__dirname)
     asset({
       src: './assets',
       dest: '.'
+    })
+  )
+  .use(
+    related({
+      max_posts: 6
     })
   )
   .use(drafts())
