@@ -7,9 +7,12 @@
 {% block content %}
 <div class="flex flex-column flex-row-l pa3">
   <div class="w-60-l pr3-ns">
-    {% include "layouts/el/widgets/quicknews.njk" %}
 
   {% for post in lastPosts %}
+    {% if loop.index === 3 %}
+      {% include "layouts/el/widgets/quicknews.njk" %}
+    {% endif %}
+
     {% if post.type === 'quote' %}
     <div class="bg-light-gray mb3">
       <div class="flex items-center">
