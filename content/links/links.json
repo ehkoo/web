@@ -1,5 +1,17 @@
 [
   {
+    "title": "Chết server, làm gì đây?",
+    "url": "https://quan-cam.com/posts/chet-server-lam-gi-day"
+  },
+  {
+    "title": "Randomart và thuật toán Ông giám mục say xỉn",
+    "url": "https://quan-cam.com/posts/the-drunken-bishop"
+  },
+  {
+    "title": "Algorithm in Frontend - Kỳ 2: Tree và Menu",
+    "url": "https://thefullsnack.com/posts/frontend-algorithm-002.html"
+  },
+  {
     "title": "Why and How We Migrated from AngularJS to VueJS",
     "url": "https://blog.holistics.io/why-and-how-we-migrated-from-angularjs-to-vuejs/"
   },
