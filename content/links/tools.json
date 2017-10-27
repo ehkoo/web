@@ -1,5 +1,10 @@
 [
   {
+    "name": "One-Nexus",
+    "desc": "Dự án mẫu và tập hợp UI để xây dựng ứng dụng với  Synergy framework",
+    "url": "http://www.onenexus.io/"
+  },
+  {
     "name": "webpackmonitor/webpackmonitor",
     "desc": "Plugin cho webpack để tạo dashboard giúp phân tích bản build trên production.",
     "url": "https://github.com/webpackmonitor/webpackmonitor"
