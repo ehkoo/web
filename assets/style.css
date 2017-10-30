@@ -55,7 +55,7 @@ svg {
 
 .content blockquote {
   background-color: #e9ecef;
-  margin: 0;
+  margin: 1em 0;
   padding: 0.25rem 0.5rem 0.25rem 2rem;
   border-left: 0.5rem solid #dee2e6;
   position: relative;
@@ -109,13 +109,29 @@ svg {
   font-size: 0.875rem;
 }
 
+@media screen and (min-width: 60em) {
+  .content ul,
+  .content ol {
+    margin: 0 3rem;
+  }
+}
+
+.content ul,
+.content ol {
+  margin: 0 2rem;
+}
+
 .content ul {
-  margin: 1rem;
   list-style-type: circle;
 }
+
 .content ol {
   list-style-type: decimal;
-  margin: 1rem;
+}
+
+.content ol li,
+.content ul li {
+  padding-left: 1rem;
 }
 
 .quote {
