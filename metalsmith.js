@@ -10,6 +10,7 @@ const markdown = require('metalsmith-markdown-remarkable')
 const wordcount = require('metalsmith-word-count')
 const permalinks = require('metalsmith-permalinks')
 const collections = require('metalsmith-collections')
+const headingsIdentifier = require('metalsmith-headings-identifier')
 
 const toc = require('./plugins/toc')
 const related = require('./plugins/related')
@@ -79,6 +80,9 @@ module.exports = Metalsmith(__dirname)
       typographer: true
     })
   )
+  .use(headingsIdentifier({
+    linkTemplate: '<a class="heading-archor" href="#%s"></a>'
+  }))
   .use(
     dates({
       dates: [{ key: 'date', format: 'DD/MM/YYYY' }]
