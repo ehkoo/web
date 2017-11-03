@@ -10,7 +10,7 @@ author: kcjpop
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1509504402/PTLHvdFMQuW7VhAXQc0G_es6_what_to_use_and_what_not_to.png_rgvxgq.jpg)
 
-2017 có thể nói là năm tuyệt vời với dân lập trình web, khi hầu hết những tính năng hay ho hấp dẫn của ES6 đều đã được [các trình duyệt hỗ trợ](https://kangax.github.io/compat-table/es6/). Nhờ đó nhà phát triển gần như có thể xây dựng ứng dụng trực tiếp bằng ES6 mà không cần phải thông qua các công cụ chuyển đổi như Babel hay Bublé, giúp cho ứng dụng trở nên gọn nhẹ hơn, giảm thiểu kích thước tập tin khi chuyển đến người sử dụng.
+2017 có thể nói là năm tuyệt vời với dân lập trình web, khi hầu hết những tính năng hay ho hấp dẫn của ES6 đều đã được [các trình duyệt hỗ trợ](https://kangax.github.io/compat-table/es6/). Nhờ đó nhà phát triển gần như có thể xây dựng ứng dụng trực tiếp bằng ES6 mà không cần phải thông qua các công cụ chuyển đổi như [Babel](http://babeljs.io/) hay [Bublé](https://buble.surge.sh/guide/), giúp cho ứng dụng trở nên gọn nhẹ hơn, giảm thiểu kích thước tập tin khi chuyển đến người sử dụng.
 
 Hãy cùng Ehkoo điểm lại những tính năng chính trong ES6, cũng như khả năng tương thích của chúng với các trình duyệt.
 
