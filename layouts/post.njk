@@ -12,7 +12,7 @@
 {% block content %}
 <div class="flex flex-column flex-row-l pa3">
   <div class="w-60-l pr3-ns">
-    <article class="bg-white pv3 ph4">
+    <article class="bg-white pv3 ph4 relative">
       <h1 class="blue f2 mb4">{{ title }}</h1>
       <p class="lh-copy mb3 tr silver">
         {{ date }}
@@ -41,6 +41,10 @@
         </ul>
       </div>
       {% endif %}
+
+      <div class="clip-l fixed bottom-2 right-2 shadow-1 z-2">
+        {% include "layouts/el/jump-top.njk" %}
+      </div>
     </article>
 
     <div class="mv3">
