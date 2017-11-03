@@ -365,7 +365,7 @@ const params = [1, 2, 3]
 mul(...params)
 ```
 
-Spread cũng hoạt động trên object, tương tự như `Object.assign()`, nhưng bạn lưu ý là tính năng này chưa được hỗ trợ trên trình duyệt Edge và Safari.
+Rest/spread cũng có thể hoạt động trên object, tương tự như `Object.assign()`, nhưng bạn lưu ý tính năng vẫn đang được [đề xuất](https://github.com/tc39/proposal-object-rest-spread) (proposal). Về phía trình duyệt, có Firefox và Chrome là hỗ trợ, trong khi Edge và Safari hoàn toàn không hoạt động.
 
 ```javascript
 const user = { name: 'John' }
@@ -373,9 +373,13 @@ const user = { name: 'John' }
 // ES5
 const userWithAgeEs5 = Object.assign({}, user, { age: 21 })
 
-// Thời đại mới
+// Thời đại mới với spread
 const userWithAge = {...user, age: 21}
 console.log(userWithAge) // { name: 'John', age: 21 }
+
+// Và rest
+const { name, ...others } = userWithAge
+console.log(others) // { age: 21 }
 ```
 
 > **Tính tương thích:** Trừ IE11, tất cả các trình duyệt còn lại đều hỗ trợ rest và spread với mảng hay chuỗi. Với spread object, Edge và Safari chưa hỗ trợ.
