@@ -1,7 +1,12 @@
 [
   {
+    "name": "moment/luxon",
+    "desc": "Thư viện giúp làm việc với DateTime trong JS, hỗ trợ Timezone, Duration và Interval",
+    "url": "https://github.com/moment/luxon"
+  },
+  {
     "name": "One-Nexus",
-    "desc": "Dự án mẫu và tập hợp UI để xây dựng ứng dụng với  Synergy framework",
+    "desc": "Dự án mẫu và tập hợp UI để xây dựng ứng dụng với Synergy framework",
     "url": "http://www.onenexus.io/"
   },
   {
