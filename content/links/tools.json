@@ -1,5 +1,10 @@
 [
   {
+    "name": "Frappé Charts",
+    "desc": "Thư viện tạo biểu đồ lấy cảm hứng từ GitHub, zero dependencies",
+    "url": "https://frappe.github.io/charts/"
+  },
+  {
     "name": "moment/luxon",
     "desc": "Thư viện giúp làm việc với DateTime trong JS, hỗ trợ Timezone, Duration và Interval",
     "url": "https://github.com/moment/luxon"
