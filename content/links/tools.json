@@ -1,5 +1,10 @@
 [
   {
+    "name": "JavaScript. The Core: 2nd Edition",
+    "desc": "Sách đi sâu vào ngôn ngữ lập trình ECMAScript và những component cốt lõi của nó. Nội dung bao hàm ES2017+.",
+    "url": "http://dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition/"
+  },
+  {
     "name": "Frappé Charts",
     "desc": "Thư viện tạo biểu đồ lấy cảm hứng từ GitHub, zero dependencies",
     "url": "https://frappe.github.io/charts/"
