@@ -137,7 +137,7 @@ JavaScript cũng có thể tác động đến hiệu suất của website theo 
 
 Nhiều website xem tính ẩn hiện của nội dung trên trang là một chi phí đắt đỏ khi tối ưu hóa tính tương tác. Để có thể thực hiện tiến trình vẽ đầu tiên (first paint) một cách nhanh chóng, lập trình viên thường sử dụng kỹ thuật tạo nội dung trước ở phía server (server-side rendering - SSR), sau đó "nâng cấp" bằng cách gắn các hàm xử lý sự kiện sau khi JavaScript đã được tải về.
 
-Nhưng hãy cẩn thận -- kỹ thuật này cũng có chi phí riêng của nó. Bạn 1) nhìn chung sẽ gửi xuống một tập tin HTML _nặng ký hơn_ và có thể ảnh hưởng đến tính tương tác của site, hoặc 2) có thể đưa người dùng vào một vùng thung lũng huyền bí (uncanny valley) nơi một nửa trải nghiệm không thật sự có thể tương tác được, cho đến khi JavaScript hoán tất quá trình xử lý.
+Nhưng hãy cẩn thận -- kỹ thuật này cũng có chi phí riêng của nó. Bạn 1) nhìn chung sẽ gửi xuống một tập tin HTML _nặng ký hơn_ và có thể ảnh hưởng đến tính tương tác của site, hoặc 2) có thể đưa người dùng vào một vùng thung lũng huyền bí (uncanny valley) nơi một nửa trải nghiệm không thật sự có thể tương tác được, cho đến khi JavaScript hoàn tất quá trình xử lý.
 
 Kỹ thuật Khởi động Tăng tiến có thể là một hướng tiếp cận tốt hơn. Bạn chỉ cần gửi xuống một trang vừa đủ có thể hoạt động, bao gồm chỉ HTML/JS/CSS cần thiết cho định tuyến hiện tại. Khi các tài nguyên khác đã được tải xong, ứng dụng có thể lazy-load vào và mở ra các chức năng khác.
 
