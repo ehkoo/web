@@ -24,7 +24,7 @@ module.exports = Metalsmith(__dirname)
     siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
     siteName: 'Ehkoo',
     siteDesc:
-      'Tin tức lập trình web cập nhật liên tục. Đầy đủ các chủ đề PHP, JavaScript, CSS, PWA, front-end, back-end...',
+      'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
     siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
       twitterHandle: '@ehkoo',
@@ -80,9 +80,11 @@ module.exports = Metalsmith(__dirname)
       typographer: true
     })
   )
-  .use(headingsIdentifier({
-    linkTemplate: '<a class="heading-archor" href="#%s"></a>'
-  }))
+  .use(
+    headingsIdentifier({
+      linkTemplate: '<a class="heading-archor" href="#%s"></a>'
+    })
+  )
   .use(
     dates({
       dates: [{ key: 'date', format: 'DD/MM/YYYY' }]
