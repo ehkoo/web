@@ -11,7 +11,7 @@
     const ps = document.querySelectorAll('#js-content p')
     if (fbBox && ps) {
       const parent = document.getElementById('js-content')
-      const archor = ps[Math.ceil(ps.length / 2)]
+      const archor = ps[Math.ceil(ps.length / 4)]
       parent.insertBefore(fbBox, archor)
     }
   }

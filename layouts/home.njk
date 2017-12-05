@@ -9,10 +9,6 @@
   <div class="w-60-l pr3-ns">
 
   {% for post in lastPosts %}
-    {% if loop.index === 3 %}
-      {% include "layouts/el/widgets/quicknews.njk" %}
-    {% endif %}
-
     {% if post.type === 'quote' %}
     <div class="bg-light-gray mb3">
       <div class="flex items-center">
@@ -29,9 +25,9 @@
     </div>
     {% else %}
     <div class="bg-white mb3">
-      <div class="flex">
+      <div class="flex flex-column flex-row-ns">
         <div class="w-75-l pa3">
-          <div class="flex items-center">
+          <div class="flex flex-column flex-row-ns items-center-ns">
           {% if post.tags %}
             {% set postTags = post.tags | slice(3) | first if post.tags.length > 3 else post.tags %}
             <ul class="list">
@@ -40,12 +36,15 @@
             {% endfor %}
             </ul>
           {% endif %}
-            <span class="gray f6 ml-auto">
+            <span class="gray f6 ml-auto-ns">
               {{ post.date }} &mdash; {{ post.wordCount }} từ &mdash; {{ post.readingTime }}
             </span>
           </div>
           <h2 class="mv3 f3 fw7"><a href="/{{ post.path }}" class="navy">{{ post.title }}</a></h2>
-          <p class="mv2 lh-copy silver f4">{{ post.excerpt }}</p>
+          <div class="h4 clip-ns">
+            <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
+          </div>
+          <p class="mv2 lh-copy silver f5 f4-ns">{{ post.excerpt }}</p>
         </div>
         <div class="w-25-l clip-m">
           <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
