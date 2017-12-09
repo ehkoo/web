@@ -6,13 +6,15 @@ permalinks: false
 ---
 ### Ê-ku?
 
-Là một trang về lập trình mới toanh "như mọi trang web khác", nhưng tập trung vào chất lượng và hướng đến cộng đồng. Ý tưởng thực hiện Ehkoo có từ 2014 nhưng sau đó vì quá làm biếng mà website bỏ lơ không cập nhật. Đến nay cuối năm 2017 thì bỗng nhiên được hồi sinh mà không rõ lý do.
+Là một trang về lập trình mới keng xà beng, chủ yếu nói về công nghệ web và những chuyện lập trình xung quanh chúng. Ý tưởng thực hiện Ehkoo có từ 2014 nhưng sau đó vì quá làm biếng mà website bỏ lơ không cập nhật. Đến cuối năm 2017 thì bỗng nhiên được hồi sinh mà không rõ lý do.
 
 ### Vậy có gì hay?
 
-Mục tiêu ban đầu của Ehkoo là tạo ra một trang tài liệu kỹ thuật bằng tiếng Việt để trả lời cho câu hỏi `<Redis|MongoDB|Vagrant hay những công nghệ khác> là gì?`. Nhưng đó là chuyện xưa rồi. Giờ thì Ehkoo chỉ tập trung nói về công nghệ web thôi, bởi vì [JavaScript quá dễ mà](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f). Mặc dù vậy, lâu lâu bạn vẫn sẽ thấy có những bài lấn sân sang back-end nhưng đó không phải là trọng tâm chính. Bên cạnh đó Ehkoo còn giới thiệu những thư viện mới, bài viết hay bằng cả tiếng Việt lẫn tiếng Anh.
+Ehkoo hướng đến cung cấp những bài viết chất lượng về các công nghệ mới xoay quanh ứng dụng web và hệ sinh thái của nó, đặc biệt là [JavaScript](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f). Mặc dù nghiêng về front-end, thỉnh thoảng bạn vẫn sẽ thấy có những bài lấn sân sang back-end nhưng đó không phải là trọng tâm chính.
 
-Vì Ehkoo biết rằng đời "thảo chương viên" không chỉ là ngày ngày viết mã, website cũng cố gắng tập hợp những tin tức hay ho liên quan tới công nghệ web, chia sẻ những kinh nghiệm của các lập trình viên gạo cội trên thế giới, hay đôi khi chỉ là một mẩu truyện vui vô tình tìm thấy trên Internet.
+Bên cạnh đó, Ehkoo cũng cập nhật những tin tức mới nhất trong giới lập trình web, chia sẻ những kinh nghiệm của các lập trình viên gạo cội trên thế giới, hay giới thiệu những thư viện và công cụ hữu ích vừa ra lò.
+
+Trong tương lai, Ehkoo mong muốn sẽ cung cấp những tài liệu đầy đủ và cặn kẽ nhất, giúp các bạn mới làm quen với lập trình web cũng cảm thấy dễ dàng bắt đầu.
 
 ### Những gì không tìm thấy ở đây?
 
@@ -22,7 +24,7 @@ Vì Ehkoo biết rằng đời "thảo chương viên" không chỉ là ngày ng
 - Hướng dẫn xây dựng ứng dụng quản lý sinh viên/web bán điện thoại/blog bằng PHP
 - TBA
 
-### Sao chỉ viết về PHP và JavaScript vậy?
+### Sao chỉ viết về React vậy?
 
 Do thiếu người đó mà.
 
@@ -30,7 +32,7 @@ Do thiếu người đó mà.
 
 [@kcjpop](https://github.com/kcjpop)
 
-_Bạn_ &mdash; Thiệt đó, Ehkoo đang [tuyển thêm người](/cong-tac) để viết bài nè.
+_Bạn_ &mdash; Ehkoo đang [tìm kiếm đồng sự](/cong-tac) để cùng xây dựng website nè.
 
 ### Bản quyền?
 Bản quyền bài viết thuộc về tác giả. Ehkoo chỉ là nơi tập hợp và lưu trữ nội dung. Nội dung trên website khi được chia sẻ/đăng tải lại cần được giữ nguyên, không thay đổi, chỉnh sửa, và phải ghi rõ nguồn từ "ehkoo.com".
