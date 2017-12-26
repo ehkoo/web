@@ -13,26 +13,22 @@
   },
   "watch": {
     "build:dev": {
-      "patterns": [
-        "content/**/*",
-        "assets/**/*",
-        "layouts/**/*"
-      ],
+      "patterns": ["content/**/*", "assets/**/*", "layouts/**/*"],
       "extensions": "md,css,njk,js,json"
     }
   },
   "scripts": {
-    "build": "rimraf dist/* -rf && node build.js",
-    "build:dev": "node build.js",
+    "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js",
+    "build:dev": "node metalsmith.js",
     "start": "npm-watch build:dev",
     "serve": "http-server dist"
   },
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.5.0",
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "http-server": "^0.10.0",
     "metalsmith": "^2.1.0",
@@ -40,7 +36,7 @@
     "metalsmith-date-formatter": "^1.0.2",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-headings-identifier": "0.0.11",
-    "metalsmith-html-minifier": "^2.2.0",
+    "metalsmith-html-minifier": "^2.4.5",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-markdown-remarkable": "^0.1.1",
     "metalsmith-permalinks": "^0.5.0",

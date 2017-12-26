@@ -10,7 +10,7 @@ const markdown = require('metalsmith-markdown-remarkable')
 const wordcount = require('metalsmith-word-count')
 const permalinks = require('metalsmith-permalinks')
 const collections = require('metalsmith-collections')
-const headingsIdentifier = require('metalsmith-headings-identifier')
+const htmlMinifier = require('metalsmith-html-minifier')
 
 const toc = require('./plugins/toc')
 const related = require('./plugins/related')
@@ -18,13 +18,13 @@ const quickNews = require('./plugins/quicknews')
 const readJson = require('./plugins/read-json')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
+const isLocal = process.env.NODE_ENV !== 'production'
 
-module.exports = Metalsmith(__dirname)
+const builder = Metalsmith(__dirname)
   .metadata({
     siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
     siteName: 'Ehkoo',
-    siteDesc:
-      'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
+    siteDesc: 'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
     siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
       twitterHandle: '@ehkoo',
@@ -81,11 +81,6 @@ module.exports = Metalsmith(__dirname)
     })
   )
   .use(
-    headingsIdentifier({
-      linkTemplate: '<a class="heading-archor" href="#%s"></a>'
-    })
-  )
-  .use(
     dates({
       dates: [{ key: 'date', format: 'DD/MM/YYYY' }]
     })
@@ -106,12 +101,12 @@ module.exports = Metalsmith(__dirname)
       ]
     })
   )
-  .use(
-    quickNews({
-      path: 'quicknews/**',
-      limit: 8
-    })
-  )
+  // .use(
+  //   quickNews({
+  //     path: 'quicknews/**',
+  //     limit: 8
+  //   })
+  // )
   .use(
     toc({
       path: 'series/**/*.html',
@@ -144,6 +139,15 @@ module.exports = Metalsmith(__dirname)
       acc[key] = data
       return acc
     }, {})
+
     done()
   })
   .use(layouts('nunjucks'))
+
+if (!isLocal) {
+  builder.use(htmlMinifier())
+}
+
+builder.build(err => {
+  if (err) throw err
+})
