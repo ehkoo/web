@@ -3,8 +3,8 @@
   window.onload = () => {
     stickybits('.sticky', { noStyles: true })
     // zoom image
-    const images = document.querySelector('#js-content img')
-    if (window.zoom != null && images) window.zoom(images)
+    const images = document.querySelectorAll('#js-content img')
+    if (window.zoom != null && images.length > 0) images.forEach(window.zoom)
 
     // Insert FB like box in the middle of content
     const fbBox = document.getElementById('js-fb-box')

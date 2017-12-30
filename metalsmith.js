@@ -24,7 +24,8 @@ const builder = Metalsmith(__dirname)
   .metadata({
     siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
     siteName: 'Ehkoo',
-    siteDesc: 'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
+    siteDesc:
+      'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
     siteLogo: 'https://ehkoo.com/img/logo.png',
     social: {
       twitterHandle: '@ehkoo',
@@ -40,7 +41,7 @@ const builder = Metalsmith(__dirname)
   .use(
     asset({
       src: './assets',
-      dest: '.'
+      dest: './assets'
     })
   )
   .use(
