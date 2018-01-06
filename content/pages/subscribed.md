@@ -1,7 +1,7 @@
 ---
 layout: page.njk
-title: Cám ơn bạn đã đăng ký
-slug: cam-on-ban
+title: Dà hú, cám ơn bạn đã đăng ký!
+slug: dang-ky-thanh-cong
 permalinks: false
 ---
 
@@ -9,4 +9,4 @@ permalinks: false
 
 Email của bạn đã được lưu lại. Ehkoo sẽ gửi cho bạn những bài viết hay hàng tuần. Chất lượng đảm bảo, trên 20 năm kinh nghiệm rồi :)
 
-Và dĩ nhiên như đã hứa, không bao giờ spam.
+Và dĩ nhiên như đã hứa, không spam.
