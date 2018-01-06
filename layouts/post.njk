@@ -23,11 +23,17 @@
          &mdash; {{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}
       </p>
 
-    {% if translation %}
-      <p class="mb3 lh-copy i f4 mid-gray">Bài viết được dịch từ <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a></p>
-    {% endif %}
+      <div class="lh-copy mv2">
+        <div class="sharethis-inline-share-buttons"></div>
+      </div>
 
-      <div id="js-content" class="content lh-copy dark-gray f5 f4-ns">{{ contents | safe }}</div>
+      <div id="js-content" class="content lh-copy dark-gray f5 f4-ns">
+        {% if translation %}
+          <p class="mb3 i mid-gray">Bài viết được dịch từ <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a></p>
+        {% endif %}
+
+        {{ contents | safe }}
+      </div>
 
       <hr class="mv4 mw5 center db bg-silver">
 
