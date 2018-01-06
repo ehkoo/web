@@ -5,24 +5,35 @@
   {% block head %}{% endblock %}
   <title>{{ title }} &ndash; {{ siteName }}</title>
 </head>
-<body class="bg-near-white dark-gray">
-  <header class="bb b--light-gray bg-white" id="js-top">
-    <div class="mw8 center flex items-center ph3">
-      <a href="/" class="ma1 mw3"><img src="/assets/img/logo-48.png" alt="Ehkoo" class="br1"></a>
-      <ul class="list f6">
-        <li class="dib mh3"><a href="/gioi-thieu" class="near-black fw3 ttu f5">Giới Thiệu</a></li>
-        <li class="dib mh3"><a href="/cong-tac" class="near-black fw3 ttu f5">Cộng tác</a></li>
+<body class="dark-gray">
+  <header id="js-top" class="mb2">
+    <div class="w-100 bg-white box-shadow-1">
+      <div class="container center flex items-center ph3">
+        <a href="/" class="ma1 mw3"><img src="/assets/img/logo-48.png" alt="Ehkoo" class="br1"></a>
+        <ul class="list f6">
+          <li class="dib mh3"><a href="/gioi-thieu" class="mid-gray ttu f5">Giới Thiệu</a></li>
+          <li class="dib mh3"><a href="/cong-tac" class="mid-gray ttu f5">Cộng tác</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container center mv3 ph2 ph3-ns">
+      <ul class="br1 list bg-dark-gray box-shadow-1">
+        <li class="bg-slighly-dark-gray-hover dib-ns"><a class="db pv3 ph4 ttu gold tracked" href="/chu-de/javascript">JavaScript</a></li>
+        <li class="bg-slighly-dark-gray-hover dib-ns"><a class="db pv3 ph4 ttu gold tracked" href="/chu-de/react">React</a></li>
+        <li class="bg-slighly-dark-gray-hover dib-ns"><a class="db pv3 ph4 ttu gold tracked" href="/chu-de/vue">Vue</a></li>
+        <li class="bg-slighly-dark-gray-hover dib-ns"><a class="db pv3 ph4 ttu gold tracked" href="/chu-de/kinh-nghiem">Kinh nghiệm lập trình</a></li>
       </ul>
     </div>
   </header>
-  <main class="mw8 center">
+  <main class="container center">
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="mw8 mt5 mb3 f6 gray center ph3">
+  <footer class="container mt5 mb3 f6 gray center ph3">
     <p class="lh-copy">&copy; 2017 Ehkoo. Tác giả giữ bản quyền.</p>
     <p class="lh-copy">Ghi rõ nguồn "ehkoo.com" khi phát hành lại nội dung từ website này. Không sử dụng cho mục đích thương mại khi chưa có sự đồng ý chính thức.</p>
-    <div>Icons made by <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" rel="noopener noreferrer" target="_blank">CC 3.0 BY</a></div>
+    <p class="lh-copy">Icons made by <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" rel="noopener noreferrer" target="_blank">CC 3.0 BY.</a></p>
+    <p class="lh-copy">Emoji icons by <a rel="noopener noreferrer" target="_blank" href="https://github.com/twitter/twemoji">twitter/twemoji</a> is licensed under <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>.</p>
   </footer>
 
   {% block bottom %}{% endblock %}

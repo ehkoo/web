@@ -5,81 +5,122 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-column flex-row-l pa3">
-  <div class="w-75-l pr3-ns">
-
-  {% for post in lastPosts %}
+<div class="ph2 ph3-ns">
+  <div class="grid home-grid">
+    {% for post in topPosts %}
     {% if post.type === 'quote' %}
-    <div class="bg-light-gray mb3 box-shadow-1">
-      <div class="flex items-center">
-        <div class="w-30 w-50-l">
-          <div class="bg-center cover h5" style="background-image: url({{ post.cover }})"></div>
+    <div class="home-grid__article box-shadow-1 bg-white br2">
+      <article class="relative h5 h-100-ns bg-center cover" style="background-image: url({{ post.cover }})">
+        <div class="mt1 mr1 gold bg-black fw6 di absolute right-0 pa2 serif i">{{ post.author }}</div>
+        <div class="absolute bottom-0 ma2">
+          <span class="lh-copy di fw6 f3-ns gold bg-black di serif i pa1 box-break-clone">
+            {{ post.quote }}
+          </span>
         </div>
-        <div class="w-70 w-50-l">
-          <blockquote class="ph3 fw3 f4 f3-ns i mid-gray serif quote">
-            {{ post.contents | safe }}
-            <p class="lh-copy">&ndash; {{ post.author }}</p>
-          </blockquote>
-        </div>
-      </div>
+      </article>
     </div>
-    {% elif loop.index0 === 0 %}
-    <div class="bg-white mb4 box-shadow-1">
-      <div class="flex flex-column">
-        <div class="w-100-ns h5-ns">
-          <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
-        </div>
-        <div class="pa3">
-          <h2 class="mv3 f3 ttu tracked fw7"><a href="/{{ post.path }}" class="red">{{ post.title }}</a></h2>
-          <p class="mv2 gray f6 i">
-            {{ post.date }} &mdash; {{ post.wordCount }} từ &mdash; {{ post.readingTime }}
-          </p>
-          <div class="h4 clip-ns">
-            <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
-          </div>
-          <p class="mv3 lh-copy gray f5 f4-ns">{{ post.excerpt }}</p>
-          {% if post.tags %}
-            {% set postTags = post.tags | slice(3) | first if post.tags.length > 3 else post.tags %}
-            <ul class="list">
-            {% for tag in postTags %}
-              <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="mb1 ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
-            {% endfor %}
-            </ul>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% else %}
-    <div class="bg-white mv3 box-shadow-1">
-      <div class="flex flex-column flex-row-ns">
-        <div class="w-75-l pa3">
-          <h2 class="mv3 f4 fw7"><a href="/{{ post.path }}" class="red">{{ post.title }}</a></h2>
-          <p class="mv2 gray f6 i">
-            {{ post.date }} &mdash; {{ post.wordCount }} từ &mdash; {{ post.readingTime }}
-          </p>
-          <div class="h4 clip-ns">
-            <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
-          </div>
-          <p class="mv3 lh-copy gray f5">{{ post.excerpt }}</p>
+    {% elif post.grid == 'big' %}
+    <article class="home-grid__article home-grid__article--big box-shadow-1 bg-near-black near-white br2 flex items-center flex-wrap">
+      <div class="w-60 ph3">
         {% if post.tags %}
-          {% set postTags = post.tags | slice(3) | first if post.tags.length > 3 else post.tags %}
-          <ul class="list">
-          {% for tag in postTags %}
-            <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="mb1 ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
-          {% endfor %}
-          </ul>
+          {% set tag = post.tags | first %}
+          <a href="/chu-de/{{ tag.slug }}" class="dib pv1 ph2 white bg-blue f6">#{{ tag.name }}</a>
         {% endif %}
-        </div>
-        <div class="w-25-l clip-m">
-          <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
-        </div>
+        <a href="{{ post.path }}"><h2 class="mv2 fw6 red lh-copy f4">{{ post.title }}</h2></a>
+        <p class="lh-copy">{{ post.excerpt}}</p>
+        <p class="lh-copy tr mt1"><small class="i gray">{{ post.date }} &ndash; {{ post.readingTime }}</small></p>
       </div>
-    </div>
+      <p class="w-40 ph3"><img src="{{ post.cover }}" alt=""></p>
+    </article>
+    {% else %}
+    <article class="home-grid__article box-shadow-1 bg-white br2 flex flex-column">
+      <div class="br2 br--top h4 bg-center cover" style="background-image: url({{ post.cover }})">
+        {% if post.tags %}
+          {% set tag = post.tags | first %}
+          <a href="/chu-de/{{ tag.slug }}" class="dib pv1 ph2 ma3 white bg-blue f6">#{{ tag.name }}</a>
+        {% endif %}
+      </div>
+      <div class="pa3">
+        <a href="{{ post.path }}"><h2 class="mv2 fw6 red lh-copy f4">{{ post.title }}</h2></a>
+        <p class="lh-copy">{{ post.excerpt}}</p>
+        <p class="lh-copy tr mt1"><small class="i gray">{{ post.date }} &ndash; {{ post.readingTime }}</small></p>
+      </div>
+    </article>
     {% endif %}
-  {% endfor %}
+    {% endfor %}
 
+    <div class="home-grid__series bg-dark-blue gold box-shadow-1 pa3 br2">
+      <div class="mb3"><span class="dib ph3 pv1 bg-green white ttu fw7">Ebook Miễn Phí</span></div>
+      <h2 class="mb3 tracked ttu gold lh-copy fw6 f4 bb b--gold">React từ A đến Y</h2>
+      <p class="lh-copy mv2"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/v1515693014/react_ywwrxy.png" alt="" class="pa1 bg-white"></p>
+      <p class="flex items-center lh-copy mv3 washed-blue"><i class="twa twa-lg twa-1f1fb-1f1f3"></i> <span class="ml2">100% tiếng Việt</span></p>
+      <p class="flex items-center lh-copy mv3 washed-blue"><i class="twa twa-lg twa-2728"></i> <span class="ml2">React 16 mới keng xà beng</span></p>
+      <p class="flex items-center lh-copy mv3 washed-blue"><i class="twa twa-lg twa-1f916"></i> <span class="ml2">Đầy đủ khái niệm cơ bản/nâng cao</span></p>
+      <p class="flex items-center lh-copy mv3 washed-blue"><i class="twa twa-lg twa-1f917"></i> <span class="ml2">Hướng dẫn chi tiết, siêu dễ hiểu </span></p>
+      <p class="flex items-center lh-copy mv3 washed-blue"><i class="twa twa-lg twa-2692"></i> <span class="ml2">Xây dựng ứng dụng thực tế</span></p>
+
+      <p class="lh-copy mt4 mb3 washed-blue">Hãy để lại email và Ehkoo sẽ thông báo cho bạn khi quyển sách này hoàn thành.</p>
+      <form action="https://my.sendinblue.com/users/subscribeembed/js_id/2x864/id/2" method="post" target="_blank">
+        <input type="hidden" name="js_id" id="js_id" value="2x864">
+        <input type="hidden" name="listid" id="listid" value="8">
+        <input type="hidden" name="from_url" id="from_url" value="yes">
+        <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
+        <input type="hidden" name="sib_simple" value="simple">
+        <input type="hidden" name="sib_forward_url" value="https://ehkoo.com/react-xac-nhan" id="sib_forward_url">
+        <input name="req_hid" id="req_hid" value="" type="hidden">
+
+        <div class="flex items-center justify-between-ns bg-light-gray w-100 pa1 br1">
+          <input required name="email" id="email" value="" type="email" class="w-75 bn pa2 bg-transparent f6 monospace outline-0" placeholder="pikalong@ehkoo.dev">
+          <button type="submit" class="w-25 tc bg-orange white bn tracked f6 fw6 br1 pv2 pointer">Gửi</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="home-grid__box-subcription bg-white box-shadow-1 br1 h-100">
+      {% include "layouts/el/widgets/subscription.njk" %}
+    </div>
+
+    <div class="box-shadow-1 br1 h-100">
+      {% include "layouts/el/widgets/recruit.njk" %}
+    </div>
+
+    <div class="box-shadow-1 br1 h-100">
+      {% include "layouts/el/widgets/social.njk" %}
+    </div>
   </div>
 
-  {% include "layouts/el/sidebar.njk" %}
+
+  <div class="flex flex-column flex-row-ns">
+    <div class="w-75-ns">
+      <h2 class="mt3 f3 fw7 ttu tracked bg-dark-gray gold i pa3 br1 shadow-1 tr">&mdash; Những bài khác</h2>
+    {% for post in olderPosts %}
+      <div class="bg-white mv3 box-shadow-1">
+        {% if post.type === 'quote' %}
+        <div class="bg-light-gray mb3 box-shadow-1">
+          <div class="flex items-center">
+            <div class="w-30 w-50-l">
+              <div class="bg-center cover h5" style="background-image: url({{ post.cover }})"></div>
+            </div>
+            <div class="w-70 w-50-l">
+              <blockquote class="ph3 fw3 f4 f3-ns i mid-gray serif quote">
+                {{ post.quote }}
+                <p class="lh-copy">&ndash; {{ post.author }}</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        {% else %}
+          {% include "layouts/el/single-post.njk" %}
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
+
+    <div class="w-25-ns pt3 pl3">
+      <div class="top-1 sticky clip-m">
+        {% include "layouts/el/jump-top.njk" %}
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

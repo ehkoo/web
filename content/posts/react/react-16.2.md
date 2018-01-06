@@ -3,8 +3,8 @@ layout: post.njk
 title: React 16.2.0 tiếp tục cải tiến cho Fragments
 slug: react-16-2-0-tiep-tuc-cai-tien-cho-fragments
 date: 2017-11-29
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1511979668/OgviRqq_e4yo6i.png
-tags: ReactJS, JavaScript
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516115630/react_paduom.png
+tags: React, JavaScript
 excerpt: React 16.2.0 giới thiệu tính năng Fragments, cho phép hàm `render()` trả về nhiều children cùng cấp mà không cần dùng mảng hay thẻ DIV dư thừa.
 author: kcjpop
 ---

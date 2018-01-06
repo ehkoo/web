@@ -14,7 +14,6 @@ const htmlMinifier = require('metalsmith-html-minifier')
 
 const toc = require('./plugins/toc')
 const related = require('./plugins/related')
-const quickNews = require('./plugins/quicknews')
 const readJson = require('./plugins/read-json')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
@@ -53,16 +52,19 @@ const builder = Metalsmith(__dirname)
   .use(
     tags({
       path: 'chu-de/:tag.html',
+      sortBy: 'date',
+      reverse: true,
       layout: 'list.njk'
     })
   )
   .use(
     collections({
-      lastPosts: {
+      latest: {
         pattern: 'posts/**/*.md',
         sortBy: 'date',
         refer: false,
-        reverse: true
+        reverse: true,
+        limit: 15
       },
       pages: {
         pattern: 'pages/**/*.md'
@@ -102,12 +104,6 @@ const builder = Metalsmith(__dirname)
       ]
     })
   )
-  // .use(
-  //   quickNews({
-  //     path: 'quicknews/**',
-  //     limit: 8
-  //   })
-  // )
   .use(
     toc({
       path: 'series/**/*.html',
@@ -126,7 +122,11 @@ const builder = Metalsmith(__dirname)
     })
   )
   .use((files, metalsmith, done) => {
-    const { siteUrl } = metalsmith.metadata()
+    const { siteUrl, collections } = metalsmith.metadata()
+    // Split latestPosts into first 5 and the rest
+    const topPosts = collections.latest.slice(0, 5)
+    const olderPosts = collections.latest.slice(5)
+    metalsmith.metadata({ ...metalsmith.metadata(), topPosts, olderPosts })
 
     files = Object.keys(files).reduce((acc, key) => {
       const data = files[key]

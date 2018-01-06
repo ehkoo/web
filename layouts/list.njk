@@ -5,36 +5,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-column flex-row-ns pa3">
-  <div class="w-60-l pr3-ns">
+<div class="flex flex-column flex-row-ns pa2 pa3-ns">
+  <div class="w-70-ns pr3-ns">
   {% for post in pagination.files %}
-    <div class="bg-white mb3">
-      <div class="flex">
-        <div class="w-80-ns pa3">
-          <div class="flex items-center">
-          {% if post.tags %}
-            {% set postTags = post.tags | slice(3) | first if post.tags.length > 3 else post.tags %}
-            <ul class="list">
-            {% for tag in postTags %}
-              <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
-            {% endfor %}
-            </ul>
-          {% endif %}
-            <span class="gray f6 ml-auto">
-              {{ post.date }} &mdash; {{ post.wordCount }} từ &mdash; {{ post.readingTime }}
-            </span>
-          </div>
-          <a href="/{{ post.path }}" class="navy"><h1 class="mv3 f3 fw7">{{ post.title }}</h1></a>
-          <p class="mv2 lh-copy silver f4">{{ post.excerpt or 'hello world' }}</p>
-        </div>
-        <div class="w-20-ns">
-          <div class="bg-center cover h-100" style="background-image: url({{ post.cover }})"></div>
-        </div>
-      </div>
+    <div class="bg-white mb3 box-shadow-1">
+      {% include "layouts/el/single-post.njk" %}
     </div>
   {% endfor %}
   </div>
 
-  {% include "layouts/el/sidebar.njk" %}
+  <div class="w-30-ns">
+    {% include "layouts/el/sidebar.njk" %}
+  </div>
 </div>
 {% endblock %}

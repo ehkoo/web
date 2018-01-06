@@ -89,13 +89,13 @@ Việc thiếu kiểu dữ liệu trong JavaScript đã bị một số lập tr
 
 ### Kết: mong chờ gì trong năm 2018
 
-- Cuộc Thánh chiến CSS để tìm ra cách giải quyết styles trong các ứng dụng dựa vào components.
-- Nhiều và nhiều công ty tiếp nhận các giải pháp phát triển ứng dụng thiết bị di động mà có thể chia sẻ chung mã nguồn, ví dụ như React Native hay Flutter.
-- Web trở nên gần với ứng dụng di động native hơn khi hỗ trợ hoạt động ngoại tuyến, hay những trải nghiệm di động khác.
-- WebAssembly có thể có những bước tiến khác, đem đến những trải nghiệm ứng dụng tốt hơn
-- GraphQL tiếp tục thách thức REST
-- React tiếp tục giữ vững vị trí framework front-end phổ biến nhất
-- Flow và TypeScript giúp tổ chức mã gọn gàng và dễ debug/refactor hơn
-- Sự ảnh hưởng của các công nghệ đóng gói như Docker càng rõ rệt hơn với giới front-end.
-- Công nghệ thực tế ảo sẽ có những bước phát triển lớn, với sự hổ trợ của các thư viện như [A-Frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/) và [Google VR](https://developers.google.com/vr/?hl=en).
-- Sự xuất hiện của các ứng dụng xây dựng trên nền blockchain và [web3.js](https://github.com/ethereum/web3.js/)
+* Cuộc Thánh chiến CSS để tìm ra cách giải quyết styles trong các ứng dụng dựa vào components.
+* Nhiều và nhiều công ty tiếp nhận các giải pháp phát triển ứng dụng thiết bị di động mà có thể chia sẻ chung mã nguồn, ví dụ như React Native hay Flutter.
+* Web trở nên gần với ứng dụng di động native hơn khi hỗ trợ hoạt động ngoại tuyến, hay những trải nghiệm di động khác.
+* WebAssembly có thể có những bước tiến khác, đem đến những trải nghiệm ứng dụng tốt hơn
+* GraphQL tiếp tục thách thức REST
+* React tiếp tục giữ vững vị trí framework front-end phổ biến nhất
+* Flow và TypeScript giúp tổ chức mã gọn gàng và dễ debug/refactor hơn
+* Sự ảnh hưởng của các công nghệ đóng gói như Docker càng rõ rệt hơn với giới front-end.
+* Công nghệ thực tế ảo sẽ có những bước phát triển lớn, với sự hổ trợ của các thư viện như [A-Frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/) và [Google VR](https://developers.google.com/vr/?hl=en).
+* Sự xuất hiện của các ứng dụng xây dựng trên nền blockchain và [web3.js](https://github.com/ethereum/web3.js/)

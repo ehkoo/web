@@ -10,18 +10,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-column flex-row-l pa3">
+<div class="flex flex-column flex-row-l ph2 ph3-ns">
   <div class="w-75-l pr3-ns">
     <article class="bg-white pa3 relative box-shadow-1">
-      <h1 class="red fw7 f3 mb4 tracked ttu">{{ title }}</h1>
-      <p class="lh-copy mb3 tr silver">
-        {{ date }}
-        {% if author %}
-        &mdash; <a href="https://github.com/{{ author }}" target="_blank">@{{ author }}</a>
-        {% endif %}
+      <h1 class="red fw7 f3 mb4 tracked ttu break-word">{{ title }}</h1>
+      <div class="lh-copy mb3 tr silver flex flex-column flex-row-ns">
+        <div>
+          {{ date }}
+          {% if author %}
+          &mdash; <a href="https://github.com/{{ author }}" target="_blank">@{{ author }}</a>
+          {% endif %}
+        </div>
 
-         &mdash; {{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}
-      </p>
+        <div>{{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}</div>
+      </div>
 
       <div class="lh-copy mv2">
         <div class="sharethis-inline-share-buttons"></div>
@@ -44,7 +46,7 @@
         <span class="silver mr3">Tags:</span>
         <ul class="list">
         {% for tag in tags %}
-          <li class="dib mr1"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
+          <li class="dib mr1"><a href="/chu-de/{{ tag.slug }}" class="mh1 pv1 ph2 white bg-blue">#{{ tag.name }}</a></li>
         {% endfor %}
         </ul>
       </div>
@@ -67,6 +69,9 @@
     <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
   </div>
 
-  {% include "layouts/el/sidebar.njk" %}
+  <div class="w-25-ns">
+    {% include "layouts/el/sidebar.njk" %}
+  </div>
+
 </div>
 {% endblock %}

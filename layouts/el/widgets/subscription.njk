@@ -1,7 +1,8 @@
-<section class="br1 bg-white pa3 mb3" id="mc_embed_signup">
-  <h1 class="mb4 mt2 fw7 code tracked ttu red pb2 f4 bw1 bb b--red">Đăng ký bản tin</h1>
-  <p class="lh-copy mv3">Quá lười để vào ehkoo mỗi ngày? Không sao hết, Ehkoo sẽ gửi bài đến email của bạn mỗi tuần.</p>
-  <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/2x864/id/1" method="post" target="_blank">
+<section class="flex items-center box-subscription h-100 pa3">
+  <div class="flex flex-column">
+  <h2 class="mb3 tracked ttu red lh-copy fw6 f4 bb b--red">Đăng ký bản tin</h2>
+  <p class="lh-copy mv3">Quá lười để vào ehkoo mỗi ngày? Không sao hết, Ehkoo sẽ gửi bài cho bạn mỗi tuần.</p>
+  <form action="https://my.sendinblue.com/users/subscribeembed/js_id/2x864/id/1" method="post" target="_blank">
     <input type="hidden" name="js_id" id="js_id" value="2x864">
     <input type="hidden" name="listid" id="listid" value="2">
     <input type="hidden" name="from_url" id="from_url" value="yes">
@@ -9,10 +10,11 @@
     <input type="hidden" name="sib_simple" value="simple">
     <input type="hidden" name="sib_forward_url" value="https://ehkoo.com/xac-nhan-email/" id="sib_forward_url">
     <input name="req_hid" id="req_hid" value="" type="hidden">
-    <div class="flex items-center justify-between bg-near-white w-100 pa1 br1">
-      <input required name="email" id="email" value="" type="email" class="w-80 bn pa2 bg-transparent f6" placeholder="an@awesome.dev">
-      <button type="submit" class="bg-lightest-blue blue bn ttu f6 fw6 br1 pa2">OK</button>
+    <div class="flex items-center justify-between-ns bg-light-gray w-100 pa1 br1">
+      <input required name="email" id="email" value="" type="email" class="w-75 bn pa2 bg-transparent f6 monospace outline-0" placeholder="pikalong@ehkoo.dev">
+      <button type="submit" class="w-25 tc bg-orange white bn tracked f6 fw6 br1 pv2 pointer">Gửi</button>
     </div>
   </form>
   <p class="lh-copy mv3">Đảm bảo chất lượng, hứa không bao giờ spam.</p>
+  </div>
 </section>

@@ -3,11 +3,13 @@ layout: post.njk
 title: Tổng hợp những tính năng ES6 nổi bật
 slug: tong-hop-tinh-nang-noi-bat-es6
 date: 2017-10-29
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1509273290/0mfj_kxxqsg.png
-tags: JavaScript, ES6, ES2015
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516116299/es6-recursion-600x360_sifpgq.png
+tags: JavaScript, ES6, ES2015, Kinh nghiệm
 excerpt: ES6 đã và đang dần được hỗ trợ bởi tất cả các trình duyệt. Hãy cùng điểm qua những tính năng thông dụng nhất nhé.
 author: kcjpop
+grid: big
 ---
+
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1509504402/PTLHvdFMQuW7VhAXQc0G_es6_what_to_use_and_what_not_to.png_rgvxgq.jpg)
 
 2017 có thể nói là năm tuyệt vời với dân lập trình web, khi hầu hết những tính năng hay ho hấp dẫn của ES6 đều đã được [các trình duyệt hỗ trợ](https://kangax.github.io/compat-table/es6/). Nhờ đó nhà phát triển gần như có thể xây dựng ứng dụng trực tiếp bằng ES6 mà không cần phải thông qua các công cụ chuyển đổi như [Babel](http://babeljs.io/) hay [Bublé](https://buble.surge.sh/guide/), giúp cho ứng dụng trở nên gọn nhẹ hơn, giảm thiểu kích thước tập tin khi chuyển đến người sử dụng.
@@ -16,7 +18,7 @@ Hãy cùng Ehkoo điểm lại những tính năng chính trong ES6, cũng như 
 
 ### Nội dung
 
-1. `let`  và `const`
+1. `let` và `const`
 2. Hàm mũi tên (arrow functions)
 3. Chuỗi bản mẫu (template strings)
 4. Object chân phương (object literals)
@@ -32,7 +34,7 @@ Ngày xa xưa ấy, bạn khai báo biến trong JavaScript bằng `var`, giốn
 
 ```javascript
 var foo = 1
-function printFoo (shouldDo) {
+function printFoo(shouldDo) {
   if (shouldDo) {
     var foo = 2
   }
@@ -42,13 +44,13 @@ console.log(printFoo(false)) // undefined
 console.log(printFoo(true)) // 2
 ```
 
-Biến được khai báo với `var` sẽ có tầm vực bên trong hàm gần nhất (function scope), và sẽ được đẩy lên đầu  của tầm vực (hoisting). Đó là lý do tại sao `foo` lại có giá trị `undefined` trong dòng `console.log` đầu tiên.
+Biến được khai báo với `var` sẽ có tầm vực bên trong hàm gần nhất (function scope), và sẽ được đẩy lên đầu của tầm vực (hoisting). Đó là lý do tại sao `foo` lại có giá trị `undefined` trong dòng `console.log` đầu tiên.
 
 ES6 giới thiệu `let` và `const` như hai cách khai báo biến mới, hỗ trợ tầm vực theo khối (block scope) và không thực hiện hoisting.
 
 ```javascript
 let foo = 1
-function printFoo (shouldDo) {
+function printFoo(shouldDo) {
   if (shouldDo) {
     let foo = 2
     console.log('Value of foo in scope', foo) // 2
@@ -84,8 +86,8 @@ arr.push(2)
 console.log(arr) // [1, 2]
 
 // Tuy vậy bạn không thể gán một đối tượng khác cho obj/arr
-obj = { baz: 4 }  // Error: Assignment to constant variable.
-arr = []  // Error: Assignment to constant variable.
+obj = { baz: 4 } // Error: Assignment to constant variable.
+arr = [] // Error: Assignment to constant variable.
 ```
 
 > **Tính tương thích:** [Được hỗ trợ](http://caniuse.com/#feat=let,const) trên tất cả trình duyệt, kể cả IE11.
@@ -96,12 +98,12 @@ arr = []  // Error: Assignment to constant variable.
 Hàm mũi tên -- (fat) arrow functions -- là một kiểu cú pháp rút gọn cho khai báo hàm trong JavaScript. Trước ES6, bạn khai báo một hàm trong JavaScript với từ khóa `function`.
 
 ```javascript
-function add (x, y) {
+function add(x, y) {
   return x + y
 }
 
 // Hàm add() ở trên là syntactic sugar cho...
-var add = function (x, y) {
+var add = function(x, y) {
   return x + y
 }
 ```
@@ -119,13 +121,14 @@ const add = (x, y) => {
 // tên sẽ tự động trả giá trị về (auto-return).
 const add = (x, y) => x + y
 ```
+
 Hàm mũi tên cũng hữu dụng để giải quyết vấn đề muôn thuở trong JavaScript: "which `this` is this?" -- khái niệm con trỏ `this`. Với ES5, bạn hay gặp trường hợp giống như thế này:
 
 ```javascript
 'use strict'
 function App() {
   this.count = 0
-  setInterval(function () {
+  setInterval(function() {
     console.log(this.count++)
   }, 1000)
 }
@@ -139,7 +142,7 @@ Trước ES6, mỗi khai báo hàm đều có một giá trị `this` tách bi�
 function App() {
   this.count = 0
   var self = this
-  setInterval(function () {
+  setInterval(function() {
     console.log(self.count++)
   }, 1000)
 }
@@ -148,7 +151,7 @@ function App() {
 function App() {
   this.count = 0
 
-  function counter () {
+  function counter() {
     console.log(this.count++)
   }
 
@@ -169,14 +172,11 @@ function App() {
 Hàm mũi tên cũng rất hữu ích khi thao tác trên mảng và tiến hành chuyển đổi dữ liệu, giúp mã nguồn dễ đọc và rõ ràng hơn.
 
 ```javascript
-const subtotal = products
-  .filter(product => product.price > 500)
-  .reduce((acc, product) => acc + product.price, 0)
+const subtotal = products.filter(product => product.price > 500).reduce((acc, product) => acc + product.price, 0)
 ```
 
 > **Tính tương thích:** Trừ IE11, tất cả các trình duyệt còn lại đều hỗ trợ.
 > **Lời khuyên:** Nếu có dùng đến `this` thì hàm mũi tên rất hữu dụng. Trường hợp không dùng thì...cũng hữu dụng luôn vì mã nguồn gọn gàng dễ đọc hơn. Với những trường hợp bạn muốn bao đóng giá trị của `this` chỉ gói gọn trong hàm của nó, dùng `function`.
-
 
 ### 3. Chuỗi bản mẫu
 
@@ -192,7 +192,7 @@ The result of 1 + 1 is ${1 + 1}, and the time is now ${Date.now()}.`
 Vì chuỗi bản mẫu cũng chỉ là chuỗi nên bạn có thể gọi đến những phương thức của `String.prototype`.
 
 ```javascript
-`Hello World`.substr(0, 5).toUpperCase()
+;`Hello World`.substr(0, 5).toUpperCase()
 ```
 
 > **Tính tương thích:** Trừ IE11, tất cả các trình duyệt còn lại đều hỗ trợ.
@@ -207,7 +207,7 @@ var birthYear = 2000
 var obj = {
   name: 'John',
   birthYear: birthYear,
-  getAge: function (currentYear) {
+  getAge: function(currentYear) {
     return currentYear - obj.birthYear
   }
 }
@@ -220,7 +220,7 @@ const birthYear = 2000
 const obj = {
   name: 'John',
   birthYear, // khai báo tắt birthYear: birthYear
-  getAge (currentYear) {
+  getAge(currentYear) {
     // `this` được gán trực tiếp vào bản thân object
     return currentYear - this.birthYear
   }
@@ -280,14 +280,11 @@ const userList = [
   {
     name: 'John',
     age: 21,
-    products: [
-      { name: 'Creamy Crustacean Omelette', price: 1200 },
-      { name: 'Galdin Gratin', price: 2300 }
-    ]
+    products: [{ name: 'Creamy Crustacean Omelette', price: 1200 }, { name: 'Galdin Gratin', price: 2300 }]
   }
 ]
 
-const [{ products: [ { price } ] }] = userList
+const [{ products: [{ price }] }] = userList
 console.log(price) // 1200
 ```
 
@@ -295,14 +292,13 @@ Với mảng hay chuỗi, bạn có thể bỏ qua phần tử không mong muố
 
 ```javascript
 const arr = [1, 2, 3]
-const [first ,, third] = arr
+const [first, , third] = arr
 console.log(first, third) // 1, 3
 
 const str = 'Hello'
-const [fst ,,,, lst] = str
+const [fst, , , , lst] = str
 console.log(fst, lst) // 'H', 'o'
 ```
-
 
 Phân rã biến cũng rất thường gặp khi bạn sử dụng ES6 module.
 
@@ -336,7 +332,6 @@ const bar = (x, y, ...rest) => console.log(rest, x, y)
 ```
 
 Bạn lưu ý biến `args` ở trên khác với biến đặc biệt `arguments` vốn có sẵn bên trong hàm. `arguments` là một đối tượng giống Array, với những thuộc tính đặc biệt như `callee`, trong khi `args` chỉ là một mảng bình thường.
-
 
 Spread -- rải -- là thao tác ngược lại với rest, giúp bạn kết hợp một mảng đã có sẵn thành mảng mới.
 
@@ -374,7 +369,7 @@ const user = { name: 'John' }
 const userWithAgeEs5 = Object.assign({}, user, { age: 21 })
 
 // Thời đại mới với spread
-const userWithAge = {...user, age: 21}
+const userWithAge = { ...user, age: 21 }
 console.log(userWithAge) // { name: 'John', age: 21 }
 
 // Và rest
@@ -411,11 +406,11 @@ const getDiscountedPrice = (price, discountRate = DISCOUNT_RATE) => price * (1 +
 Với ES5, chúng ta sử dụng `function` để tạo lớp và thêm các phương thức vào lớp bằng cách mở rộng `prototype`.
 
 ```javascript
-function Foo (x) {
+function Foo(x) {
   this.x = x
 }
 
-Foo.prototype.add = function (y) {
+Foo.prototype.add = function(y) {
   return this.x + y
 }
 
@@ -427,16 +422,16 @@ ES6 mang đến cú pháp mới giúp tạo lớp trực tiếp và dễ dàng h
 
 ```javascript
 class Foo {
-  constructor (x) {
+  constructor(x) {
     this.x = x
   }
 
-  add (y) {
+  add(y) {
     return this.x + y
   }
 
   // Khai báo phương thức tĩnh (static method)
-  static whoAmI () {
+  static whoAmI() {
     return 'I am a Foo class'
   }
 }
@@ -450,7 +445,7 @@ Bạn cũng có thể kế thừa từ lớp khác bằng từ khóa `extends`.
 
 ```javascript
 class Bar extends Foo {
-  constructor (x, y) {
+  constructor(x, y) {
     // Gọi đến hàm dựng của lớp cha
     super(x)
     this.y = y
@@ -478,7 +473,7 @@ class Button extends React.Component {
   }
 
   render = () => {
-     return <button onClick={this.doClick}></button>
+    return <button onClick={this.doClick} />
   }
 }
 ```
@@ -494,12 +489,13 @@ Vì Promise đã được công nhận như một phần của đặc tả ECMAS
 ```javascript
 const showUser = user => console.log(`Your name is ${user.name}`)
 
-const getUserData = userId => new Promise((resolve, reject) => {
-  return RemoteApi.get(`/users/${userId}`, (err, response) => {
-     if (err) return reject(err)
-     resolve(response)
+const getUserData = userId =>
+  new Promise((resolve, reject) => {
+    return RemoteApi.get(`/users/${userId}`, (err, response) => {
+      if (err) return reject(err)
+      resolve(response)
+    })
   })
-})
 
 getUserData(123)
   .then(response => response.data)
@@ -510,15 +506,19 @@ getUserData(123)
 Promise còn có các hàm tĩnh khác:
 
 ##### `Promise.all(iterator)`
+
 Nhận vào một mảng các promises và chỉ resolve khi tất cả promises trong mảng được resolve.
 
 ##### `Promise.race(iterator)`
+
 Nhận vào một mảng các promises và resolve/reject ngay khi một trong các promises trong mảng resolve/reject.
 
 ##### `Promise.resolve()`
+
 Trả về một promise được tự động resolve.
 
 ##### `Promise.reject()`
+
 Trả về một promise được tự động reject.
 
 > **Tính tương thích:** Trừ IE11, tất cả các trình duyệt còn lại đều hỗ trợ.

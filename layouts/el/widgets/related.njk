@@ -1,20 +1,15 @@
 {% if relatedPosts %}
 <section class="br1 bg-white pa3 mb3 box-shadow-1">
   <h1 class="mb4 mt2 fw7 code tracked ttu blue pb2 f4 bw1 bb b--blue">Bài liên quan</h1>
-  <ul class="list flex-ns flex-wrap-ns">
+  <div class="flex-ns flex-wrap-ns">
   {% for item in relatedPosts %}
-    <li class="w-50-ns bb b--light-gray ph3 mv2">
-      <a href="{{ item.fullUrl }}" class="db" target="_blank">
-        <div class="flex items-center">
-          <div class="pa2">
-            <div style="background-image: url({{ item.cover }})" class="br1 bg-center cover w3 h3"></div>
-          </div>
-          <span class="lh-copy fw6 dark-gray">{{ item.title }}</span>
-        </div>
-        <p class="mv2 db gray lh-copy">{{ item.excerpt }}</p>
-      </a>
-    </li>
+    <div class="w-50-ns mv2 flex items-center">
+      <div class="pa2">
+        <div style="background-image: url({{ item.cover }})" class="br1 bg-center cover w3 h3"></div>
+      </div>
+      <a href="{{ item.fullUrl }}"><h5 class="lh-copy f5 fw6 dark-gray">{{ item.title }}</h5></a>
+    </div>
   {% endfor %}
-  </ul>
+  </div>
 </section>
 {% endif %}
