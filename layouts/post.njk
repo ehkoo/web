@@ -13,7 +13,7 @@
 <div class="flex flex-column flex-row-l pa3">
   <div class="w-75-l pr3-ns">
     <article class="bg-white pa3 relative box-shadow-1">
-      <h1 class="red fw7 f2 mb4">{{ title }}</h1>
+      <h1 class="red fw7 f3 mb4 tracked ttu">{{ title }}</h1>
       <p class="lh-copy mb3 tr silver">
         {{ date }}
         {% if author %}
@@ -29,31 +29,24 @@
 
       <div id="js-content" class="content lh-copy dark-gray f5 f4-ns">{{ contents | safe }}</div>
 
-      <hr class="mt3 mw4 center db bg-silver">
+      <hr class="mv4 mw5 center db bg-silver">
 
-      <div id="js-fb-box" class="shadow-3 pa3 mv3 center mw7">
-        <div class="lh-copy mb3 f6 fw6 light-silver">5s quảng cáo</div>
-        <div class="flex flex-column flex-row-ns items-center">
-          <div class="db ph3">
-            <img src="/assets/img/like.png" alt="">
-          </div>
-          <a target="_blank" href="{{ social.facebook }}" class="ph2 lh-copy bn">
-            <span class="f4-ns dark-red fw7">Đừng quên like/theo dõi Ehkoo trên Facebook để nhận được thông tin khi có bài viết mới nhé.</span><br>
-            <span class="i">https://www.facebook.com/ehkoo.dev</span>
-          </a>
-        </div>
-      </div>
+      {% include "layouts/el/widgets/fb.njk" %}
 
       {% if tags %}
       <div class="lh-copy mt3 flex items-center">
         <span class="silver mr3">Tags:</span>
         <ul class="list">
         {% for tag in tags %}
-          <li class="dib"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
+          <li class="dib mr1"><a href="/chu-de/{{ tag.slug }}" class="ph2 pv1 db br2 bg-lightest-blue blue">{{ tag.name }}</a></li>
         {% endfor %}
         </ul>
       </div>
       {% endif %}
+
+      <div class="lh-copy mt3">
+        <div class="sharethis-inline-share-buttons"></div>
+      </div>
 
       <div class="clip-l fixed bottom-2 right-2 shadow-1 z-2">
         {% include "layouts/el/jump-top.njk" %}

@@ -1,5 +1,6 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Lato, Roboto, 'Source Sans Pro', Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Lato, Roboto, 'Source Sans Pro', Ubuntu, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 .flex-1 {
@@ -84,7 +85,7 @@ svg {
 .content h4,
 .content h5,
 .content h6 {
-  color: #ff6300;
+  color: #ff4136;
   margin: 1.5rem 0;
   font-weight: 600;
   position: relative;
@@ -107,6 +108,10 @@ svg {
 }
 .content h6 {
   font-size: 0.875rem;
+}
+
+.content .bn {
+  border: none;
 }
 
 @media screen and (min-width: 60em) {
