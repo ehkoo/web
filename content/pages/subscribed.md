@@ -7,6 +7,6 @@ permalinks: false
 
 ![](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)
 
-Email của bạn đã được lưu lại. Ehkoo sẽ gửi cho bạn những bài viết hay hàng tuần. Chất lượng đảm bảo, trên 20 năm kinh nghiệm rồi :)
+Email của bạn đã được lưu lại. Dĩ nhiên như Ehkoo đã hứa, không spam.
 
-Và dĩ nhiên như đã hứa, không spam.
+Chân thành cảm ơn bạn ha :)
