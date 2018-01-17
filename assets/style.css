@@ -288,6 +288,26 @@ svg {
   }
 }
 
+@media screen and (max-width: 60em) {
+  .aspect-ratio-m {
+    height: 0;
+    position: relative;
+  }
+  .aspect-ratio-m--3x4 {
+    padding-bottom: 133.33%;
+  }
+  .aspect-ratio-m--object {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+}
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.2
