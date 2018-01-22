@@ -1,4 +1,3 @@
-
 ---
 layout: post.njk
 title: 10+ font chữ cho lập trình - download miễn phí
@@ -10,6 +9,9 @@ excerpt: 2018 rồi mà bạn vẫn còn dùng Courier New? Dừng lại ngay, b
 author: kcjpop
 editor: chubbyanh
 ---
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1516254753/jLxMOZg_egcfqa.jpg)
+<small style="text-align: center; display: block">_Photo by Amador Loureiro from [Unsplash](https://unsplash.com/photos/BVyNlchWqzs)_</small>
 
 Bạn có để ý là mình đang dùng code font (font chữ cho lập trình) nào không?
 
