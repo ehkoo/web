@@ -21,6 +21,7 @@ const isLocal = process.env.NODE_ENV !== 'production'
 
 const builder = Metalsmith(__dirname)
   .metadata({
+    env: process.env.NODE_ENV,
     siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
     siteName: 'Ehkoo',
     siteDesc:
