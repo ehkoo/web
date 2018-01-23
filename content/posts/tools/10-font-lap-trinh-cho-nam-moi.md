@@ -53,7 +53,7 @@ Font Fira Mono của Mozilla cực kì phổ biến. Font này thuộc họ Fira
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1516249066/color_chk28i.png)
 
-[CamingoCode](http://www.janfromm.de/typefaces/camingomono/camingocode/) ược phát triển từ CamingoMono, có nét chữ thanh mảnh, phù hợp với cả hai màu nền sáng và tối. Font này bao gồm 4 định dạng: Regular, Bold, Italic và BoldItalic.
+[CamingoCode](http://www.janfromm.de/typefaces/camingomono/camingocode/) được phát triển từ CamingoMono, có nét chữ thanh mảnh, phù hợp với cả hai màu nền sáng và tối. Font này bao gồm 4 định dạng: Regular, Bold, Italic và BoldItalic.
 Nhược điểm: CamingoCode không hỗ trợ ligatures.
 
 ### Hack
@@ -86,7 +86,7 @@ Và, nếu Font Awesome được cài đặt trong máy, thì Monoid + Font Awes
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1516251824/color_hnrbgv.png)
 
-[PT Mono](https://www.paratype.com/public/) à một phần trong dự án "Public Types of Russian Federation", được thiết kế để sử dụng cho các biểu mẫu và bảng tính. Dù vậy, khi dùng để lập trình, PT Mono cũng hiển thị rất ổn. Hiện giờ, font này có hai kiểu chữ là Regular và Bold, và không hỗ trợ ligatures.
+[PT Mono](https://www.paratype.com/public/) là một phần trong dự án "Public Types of Russian Federation", được thiết kế để sử dụng cho các biểu mẫu và bảng tính. Dù vậy, khi dùng để lập trình, PT Mono cũng hiển thị rất ổn. Hiện giờ, font này có hai kiểu chữ là Regular và Bold, và không hỗ trợ ligatures.
 
 ### Source Code Pro
 
