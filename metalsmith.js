@@ -10,7 +10,6 @@ const markdown = require('metalsmith-markdown-remarkable')
 const wordcount = require('metalsmith-word-count')
 const permalinks = require('metalsmith-permalinks')
 const collections = require('metalsmith-collections')
-const htmlMinifier = require('metalsmith-html-minifier')
 
 const toc = require('./plugins/toc')
 const related = require('./plugins/related')
@@ -145,10 +144,6 @@ const builder = Metalsmith(__dirname)
     done()
   })
   .use(layouts('nunjucks'))
-
-if (!isLocal) {
-  builder.use(htmlMinifier())
-}
 
 builder.build(err => {
   if (err) throw err
