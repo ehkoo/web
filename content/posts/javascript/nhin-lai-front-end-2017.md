@@ -99,3 +99,7 @@ Việc thiếu kiểu dữ liệu trong JavaScript đã bị một số lập tr
 * Sự ảnh hưởng của các công nghệ đóng gói như Docker càng rõ rệt hơn với giới front-end.
 * Công nghệ thực tế ảo sẽ có những bước phát triển lớn, với sự hổ trợ của các thư viện như [A-Frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/) và [Google VR](https://developers.google.com/vr/?hl=en).
 * Sự xuất hiện của các ứng dụng xây dựng trên nền blockchain và [web3.js](https://github.com/ethereum/web3.js/)
+
+<div class="aspect-ratio-m aspect-ratio-m--4x6">
+<iframe class="aspect-ratio-m--object" width="540" height="297" src="https://my.sendinblue.com/users/subscribe/js_id/2x864/id/4" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+</div>

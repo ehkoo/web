@@ -296,6 +296,9 @@ svg {
   .aspect-ratio-m--3x4 {
     padding-bottom: 133.33%;
   }
+  .aspect-ratio-m--4x6 {
+    padding-bottom: 150%;
+  }
   .aspect-ratio-m--object {
     position: absolute;
     top: 0;
