@@ -37,6 +37,10 @@
         {{ contents | safe }}
       </div>
 
+      {% if form_footer %}
+        {% include "layouts/forms/" + form_footer + ".njk" %}
+      {% endif %}
+
       <hr class="mv4 mw5 center db bg-silver">
 
       {% include "layouts/el/widgets/fb.njk" %}

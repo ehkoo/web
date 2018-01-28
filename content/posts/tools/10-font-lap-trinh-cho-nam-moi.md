@@ -41,7 +41,7 @@ Lưu ý: Ligatures đặc biệt hữu ích khi bạn làm việc với các ng�
 <!-- Begin MailChimp Signup Form -->
 <div class="bg-light-gray br2 pa3 ma3 mw6 center">
   <form action="https://ehkoo.us16.list-manage.com/subscribe/post?u=f879261eee9d626d9247f34d2&amp;id=729bd10e61" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
-    <label for="mce-EMAIL" class="f5 fw6 blue tracked">Nhập vào địa chỉ email của bạn</label>
+    <label for="mce-EMAIL" class="f4 fw6 dark-blue lh-copy">Nhập vào địa chỉ email của bạn</label>
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f879261eee9d626d9247f34d2_729bd10e61" tabindex="-1" value=""></div>
     <div class="flex flex-column flex-row-ns w-100 justify-between mt3">
       <input type="email" value="" name="EMAIL" placeholder="pikalong@ehkoo.dev" id="mce-EMAIL" class="flex-1 bn pa2 bg-white monospace f5 outline-0 mb2 mb0-ns" required>
@@ -144,7 +144,7 @@ Chỉ cần điền email của bạn vào form dưới đây, Ehkoo sẽ gửi 
 <!-- Begin MailChimp Signup Form -->
 <div class="bg-light-gray br2 pa3 ma3 mw6 center">
   <form action="https://ehkoo.us16.list-manage.com/subscribe/post?u=f879261eee9d626d9247f34d2&amp;id=729bd10e61" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
-    <label for="mce-EMAIL" class="f5 fw6 blue tracked">Nhập vào địa chỉ email của bạn</label>
+    <label for="mce-EMAIL" class="f4 fw6 dark-blue lh-copy">Nhập vào địa chỉ email của bạn</label>
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f879261eee9d626d9247f34d2_729bd10e61" tabindex="-1" value=""></div>
     <div class="flex flex-column flex-row-ns w-100 justify-between mt3">
       <input type="email" value="" name="EMAIL" placeholder="pikalong@ehkoo.dev" id="mce-EMAIL" class="flex-1 bn pa2 bg-white monospace f5 outline-0 mb2 mb0-ns" required>

@@ -1,16 +1,24 @@
 ---
 layout: post.njk
-title: Làm quen với MithrilJS - Phần 1
+title: Hướng dẫn học MithrilJS cơ bản - Phần 1
 slug: lam-quen-voi-mithriljs-phan-1
 date: 2017-10-02
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1080/v1516117521/EzgdmaCQuT84bgDL4fhXZS_io5iab.jpg
 tags: JavaScript, Frontend, MithrilJS
-excerpt: Cùng tìm hiểu MithrilJS, một framework xây dựng UI siêu nhỏ hỗ trợ routing, virtual DOM và được viết hoàn toàn bằng ES5.
+excerpt: "Học MithrilJS cơ bản, để biết: MithrilJS là gì? Những tính năng cool ngầu của framework MVC siêu nhẹ này? Thử làm một ứng dụng bán hàng bằng MithrilJS. Xem ngay!"
 author: kcjpop
+editor: chubbyanh
+form_footer: newsletter-footer
 ---
-Ngày xưa xửa xừa xưa cách đây chắc hơn 2 năm có lẻ, mình đã viết một bài giới thiệu về mithril v0.2.x. Không ngờ bài viết về một framework ít người quan tâm, giấu ở chốn khỉ ho cò gáy vậy mà vẫn bị rinh đi (và cắt cúp) không một lời thông báo. Buồn vui lẫn lộn.
 
-Thôi thì nhân dịp mithril ra bản 1.x (từ đời tám hoánh nào), mình cập nhật lại.
+Hiện nay có rất nhiều JavaScript framework “khủng” như React, Vue, Node, Ember, Angular… Tuy nhiên, framework càng lớn thì thời gian để tìm hiểu, rồi vận dụng hiệu quả càng lâu.
+
+Nếu chỉ cần một framework nhỏ, dễ hiểu dễ học, giúp xây dựng UI siêu nhỏ hỗ trợ routing và virtual DOM… thì có lẽ bạn nên cân nhắc chọn MithrilJS.
+
+Đọc bài viết này để cùng Ehkoo học MithrilJS cơ bản:
+
+* MithrilJS là gì, tại sao nên sử dụng MithrilJS.
+* Thực hành: thử làm một ứng dụng bán hàng bằng MithrilJS.
 
 ## Mithril là gì?
 

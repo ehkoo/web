@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: Làm quen với mithrilJS - Phần 2
+title: Hướng dẫn học MithrilJS cơ bản - Phần 2
 slug: lam-quen-voi-mithriljs-phan-2
 date: 2017-10-11
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1080/v1516117521/EzgdmaCQuT84bgDL4fhXZS_io5iab.jpg
