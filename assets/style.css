@@ -36,6 +36,29 @@ svg {
   position: sticky;
 }
 
+.box-shadow-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.grid {
+  display: grid;
+}
+
+.box-break-clone {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.container {
+  max-width: 80em;
+}
+
+/* CONTENT */
+
 .content a {
   padding-bottom: 0.1rem;
   border-bottom: 0.1rem solid #1b6ec2;
@@ -233,66 +256,7 @@ svg {
   background-color: #f6f8fa;
 }
 
-.heading-archor {
-  height: 20px;
-  border-bottom: 0 !important;
-  width: 20px;
-  margin-left: -1.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  text-decoration: none;
-  height: 100%;
-  background: transparent;
-}
-
-.heading-archor:before {
-  content: '\201c\201d';
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #5291e2;
-}
-
-@media screen and (max-width: 60em) {
-  .heading-archor:before {
-    left: 10px;
-  }
-}
-
-@media screen and (min-width: 60em) {
-  .heading-archor:before {
-    display: none;
-  }
-
-  .heading-archor:hover:before {
-    display: flex;
-  }
-}
-
-.box-shadow-1 {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.grid {
-  display: grid;
-}
-
-.box-break-clone {
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
-.container {
-  max-width: 80em;
-}
+/* HOME GRID */
 
 .home-grid {
   grid-gap: 1rem;
@@ -304,13 +268,9 @@ svg {
 }
 
 .box-social {
-  background: #00f260; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #0575e6, #00f260); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #0575e6,
-    #00f260
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00f260;
+  background: -webkit-linear-gradient(to top, #0575e6, #00f260);
+  background: linear-gradient(to top, #0575e6, #00f260);
 }
 
 .box-social:hover .box-social__fig {
@@ -337,13 +297,9 @@ svg {
 }
 
 .box-recruitment {
-  background: #f7971e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffd200, #f7971e); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #ffd200,
-    #f7971e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f7971e;
+  background: -webkit-linear-gradient(to bottom, #ffd200, #f7971e);
+  background: linear-gradient(to bottom, #ffd200, #f7971e);
 }
 
 @media screen and (min-width: 60em) {
@@ -432,6 +388,22 @@ svg {
   }
 }
 
-.break-word {
-  word-wrap: break-word;
+/* SERIES */
+.series-toc-list {
+  max-height: 900px;
+}
+
+.series-toc-list p {
+  line-height: 1.5;
+}
+
+.series-toc-list code {
+  color: #d63031;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.series-toc-list--hidden {
+  max-height: 0;
+  overflow: hidden;
 }

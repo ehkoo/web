@@ -1,23 +1,95 @@
 {
-  "name": "ReactJS từ A đến Y",
+  "name": "React từ A đến Y",
   "slug": "react-tu-a-den-y",
-  "index": { "name": "Giới thiệu" },
+  "index": {
+    "name": "Giới thiệu"
+  },
   "sections": [
     {
-      "section": "React căn bản",
+      "name": "React căn bản",
       "children": [
-        { "name": "Cài đặt", "slug": "hello-world" },
-        { "name": "JSX", "slug": "jsx" },
+        {
+          "name": "Cài đặt",
+          "slug": "cai-dat-react-va-chuong-trinh-dau-tien"
+        },
+        {
+          "name": "JSX là gì?",
+          "slug": "jsx-la-gi"
+        },
         {
           "name": "Component và `props`",
           "slug": "component-props"
         },
-        { "name": "Viết unit tests", "slug": "viet-unit-tests" },
         {
-          "name": "`state`, xử lý sự kiện và vòng đời của component",
-          "slug": "state-event-handlers-life-cycles"
+          "name": "Viết unit tests",
+          "slug": "viet-unit-tests"
         },
-        { "name": "`ref` và cách tích hợp với thư viện ngoài", "slug": "ref" }
+        {
+          "name": "`state` và xử lý sự kiện",
+          "slug": "state-event-handlers-xu-ly-su-kien"
+        },
+        {
+          "name": "Vòng đời của component",
+          "slug": "life-cycles-vong-doi-cua-component"
+        },
+        {
+          "name": "`ref` và cách tích hợp với thư viện ngoài",
+          "slug": "ref"
+        }
+      ]
+    },
+    {
+      "name": "React căn bản",
+      "children": [
+        {
+          "name": "Cài đặt",
+          "slug": "cai-dat-react-va-chuong-trinh-dau-tien"
+        },
+        {
+          "name": "JSX là gì?",
+          "slug": "jsx-la-gi"
+        },
+        {
+          "name": "Component và `props`",
+          "slug": "component-props"
+        },
+        {
+          "name": "Viết unit tests",
+          "slug": "viet-unit-tests"
+        },
+        {
+          "name": "`state` và xử lý sự kiện",
+          "slug": "state-event-handlers-xu-ly-su-kien"
+        },
+        {
+          "name": "Vòng đời của component",
+          "slug": "life-cycles-vong-doi-cua-component"
+        },
+        {
+          "name": "`ref` và cách tích hợp với thư viện ngoài",
+          "slug": "ref"
+        }
+      ]
+    },
+    {
+      "name": "Nâng cao",
+      "children": [
+        {
+          "name": "Higher-order components",
+          "slug": "higher-order-components"
+        },
+        {
+          "name": "Render props",
+          "slug": "render-props"
+        },
+        {
+          "name": "Portal và Error boundaries",
+          "slug": "portal-va-error-boundaries"
+        },
+        {
+          "name": "PropTypes",
+          "slug": "proptypes"
+        }
       ]
     }
   ]
