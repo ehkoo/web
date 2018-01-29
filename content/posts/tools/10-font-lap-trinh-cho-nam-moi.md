@@ -38,9 +38,18 @@ Lưu ý: Ligatures đặc biệt hữu ích khi bạn làm việc với các ng�
 
 **_Ghi chú nhỏ:_** Các font chữ cho lập trình dưới đây có thể download miễn phí từ internet. Nếu muốn nhanh hơn nữa, hãy điền email của bạn vào form bên dưới, Ehkoo sẽ gửi chúng đến tận tay cho bạn!
 
-<div class="aspect-ratio-m aspect-ratio-m--3x4">
-<iframe class="aspect-ratio-m--object" width="540" height="236" src="https://my.sendinblue.com/users/subscribe/js_id/2x864/id/3" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+<!-- Begin MailChimp Signup Form -->
+<div class="bg-light-gray br2 pa3 ma3 mw6 center">
+  <form action="https://ehkoo.us16.list-manage.com/subscribe/post?u=f879261eee9d626d9247f34d2&amp;id=729bd10e61" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
+    <label for="mce-EMAIL" class="f5 fw6 blue tracked">Nhập vào địa chỉ email của bạn</label>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f879261eee9d626d9247f34d2_729bd10e61" tabindex="-1" value=""></div>
+    <div class="flex flex-column flex-row-ns w-100 justify-between mt3">
+      <input type="email" value="" name="EMAIL" placeholder="pikalong@ehkoo.dev" id="mce-EMAIL" class="flex-1 bn pa2 bg-white monospace f5 outline-0 mb2 mb0-ns" required>
+      <input type="submit" value="Nhận font nào" name="subscribe" id="mc-embedded-subscribe" class="bg-orange white bn tracked f6 fw6 br1 pv2 pointer">
+    </div>
+  </form>
 </div>
+<!--End mc_embed_signup-->
 
 ### Fira Mono và Fira Code
 
@@ -132,6 +141,15 @@ Nói chung, font đẹp hay xấu tùy thuộc phần lớn vào cảm nhận c�
 
 Chỉ cần điền email của bạn vào form dưới đây, Ehkoo sẽ gửi đủ 10+ code font kể trên đến tận tay cho bạn!
 
-<div class="aspect-ratio-m aspect-ratio-m--3x4">
-<iframe class="aspect-ratio-m--object" width="540" height="236" src="https://my.sendinblue.com/users/subscribe/js_id/2x864/id/3" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+<!-- Begin MailChimp Signup Form -->
+<div class="bg-light-gray br2 pa3 ma3 mw6 center">
+  <form action="https://ehkoo.us16.list-manage.com/subscribe/post?u=f879261eee9d626d9247f34d2&amp;id=729bd10e61" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
+    <label for="mce-EMAIL" class="f5 fw6 blue tracked">Nhập vào địa chỉ email của bạn</label>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f879261eee9d626d9247f34d2_729bd10e61" tabindex="-1" value=""></div>
+    <div class="flex flex-column flex-row-ns w-100 justify-between mt3">
+      <input type="email" value="" name="EMAIL" placeholder="pikalong@ehkoo.dev" id="mce-EMAIL" class="flex-1 bn pa2 bg-white monospace f5 outline-0 mb2 mb0-ns" required>
+      <input type="submit" value="Nhận font nào" name="subscribe" id="mc-embedded-subscribe" class="bg-orange white bn tracked f6 fw6 br1 pv2 pointer">
+    </div>
+  </form>
 </div>
+<!--End mc_embed_signup-->
