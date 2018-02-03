@@ -7,6 +7,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1517427149/REACTjs-cov
 tags: JavaScript, React
 excerpt: Mảng (array) và object là những cấu trúc dữ liệu thường gặp nhất trong JavaScript. Nhưng liệu bạn đã biết cách xử lý chúng để đạt được tính bất biến (immutability)?
 author: kcjpop
+form_footer: newsletter-footer
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1517427149/REACTjs-cover_xd5qrm.jpg)
