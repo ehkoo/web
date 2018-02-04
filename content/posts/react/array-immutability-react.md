@@ -146,7 +146,7 @@ Nối hai mảng với nhau
 const a = [0, 1]
 const b = [2, 3]
 
-// Không nên: a.concat(b)
+// Hoặc a.concat(b)
 const c = [...a, ...b]
 ```
 
@@ -312,3 +312,7 @@ Mã nguồn có thể tìm thấy tại: [https://github.com/ehkoo/react-immutab
 Những tuyệt chiêu được đề cập trong bài viết này có thể áp dụng trong tất cả ứng dụng JavaScript, chứ không chỉ dành riêng cho React, Vue hay Angular. Mỗi khi bạn có ý định viết `let`, hãy hít thật sâu, thở chầm chậm và suy nghĩ cách nào đó để chuyển thành `const` (và trong đa số trường hợp đều có thể làm được). Đồng thời khi làm việc với mảng hay object, luôn để ý xem thao tác này có thay đổi bản thân của đối tượng bị tác động hay không.
 
 Cho đến ngày JavaScript ràng buộc tính bất biến cho dữ liệu một cách mặc định, lập trình viên chúng ta còn lắm gian truân.
+
+**Cập nhật:** Ngoài các kỹ thuật ở trên, bạn cũng có thể sử dụng các thư viện được thiết kế riêng cho mục đích giữ tính bất biến, ví dụ như [immutable-js](https://github.com/facebook/immutable-js), [updeep](https://github.com/substantial/updeep), [baobab](https://github.com/Yomguithereal/baobab), [seamless-immutable](https://github.com/rtfeldman/seamless-immutable) hay [mori](https://github.com/swannodette/mori). Điểm bất lợi khi sử dụng các thư viện này, có lẽ là kích thước của chúng.
+
+_Cám ơn anh Nghiệp trong nhóm React Việt Nam, anh Dong Nguyen ở Kipalog đã góp ý cho bài viết._
