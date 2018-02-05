@@ -12,11 +12,11 @@ form_footer: newsletter-footer
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1517427149/REACTjs-cover_xd5qrm.jpg)
 
-Khi làm việc với React, hẳn bạn đã nghe đến tính bất biến của dữ liệu (immutability). Đặc tính này nói cho đơn giản là khả năng giá trị của dữ liệu không bị thay đổi sau khi đã được khai báo. Tính bất biến giúp cho chương trình trở nên dễ dự đoán, ít xảy ra lỗi và trong một số trường hợp còn tăng hiệu suất của ứng dụng. Do đó, React (và Redux) đều khuyến khích mọi người viết code để hướng đến đặc tính này.
+Khi làm việc với React, hẳn bạn đã nghe đến tính bất biến của dữ liệu (immutability). Đặc tính này, nói một cách đơn giản, là khả năng giá trị của dữ liệu không bị thay đổi sau khi đã được khai báo. Tính bất biến giúp cho chương trình trở nên dễ dự đoán, ít xảy ra lỗi và trong một số trường hợp còn tăng hiệu suất của ứng dụng. Do đó, React (và Redux) đều khuyến khích mọi người viết code để hướng đến đặc tính này.
 
-Tuy vậy, nếu bạn mới làm quen với JavaScript và React, có thể bạn sẽ bị bỡ ngỡ và không biết làm thế nào cho "chuẩn nhất". Bài viết dưới đây sẽ giới thiệu một số kỹ thuật giúp bạn hướng đến immutability một cách dễ dàng hơn. Chúng ta sẽ nói về hàm thuần khiết, các thao tác xử lý dữ liệu trên mảng và object. Cuối cùng, bạn có thể áp dụng ngay những "tuyệt chiêu" vừa học để xây dựng một demo nhỏ bằng React.
+Tuy vậy, nếu mới làm quen với JavaScript và React, có thể bạn sẽ bỡ ngỡ không biết làm thế nào cho "chuẩn nhất". Bài viết dưới đây giới thiệu một số kỹ thuật giúp bạn hướng đến immutability một cách dễ dàng hơn. Chúng ta sẽ nói về hàm thuần khiết, các thao tác xử lý dữ liệu trên mảng và object. Cuối cùng, bạn có thể áp dụng ngay những "tuyệt chiêu" vừa học để xây dựng một demo nhỏ bằng React.
 
-_Lưu ý:_ kí hiệu 😃 sẽ được sử dụng trong bài viết để thể hiện đây là kết quả/hiệu ứng mong muốn.
+_Lưu ý:_ kí hiệu 😃 được sử dụng trong bài viết để thể hiện đây là kết quả/hiệu ứng mong muốn.
 
 Chúng ta bắt đầu thôi!
 
