@@ -4,7 +4,7 @@ title: Tổng hợp những tính năng ES6 nổi bật
 slug: tong-hop-tinh-nang-noi-bat-es6
 date: 2017-10-29
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516116299/es6-recursion-600x360_sifpgq.png
-tags: JavaScript, ES6, ES2015, Kinh nghiệm
+tags: JavaScript, ES6, ES2015, Dành cho người mới
 excerpt: ES6 đã và đang dần được hỗ trợ bởi tất cả các trình duyệt. Hãy cùng điểm qua những tính năng thông dụng nhất nhé.
 author: kcjpop
 grid: big

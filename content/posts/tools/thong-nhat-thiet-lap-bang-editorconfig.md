@@ -4,7 +4,7 @@ title: Thống nhất thiết lập giữa trình soạn thảo/IDE bằng Edito
 slug: thong-nhat-thiet-lap-giua-editor-ide-bang-editorconfig
 date: 2014-04-17
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507300408/tweet-editorconfig_lssmtc.png
-tags: TextEditor, IDE, SublimeText, Atom, VSCode, vim, emacs
+tags: TextEditor, IDE, SublimeText, Atom, VSCode, vim, emacs, Kinh nghiệm
 excerpt: EditorConfig giúp thiết lập một format chung cho tất cả các text editor và IDE, nhờ đó giúp nâng cao tính thống nhất, giúp việc đọc, hiểu và bảo trì code dễ dàng hơn.
 author: kcjpop
 ---
