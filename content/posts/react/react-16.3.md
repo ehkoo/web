@@ -25,9 +25,9 @@ class MyComponent extends React.Component {
 }
 ```
 
-Nhưng thông tin về `context` trên trang tài liệu chính thức của React khá hiếm hoi, và lập trình viên được khuyến khích...không sử dụng `context` vì API của nó có thể thay đổi trong các phiên bản sau.
+Nhưng thông tin về `context` khá hiếm hoi ngay cả trên trang tài liệu chính thức của React, và lập trình viên được khuyến khích... không sử dụng `context` vì API của nó có thể thay đổi trong các phiên bản sau.
 
-Nhưng đó đã là quá khứ. Kể từ phiên bản 16.3, khái niệm `context` được [cải tiến](https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md)  và đóng vai trò như một cơ chế quản lý state đơn giản.
+Nhưng đó đã là quá khứ. Kể từ phiên bản 16.3, khái niệm `context` được [cải tiến](https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md) và đóng vai trò như một cơ chế quản lý state đơn giản.
 
 ```js
 import { createContext } from 'react'
@@ -35,7 +35,7 @@ const ThemeContext = createContext({ color: 'dark', fontWeight: 400 })
 // ThemeContext là một object có hai thuộc tính ThemeContext.Provider và ThemeContext.Consumer
 ```
 
-Hàm `React.createContext(defaultState)` nhận vào vào một object như là state ban đầu, và trả về một object có hai thuộc tính `Provider` và `Consumer`. `Provider` là một component có nhiệm vụ truyền dữ liệu xuống tất cả các component con của nó. Theo ví dụ trên, bạn có thể dùng `ThemeContext.Provider` để tạo một context và gán giá thị mới:
+Hàm `React.createContext(defaultState)` nhận vào một object như là state ban đầu, và trả về một object có hai thuộc tính `Provider` và `Consumer`. `Provider` là một component có nhiệm vụ truyền dữ liệu xuống tất cả các component con của nó. Theo ví dụ trên, bạn có thể dùng `ThemeContext.Provider` để tạo một context và gán giá thị mới:
 
 ```js
 class App extends React.Component {
@@ -76,7 +76,7 @@ class Header extends React.Component {
 
 ## StrictMode
 
-StrictMode là một component, giúp đảm bảo ứng dụng của bạn tuân theo những tiêu chuẩn phát triển đúng nhất. Hiện tại, StrictMode có thể quăng ra lỗi nếu trong ứng dụng của bạn sử dụng một trong những life-cycle hooks bị đánh dấu loại bỏ (xem ở phần sau).
+StrictMode là một component giúp đảm bảo ứng dụng của bạn tuân theo những tiêu chuẩn phát triển đúng nhất. Hiện tại, StrictMode có thể quăng ra lỗi nếu trong ứng dụng của bạn sử dụng một trong những life-cycle hooks bị đánh dấu loại bỏ (xem ở phần sau).
 
 Để sử dụng StrictMode, bạn dùng như sau:
 
