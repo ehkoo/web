@@ -58,6 +58,7 @@ svg {
   background-color: #dee2e6;
   padding: 0.15rem 0.3rem;
   border-radius: 0.15rem;
+  color: #555;
 }
 
 .content blockquote {
@@ -279,7 +280,7 @@ svg {
     flex-direction: row-reverse;
   }
 
-  .home-grid .home-grid__article:first-child {
+  .home-grid .home-grid__article:nth-child(4) {
     grid-column-end: span 2;
   }
 

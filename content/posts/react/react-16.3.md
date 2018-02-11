@@ -5,12 +5,13 @@ slug: react-phat-hanh-phien-ban-16-3
 date: 2018-02-10
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg
 tags: React, JavaScript
-excerpt: Điểm đáng chú ý nhất của phiên bản React 16.3 là nâng cấp khái niệm `context`, giúp quản lý state trong ứng dụng một cách đơn giản. Bên cạnh đó, một số life-cycle hooks cũng bị đánh dấu loại bỏ trong phiên bản 17, đồng thời hook mới `static getDerivedStateFromProps` được giới thiệu. Cuối cùng là StrictMode.
+excerpt: Trong phiên bản này, khái niệm `context` được nâng cấp, giúp bạn chia sẻ state một cách đơn giản hơn. Bên cạnh đó, StrictMode được giới thiệu, cùng với một số thay đổi về life-cycle hooks.
 author: kcjpop
-draft: true
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg)
+
+Phiên bản 16.3 đang trong giai đoạn hoàn thiện và sẽ được phát hành trong vài ngày tới. Hãy cùng Ehkoo điểm qua những thay đổi trong phiên bản này nhé.
 
 ## API mới cho `context`
 
@@ -108,9 +109,9 @@ Phiên bản 16.3 đánh dấu các life-cycle hooks sau sẽ bị loại bỏ t
 * `componentWillUpdate`-- hãy sử dụng  `componentDidUpdate`
 * `componentWillReceiveProps` -- được thay thế bằng `static getDerivedStateFromProps`
 
-Những thay đổi này giúp hoàn thiện hơn tính năng async rendering của kiến trúc Fiber. Trong StrictMode sẽ có lỗi quăng ra khi dùng đến các life-cycle này. Bạn có thể dùng `UNSAFE_componentWillMount`, `UNSAFE_componentWillReceiveProps`, `UNSAFE_componentWillUpdate` nhưng dĩ nhiên là không khuyến khích rồi.
+Những thay đổi này giúp hoàn thiện hơn tính năng async rendering của kiến trúc Fiber. Trong StrictMode sẽ có lỗi quăng ra khi dùng đến các hook này. Bạn có thể dùng `UNSAFE_componentWillMount`, `UNSAFE_componentWillReceiveProps`, `UNSAFE_componentWillUpdate` nhưng dĩ nhiên là không khuyến khích rồi.
 
-Nói thêm về life-cycle `static getDerivedStateFromProps`, được giới thiệu để thay thế cho `componentWillReceiveProps` giúp thay đổi `this.state` khi props thay đổi. Đây là một phương thức tĩnh, được khai báo như sau:
+Nói thêm về `static getDerivedStateFromProps`, được giới thiệu để thay thế cho `componentWillReceiveProps` giúp thay đổi `this.state` khi props thay đổi. Đây là một phương thức tĩnh, được khai báo như sau:
 
 ```js
 class App extends React.Component {
@@ -123,12 +124,17 @@ class App extends React.Component {
   return { date: nextProps.date }
   }
 }
-// hoặc khai báo kiểu:
-// App.getDerivedStateFromProps = function(nextProps, prevState) {
-//   // Logic của bạn ở đây
-// }
+
+// hoặc bạn có thể dùng cách này:
+App.getDerivedStateFromProps = function(nextProps, prevState) {
+  // Logic của bạn ở đây
+}
 ```
 
-Vì là phương thức tĩnh nên trong hàm `getDerivedStateFromProps` bạn không thể dùng `this` hay gọi đến `this.setState()`. Do đó, sau khi thực hiện so sánh và phát hiện cần re-render, bạn chỉ trả về một object chứa các thay đổi của state dựa vào props. Ngược lại, trả về `null` để không thực hiện re-render.
+Vì là phương thức tĩnh nên trong hàm `getDerivedStateFromProps` bạn không thể dùng `this` hay gọi đến `this.setState()`. Do đó, sau khi thực hiện so sánh và phát hiện cần re-render, bạn chỉ trả về một object chứa các thay đổi của state dựa vào props. Thay đổi này sẽ được merge vào `this.state`. Ngược lại nếu bạn không muốn thực hiện re-render, trả về `null`.
 
-`getDerivedStateFromProps` cũng rất tiện vì nó được gọi khi component được mount lần đầu tiên, và trong mỗi lần re-render. Thế nên bạn không cần thiết phải tạo state dựa vào props trong constructor. Nếu trong component có cả hai phương thức `componentWillReceiveProps` và `getDerivedStateFromProps`, `getDerivedStateFromProps` sẽ được gọi.
+`getDerivedStateFromProps` cũng rất tiện vì nó được gọi khi component được mount lần đầu tiên, và trong mỗi lần component được re-render. Thế nên bên trong constructor, bạn không cần phải tạo state dựa vào nữa. Nếu trong một component có cả hai phương thức `componentWillReceiveProps` và `getDerivedStateFromProps`, `getDerivedStateFromProps` sẽ được gọi.
+
+## Kết
+
+Context trong phiên bản 16.3 là một tính năng thú vị, giúp bạn quản lý state một cách đơn giản. Nhưng liệu context có thể thay thế được reudx/MobX hay không, hãy để các dự án thực tế trả lời.
