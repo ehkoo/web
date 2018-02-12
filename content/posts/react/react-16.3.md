@@ -7,6 +7,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbw
 tags: React, JavaScript
 excerpt: Trong phiên bản này, khái niệm `context` được nâng cấp, giúp bạn chia sẻ state một cách đơn giản hơn. Bên cạnh đó, StrictMode được giới thiệu, cùng với một số thay đổi về life-cycle hooks.
 author: kcjpop
+form_footer: react-footer
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg)
