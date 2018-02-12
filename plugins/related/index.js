@@ -24,7 +24,12 @@ module.exports = function(opts) {
             return { file: file2, count: count }
           })
           .filter(match => {
-            return files[match.file] !== post && match.count !== 0 && match.count >= opts.min_matches
+            return (
+              files[match.file] !== post &&
+              match.count !== 0 &&
+              match.count >= opts.min_matches &&
+              files[match.file].draft !== true
+            )
           })
           .sort((a, b) => {
             return b.count - a.count
