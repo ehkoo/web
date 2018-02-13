@@ -4,7 +4,7 @@ title: 10+ font chữ cho lập trình - download miễn phí
 slug: font-chu-cho-lap-trinh
 date: 2018-01-16
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516254753/jLxMOZg_egcfqa.jpg
-tags: Kinh nghiệm, Fonts, Programming Fonts
+tags: Thủ thuật, Fonts, Programming Fonts
 excerpt: 2018 rồi mà bạn vẫn còn dùng Courier New? Dừng lại ngay, bạn đang làm khổ bản thân đấy. Hãy để Ehkoo giới thiệu 10+ code font "ngon bổ rẻ" cho đời lập trình viên của bạn.
 author: kcjpop
 editor: chubbyanh

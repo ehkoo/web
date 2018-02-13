@@ -3,7 +3,7 @@ layout: post.njk
 title: Tăng hiệu suất sử dụng git với git alias
 slug: tang-hieu-suat-su-dung-git-voi-git-alias
 date: 2017-10-04
-tags: git, Tuyệt chiêu, Thủ thuật, Kinh nghiệm
+tags: git, Tuyệt chiêu, Thủ thuật
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516117620/git-push-coffe-me_gt56na.png
 excerpt: Tiết kiệm thời gian gõ những câu lệnh git dài ngoằng với `git alias`. Đặc biệt, bạn bỗng nhiên trở nên chuyên nghiệp hơn trong mắt đồng nghiệp.
 author: kcjpop
