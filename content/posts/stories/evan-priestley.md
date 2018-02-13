@@ -100,7 +100,7 @@ Còn sau đây là một số lời khuyên của tôi cho các bạn trẻ:
 * Hãy chắc chắn là bạn thật sự thích lập trình.
 * Bỏ ra thật nhiều thời gian để rèn luyện. Không có con đường tắt nào cả, và hầu hết mọi bài học đáng giá đều được tích lũy thông qua kinh nghiệm và sai lầm.
 * Kĩ năng quan trọng nhất: đánh giá thiết kế một hệ thống. Nhờ vậy, bạn sẽ lựa chọn được các giải pháp càng đơn giản càng tốt – song lại không quá đơn giản. Kĩ năng này cũng không có cách rèn luyện nào khác ngoài kinh nghiệm thực tế.
-Học rộng sẽ tốt hơn là học sâu. Kĩ năng theo chiều rộng sẽ hỗ trợ lẫn nhau, và giúp bạn khai phá những điều mới. Kĩ năng chuyên sâu chỉ hỗ trợ bản thân chúng. Bạn sẽ phát triển nhanh hơn khi có được hiểu biết về toàn bộ hệ thống, thay vì chỉ hiểu rõ một phần nhất định.
+* Học rộng sẽ tốt hơn là học sâu. Kĩ năng theo chiều rộng sẽ hỗ trợ lẫn nhau, và giúp bạn khai phá những điều mới. Kĩ năng chuyên sâu chỉ hỗ trợ bản thân chúng. Bạn sẽ phát triển nhanh hơn khi có được hiểu biết về toàn bộ hệ thống, thay vì chỉ hiểu rõ một phần nhất định.
 * Để học bất kì hệ thống phức tạp nào (kể cả trong lập trình hay mọi thứ khác), bạn hãy hình dung mô hình hoạt động của hệ thống đó ở mức độ bao quát nhất, sau đó chỉnh sửa dần. Khi đủ phức tạp, mô hình của bạn sẽ cho phép dự đoán các hoạt động của hệ thống, và cuối cùng, sẽ giúp đánh giá của bạn trở nên hợp lý.
 * Chất lượng vs. tốc độ chỉ là sự đánh đổi cục bộ. Nhìn một cách toàn diện, việc hi sinh cái này sẽ dẫn đến làm hỏng luôn cái kia.
 * Nên luôn luôn tìm hiểu nguyên nhân và cách thức mà mọi sự việc xảy ra.
