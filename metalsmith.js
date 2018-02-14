@@ -29,6 +29,7 @@ const builder = Metalsmith(__dirname)
     social: {
       twitterHandle: '@ehkoo',
       fbPageId: '122317275146521',
+      fbAppId: '207039013199010',
       facebook: 'https://facebook.com/ehkoo.dev',
       twitter: 'https://twitter.com/EhkooDev',
       github: 'https://github.com/ehkoo',
