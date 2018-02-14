@@ -81,7 +81,7 @@ Cũng chính vì vậy, tôi không tán thành cho lắm khẩu hiệu _“Move
 
 Tôi thì không nghĩ vậy. Khẩu hiệu đó, diễn giải trắng phớ ra, chẳng phải nghĩa là: _“Nếu xây dựng một hệ thống thật tệ hại, chúng ta sẽ có thể triển khai nó thật nhanh. Còn nếu cố xây dựng một hệ thống đủ tốt, chúng ta sẽ không bao giờ có thể triển khai nó?”_
 
-Cá nhân tôi thì nghĩ rằng:
+Cá nhân tôi cho rằng:
 
 * Bạn phải hành động nhanh hơn để xây dựng phần mềm có chất lượng. Nếu không, bạn sẽ không thể phản ứng kịp khi mọi thứ, nhất là sự hiểu biết của bạn, thay đổi – và khi phần mềm của bạn không phải là giải pháp tốt cho vấn đề.
 * Nhưng, bạn cũng phải xây dựng phần mềm có chất lượng để hành động nhanh hơn. Nếu không, hạ tầng hệ thống của bạn sẽ luôn có vấn đề, và rốt cuộc, bạn sẽ tốn rất nhiều thời gian để xử lý. Mà, một khi hệ thống đổ vỡ, ý chí của bạn sẽ lung lay theo.
