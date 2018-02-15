@@ -13,7 +13,7 @@ editor: kcjpop
 
 > Trong ngành công nghệ, quan niệm cho rằng bằng đại học là tấm vé bắt buộc để bước lên chuyến tàu sự nghiệp, tiếc thay không chỉ phổ biến ở Việt Nam mà còn cả trên thế giới. Nhưng, vẫn còn có những #unqualified_developer trưởng thành từ quá trình tự học. Bằng đam mê và nỗ lực làm việc, họ đã đạt được thành tựu không hề kém cạnh các đồng nghiệp được đào tạo chính quy.
 >
-> Ehkoo xin trân trọng giới thiệu một số tấm gương tự học trong giới lập trình – như lời chia sẻ chân thành tới những ai đang còn băn khoăn: Liệu không học đại học chính quy thì có thể trở thành lập trình viên? Liệu có quá trễ để học lập trình ở tuổi XYZ?…
+> Ehkoo xin trân trọng giới thiệu một số tấm gương tự học trong giới lập trình – như lời chia sẻ chân thành tới những ai đang còn băn khoăn: Liệu không học đại học chính quy thì có thể trở thành lập trình viên? Liệu có quá trễ để học lập trình ở tuổi 2x, 3x, nx?…
 
 Sau đây là câu chuyện của Evan Priestley, một lập trình viên thậm chí không có cả bằng tốt nghiệp phổ thông lẫn đại học, đã đảm nhiệm vị trí kĩ sư phần mềm tại Facebook từ 2007 đến 2011. Evan từng gây tranh cãi khi công khai nhận xét rằng Facebook “là chương trình có nhiều bug nhất trên thế giới”. Anh cũng nổi danh trên Quora (Top Writer 2012) với những đóng góp xuất sắc cho phần nội dung liên quan đến Phabricator – một ứng dụng mã nguồn mở được viết bằng PHP, giúp quản lý dự án phần mềm dễ dàng hơn.
 
