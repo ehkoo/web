@@ -280,7 +280,7 @@ svg {
     flex-direction: row-reverse;
   }
 
-  .home-grid .home-grid__article:nth-child(4) {
+  .home-grid .home-grid__article:nth-child(1) {
     grid-column-end: span 2;
   }
 

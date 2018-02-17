@@ -124,9 +124,10 @@ const builder = Metalsmith(__dirname)
   )
   .use((files, metalsmith, done) => {
     const { siteUrl, collections } = metalsmith.metadata()
+    const TOP_POSTS  = 4
     // Split latestPosts into first 5 and the rest
-    const topPosts = collections.latest.slice(0, 5)
-    const olderPosts = collections.latest.slice(5)
+    const topPosts = collections.latest.slice(0, TOP_POSTS)
+    const olderPosts = collections.latest.slice(TOP_POSTS)
     metalsmith.metadata({ ...metalsmith.metadata(), topPosts, olderPosts })
 
     files = Object.keys(files).reduce((acc, key) => {
