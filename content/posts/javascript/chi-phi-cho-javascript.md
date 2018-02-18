@@ -11,7 +11,7 @@ translation: https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e
 ---
 
 > **Về tác giả:**
-> Addy Osmani là một gương mặt rất quen thuộc trong cộng đồng phát triển web. Anh là tác giả của TodoMVC, Yeoman, và Material Design Lite. Bên cạnh đó anh cũng rất quan tâm đến vấn đề nâng cao hiệu suất của các website. Hiện tại anh đang là Eng. Manager tại Google. Bạn có thể theo dõi Addy trên Twitter [@addyosmani](https://twitter.com/addyosmani) hay Facebook [@articlesfordevelopers](https://www.facebook.com/articlesfordevelopers/).
+> Addy Osmani là một gương mặt rất quen thuộc trong cộng đồng phát triển web. Anh là tác giả của TodoMVC, Yeoman, và Material Design Lite. Bên cạnh đó anh cũng rất quan tâm đến vấn đề nâng cao hiệu suất của các website. Hiện tại Addy đảm nhiệm vị trí Eng. Manager tại Google. Bạn có thể theo dõi Addy trên Twitter [@addyosmani](https://twitter.com/addyosmani) hay Facebook [@articlesfordevelopers](https://www.facebook.com/articlesfordevelopers/).
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg)
 
@@ -23,7 +23,7 @@ Khi các website chúng ta xây dựng ngày càng phụ thuộc vào JavaScript
 
 ### Kết nối mạng
 
-Khi hầu hết lập trình viên nghĩ về chi phí cho JavaScript, họ nghĩ về mặt **chi phí tải và thực thi mã lệnh**. Kết nối Internet của người dùng càng chậm thì gửi nhiều bytes JavaScript về phía họ càng lâu.
+Khi nghĩ về chi phí cho JavaScript, hầu hết các lập trình viên nghĩ về mặt **chi phí tải và thực thi mã lệnh**. Kết nối Internet của người dùng càng chậm thì gửi nhiều bytes JavaScript về phía họ càng lâu.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511058700/1_U00XcnhqoczTuJ8NH8UhOw_ktoece.png)
 
