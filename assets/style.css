@@ -1,14 +1,16 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Lato, Roboto, 'Source Sans Pro', Ubuntu, Droid Sans, Helvetica Neue, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Lato, Roboto, 'Source Sans Pro', Ubuntu, Droid Sans,
+    Helvetica Neue, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: #eeeeee;
-  background-image: url("data:image/svg+xml,%3Csvg width=!string!height=!string!viewBox=!string!xmlns=!string!%3E%3Cpath d=!string!fill=!string!fill-opacity=!string!fill-rule=!string!/%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml,%3Csvg width=!string!height=!string!viewBox=!string!xmlns=!string!%3E%3Cpath d=!string!fill=!string!fill-opacity=!string!fill-rule=!string!/%3E%3C/svg%3E');
 }
 
 .flex-1 {
   flex: 1;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
 }
 
@@ -74,7 +76,7 @@ svg {
 
 .content blockquote::after {
   z-index: 0;
-  content: '180';
+  content: '\201c\201d';
   font-family: serif;
   position: absolute;
   right: 0.5rem;
@@ -85,7 +87,12 @@ svg {
   transform: translateY(50%) rotate(15deg);
 }
 
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   color: #ff4136;
   margin: 1.5rem 0;
   position: relative;
@@ -125,14 +132,15 @@ svg {
   border: none;
 }
 
-@media screen and (min-width:60em) {
-  .content ul, .content ol {
+@media screen and (min-width: 60em) {
+  .content ul,
+  .content ol {
     margin: 0 3rem;
   }
-
 }
 
-.content ul, .content ol {
+.content ul,
+.content ol {
   margin: 0 2rem;
 }
 
@@ -144,7 +152,8 @@ svg {
   list-style-type: decimal;
 }
 
-.content ol li, .content ul li {
+.content ol li,
+.content ul li {
   padding-left: 1rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -166,7 +175,7 @@ svg {
 }
 
 .heading-archor:before {
-  content: '180';
+  content: '\201c\201d';
   position: absolute;
   left: 0px;
   top: 0px;
@@ -178,14 +187,13 @@ svg {
   color: #5291e2;
 }
 
-@media screen and (max-width:60em) {
+@media screen and (max-width: 60em) {
   .heading-archor:before {
     left: 10px;
   }
-
 }
 
-@media screen and (min-width:60em) {
+@media screen and (min-width: 60em) {
   .heading-archor:before {
     display: none;
   }
@@ -193,7 +201,6 @@ svg {
   .heading-archor:hover:before {
     display: flex;
   }
-
 }
 
 .box-shadow-1 {
@@ -225,7 +232,11 @@ svg {
 .box-social {
   background: #00f260; /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #0575e6, #00f260); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #0575e6, #00f260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to top,
+    #0575e6,
+    #00f260
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .box-social:hover .box-social__fig {
@@ -238,16 +249,30 @@ svg {
 .box-subscription {
   border: 16px solid transparent;
   border-image: 16
-  repeating-linear-gradient(-45deg, red 0, red 0.7em, transparent 0, transparent 1.4em, #58a 0, #58a 2.1em, transparent 0, transparent 2.8em);
+    repeating-linear-gradient(
+      -45deg,
+      red 0,
+      red 0.7em,
+      transparent 0,
+      transparent 1.4em,
+      #58a 0,
+      #58a 2.1em,
+      transparent 0,
+      transparent 2.8em
+    );
 }
 
 .box-recruitment {
   background: #f7971e; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #ffd200, #f7971e); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffd200, #f7971e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to bottom,
+    #ffd200,
+    #f7971e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media screen and (min-width:60em) {
+@media screen and (min-width: 60em) {
   .home-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -273,10 +298,9 @@ svg {
   .home-grid .home-grid__box-subcription {
     grid-column-end: span 2;
   }
-
 }
 
-@media screen and (max-width:60em) {
+@media screen and (max-width: 60em) {
   .aspect-ratio-m {
     height: 0;
     position: relative;
@@ -300,7 +324,6 @@ svg {
     height: 100%;
     z-index: 100;
   }
-
 }
 
 /*!
@@ -329,7 +352,6 @@ svg {
     opacity: 1;
     transform: scale(1);
   }
-
 }
 
 .break-word {
