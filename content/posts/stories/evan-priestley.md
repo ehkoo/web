@@ -11,7 +11,7 @@ author: chubbyanh
 editor: kcjpop
 ---
 
-> Trong ngành công nghệ, quan niệm cho rằng bằng đại học là tấm vé bắt buộc để bước lên chuyến tàu sự nghiệp, tiếc thay không chỉ phổ biến ở Việt Nam mà còn cả trên thế giới. Nhưng, vẫn còn có những #unqualified_developer trưởng thành từ quá trình tự học. Bằng đam mê và nỗ lực làm việc, họ đã đạt được thành tựu không hề kém cạnh các đồng nghiệp được đào tạo chính quy.
+> Trong ngành công nghệ, quan niệm cho rằng bằng đại học là tấm vé bắt buộc để bước lên chuyến tàu sự nghiệp, tiếc thay không chỉ phổ biến ở Việt Nam mà còn cả trên thế giới. Nhưng, vẫn còn đó những #unqualified_developer trưởng thành từ quá trình tự học. Bằng đam mê và nỗ lực làm việc, họ đã đạt được thành tựu không hề kém cạnh các đồng nghiệp được đào tạo chính quy.
 >
 > Ehkoo xin trân trọng giới thiệu một số tấm gương tự học trong giới lập trình – như lời chia sẻ chân thành tới những ai đang còn băn khoăn: Liệu không học đại học chính quy thì có thể trở thành lập trình viên? Liệu có quá trễ để học lập trình ở tuổi 2x, 3x, nx?…
 
