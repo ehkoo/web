@@ -128,6 +128,16 @@ svg {
   font-weight: 400;
 }
 
+.content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.content img::after {
+  content: attr(alt) ': ';
+}
+
 .content .bn {
   border: none;
 }

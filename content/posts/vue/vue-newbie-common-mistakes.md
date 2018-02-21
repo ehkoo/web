@@ -1,0 +1,301 @@
+---
+layout: post.njk
+title: "7 sai lầm nguy hiểm người mới học Vue cần tránh"
+slug: vue-newbie-common-mistakes
+date: 2018-02-20
+tags: Vue, VueJS
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png
+excerpt: "Vue rất dễ học, dễ làm nhưng cũng có những điểm cần lưu ý, dù cho bạn là lập trình viên lâu năm hay tay mơ mới vào nghề."
+author: kcjpop
+---
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png)
+
+2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi sự gọn nhẹ mà vẫn có đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học so với các framework khác, chẳng hạn như React hay Angular.
+
+Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề, lẫn dân lập trình kì cựu đều nên cẩn thận một số “tử huyệt” sau đây, kẻo gặp phải hậu quả đáng tiếc về sau.
+
+### Không dùng `data` như một hàm
+
+Trong ví dụ mở đầu của Vue, bạn được hướng dẫn dùng một object bình thường làm `data`. Điều này hoàn toàn chấp nhận được khi trong ứng dụng chỉ có một instance `new Vue()` duy nhất. Tuy nhiên khi chuyển qua sử dụng component, thuộc tính `data` bắt buộc phải là một hàm, trả về một object chứa các giá trị khởi động.
+
+```js
+// KHÔNG NÊN
+const FormAddNewProduct = {
+  data: {
+    newProduct: { name: '', price: 0 }
+  }
+}
+
+// THAY VÀO ĐÓ
+const FormAddNewProduct = {
+  data() {
+    return {
+      newProduct: { name: '', price: 0 }
+    }
+  }
+}
+```
+
+Lý do là `FormAddNewProduct` ở trên có thể được khởi tạo nhiều lần. Nếu chúng ta dùng object cho `data`, tham chiếu (reference) của object này sẽ được chia sẻ cho tất cả `FormAddNewProduct` được khởi tạo. Điều này có thể dẫn đến những kết quả không mong muốn, chẳng hạn như lẫn lộn state. Bằng cách dùng hàm cho `data`, mỗi đối tượng của `FormAddNewProduct` sẽ có một giá trị khởi động tách biệt.
+
+Xem thêm: [`data` phải là một hàm](https://vi.vuejs.org/v2/guide/components.html#data-phai-la-mot-ham)
+
+### Dùng giá trị không đổi trong `data/computed`
+
+Trong một số trường hợp, bạn khai báo một thuộc tính có giá trị không đổi trong kết quả của `data` hay `computed`, như ví dụ dưới đây.
+
+```js
+// KHÔNG NÊN
+export default {
+  computed: {
+    phone() {
+      return '1234567'
+    },
+    city() {
+      return 'Saigon'
+    }
+  }
+}
+
+component.phone
+component.city
+```
+
+Vì theo mặc định Vue sẽ chuyển các thuộc tính của `data`/`computed` thành dạng reactive, mà các giá trị này không đổi, dẫn đến thao tác này trở nên dư thừa. Cách giải quyết là sử dụng `$options`.
+
+```js
+<template>
+  <h1>{{ hello }}</h1>
+</template>
+
+<script>
+export default {
+  phone: '1234567',
+  city: 'Saigon',
+  computed: {
+    hello() {
+      return `${this.$options.city} đẹp lắm ${this.$options.city} ơi ${this.$options.city} ơi`
+    }
+  }
+}
+</script>
+```
+
+### Cho rằng dữ liệu không reactive sẽ trở nên reactive
+
+Một ví dụ là khi bạn phải thao tác với cookie trong ứng dụng.
+
+```js
+export default {
+  computed: {
+    token() {
+      return Cookies.get('clientToken')
+    }
+  }
+}
+
+Cookies.set('clientToken', '123456789a')
+```
+
+Cơ chế reactive của Vue rất thông minh, nhưng chưa đủ để nhận biết những thay đổi ngoài tầm kiểm soát như thế này. Do đó bạn buộc phải cập nhật dữ liệu bằng tay.
+
+```js
+export default {
+  data() {
+    return { token: null }
+  },
+  methods: {
+    updateToken() {
+      this.token = Cookies.get('clientToken')
+    }
+  }
+}
+
+Cookies.set('clientToken', '123456789a')
+component.updateToken()
+```
+
+### Lạm dụng mixin
+
+Mixin là một cơ chế để tái sử dụng code, bên cạnh cơ chế kế thừa vốn quen thuộc trong lập trình hướng đối tượng. Mixin có một lợi thế là đối tượng được kế thừa có thể linh hoạt chọn ra những thuộc tính/phương thức mình cần. Tuy nhiên nếu lạm dụng mixin cũng có thể đem đến những kết quả không mong muốn.
+
+```js
+Vue.mixin({
+  data() {
+    return { currentUser: null }
+  },
+  mounted() {
+    MyApi().checkLogin()
+     .then(user => (this.currentUser = user))
+  }
+})
+```
+
+Trong ví dụ trên, chúng ta khai báo một "global mixin", áp dụng cho *tất cả* components trong ứng dụng. Rõ ràng điều này không tốt, vì khi mỗi component được mount sẽ có một request gửi đi. Một cách tốt hơn là khai báo mixin riêng rẽ, sau đó *công khai* sử dụng mixin này.
+
+```js
+const HasCurrentUser = {
+  data() {
+    return { currentUser: null }
+  },
+  mounted() {
+    MyApi().checkLogin()
+     .then(user => (this.currentUser = user))
+  }
+}
+
+const UserDashboard = Vue.extend({
+  mixins: [HasCurrentUser]
+})
+```
+
+Xem thêm về [mixin](https://vi.vuejs.org/v2/guide/mixins.html)
+
+### Không gọi đến `clearInterval`
+
+Nếu bạn phải sử dụng `setInterval` bên trong một component, bạn cần nhớ phải gọi đến `clearInterval` trong `beforeDestroy()`.
+
+```js
+export default {
+  data() {
+    return { ticks: 0 }
+  },
+  methods: {
+    tick() {
+      this.ticks++
+    }
+  },
+  created() {
+    this.$options.interval = setInterval(this.tick, 300)
+  },
+  beforeDestroy() {
+    clearInterval(this.$options.interval)
+  }
+}
+```
+
+Hoặc bạn có thể dùng thư viện [vue-timers](https://github.com/kelin2025/vue-timers).
+
+```js
+export default {
+  data() {
+    return { ticks: 0 }
+  },
+  methods: {
+    tick() {
+      this.ticks++
+    }
+  },
+  timers: {
+    tick: { time: 300, repeat: true }
+  }
+}
+```
+
+### Đụng đến `$parents`
+
+Vue cho phép bạn tương tác đến component cha thông qua thuộc tính `$parents`. Tuy nhiên, trực tiếp thao tác đến `$parents` bị xem là "bad practice", vì không đảm bảo tính "phân tách trọng tâm" ([Separation of Concerns](https://www.wikiwand.com/en/Separation_of_concerns)).
+
+```javascript
+// ĐỪNG, NGỪNG LẠI NGAY
+export default {
+  props: {
+    isSelected: { type: Boolean, required: true }
+  },
+  methods: {
+    toggle() {
+      this.$parents.isSelected = !this.$parents.isSelected
+    }
+  }
+}
+```
+
+Thay vào đó bạn nên dùng events.
+
+```javascript
+export default {
+  props: {
+    value: { type: Boolean, required: true }
+  },
+  methods: {
+    toggle() {
+      this.$emit('input', !this.value)
+    }
+  }
+}
+
+<my-component :value="value" @input="newValue => { value = newValue }" />
+```
+
+Bạn cũng có thể dùng `.sync` để cập nhật thay đổi.
+
+```javascript
+export default {
+  props: [ 'prop1', 'prop2' ],
+  methods: {
+    update() {
+      this.$emit('update:prop1', 1)
+      this.$emit('update:prop2', 2)
+    }
+  }
+}
+
+<my-component :prop1.sync="prop1" :prop2.sync="prop2" />
+```
+
+Xem thêm về [Sự kiện](https://vi.vuejs.org/v2/guide/events.html)
+
+### Kiểm tra dữ liệu trên form bằng tay
+
+Chắc hẳn bạn đã từng kiểm tra dữ liệu người dùng nhập vào một cách "thủ công mỹ nghệ", như ví dụ dưới đây.
+
+```javascript
+export default {
+  data() {
+    return {
+      form: { name: '', price: '' },
+      errors: { name: '', price: '' }
+    }
+  },
+  methods: {
+    submit() {
+      if (this.form.name.length === 0) {
+        this.errors.name = 'Please enter name'
+      } else if (this.forms.price.length === 0) {
+        this.errors.price = 'Please enter price'
+      } else if (/^[0-9]*$/.test(this.form.price)) {
+        this.errors.price = 'Please enter numeric value'
+      } else {
+        sendData(this.form)
+      }
+    }
+  }
+}
+```
+
+Rõ ràng cách làm này rất mệt mỏi, không tái sử dụng code được và làm cho mã nguồn của bạn trở nên rối rắm. Thay vào đó, bạn có thể dùng thư viện [vuelidate](https://github.com/monterail/vuelidate).
+
+```javascript
+import { required, numeric } from 'vuelidate/lib/validators'
+
+export default {
+  data() {
+    return {
+      form: { name: '', price: '' }
+    }
+  },
+  validations: {
+    form: {
+      name: { required },
+      price: { required, numeric }
+    }
+  },
+  methods: {
+    submit() {
+      if (!this.$v.$invalid) {
+        sendData(this.form)
+      }
+    }
+  }
+}
+```
