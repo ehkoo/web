@@ -14,11 +14,11 @@ editor: kcjpop, chubbyanh
 
 Sublime Text 3 là một trong những trình soạn thảo phổ biến nhất hiện nay. So với một số đối thủ như Atom hay VSCode, Sublime chiếm ưu thế hơn hẳn nhờ tốc độ nhanh, giao diện đơn giản, và có đầy đủ các tính năng mạnh mẽ. Để khai thác hết khả năng của Sublime, bạn nên lưu ý một số thủ thuật "nhỏ mà có võ" dưới đây.
 
-Nhắn nhủ: [Package Control](https://packagecontrol.io/) là kho plugin dành riêng Sublime, bạn rất nên sử dụng để quản lý các phần mở rộng dễ dàng hơn. Xem hướng dẫn cài đặt Package Control [ở đây](https://packagecontrol.io/installation)
+Nhắn nhủ: [Package Control](https://packagecontrol.io/) là kho plugin dành riêng Sublime, bạn rất nên sử dụng để quản lý các phần mở rộng dễ dàng hơn.  Để cài đặt Package Control, bạn có thể làm theo [hướng dẫn này](https://packagecontrol.io/installation).
 
 ### Tận dụng các phím tắt
 
-Dùng phím tắt để thực hiện tác vụ luôn nhanh hơn dùng chuột và menu. Bạn không nhất thiết phải học thuộc lòng mọi phím tắt này, mà chỉ cần nhớ là chúng có tồn tại để dễ bề "lục lọi" khi cần.
+Dùng phím tắt để thực hiện tác vụ luôn nhanh hơn dùng chuột hay menu. Bạn không nhất thiết phải học thuộc lòng mọi phím tắt này, mà chỉ cần nhớ là chúng có tồn tại để dễ bề "lục lọi" khi cần.
 
 | **Chung** | |
 | --- | --- |
@@ -85,15 +85,15 @@ Sau khi cài đặt, Sublime hỗ trợ đến hơn 50 ngôn ngữ lập trình.
 
 ### Emmet
 
-Với lập trình viên front-end, [Emmet](https://packagecontrol.io/packages/Emmet) là plugin không thể thiếu rồi. Emmet cho phép bạn viết HTML "nhanh như chảo chớp" bằng cách dùng biểu thức mô tả HTML, sau đó Emmer sẽ mở rộng biểu thức này. Chẳng hạn, khi bạn viết `#content>p.text*5>lorem`, Emmet sẽ đổi thành:
+Với lập trình viên front-end, [Emmet](https://packagecontrol.io/packages/Emmet) là plugin không thể thiếu rồi. Emmet cho phép bạn viết HTML "nhanh như chảo chớp" bằng cách dùng biểu thức mô tả HTML, sau đó Emmer sẽ mở rộng biểu thức này. Chẳng hạn, khi bạn viết `#content>p.text*5>lorem`, Emmet sẽ "úm ba la" thành:
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519453034/emmet_v6sguq.gif)
 
-Không chỉ hỗ trợ làm việc với HTML, Emmet cũng hỗ trợ JSX. Để tìm hiểu thêm về cách viết biểu thức, bạn có thể tham khảo [ở đây](https://docs.emmet.io/).
+Không chỉ hỗ trợ làm việc với HTML, Emmet cũng biểu thức HTML bên trong JSX. Để tìm hiểu thêm về cách viết biểu thức, bạn có thể tham khảo [ở đây](https://docs.emmet.io/).
 
 ### Các gói snippets hữu ích
 
-[JavaScript & NodeJS Snippets](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets), như tên gọi, bao gồm các snippets dành riêng cho JavaScript, giúp bạn gõ một số biểu thức thông dụng nhanh hơn. Ví dụ, thay vì gõ `document.querySelector('selector');`, bạn chỉ cần gõ `qs`, nhấn `Tab`, và Sublime sẽ làm phần việc còn lại giúp bạn. Hoặc `gi` như ví dụ dưới đây.
+[JavaScript & NodeJS Snippets](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets), như tên gọi, bao gồm các snippets dành riêng cho JavaScript, giúp bạn gõ một đoạn mã thông dụng nhanh hơn. Ví dụ, thay vì gõ `document.querySelector('selector');`, bạn chỉ cần gõ `qs`, nhấn `Tab`, và Sublime sẽ làm phần việc còn lại giúp bạn. Hoặc `gi` như ví dụ dưới đây.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519453494/js_xjhiwe.gif)
 
@@ -103,10 +103,12 @@ Nếu thấy Emmet hơi phức tạp, bạn có thể sử dụng một plugin k
 
 Bên cạnh đó, cũng đừng quên những gói snippets khi làm việc với các thư viện/framework, chẳng hạn như [ReactJS Snippets](https://packagecontrol.io/packages/ReactJS%20Snippets), [AngularJS Snippets](https://packagecontrol.io/packages/AngularJS%20Snippets), [VueJS Snippets](https://packagecontrol.io/packages/Vuejs%20Snippets)...
 
+Với CSS, bạn chỉ cần cài [CSS Snippets](https://packagecontrol.io/packages/CSS%20Snippets) là có hỗ trợ CSS, LESS, SASS và Stylus.
+
 ### Định dạng mã nguồn
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519453811/6qtoxbb_j3y6mn.png)
-Bằng cách sử dụng [HTMLBeautify](https://packagecontrol.io/packages/HTMLBeautify), [CSS Format](https://packagecontrol.io/packages/CSS%20Format), và [jsfmt](https://packagecontrol.io/packages/jsfmt), bạn có thể chọn tự động định dạng mã nguồn khi lưu files. Nếu là fan của [Prettier](https://prettier.io/), bạn đừng quên plugin [JsPrettier](https://packagecontrol.io/packages/JsPrettier).
+Bằng cách sử dụng [HTMLBeautify](https://packagecontrol.io/packages/HTMLBeautify), [CSS Format](https://packagecontrol.io/packages/CSS%20Format), [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)  hoặc [jsfmt](https://packagecontrol.io/packages/jsfmt), bạn có thể chọn tự động định dạng mã nguồn khi lưu files. Nếu là fan của [Prettier](https://prettier.io/), bạn đừng quên plugin [JsPrettier](https://packagecontrol.io/packages/JsPrettier).
 
 ### Canh hàng với Alignment
 
@@ -139,7 +141,7 @@ Plugin này giúp bạn sử dụng Git trực tiếp bên trong Sublime, bao g�
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519455495/BxmEwGr_oh5i02.png)
 
-GitGutter đánh dấu từng dòng code của bạn, cho bạn biết trạng thái của mỗi dòng và mang đến một cái nhìn tổng quan về những thay đổi trong tập tin hiện tại.
+GitGutter theo dõi repo ở thư mục hiện tại, cho bạn biết trạng thái của mỗi dòng và mang đến một cái nhìn tổng quan về những thay đổi trong tập tin đang được chỉnh sửa.
 
 [GitHubinator](https://packagecontrol.io/packages/GitHubinator)
 
@@ -156,7 +158,7 @@ Gist cho phép bạn gửi đoạn code được chọn lên dịch vụ [Gist](
 
 ![](https://i.imgur.com/JoWcHAk.png)
 
-Trong quá trình code, bạn có thể sẽ mắc phải một số lỗi như syntax errors... Plugin này sẽ giúp bạn kiểm tra các lỗi đó. Tuy nhiên bạn cũng cần phải cài [plugin riêng](https://packagecontrol.io/search/sublime%20linter) cho từng ngôn ngữ.
+Trong quá trình code, việc mắc phải những lỗi về cú pháp là không thể tránh khỏi. Plugin này cung cấp một nền tảng để các chương trình kiểm tra lỗi, ví dụ như ESLint, có thể được kết hợp vào Sublime. Sau khi cài đặt Sublime Linter, bạn cần cài riêng các gói [riêng cho từng ngôn ngữ](https://packagecontrol.io/search/sublime%20linter).
 
 ### Nâng cấp sidebar
 
@@ -164,7 +166,7 @@ Trong quá trình code, bạn có thể sẽ mắc phải một số lỗi như 
 
 ![](https://i.imgur.com/BIStuRH.png)
 
-Trong sidebar, khi bạn click chuột phải vào folders, files, Sublime text cho bạn một số lựa chọn để thao tác với files, tuy nhiên số lượng rất ít. Sử dụng plugin này, bạn sẽ có thêm khoảng 20 lựa chọn để thao tác với files, bao gồm Open in browser, duplicate...
+Sidebar mặc định của Sublime cung cấp số lựa chọn giới hạn để thao tác với tập tin hay tìm kiếm. Sử dụng plugin này, bạn sẽ có thêm khoảng 20 lựa chọn mới, bao gồm Open in browser, Duplicate, Refresh, Reveal...
 
 ### AdvancedNewFile
 
@@ -184,7 +186,7 @@ Plugin này sẽ cho bạn một hộp thoại nhỏ để chọn màu từ bả
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519462308/Xme7H5J_mjuw0d.gif)
 
-Sử dụng plugin này, bạn có thể nhìn thấy trực quan những màu sắc tương ứng với mỗi giá trị màu như hex, rgba... ngay trong code của bạn.
+Sử dụng plugin này, bạn có thể nhìn thấy trực quan những màu sắc tương ứng với mỗi giá trị màu như HEX, RGBA...ngay trong mã nguồn.
 
 [Ghost​Text](https://packagecontrol.io/packages/GhostText)
 
@@ -197,3 +199,7 @@ Sử dụng plugin này, bạn có thể nhìn thấy trực quan những màu s
 ![](https://i.imgur.com/DnpCcWX.png)
 
 Sử dụng plugin này, bạn có thể chèn thêm emoji từ Command palette.
+
+### Kết
+
+Với những plugin được giới thiệu ở đây, Ehkoo mong là sẽ giúp bạn nâng cao hiệu suất làm việc trong Sublime Text. Nếu bạn biết plugin nào hay ho, đừng quên để lại comment để mọi người biết nhé.
