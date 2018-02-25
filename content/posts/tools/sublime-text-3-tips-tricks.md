@@ -12,11 +12,11 @@ editor: kcjpop, chubbyanh
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519462144/img_qtzogc.jpg)
 
-Sublime Text 3 là một trong những trình soạn thảo phổ biến nhất hiện nay. So với một số đối thủ như Atom hay VSCode, Sublime chiếm ưu thế hơn hẳn nhờ tốc độ nhanh, giao diện đơn giản, và có đầy đủ các tính năng mạnh mẽ. Để khai thác hết khả năng của Sublime, bạn nên lưu ý một số thủ thuật "nhỏ mà có võ" dưới đây.
+Sublime Text 3 là một trong những trình soạn thảo phổ biến nhất hiện nay. So với các đối thủ như Atom hay VSCode, Sublime chiếm ưu thế hơn hẳn nhờ tốc độ nhanh, giao diện đơn giản, và có đầy đủ các tính năng mạnh mẽ. Để khai thác hết khả năng của Sublime, bạn nên lưu ý một số thủ thuật "nhỏ mà có võ" dưới đây.
 
 Nhắn nhủ: [Package Control](https://packagecontrol.io/) là kho plugin dành riêng Sublime, bạn rất nên sử dụng để quản lý các phần mở rộng dễ dàng hơn.  Để cài đặt Package Control, bạn có thể làm theo [hướng dẫn này](https://packagecontrol.io/installation).
 
-### Tận dụng các phím tắt
+### Tận dụng phím tắt
 
 Dùng phím tắt để thực hiện tác vụ luôn nhanh hơn dùng chuột hay menu. Bạn không nhất thiết phải học thuộc lòng mọi phím tắt này, mà chỉ cần nhớ là chúng có tồn tại để dễ bề "lục lọi" khi cần.
 
@@ -202,4 +202,4 @@ Sử dụng plugin này, bạn có thể chèn thêm emoji từ Command palette.
 
 ### Kết
 
-Với những plugin được giới thiệu ở đây, Ehkoo mong là sẽ giúp bạn nâng cao hiệu suất làm việc trong Sublime Text. Nếu bạn biết plugin nào hay ho, đừng quên để lại comment để mọi người biết nhé.
+Với những plugin được giới thiệu ở đây, Ehkoo mong là sẽ giúp bạn nâng cao hiệu suất làm việc trong Sublime Text. Nếu bạn biết plugin nào hay ho, hãy chia sẻ ở phần bình luận phía dưới nhé!
