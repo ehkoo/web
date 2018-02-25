@@ -5,14 +5,14 @@ slug: sublime-text-3-tips-tricks
 date: 2018-02-23
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1519462144/img_qtzogc.jpg
 tags: Thủ thuật, Sublime Text 3, Text Editor
-excerpt: Sublime Text 3 vượt trội hơn các trình soạn thảo khác nhờ tốc độ nhanh và kho plugin hữu ích. Những thủ thuật "nhỏ mà có võ" dưới đây sẽ giúp bạn khai thác tối đa các tiện ích của Sublime.
+excerpt: Sublime Text 3 vượt trội hơn các trình soạn thảo khác nhờ tốc độ nhanh và kho plugin hữu ích. Những thủ thuật "nhỏ mà có võ" dưới đây sẽ giúp bạn khai thác tối đa tiện ích của Sublime.
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519462144/img_qtzogc.jpg)
 
-Sublime Text 3 là một trong những trình soạn thảo phổ biến nhất hiện nay. So với các đối thủ như Atom hay VSCode, Sublime chiếm ưu thế hơn hẳn nhờ tốc độ nhanh, giao diện đơn giản, và có đầy đủ các tính năng mạnh mẽ. Để khai thác hết khả năng của Sublime, bạn nên lưu ý một số thủ thuật "nhỏ mà có võ" dưới đây.
+Sublime Text 3 là một trong những trình soạn thảo phổ biến nhất hiện nay. So với Atom hay VSCode, Sublime chiếm ưu thế hơn hẳn nhờ tốc độ nhanh, giao diện đơn giản, và có đầy đủ các tính năng mạnh mẽ. Để khai thác hết khả năng của Sublime, bạn nên lưu ý một số thủ thuật "nhỏ mà có võ" dưới đây.
 
 Nhắn nhủ: [Package Control](https://packagecontrol.io/) là kho plugin dành riêng Sublime, bạn rất nên sử dụng để quản lý các phần mở rộng dễ dàng hơn.  Để cài đặt Package Control, bạn có thể làm theo [hướng dẫn này](https://packagecontrol.io/installation).
 
