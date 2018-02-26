@@ -31,7 +31,7 @@ Tôi thực sự rất, rất thích lập trình. Trong 4 năm trở lại đâ
 Còn để kể lể dông dài, có lẽ nên bắt đầu từ...
 
 ### 1. Lí do tại sao tôi bỏ học ở trường.
-Từ nhỏ, tôi đã cực kì hứng thú với máy tính. Năm 8 hay 9 tuổi, tôi học một chút BASIC và đã dùng nó để để viết những chương trình như thế này trên chiếc máy tính Apple IIe ở trường.
+Từ nhỏ, tôi đã cực kì hứng thú với máy tính. Năm 8 hay 9 tuổi, tôi học một chút BASIC và đã dùng nó để viết những chương trình như thế này trên chiếc máy tính Apple IIe ở trường.
 
 ```
 10 PRINT "HACKING "
