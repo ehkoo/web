@@ -2,7 +2,7 @@
 layout: post.njk
 title: "Những sai lầm người mới học Vue cần tránh"
 slug: nhung-sai-lam-nguoi-moi-hoc-vue-can-tranh
-date: 2018-03-17
+date: 2018-03-03
 tags: Vue, VueJS
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png
 excerpt: "Vue rất dễ học, dễ làm nhưng cũng có những điểm cần lưu ý, dù cho bạn là lập trình viên lâu năm hay tay mơ mới vào nghề."
