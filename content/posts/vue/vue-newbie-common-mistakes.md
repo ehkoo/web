@@ -1,8 +1,8 @@
 ---
 layout: post.njk
-title: "7 sai lầm nguy hiểm người mới học Vue cần tránh"
-slug: vue-newbie-common-mistakes
-date: 2018-02-20
+title: "Những sai lầm người mới học Vue cần tránh"
+slug: nhung-sai-lam-nguoi-moi-hoc-vue-can-tranh
+date: 2018-03-17
 tags: Vue, VueJS
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png
 excerpt: "Vue rất dễ học, dễ làm nhưng cũng có những điểm cần lưu ý, dù cho bạn là lập trình viên lâu năm hay tay mơ mới vào nghề."
@@ -10,9 +10,29 @@ author: kcjpop
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png)
 
-2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi sự gọn nhẹ mà vẫn có đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học so với các framework khác, chẳng hạn như React hay Angular.
+2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi sự gọn nhẹ mà vẫn có đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học hơn React hay Angular.
 
-Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề, lẫn dân lập trình kì cựu đều nên cẩn thận một số “tử huyệt” sau đây, kẻo gặp phải hậu quả đáng tiếc về sau.
+Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề, lẫn dân lập trình kì cựu đều nên cẩn thận một số “tử huyệt” sau đây.
+
+### Dùng camelCase cho thuộc tính của thẻ HTML
+
+Theo chuẩn của W3C, các thuộc tính của một thẻ HTML không phân biệt ký tự hoa thường. Nghĩa là `<IMG SRC="#" AL="" />` và `<img src="" alt="">` hay `<iMg sRC="" alT="" />` (má ơi) đều như nhau. Trong Vue, khi bạn khai báo thuộc tính `:myProp="123"`, Vue sẽ tự match thành `:myprop="123"`. Do đó, để có thể sử dụng camelCase bên trong component, bạn phải dùng kebab-case như ví dụ sau:
+
+```js
+export default {
+  name: 'my-component',
+  props: {
+    myProp: { required: true }
+  },
+  computed: {
+    title() {
+      return this.myProp.toUpperCase()
+    }
+  }
+}
+
+<my-component :my-prop="Hello World" />
+```
 
 ### Không dùng `data` như một hàm
 
@@ -117,7 +137,7 @@ component.updateToken()
 
 ### Lạm dụng mixin
 
-Mixin là một cơ chế để tái sử dụng code, bên cạnh cơ chế kế thừa vốn quen thuộc trong lập trình hướng đối tượng. Mixin có một lợi thế là đối tượng được kế thừa có thể linh hoạt chọn ra những thuộc tính/phương thức mình cần. Tuy nhiên nếu lạm dụng mixin cũng có thể đem đến những kết quả không mong muốn.
+Mixin là một cơ chế để tái sử dụng code, bên cạnh cơ chế kế thừa vốn quen thuộc trong lập trình hướng đối tượng. Mixin có một lợi thế là đối tượng được kế thừa có thể linh hoạt chọn ra những thuộc tính/phương thức cần thiết. Tuy nhiên nếu lạm dụng mixin cũng có thể đem đến những kết quả không mong muốn.
 
 ```js
 Vue.mixin({
@@ -194,7 +214,7 @@ export default {
 
 ### Đụng đến `$parents`
 
-Vue cho phép bạn tương tác đến component cha thông qua thuộc tính `$parents`. Tuy nhiên, trực tiếp thao tác đến `$parents` bị xem là "bad practice", vì không đảm bảo tính "phân tách trọng tâm" ([Separation of Concerns](https://www.wikiwand.com/en/Separation_of_concerns)).
+Vue cho phép bạn tương tác đến component cha thông qua thuộc tính `$parents`. Tuy nhiên, trực tiếp thao tác đến `$parents` bị xem là "bad practice", vì không đảm bảo tính chất "phân tách trọng tâm" ([Separation of Concerns](https://www.wikiwand.com/en/Separation_of_concerns)).
 
 ```javascript
 // ĐỪNG, NGỪNG LẠI NGAY
@@ -299,3 +319,7 @@ export default {
   }
 }
 ```
+
+### Kết
+
+Những điểm lưu ý được đề cập ở đây là những sai lầm mà người mới học Vue hay mắc phải. Nếu bạn có gặp những trường hợp "ủa sao lạ vậy nè?" khi mới bắt đầu với Vue, đừng quên chia sẻ trong phần bình luận ở dưới nhé.
