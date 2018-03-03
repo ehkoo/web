@@ -83,11 +83,13 @@ component.city
 
 Vì theo mặc định Vue sẽ chuyển các thuộc tính của `data`/`computed` thành dạng reactive, mà các giá trị này không đổi, dẫn đến thao tác này trở nên dư thừa. Cách giải quyết là sử dụng `$options`.
 
-```js
+```html
 <template>
   <h1>{{ hello }}</h1>
 </template>
+```
 
+```js
 <script>
 export default {
   phone: '1234567',

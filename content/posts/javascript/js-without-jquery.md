@@ -213,8 +213,6 @@ $(el).fadeIn()
 
 Với sự hỗ trợ của CSS animation, chúng ta có thể đạt được hiệu quả tương tự.
 
-CSS
-
 ```css
 @keyframes fadeIn {
   from { opacity:0; }
@@ -225,8 +223,6 @@ CSS
   animation: fadeIn ease-in 1s;
 }
 ```
-
-JS
 
 ```js
 document.getElementById('el').classList.add('fadeIn')
