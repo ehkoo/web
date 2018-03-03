@@ -325,6 +325,10 @@ svg {
     height: 16rem;
   }
 
+  .home-grid .home-grid__article:nth-child(4) {
+    grid-column-end: span 2;
+  }
+
   .home-grid .home-grid__series {
     grid-column-start: 4;
     grid-row: 1 / span 2;
