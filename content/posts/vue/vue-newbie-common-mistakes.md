@@ -10,9 +10,9 @@ author: kcjpop
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png)
 
-2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi sự gọn nhẹ mà vẫn có đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học hơn React hay Angular.
+2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi sự gọn nhẹ nhưng vẫn đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học hơn React hay Angular.
 
-Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề, lẫn dân lập trình kì cựu đều nên cẩn thận một số “tử huyệt” sau đây.
+Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề lẫn dân lập trình kì cựu đều nên cẩn thận một số “tử huyệt” sau đây.
 
 ### Dùng camelCase cho thuộc tính của thẻ HTML
 
