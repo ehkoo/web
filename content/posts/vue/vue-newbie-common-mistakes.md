@@ -325,3 +325,8 @@ export default {
 ### Kết
 
 Những điểm lưu ý được đề cập ở đây là những sai lầm mà người mới học Vue hay mắc phải. Nếu bạn có gặp những trường hợp "ủa sao lạ vậy nè?" khi mới bắt đầu với Vue, đừng quên chia sẻ trong phần bình luận ở dưới nhé.
+
+**Tham khảo**
+
+- _How not to Vue -- Anton Kosykh_ [https://itnext.io/how-not-to-vue-18f16fe620b5](https://itnext.io/how-not-to-vue-18f16fe620b5)
+- _Common Beginner Gotchas_ [https://vuejs.org/2016/02/06/common-gotchas/](https://vuejs.org/2016/02/06/common-gotchas/)
