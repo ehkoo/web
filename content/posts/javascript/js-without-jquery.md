@@ -5,15 +5,15 @@ slug: co-the-ban-khong-can-jquery
 date: 2018-03-05
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1520068065/jquery_fbntr4.jpg
 tags: JavaScript, jQuery, Dành cho người mới
-excerpt: "Năm nay đã là 2018, liệu jQuery có còn là công cụ cần thiết trong các dự án front-end?"
+excerpt: "Năm nay đã là 2018, liệu jQuery có còn cần thiết trong các dự án front-end?"
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1520068065/jquery_fbntr4.jpg)
 
-jQuery là một trong những framework được yêu thích và sử dụng bởi phần lớn các lập trình viên front-end. jQuery cung cấp các hàm và phương thức giúp đơn giản hóa các tác vụ thường gặp trong quá trình viết web. Giờ đây, khi các trình duyệt ngày càng được phát triển và hỗ trợ nhiều tính năng hơn, chúng ta có thể thay thế những tác vụ của jQuery bằng các phương thức mặc định.
+jQuery là một trong những framework được yêu thích và sử dụng bởi phần lớn lập trình viên front-end. jQuery cung cấp hàm và phương thức giúp đơn giản hóa tác vụ thường gặp trong quá trình viết web. Giờ đây, khi các trình duyệt ngày càng được phát triển và hỗ trợ nhiều tính năng hơn, chúng ta có thể thay thế những tác vụ của jQuery bằng các phương thức mặc định.
 
-Điều này đem đến những lợi ích như:
+Điều này đem đến nhiều lợi ích như:
 
 * Không phụ thuộc vào jQuery, đồng thời người dùng không cần phải download thêm thư viện
 * Được trình duyệt tối ưu, có khả năng tăng hiệu suất (dù chỉ là chút xíu)
@@ -235,7 +235,7 @@ Bạn cũng có thể dùng sẵn thư viện [animate.css](https://daneden.gith
 
 ### Ẩn/hiện elements
 
-Ẩn/hiện elements là một trong những tác vụ phổ biến, và jQuery làm điều này trong vòng 1 nốt nhạc:
+Ẩn/hiện elements là một trong những tác vụ phổ biến, và jQuery làm điều này trong vòng một nốt nhạc:
 
 ```js
 // Hiding element
@@ -273,7 +273,7 @@ Tuy nhiên bạn cũng có thể nhận thấy cách làm trên hoàn toàn khô
 
 ### Kết luận
 
-Bạn có nên từ bỏ jQuery không? Câu trả lời là...hên xui. Nếu dự án của bạn đang dùng một thư viện ngoài phụ thuộc vào jQuery, chẳng hạn như FancyBox, và việc thay đổi có thể đòi hỏi nhiều thời gian để hoàn thành, thì câu trả lời là không nên. Nhưng nếu bạn chọn một thư viện mới thì nên ưu tiên những giải pháp không cần jQuery.
+Bạn có nên từ bỏ jQuery không? Câu trả lời là... hên xui. Nếu dự án của bạn đang dùng một thư viện ngoài phụ thuộc vào jQuery, chẳng hạn như FancyBox, và việc thay đổi có thể đòi hỏi nhiều thời gian để hoàn thành, thì câu trả lời là không nên. Nhưng nếu bạn chọn một thư viện mới thì nên ưu tiên những giải pháp không cần jQuery.
 
 Tặng bạn một mẩu truyện vui "lụm trên mạng".
 
