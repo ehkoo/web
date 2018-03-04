@@ -10,9 +10,9 @@ author: kcjpop
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519195814/pirate_degmn3.png)
 
-2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi sự gọn nhẹ nhưng vẫn đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học hơn React hay Angular.
+2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi dung lượng gọn nhẹ nhưng vẫn đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học hơn React hay Angular.
 
-Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề lẫn dân lập trình kì cựu đều nên cẩn thận một số “tử huyệt” sau đây.
+Tuy nhiên, nếu mới học Vue thì cả người mới vào nghề lẫn dân lập trình kì cựu đều nên cẩn thận để không mắc phải một số sai lầm không đáng có sau đây.
 
 ### Dùng camelCase cho thuộc tính của thẻ HTML
 
@@ -59,6 +59,48 @@ const FormAddNewProduct = {
 Lý do là `FormAddNewProduct` ở trên có thể được khởi tạo nhiều lần. Nếu chúng ta dùng object cho `data`, tham chiếu (reference) của object này sẽ được chia sẻ cho tất cả `FormAddNewProduct` được khởi tạo. Điều này có thể dẫn đến những kết quả không mong muốn, chẳng hạn như lẫn lộn state. Bằng cách dùng hàm cho `data`, mỗi đối tượng của `FormAddNewProduct` sẽ có một giá trị khởi động tách biệt.
 
 Xem thêm: [`data` phải là một hàm](https://vi.vuejs.org/v2/guide/components.html#data-phai-la-mot-ham)
+
+### Dùng hàm mũi tên không đúng chỗ
+
+Khi viết component cho Vue, có thể bạn cảm thấy một thôi thúc để sử dụng hàm mũi tên, như ví dụ dưới đây.
+
+```js
+export default {
+  props: {
+    value: { required: true, type: Number }
+  },
+  data: () => {
+    const amount = this.value * 100
+    return { amount }
+  },
+  methods: {
+    increase: () => (this.amount = this.amount + 500)
+  }
+}
+```
+
+Nhưng theo khuyến cáo của Vue, bạn không nên dùng hàm mũi tên cho `data`, vì đơn giản, giá trị `this` bên trong hàm mũi tên sẽ là `this` trong tầm vực gần nó nhất. Điều này ảnh hưởng tới lý thuyết của Vue, vì `this` bên trong một component là một Vue instance. Cách đơn giản nhất để giải quyết là dùng cú pháp khai báo hàm cho thuộc tính của object.
+
+```js
+export default {
+  props: {
+    value: { required: true, type: Number }
+  },
+  data() {
+    const amount = this.value * 100
+    return { amount }
+  },
+  methods: {
+    increase() {
+      this.amount = this.amount + 500
+    }
+  }
+}
+```
+
+Điều này cũng áp dụng khi khai báo `computed` hay `methods`.
+
+Xem thêm [về hàm mũi tên](https://ehkoo.com/bai-viet/tong-hop-tinh-nang-noi-bat-es6).
 
 ### Dùng giá trị không đổi trong `data/computed`
 
