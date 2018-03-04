@@ -260,7 +260,7 @@ el.style.display = 'block'
 Thao tác với DOM rất dễ dàng khi sử dụng jQuery. Ví dụ khi bạn muốn chèn thêm một phần tử `<p>` vào `#container`:
 
 ```js
-$('#container').append('<p>more content</p>)
+$('#container').append('<p>more content</p>')
 ```
 
 Vanilla JS cũng có thể làm điều này một cách dễ dàng:
