@@ -13,7 +13,11 @@
   },
   "watch": {
     "build:dev": {
-      "patterns": ["content/**/*", "assets/**/*", "layouts/**/*"],
+      "patterns": [
+        "content/**/*",
+        "assets/**/*",
+        "layouts/**/*"
+      ],
       "extensions": "md,css,njk,js,json"
     }
   },
@@ -31,22 +35,24 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "http-server": "^0.10.0",
+    "lodash": "^4.17.5",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.9.0",
-    "metalsmith-date-formatter": "^1.0.2",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-headings-identifier": "0.0.11",
     "metalsmith-html-minifier": "^2.4.5",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-markdown-remarkable": "^0.1.1",
-    "metalsmith-permalinks": "^0.5.0",
     "metalsmith-serve": "0.0.7",
     "metalsmith-static": "0.0.5",
     "metalsmith-tags": "^2.0.0",
     "metalsmith-watch": "^1.0.3",
     "metalsmith-word-count": "0.0.4",
+    "moment": "^2.21.0",
     "npm-watch": "^0.3.0",
     "nunjucks": "^3.0.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "slug-component": "^1.1.0",
+    "substitute": "https://github.com/segmentio/substitute/archive/0.0.1.tar.gz"
   }
 }
