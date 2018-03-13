@@ -65,7 +65,7 @@ Bạn sẽ làm nhanh hơn nhiều nếu chịu lược bỏ những công việ
 
 Như thế nào là _những công việc không cần thiết_? Hmm, cái này cũng tùy trường hợp, tùy quan niệm của mỗi người. Nhưng đại khái là những thứ đã có sẵn, mà bạn cặm cụi đi làm lại từ đầu chẳng hạn. Hoặc những việc không phải trọng tâm, không giúp nâng cao kĩ năng của bạn.
 
-Ví dụ, với tôi thì những việc “không đáng” là: _cú pháp ngôn ngữ, API của các thư viện, cách cấu hình các công cụ build_. Theo tôi, học cú pháp của ES7 không giúp ích nhiều cho chuyên môn lập trình -- so với chuyện màu mò học cách các trình biên dịch làm việc. Hoặc, học cách dùng một thư viện mới được xây dựng trên một ý tưởng cũ cũng không đáng để bỏ công.
+Ví dụ, với tôi thì những việc “không đáng” là: _cú pháp ngôn ngữ, API của các thư viện, cách cấu hình các công cụ build_. Theo tôi, học cú pháp của ES7 không giúp ích nhiều cho chuyên môn lập trình -- so với chuyện mày mò học cách các trình biên dịch làm việc. Hoặc, học cách dùng một thư viện mới được xây dựng trên một ý tưởng cũ cũng không đáng để bỏ công.
 
 Cũng đừng dành hầu hết thời gian chỉ để tỉa tót code sao cho đẹp. Tôi nói thật, code của bạn rồi sẽ thay đổi theo thời gian. Tốt hơn là hãy dành thời gian đó để suy nghĩ về những vấn đề cốt lõi cần giải quyết, và suy nghĩ thật kĩ về các mức độ trừu tượng trong mã nguồn. Khi nào “chiến” xong hết đám này thì bạn bỏ chút thời gian ra để trau chuốt code cho xinh đẹp hơn cũng ok.
 
