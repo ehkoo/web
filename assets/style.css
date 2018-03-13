@@ -140,6 +140,12 @@ svg {
   content: attr(alt) ': ';
 }
 
+.content img + br + em {
+  display: block;
+  text-align: center;
+  font-size: 0.875em;
+}
+
 .content .bn {
   border: none;
 }
@@ -325,10 +331,6 @@ svg {
 
   .home-grid .home-grid__article:nth-child(1) .home-grid__cover {
     height: 16rem;
-  }
-
-  .home-grid .home-grid__article:nth-child(4) {
-    grid-column-end: span 2;
   }
 
   .home-grid .home-grid__series {
