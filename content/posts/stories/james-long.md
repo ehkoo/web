@@ -46,7 +46,7 @@ Nhưng theo tôi thấy, chính các “lính mới” lại hay có những ý 
 
 Cho nên, hãy luôn vững tin rằng những việc bạn làm là đáng giá. Kể cả, nếu như ý tưởng thất bại, thì có sao? Cộng đồng hoàn toàn có thể học hỏi từ đó, ví dụ: tại sao hướng tiếp cận như vậy là không phù hợp.
 
-(Một lưu ý cho cộng đồng: chúng ta nên tiếp nhận vấn đề theo hướng này, và chào đón những “người mới”.)
+_(Một lưu ý cho cộng đồng: chúng ta nên tiếp nhận vấn đề theo hướng này, và chào đón những “người mới”.)_
 
 ### 3. Đừng lúc nào cũng cắm đầu cắm cổ làm việc.
 
