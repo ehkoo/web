@@ -6,7 +6,7 @@ date: 2018-03-12
 tags: Kinh nghiệm, Nhân vật, James Long, Prettier
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1520938084/Untitled_ufgjyd.jpg
 translation: https://jlongster.com/How-I-Became-Better-Programmer
-excerpt: "Prettier có lẽ là thư viện không còn xa lạ trong cộng đồng JavaScript. Hãy cùng nghe tác giả của nó, anh James Long, chia sẻ những kinh nghiệm để trở thành lập trình viên pro hơn."
+excerpt: "Làm thế nào để trình code ngày càng pro? Để luôn yêu nghề? Đọc ngay chia sẻ của anh James Long, tác giả thư viện Prettier nổi danh trong cộng đồng JavaScript!"
 author: chubbyanh
 editor: kcjpop
 ---
