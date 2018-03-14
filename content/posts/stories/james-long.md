@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: Chia sẻ của tác giả Prettier về cách để code ngày một tốt hơn
+title: Tác giả của Prettier chia sẻ cách để code ngày một tốt hơn
 slug: james-long-prettier-better-programmer
 date: 2018-03-12
 tags: Kinh nghiệm, Nhân vật, James Long, Prettier
