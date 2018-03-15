@@ -10,7 +10,7 @@ excerpt: "Làm thế nào để trình code ngày càng pro? Để luôn yêu ng
 author: chubbyanh
 editor: kcjpop
 ---
->Biển học không bến bờ, ngành lập trình có quá nhiều nhân tài, công nghệ mới thì xuất hiện liên tục không ngơi nghỉ. Có lúc nào bạn thấy “ngợp” và thoáng tự ti về bản thân? Cứ còng lưng code dạo như vầy thì mấy đời nữa mới thành Mr. Robot? Làm thế nào để tránh tình cảnh một ngày nọ, sau vài năm OT miệt mài, bạn tỉnh dậy buổi sáng và chợt muốn lật bàn đập máy tính giải nghệ luôn cho rồi?
+>Biển học không bến bờ, ngành lập trình có quá nhiều nhân tài, công nghệ mới thì xuất hiện liên tục không ngơi nghỉ. Có lúc nào bạn thấy “ngợp” và thoáng tự ti về bản thân? Cứ còng lưng code dạo như vầy thì mấy đời nữa mới thành [Mr. Robot](http://www.imdb.com/title/tt4158110/)? Làm thế nào để tránh tình cảnh một ngày nọ, sau vài năm OT miệt mài, bạn tỉnh dậy buổi sáng và chợt muốn lật bàn đập máy tính giải nghệ luôn cho rồi?
 >
 >Sau đây là những chia sẻ gan ruột của James Long, cựu lập trình viên Mozilla, tác giả của công cụ Prettier rất nổi tiếng trong cộng đồng JavaScript, đồng thời là nhà sáng lập [Shift Reset LLC](http://shiftreset.co/), giúp bạn:
 > * Nuôi dưỡng tình yêu dài lâu với công việc lập trình (_phải dồi_, yêu _con_ hay _cái_ gì, đều phải bỏ công ra nuôi thì mới bền).
