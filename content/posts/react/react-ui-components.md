@@ -8,7 +8,7 @@ tags: React, JavaScript, UI, UX
 excerpt: Không cần đến designer bạn vẫn có thể xây dựng ứng dụng React với giao diện chuyên nghiệp, UX hợp lý. Bằng cách nào ư? Nhờ vào sử dụng các thư viện UI mà Ehkoo giới thiệu ngay đây.
 author: kcjpop
 ---
-React căn bản là một thư viện giúp xây dựng giao diện người dùng trong ứng dụng web. Nhờ vào khả năng chia nhỏ tính năng thành từng component, React giúp cho việc xây dựng các thành phần giao diện trở nên độc lập, dễ chia sẻ và sử dụng hơn. Bên cạnh đó, cộng đồng React cũng phát triển một số thư viện UI độc lập, giúp bạn có thể nhanh chóng cài đặt vào dự án mà không cần phải dựa vào một đội thiết kế riêng. Điều này đặc biệt phù hợp với những dự án nhỏ với ngân sách giới hạn.
+React căn bản là một thư viện giúp xây dựng giao diện người dùng trong ứng dụng web. Nhờ vào khả năng chia nhỏ tính năng thành từng component, React giúp cho việc xây dựng các thành phần giao diện trở nên độc lập, dễ chia sẻ và sử dụng hơn. Bên cạnh đó, cộng đồng React cũng phát triển một số thư viện UI độc lập, giúp bạn có thể nhanh chóng cài đặt vào dự án mà không cần phải dựa vào một đội thiết kế riêng. Điều này đặc biệt phù hợp với những dự án nhỏ có ngân sách giới hạn.
 
 Ehkoo tổng hợp cho bạn 10+ thư viện UI component dành riêng cho React nhé.
 
@@ -24,7 +24,7 @@ Hiện tại Material-UI đang ở phiên bản 0.20.0, và [phiên bản 1.0.0]
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521302273/mcddfulbhknwx1efjsuo.png)
 
-Cũng dựa vào chuẩn Material Design của Google, như [React Toolbox](http://react-toolbox.io/#/) lại sử dụng CSS Modules, Webpack và ES6 để xây dựng các components. Điều này giúp cho React Toolbox có thể kết hợp dễ dàng trong các dự án sử dụng Webpack, tận dụng được lợi thế của công cụ này, chẳng hạn như tính năng "rung cây" tree-shaking.
+Cũng dựa vào chuẩn Material Design của Google, nhưng [React Toolbox](http://react-toolbox.io/#/) lại sử dụng CSS Modules, Webpack và ES6 để xây dựng các components. Điều này giúp cho React Toolbox có thể kết hợp dễ dàng trong các dự án sử dụng Webpack, tận dụng được lợi thế của công cụ này, chẳng hạn như tính năng "rung cây" tree-shaking.
 
 So với Material-UI, React Toolbox không thua kém về số lượng components. Hiện dự án này đã có hơn 7.7k star trên Github.
 
@@ -51,13 +51,13 @@ So với Material-UI, React Toolbox không thua kém về số lượng componen
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521303541/undefined_h1vcph.png)
 
-[Grommet](http://grommet.io/) là thư viện components cho React, sử dụng nền tảng [Inuit](https://github.com/inuitcss/inuitcss) để quản lý CSS. Grommet ban đầu được xây dựng bởi 4 nhân viên của hãng Hewlett Packard, nhờ vào đó các kinh nghiệm UX khi phát triển ứng dụng doanh nghiệp được sử dụng triệt để ở đây. Xem ra lời tự nhận là nền tảng UX tiên tiến nhất không phải là không có cơ sở.
+[Grommet](http://grommet.io/) là thư viện components cho React, sử dụng nền tảng [Inuit](https://github.com/inuitcss/inuitcss) để quản lý CSS. Grommet ban đầu được xây dựng bởi 4 nhân viên của hãng Hewlett Packard, nhờ vào đó các kinh nghiệm UX khi phát triển ứng dụng doanh nghiệp được sử dụng triệt để ở đây. Xem ra lời tự nhận là nền tảng UX tiên tiến nhất không phải không có cơ sở.
 
 ### Ant Design of React
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521304531/amk6hu7xjbsmpqqd8wsk.png)
 
-[Ant](https://ant.design/docs/react/introduce) là tập hợp các components của React được xây dựng theo [chuẩn thiết kế](https://ant.design/docs/spec/introduce) của Ant UED Team. Tương tự như chuẩn Material Design, Ant cung cấp hầu hết các component thông dụng trong ứng dụng web hiện đại, như Layout, Button, Icon, DatePicket, v.v...Bên cạnh đó Ant cũng có những component riêng thú vị, như LocaleProvider cho phép bạn thay đổi ngôn ngữ trên toàn ứng dụng.
+[Ant](https://ant.design/docs/react/introduce) là tập hợp các components của React được xây dựng theo [chuẩn thiết kế](https://ant.design/docs/spec/introduce) của Ant UED Team. Tương tự như chuẩn Material Design, Ant cung cấp hầu hết các component thông dụng trong ứng dụng web hiện đại, như Layout, Button, Icon, DatePicket, v.v... Bên cạnh đó Ant cũng có những component riêng thú vị, ví dụ như LocaleProvider cho phép bạn thay đổi ngôn ngữ trên toàn ứng dụng.
 
 Ant hiện đang có hơn 25k star trên Github.
 
@@ -81,4 +81,4 @@ Ant hiện đang có hơn 25k star trên Github.
 
 ### Kết
 
-Trên đây là tập hợp những thư viện UI components dành riêng cho React mà Ehkoo biết được. Bạn có đang dùng thư viện nào hay ho hấp dẫn mà Ehkoo không đề cập không? Hãy để lại comment chia sẻ bên dưới nhé.
+Trên đây là tập hợp những thư viện UI components dành riêng cho React mà Ehkoo biết. Bạn đang dùng thư viện hay ho hấp dẫn nào khác mà Ehkoo chưa đề cập đến? Hãy để lại comment chia sẻ bên dưới nhé!
