@@ -87,12 +87,28 @@ Ant hiện đang có hơn 25k star trên Github.
 
 ### Ring UI
 
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521534889/JetBrains_Drive_to_develop_vvjkex.png)
+
 [Ring UI](https://jetbrains.org/ring-ui/index.html) ([Github](https://github.com/JetBrains/ring-ui)) là UI framework được xây dựng bởi JetBrains, công ty đằng sau các editor đình đám như IntelliJ IDEA, WebStorm, hay PhpStorm. Ring UI tập hợp gần 50 components thông dụng trong các ứng dụng web.
 
 ### Gestalt
 
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521535052/pinterest-google-chrome_qwlf7m.jpg)
+
 [Gestalt](https://pinterest.github.io/gestalt/) ([Github](https://github.com/pinterest/gestalt)) là tập hợp các components được xây dựng theo chuẩn thiết kế của Pinterest. Mặc dù số lượng components không nhiều như các thư viện khác nhưng cũng đáng để bạn xem qua.
+
+_h/t anh Son-Tran Nguyen_
+
+### Design System
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521539740/axxn5j0no6azvy6qwcpr.png)
+
+[Design System](http://design-system.pluralsight.com/) ([Github](https://github.com/pluralsight/design-system)) được thiết kế và sử dụng cho các sản phẩm của công ty Pluralsight. So với các UI framework khác thì số lượng component của Design System không nhiều lắm, nhưng được thiết kế rất tinh tế và chuyên nghiệp, có thể đáp ứng hầu hết yêu cầu của các dự án.
+
+_h/t anh Nguyễn Xuân Hải_
 
 ### Kết
 
-Trên đây là tập hợp những thư viện UI components dành riêng cho React mà Ehkoo biết. Bạn đang dùng thư viện hay ho hấp dẫn nào khác mà Ehkoo chưa đề cập đến? Hãy để lại comment chia sẻ bên dưới nhé!
+Trên đây là tập hợp những thư viện UI components dành riêng cho React mà Ehkoo biết. Bạn cũng có thể truy cập trang [Adele](https://adele.uxpin.com/) để xem tổng hợp các hệ thống thiết kế khác.
+
+À, bạn có đang dùng thư viện hay ho hấp dẫn nào khác mà Ehkoo chưa đề cập đến không? Hãy để lại comment chia sẻ bên dưới nhé!
