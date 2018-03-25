@@ -5,18 +5,18 @@ slug: map-set-javascript-es6-es2015
 date: 2018-03-25
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1521964972/Hanoi-01_1250_tqa22l.png
 tags: JavaScript, Map, Set, WeakMap, WeakSet, ES2015, ES6
-excerpt: "ES6 giới thiệu 2 cấu trúc dữ liệu mới: `Map` và `Set`. Hãy cùng Ehkoo tìm hiểu cách thức hoạt động, cũng như ứng dụng của chúng."
+excerpt: "ES6 vừa trình làng 2 cấu trúc dữ liệu mới: `Map` và `Set`, nghe đồn là nhanh hơn, được hỗ trợ tốt hơn bởi trình duyệt. Hãy cùng Ehkoo tìm hiểu cách thức hoạt động cũng như ứng dụng của chúng nhé!"
 author: kcjpop
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521964972/Hanoi-01_1250_tqa22l.png)
 _Hà Nội -- minh họa bởi [Jing Zhang](http://mazakii.com/Portfolio/Maps-of-Asia)_
 
-Được giới thiệu từ ES6, `Map`, `Set`, `WeakMap`, và `WeakSet` là những cấu trúc dữ liệu giúp thao tác trên tập hợp. Bài viết này sẽ giới thiệu cách thức hoạt động và các ứng dụng của chúng.
+Được giới thiệu từ ES6, `Map`, `Set`, `WeakMap`, và `WeakSet` là những cấu trúc dữ liệu giúp thao tác trên tập hợp. Bài viết này sẽ giới thiệu cách hoạt động cũng như các ứng dụng của chúng.
 
 ### Map
 
-Map, mảng kết hợp (associate arrays) hay từ điển (dictionary/dict) là những thuật ngữ để gọi chung một cấu trúc dữ liệu, cho phép bạn ánh xạ từ một khóa (key) tương ứng với một giá trị (value). Trong JavaScript, chúng ta có thể sử dụng object để thể hiện cấu trúc này.
+_Map_, _mảng kết hợp_ (associate arrays) hay _từ điển_ (dictionary/dict) là những thuật ngữ dùng để chỉ một cấu trúc dữ liệu, cho phép bạn ánh xạ từ một _khóa_ (key) tương ứng với một _giá trị_ (value). Trong JavaScript, chúng ta có thể sử dụng _object_ để thể hiện cấu trúc này.
 
 ```js
 const dict = {
@@ -27,7 +27,7 @@ const dict = {
 console.log(dict['hello']) // Xin chào
 ```
 
-Bên cạnh hạn chế là chỉ có thể dùng chuỗi làm khóa, cách thức này cũng có những [hạn chế](http://speakingjs.com/es5/ch17.html#_pitfalls_using_an_object_as_a_map).  ES6 giới thiệu lớp `Map`, giúp giải quyết những vấn đề này. Với `Map`, bạn có thể sử dụng bất cứ dạng dữ liệu nào để làm khóa.
+Tuy nhiên, nếu dùng _object_ thì bạn chỉ có thể dùng _chuỗi_ làm _khóa_. Ngoài ra, cách này cũng có một số [hạn chế khác](http://speakingjs.com/es5/ch17.html#_pitfalls_using_an_object_as_a_map). Lớp `Map` do ES6 giới thiệu sẽ giúp giải quyết những vấn đề này. Với `Map`, bạn có thể sử dụng bất cứ dạng dữ liệu nào để làm _khóa_.
 
 ```js
 const obj = { bar: 2 }
@@ -43,7 +43,7 @@ dict.get(obj)   // 'hello world'
 dict.get('wat') // undefined
 ```
 
-Bạn cũng có thể truyền vào hàm dựng của `Map` một mảng các cặp giá trị dạng `[key, value]`, như ví dụ sau:
+Bạn cũng có thể truyền vào hàm dựng của `Map` một mảng các cặp giá trị dạng `[key, value]`, ví dụ như sau:
 
 ```js
 const dict = new Map([
@@ -52,7 +52,7 @@ const dict = new Map([
 ])
 ```
 
-Như đã nói ở trên, bạn có thể dùng bất cứ dạng dữ liệu gì để làm khóa cho Map, kể cả mảng, object, hàm, hay `NaN`.
+Như đã nói ở trên, bạn có thể dùng bất cứ dạng dữ liệu gì để làm _khóa_ cho Map, kể cả mảng, object, hàm, hay `NaN`.
 
 ```js
 const arr = [1]
@@ -63,15 +63,15 @@ dict
  .set(NaN, 'not a number')
 ```
 
-Bản thân `Map` sử dụng phương thức so sánh [`SameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#A_model_for_understanding_equality_comparisons) để tìm khóa và giá trị tương ứng. `SameValueZero` hoạt động tương tự như `===`, nhưng xem các giá trị `NaN` bằng nhau, cũng như `+0` bằng `-0`.
+Bản thân `Map` sử dụng phương thức so sánh [`SameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#A_model_for_understanding_equality_comparisons) để tìm _khóa_ và giá trị tương ứng. `SameValueZero` hoạt động tương tự như `===`, nhưng xem các giá trị `NaN` bằng nhau, cũng như `+0` bằng `-0`.
 
-> **Đố không vui**: Đố bạn kết quả của các biểu thức sau là gì?
+> **Đố-hẻm-vui**: Đố bạn kết quả của các biểu thức sau là gì?
 >
 > `NaN == NaN`
 > `NaN === NaN`
 > `Object.is(NaN, NaN)`
 
-Do `SameValueZero` nên hai object khác nhau sẽ là hai khóa riêng biệt.
+Do `SameValueZero` nên hai _object_ khác nhau sẽ là hai _khóa_ riêng biệt.
 
 ```js
 const o1 = {}
@@ -82,7 +82,7 @@ dict.get(o2) // Ô Hai
 dict.get({}) // undefined
 ```
 
-Nếu trong map đã có sẵn khóa, dữ liệu mới sẽ bị ghi đè lên.
+Nếu trong map đã có sẵn _khóa_, dữ liệu mới sẽ bị ghi đè lên.
 
 ```js
 const m = new Map()
@@ -92,7 +92,7 @@ m.set('foo', 2)
 m.get('foo') // 2
 ```
 
-Để duyệt qua các khóa và giá trị trong `Map`, bạn có thể dùng:
+Để duyệt qua các _khóa_ và giá trị trong `Map`, bạn có thể dùng:
 
 ```js
 const dict = new Map([
@@ -148,11 +148,11 @@ dict.clear()
 ```
 
 > **Tại sao lại là `size` mà không phải `length`?**
-> Một số độc giả tinh ý sẽ nhận ra chúng ta dùng `size` thay vì `length` để đếm số cặp giá trị trong map. Lý giải cho việc này là, `length` dùng cho những chuỗi có thể index (đánh số) được, ví dụ với mảng ta có thể `arr[3]`. Ngược lại, `size` dành cho những cấu trúc không có thứ tự như `Map`  và `Set`.
+> Một số độc giả tinh ý sẽ nhận ra chúng ta dùng `size` thay vì `length` để đếm số cặp giá trị trong map. Lý do là vì: `length` dùng cho những chuỗi có thể index (đánh số) được, ví dụ với _mảng_ ta có thể `arr[3]`. Ngược lại, `size` dành cho những cấu trúc không có thứ tự như `Map`  và `Set`.
 
 ### Set
 
-`Set` là tập hợp các giá trị không bị trùng lắp, nghĩa là trông một set không thể có hai giá trị bằng nhau.
+`Set` là tập hợp các giá trị không bị trùng lặp, nghĩa là trong một _set_ không thể có hai giá trị bằng nhau.
 
 ```js
 const s = new Set()
@@ -165,14 +165,14 @@ set
 s.size // 4
 ```
 
-Bạn cũng có thể truyền một mảng vào hàm dựng của `Set`.
+Bạn cũng có thể truyền một _mảng_ vào hàm dựng của `Set`.
 
 ```js
 const s = new Set(['red', 'blue', 'sweet', 'red', 'you'])
 console.log(s) // Set (4) {'red', 'blue', 'sweet', 'you'}
 ```
 
-Bạn cũng có thể thấy giá trị `'red'` bị trùng lắp đã được loại bỏ. Chúng ta có thể áp dụng Set để tạo ra một mảng chứa những phần tử duy nhất.
+Bạn cũng có thể thấy giá trị `'red'` bị trùng lặp đã được loại bỏ. Chúng ta có thể áp dụng Set để tạo ra một _mảng_ chứa những phần tử duy nhất.
 
 ```js
 const a = ['red', 'blue', 'sweet', 'red', 'you']
@@ -222,7 +222,9 @@ s.clear()
 
 ### WeakMap và WeakSet
 
-ES6 cũng giới thiệu hai lớp `WeakMap` và `WeakSet`. So với `Map`, các khóa của `WeakMap` bắt buộc phải là object, và chúng sẽ bị giải phóng khỏi bộ nhớ (garbage-collecting -- "hốt rác") đầu tiên nếu không có tham chiếu nào. `WeakMap` có các phương thức tương tự như `Map`, ngoại trừ bạn không thể duyệt qua `WeakMap` bằng `.keys()`, `.values()`, `.entries()` hay `for..of`. Bạn cũng không thể `.clear()`, vì lý do an toàn dữ liệu.
+ES6 cũng giới thiệu hai lớp `WeakMap` và `WeakSet`. So với `Map`, các _khóa_ của `WeakMap` bắt buộc phải là _object_, và chúng sẽ bị giải phóng khỏi bộ nhớ (garbage-collecting -- "hốt rác") đầu tiên nếu không có tham chiếu nào.
+
+`WeakMap` có các phương thức tương tự như `Map`, ngoại trừ việc bạn không thể duyệt qua `WeakMap` bằng `.keys()`, `.values()`, `.entries()` hay `for..of`. Bạn cũng không thể `.clear()`, vì lý do an toàn dữ liệu.
 
 Một ứng dụng của `WeakMap` là dùng để chứa dữ liệu private mà không gây ra rò rỉ bộ nhớ.
 
@@ -245,11 +247,11 @@ console.log(u) // {}
 console.log(u.getPhoneNumber()) // 123
 ```
 
-Tương tự như `WeakMap`, `WeakSet` cũng chỉ có thể chứa object, và nếu một phần tử trong `WeakSet` không có tham chiếu tới, nó sẽ bị giải phóng khỏi bộ nhớ.
+Tương tự như `WeakMap`, `WeakSet` cũng chỉ có thể chứa _object_, và nếu một phần tử trong `WeakSet` không có tham chiếu tới, nó sẽ bị giải phóng khỏi bộ nhớ.
 
 ### Kết luận
 
-Với những cải tiến so với object thông thường, `Map` sẽ là công cụ hữu hiệu để lưu trữ dữ liệu dạng `(khóa, giá trị)`. Trong khi đó, `Set` giúp bạn lưu trữ chuỗi dữ liệu mà không lo lắng về việc trùng lắp giá trị.
+Với những cải tiến so với _object_ thông thường, `Map` sẽ là công cụ hữu hiệu để lưu trữ dữ liệu dạng `(khóa, giá trị)`. Trong khi đó, `Set` giúp bạn lưu trữ chuỗi dữ liệu mà không lo lắng về việc trùng lắp giá trị.
 
 #### Tham khảo
 
