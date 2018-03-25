@@ -15,4 +15,10 @@
       parent.insertBefore(fbBox, archor)
     }
   }
+
+  // Open links in new windows
+  document.querySelectorAll('#js-content a').forEach(a => {
+    a.target = '_blank'
+    a.rel = 'noopener noreferrer'
+  })
 })()
