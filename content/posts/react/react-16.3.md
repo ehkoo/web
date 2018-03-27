@@ -61,7 +61,7 @@ class Header extends React.Component {
     return (
       <ThemeContext.Consumer>
         {context => (
-          <header style={{ background-color: context.color }}>
+          <header style={{ backgroundColor: context.color }}>
             <h1 style={{ fontWeight: context.fontWeight }}>Welcome</h1>
           </header>
         )}
