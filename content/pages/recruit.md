@@ -29,10 +29,6 @@ Hoặc bạn sẽ kể về những lập trình viên gạo cội mà thành t�
 - Có tài khoản Github hoặc Twitter
 - Bạn không bẩn bựa, "bựa" thì được nhưng "bẩn" thì không
 
-### Thù lao
-
-Do website mới thành lập, rất tiếc Ehkoo **CHƯA THỂ** hỗ trợ tài chính cho bạn :( Mong là vấn đề này sẽ được cải thiện sớm trong tương lai.
-
 ### Ứng tuyển
 
 Gửi email về `chao [at] ehkoo.com`, giới thiệu ngắn gọn bản thân, chuyên môn chính, công nghệ quan tâm, và những gì bạn muốn viết cho Ehkoo. Nếu bạn có website cá nhân/ blog/ Kipalog/ Gihub/ Twitter hay gì gì đó thì cũng đừng quên khoe ra.

@@ -14,7 +14,7 @@
   <div class="w-75-l pr3-ns">
     <article class="bg-white pa3 relative box-shadow-1">
       <h1 class="red fw7 f3 mb4 tracked ttu break-word">{{ title }}</h1>
-      <div class="lh-copy mb3 tr silver flex flex-column flex-row-ns">
+      <div class="lh-copy mb3 silver flex flex-column flex-row-ns">
         <div>
           {{ date }}
           {% if author %}
@@ -24,6 +24,17 @@
 
         <div class="ml-auto-ns">{{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}</div>
       </div>
+
+      {% if tags %}
+      <div class="lh-copy mv3 flex items-center">
+        <span class="silver mr3 mb2">Tags:</span>
+        <ul class="list">
+        {% for tag in tags %}
+          <li class="dib mh1 mb2"><a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
 
       <div class="lh-copy mv2">
         <div class="sharethis-inline-share-buttons"></div>
@@ -45,14 +56,16 @@
 
       <hr class="mv4 mw5 center db bg-silver">
 
-      {% include "layouts/el/widgets/fb.njk" %}
+      <div id="js-widgets" class="flex justify-center">
+        {% include "layouts/el/widgets/fb.njk" %}
+      </div>
 
       {% if tags %}
       <div class="lh-copy mt3 flex items-center">
-        <span class="silver mr3">Tags:</span>
+        <span class="silver mr3 mb2">Tags:</span>
         <ul class="list">
         {% for tag in tags %}
-          <li class="dib mh1 mb3"><a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a></li>
+          <li class="dib mh1 mb2"><a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a></li>
         {% endfor %}
         </ul>
       </div>
