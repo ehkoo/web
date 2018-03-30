@@ -40,7 +40,8 @@ Nhưng đó đã là quá khứ. Kể từ phiên bản 16.3, khái niệm `cont
 ```js
 import { createContext } from 'react'
 const ThemeContext = createContext({ color: 'dark', fontWeight: 400 })
-// ThemeContext là một object có hai thuộc tính ThemeContext.Provider và ThemeContext.Consumer
+// ThemeContext là một object có hai thuộc tính ThemeContext.Provider
+// và ThemeContext.Consumer
 ```
 
 Hàm `React.createContext(defaultState)` nhận vào một object như là state ban đầu, và trả về một object có hai thuộc tính `Provider` và `Consumer`. `Provider` là một component có nhiệm vụ truyền dữ liệu xuống tất cả các component con của nó. Theo ví dụ trên, bạn có thể dùng `ThemeContext.Provider` để tạo một context và gán giá thị mới:
