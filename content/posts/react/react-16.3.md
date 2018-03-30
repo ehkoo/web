@@ -122,7 +122,7 @@ class App extends React.Component {
       return null
     }
 
-  return { date: nextProps.date }
+    return { date: nextProps.date }
   }
 }
 
