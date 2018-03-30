@@ -2,10 +2,10 @@
 layout: post.njk
 title: Có gì mới trong React phiên bản 16.3.0?
 slug: react-phat-hanh-phien-ban-16-3
-date: 2018-02-10
+date: 2018-03-30
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg
 tags: React, JavaScript
-excerpt: Trong phiên bản này, khái niệm `context` được nâng cấp, giúp bạn chia sẻ state một cách đơn giản hơn. Bên cạnh đó, StrictMode được giới thiệu, cùng với một số thay đổi về life-cycle hooks.
+excerpt: Trong phiên bản này, khái niệm `context` được nâng cấp, giúp bạn chia sẻ state một cách đơn giản hơn. Bên cạnh đó, StrictMode được giới thiệu, cùng với một số thay đổi về life-cycle hooks và API để thao tác với `ref`.
 author: kcjpop
 form_footer: react-footer
 ---
@@ -18,7 +18,7 @@ Phiên bản 16.3 đang trong giai đoạn hoàn thiện và sẽ được phát
 
 Trong các phiên bản trước đây, `context` là tham số thứ hai trong constructor của một component, theo kiểu:
 
-```javascript
+```js
 class MyComponent extends React.Component {
   constructor(props, context) {
     super(props, context)
@@ -38,7 +38,7 @@ const ThemeContext = createContext({ color: 'dark', fontWeight: 400 })
 
 Hàm `React.createContext(defaultState)` nhận vào một object như là state ban đầu, và trả về một object có hai thuộc tính `Provider` và `Consumer`. `Provider` là một component có nhiệm vụ truyền dữ liệu xuống tất cả các component con của nó. Theo ví dụ trên, bạn có thể dùng `ThemeContext.Provider` để tạo một context và gán giá thị mới:
 
-```js
+```jsx
 class App extends React.Component {
   render() {
     const newState = { color: 'green', fontWeight: 300 }
@@ -55,7 +55,7 @@ class App extends React.Component {
 
 Để sử dụng context được truyền vào, bạn sử dụng `ThemeContext.Consumer`.
 
-```js
+```jsx
 class Header extends React.Component {
   render() {
     return (
@@ -81,7 +81,7 @@ StrictMode là một component giúp đảm bảo ứng dụng của bạn tuân
 
 Để sử dụng StrictMode, bạn dùng như sau:
 
-```js
+```jsx
 import { Component, StrictMode } from 'react'
 
 class App extends Component {
@@ -114,7 +114,7 @@ Những thay đổi này giúp hoàn thiện hơn tính năng async rendering c�
 
 Nói thêm về `static getDerivedStateFromProps`, được giới thiệu để thay thế cho `componentWillReceiveProps` giúp thay đổi `this.state` khi props thay đổi. Đây là một phương thức tĩnh, được khai báo như sau:
 
-```js
+```jsx
 class App extends React.Component {
   state = { date: new Date }
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -136,6 +136,98 @@ Vì là phương thức tĩnh nên trong hàm `getDerivedStateFromProps` bạn k
 
 `getDerivedStateFromProps` cũng rất tiện vì nó được gọi khi component được mount lần đầu tiên, và trong mỗi lần component được re-render. Thế nên bên trong constructor, bạn không cần phải tạo state dựa vào nữa. Nếu trong một component có cả hai phương thức `componentWillReceiveProps` và `getDerivedStateFromProps`, `getDerivedStateFromProps` sẽ được gọi.
 
+### API mới để tạo và chuyển `ref`
+
+Trong các phiên bản trước, để tạo `ref` cho một DOM element bạn có thể dùng string hoặc một hàm callback, như ví dụ dưới đây.
+
+```jsx
+<input ref="inputRef" />
+
+// hoặc
+
+<input ref={el => (this.inputRef = el)} />
+```
+
+Trong phiên bản 16.3, React giới thiệu phương thức `React.createRef()` giúp tạo `ref` một cách thuần túy hơn.
+
+```jsx
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.inputRef = React.createRef()
+  }
+
+  render() {
+    return <input type="text" ref={this.inputRef} />
+  }
+
+  componentDidMount() {
+    this.inputRef.current.focus()
+  }
+}
+```
+
+Bạn vẫn có thể sử dụng kiểu callback để tạo `ref` trong 16.3, và không nhất thiết phải dùng `React.createRef()`. Trên website của React, cách sử dụng callback được xem như là một kỹ thuật nâng cao.
+
+Bên cạnh đó, React cũng giới thiệu `React.forwardRef(component)` giúp truyền `ref` từ một component trong HOC xuống component con.
+
+```jsx
+class FancyButton extends React.Component {
+  buttonRef = React.createRef()
+
+  focus() {
+    this.buttonRef.current.focus()
+  }
+
+  render() {
+    const {label, theme, ...rest} = this.props;
+    return (
+      <button
+        {...rest}
+        className={`${theme}-button`}
+        ref={this.buttonRef}>
+        {label}
+      </button>
+    )
+  }
+}
+
+// Tạo HOC để sử dụng Theme context
+function withTheme(Component) {
+  // Để ý tham số `ref` được tạo ra bởi React.forwardRef()
+  function ThemedComponent(props, ref) {
+    return (
+      <ThemeContext.Consumer>
+        {theme => (
+          // Truyền ref vào component con
+          <Component {...props} ref={ref} theme={theme} />
+        )}
+      </ThemeContext.Consumer>
+    )
+  }
+
+  return React.forwardRef(ThemedComponent)
+}
+
+const FancyThemedButton = withTheme(FancyButton)
+const fancyButtonRef = React.createRef()
+<FancyThemedButton
+  label="Click me!"
+  onClick={handleClick}
+  ref={fancyButtonRef}
+/>
+
+// fancyButtonRef sẽ đi qua HOC `withTheme()`, đi tiếp vào component `FancyButton`,
+// và được bắt bởi `React.createRef()`
+```
+
 ## Kết
 
 Context trong phiên bản 16.3 là một tính năng thú vị, giúp bạn quản lý state một cách đơn giản. Nhưng liệu context có thể thay thế được reudx/MobX hay không, hãy để các dự án thực tế trả lời.
+
+#### Tham khảo
+
+[1] React v16.3.0: New lifecycles and context API. Truy cập ngày 30 tháng 03 năm 2018 từ [https://reactjs.org/blog/2018/03/29/react-v-16-3.html](https://reactjs.org/blog/2018/03/29/react-v-16-3.html)
+
+[2] Update on Async Rendering. Truy cập Truy cập ngày 30 tháng 03 năm 2018 từ [https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
