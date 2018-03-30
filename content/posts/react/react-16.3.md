@@ -12,7 +12,14 @@ form_footer: react-footer
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg)
 
-Phiên bản 16.3 đang trong giai đoạn hoàn thiện và sẽ được phát hành trong vài ngày tới. Hãy cùng Ehkoo điểm qua những thay đổi trong phiên bản này nhé.
+Sau bao ngày chờ đợi ngóng trông, React cuối cùng cũng đã phát hành phiên bản 16.3.  Bạn có thể upgrade trong dự án của mình bằng lệnh.
+
+```bash
+yarn add react@16.3 react-dom@16.3
+npm install react@16.3 react-dom@16.3
+```
+
+Hãy cùng Ehkoo điểm qua những thay đổi trong phiên bản này nhé.
 
 ## API mới cho `context`
 
