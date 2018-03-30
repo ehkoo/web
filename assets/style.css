@@ -36,14 +36,6 @@ svg {
   position: sticky;
 }
 
-.hljs {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 0.15rem;
-  font-size: 1rem;
-  font-family: 'Fira Mono', 'Source Code Pro', 'Ubuntu Mono', monospace;
-}
-
 .content a {
   padding-bottom: 0.1rem;
   border-bottom: 0.1rem solid #1b6ec2;
@@ -55,7 +47,20 @@ svg {
   margin-bottom: 1.5rem;
 }
 
-.content code:not([class~='hljs']) {
+.content pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.15rem;
+}
+
+.content code[class*='language-'],
+.content pre[class*='language-'] {
+  font-size: 1rem;
+  font-family: 'Fira Mono', 'Source Code Pro', 'Ubuntu Mono', monospace;
+  line-height: 1.5;
+}
+
+.content code:not([class*='language']) {
   font-size: 1rem;
   background-color: #dee2e6;
   padding: 0.15rem 0.3rem;
