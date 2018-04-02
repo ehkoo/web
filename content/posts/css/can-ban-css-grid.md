@@ -5,15 +5,20 @@ slug: can-ban-css-grid-phan-1
 date: 2018-04-02
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1522150445/cssgrid.025372ef_dcvvub.png
 tags: CSS, CSS Grid
-excerpt: "Bạn đã nghe về CSS Grid nhưng chưa có thời gian tìm hiểu cặn kẽ? Không sao, Ehkoo sẽ giúp bạn tìm hiểu những tính năng vượt trội của CSS Grid trong việc xây dựng layout."
+excerpt: "Bạn từng nghe về CSS Grid nhưng chưa có thời gian tìm hiểu cặn kẽ? Không sao, Ehkoo sẽ giúp bạn khám phá NGAY những tính năng vượt trội của CSS Grid trong việc xây dựng layout."
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522150445/cssgrid.025372ef_dcvvub.png)
 
-Layout dạng lưới (grid) là một phần gần như không thể thiếu trong bất cứ website nào. Trước đây để phát triển grid trong CSS, chúng ta thường sử dụng table, float hay flexbox, tuy nhiên các giải pháp này cũng có những hạn chế nhất định. Sự xuất hiện của CSS Grid như một giải pháp mạnh mẽ, giúp chuyện xây dựng grid trở nên dễ dàng hơn bao giờ hết. CSS Grid đã được hỗ trợ bởi hầu hết các trình duyệt phổ biến hiện nay như Apple Safari, Google Chrome, Mozilla Firefox hay Microsoft Edge.
+Layout dạng lưới (grid) là một phần gần như không thể thiếu trong bất cứ website nào. Trước đây, để phát triển grid trong CSS, chúng ta thường sử dụng một số cách như sau:
 
-Trong bài này, Ehkoo sẽ hướng dẫn các bạn về những khái niệm cơ bản của CSS Grid. Hãy bắt đầu nào!
+* Dùng table hoặc float layout. Hai cách này giúp giải quyết ổn thỏa vấn đề, nhưng khi viết code có đôi chút không tự nhiên, dẫn đến khó bảo trì mã nguồn.
+* Dùng flexbox. Cách này có nhược điểm là thiết kế cho lưới một chiều (chỉ có một dòng duy nhất).
+
+May mắn thay, cuối cùng thì CSS Grid đã xuất hiện - là một giải pháp mạnh mẽ, giúp việc xây dựng grid trở nên dễ dàng hơn bao giờ hết. CSS Grid cũng được hỗ trợ bởi hầu hết các trình duyệt phổ biến hiện nay, như Apple Safari, Google Chrome, Mozilla Firefox hay Microsoft Edge.
+
+Trong bài này, Ehkoo sẽ hướng dẫn các bạn về một số khái niệm cơ bản của CSS Grid. Bắt đầu nào!
 
 ### Tạo một grid
 
@@ -43,7 +48,7 @@ Bên cạnh giá trị `grid`, chúng ta cũng có thể dùng `inline-grid` đ�
 Và đây là kết quả.
 <script async src="//jsfiddle.net/tv2r4ead/6/embed/result,html,css/"></script>
 
-**Oát, a du kít-đinh mi?**
+**Goắt, a du kít-đinh mi?**
 Bạn có thể thấy chuyển sang `display: grid;` không đem lại thay đổi gì rõ rệt. Đó là vì chúng ta chưa quy định số cột và hàng trong grid.
 
 ### Cột và hàng
@@ -231,4 +236,4 @@ Một ví dụ khác có phần phức tạp hơn.
 
 ### Tạm kết
 
-Trên đây là cách sử dụng những thuộc tính cơ bản nhất của CSS Grid. Trong bài sau chúng ta sẽ nói thêm về những thuộc tính khác, đồng thời xem xét những cách sử dụng CSS Grid nâng cao. Bạn hãy đón đọc nhé.
+Trên đây là cách sử dụng một số thuộc tính cơ bản nhất của CSS Grid. Trong bài sau chúng ta sẽ nói thêm về những thuộc tính khác, đồng thời xem xét các cách sử dụng CSS Grid nâng cao. Bạn hãy đón đọc nhé!
