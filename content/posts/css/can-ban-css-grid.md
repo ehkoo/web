@@ -52,8 +52,8 @@ Bạn có thể thấy chuyển sang `display: grid;` không đem lại thay đ�
 
 ```css
 .wrapper {
-  grid-template-columns: <track-size> ... | <line-name> <track-size> ...;
-  grid-template-rows: <track-size> ... | <line-name> <track-size> ...;
+  grid-template-columns: <track-size>...;
+  grid-template-rows: <track-size>...;
 }
 ```
 
@@ -93,7 +93,7 @@ Chúng ta có thể thay đổi kích thước các dòng và cột tùy ý.
 ### Grid gaps
 
 Khoảng cách giữa các cột trong grid được gọi là column-gap, còn khoảng cách giữa các hàng trong grid được gọi là row-gap.
-Để thay đổi khoảng cách giữa các cột và các hàng, chúng ta sẽ sử dụng `grid-column-gap` và `grid-column-row`.
+Để thay đổi khoảng cách giữa các cột và các hàng, chúng ta sẽ sử dụng `grid-column-gap` và `grid-row-gap`.
 
 ```css
 .wrapper {
@@ -112,7 +112,7 @@ Với `<line-size>` là một giá trị chiều dài, chẳng hạn như `50px`
 }
 ```
 
-Để viết ngắn gọn hơn, ta dùng `grid-gap`. Giá trị thứ nhất sẽ tương ứng với column-gap, còn giá trị thứ 2 sẽ tương ứng với row-gap.
+Để viết ngắn gọn hơn, ta dùng `grid-gap`. Giá trị thứ nhất sẽ tương ứng với `grid-column-gap`, còn giá trị thứ hai sẽ tương ứng với `grid-row-gap`.
 
 ```css
 .wrapper {
@@ -125,13 +125,15 @@ Với `<line-size>` là một giá trị chiều dài, chẳng hạn như `50px`
 
 ### Grid lines
 
-Trước khi tiếp tục, chúng ta cần tìm hiểu khái niệm grid lines. Với CSS Grid, các đường nằm giữa các cột được gọi là column line, trong khi các đường nằm giữa các hàng được gọi là row line.
+Trước khi tiếp tục, chúng ta cần tìm hiểu khái niệm grid lines. Với CSS grid, các đường nằm giữa các cột được gọi là column line, trong khi các đường nằm giữa các hàng được gọi là row line.
 
 Với một grid 3x3, ta có các grid lines như sau:
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522576022/i3yuE1s_snye0v.jpg)
 
-Nếu bạn đang sử dụng Firefox, bạn có thể dùng tính năng debug CSS Grid trong Developer Tool để nhìn thấy grid lines rõ ràng hơn.
+Cần lưu ý là grid line được đánh số từ 1, không phải từ 0 như thường gặp.
+
+**Mẹo nhỏ**: Nếu đang sử dụng Firefox, bạn có thể dùng tính năng debug CSS Grid trong Developer Tool để nhìn thấy grid lines rõ ràng hơn.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522579953/debugger_zjreqh.png)
 
@@ -146,10 +148,9 @@ Sau tất cả, một trong những điều quan trọng nhất mà bạn cần 
     grid-template-rows: 100px 100px 100px;
 }
 ```
-
 <script async src="//jsfiddle.net/tv2r4ead/14/embed/result,html,css/"></script>
 
-*Chú ý: Mặc dù chúng ta đang tạo một grid 3x3, nhưng trong hình lại là một grid 3x2, đó là bởi vì chúng ta chỉ có 6 item để đặt vào grid. Nếu chúng ta có thêm 3 item nữa thì hàng dưới cùng sẽ được lấp đầy.*
+*Chú ý: Mặc dù chúng ta đang tạo một grid 3x3, nhưng trong ví dụ trên lại là một grid 3x2, đó là bởi vì chúng ta chỉ có 6 items để đặt vào grid. Nếu chúng ta có thêm 3 item nữa thì hàng dưới cùng sẽ được lấp đầy.*
 
 Với mỗi item, để thay đổi kích thước cũng như vị trí, chúng ta sẽ thay đổi thuộc tính `grid-column` và `grid-row`.
 
@@ -160,11 +161,11 @@ Với mỗi item, để thay đổi kích thước cũng như vị trí, chúng 
 }
 ```
 
-Đoạn code trên sẽ khiến item1 bắt đầu tại column line thứ nhất, và kết thúc tại column line thứ 4. Nói cách khác, item1 sẽ chiếm trọn cả hàng đầu tiên. Bạn có thể xem demo để rõ hơn:
+Đoạn code trên sẽ khiến item1 bắt đầu tại column line 1, và kết thúc tại column line 4. Nói cách khác, item1 sẽ chiếm trọn cả hàng đầu tiên. Bạn có thể xem demo để rõ hơn:
 
 <script async src="//jsfiddle.net/tv2r4ead/15/embed/result,html,css/"></script>
 
-Đồng thời, khi mà item1 chiếm trọn dòng đầu tiên, các item khác sẽ tự động được đẩy xuống dưới. Để được kết quả như trên, chúng ta cũng có thể viết gọn lại như sau:
+Khi mà item1 chiếm trọn dòng đầu tiên, các item khác sẽ tự động được đẩy xuống dưới. Để được kết quả như trên, chúng ta cũng có thể viết gọn lại như sau:
 
 ```css
 .item1 {
@@ -194,6 +195,40 @@ Bạn cũng có thể làm tương tự với `grid-row-start` và `grid-row-end
 
 <script async src="//jsfiddle.net/tv2r4ead/17/embed/result,html,css/"></script>
 
+Ngoài cách chỉ định giá trị grid line một cách tường minh, bạn cũng có thể dùng cú pháp `span X` như ví dụ sau:
+
+```css
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    /*
+    hoặc
+    grid-column: 1 / span 3;
+    */
+}
+```
+
+Chúng ta có thể đọc đoạn CSS trên như là "`item1` bắt đầu ở cột thứ 3, và tự động giãn ra thành 3 cột". Kết quả bạn nhận được cũng tương tự.
+
+<script async src="//jsfiddle.net/tv2r4ead/19/embed/result,html,css/"></script>
+
+Một ví dụ khác có phần phức tạp hơn.
+```css
+.item3 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.item6 {
+    grid-column: 2 / span 2;
+}
+```
+
+<script async src="//jsfiddle.net/tv2r4ead/23/embed/result,html,css/"></script>
+
+> **Nhắc lại**: Nếu bạn gặp khó khăn trong việc xác định số thứ tự của grid lines, đừng quên CSS grid debugger của Firefox.
+
+
 ### Tạm kết
 
-Trên đây là những đặc tính cơ bản của CSS Grid được áp dụng cho wrapper. Trong bài tiếp theo, chúng ta sẽ tìm hiểu các thiết lập cho items trong grid.
+Trên đây là cách sử dụng những thuộc tính cơ bản nhất của CSS Grid. Trong bài sau chúng ta sẽ nói thêm về những thuộc tính khác, đồng thời xem xét những cách sử dụng CSS Grid nâng cao. Bạn hãy đón đọc nhé.
