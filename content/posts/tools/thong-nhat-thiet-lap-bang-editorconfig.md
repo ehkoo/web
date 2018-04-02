@@ -10,9 +10,9 @@ author: kcjpop
 ---
 
 ![Imgur](http://i.imgur.com/hXZDHDI.png)
-Mỗi dự án lại có một thiết lập format riêng, cái xài tab, cái thì dùng space. Chưa hết, cũng là space, nhưng ví dụ như JavaScript files chỉ dùng 2, còn PHP files thì dùng tới 4 spaces!
+Mỗi dự án lại có một thiết lập format riêng, cái xài tab, cái thì dùng space. Chưa hết, cũng là space, nhưng ví dụ như JavaScript files chỉ dùng 2, còn PHP files thì dùng tới 4 spaces @.@
 
-Đừng bối rối. Hãy thử dùng EditorConfig để thiết lập format chung cho tất cả các text editor và IDE xem sao. Nó sẽ giúp nâng cao tính thống nhất, để dễ đọc, hiểu và bảo trì code hơn đấy.
+Đừng bối rối! ^^' Hãy thử dùng EditorConfig để thiết lập format chung cho tất cả các text editor và IDE xem sao. Nó sẽ giúp nâng cao tính thống nhất, để dễ đọc, hiểu và bảo trì code hơn đấy.
 
 ### EditorConfig là gì?
 
@@ -65,4 +65,5 @@ Bạn chỉ cần đặt file `.editorconfig` ở thư mục gốc của dự á
 
 Sau này, khi tạo file mới, chương trình text editor/IDE sẽ tự động đọc file `.editorconfig` và thiết lập style cho bạn.
 
-### Bạn đã dùng EditorConfig chưa? Trải nghiệm của bạn như thế nào? Hãy cùng chia sẻ với Ehkoo ở phần bình luận phía dưới nhé! 
+### Kết
+Bạn đã dùng EditorConfig chưa? Trải nghiệm của bạn như thế nào? Hãy cùng chia sẻ với Ehkoo ở phần bình luận phía dưới nhé! 
