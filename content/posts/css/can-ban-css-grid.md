@@ -14,7 +14,7 @@ editor: kcjpop, chubbyanh
 Layout dạng lưới (grid) là một phần gần như không thể thiếu trong bất cứ website nào. Trước đây, để phát triển grid trong CSS, chúng ta thường sử dụng một số cách như sau:
 
 * Dùng table hoặc float layout. Hai cách này giúp giải quyết ổn thỏa vấn đề, nhưng khi viết code có đôi chút không tự nhiên, dẫn đến khó bảo trì mã nguồn.
-* Dùng flexbox. Cách này có nhược điểm là thiết kế cho lưới một chiều (chỉ có một dòng duy nhất).
+* Dùng flexbox. Cách này có hạn chế là thiết kế cho lưới một chiều (chỉ có một dòng duy nhất).
 
 May mắn thay, cuối cùng thì CSS Grid đã xuất hiện - là một giải pháp mạnh mẽ, giúp việc xây dựng grid trở nên dễ dàng hơn bao giờ hết. CSS Grid cũng được hỗ trợ bởi hầu hết các trình duyệt phổ biến hiện nay, như Apple Safari, Google Chrome, Mozilla Firefox hay Microsoft Edge.
 
