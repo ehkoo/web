@@ -3,13 +3,13 @@ layout: post.njk
 title: Thống nhất thiết lập giữa trình soạn thảo/IDE bằng EditorConfig
 slug: thong-nhat-thiet-lap-giua-editor-ide-bang-editorconfig
 date: 2018-04-05
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1507300408/tweet-editorconfig_lssmtc.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1522931819/rzEmfCM_gi7afh.jpg
 tags: TextEditor, IDE, SublimeText, Atom, VSCode, vim, emacs, Thủ thuật
 excerpt: EditorConfig giúp thiết lập format chung cho tất cả các text editor và IDE; nhờ đó giúp nâng cao tính thống nhất, dễ đọc, hiểu và bảo trì code hơn.
 author: kcjpop
 ---
 
-![Imgur](http://i.imgur.com/hXZDHDI.png)
+![Imgur](https://res.cloudinary.com/duqeezi8j/image/upload/v1507300408/tweet-editorconfig_lssmtc.png)
 Mỗi dự án lại có một thiết lập format riêng, cái xài tab, cái thì dùng space. Chưa hết, cũng là space, nhưng ví dụ như JavaScript files chỉ dùng 2, còn PHP files thì dùng tới 4 spaces @.@
 
 Đừng bối rối! ^^' Hãy thử dùng EditorConfig để thiết lập format chung cho tất cả các text editor và IDE xem sao. Nó sẽ giúp nâng cao tính thống nhất, để dễ đọc, hiểu và bảo trì code hơn đấy.
@@ -67,3 +67,9 @@ Sau này, khi tạo file mới, chương trình text editor/IDE sẽ tự độn
 
 ### Kết
 Bạn đã dùng EditorConfig chưa? Trải nghiệm của bạn như thế nào? Hãy cùng chia sẻ với Ehkoo ở phần bình luận phía dưới nhé!
+
+#### Ngoài lề một chút về hình minh họa của bài viết này
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522932790/latest_mhcoyu.jpg)
+
+> Hình minh họa bạn thấy cho bài viết này ở trang chủ Ehkoo được lấy từ truyện [Mouse Guard](https://www.wikiwand.com/en/Mouse_Guard) của tác giả David Petersen. Bối cảnh của truyện được đặt ở thời Trung Cổ, nhưng không có sự xuất hiện của con người. Ở đó tồn tại hội các hiệp sĩ chuột, có nhiệm vụ bảo vệ bình yên cho các chuột khác khỏi các động vật săn mồi như rắn, chồn hay cú đêm. Logo của EditorConfig cũng là một chú chuột cưỡi chim, nên Ehkoo nghĩ có điểm tương đồng ở đây. Đồng thời EditorConfig cũng giúp bạn bảo vệ (và thống nhất) config giữa các dự án với nhau, cũng coi như là đem đến bình yên cho dev vậy.
