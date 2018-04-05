@@ -26,7 +26,7 @@ Trích từ website của EditorConfig [http://editorconfig.org/](http://editorc
 
 Dưới đây là một ví dụ của tập tin `.editorconfig`
 
-```
+```ini
 # EditorConfig is awesome: http://EditorConfig.org
 
 # Đây là file thiết lập gốc
@@ -66,4 +66,4 @@ Bạn chỉ cần đặt file `.editorconfig` ở thư mục gốc của dự á
 Sau này, khi tạo file mới, chương trình text editor/IDE sẽ tự động đọc file `.editorconfig` và thiết lập style cho bạn.
 
 ### Kết
-Bạn đã dùng EditorConfig chưa? Trải nghiệm của bạn như thế nào? Hãy cùng chia sẻ với Ehkoo ở phần bình luận phía dưới nhé! 
+Bạn đã dùng EditorConfig chưa? Trải nghiệm của bạn như thế nào? Hãy cùng chia sẻ với Ehkoo ở phần bình luận phía dưới nhé!
