@@ -72,5 +72,5 @@ Bạn đã dùng EditorConfig chưa? Trải nghiệm của bạn như thế nào
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522932790/latest_mhcoyu.jpg)
 
-> Hình minh họa hiển thị ngoài trang chủ cho bài này được lấy từ tác phẩm [Mouse Guard](https://www.wikiwand.com/en/Mouse_Guard) của David Petersen. Truyện lấy bối cảnh thời Trung cổ, kể về Hội Hiệp sĩ Chuột có nhiệm vụ bảo vệ sự bình yên cho loài chuột dưới nanh vuốt của bè lũ săn mồi như rắn, chồn, hay cú đêm... Logo của EditorConfig là một chú chuột cưỡi chim, ngoài ra nhiệm vụ của EditorConfig là giúp bảo vệ (và thống nhất) config giữa các dự án với nhau, cũng coi như đem lại yên bình cho dev vậy ^^ Chính vì điểm tương đồng này mà Ehkoo chọn Mouse Guard làm hình minh họa cho EditorConfig đó ahihi <
+> Hình minh họa hiển thị ngoài trang chủ cho bài này được lấy từ tác phẩm [Mouse Guard](https://www.wikiwand.com/en/Mouse_Guard) của David Petersen. Truyện lấy bối cảnh thời Trung cổ, kể về Hội Hiệp sĩ Chuột có nhiệm vụ bảo vệ sự bình yên cho loài chuột dưới nanh vuốt của bè lũ săn mồi như rắn, chồn, hay cú đêm... Logo của EditorConfig là một chú chuột cưỡi chim, ngoài ra nhiệm vụ của EditorConfig là giúp bảo vệ (và thống nhất) config giữa các dự án với nhau, cũng coi như đem lại yên bình cho dev vậy ^^ Chính vì điểm tương đồng này mà Ehkoo chọn Mouse Guard làm hình minh họa cho EditorConfig đó ahihi
 
