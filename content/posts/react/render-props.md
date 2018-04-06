@@ -53,9 +53,8 @@ Một trong những lí do khiến HOCs phổ biến là vì kĩ thuật này s�
 
 Tuy nhiên, việc dùng HOCs cũng có những hạn chế:
 
-**HOCs dễ gây bối rối**: Việc sử dụng nhiều HOCs cho một component dễ dẫn đến tình trạng không biết `props` này là do HOC nào cung cấp.
-
-**Trùng lặp tên props**: Nếu bạn có 2 HOCs sử dụng cùng một tên cho prop, chúng sẽ bị ghi đè lên nhau.
+- **HOCs dễ gây bối rối**: Việc sử dụng nhiều HOCs cho một component dễ dẫn đến tình trạng không biết `props` này là do HOC nào cung cấp.
+- **Trùng lặp tên props**: Nếu bạn có 2 HOCs sử dụng cùng một tên cho prop, chúng sẽ bị ghi đè lên nhau.
 
 ### Cách dùng Render Prop
 
@@ -138,7 +137,7 @@ Như bạn thấy, hàm để render có thể được truyền vào như một
 
 Hướng tiếp cận nêu trên giúp giải quyết được tình trạng _"dễ gây bối rối"_ và _"dễ trùng lặp tên props"_, vì dữ liệu được truyền một cách trực tiếp thông qua từng component, và cũng không có cơ chế chia sẻ props hay state giữa các components với nhau, trừ khi chúng ta thật sự muốn điều đó.
 
-**Lưu ý:
+**Lưu ý:**
 
 Bạn có thể chuyển đổi từ render prop thành HOC, nhưng không thể làm được điều ngược lại. Chẳng hạn như:
 
