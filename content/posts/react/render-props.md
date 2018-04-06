@@ -3,7 +3,7 @@ layout: post.njk
 title: Tái sử dụng code với Render Prop trong ReactJS
 slug: render-prop-thay-cho-higher-order-component-reactjs
 date: 2017-11-08
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1510109188/blob_ixcygo09d1_wfqumj.png
+cover: http://res.cloudinary.com/duqeezi8j/image/upload/v1523017015/react_odxssl.jpg
 tags: React, Higher Order Components, Render Prop
 excerpt: Render Prop là một hướng tiếp cận khác, bên cạnh Higher-Order Components, để giải quyết vấn đề tái sử dụng code trong ReactJS.
 author: kcjpop
@@ -57,6 +57,8 @@ Tuy nhiên, việc dùng HOCs cũng có những hạn chế:
 - **Trùng lặp tên props**: Nếu bạn có 2 HOCs sử dụng cùng một tên cho prop, chúng sẽ bị ghi đè lên nhau.
 
 ### Cách dùng Render Prop
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1510109188/blob_ixcygo09d1_wfqumj.png)
 
 "Render prop", "render callback", hay "function as a child" là những tên gọi cho kỹ thuật đưa một hàm để render vào làm prop. Bằng cách này, các components có thể chia sẻ dữ liệu theo một cách rõ ràng và không bị ràng buộc lẫn nhau.
 
