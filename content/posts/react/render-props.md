@@ -9,7 +9,7 @@ excerpt: Render Prop là một hướng tiếp cận khác, bên cạnh Higher-O
 author: kcjpop
 ---
 
-[Higher-order components](https://reactjs.org/docs/higher-order-components.html) (HOCs) là một kỹ thuật tái sử dụng code rất quen thuộc khi lập trình với React. Nói một cách đơn giản, HOC là một hàm nhận vào một component và trả về một component mới. Nếu sử dụng `react-redux` hay `react-router` bạn hẳn đã quen thuộc với HOC `connect()` và `withRouter()`.
+[Higher-order components](https://reactjs.org/docs/higher-order-components.html) (HOCs) là một kỹ thuật tái sử dụng code rất quen thuộc khi lập trình với React. Nói một cách đơn giản, HOC là một hàm nhận vào một component và trả về một component mới. Nếu sử dụng `react-redux` hay `react-router`, bạn hẳn đã quen thuộc với HOC `connect()` và `withRouter()`.
 
 Dưới đây là một HOC đơn giản, giúp gắn tọa độ của con trỏ chuột vào một component.
 
@@ -49,13 +49,15 @@ class MyComponent extends React.Component {
 const ComponentWithMouse = withMouse(MyComponent)
 ```
 
-Một trong những lý do HOCs trở nên phổ biến là vì kỹ thuật này sử dụng lớp của ES6 (class) ngay từ đầu. Kể từ React 16, lớp là cơ chế mặc định khi xây dựng component, thay thế hoàn toàn cho `React.createClass()` ở các phiên bản trước. Điều này hợp lý vì lớp đã được hầu hết các trình duyệt hiện tại hỗ trợ mặc định. Tuy nhiên HOCs cũng có những hạn chế:
+Một trong những lí do khiến HOCs phổ biến là vì kĩ thuật này sử dụng lớp của ES6 (class) ngay từ đầu. Kể từ React 16, lớp là cơ chế mặc định khi xây dựng component, thay thế hoàn toàn cho `React.createClass()` ở các phiên bản trước. Điều này hợp lý, vì lớp đã được hầu hết các trình duyệt hiện tại hỗ trợ mặc định.
+
+Tuy nhiên, việc dùng HOCs cũng có những hạn chế:
 
 **HOCs dễ gây bối rối**: Việc sử dụng nhiều HOCs cho một component dễ dẫn đến tình trạng không biết `props` này là do HOC nào cung cấp.
 
 **Trùng lặp tên props**: Nếu bạn có 2 HOCs sử dụng cùng một tên cho prop, chúng sẽ bị ghi đè lên nhau.
 
-### Giải quyết với Render Prop
+### Cách dùng Render Prop
 
 "Render prop", "render callback", hay "function as a child" là những tên gọi cho kỹ thuật đưa một hàm để render vào làm prop. Bằng cách này, các components có thể chia sẻ dữ liệu theo một cách rõ ràng và không bị ràng buộc lẫn nhau.
 
@@ -130,9 +132,15 @@ class MyComponent extends React.Component {
 const ComponentWithMouse = withMouse(MyComponent)
 ```
 
-Như bạn thấy hàm để render có thể được truyền vào như một prop, hay là children của component. Ý tưởng chính ở đây là chúng ta có một component tên `Mouse` rất rõ ràng, cung cấp giá trị tọa độ (x, y) của con trỏ chuột. Nhờ vào đó `MyComponent` có thể render tùy ý với dữ liệu này. Hướng tiếp cận này giúp giải quyết được hai vấn đề đã nêu với HOCs, vì dữ liệu được truyền một cách trực tiếp thông qua từng component một, và cũng không có cơ chế chia sẻ props hay state giữa các components với nhau, trừ khi chúng ta thật sự muốn điều đó.
+Như bạn thấy, hàm để render có thể được truyền vào như một prop, hay là children của component.
 
-Một đặc điểm của render prop là, bạn có thể chuyển đổi từ render prop thành HOC, nhưng không thể làm được điều ngược lại. Chẳng hạn như:
+Ý tưởng chính ở đây là: chúng ta có một component tên `Mouse` rất rõ ràng, cung cấp giá trị tọa độ (x, y) của con trỏ chuột. Nhờ đó, `MyComponent` có thể render tùy ý với dữ liệu này.
+
+Hướng tiếp cận nêu trên giúp giải quyết được tình trạng _"dễ gây bối rối"_ và _"dễ trùng lặp tên props"_, vì dữ liệu được truyền một cách trực tiếp thông qua từng component, và cũng không có cơ chế chia sẻ props hay state giữa các components với nhau, trừ khi chúng ta thật sự muốn điều đó.
+
+**Lưu ý:
+
+Bạn có thể chuyển đổi từ render prop thành HOC, nhưng không thể làm được điều ngược lại. Chẳng hạn như:
 
 ```javascript
 const withMouse = function (Component) {
@@ -150,9 +158,11 @@ const withMouse = function (Component) {
 }
 ```
 
-### Hạn chế
+### Hạn chế của việc dùng Render Prop
 
-Điểm hạn chế duy nhất cho đến hiện tại là sử dụng nhiều render props trong một component có thể tạo ra nhiều hàm lồng nhau, làm mã nguồn hơi khó nhìn. Chẳng hạn như khi dùng 2 render props  tưởng tượng `ReactRedux` và `ReactRouter`.
+Cho đến hiện tại, hạn chế duy nhất của hướng tiếp cận này là: việc sử dụng nhiều render props trong một component có thể tạo ra nhiều hàm lồng nhau, làm mã nguồn hơi khó nhìn.
+
+Ví dụ, khi dùng 2 render props  tưởng tượng `ReactRedux` và `ReactRouter`.
 
 ```javascript
 class MyComponent extends React.Component {
@@ -174,7 +184,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Nếu phải thường xuyên dùng hơn 3 render props trong một component, khả năng cao là bạn nên tạo một component bao đóng (wrapper) cả 3 lại để hạn chế code bị trùng lắp.
+Cho nên, nếu phải thường xuyên dùng hơn 3 render props trong một component, có lẽ bạn nên tạo một component bao đóng (wrapper) cả 3 lại để hạn chế code bị trùng lắp.
 
 ### Kết luận
 
