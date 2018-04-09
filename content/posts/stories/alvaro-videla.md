@@ -5,7 +5,7 @@ slug: alvaro-videla
 date: 2018-04-09
 tags: Kinh nghiệm, Nhân vật, Alvaro Videla
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg
-translation: https://medium.freecodecamp.org/become-how-i-went-from-selling-food-in-the-street-to-working-for-top-firms-in-tech-6aa61a2d0629
+translation: http://bit.ly/alvaro-videla
 excerpt: Không học đại học CNTT chính quy, lại đến từ một nước thứ ba, làm thế nào Alvaro Videla có thể trở thành lập trình viên cho các công ty sừng sỏ như Apple, VMWare?
 author: chubbyanh
 editor: kcjpop
@@ -34,9 +34,9 @@ Tóm lại, động cơ: có, triển vọng nghề nghiệp: có, hứng thú �
 
 Chỉ còn một vấn đề “nho nhỏ”: TÔI KHÔNG BIẾT LẬP TRÌNH.
 
-Phải làm thế nào khi bạn không được đào tạo chính quy, cũng chẳng có chút kinh nghiệm lập trình nào cả? Phải làm thế nào khi bạn muốn tự học lập trình, song nhà không có internet, không có người hướng dẫn, mà cũng chẳng kiếm đâu ra một cuốn sách dạy lập trình cho ra hồn?
-
-Đó là những câu hỏi tôi từng phải đối mặt năm 2006. Và sau đây là cách tôi đã từng bước giải quyết chúng.
+> Phải làm thế nào khi bạn không được đào tạo chính quy, cũng chẳng có chút kinh nghiệm lập trình nào cả? Phải làm thế nào khi bạn muốn tự học lập trình, song nhà không có internet, không có người hướng dẫn, mà cũng chẳng kiếm đâu ra một cuốn sách dạy lập trình cho ra hồn?
+>
+> Đó là những câu hỏi tôi từng phải đối mặt năm 2006. Và sau đây là cách tôi đã từng bước giải quyết chúng.
 
 ### Xác định mục tiêu và lập kế hoạch hành động
 
