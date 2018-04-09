@@ -56,7 +56,7 @@ Còn nhược điểm của tôi, như đã liệt kê ở trên: không bằng 
 
 Đồng thời, tôi cũng **xác định thời hạn**: từ tháng 11/2006 đến tháng 2/2007; **xác định mục tiêu cụ thể cho dự án**: phải hoàn thành concept một ứng dụng bản đồ, trong đó sử dụng Flash cho phần front-end, PHP cho back-end, và MySQL cho phần dữ liệu tĩnh.
 
-Những công nghệ này ngày nay đã lỗi thời, nhưng khi đó thì tôi cần chúng để thỏa mãn các yêu cầu tuyển dụng. Deadline tôi đặt ra gắt như vậy, là vì phải chạy đua với thời gian: cứ mỗi ngày trôi qua là thêm một ngày vợ tôi phải làm việc quá sức để gồng gánh chi phí sinh hoạt cho cả hai.
+Những công nghệ nói trên ngày nay đã lỗi thời, nhưng khi đó thì tôi cần chúng để thỏa mãn các yêu cầu tuyển dụng. Deadline tôi đặt ra gắt như vậy, là vì phải chạy đua với thời gian: cứ mỗi ngày trôi qua là thêm một ngày vợ tôi phải làm việc quá sức để gồng gánh chi phí sinh hoạt cho cả hai.
 
 Kì vọng của tôi là, nhờ kế hoạch này, sẽ lọt được vào vòng phỏng vấn ở một công ty công nghệ. Sau đó, với những kĩ năng/kiến thức thu nhặt được thông qua dự án, cộng thêm cái ứng dụng bản đồ làm bằng chứng, tôi sẽ “đốn tim” nhà tuyển dụng thành công và giành được công việc lập trình hằng mơ ước.
 
