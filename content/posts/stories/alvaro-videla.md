@@ -14,9 +14,9 @@ editor: kcjpop
 >
 > Ehkoo xin trân trọng giới thiệu câu chuyện của Alvaro Videla: từ “thanh niên bán hàng rong”, tôi đã tự học lập trình để trở thành “kĩ sư phần mềm cho các hãng công nghệ hàng đầu” như thế nào.
 
-### Lối rẽ
-
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523269486/1_UCVDYCm03G5MQc9oXCTiGw_rxxrcq.jpg)
+
+### Lối rẽ
 
 Cuối năm 2006, tôi đứng trước ngã ba cuộc đời. Nhiều chuyện không may đổ ập xuống một lúc, khiến giấc mơ trở thành giáo viên cấp 2 môn ngôn ngữ tan tành mây khói. Tôi đành trở về quê để tính xem nên làm gì tiếp theo.
 
@@ -38,9 +38,9 @@ Chỉ còn một vấn đề “nho nhỏ”: TÔI KHÔNG BIẾT LẬP TRÌNH.
 >
 > Đó là những câu hỏi tôi từng phải đối mặt năm 2006. Và sau đây là cách tôi đã từng bước giải quyết chúng.
 
-### Xác định mục tiêu và lập kế hoạch hành động
-
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg)
+
+### Xác định mục tiêu và lập kế hoạch hành động
 
 Mục tiêu của tôi rất rõ ràng: trở thành lập trình viên, và phải kiếm được công việc lập trình càng sớm càng tốt.
 
@@ -110,9 +110,9 @@ Thật kinh ngạc. Khoảng nửa giờ sau, điện thoại tôi bỗng reo. S
 
 ### Lời kết
 
-Sau cuộc phỏng vấn này, Alvaro Videla nhận được công việc lập trình đầu tiên, nhưng rồi anh nhanh chóng bị mất việc sau đó 1 tuần. Không nản lòng, anh tiếp tục kiên trì rèn luyện kiến thức/kĩ năng và tìm kiếm các cơ hội khác.
-
-Câu chuyện khởi đầu từ hơn 10 năm trước. Những vấn đề mà Alvaro phải đối mặt lúc đó (không có internet, không có sách vở tài liệu…) có lẽ đã không còn giống 100% những gì các bạn tự học lập trình phải đối mặt ngày hôm nay. Song, Ehkoo tin rằng chúng ta vẫn có thể học hỏi rất nhiều về cách xác định mục tiêu, lập kế hoạch, cũng như ý chí kiên cường của anh.
+> Sau cuộc phỏng vấn này, Alvaro Videla nhận được công việc lập trình đầu tiên, nhưng rồi anh nhanh chóng bị mất việc sau đó 1 tuần. Không nản lòng, anh tiếp tục kiên trì rèn luyện kiến thức/kĩ năng và tìm kiếm các cơ hội khác.
+>
+> Câu chuyện khởi đầu từ hơn 10 năm trước. Những vấn đề mà Alvaro phải đối mặt lúc đó (không có internet, không có sách vở tài liệu…) có lẽ đã không còn giống 100% những gì các bạn tự học lập trình phải đối mặt ngày hôm nay. Song, Ehkoo tin rằng chúng ta vẫn có thể học hỏi rất nhiều về cách xác định mục tiêu, lập kế hoạch, cũng như ý chí kiên cường của anh.
 
 Bạn có thể tìm đọc toàn bộ câu chuyện bằng tiếng Anh tại đây: [http://bit.ly/alvaro-videla](http://bit.ly/alvaro-videla)
 
