@@ -15,22 +15,27 @@ Dưới đây là một số alias mà Ehkoo thường dùng:
 
 ```bash
 git config --global alias.a "add"
+
 # Đánh dấu tất cả tập tin trong thư mục hiện tại, chuẩn bị commit
 git config --global alias.aa "add . -A"
 
 git config --global alias.c "commit"
+
 # Commit và đặt chữ ký
 git config --global alias.cms "commit -s"
+
 # Kết hợp với commit trước đó và đặt chữ ký
 git config --global alias.ca "commit --amend -s"
 
 git config --global alias.d "diff"
 git config --global alias.ds "diff --stat"
+
 # Hiển thị thay đổi với những tập tin đã được staged
 git config --global alias.dc "diff --cached"
 
 git config --global alias.s "status -s"
 git config --global alias.co "checkout"
+
 # Checkout  một nhánh mới
 git config --global alias.cob "checkout -b"
 ```
