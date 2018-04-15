@@ -1,3 +1,5 @@
-# web
+### ehkoo.com
 
-[![Gitter](https://badges.gitter.im/ehkoo/web.svg)](https://gitter.im/ehkoo/web?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Không có gì ngoài chuyện lập trình front-end.
+
+Bạn muốn viết bài cho Ehkoo? Click ngay vào đây --> [https://ehkoo.com/cong-tac](https://ehkoo.com/cong-tac)
