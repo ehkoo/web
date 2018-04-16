@@ -10,7 +10,7 @@ author: kcjpop
 editor: chubbyanh
 ---
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1523869903/grid_v0olru.png)
-_Hình minh họa đẹp lồng lộn từ [Vườn Illustration](https://www.behance.net/gallery/42386173/Tran-Dang-Khoa-Picture-Book) (có chỉnh sửa)_
+_Hình minh họa đẹp xuất sắc từ [Vườn Illustration](https://www.behance.net/gallery/42386173/Tran-Dang-Khoa-Picture-Book) (có chỉnh sửa)_
 
 Ở [bài viết trước](https://ehkoo.com/bai-viet/can-ban-css-grid-phan-1/), Ehkoo đã giới thiệu với bạn cách sử dụng grid căn bản. Chúng ta đã biết cách tạo một grid, quy định số dòng/cột trong grid, thiết lập khoảng cách giữa các dòng/cột, và sắp xếp các phần tử trong grid theo ý muốn.
 
