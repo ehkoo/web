@@ -236,4 +236,4 @@ Một ví dụ khác có phần phức tạp hơn.
 
 ### Tạm kết
 
-Trên đây là cách sử dụng một số thuộc tính cơ bản nhất của CSS Grid. Trong bài sau chúng ta sẽ nói thêm về những thuộc tính khác, đồng thời xem xét các cách sử dụng CSS Grid nâng cao. Bạn hãy đón đọc nhé!
+Trên đây là cách sử dụng một số thuộc tính cơ bản nhất của CSS Grid. [Trong bài sau] (https://ehkoo.com/bai-viet/can-ban-css-grid-phan-2) chúng ta sẽ nói thêm về những thuộc tính khác, đồng thời xem xét các cách sử dụng CSS Grid nâng cao. Bạn hãy đón đọc nhé!
