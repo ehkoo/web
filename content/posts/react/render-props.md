@@ -3,7 +3,7 @@ layout: post.njk
 title: Tái sử dụng code với Render Prop trong ReactJS
 slug: render-prop-thay-cho-higher-order-component-reactjs
 date: 2017-11-08
-cover: http://res.cloudinary.com/duqeezi8j/image/upload/v1523017015/react_odxssl.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1523017015/react_odxssl.jpg
 tags: React, Higher Order Components, Render Prop
 excerpt: Render Prop là một hướng tiếp cận khác, bên cạnh Higher-Order Components, để giải quyết vấn đề tái sử dụng code trong ReactJS.
 author: kcjpop
