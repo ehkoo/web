@@ -107,27 +107,27 @@ svg {
 
 .content h1 {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .content h2 {
   font-size: 2.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .content h3 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .content h4 {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .content h5 {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .content h6 {
@@ -153,6 +153,10 @@ svg {
 
 .content .bn {
   border: none;
+}
+
+.content iframe {
+  min-height: 400px;
 }
 
 @media screen and (min-width: 60em) {
