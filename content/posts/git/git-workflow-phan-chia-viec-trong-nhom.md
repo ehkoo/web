@@ -21,6 +21,8 @@ _Nhìn hình này bạn có thấy quen không (nguồn: Xebia.com)?_
 
 Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nho nhỏ xinh xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
 
+_**Ngoài lề:** Bạn đừng bỏ qua bài viết [Tăng hiệu suất sử dụng git với git alias](https://ehkoo.com/bai-viet/tang-hieu-suat-su-dung-git-voi-git-alias)_
+
 ### Vậy, vứn đề chính ở đây là gì?
 
 Không có gì nghiêm trọng cả, chỉ là chúng ta chưa có một quy ước phân chia nhánh (branch) hợp lý thôi. So với các chương trình quản lý phiên bản khác như SVN, khả năng phân nhánh của Git phải nói là siêu nhẹ và cực kì dễ dàng. Do đó, bạn có thể chia dự án thành 2 nhánh chính:
@@ -65,7 +67,7 @@ git checkout -b login dev
 
 Nhánh này dưới quyền cai quản của bạn, nên mặc sức muốn làm gì thì làm nhé. Hãy commit thường xuyên, dù chỉ là những thay đổi nhỏ nhất. Cũng đừng ngần ngại rằng commit nhỏ sẽ khiến `git log` khó theo dõi. Chúng ta sẽ có cách xử lý chúng sau.
 
-> **Câu hỏi:** Ê, lỡ như có hai hay nhiều người cùng làm chung một tính năng thì sao?
+> **Câu hỏi: Ê, lỡ như có hai hay nhiều người cùng làm chung một tính năng thì sao?**
 > Nếu vậy, bạn có thể tiếp tục chia nhỏ hơn nữa, để đảm bảo mỗi người làm việc trên một nhánh độc lập. Cũng theo kinh nghiệm riêng của Ehkoo, thì một tính năng _to_ sẽ có nhiều nhất là 2-3 người cùng phát triển. Nếu vượt quá con số này, thì nên xem lại định nghĩa và cách phân chia việc cho tính năng đó.
 
 ### Chuẩn bị merge vào `dev`
@@ -114,8 +116,10 @@ Nếu xảy ra xung đột code, bạn có thể phát hiện và giải quyết
 
 Sau khi giải quyết hết các xung đột trong code, bạn chạy `git rebase --continue` để tiếp tục tiến trình rebase. Bạn cũng có thể chạy `git rebase --abort` để hủy bỏ rebase và đưa nhánh `login` về lại trạng thái ban đầu.
 
-> **Mách nhỏ:** Một cách giúp cho việc giải quyết xung đột trong code dễ dàng hơn là dùng `git mergetool`. Có rất nhiều công cụ hỗ trợ, và [Meld](http://meldmerge.org/) là một trong số đó.
-> Nếu chưa quen rebase, bạn có thể tạo một branch mới từ `login`, ví dụ: `git checkout -b test login`, và tiến hành rebase trên branch này. Sau khi chắc chắn là mọi thứ ổn thỏa, bạn có thể quay lại và tiến hành rebase cho `login`.
+> **Mách nhỏ:**
+> Một cách giúp cho việc giải quyết xung đột trong code dễ dàng hơn là dùng `git mergetool`. Có rất nhiều công cụ hỗ trợ, và [Meld](http://meldmerge.org/) là một trong số đó.
+
+Nếu chưa quen rebase, bạn có thể tạo một branch mới từ `login`, ví dụ: `git checkout -b test login`, và tiến hành rebase trên branch này. Sau khi chắc chắn là mọi thứ ổn thỏa, bạn có thể quay lại và tiến hành rebase cho `login`.
 
 Khi rebase xong, mong là history của bạn trông sẽ giống như thế này:
 
@@ -238,7 +242,7 @@ Tùy vào tình hình cụ thể của team mà bạn quyết định có cần 
 
 Nếu bạn theo chuẩn `rebase, squash và merge` thì chuyện viết commit message tốt rất quan trọng, vì nó sẽ là tài liệu để mô tả toàn bộ một tính năng. Nhưng nên viết thế nào? Có một vài gợi ý cho bạn đây:
 
-* Dòng đầu tiên không dài quá 80 chữ, luôn bắt đầu bằng động từ ở thì hiện tại, ngắn gọn súc tích, ví dụ: _ Add module Authentication_. Bạn có thể chọn thêm tiền tố nếu cần thiết, chẳng hạn: _Feature: Add module Authentication_ hay _Fix: unable to get location params from URL_
+* Dòng đầu tiên không dài quá 80 chữ, luôn bắt đầu bằng động từ ở thì hiện tại, ngắn gọn súc tích, ví dụ: _Add module Authentication_. Bạn có thể chọn thêm tiền tố nếu cần thiết, chẳng hạn: _Feature: Add module Authentication_ hay _Fix: unable to get location params from URL_
 * Bỏ trống hai dòng
 * Sau đó mô tả chi tiết về tính năng đang làm, những điểm cần lưu ý, phần nào của tính năng cần được cải thiện...
 * Khuyến khích bạn kèm theo chữ ký _signature_ khi commit bằng `git commit -s`
@@ -285,7 +289,7 @@ Chúng ta có thể tóm tắt bài này lại như sau:
 * Các nhánh tính năng được chia ra từ `dev`, phát triển độc lập, được rebase trước khi merge lại vào `dev`
 * Rebase có thể thay đổi một chút history, hoặc squash lại thành một commit duy nhất
 * Merge có thể là fast-forward hoặc non-fast-forward
-* `dev` sẽ được merge vào `master` mỗi khi triển khai
+* `dev` sẽ được merge vào `master` mỗi khi triển khai. Trường hợp có `staging`, `dev` sẽ được merge vào `staging`, và `staging` sẽ được merge vào `master`.
 * Các nhánh hotfix sẽ được chia ra từ `master`, sau đó `merge --no-ff` vào `master` và `dev`
 
 Dĩ nhiên bài viết này chỉ mang tính tham khảo, vì mỗi team mỗi công ty sẽ có những cách làm riêng. Tuy nhiên, nếu bạn không may lâm vào cảnh trái ngang như ở đầu bài, thì đây là một workflow rất nên nghiên cứu và áp dụng. Mong rằng trong tương lai, dự án của bạn sẽ không trở thành "kim tự tháp" như hình dưới đây.
