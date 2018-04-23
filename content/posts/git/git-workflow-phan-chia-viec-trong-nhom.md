@@ -227,7 +227,7 @@ Bạn push, và chuông điện thoại lại vang lên...
 
 #### Có cần nhánh `staging` không?
 
-Một số dự án, ngoài dev, còn có một đội ngũ "thần bí" được gọi là QA/QC. Họ được sinh ra trong team là để bới lỗi của anh em nhà dev, nên quan hệ đôi bên không được tình thương mến thương cho lắm. Dầu vậy, họ vẫn cần một nhánh riêng có tên gọi `staging`. Nhánh này sẽ chứa phần code ở giữa `master` và `dev`. `staging` được tách ra từ `dev`, có nhiều tính năng hơn `master`, và tương đối ổn định để có thể merge vào `master`.
+Trong một số dự án, ngoài dev, còn có một đội ngũ "thần bí" được gọi là QA/QC. Họ được sinh ra trong team là để bới lỗi của anh em nhà dev, nên quan hệ đôi bên không được tình thương mến thương cho lắm. Dầu vậy, họ vẫn cần một nhánh riêng có tên gọi `staging`. Nhánh này sẽ chứa phần code ở giữa `master` và `dev`. `staging` được tách ra từ `dev`, có nhiều tính năng hơn `master`, và tương đối ổn định để có thể merge vào `master`.
 
 <script async src="//jsfiddle.net/0agufwbv/6/embed/result/"></script>
 
@@ -239,7 +239,7 @@ _TBA_
 
 #### Có nên tag version hay không?
 
-Câu trả lời là _HÊN XUI_, tùy tính chất từng team. Nếu tần suất triển khai code từ `master` của team không cao, khoảng vài tháng/lần thì tag version là cách tốt để theo dõi những thay đổi.
+Câu trả lời là: _HÊN XUI_, tùy tính chất từng team. Nếu tần suất triển khai code từ `master` của team không cao, khoảng vài tháng/lần thì tag version là cách tốt để theo dõi những thay đổi.
 
 Còn nếu team bạn theo chuẩn "move fast, break things", thì có lẽ không cần tag version đâu. Thêm nữa, để tag version phát huy hiệu quả tối đa, thì _CHANGELOG_ cần phải được viết kỹ càng.
 
