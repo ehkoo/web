@@ -16,9 +16,9 @@ Ngờ đâu sếp (hoặc co-founder) xót thương bạn vất vả, bèn tuy�
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524414315/git-merge-hell-smaller_lxhizg.png)
 _Nhìn hình này bạn có thấy quen không (nguồn: Xebia.com)?_
 
-Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nho nhỏ xinh xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
+Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nhỏ xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
 
-### Vậy vứn đề ở đây là gì?
+### Vậy, vứn đề chính ở đây là gì?
 
 Không có gì nghiêm trọng cả, chỉ là chúng ta chưa có một quy ước phân chia nhánh (branch) hợp lý thôi. So với các chương trình quản lý phiên bản khác như SVN, khả năng phân nhánh của Git phải nói là siêu nhẹ và cực kì dễ dàng. Do đó, bạn có thể chia dự án thành 2 nhánh chính:
 
