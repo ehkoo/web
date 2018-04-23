@@ -1,42 +1,42 @@
 ---
 layout: post.njk
-title: Phân nhánh và chia việc trong nhóm với git
+title: Cách phân nhánh và chia việc trong nhóm với Git
 slug: git-workflow-phan-nhanh-va-chia-viec-trong-nhom
 date: 2018-04-22
 tags: git, Dành cho người mới
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1524412631/dedicated-developers-team-99_xcifp3.jpg
-excerpt: Bằng cách làm theo các bước trong bài viết này, khả năng cao là team của bạn không còn phải vò đầu bứt tai lôi nhau ra cắn xé mỗi khi code bị xung đột với nhau.
+excerpt: Cứ tuần tự làm theo từng bước này, đảm bảo team của bạn sẽ không phải vò đầu bứt tai cấu xé nhau vì code chồng chéo, dự án banh chành nữa ahihi.
 author: kcjpop
 editor: chubbyanh
 ---
-Bạn là lập trình viên trong một dự án nọ. Công ty startup nên ít người, chỉ có bạn là tech nên bạn "ba đầu sáu tay" làm tất cả mọi chuyện. Một ngày làm việc của bạn diễn ra hoàn toàn bình thường: viết code băng băng tốc độ 500 dòng/giờ, code mới ra commit liên tục vào `master`, đến cuối ngày thì `git push`, tắt máy và gọi điện rủ gấu đi nhậu (hoặc ít êm đẹp hơn, băng rừng vượt suối về nhà thay tã cho con). Bạn cảm thấy mình thật giỏi.
+Bạn vốn một mình một cõi, “thầu nguyên con” dự án. Dù phải code sấp mặt 500 dòng/giờ, nhưng cuộc đời vẫn thật êm xuôi: commit code mới pặc pặc vào `master`, cuối ngày chỉ việc `git push`, tắt máy, rồi dắt gấu đi nhậu (hoặc lội suối băng đèo về nhà thay tã cho con).
 
-Cho đến một hôm, sếp (hoặc đồng sáng lập với bạn) thương quá quyết định tuyển thêm 2 em lập trình viên "mầm non" vào giúp bạn. Và rồi mọi chuyện bắt đầu phức tạp lên xíu: code trong team bị chồng chéo và xung đột liên tục, branch `master` đang thẳng tắp xinh đẹp bỗng nhiên phân nhánh như điên, tốc độ code của bạn giảm trong khi tốc độ văng tục tăng nhanh. Bạn không còn thời gian đi nhậu với gấu, con bạn bị thâm mông vì bạn không về thay tã kịp. Bế tắc.
+Ngờ đâu sếp (hoặc co-founder) xót thương bạn vất vả, bèn tuyển ngay 2 em đào nhí vào trợ giúp. Và mọi chuyện bắt đầu phức tạp từ đây: code trong team bị chồng chéo và xung đột liên tục, branch `master` đang thẳng thớm đẹp xinh bỗng phân nhánh như điên, tốc độ code của bạn giảm trong khi tốc độ chửi thề ngày một tăng nhanh. Bạn không còn thời giờ dắt gấu đi nhậu, cũng không thể lội kịp về nhà thay tã cho con nữa. Cuộc đời bế tắc.   
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524414315/git-merge-hell-smaller_lxhizg.png)
 _Nhìn hình này bạn có thấy quen không (nguồn: Xebia.com)?_
 
-Bài viết này xin chia sẻ với bạn một số quy ước khi sử dụng git trong team nho nhỏ vừa vừa, giúp bạn tránh tình trạng "giẫm phải chân nhau", làm việc hiệu quả hơn, đồng thời xây dựng tình đồng nghiệp thêm khắng "khít".
+Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nho nhỏ xinh xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
 
 ### Vậy vứn đề ở đây là gì?
 
-Không có gì nghiêm trọng cả, chỉ là chúng ta chưa có một quy ước phân chia nhánh (branch) hợp lý thôi. So với các chương trình quản lý phiên bản khác như SVN, khả năng phân nhánh của git phải nói là siêu nhẹ và cực kì dễ dàng. Do đó bạn có thể chia dự án thành 2 nhánh chính:
+Không có gì nghiêm trọng cả, chỉ là chúng ta chưa có một quy ước phân chia nhánh (branch) hợp lý thôi. So với các chương trình quản lý phiên bản khác như SVN, khả năng phân nhánh của Git phải nói là siêu nhẹ và cực kì dễ dàng. Do đó, bạn có thể chia dự án thành 2 nhánh chính:
 
 * `master`
 * `dev`
 
 Nhánh `master` sẽ là nơi chứa phần code **ổn định nhất**, sẵn sàng để triển khai bất cứ lúc nào. Trong khi đó, nhánh `dev` ban đầu được tách ra từ `master`, và sẽ chứa phần code **mới nhất** được phát triển.
 
-> **Nói nhỏ:** Một số tài liệu sẽ đặt tên nhánh `develop`. Bạn thích đặt tên gì cũng được, chỉ là `dev` thì gõ nhanh hơn `develop` thôi.
+> **Nói nhỏ:** Một số tài liệu sẽ đặt tên nhánh tách ra là `develop`. Tùy bạn chọn tên gì cũng được, nhưng theo Ehkoo thì gõ `dev` nhanh hơn gõ `develop` :p
 
 **Nhắc bài chút xíu**
-Để tạo nhánh mới trong git, bạn dùng lệnh.
+Để tạo nhánh mới trong Git, bạn dùng lệnh:
 
 ```bash
 git checkout -b <tên nhánh mới> [nhánh gốc]
 ```
 
-Chẳng hạn như, để tạo nhánh `develop`  từ `master` bạn gõ `git checkout -b develop master`. Nếu không cung cấp tham số `[nhánh gốc]`, nhánh mới tạo sẽ dựa trên nhánh hiện tại bạn đang ở. Để xem nhánh hiện tại là nhánh nào, bạn có thể dùng lệnh.
+Chẳng hạn, để tạo nhánh `develop` từ `master`, bạn gõ `git checkout -b develop master`. Nếu không cung cấp tham số `[nhánh gốc]`, nhánh mới tạo sẽ dựa trên nhánh hiện tại bạn đang ở. Để xem nhánh hiện tại là nhánh nào, bạn có thể dùng lệnh:
 
 ```bash
 $ git branch
@@ -60,20 +60,20 @@ git checkout -b login dev
 ```
 
 > **Đặt tên nhánh là gì đây?**
-> Cái này thì tùy bạn thôi. Một số tài liệu sẽ khuyến khích bạn dùng tiền tố `feature/<tên tính năng>` để dễ phân biệt, nhưng theo kinh nghiệm thì ngầm định là ngoài nhánh `master`, `dev`, và các nhánh `fix-xxx`, tất cả các nhánh còn lại đều là nhánh chức năng.
+> Tùy bạn. Một số tài liệu sẽ khuyến khích bạn dùng tiền tố `feature/<tên tính năng>` để dễ phân biệt. Nhưng theo kinh nghiệm của Ehkoo, ngoài nhánh `master`, `dev`, và các nhánh `fix-xxx`, thì tất cả các nhánh còn lại đều có thể ngầm hiểu là nhánh chức năng.
 
-Bạn là vua của nhánh này, nên tha hồ muốn làm gì thì làm nhé. Hãy commit thường xuyên, cho dù là với thay đổi nhỏ nhất. Bạn đừng ngại những commit nhỏ sẽ làm cho `git log` khó theo dõi. Chúng ta sẽ xem cách xử lý chúng sau.
+Nhánh này dưới quyền cai quản của bạn, nên mặc sức muốn làm gì thì làm nhé. Hãy commit thường xuyên, dù chỉ là những thay đổi nhỏ nhất. Cũng đừng ngần ngại rằng commit nhỏ sẽ khiến `git log` khó theo dõi. Chúng ta sẽ có cách xử lý chúng sau.
 
-> **Câu hỏi:** Lỡ có hai hay nhiều người cùng làm chung một tính năng thì sao?
-> Trường hợp này bạn có thể tiếp tục chia nhỏ nữa, sao cho mỗi người có thể làm việc trên một nhánh độc lập. Theo kinh nghiệm cá nhân, thường một tính năng _to_ sẽ có nhiều nhất là 2-3 người cùng phát triển. Nếu nhiều hơn con số này, cần phải xem lại định nghĩa và cách phân chia cho tính năng đó.
+> **Câu hỏi:** Ê, lỡ như có hai hay nhiều người cùng làm chung một tính năng thì sao?
+> Nếu vậy, bạn có thể tiếp tục chia nhỏ hơn nữa, để đảm bảo mỗi người làm việc trên một nhánh độc lập. Cũng theo kinh nghiệm riêng của Ehkoo, thì một tính năng _to_ sẽ có nhiều nhất là 2-3 người cùng phát triển. Nếu vượt quá con số này, thì nên xem lại định nghĩa và cách phân chia cho tính năng đó.
 
 ### Chuẩn bị merge vào `dev`
 
-Sau khi code hoàn tất và tất cả unit tests đã chạy thành công, giờ là lúc bạn merge/gửi code để review tính năng mới vào `dev`. Có thể có 2 trường hợp xảy ra:
+Sau khi code hoàn tất và tất cả unit tests đã chạy thành công, giờ là lúc bạn merge/gửi code để review tính năng mới vào `dev`. Thông thường, sẽ có 2 trường hợp xảy ra:
 
 **Trường hợp 1: Không có gì mới trong `dev`**
 
-Giả sử lúc đó git history của dự án giống như thế này.
+Giả sử lúc đó Git history của dự án giống như thế này:
 
 <script async src="//jsfiddle.net/r7rp7sp5/31/embed/result/"></script>
 
@@ -83,11 +83,11 @@ Như bạn thấy, nhánh `login` màu vàng được rẽ ra từ nhánh `dev` 
 
 <script async src="//jsfiddle.net/r7rp7sp5/30/embed/result/"></script>
 
-Trong trường hợp này, branch `dev` (màu xanh) đang có 2 commits phía trước branch `login` (màu vàng). Nếu trong 2 commits đó có chứa thay đổi liên quan đến `dev`, chẳng hạn như `package.json`, thì khả năng cao là sẽ xảy ra xung đột khi merge trực tiếp `login` vào. Trong trường hợp may mắn không có xung đột code thì merge vào cũng làm xấu đi history.
+Trong trường hợp này, branch `dev` (màu xanh) đang có 2 commits phía trước branch `login` (màu vàng). Nếu trong 2 commits đó có chứa thay đổi liên quan đến `dev`, chẳng hạn như `package.json`, thì khả năng cao là sẽ xảy ra xung đột khi merge trực tiếp `login` vào. Mà dù có may mắn không xảy ra xung đột code, thì merge vào cũng sẽ làm history xấu đi.
 
 <script async src="//jsfiddle.net/r7rp7sp5/33/embed/result/"></script>
 
-Do đó, chúng ta cần sẽ sửa lại history của nhánh `login` bằng cách dùng `git rebase`.
+Do đó, chúng ta sẽ cần sửa lại history của nhánh `login` bằng cách dùng `git rebase`.
 
 #### git rebase là gì?
 
@@ -114,9 +114,9 @@ Nếu xảy ra xung đột code, bạn có thể phát hiện và giải quyết
 Sau khi giải quyết hết các xung đột, bạn chạy `git rebase --continue` để tiếp tục tiến trình rebase. Bạn cũng có thể chạy `git rebase --abort` để hủy bỏ rebase và đưa nhánh `login` về lại trạng thái ban đầu.
 
 > **Mách nhỏ:** Một cách giúp cho việc giải quyết xung đột trong code dễ dàng hơn là dùng `git mergetool`. Có rất nhiều công cụ hỗ trợ, và [Meld](http://meldmerge.org/) là một trong số đó.
-> Nếu bạn chưa quen rebase, bạn có thể tạo một branch mới từ `login`, `git checkout -b test login` chẳng hạn, và tiến hành rebase trên branch này. Sau khi đã chắc chắn mọi thứ ổn thỏa, bạn có thể quay lại và tiến hành rebase cho `login`.
+> Nếu chưa quen rebase, bạn có thể tạo một branch mới từ `login`, ví dụ: `git checkout -b test login`, và tiến hành rebase trên branch này. Sau khi chắc chắn là mọi thứ ổn thỏa, bạn có thể quay lại và tiến hành rebase cho `login`.
 
-Sau khi rebase xong, hi vọng history của bạn sẽ giống như thế này:
+Khi rebase xong, mong là history của bạn trông sẽ giống như thế này:
 
 <script async src="//jsfiddle.net/r7rp7sp5/32/embed/result/"></script>
 
@@ -124,7 +124,7 @@ Bạn thấy quen không? Chính là trường hợp 1 đã nói ở trên đó.
 
 #### rebase interactively
 
-Ở phần trên chúng ta có nói đến việc commit thường xuyên sẽ tạo ra nhiều commit nhỏ và đôi khi chúng không cần thiết. Bạn có thể dùng git rebase để dọn dẹp chúng bằng cách thêm vào tham số `-i` (interactively) như sau:
+Ở phần trên, chúng ta có băn khoăn là commit thường xuyên dễ tạo ra nhiều commit nhỏ đôi khi không cần thiết. Bạn có thể dùng git rebase để dọn dẹp chúng bằng cách thêm tham số `-i` (interactively) như sau:
 
 ```bash
 # Chắc chắn rằng bạn đang ở nhánh `login`
@@ -148,7 +148,7 @@ pick 49c423a Clean up UI a bit
 pick 3aa2840 Init
 ```
 
-Theo lý thuyết, rebase sẽ đem từng commit và áp dụng lại theo thứ tự từ trên xuống dưới. Do đó bạn có thể thoải mái sắp xếp lại thứ tự của các commits trên. Bạn để ý lệnh `pick` ở phía trước mỗi commit. Lệnh này sẽ báo cho git biết hành động bạn muốn làm với commit, trong trường hợp này là sử dụng áp dụng lại commit. Ngoài `pick` chúng ta còn có:
+Theo lý thuyết, rebase sẽ đem từng commit và áp dụng lại theo thứ tự từ trên xuống dưới. Bởi vậy, bạn có thể thoải mái sắp xếp lại thứ tự của các commits trên. Bạn để ý lệnh `pick` ở phía trước mỗi commit. Lệnh này sẽ báo cho git biết hành động bạn muốn làm với commit, trong trường hợp này là áp dụng lại commit. Ngoài `pick`, chúng ta còn có:
 
 * `reword (r)`: áp dụng lại commit, và sửa commit message
 * `edit (e)`: áp dụng commit, nhưng dừng quá trình rebase lại để sửa code
@@ -164,11 +164,11 @@ Bằng cách dùng rebase interactively, chúng ta có thêm nhiều quyền đ�
 
 ### Merge vào `dev`
 
-Sau khi dọn dẹp nhánh `login` cho sạch đẹp, chúng ta đã có thể tiến hành merge nhánh này vào `dev`. Thông thường bạn, lập trình viên ngôi sao, sẽ là người tiến hành kiểm tra và merge. Bạn có thể chọn hai cách tiếp cận:
+Sau khi dọn dẹp nhánh `login` sạch đẹp, chúng ta có thể merge nhánh này vào `dev`. Thông thường, bạn - dev cứng nhất team - sẽ là người tiến hành kiểm tra và merge. Bạn có thể chọn hai cách tiếp cận:
 
 #### merge
 
-Khi merge, bạn có thể merge trực tiếp vào `dev` như thế này:
+Bạn có thể merge trực tiếp vào `dev` như thế này:
 
 ```bash
 # Chuyển qua nhánh `dev`
@@ -195,13 +195,13 @@ Và đây là kết quả:
 
 <script async src="//jsfiddle.net/r7rp7sp5/35/embed/result/"></script>
 
-Tất cả commits của `login` đã được kết hợp vào `dev`. `login` biến mất khỏi thế gian như chưa hề tồn tại. SAD!
+Tất cả commits của `login` đã được kết hợp vào `dev`. Boom! `login` biến mất khỏi thế gian như chưa hề tồn tại. SAD!
 
-Lợi ích dễ thấy nhất của `merge non-fast-forward` là giúp cho history của bạn thẳng thóm gọn gàng, và bất lợi là bạn không phân biệt được commits nào là của nhánh tính năng, cũng như thời điểm merge diễn ra. Trong trường hợp nhánh tính năng có quá nhiều commits nhỏ và dư thừa, chẳng hạn như những commits sửa lỗi chính tả, cập nhật thư viện..., history của bạn sẽ bị nhiễu.
+Lợi ích dễ thấy nhất của `merge non-fast-forward` là giúp cho history của bạn thẳng thớm gọn gàng, còn bất lợi là bạn không phân biệt được commits nào là của nhánh tính năng, cũng như thời điểm merge diễn ra. Trong trường hợp nhánh tính năng có quá nhiều commits nhỏ và dư thừa, chẳng hạn như những commits sửa lỗi chính tả, cập nhật thư viện..., history của bạn sẽ bị nhiễu.
 
 #### rebase, squash và merge
 
-Ngoài cách merge các commits của nhánh tính năng vào `dev`, bạn có thể rebase và squash tất cả commits lại làm một, sau đó tiến hành merge. Cách làm này giúp cho `dev` luôn ở trạng thái gọn gàng nhất và không chứa commit dư thừa. Trường hợp lý tưởng, history của `dev` sẽ giống như sau.
+Ngoài cách merge các commits của nhánh tính năng vào `dev`, bạn có thể rebase và squash tất cả commits lại làm một, sau đó tiến hành merge. Cách làm này giúp cho `dev` luôn ở trạng thái gọn gàng nhất, không chứa commit dư thừa. Trong trường hợp lý tưởng, history của `dev` sẽ giống như sau:
 
 <script async src="//jsfiddle.net/0agufwbv/5/embed/result/"></script>
 
@@ -209,27 +209,29 @@ Ngoài cách merge các commits của nhánh tính năng vào `dev`, bạn có t
 
 ### Merge vào `master`
 
-Sau một thời gian quằn quại, cuối cùng team của bạn cũng đã ra được sản phẩm tương đối ổn. Đã đến lúc merge vào `master` và triển khai lên server. Lúc này cũng như khi merge vào `dev`, bạn có thể chọn `merge` (fast-forward hoặc non-fast-forward) hay `rebase, squash và merge`, nhưng theo kinh nghiệm cá nhân, `merge --no-ff` sẽ là lựa chọn tốt nhất, giúp cho `master` và `dev` luôn song song với nhau.
+Yay! Sau một thời gian quằn quại, cuối cùng team của bạn đã ra được sản phẩm tương đối ổn. Giờ là lúc merge vào `master` và triển khai lên server.
+
+Lúc này, cũng như khi merge vào `dev`, bạn có thể chọn `merge` (fast-forward hoặc non-fast-forward) hay `rebase, squash và merge`, nhưng theo kinh nghiệm của Ehkoo, `merge --no-ff` sẽ là lựa chọn tốt nhất, giúp cho `master` và `dev` luôn song song với nhau.
 
 ### Hotfix
 
-Hôm nay là thứ 6, ngày 1X. Bạn chạy `npm run build` rồi `rsync` code ở `master` lên server. Mọi thứ hoàn toàn bình thường. Bạn vào website, click vài cái, "chạy", bạn thầm nghĩ. "Ngon rồi, nhậu thôi", bạn khoan khoái vươn vai chuẩn bị gọi điện cho gấu thì "ò e ò e", chuông điện thoại vang lên. "Số của sếp, chắc gọi khen mình đây!" Bạn bắt máy và chợt nghe giọng sếp âu yếm: "lỗi rồi".
+Hôm nay, thứ 6, ngày 1X. Bạn chạy `npm run build` rồi `rsync` code ở `master` lên server. Mọi thứ hoàn toàn bình thường. Bạn vào website, click vài cái. "Ngon, chạy rồi", bạn thầm nghĩ, "đi nhậu thoy!" Nhưng vừa vươn vai định gọi điện cho gấu, thì "ó e ò e", chuông điện thoại reng, số máy của sếp. "Hí hí, chắc được thưởng nóng chăng?" Bạn bắt máy, và nghe giọng sếp âu yếm GẦM ở đầu dây: "LỖI RỒI MÁ Á Á!!!"
 
-Trong trường hợp này, hãy thật bình tĩnh và tạo một branch mới từ `master`, `fix-xxx` chẳng hạn. Sau khi nghe sếp dặn dò, bạn mò trong đống code và phát hiện ra lỗi trong vòng 1 nốt nhạc (vì bạn là lập trình viên ngôi sao mà). Bạn rủa thầm ku "mầm non" viết code không kỹ, đồng thời chửi rủa bản thân review sót. Thôi kệ, dù sao cũng nên sửa nhanh rồi về.
+Xin đừng trụy tim. Hãy hít một hơi thật sâu, rồi bình tĩnh tạo một branch mới từ `master`, `fix-xxx` chẳng hạn. Nhờ lắng nghe tiếng sếp gầm, bạn đã mau chóng mò ra lỗi trong đống code (vì bạn là dev cứng mà hihi). Bạn khẽ rủa thầm ku đào nhí viết code không kĩ, tự rủa nhẹ bản thân vì review sót. Nhưng thôi kệ, fix nhanh rồi còn về, kẻo gấu xé xác T^T.
 
-Bạn `merge --no-ff` nhánh `fix-xxx` vào cả hai nhánh `master` và `dev`. Bằng cách này, phần sửa lỗi sẽ xuất hiện ở cả hai branches, giúp history không bị rẽ nhánh bất ngờ.
+Bạn bèn `merge --no-ff` nhánh `fix-xxx` vào cả hai nhánh `master` và `dev`. Bằng cách này, phần sửa lỗi sẽ xuất hiện ở cả hai branches, giúp history không bị rẽ nhánh bất ngờ.
 
-Bạn push và chuông điện thoại lại vang lên...
+Bạn push, và chuông điện thoại lại vang lên...
 
 ### Vài vấn đề linh tinh khác
 
 #### Có cần nhánh `staging` không?
 
-Trong một số dự án có tồn tại một đội ngũ gọi là QC hay QA. Nhóm này thường là kẻ thù của anh chị em dev nên hai bên thường không hữu hảo cho lắm. Dù sao, họ cũng sẽ cần một nhánh riêng gọi là `staging`. Nhánh này sẽ chứa phần code ở giữa `master` và `dev`. `staging` được tách ra từ `dev`, có nhiều tính năng hơn `master` và tương đối ổn định để có thể merge vào `master`.
+Một số dự án, ngoài dev, còn có một đội ngũ "thần bí" được gọi là QA/QC. Họ được sinh ra trong team là để bới lỗi của anh em nhà dev, nên quan hệ đôi bên không được tình thương mến thương cho lắm. Dầu vậy, họ vẫn cần một nhánh riêng có tên gọi `staging`. Nhánh này sẽ chứa phần code ở giữa `master` và `dev`. `staging` được tách ra từ `dev`, có nhiều tính năng hơn `master`, và tương đối ổn định để có thể merge vào `master`.
 
 <script async src="//jsfiddle.net/0agufwbv/6/embed/result/"></script>
 
-Tùy vào tính chất của team mà bạn có thể quyết định có `staging` hay không.
+Tùy vào tình hình cụ thể của team mà bạn quyết định có cần `staging` hay không.
 
 #### Viết commit message như thế nào cho chuẩn?
 
@@ -237,7 +239,9 @@ _TBA_
 
 #### Có nên tag version hay không?
 
-Câu trả lời là _HÊN XUI_. Cái này lại tiếp tục tùy thuộc vào tính chất của team. Nếu tần suất triển khai code từ `master` của team không cao, khoảng vài tháng/lần thì tag version là cách tốt để theo dõi những thay đổi. Còn nếu team bạn theo chuẩn "move fast, break things" thì có lẽ không cần tag version đâu. Với nữa, để tag version phát huy hiệu quả tối đa, cần thiết _CHANGELOG_ phải được viết kỹ càng.
+Câu trả lời là _HÊN XUI_, tùy tính chất từng team. Nếu tần suất triển khai code từ `master` của team không cao, khoảng vài tháng/lần thì tag version là cách tốt để theo dõi những thay đổi.
+
+Còn nếu team bạn theo chuẩn "move fast, break things", thì có lẽ không cần tag version đâu. Thêm nữa, để tag version phát huy hiệu quả tối đa, thì _CHANGELOG_ cần phải được viết kỹ càng.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524474052/tumblr_lc63ingGof1qz6pqio1_500_mybavi.png)
 _Already broken_
@@ -253,6 +257,6 @@ Chúng ta có thể tóm tắt bài này lại như sau:
 * `dev` sẽ được merge vào `master` mỗi khi triển khai
 * Các nhánh hotfix sẽ được chia ra từ `master`, sau đó `merge --no-ff` vào `master` và `dev`
 
-Dĩ nhiên bài viết này chỉ mang tính tham khảo, vì với mỗi team mỗi công ty sẽ có những cách làm riêng. Nhưng nếu bạn rơi vào trường hợp như ở đầu bài thì đây là một workflow để bạn nghiên cứu và áp dụng. Mong là trong tương lai, dự án của bạn sẽ không trở thành "kim tự tháp" như hình dưới đây.
+Dĩ nhiên bài viết này chỉ mang tính tham khảo, vì mỗi team mỗi công ty sẽ có những cách làm riêng. Tuy nhiên, nếu bạn không may lâm vào cảnh trái ngang như ở đầu bài, thì đây là một workflow rất nên nghiên cứu và áp dụng. Mong rằng trong tương lai, dự án của bạn sẽ không trở thành "kim tự tháp" như hình dưới đây.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524414465/11406260_10204684523099229_6956873399787391385_o_mscrhf.jpg)
