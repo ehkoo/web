@@ -9,14 +9,14 @@ excerpt: Cứ tuần tự làm theo từng bước này, đảm bảo team của
 author: kcjpop
 editor: chubbyanh
 ---
-Bạn vốn một mình một cõi, “thầu nguyên con” dự án. Dù phải code sấp mặt 500 dòng/giờ, nhưng cuộc đời vẫn thật êm xuôi: commit code mới pặc pặc vào `master`, cuối ngày chỉ việc `git push`, tắt máy, rồi dắt gấu đi nhậu (hoặc lội suối băng đèo về nhà thay tã cho con).
+Bạn vốn làm việc một mình một cõi, “thầu nguyên con” dự án. Dù phải code sấp mặt nhưng cuộc đời vẫn thật êm xuôi: tốc độ thần thánh 500 dòng/giờ, commit code mới pặc pặc vào `master`, cuối ngày chỉ việc `git push`, tắt máy, rồi dắt gấu đi nhậu (hoặc lội suối băng đèo về nhà thay tã cho con).
 
-Ngờ đâu sếp (hoặc co-founder) xót thương bạn vất vả, bèn tuyển ngay 2 em đào nhí vào trợ giúp. Và mọi chuyện bắt đầu phức tạp từ đây: code trong team bị chồng chéo và xung đột liên tục, branch `master` đang thẳng thớm đẹp xinh bỗng phân nhánh như điên, tốc độ code của bạn giảm trong khi tốc độ chửi thề ngày một tăng nhanh. Bạn không còn thời giờ dắt gấu đi nhậu, cũng không thể lội kịp về nhà thay tã cho con nữa. Cuộc đời bế tắc.   
+Ngờ đâu sếp (hoặc co-founder) xót thương bạn vất vả, bèn tuyển ngay 2 em đào nhí vào trợ giúp. Và mọi chuyện bắt đầu phức tạp từ đây: code trong team bị chồng chéo và xung đột liên tục, branch `master` đang thẳng thớm đẹp xinh bỗng phân nhánh như điên, tốc độ code của bạn giảm trong khi tốc độ chửi thề ngày một tăng nhanh. Bạn không còn thời giờ dắt gấu đi nhậu, cũng không thể lội kịp về nhà thay tã cho con nữa. Cuộc đời bế tắc.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524414315/git-merge-hell-smaller_lxhizg.png)
 _Nhìn hình này bạn có thấy quen không (nguồn: Xebia.com)?_
 
-Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nhỏ xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
+Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nho nhỏ xinh xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
 
 ### Vậy, vứn đề chính ở đây là gì?
 
@@ -36,15 +36,13 @@ Nhánh `master` sẽ là nơi chứa phần code **ổn định nhất**, sẵn 
 git checkout -b <tên nhánh mới> [nhánh gốc]
 ```
 
-Chẳng hạn, để tạo nhánh `develop` từ `master`, bạn gõ `git checkout -b develop master`. Nếu không cung cấp tham số `[nhánh gốc]`, nhánh mới tạo sẽ dựa trên nhánh hiện tại bạn đang ở. Để xem nhánh hiện tại là nhánh nào, bạn có thể dùng lệnh:
+Chẳng hạn, để tạo nhánh `dev` từ `master`, bạn gõ `git checkout -b dev master`. Nếu không cung cấp tham số `[nhánh gốc]`, nhánh mới tạo sẽ dựa trên nhánh hiện tại bạn đang ở. Để xem nhánh hiện tại là nhánh nào, bạn có thể dùng lệnh `git branch`.
 
 ```bash
 $ git branch
   auth
-  auth-error-handlers
 * auth-session
   dev
-  ggmap
   graphql
   master
 ```
@@ -60,12 +58,12 @@ git checkout -b login dev
 ```
 
 > **Đặt tên nhánh là gì đây?**
-> Tùy bạn. Một số tài liệu sẽ khuyến khích bạn dùng tiền tố `feature/<tên tính năng>` để dễ phân biệt. Nhưng theo kinh nghiệm của Ehkoo, ngoài nhánh `master`, `dev`, và các nhánh `fix-xxx`, thì tất cả các nhánh còn lại đều có thể ngầm hiểu là nhánh chức năng.
+> Tùy bạn thôi. Một số tài liệu sẽ khuyến khích bạn dùng tiền tố `feature/<tên tính năng>` để dễ phân biệt. Nhưng theo kinh nghiệm của Ehkoo, ngoài nhánh `master`, `dev`, và các nhánh `fix-xxx`, thì tất cả các nhánh còn lại đều có thể ngầm hiểu là nhánh chức năng.
 
 Nhánh này dưới quyền cai quản của bạn, nên mặc sức muốn làm gì thì làm nhé. Hãy commit thường xuyên, dù chỉ là những thay đổi nhỏ nhất. Cũng đừng ngần ngại rằng commit nhỏ sẽ khiến `git log` khó theo dõi. Chúng ta sẽ có cách xử lý chúng sau.
 
 > **Câu hỏi:** Ê, lỡ như có hai hay nhiều người cùng làm chung một tính năng thì sao?
-> Nếu vậy, bạn có thể tiếp tục chia nhỏ hơn nữa, để đảm bảo mỗi người làm việc trên một nhánh độc lập. Cũng theo kinh nghiệm riêng của Ehkoo, thì một tính năng _to_ sẽ có nhiều nhất là 2-3 người cùng phát triển. Nếu vượt quá con số này, thì nên xem lại định nghĩa và cách phân chia cho tính năng đó.
+> Nếu vậy, bạn có thể tiếp tục chia nhỏ hơn nữa, để đảm bảo mỗi người làm việc trên một nhánh độc lập. Cũng theo kinh nghiệm riêng của Ehkoo, thì một tính năng _to_ sẽ có nhiều nhất là 2-3 người cùng phát triển. Nếu vượt quá con số này, thì nên xem lại định nghĩa và cách phân chia việc cho tính năng đó.
 
 ### Chuẩn bị merge vào `dev`
 
@@ -97,7 +95,7 @@ Do đó, chúng ta sẽ cần sửa lại history của nhánh `login` bằng c�
 git rebase <tên nhánh muốn áp dụng lại>
 ```
 
-Chúng ta sẽ chạy những lệnh sau:
+Trong trường hợp hiện tại, chúng ta sẽ chạy những lệnh sau:
 
 ```bash
 # Cập nhật repo hiện tại, đồng thời lấy về commits mới nhất của `dev`
@@ -111,7 +109,7 @@ git rebase dev
 
 Nếu xảy ra xung đột code, bạn có thể phát hiện và giải quyết chúng sớm. Nguyên tắc chung là không sửa code của người khác, và chỉ kết hợp thêm những gì bạn làm. Việc thực hiện rebase tại nhánh chức năng do bạn phụ trách giúp giảm thiểu khả năng mất code, vì bạn là người hiểu rõ nhất phần code bạn viết.
 
-Sau khi giải quyết hết các xung đột, bạn chạy `git rebase --continue` để tiếp tục tiến trình rebase. Bạn cũng có thể chạy `git rebase --abort` để hủy bỏ rebase và đưa nhánh `login` về lại trạng thái ban đầu.
+Sau khi giải quyết hết các xung đột trong code, bạn chạy `git rebase --continue` để tiếp tục tiến trình rebase. Bạn cũng có thể chạy `git rebase --abort` để hủy bỏ rebase và đưa nhánh `login` về lại trạng thái ban đầu.
 
 > **Mách nhỏ:** Một cách giúp cho việc giải quyết xung đột trong code dễ dàng hơn là dùng `git mergetool`. Có rất nhiều công cụ hỗ trợ, và [Meld](http://meldmerge.org/) là một trong số đó.
 > Nếu chưa quen rebase, bạn có thể tạo một branch mới từ `login`, ví dụ: `git checkout -b test login`, và tiến hành rebase trên branch này. Sau khi chắc chắn là mọi thứ ổn thỏa, bạn có thể quay lại và tiến hành rebase cho `login`.
@@ -148,7 +146,7 @@ pick 49c423a Clean up UI a bit
 pick 3aa2840 Init
 ```
 
-Theo lý thuyết, rebase sẽ đem từng commit và áp dụng lại theo thứ tự từ trên xuống dưới. Bởi vậy, bạn có thể thoải mái sắp xếp lại thứ tự của các commits trên. Bạn để ý lệnh `pick` ở phía trước mỗi commit. Lệnh này sẽ báo cho git biết hành động bạn muốn làm với commit, trong trường hợp này là áp dụng lại commit. Ngoài `pick`, chúng ta còn có:
+Theo lý thuyết, rebase sẽ đem từng commit và áp dụng lại theo thứ tự từ trên xuống dưới. Bởi vậy, bạn có thể thoải mái sắp xếp lại thứ tự của các commits trên. Bạn để ý lệnh `pick` ở phía trước mỗi commit. Lệnh này sẽ báo cho git biết hành động bạn muốn làm với commit, trong trường hợp này là áp dụng lại commit. Ngoài `pick (p)`, chúng ta còn có:
 
 * `reword (r)`: áp dụng lại commit, và sửa commit message
 * `edit (e)`: áp dụng commit, nhưng dừng quá trình rebase lại để sửa code
@@ -158,13 +156,13 @@ Theo lý thuyết, rebase sẽ đem từng commit và áp dụng lại theo th�
 * `drop (d)`: bỏ, không sử dụng commit này
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524470951/Peek_2018-04-23_11-06_zkqjpt.gif)
-_Bạn có thể dùng các chữ viết tắt cho command_
+_Bạn có thể dùng các chữ viết tắt cho các commands_
 
 Bằng cách dùng rebase interactively, chúng ta có thêm nhiều quyền để quản lý và sửa đổi commits theo ý mình, làm cho history sạch đẹp hơn.
 
 ### Merge vào `dev`
 
-Sau khi dọn dẹp nhánh `login` sạch đẹp, chúng ta có thể merge nhánh này vào `dev`. Thông thường, bạn - dev cứng nhất team - sẽ là người tiến hành kiểm tra và merge. Bạn có thể chọn hai cách tiếp cận:
+Sau khi dọn dẹp nhánh `login` sạch đẹp, chúng ta có thể merge nhánh này vào `dev`. Thông thường, bạn -- dev cứng nhất team -- sẽ là người tiến hành kiểm tra và merge. Bạn có thể chọn hai cách tiếp cận:
 
 #### merge
 
@@ -215,7 +213,7 @@ Lúc này, cũng như khi merge vào `dev`, bạn có thể chọn `merge` (fast
 
 ### Hotfix
 
-Hôm nay, thứ 6, ngày 1X. Bạn chạy `npm run build` rồi `rsync` code ở `master` lên server. Mọi thứ hoàn toàn bình thường. Bạn vào website, click vài cái. "Ngon, chạy rồi", bạn thầm nghĩ, "đi nhậu thoy!" Nhưng vừa vươn vai định gọi điện cho gấu, thì "ó e ò e", chuông điện thoại reng, số máy của sếp. "Hí hí, chắc được thưởng nóng chăng?" Bạn bắt máy, và nghe giọng sếp âu yếm GẦM ở đầu dây: "LỖI RỒI MÁ Á Á!!!"
+Hôm nay, thứ 6, ngày 1X. Bạn chạy `npm run build` rồi `rsync` code ở `master` lên server. Mọi thứ hoàn toàn bình thường. Bạn vào website, click vài cái. "Ngon, chạy rồi", bạn thầm nghĩ, "đi nhậu thoy!" Nhưng vừa vươn vai định gọi điện cho gấu, thì "ó e ò e", chuông điện thoại reng, số máy của sếp. "Hí hí, chắc được thưởng nóng chăng?" Bạn bắt máy, và nghe giọng sếp âu yếm GẦM ở đầu dây: "LỖI RỒI MÁÁÁ!!!"
 
 Xin đừng trụy tim. Hãy hít một hơi thật sâu, rồi bình tĩnh tạo một branch mới từ `master`, `fix-xxx` chẳng hạn. Nhờ lắng nghe tiếng sếp gầm, bạn đã mau chóng mò ra lỗi trong đống code (vì bạn là dev cứng mà hihi). Bạn khẽ rủa thầm ku đào nhí viết code không kĩ, tự rủa nhẹ bản thân vì review sót. Nhưng thôi kệ, fix nhanh rồi còn về, kẻo gấu xé xác T^T.
 
@@ -235,13 +233,43 @@ Tùy vào tình hình cụ thể của team mà bạn quyết định có cần 
 
 #### Viết commit message như thế nào cho chuẩn?
 
-_TBA_
+Nếu bạn theo chuẩn `rebase, squash và merge` thì chuyện viết commit message tốt rất quan trọng, vì nó sẽ là tài liệu để mô tả toàn bộ một tính năng. Nhưng nên viết thế nào? Có một vài gợi ý cho bạn đây:
+
+* Dòng đầu tiên không dài quá 80 chữ, luôn bắt đầu bằng động từ ở thì hiện tại, ngắn gọn xúc tích, ví dụ: _ Add module Authentication_. Bạn có thể chọn thêm tiền tố nếu cần thiết, chẳng hạn: _Feature: Add module Authentication_ hay _Fix: unable to get location params from URL_
+* Bỏ trống hai dòng
+* Sau đó mô tả chi tiết về tính năng đang làm, những điểm cần lưu ý, phần nào của tính năng cần được cải thiện...
+* Khuyến khích bạn kèm theo chữ ký _signature_ khi commit bằng `git commit -s`
+
+Một ví dụ
+
+```md
+Feature: Add module Authentication
+
+Signed-off-by: Long Dep Trai <long@ehkoo.com>
+
+This module allows users to register/login into our website using
+AWS Cognito account. Added routes:
+
+* /auth/register
+* /auth/login
+
+Users after registration will receive a SMS to confirm their account.
+
+TODO:
+
+* Implement social identities
+* Add Logout feature
+* Add Forgot password feature
+```
+
+> **Tiếng Anh hay tiếng Việt?**
+> Tùy thuộc vào team của bạn, nhưng phải thống nhất trong toàn dự án, và viết tiếng Việt thì nhớ đừng sai chính tả kẻo bị công an bắt nhé.
 
 #### Có nên tag version hay không?
 
-Câu trả lời là: _HÊN XUI_, tùy tính chất từng team. Nếu tần suất triển khai code từ `master` của team không cao, khoảng vài tháng/lần thì tag version là cách tốt để theo dõi những thay đổi.
+Câu trả lời là _HÊN XUI_, tùy tính chất từng team. Nếu tần suất triển khai code từ `master` của team không cao, khoảng vài tháng/lần thì tag version là cách tốt để theo dõi những thay đổi. Hoặc nếu bạn đang xây dựng lib hoặc làm việc open source.
 
-Còn nếu team bạn theo chuẩn "move fast, break things", thì có lẽ không cần tag version đâu. Thêm nữa, để tag version phát huy hiệu quả tối đa, thì _CHANGELOG_ cần phải được viết kỹ càng.
+Còn nếu team bạn theo chuẩn "move fast, break things", thì có lẽ không cần tag version đâu. Thêm nữa, để tag version phát huy hiệu quả tối đa, thì _CHANGELOG_ cần phải được viết kỹ càng. Đồng thời, đừng quên tag version theo [semver](https://semver.org/) nhé.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524474052/tumblr_lc63ingGof1qz6pqio1_500_mybavi.png)
 _Already broken_
@@ -260,3 +288,4 @@ Chúng ta có thể tóm tắt bài này lại như sau:
 Dĩ nhiên bài viết này chỉ mang tính tham khảo, vì mỗi team mỗi công ty sẽ có những cách làm riêng. Tuy nhiên, nếu bạn không may lâm vào cảnh trái ngang như ở đầu bài, thì đây là một workflow rất nên nghiên cứu và áp dụng. Mong rằng trong tương lai, dự án của bạn sẽ không trở thành "kim tự tháp" như hình dưới đây.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1524414465/11406260_10204684523099229_6956873399787391385_o_mscrhf.jpg)
+_The pyramid of doom_
