@@ -238,7 +238,7 @@ Tùy vào tình hình cụ thể của team mà bạn quyết định có cần 
 
 Nếu bạn theo chuẩn `rebase, squash và merge` thì chuyện viết commit message tốt rất quan trọng, vì nó sẽ là tài liệu để mô tả toàn bộ một tính năng. Nhưng nên viết thế nào? Có một vài gợi ý cho bạn đây:
 
-* Dòng đầu tiên không dài quá 80 chữ, luôn bắt đầu bằng động từ ở thì hiện tại, ngắn gọn xúc tích, ví dụ: _ Add module Authentication_. Bạn có thể chọn thêm tiền tố nếu cần thiết, chẳng hạn: _Feature: Add module Authentication_ hay _Fix: unable to get location params from URL_
+* Dòng đầu tiên không dài quá 80 chữ, luôn bắt đầu bằng động từ ở thì hiện tại, ngắn gọn súc tích, ví dụ: _ Add module Authentication_. Bạn có thể chọn thêm tiền tố nếu cần thiết, chẳng hạn: _Feature: Add module Authentication_ hay _Fix: unable to get location params from URL_
 * Bỏ trống hai dòng
 * Sau đó mô tả chi tiết về tính năng đang làm, những điểm cần lưu ý, phần nào của tính năng cần được cải thiện...
 * Khuyến khích bạn kèm theo chữ ký _signature_ khi commit bằng `git commit -s`
