@@ -158,7 +158,7 @@ Theo lý thuyết, rebase sẽ đem từng commit và áp dụng lại theo th�
 * `reword (r)`: áp dụng lại commit, và sửa commit message
 * `edit (e)`: áp dụng commit, nhưng dừng quá trình rebase lại để sửa code
 * `squash (s)`: kết hợp commit hiện tại vào commit trước nó
-* `fixup (f)`: giống như squash như bỏ đi commit message
+* `fixup (f)`: giống như squash nhưng bỏ đi commit message
 * `exec (x)`: chạy một lệnh shell nào đó
 * `drop (d)`: bỏ, không sử dụng commit này
 
