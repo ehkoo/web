@@ -184,11 +184,11 @@ git merge login
 
 Kết quả sẽ là:
 
-<script async src="//jsfiddle.net/r7rp7sp5/34/embed/result/"></script>
+<script async src="//jsfiddle.net/r7rp7sp5/35/embed/result/"></script>
 
-Như bạn thấy, một commit mới được tạo ra, giúp bạn dễ dàng nhận biết thời điểm nhánh `login` được merge vào. Cách thức này gọi là `merge fast-forward`. Khi dự án phát triển dần theo thời gian, history của `dev` sẽ như thế này.
+Cách thức này gọi là `merge fast-forward`. Tất cả commits của `login` đã được kết hợp vào `dev`. Boom! `login` biến mất khỏi thế gian như chưa hề tồn tại. SAD!
 
-<script async src="//jsfiddle.net/0agufwbv/2/embed/result/"></script>
+Lợi ích dễ thấy nhất của `merge fast-forward` là giúp cho history của bạn thẳng thớm gọn gàng, còn bất lợi là bạn không phân biệt được commits nào là của nhánh tính năng, cũng như thời điểm merge diễn ra. Trong trường hợp nhánh tính năng có quá nhiều commits nhỏ và dư thừa, chẳng hạn như những commits sửa lỗi chính tả, cập nhật thư viện..., history của bạn sẽ bị nhiễu.
 
 Bên cạnh đó, chúng ta cũng có cách `merge non-fast-forward`:
 
@@ -198,11 +198,11 @@ git merge login --no-ff
 
 Và đây là kết quả:
 
-<script async src="//jsfiddle.net/r7rp7sp5/35/embed/result/"></script>
+<script async src="//jsfiddle.net/r7rp7sp5/34/embed/result/"></script>
 
-Tất cả commits của `login` đã được kết hợp vào `dev`. Boom! `login` biến mất khỏi thế gian như chưa hề tồn tại. SAD!
+Như bạn thấy, một commit mới được tạo ra, giúp bạn dễ dàng nhận biết thời điểm nhánh `login` được merge vào. Khi dự án phát triển dần theo thời gian, history của `dev` sẽ như thế này.
 
-Lợi ích dễ thấy nhất của `merge non-fast-forward` là giúp cho history của bạn thẳng thớm gọn gàng, còn bất lợi là bạn không phân biệt được commits nào là của nhánh tính năng, cũng như thời điểm merge diễn ra. Trong trường hợp nhánh tính năng có quá nhiều commits nhỏ và dư thừa, chẳng hạn như những commits sửa lỗi chính tả, cập nhật thư viện..., history của bạn sẽ bị nhiễu.
+<script async src="//jsfiddle.net/0agufwbv/2/embed/result/"></script>
 
 #### rebase, squash và merge
 
@@ -216,7 +216,7 @@ Ngoài cách merge các commits của nhánh tính năng vào `dev`, bạn có t
 
 Yay! Sau một thời gian quằn quại, cuối cùng team của bạn đã ra được sản phẩm tương đối ổn. Giờ là lúc merge vào `master` và triển khai lên server.
 
-Lúc này, cũng như khi merge vào `dev`, bạn có thể chọn `merge` (fast-forward hoặc non-fast-forward) hay `rebase, squash và merge`, nhưng theo kinh nghiệm của Ehkoo, `merge --no-ff` sẽ là lựa chọn tốt nhất, giúp cho `master` và `dev` luôn song song với nhau.
+Lúc này, cũng như khi merge vào `dev`, bạn có thể chọn `merge` (fast-forward hoặc non-fast-forward) hay `rebase, squash và merge`, nhưng theo kinh nghiệm của Ehkoo, `merge` fast-forward sẽ là lựa chọn tốt nhất, giúp cho `master` và `dev` luôn song song với nhau.
 
 ### Hotfix
 
