@@ -9,70 +9,37 @@
       "name": "React căn bản",
       "children": [
         {
-          "name": "Cài đặt",
-          "slug": "cai-dat-react-va-chuong-trinh-dau-tien"
+          "name": "Cài đặt React và viết chương trình đầu tiên",
+          "slug": "cai-dat-react-va-viet-chuong-trinh-dau-tien"
         },
         {
           "name": "JSX là gì?",
           "slug": "jsx-la-gi"
         },
         {
-          "name": "Component và `props`",
-          "slug": "component-props"
+          "name": "React component và `props`",
+          "slug": "react-component-va-props"
         },
         {
-          "name": "Viết unit tests",
-          "slug": "viet-unit-tests"
+          "name": "`state` và cách xử lý sự kiện",
+          "slug": "state-va-cach-xu-ly-su-kien"
         },
         {
-          "name": "`state` và xử lý sự kiện",
-          "slug": "state-event-handlers-xu-ly-su-kien"
+          "name": "Xử lý danh sách và `key`",
+          "slug": "xu-ly-danh-sach-va-key"
         },
         {
-          "name": "Vòng đời của component",
-          "slug": "life-cycles-vong-doi-cua-component"
+          "name": "Các vòng đời của React component",
+          "slug": "cac-vong-doi-cua-react-component"
         },
         {
-          "name": "`ref` và cách tích hợp với thư viện ngoài",
-          "slug": "ref"
+          "name": "Viết unit tests với Enzyme",
+          "slug": "viet-unit-tests-voi-enzyme"
         }
       ]
     },
     {
-      "name": "React căn bản",
-      "children": [
-        {
-          "name": "Cài đặt",
-          "slug": "cai-dat-react-va-chuong-trinh-dau-tien"
-        },
-        {
-          "name": "JSX là gì?",
-          "slug": "jsx-la-gi"
-        },
-        {
-          "name": "Component và `props`",
-          "slug": "component-props"
-        },
-        {
-          "name": "Viết unit tests",
-          "slug": "viet-unit-tests"
-        },
-        {
-          "name": "`state` và xử lý sự kiện",
-          "slug": "state-event-handlers-xu-ly-su-kien"
-        },
-        {
-          "name": "Vòng đời của component",
-          "slug": "life-cycles-vong-doi-cua-component"
-        },
-        {
-          "name": "`ref` và cách tích hợp với thư viện ngoài",
-          "slug": "ref"
-        }
-      ]
-    },
-    {
-      "name": "Nâng cao",
+      "name": "React nâng cao",
       "children": [
         {
           "name": "Higher-order components",
@@ -83,12 +50,99 @@
           "slug": "render-props"
         },
         {
-          "name": "Portal và Error boundaries",
-          "slug": "portal-va-error-boundaries"
+          "name": "Xử lý form",
+          "slug": "xu-ly-form"
         },
         {
-          "name": "PropTypes",
-          "slug": "proptypes"
+          "name": "`ref` và cách tích hợp với thư viện ngoài",
+          "slug": "ref-va-cach-tich-hop-voi-thu-vien-ngoai"
+        },
+        {
+          "name": "Kiểm tra kiểu dữ liệu với PropTypes",
+          "slug": "kiem-tra-kieu-du-lieu-voi-proptypes"
+        },
+        {
+          "name": "Chia sẻ state với `context`",
+          "slug": "chia-se-state-voi-context"
+        },
+        {
+          "name": "Fragments",
+          "slug": "fragments-trong-react"
+        },
+        {
+          "name": "Portal và Error boundaries",
+          "slug": "portal-va-error-boundaries"
+        }
+      ]
+    },
+    {
+      "name": "React Router",
+      "children": [
+        {
+          "name": "Giới thiệu",
+          "slug": "gioi-thieu-react-router"
+        },
+        {
+          "name": "Khai báo routes",
+          "slug": "khai-bao-routes"
+        },
+        {
+          "name": "`<Link>`",
+          "slug": "react-router-link"
+        },
+        {
+          "name": "Demo",
+          "slug": "demo"
+        }
+      ]
+    },
+    {
+      "name": "Redux",
+      "children": [
+        {
+          "name": "Giới thiệu",
+          "slug": "gioi-thieu-redux"
+        },
+        {
+          "name": "Actions là gì?",
+          "slug": "actions-la-gi"
+        },
+        {
+          "name": "Reducers là gì?",
+          "slug": "reducers-la-gi"
+        },
+        {
+          "name": "Store là gì?",
+          "slug": "store-la-gi"
+        },
+        {
+          "name": "Kết hợp với React",
+          "slug": "ket-hop-voi-react"
+        },
+        {
+          "name": "Xử lý thao tác bất đồng bộ",
+          "slug": "xu-ly-thao-tac-bat-dong-bo"
+        },
+        {
+          "name": "Middlewares",
+          "slug": "middlewares"
+        }
+      ]
+    },
+    {
+      "name": "Một số chủ đề khác",
+      "children": [
+        {
+          "name": "Cách tổ chức một ứng dụng React (và `redux`)",
+          "slug": "cach-to-chuc-mot-ung-dung-react-va-redux"
+        },
+        {
+          "name": "CSS-in-JS với `styled-component`",
+          "slug": "css-in-js-voi-styled-component"
+        },
+        {
+          "name": "Định dạng code với `prettier`",
+          "slug": "dinh-dang-code-voi-prettier"
         }
       ]
     }
