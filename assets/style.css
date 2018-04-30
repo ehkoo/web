@@ -36,6 +36,12 @@ svg {
   position: sticky;
 }
 
+@media screen and (min-width: 60em) {
+  .sticky-l {
+    position: sticky;
+  }
+}
+
 .box-shadow-1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -55,6 +61,15 @@ svg {
 
 .container {
   max-width: 80em;
+}
+
+@media screen and (max-width: 60em) {
+  .clip-s {
+    position: fixed !important;
+    _position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
 }
 
 /* CONTENT */
@@ -403,7 +418,9 @@ svg {
   font-weight: 600;
 }
 
-.series-toc-list--hidden {
-  max-height: 0;
-  overflow: hidden;
+@media screen and (min-width: 60em) {
+  .series-toc-list--hidden {
+    max-height: 0;
+    overflow: hidden;
+  }
 }

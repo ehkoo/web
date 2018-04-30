@@ -10,56 +10,70 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-column flex-row-ns flex-wrap pa3">
-  <div class="w-100">
-    <h1 class="f2 fw7 navy mb4 mt0"><a href="{{ toc.url }}">{{ toc.name }}</a></h1>
-  </div>
-  <div class="w-30-ns">
-    <div class="top-1 sticky bg-white box-shadow-1 pa3 mr3-ns series-toc" id="js-series-toc">
-      <h2 class="mv3 fw7 f4 mid-gray ttu">Mục lục</h2>
-      <a class="mv3 db mv3 bl bw2 pl2 {% if item.slug === slug %} fw6 b--blue {% else %} b--transparent mid-gray {% endif %}" href="{{ toc.url }}">Giới thiệu</a>
-    {% for section in toc.sections %}
-      {% set sectionId = loop.index %}
-      <div>
-        <h2 class="pointer db fw7 red ttu mt4 f4 js-series-toc-heading" data-section-id="{{ sectionId }}">{{ sectionId }}. {{ section.name }}</h2>
-        <ul class="ml0 list series-toc-list series-toc-list--hidden" id="js-series-toc-list-{{ sectionId }}">
-        {% for item in section.children %}
-          <li><a {% if item.slug === slug %} data-active-section="{{ sectionId }}" {% endif %} class="js-series-toc-link db mv3 bl bw2 pl2 {% if item.slug === slug %} fw6 b--blue {% else %} b--transparent mid-gray {% endif %}" href="{{ item.url }}">{{ item.name | safe }}</a></li>
-        {% endfor %}
-        </ul>
+<div class="pa3">
+  <h1 class="f2 fw7 navy mb4 mt0"><a href="{{ toc.url }}">{{ toc.name }}</a></h1>
+  <div class="flex flex-column flex-row-l">
+    <div class="w-100 w-30-l mb3 mb0-l">
+      <div class="clip-s top-1-l sticky-l z-3 overflow-x-hidden overflow-y-auto bg-white box-shadow-1 pa3 mr3-l series-toc" id="js-series-toc">
+        <h2 class="mv3 fw6 f4 mid-gray ttu">Mục lục</h2>
+        <a class="mv3 db mv3 bl bw2 pl2 {% if item.slug === slug %} fw6 b--blue {% else %} b--transparent mid-gray {% endif %}" href="{{ toc.url }}">Giới thiệu</a>
+      {% for section in toc.sections %}
+        {% set sectionId = loop.index %}
+        <div>
+          <h2 class="pointer db fw7 dark-red ttu mt4 f4 js-series-toc-heading" data-section-id="{{ sectionId }}">{{ sectionId }}. {{ section.name }}</h2>
+          <ul class="ml0 list series-toc-list series-toc-list--hidden" id="js-series-toc-list-{{ sectionId }}">
+          {% for item in section.children %}
+            <li><a {% if item.slug === slug %} data-active-section="{{ sectionId }}" {% endif %} class="js-series-toc-link db mv3 bl bw2 pl2 {% if item.slug === slug %} fw6 b--blue {% else %} b--transparent mid-gray {% endif %}" href="{{ item.url }}">{{ item.name | safe }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
       </div>
-    {% endfor %}
     </div>
-  </div>
 
-  <div class="w-70-ns">
-    <article class="bg-white pv3 ph4 box-shadow-1">
-      <h1 class="red fw7 f3 mb4 tracked ttu break-word">{{ title }}</h1>
-      <p class="lh-copy mb3 tr silver">
-        {{ date }}
+    <div class="w-100 w-70-l">
+      <article class="bg-white pv3 ph4 box-shadow-1">
+        <h1 class="red fw7 f2 mb4 break-word">{{ title }}</h1>
+        <p class="lh-copy mb3 tr silver">
+          Cập nhật ngày {{ date }} &mdash; Đọc trong {{ readingTime }}
+        </p>
 
-         &mdash; {{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}
-      </p>
+        <div id="js-content" class="content lh-copy dark-gray f5 f4-ns">{{ contents | safe }}</div>
 
-      <div id="js-content" class="content lh-copy dark-gray f4">{{ contents | safe }}</div>
+        <hr class="mw3 center db bg-silver">
+      </article>
 
-      <hr class="mw3 center db bg-silver">
-    </article>
+      <section class="flex f4">
+        <div class="pa3 fw6 w-50">
+          {% if prevArticle %}
+            <a class="dark-red" href="{{ prevArticle.url }}">&laquo; {{ prevArticle.name }}</a>
+          {% endif %}
+        </div>
+        <div class="pa3 fw6 w-50 tr">
+          {% if nextArticle %}
+            <a class="dark-red" href="{{ nextArticle.url }}">{{ nextArticle.name }} &raquo;</a>
+          {% endif %}
+        </div>
+      </section>
 
-    <section class="flex f4">
-      <div class="pa3 fw6 w-50">
-        {% if prevArticle %}
-          <a class="dark-red" href="{{ prevArticle.url }}">&laquo; {{ prevArticle.name }}</a>
-        {% endif %}
+      <div class="clip-l fixed bottom-2 right-2 z-999">
+        <div class="flex bg-near-black gold br2">
+          <a href="#js-top" class="pa3 flex items-center justify-center flex-column">
+            <i class="dib" style="width: 1.5rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffb700" d="M180.573 448C169.211 448 160 438.789 160 427.428V255.991H43.021c-7.125 0-10.695-8.612-5.66-13.653L209.444 70.035c8.036-8.046 21.076-8.047 29.112 0L410.64 242.338c5.035 5.041 1.464 13.653-5.66 13.653H288v171.437C288 438.79 278.789 448 267.427 448h-86.854m0 32h86.855C296.416 480 320 456.416 320 427.428V287.991h84.979c35.507 0 53.497-43.04 28.302-68.266L261.198 47.422c-20.55-20.576-53.842-20.58-74.396 0L14.719 219.724c-25.091 25.122-7.351 68.266 28.302 68.266H128v139.437C128 456.416 151.584 480 180.573 480z"/></svg>
+            </i>
+          </a>
+
+          <button id="js-toc-button" class="pointer bg-transparent bn outline-0 pa3 flex items-center justify-center flex-column">
+            <i class="dib" style="width: 1.5rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffb700" d="M356 160H188c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12zm12 52v-8c0-6.6-5.4-12-12-12H188c-6.6 0-12 5.4-12 12v8c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12zm64.7 268h3.3c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H80c-44.2 0-80-35.8-80-80V80C0 35.8 35.8 0 80 0h344c13.3 0 24 10.7 24 24v368c0 10-6.2 18.6-14.9 22.2-3.6 16.1-4.4 45.6-.4 65.8zM128 384h288V32H128v352zm-96 16c13.4-10 30-16 48-16h16V32H80c-26.5 0-48 21.5-48 48v320zm372.3 80c-3.1-20.4-2.9-45.2 0-64H80c-64 0-64 64 0 64h324.3z"/></svg>
+            </i>
+          </button>
+        </div>
       </div>
-      <div class="pa3 fw6 w-50 tr">
-        {% if nextArticle %}
-          <a class="dark-red" href="{{ nextArticle.url }}">{{ nextArticle.name }} &raquo;</a>
-        {% endif %}
-      </div>
-    </section>
 
-    <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
+      <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
+    </div>
   </div>
 </div>
 {% endblock %}

@@ -48,6 +48,18 @@
         const section = qid(`js-series-toc-list-${a.dataset.activeSection}`)
         section && section.classList.remove('series-toc-list--hidden')
       }
+
+      // Open TOC
+      const toc = qid('js-series-toc')
+      const tocBtn = qid('js-toc-button')
+      tocBtn &&
+        tocBtn.addEventListener('click', e => {
+          e.preventDefault()
+          toc.classList.toggle('clip-s')
+          toc.classList.toggle('fixed')
+          toc.classList.toggle('absolute--fill')
+          document.body.classList.toggle('overflow-hidden')
+        })
     }
   }
 })()
