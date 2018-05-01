@@ -142,8 +142,8 @@ const builder = Metalsmith(__dirname)
     toc({
       path: 'series/**/*.html',
       urlGenerator: (series, slug) => `/series/${series}/${slug}`,
-      tocFilename: 'series/:series/toc.json'
-    })
+      tocFilename: 'series/:series/toc.json',
+    }),
   )
   .use((files, metalsmith, done) => {
     const { collections } = metalsmith.metadata()

@@ -1,7 +1,9 @@
-{% extends "layouts/index.njk" %}
+{% extends "index.njk" %}
 
 {% block head %}
-{% include "layouts/el/opengraph.njk" %}
+{% set cover = cover or toc.cover %}
+{% set excerpt = excerpt or toc.excerpt %}
+{% include "el/opengraph.njk" %}
 <link rel="stylesheet" href="/assets/zoom-image/zoom-image.css">
 {% endblock %}
 
@@ -20,7 +22,7 @@
       {% for section in toc.sections %}
         {% set sectionId = loop.index %}
         <div>
-          <h2 class="pointer db fw7 dark-red ttu mt4 f4 js-series-toc-heading" data-section-id="{{ sectionId }}">{{ sectionId }}. {{ section.name }}</h2>
+          <h2 class="pointer db fw7 dark-red ttu mt4 f4 js-series-toc-heading flex items-center" data-section-id="{{ sectionId }}"><small class="f7 mr2">&#9654;</small> {{ sectionId }}. {{ section.name }}</h2>
           <ul class="ml0 list series-toc-list series-toc-list--hidden" id="js-series-toc-list-{{ sectionId }}">
           {% for item in section.children %}
             <li><a {% if item.slug === slug %} data-active-section="{{ sectionId }}" {% endif %} class="js-series-toc-link db mv3 bl bw2 pl2 {% if item.slug === slug %} fw6 b--blue {% else %} b--transparent mid-gray {% endif %}" href="{{ item.url }}">{{ item.name | safe }}</a></li>
@@ -43,15 +45,29 @@
         <hr class="mw3 center db bg-silver">
       </article>
 
-      <section class="flex f4">
-        <div class="pa3 fw6 w-50">
+      <section class="flex items-stretch mt4">
+        <div class="w-50 mr1">
           {% if prevArticle %}
-            <a class="dark-red" href="{{ prevArticle.url }}">&laquo; {{ prevArticle.name }}</a>
+            <a class="h-100 flex flex-column flex-row-l items-center-l justify-center-l tc pa3 db bg-white dark-red" href="{{ prevArticle.url }}">
+              <span class="w-10-l">
+                <i class="db center w2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ddd" d="M229.9 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L94.569 282H436c6.627 0 12-5.373 12-12v-28c0-6.627-5.373-12-12-12H94.569l155.13-155.13c4.686-4.686 4.686-12.284 0-16.971L229.9 38.101c-4.686-4.686-12.284-4.686-16.971 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971L212.929 473.9c4.686 4.686 12.284 4.686 16.971-.001z"/></svg>
+                </i>
+              </span>
+              <span class="w-90-l f4">{{ prevArticle.name }}</span>
+            </a>
           {% endif %}
         </div>
-        <div class="pa3 fw6 w-50 tr">
+        <div class="w-50 ml1">
           {% if nextArticle %}
-            <a class="dark-red" href="{{ nextArticle.url }}">{{ nextArticle.name }} &raquo;</a>
+            <a class="h-100 flex flex-column-reverse flex-row-l items-center-l justify-center-l tc pa3 db bg-white dark-red" href="{{ nextArticle.url }}">
+              <span class="w-90-l f4">{{ nextArticle.name }}</span>
+              <span class="w-10-l">
+                <i class="db center w2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ddd" d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"/></svg>
+                </i>
+              </span>
+            </a>
           {% endif %}
         </div>
       </section>
@@ -72,7 +88,7 @@
         </div>
       </div>
 
-      <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
+      <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
     </div>
   </div>
 </div>

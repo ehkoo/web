@@ -51,6 +51,8 @@ module.exports = options => (files, metalsmith, done) => {
   const firstOf = tocMap => tocMap.articles[tocMap.keys[0]]
 
   const nextOf = (tocMap, slug) => {
+    if (slug == null) return tocMap.articles[tocMap.keys[1]]
+
     const idx = tocMap.keys.indexOf(slug)
     if (idx === -1 || idx + 1 > tocMap.length) return null
 
