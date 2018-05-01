@@ -2,7 +2,6 @@
 layout: series.njk
 title: Giới thiệu
 date: 2017-10-12
-tags: JavaScript, React
 series: react-tu-a-den-y
 author: kcjpop
 editor: chubbyanh

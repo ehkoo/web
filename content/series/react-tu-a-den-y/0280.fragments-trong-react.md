@@ -2,7 +2,6 @@
 layout: series.njk
 title: "tbt"
 date: 2018-05-01
-tags: JavaScript, React, Frontend
 slug: tbs
 series: react-tu-a-den-y
 author: kcjpop
