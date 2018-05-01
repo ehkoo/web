@@ -1,6 +1,8 @@
 {
   "name": "React từ A đến Y",
   "slug": "react-tu-a-den-y",
+  "cover": "https://res.cloudinary.com/duqeezi8j/image/upload/v1525159167/react_sff4wb.png",
+  "summary": "",
   "index": {
     "name": "Giới thiệu"
   },
@@ -9,8 +11,8 @@
       "name": "React căn bản",
       "children": [
         {
-          "name": "Cài đặt React và viết chương trình đầu tiên",
-          "slug": "cai-dat-react-va-viet-chuong-trinh-dau-tien"
+          "name": "Cài đặt React và chương trình đầu tiên",
+          "slug": "cai-dat-react-va-chuong-trinh-dau-tien"
         },
         {
           "name": "JSX là gì?",
