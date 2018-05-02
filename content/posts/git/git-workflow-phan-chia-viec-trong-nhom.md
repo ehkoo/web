@@ -208,7 +208,7 @@ Như bạn thấy, một commit mới được tạo ra, giúp bạn dễ dàng 
 
 Ngoài cách merge các commits của nhánh tính năng vào `dev`, bạn có thể rebase và squash tất cả commits lại làm một, sau đó tiến hành merge. Cách làm này giúp cho `dev` luôn ở trạng thái gọn gàng nhất, không chứa commit dư thừa. Trong trường hợp lý tưởng, history của `dev` sẽ giống như sau:
 
-<script async src="//jsfiddle.net/0agufwbv/5/embed/result/"></script>
+<script async src="//jsfiddle.net/hLk26mzt/embed/result/"></script>
 
 Để cách làm này phát huy tối đa hiệu quả, yêu cầu commit message phải được viết thật rõ ràng và chi tiết.
 
