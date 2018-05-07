@@ -5,7 +5,7 @@ slug: lam-game-calculator-voi-ky-thuat-currying-va-react
 date: 2018-05-04
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1517867795/_curry_advc1m.jpg
 tags: React, JavaScript, Game Making
-excerpt: Bạn có nghe đến kỹ thuật currying trong lập trình hàm chưa? Hãy cùng Ehkoo tìm hiểu xem nó là gì, và áp dụng để xây dựng một game Calculator đơn giản bằng React nhé.
+excerpt: Currying? Nghe sao giống cà ri vậy? Hãy cùng Ehkoo tìm hiểu xem nó là gì, và áp dụng để xây dựng một game Calculator đơn giản bằng React nhé.
 author: kcjpop
 draft: true
 ---
@@ -34,11 +34,11 @@ Luồng của game có thể được biểu diễn theo sơ đồ sau:
 
 ![](https://i.imgur.com/ZlDZJOl.png)
 
-Vấn đề đầu tiên chúng ta gặp phải: làm sao để tạo ra các nút bấm một cách tự động mỗi khi game mới được tạo ra?
+Vấn đề đầu tiên chúng ta gặp phải: làm sao để tạo ra các nút bấm một cách tự động mỗi khi game mới được tạo ra? Câu trả lời là dùng kỹ thuật currying.
 
 ### Currying là gì?
 
-Currying là kỹ thuật tách một hàm nhận nhiều tham số thành một chuỗi các hàm, với mỗi hàm chỉ nhận một tham số. Lấy ví dụ đơn giản, dưới đây là hàm `add()` bình thường.
+Currying là kỹ thuật tách một hàm nhận nhiều tham số thành một chuỗi các hàm, với mỗi hàm chỉ nhận một tham số. Lấy ví dụ, dưới đây là hàm `add()` bình thường.
 
 ```js
 function add(a, b) {
@@ -147,7 +147,7 @@ const sub4 = sub(4)
 // { label: '-4', func }
 ```
 
-Bạn có để ý thấy tham số `y` đã được lật ngược lại `y - x` thay vì `x - y` không? Đó là vì khi click vào một phép tính, chúng ta sẽ lấy kết quả hiện tại `currentResult` trừ đi giá trị định trước của nút bấm.
+> **LƯU Ý**: Bạn có để ý thấy tham số `y` đã được lật ngược lại `y - x` thay vì `x - y` không? Đó là vì trong trò chơi của chúng ta, khi người chơi click vào một phép tính, kết quả hiện tại (tương ứng với tham số `y`) sẽ bị trừ đi giá trị định trước của nút bấm. Do đó chúng ta phải đảo ngược thứ tự tham số ở đây.
 
 Bạn tự viết tiếp hàm để tạo ra phép tính trừ, nhân, chia và lưu vào tập tin `src/operators.js` nhé. Chúng ta có thể cập nhật  lại `state` của `src/App.js` để thử các nút bấm.
 
@@ -219,27 +219,55 @@ Bên trong hàm `render()` ta có thể thêm vào thông báo kết quả khi t
 {this.state.gameEnd ? this.state.gameResult : null}
 ```
 
-Đến đây thì trò chơi cơ bản đã xong. Tiếp theo hãy tìm cách để tạo ra màn chơi mới.
+<iframe src="https://codesandbox.io/embed/jjjxpw7679?view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+Phần xử lý trò chơi tới đây cũng tương đối ổn rồi. Tiếp theo hãy xem làm sao để tạo màn chơi mới.
 
 ### Tạo màn chơi mới
 
-![](https://i.imgur.com/s5W90C6.png)
+Chúng ta sẽ viết một hàm `generate(options = {})` để khởi tạo màn chơi mới. Hàm này nhận vào một object chứa các thiết lập cho màn chơi, chẳng hạn như giá trị ban đầu, số lượng phép tính, khoảng giá trị của các phép tính này...Kết quả trả về của hàm `generate()` sẽ được kết hợp vào `state` của `src/App.jsx`.
+
+Tham số `options` ở trên bao gồm những thuộc tính sau:
+
+Để tạo màn chơi mới, chúng ta sẽ đi qua những bước sau:
+* `initResult`: giá trị ban đầu của màn chơi
+* `numberOfMoves`: số bước đi cho phép. Số bước đi càng nhiều thì trò chơi càng khó
+* `numberOfOperators`: số lượng phép tính
+* `operatorRange`: khoảng giá trị của các phép tính. Trò chơi sẽ dễ hơn nếu bạn chỉ có các phép tính như `+3`, `-6`, `*2`, nhưng sẽ khó hơn nếu là các phép tính `+12`, `*8`, `-23`...
+
+Chúng ta sẽ lần được đi qua các bước
+
+* Khởi tạo options dựa vào thiết lập của người dùng
+* Tạo ngẫu nhiên một mảng các phép tính
+* Áp dụng `moves` lần các phép tính này vào `initResult`
+* Kết quả cuối cùng chính là `goal`
+* Trả về thiết lập cho màn chơi
+
+![](https://i.imgur.com/BccW92d.png)
+
+Hai hàm bên dưới sẽ rất hữu ích để tạo số ngẫu nhiên trong một khoảng định trước, và lấy ra một phần tử ngẫu nhiên trong mảng.
 
 ```js
-// from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// src/helpers.js
+// Tạo số ngẫu nhiên trong khoảng định trước. Không đính kèm `max` trong kết quả.
 export function randomInt(min, max) {
+  // Nguồn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   min = Math.ceil(min)
   max = Math.floor(max)
 
-  return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min)) + min
 }
 
+// Lấy ra phần tử ngẫu nhiên trong mảng
 export function pickArrayRandom(array) {
   return array[randomInt(0, array.length - 1)]
 }
 ```
 
+Dựa vào sơ đồ ở trên, ta có thể viết hàm `generate()` như sau:
+
 ```js
+// src/generate.js
 import { randomInt, pickArrayRandom } from './helpers'
 import * as allOperators from './operators'
 
@@ -252,16 +280,17 @@ export default function(options = {}) {
     ...options
   }
 
-  // Make an array of all operators
+  // Vì ES6 import tất cả operators thành một object,
+  // dùng Object.values() để chuyển thành mảng
   const ops = Object.values(allOperators)
 
-  // Make a list of operators
+  // Tạo ngẫu nhiên mảng các phép tính -> nút bấm
   const operators = Array.from({ length: opt.numberOfOperators }, () => {
     const op = pickArrayRandom(ops)
     return op(randomInt(...opt.operatorRange))
   })
 
-  // Apply operators to initResult `numberOfMoves` times
+  // Áp dụng ngẫu nhiên các phép tính ở trên vào `initResult`
   const goal = Array.from({ length: opt.numberOfMoves }).reduce(goal => {
     const op = pickArrayRandom(operators)
 
@@ -278,10 +307,56 @@ export default function(options = {}) {
 }
 ```
 
+Áp dụng `generate()` vào `src/App.jsx`.
+
+```jsx
+import generate from './generate'
+
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      ...generate(),
+      gameEnd: false,
+      gameResult: null
+    }
+  }
+}
+```
+
+Kết quả:
+
+<iframe src="https://codesandbox.io/embed/oon5v9nm85?view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+
 ### Thêm nút CLR
 
-Nút CLR sẽ cho phép reset lại trò chơi.
+Nút CLR cho phép khởi động lại màn chơi, trong trường hợp chẳng may tính sai. Không quá khó để làm tính năng này, chúng ta chỉ cần lưu `state` khi khởi tạo game vào một thuộc tính `initState` nào đó, và khi click vào nút CLR thì gọi đến `this.setState(initState)`.
 
-### Thêm thắt xíu
+```js
+// src/App.jsx
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    const initState = {
+      ...generate(),
+      gameEnd: false,
+      gameResult: null
+    }
 
-### Kết
+    this.initState = initState
+    this.state = { ...initState }
+  }
+
+  doReset = e => {
+    e.preventDefault()
+    this.setState(this.initState)
+  }
+}
+```
+
+<iframe src="https://codesandbox.io/embed/62119rq3ww?view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+### Tạm kết
+
+Trò chơi của chúng ta đã tương đối hoàn thành. Dĩ nhiên là còn rất nhiều điểm để cải tiến, chẳng hạn như cài đặt cho nút Help để giới thiệu cách chơi cho người dùng, hoặc cài đặt thêm các phép tính khác. Nhưng phần này Ehkoo để bạn tự do sáng tạo nhé.
