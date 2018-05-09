@@ -5,7 +5,7 @@ slug: lam-game-calculator-voi-ky-thuat-currying-va-react
 date: 2018-05-04
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1517867795/_curry_advc1m.jpg
 tags: React, JavaScript, Game Making
-excerpt: "Bạn có nghe đến kỹ thuật currying trong lập trình hàm chưa? Hãy cùng Ehkoo tìm hiểu xem nó là gì, và ứng dụng để xây dựng một game Calculator đơn giản với React nhé."
+excerpt: "Currying là kĩ thuật tạo hàm mới bằng code một cách tự động, giúp việc kết hợp các hàm dễ dàng và nâng cao tính DRY (Dont Repeat Yourself) trong dự án. Nào, bây giờ mời bạn cùng Ehkoo áp dụng currying để xây dựng một game Calculator đơn giản với React nhé!"
 author: kcjpop
 ---
 [Calculator](http://www.simplemachine.co/game/calculator-the-game/) là một game giải đố của công ty Simple Machine có cách chơi đơn giản nhưng khá "hack não": trong mỗi màn chơi, bạn có một giá trị ban đầu, một giá trị đích, số bước thực hiện cho phép cùng với các nút phép tính. Nhiệm vụ của bạn là đạt được giá trị đích bằng cách bấm CHÍNH XÁC số bước cho phép, như trong hình dưới đây.
@@ -35,7 +35,7 @@ Luồng của game có thể được biểu diễn theo sơ đồ:
 
 Vấn đề đầu tiên chúng ta gặp phải: làm sao để tạo ra các nút phép tính trong game? Bạn có thể khai báo trước nhiều nút với các hành động định trước, ví dụ như `+4`, `x4`, hay `/4`, nhưng sẽ như thế nào nếu số lượng màn chơi nhiều lên? Có cách nào để tạo ra các nút một cách tự động không?
 
- Câu trả lời là dùng kỹ thuật currying.
+ Câu trả lời là: dùng kỹ thuật currying.
 
 ### Currying là gì?
 
