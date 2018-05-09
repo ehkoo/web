@@ -402,6 +402,6 @@ class App extends React.Component {
 
 ### Kết
 
-Trò chơi của chúng ta tới đây đã tương đối hoàn thành rồi. Chỉ còn một vài tính năng nhỏ, ví dụ như làm cho giao diện hiển thị kết quả đẹp hơn, thêm các phép tính mới, tự động tạo game mới khi người chơi đã thắng màn chơi cũ, hoặc viết code cho nút Help giúp giải thích cách chơi hay tạo nút Hint gợi ý bước đi tiếp theo... nhưng Ehkoo sẽ để bạn tự làm nhé. Hi vọng qua bài viết này bạn đã hiểu về kỹ thuật currying và biết cách áp dụng nó vào dự án thực tế.
+Trò chơi của chúng ta tới đây đã tương đối hoàn thành rồi. Chỉ còn một vài tính năng nhỏ, ví dụ như làm cho giao diện hiển thị kết quả đẹp hơn, thêm các phép tính mới, tự động tạo game mới khi người chơi đã thắng màn chơi cũ, hoặc viết code cho nút Help giúp giải thích cách chơi hay tạo nút Hint gợi ý bước đi tiếp theo... nhưng Ehkoo sẽ để bạn tự làm nhé.
 
-Bạn có thể tìm thấy mã nguồn của game ở đây [https://github.com/ehkoo/calculator](https://github.com/ehkoo/calculator). Nếu bạn có cải tiến cho trò chơi thì đừng ngại ngần gửi PR hoặc comment cho Ehkoo biết nha.
+Hi vọng qua bài viết này bạn đã hiểu về kỹ thuật currying và biết cách áp dụng nó vào dự án thực tế. Bạn có thể tìm thấy mã nguồn của game ở đây [https://github.com/ehkoo/calculator](https://github.com/ehkoo/calculator). Nếu bạn có cải tiến cho trò chơi thì đừng ngại ngần gửi PR hoặc comment cho Ehkoo biết nha.
