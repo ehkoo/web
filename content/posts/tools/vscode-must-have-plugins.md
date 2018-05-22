@@ -5,16 +5,16 @@ slug: nhung-plugins-khong-the-thieu-cho-vs-code
 date: 2018-05-20
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1526803109/the-best-vscode-extensions-2017_ryxbmv_lfuuwm.png
 tags: Thủ thuật, VSCode, Plugins, Text Editor
-excerpt: "Tìm hiểu ngay 10+ plugins không thể thiếu cho dân lập trình web khi sử dụng VSCode"
+excerpt: "10+ plugins không thể thiếu cho dân lập trình web khi sử dụng VSCode. Tìm hiểu ngay!"
 author: kcjpop
 editor: chubbyanh
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526803109/the-best-vscode-extensions-2017_ryxbmv_lfuuwm.png)
 
-VSCode ngày càng chiếm được nhiều cảm tình của dân lập trình web bởi hiệu suất ổn định, dễ sử dụng cùng vô vàn tính năng  hữu ích được đóng gói sẵn. Bên cạnh đó, kho plugin đồ sộ của VSCode cho phép người dùng tha hồ tùy biến và cải thiện trình soạn thảo theo hướng tiện dụng nhất.
+VSCode chiếm được nhiều cảm tình của dân lập trình web nhờ hiệu suất ổn định, dễ sử dụng, cộng với vô vàn tính năng  hữu ích được đóng gói sẵn. Bên cạnh đó, kho plugin đồ sộ của VSCode cho phép người dùng tha hồ tùy biến và cải thiện trình soạn thảo theo hướng tiện dụng nhất.
 
-Ehkoo sẽ "điểm mặt" cho bạn những plugin không thể thiếu khi làm việc với VSCode nhé.
+Ehkoo sẽ giúp bạn "điểm mặt" những plugin không thể thiếu khi làm việc với VSCode nhé.
 
 ### Snippets
 
