@@ -157,6 +157,8 @@ svg {
 
 .content iframe {
   min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 60em) {
