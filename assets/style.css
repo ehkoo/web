@@ -161,6 +161,11 @@ svg {
   margin-right: auto;
 }
 
+.content twitterwidget {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 60em) {
   .content ul,
   .content ol {
