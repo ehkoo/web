@@ -9,6 +9,8 @@ excerpt: "React 16.4 hỗ trợ các sự kiện phát sinh bởi các thiết b
 author: kcjpop
 form_footer: react-footer
 ---
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg)
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">React 16.4 is out, with support for an oft-requested new feature: pointer events!<br><br>Huge thanks to <a href="https://twitter.com/PhilippSpiess?ref_src=twsrc%5Etfw">@PhilippSpiess</a> for contributing this change! <a href="https://t.co/3IAX6Zc1GN">https://t.co/3IAX6Zc1GN</a></p>&mdash; React (@reactjs) <a href="https://twitter.com/reactjs/status/999458533518131200?ref_src=twsrc%5Etfw">May 24, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -29,7 +31,7 @@ React 16.4 giới thiệu các sự kiện của pointer trong React DOM:
 -   `onPointerOver`
 -   `onPointerOut`
 
-Lưu ý: các sự kiện này chỉ được hỗ trợ trên phiên bản mới nhất của Chrome, Firefox, Edge và Internet Explorer. Safari, lại một lần nữa, đi sau thế giới.
+Lưu ý: các sự kiện này chỉ được hỗ trợ trên phiên bản mới nhất của Chrome, Firefox, Edge và Internet Explorer. Safari, lại một lần nữa, đi sau thế giới. Hoặc bạn có thể sử dụng [Pointer Events Polyfill](https://github.com/jquery/PEP).
 
 ### Hành vi của `getDerivedStateFromProps` thay đổi
 
