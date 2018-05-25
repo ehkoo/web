@@ -76,7 +76,7 @@ Và tiếc là Hack chưa hỗ trợ ligatures.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1516249663/color_uudmbg.png)
 
-Là một phần trong bộ font chuẩn của IBM, [IBM Flex](https://ibm.github.io/type/) được thiết kế để đáp ứng yêu cầu của tập đoàn trong thời đại mới và thể hiện tinh thần, niềm tin cũng nhưng nguyên tắc thiết kế của công ty (là gì thì không rõ :p). IBM Flex Mono chưa hỗ trợ ligatures.
+Là một phần trong bộ font chuẩn của IBM, [IBM Flex](https://github.com/IBM/plex) được thiết kế để đáp ứng yêu cầu của tập đoàn trong thời đại mới và thể hiện tinh thần, niềm tin cũng nhưng nguyên tắc thiết kế của công ty (là gì thì không rõ :p). IBM Flex Mono chưa hỗ trợ ligatures.
 
 ### Fantasque Sans Mono
 
