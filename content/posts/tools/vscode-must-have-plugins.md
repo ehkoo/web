@@ -80,6 +80,12 @@ Polacode giúp "screenshot" code một cách đẹp đẽ hơn, như ví dụ b�
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526801956/2_hfdw0n.png)
 
+### Live Server
+
+[Plugin này](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) giúp bạn tạo ngay một web server bên trong VSCode, hỗ trợ live reload. Rất tiện khi tạo layout HTML.
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1527408522/HZUYJRm_z0vaet.png)
+
 ### GitLens
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526886246/gitlens-logo_rx4kvc.png)
