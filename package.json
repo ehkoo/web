@@ -39,6 +39,7 @@
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-drafts": "0.0.1",
+    "metalsmith-feed": "^1.0.0",
     "metalsmith-headings-identifier": "0.0.11",
     "metalsmith-html-minifier": "^2.4.5",
     "metalsmith-layouts": "^1.8.1",

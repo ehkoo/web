@@ -8,6 +8,7 @@ const layouts = require('metalsmith-layouts')
 const markdown = require('metalsmith-markdown-remarkable')
 const wordcount = require('metalsmith-word-count')
 const collections = require('metalsmith-collections')
+const feed = require('metalsmith-feed')
 
 const toc = require('./plugins/toc')
 const dates = require('./plugins/metalsmith-date-formatter')
@@ -16,7 +17,6 @@ const readJson = require('./plugins/read-json')
 const permalinks = require('./plugins/metalsmith-permalinks')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
-const isLocal = process.env.NODE_ENV !== 'production'
 
 const builder = Metalsmith(__dirname)
   .metadata({
@@ -34,6 +34,10 @@ const builder = Metalsmith(__dirname)
       twitter: 'https://twitter.com/EhkooDev',
       github: 'https://github.com/ehkoo',
       gitter: 'https://gitter.im/ehkoo/web'
+    },
+    site: {
+      title: 'Ehkoo',
+      url: process.env.SITE_URL || 'https://ehkoo.com'
     }
   })
   .source(path.resolve(__dirname, 'content'))
@@ -65,13 +69,19 @@ const builder = Metalsmith(__dirname)
         sortBy: 'date',
         refer: false,
         reverse: true,
-        limit: 15
+        limit: 20
       },
       pages: {
         pattern: 'pages/**/*.md'
       },
       series: {
         pattern: 'series/**/*.md'
+      },
+      feed: {
+        pattern: ['posts/**/*.md', '!posts/wisdom/**/*.md'],
+        sortBy: 'date',
+        refer: false,
+        reverse: true
       }
     })
   )
@@ -82,11 +92,6 @@ const builder = Metalsmith(__dirname)
       quotes: '“”‘’',
       langPrefix: 'language-',
       typographer: true
-    })
-  )
-  .use(
-    dates({
-      dates: [{ key: 'date', format: 'DD/MM/YYYY' }]
     })
   )
   .use(wordcount())
@@ -103,6 +108,12 @@ const builder = Metalsmith(__dirname)
           pattern: 'series/:series/:slug'
         }
       ]
+    })
+  )
+  .use(feed({ collection: 'feed' }))
+  .use(
+    dates({
+      dates: [{ key: 'date', format: 'DD/MM/YYYY' }]
     })
   )
   .use(
