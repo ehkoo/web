@@ -68,6 +68,12 @@ Thông thường khi đang code gì đó dở dang, chúng ta hay thêm vào TOD
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526801006/jPPCo1z_vt7ds1.png)
 
+### Better Comments
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1527570491/I6jxn2j_tiny4g.png)
+
+Plugin này giúp hiển thị comment trong code theo các loại khác nhau,  ví dụ như bạn có thể dùng `*` để đánh dấu thông tin này cần được lưu ý, `?` để thể hiện nghi vấn, hay `TODO` để nhắc nhở những việc cần làm tiếp theo.
+
 ### Path Intellisense
 
 Path Intellisense giúp bạn autocomplete đường dẫn các tập tin có trong dự án.
