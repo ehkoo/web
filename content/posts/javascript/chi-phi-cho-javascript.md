@@ -2,10 +2,10 @@
 layout: post.njk
 title: Chi phí cho JavaScript
 slug: chi-phi-cho-javascript
-date: 2017-11-18
+date: 2018-06-03
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg
 tags: JavaScript, Web Performance, Web Optimization
-excerpt: Addy Osmani, Eng. Manager tại Google, chia sẻ những kinh nghiệm về chi phí xử lý JavaScript trên các thiết bị di động, và đề xuất một số giải pháp để nâng cao hiệu suất website.
+excerpt: 5+ bài toán hóc búa khi xử lý JavaScript trên các thiết bị di động; và một số giải pháp do Addy Osmani, Eng. Manager tại Google đề xuất, giúp nâng cao hiệu suất website.
 author: kcjpop
 translation: https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e
 ---
@@ -21,7 +21,7 @@ Khi các website chúng ta xây dựng ngày càng phụ thuộc vào JavaScript
 >
 > Dài quá ngại đọc: ít mã lệnh = ít thời gian phân tách/biên dịch + ít dung lượng trao đổi + ít phải giải nén
 
-### Kết nối mạng
+### 1. Kết nối mạng
 
 Khi nghĩ về chi phí cho JavaScript, hầu hết các lập trình viên nghĩ về mặt **chi phí tải và thực thi mã lệnh**. Kết nối Internet của người dùng càng chậm thì gửi nhiều bytes JavaScript về phía họ càng lâu.
 
@@ -38,7 +38,7 @@ Bạn có thể **giảm** chi phí truyền tải JavaScript bằng cách:
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059041/1_8Spf9To8dzTG3Xy9s57oVA_rqr8y7.jpg)
 
-### Phân tách/Biên dịch
+### 2. Phân tách/Biên dịch
 
 Sau khi đã tải, một trong những chi phí JavaScript **nặng nề** nhất là thời gian để một trình xử lý JS tiến hành phân tách/biên dịch mã nguồn. Trong Chrome DevTools, phân tách và biên dịch là những phần trong thời gian "Scripting" màu vàng, có thể thấy trong bảng Performance.
 
@@ -98,7 +98,7 @@ Thời gian để tải và xử lý JS và các tài nguyên khác đóng một
 
 **Loại bỏ những phần JavaScript không quan trọng trong trang có thể giảm thiểu thời gian truyền tải, quá trình phân tách và biên dịch vốn ngốn CPU, và cả việc ngốn bộ nhớ. Nó cũng làm cho website trở nên có thể tương tác được nhanh hơn.**
 
-### Thời gian thực thi
+### 3. Thời gian thực thi
 
 Chi phí không chỉ nằm ở quá trình phân tách và biên dịch. **Quá trình thực thi JavaScript** (chạy mã lệnh sau khi đã phân tách/biên dịch) là một trong những thao tác phải xảy ra trong luồng chính. Thời gian thực thi quá lâu có thể làm trì hoãn thời gian người dùng có thể tương tác với website.
 
@@ -110,7 +110,7 @@ Chi phí không chỉ nằm ở quá trình phân tách và biên dịch. **Quá
 
 Để giải quyết vấn đề này, JavaScript tận dụng khả năng chia nhỏ thành từng phần (small chunks) để tránh không khóa hoàn toàn luồng chính. Bạn hãy tìm hiểu để xem có thể giảm thiểu công việc trong quá trình thực thi hay không.
 
-### Một số khuôn mẫu để giảm thiểu chi phí truyền tải JavaScript
+### 4. Một số khuôn mẫu để giảm thiểu chi phí truyền tải JavaScript
 
 Khi bạn đang tìm cách để giảm thiểu thời gian truyền tải, phân tách và biên dịch JavaScript, có vài khuôn mẫu có thể hữu ích, như kỹ thuật chia nhỏ theo định tuyến (route-based chunking) hay còn gọi là [PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/).
 
@@ -126,14 +126,14 @@ Chúng ta phân tính thời gian tải của những trang web di động thôn
 
 [Wego](https://wego.com/), một trang sử dụng PRPL, xoay xở để giữ cho thời gian phân tách ở mức thấp, giúp cho website có thể tương tác nhanh hơn. Những trang còn lại cũng đã thực hiện kỹ thuật chia mã và dự toán hiệu suất (performance budgeting) để giảm chi phí JS.
 
-### Những chi phí khác
+### 5. Những chi phí khác
 
 JavaScript cũng có thể tác động đến hiệu suất của website theo những hướng khác:
 
 - Bộ nhớ. Website có thể cảm thấy bị giựt (jank) hay tạm dừng thường xuyên do bộ gom rác (garbage collector - GC) hoạt động. Khi trình duyệt tiến hành thu hồi bộ nhớ, quá trình thực thi JS bị tạm dừng. Do đó khi trình duyệt thu hồi bộ nhớ quá thường xuyên, tiến trình JS cũng bị dừng liên tục hơn chúng ta mong muốn. Lập trình viên cần tránh bị rò rỉ bộ nhớ và tiến trình dừng của GC để website có thể hoạt động ổn định hơn.
 - Trong quá trình chạy, mã JavaScript chạy quá lâu có thể khóa luồng chính, làm cho website trở nên không tương tác được. Bằng cách chia nhỏ công việc ra thành từng phần (sử dụng `requestAnimationFrame()` hay `requestIdleCallback()` để phân lịch) có thể giúp giảm thiểu các vấn đề về tương tác.
 
-### Kỹ thuật Khởi động Tăng tiến (progressive bootstrapping)
+### 6. Kỹ thuật Khởi động Tăng tiến (progressive bootstrapping)
 
 Nhiều website xem tính ẩn hiện của nội dung trên trang là một chi phí đắt đỏ khi tối ưu hóa tính tương tác. Để có thể thực hiện tiến trình vẽ đầu tiên (first paint) một cách nhanh chóng, lập trình viên thường sử dụng kỹ thuật tạo nội dung trước ở phía server (server-side rendering - SSR), sau đó "nâng cấp" bằng cách gắn các hàm xử lý sự kiện sau khi JavaScript đã được tải về.
 
