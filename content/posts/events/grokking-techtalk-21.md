@@ -4,7 +4,7 @@ title: "Grokking TechTalk #21: Deep Learning in Computer Vision"
 slug: grokking-techtalk-21
 date: 2017-10-18
 tags: Grokking, TechTalk, ComputerVision
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1508350454/22548905_1540147892719840_6468915672483349548_o_mo6sjg.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1528048468/Untitled_jleock.jpg
 excerpt: "The field of deep learning is rapidly growing and surpassing traditional approaches for machine learning and pattern recognition. Do you know how is Machine Learning/Deep Learning being applied in Computer Vision?"
 author: kcjpop
 ---

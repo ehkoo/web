@@ -277,7 +277,7 @@ Bạn có nên từ bỏ jQuery không? Câu trả lời là... hên xui. Nếu 
 
 Tặng bạn một mẩu truyện vui "lụm trên mạng".
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1520066218/zq4bm9kdplg01_qspcbr.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528048468/zq4bm9kdplg01_qspcbr_rq4c4e.jpg)
 _- Coi gì đó? Phim heo phải hông?_
 _- Hông phải đâu má! Chỉ là..._
 _- Hmm..._
