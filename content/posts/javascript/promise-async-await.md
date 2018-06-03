@@ -132,11 +132,11 @@ async function() {
 }
 ```
 
-Căn bản về Promise và async/await là vậy. Hiện tại bạn đã có thể sử dụng Promise và async/await ở tất cả các trình duyệt hiện đại (trừ IE11 ra nhé, bạn vẫn cần polyfill cho nó). Hãy xem những trường hợp cần lưu ý khi sử dụng chúng.
+Căn bản về Promise và async/await là vậy. Hiện giờ, bạn đã có thể sử dụng Promise và async/await ở tất cả các trình duyệt hiện đại (trừ IE11 ra nhé, bạn vẫn cần polyfill cho nó). Hãy xem những trường hợp cần lưu ý khi sử dụng chúng.
 
 ### "Kim tự tháp" Promises
 
-Một lỗi mà khi mới làm quen với Promise chúng ta hay mắc phải, đó là tạo ra "kim tự tháp" promises như thế này.
+Một lỗi chúng ta hay mắc phải khi mới làm quen với Promise, đó là tạo ra "kim tự tháp" promises như thế này.
 
 ```js
 api.getUser('pikalong')
@@ -154,7 +154,7 @@ api.getUser('pikalong')
   .catch(err => console.log(err))
 ```
 
-Lý do là chúng ta quên mất tính chất liên kết (chaining) của promise, cho phép bên trong hàm `resolve` có thể trả về một giá trị đồng bộ hoặc **một promise** khác. Do đó cách giải quyết là:
+Lý do vì chúng ta quên mất tính chất liên kết (chaining) của promise, cho phép bên trong hàm `resolve` có thể trả về một giá trị đồng bộ hoặc **một promise** khác. Do đó cách giải quyết là:
 
 ```js
 api.getUser('pikalong')
@@ -164,7 +164,7 @@ api.getUser('pikalong')
   .catch(err => { throw err })
 ```
 
-Theo Ehkoo thì việc hiểu và sử dụng thành thạo tính liên kết là một trong những điểm tối quan trọng khi làm việc với Promise. Khi promise lồng vào nhau 2 tầng trở lên thì đã đến lúc bạn phải refactor lại rồi.
+Theo Ehkoo, việc hiểu và sử dụng thành thạo tính liên kết là một trong những điểm tối quan trọng khi làm việc với Promise. Khi promise lồng vào nhau 2 tầng trở lên, thì đã đến lúc bạn phải refactor lại rồi.
 
 ### Luôn đưa vào `.then()` một hàm
 
@@ -258,7 +258,7 @@ class User {
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528015633/WeAgTSK_sydkqv.png)
 
-Trong trường hợp bạn muốn chạy các promises một cách tuần tự như sơ đồ ở trên, bạn có thể dùng hàm `Array.prototype.reduce` .
+Trong trường hợp muốn chạy các promises một cách tuần tự như sơ đồ ở trên, bạn có thể dùng hàm `Array.prototype.reduce` .
 
 ```js
 [promise1, promise2, promise3].reduce(function(currentPromise, promise) {
@@ -350,7 +350,7 @@ api.getUser('pikalong')
   .then(console.log) // undefined
 ```
 
-Đoạn mã thứ hai trả về `undefined` vì trong JavaScript nếu một hàm không _công khai_ trả về một giá trị, `undefined` mặc định sẽ được trả về ([nguồn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)). Do đó bạn cần lưu ý về giá trị `return` khi làm việc với Promise.
+Đoạn mã thứ hai trả về `undefined` vì trong JavaScript nếu một hàm không _công khai_ trả về một giá trị, `undefined` mặc định sẽ được trả về ([nguồn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)). Do đó, bạn cần lưu ý về giá trị `return` khi làm việc với Promise.
 
 ### Phân biệt `.then(resolve, reject)` và `.then(resolve).catch(reject)`
 
@@ -404,7 +404,7 @@ api.getUser('pikalong')
   })
 ```
 
-Hoặc nếu bạn cảm thấy phân tách mảng khó dùng vì phải nhớ thứ tự của các giá trị thì ta có thể dùng object như sau:
+Hoặc, nếu bạn cảm thấy phân tách mảng khó dùng vì phải nhớ thứ tự của các giá trị thì ta có thể dùng object như sau:
 
 ```js
 api.getUser('pikalong')
@@ -466,7 +466,7 @@ button.onclick = e => getUsers()
 
 ### Kết
 
-Bạn có thể thấy Promise và async/await không hoàn toàn thay thế mà hỗ trợ lẫn nhau. Tùy vào từng trường hợp cụ thể mà bạn nên chọn sử dụng phương thức cho phù hợp.
+Bạn có thể thấy Promise và async/await không hoàn toàn thay thế mà hỗ trợ lẫn nhau. Tùy từng trường hợp cụ thể mà bạn chọn sử dụng phương thức cho phù hợp.
 
 #### Tham khảo
 
