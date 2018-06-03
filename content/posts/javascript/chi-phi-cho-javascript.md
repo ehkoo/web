@@ -2,7 +2,7 @@
 layout: post.njk
 title: Chi phí cho JavaScript
 slug: chi-phi-cho-javascript
-date: 2018-06-03
+date: 2017-11-18
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg
 tags: JavaScript, Web Performance, Web Optimization
 excerpt: 5+ bài toán hóc búa khi xử lý JavaScript trên các thiết bị di động; và một số giải pháp do Addy Osmani, Eng. Manager tại Google đề xuất, giúp nâng cao hiệu suất website.
