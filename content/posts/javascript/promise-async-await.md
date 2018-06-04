@@ -5,7 +5,7 @@ slug: tat-tan-tat-ve-promise-va-async-await
 date: 2018-06-02
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg
 tags: JavaScript, Promise, Async, Await, Dành cho người mới
-excerpt: Bạn nghĩ mình đã "rành sáu câu" về Promise và async/await? Nô nô, đời không đơn giản vậy đâu nhé. Cùng đọc về những sai lầm hay gặp khi "hứa hẹn" với JavaScript nào.
+excerpt: Bạn nghĩ mình đã "rành sáu câu" về Promise và async/await? Nô nô, đời không đơn giản vậy đâu nhé. Cùng đọc về những sai lầm hay gặp khi "hứa hẹn" trong JavaScript nào.
 author: kcjpop
 ---
 
@@ -21,7 +21,7 @@ Ehkoo sẽ điểm những khái niệm căn bản về Promise, đồng thời 
 
 ### Nhắc lại, Promise là gì?
 
-Promise là một _cơ chế_ trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào _callback hell_ hay _pyramid of doom_, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng. Các tác vụ bất đồng bộ có thể là gửi AJAX request, gọi hàm bên trong `setTimeout`, `setInterval` hoặc `requestAnimationFrame`, hay thao tác với WebSocket hoặc Worker... Chẳng hạn như:
+Promise là một _cơ chế_ trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào _callback hell_ hay _pyramid of doom_, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng. Các tác vụ bất đồng bộ có thể là gửi AJAX request, gọi hàm bên trong `setTimeout`, `setInterval` hoặc `requestAnimationFrame`, hay thao tác với WebSocket hoặc Worker... Dưới đây là một callback hell điển hình.
 
 ```js
 api.getUser('pikalong', function(err, user) {
@@ -50,7 +50,7 @@ api.getUser('pikalong')
 const p = new Promise( /* executor */ function(resolve, reject) {
   // Thực thi các tác vụ bất đồng bộ ở đây, và gọi `resolve(result)` khi tác
   // vụ hoàn thành. Nếu xảy ra lỗi, gọi đến `reject(error)`.
-} )
+})
 ```
 
 Trong đó, `executor` là một hàm có hai tham số:
@@ -103,18 +103,21 @@ promise()
 
 Trong ví dụ trên, bạn thấy đến phương thức `.catch()`. Phương thức này chỉ là _cú pháp bọc đường_ (syntactic sugar) của `.then(null, onError)` mà thôi. Chúng ta sẽ nói thêm về `.catch()` ở bên dưới.
 
-> **Tạo nhanh Promise với `Promise.resolve()` và `Promise.reject()`**
-> Có những trường hợp bạn chỉ cần một promise mà sẽ tự động resolve/ reject. Thay vì phải
+#### Tạo nhanh Promise với `Promise.resolve()` và `Promise.reject()`
+
+ Có những trường hợp bạn chỉ cần bọc một giá trị vào promise hay tự động reject. Thay vì dùng cú pháp `new Promise()` dài dòng, bạn có thể dùng hai phương thức tĩnh `Promise.resolve(result)` và `Promise.reject(err)`
+
 ```js
-new Promise((resolve, reject) => {})
+const p = Promise.resolve(12)
+  .then(result => console.log(result)) // 12
+  .then(res => Promise.reject(new Error('Dừng lại nhanh')))
+  .then(() => 'Cười thêm phát nữa là tym anh đứt phanh')
+  .catch(err => console.error(err)) // Error: Dừng lại nhanh
 ```
-> dài dòng, bạn có thể dùng:
-> * `Promise.resolve(result)`
-> * `Promise.reject(err)`
 
 ### Còn async/await là cái chi?
 
-Được giới thiệu trong ES7, async/await là một _cơ chế_ giúp bạn thực hiện các thao tác bất đồng bộ một cách _tuần tự_ hơn. Async/await vẫn sử dụng Promise ở bên dưới nhưng giúp mã nguồn của bạn (theo một cách nào đó) trong sáng và dễ theo dõi.
+Được giới thiệu trong ES7, async/await là một _cơ chế_ giúp bạn thực hiện các thao tác bất đồng bộ một cách _tuần tự_ hơn. Async/await vẫn sử dụng Promise ở bên dưới nhưng mã nguồn của bạn (theo một cách nào đó) sẽ trong sáng và dễ theo dõi.
 
 Để sử dụng, bạn phải khai báo hàm với từ khóa `async`. Khi đó bên trong hàm bạn có thể dùng `await.`
 
@@ -164,7 +167,7 @@ api.getUser('pikalong')
   .catch(err => { throw err })
 ```
 
-Theo Ehkoo, việc hiểu và sử dụng thành thạo tính liên kết là một trong những điểm tối quan trọng khi làm việc với Promise. Khi promise lồng vào nhau 2 tầng trở lên, thì đã đến lúc bạn phải refactor lại rồi.
+Theo Ehkoo, việc hiểu và sử dụng thành thạo tính liên kết là một trong những điểm **QUAN TRỌNG NHẤT** khi làm việc với Promise. Khi promise lồng vào nhau từ 2 tầng trở lên thì đã đến lúc bạn phải refactor lại rồi.
 
 ### Luôn đưa vào `.then()` một hàm
 
@@ -235,7 +238,7 @@ Nhưng bạn lại nhận được lỗi sau:
 
 > Unhandled rejection:[TypeError: Cannot read property 'user' of undefined]
 
-Lý do là vì khi trong strict mode, biến ngữ cảnh `this` chỉ được xác định khi trực tiếp gọi phương thức của đối tượng đó, hoặc thông qua `.bind()`. Bạn có thể xem giải thích chi tiết hơn [ở đây](https://stackoverflow.com/a/34930887).
+Lý do là vì khi trong [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode), biến ngữ cảnh `this` chỉ được xác định khi trực tiếp gọi phương thức của đối tượng đó, hoặc thông qua `.bind()`. Bạn có thể xem giải thích chi tiết hơn [ở đây](https://stackoverflow.com/a/34930887).
 
 Để giải quyết lỗi này, bạn có thể dùng một trong những cách sau:
 
@@ -245,7 +248,8 @@ Lý do là vì khi trong strict mode, biến ngữ cảnh `this` chỉ được 
 // hoặc
 .then(u.getUsername.bind(u))
 
-// hoặc dùng arrow binding khi khai báo class trong ES7
+// hoặc dùng hàm mũi tên khi khai báo phương thức trong class (cần plugin
+// `transform-class-properties` của Babel)
 class User {
   // ...
   getUsername = () => {
@@ -281,7 +285,7 @@ async function() {
 
 ### Chạy nhiều Promises cùng lúc với Promise.all()
 
-Có những trường hợp bạn muốn thực thi và lấy ra kết quả của nhiều promises cùng lúc. Giải pháp "ngây thơ" sẽ là dùng vòng lặp, hoặc `.forEach`.
+Lại có trường hợp bạn muốn thực thi và lấy ra kết quả của nhiều promises cùng lúc. Giải pháp "ngây thơ" sẽ là dùng vòng lặp, hoặc `.forEach`.
 
 ```js
 const userIds = [1, 2, 3, 4]
@@ -379,7 +383,7 @@ Promise.resolve()
 
 ### Truyền dữ liệu giữa các promises với nhau
 
-Một trong những yếu điểm của Promise là không có cơ chế mặc định để bạn truyền dữ liệu giữa các promise object với nhau. Nghĩa là:
+Một trong những yếu điểm của Promise là không có cơ chế mặc định để bạn truyền dữ liệu giữa các promise objects với nhau. Nghĩa là:
 
 ```js
 api.getUser('pikalong')
@@ -464,11 +468,36 @@ const getUsers = () => new Promise((resolve, reject) => {
 button.onclick = e => getUsers()
 ```
 
+### Cuối cùng, `.finally()`
+
+Bên cạnh `.then()` và `.catch()`, chúng ta còn có `.finally(onFinally)`. Phương thức này nhận vào một hàm và sẽ được kích hoạt dù cho promise trước nó hoàn thành hay xảy ra lỗi.
+
+```js
+showLoadingSpinner()
+api.getUser('pikalong')
+  .then(user => {})
+  .catch(err => {})
+  .finally(hideLoadingSpinner)
+
+// async/await
+async function() {
+  try {
+    showLoadingSpinner()
+    api.getUser('pikalong')
+  } catch(err) {
+  } finally {
+    hideLoadingSpinner()
+  }
+}
+```
+
+Bạn có thể đọc thêm về `Promise.prototype.finally()` [ở đây](https://ehkoo.com/bai-viet/promise-finally-duoc-gioi-thieu-tu-google-chrome-63). Lưu ý là phương thức này hiện chỉ được hỗ trợ bởi Firefox, Chrome và Opera thôi nhé.
+
 ### Kết
 
-Bạn có thể thấy Promise và async/await không hoàn toàn thay thế mà hỗ trợ lẫn nhau. Tùy từng trường hợp cụ thể mà bạn chọn sử dụng phương thức cho phù hợp.
+Bạn có thể thấy Promise và async/await không hoàn toàn thay thế mà hỗ trợ lẫn nhau. Mặc dù chúng ta có thể dùng async/await ở đa số các trường hợp, Promise vẫn là nền tảng cần thiết khi thực thi các tác vụ bất đồng bộ trong JavaScript. Do đó bạn nên xem xét và lựa chọn giải pháp phù hợp, tùy vào tình hình thực tế nhá.
 
-#### Tham khảo
+#### Đọc thêm
 
 [_Using Promises_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) -- MDN
 
