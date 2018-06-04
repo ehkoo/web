@@ -117,7 +117,7 @@ const p = Promise.resolve(12)
 
 ### Còn async/await là cái chi?
 
-Được giới thiệu trong ES7, async/await là một _cơ chế_ giúp bạn thực hiện các thao tác bất đồng bộ một cách _tuần tự_ hơn. Async/await vẫn sử dụng Promise ở bên dưới nhưng mã nguồn của bạn (theo một cách nào đó) sẽ trong sáng và dễ theo dõi.
+Được giới thiệu trong ES8, async/await là một _cơ chế_ giúp bạn thực hiện các thao tác bất đồng bộ một cách _tuần tự_ hơn. Async/await vẫn sử dụng Promise ở bên dưới nhưng mã nguồn của bạn (theo một cách nào đó) sẽ trong sáng và dễ theo dõi.
 
 Để sử dụng, bạn phải khai báo hàm với từ khóa `async`. Khi đó bên trong hàm bạn có thể dùng `await.`
 
