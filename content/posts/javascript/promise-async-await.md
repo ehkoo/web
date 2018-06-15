@@ -135,6 +135,17 @@ async function() {
 }
 ```
 
+Cần lưu ý là kết quả trả về của async function luôn là một Promise.
+
+```js
+async function hello() {
+  return 1
+}
+
+console.log(hello() instanceof Promise) // true
+hello().then(console.log) // 1
+```
+
 Căn bản về Promise và async/await là vậy. Hiện giờ, bạn đã có thể sử dụng Promise và async/await ở tất cả các trình duyệt hiện đại (trừ IE11 ra nhé, bạn vẫn cần polyfill cho nó). Hãy xem những trường hợp cần lưu ý khi sử dụng chúng.
 
 ### "Kim tự tháp" Promises
