@@ -5,20 +5,20 @@ slug: 10-giao-dien-theme-dep-xuat-sac-cho-sublime-text-3
 date: 2018-06-03
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1528974295/Untitled_p8duff.jpg
 tags: Thủ thuật, Sublime Text 3, Themes, Text Editor
-excerpt: "Tân trang Sublime Text 3 bằng những giao diện vừa hợp mắt lại nâng cao hiệu suất làm việc nhé."
+excerpt: "Cùng tân trang Sublime Text 3 bằng những giao diện (themes) đẹp mắt để nâng cao hiệu suất làm việc nào!"
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528974295/Untitled_p8duff.jpg)
 
-Đối với lập trình viên, ngoài việc chọn một phông chữ thuận mắt thì một giao diện (theme) tốt cùng với các mẫu tô màu (color scheme) trực quan cũng góp phần đáng kể vào năng suất làm việc. Bên cạnh kho plugin đồ sộ, Sublime Text 3 còn hấp dẫn người sử dụng bởi vô vàn giao diện bắt mắt và thân thiện. Cùng xem những theme và color scheme nào đáng được dùng nhất nhé.
+Cùng với font chữ, việc chọn một giao diện (theme) tốt với các mẫu tô màu (color scheme) trực quan cũng góp phần đáng kể giúp tăng năng suất làm việc của lập trình viên. Nếu bạn đang dùng Sublime Text 3 thì đừng quên khám phá những giao diện (themes) và color scheme cực kì bắt mắt, thân thiện của trình soạn thảo này nhé.
 
 **Bạn đừng bỏ qua:**
 * [10+ font chữ cho lập trình - download miễn phí](https://ehkoo.com/bai-viet/font-chu-cho-lap-trinh)
 * [9+ thủ thuật giúp sử dụng Sublime Text 3 hiệu quả hơn](https://ehkoo.com/bai-viet/sublime-text-3-tips-tricks)
 
-#### Ủa nhưng bạn đã biết cài đặt và thay đổi giao diện trong Sublime Text chưa?
+#### Ủa, nhưng bạn đã biết cài đặt và thay đổi giao diện trong Sublime Text chưa?
 
 Trước hết, hãy chắc chắn bạn đã cài đặt [Package Control](https://packagecontrol.io/installation). Sau đó, bạn làm theo các bước sau:
 
@@ -48,7 +48,7 @@ Hoặc bạn có thể thay đổi giao diện và mẫu màu nhanh hơn bằng 
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528051401/rYYVNwv_vcddyf.png)
 
-Còn bây giờ thì mời bạn thưởng lãm những giao diện được Ehkoo tuyển chọn nhé.
+#### Còn bây giờ, mời bạn thưởng lãm những giao diện do Ehkoo tuyển chọn dưới đây.
 
 ### Predawn
 
@@ -68,7 +68,7 @@ Cài đặt
 
 ### Materialize
 
-Dựa trên hệ thống thiết kế Material Design của Google, [Materialize](https://packagecontrol.io/packages/Materialize) là một giao diện tối, có đi kèm một số mẫu màu và thiết lập. Điều đáng tiếc là giao diện này đã không còn được phát triển tiếp nữa.
+Dựa trên hệ thống thiết kế Material Design của Google, [Materialize](https://packagecontrol.io/packages/Materialize) là một giao diện tối, có đi kèm một số mẫu màu và thiết lập. Đáng tiếc là giao diện này hiện không còn được phát triển tiếp.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528973472/d7e771c4b9966da6731bc57df6c2fbb317780556_wyazht.png)
 
@@ -283,4 +283,6 @@ Dựa vào giao diện Numix dành cho GTK, [Numix Theme](https://packagecontrol
 
 ### Tổng kết
 
-Trên đây là những themes được tổng hợp từ các forum, blog, mức độ phổ biến cũng như lượt cài đặt. Ehkoo hy vọng các bạn có thể tìm cho mình một theme ưng ý, góp phần làm đẹp thêm cho trình soạn thảo của mình. Ngoài ra, nếu các bạn biết thêm những theme nào khác, đừng quên cho Ehkoo và mọi người biết trong phần bình luận nhé!
+Trên đây là những themes được tổng hợp từ các forum và blog, dựa trên mức độ phổ biến cũng như lượt cài đặt. Ehkoo hy vọng các bạn có thể tìm cho mình một theme ưng ý, góp phần làm đẹp thêm cho trình soạn thảo của mình.
+
+Ngoài ra, nếu bạn biết những theme khác thì đừng quên chia sẻ với Ehkoo và mọi người trong phần bình luận nhé!
