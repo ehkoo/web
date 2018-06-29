@@ -60,6 +60,12 @@ svg {
   line-height: 1.5;
 }
 
+.content h4 code {
+  font-size: inherit;
+  background-color: #FFDFDF !important;
+  color: #ff4136 !important;
+}
+
 .content code:not([class*='language']) {
   font-size: 1rem;
   background-color: #dee2e6;
