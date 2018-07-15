@@ -183,7 +183,9 @@ Chúng ta có thể thay đổi giá trị của biến trong tùy thuộc vào 
 }
 
 @media screen and (min-width: 768px) {
-  --gutter: 30px;
+  :root {
+    --gutter: 30px;
+  }
 }
 ```
 
