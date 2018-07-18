@@ -5,7 +5,7 @@ slug: can-ban-ve-css-variables
 date: 2018-07-07
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1531667456/ehkoo/fpTuJ9r_kuo40g.jpg
 tags: CSS, CSS Variables, CSS Custom Properties, CSS Next
-excerpt: "Thuộc tính tùy chỉnh -- custom properties, hay còn được biết đến với cái tên thông dụng CSS variables -- là một tính năng mới được giới thiệu gần đây, nhưng đã thay đổi mạnh mẽ đến cách quản lý và làm việc với các tập tin CSS."
+excerpt: "Thuộc tính tùy chỉnh -- custom properties, hay còn được biết đến với cái tên thông dụng CSS variables -- là một tính năng mới được giới thiệu gần đây, nhưng đã thay đổi mạnh mẽ cách quản lý và làm việc với các tập tin CSS."
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
@@ -14,7 +14,11 @@ _Hình minh họa bởi Aleksei Bitskoff - [www.alekseibitskoff.com](http://www.
 
 ### Giới thiệu
 
-Biến (variables) có lẽ là một trong những khái niệm căn bản nhất khi lập trình. Bằng cách sử dụng biến, chúng ta có thể khai báo một tên, gán giá trị vào biến và sử dụng nó trong suốt ứng dụng. Đối với CSS, điều này đặc biệt hữu ích khi phải làm việc trên những stylesheet phức tạp và có nhiều quy luật. Trước khi CSS variables được giới thiệu, chúng ta phải dựa vào các chương trình tiền xử lý CSS (CSS pre-processors) như SASS, LESS hay Stylus để có thể sử dụng biến. Mỗi chương trình tiền xử lý lại đi kèm với một ngôn ngữ của riêng nó, có thể tương thích hoặc không tương thích với CSS thuần. Chẳng hạn như, đoạn code dưới đây được viết bằng SASS:
+Biến (variables) có lẽ là một trong những khái niệm căn bản nhất khi lập trình. Bằng cách sử dụng biến, chúng ta có thể: 1- khai báo một tên, 2- gán giá trị vào biến và sử dụng nó trong suốt ứng dụng.
+
+Đối với CSS, điều này đặc biệt hữu ích khi phải làm việc trên những stylesheet phức tạp và có nhiều quy luật.
+
+Trước khi CSS variables được giới thiệu, chúng ta phải dựa vào các chương trình tiền xử lý CSS (CSS pre-processors) như SASS, LESS hay Stylus để có thể sử dụng biến. Mỗi chương trình tiền xử lý lại đi kèm với một ngôn ngữ của riêng nó, có thể tương thích hoặc không tương thích với CSS thuần. Chẳng hạn như, đoạn code dưới đây được viết bằng SASS:
 
 ```sass
 // Khai báo biến màu chính
@@ -28,7 +32,7 @@ $mainColor: white
   background-color: $mainColor
 ```
 
-Bạn không thể trực tiếp chạy đoạn SASS trên trên trình duyệt, do đó chúng cần được biên dịch lại thành CSS thông thường. Và đây là kết quả:
+Bạn không thể trực tiếp chạy đoạn SASS này trên trình duyệt, mà cần biên dịch chúng lại thành CSS thông thường. Và đây là kết quả:
 
 ```css
 /* Sau khi biên dịch, các biến đã bị xóa ra khỏi tài liệu. */
@@ -41,7 +45,7 @@ Bạn không thể trực tiếp chạy đoạn SASS trên trên trình duyệt,
 }
 ```
 
-CSS Custom Properties -- thuộc tính tùy chỉnh ra đời, cho cho phép chúng ta thao tác, làm việc trực tiếp với biến ngay bên trong stylesheet mà không cần phải qua bước biên dịch.
+CSS Custom Properties -- thuộc tính tùy chỉnh ra đời, cho phép chúng ta thao tác, làm việc trực tiếp với biến ngay bên trong stylesheet mà không cần phải qua bước biên dịch.
 
 ```css
 :root {
@@ -57,15 +61,15 @@ CSS Custom Properties -- thuộc tính tùy chỉnh ra đời, cho cho phép ch�
 }
 ```
 
-Kết quả của đoạn mã ở trên hoàn toàn giống với đoạn SASS ban đầu, nhưng so với các chương trình tiền xử lý, CSS variables có những lợi ích nhất định:
+Kết quả của đoạn mã ở trên hoàn toàn giống với đoạn SASS ban đầu. Tuy nhiên, so với các chương trình tiền xử lý, CSS variables có những lợi ích nhất định:
 
-- Được hỗ trợ trực tiếp bởi trình duyệt, không phải biên dịch
+- Được hỗ trợ trực tiếp bởi trình duyệt, không phải biên dịch.
 - Tồn tại trong DOM, có thể được truy xuất và thay đổi bằng JavaScript. Tính năng này mở ra những cơ hội mới rất hữu ích khi lập trình frontend.
 - Các biến được chia theo tầng (cascading). Cũng như CSS selectors, thuộc tính tùy biển có thể được quy định lại bởi những luật ở tầng thấp hơn.
-- Khi các giá trị như media queries thay đổi, giá trị của biến cũng thay đổi
+- Khi các giá trị như media queries thay đổi, giá trị của biến cũng thay đổi.
 - Giúp mã nguồn dễ đọc và có ý nghĩa hơn, nâng cao tính tùy biến và khả năng bảo trì.
 
-Hiện tại thuộc tính tùy chỉnh đã được [hỗ trợ mặc định](https://caniuse.com/#feat=css-variables) trên tất cả các trình duyệt hiện đại.
+Hiện tại, thuộc tính tùy chỉnh đã được [hỗ trợ mặc định](https://caniuse.com/#feat=css-variables) trên tất cả các trình duyệt hiện đại.
 
 Hãy cùng xem các cách sử dụng căn bản nhé.
 
@@ -83,7 +87,11 @@ Thuộc tính tùy chỉnh được khai báo bằng cách đặt `--` phía tr�
 }
 ```
 
-Trong đoạn code trên, chúng ta khai báo một thuộc tính tùy chỉnh `--my-color` có giá trị là `blue`, đồng thời một thuộc tính khác `--my-font-size` có giá trị là `11px`. Bạn có thể khai báo bao nhiêu thuộc tính tùy ý, và hiện tại thì tên các thuộc tính được đặt theo dạng kebab-case, với các từ được phân cách bằng dấu gạch ngang `-`. Dĩ nhiên đây chỉ là quy ước và bạn có thể tùy ý chọn tên biến tùy thích. Nhưng cần lưu ý là tên của thuộc tính tùy chỉnh **có phân biệt chữ hoa/thường**, tức là `--my-color` và `--my-Color` là hai thuộc tính khác nhau.
+Trong đoạn code trên, chúng ta khai báo một thuộc tính tùy chỉnh `--my-color` có giá trị là `blue`, đồng thời một thuộc tính khác `--my-font-size` có giá trị là `11px`.
+
+Bạn có thể khai báo bao nhiêu thuộc tính tùy ý, và hiện tại thì tên các thuộc tính được đặt theo dạng kebab-case, với các từ được phân cách bằng dấu gạch ngang `-`.
+
+Dĩ nhiên đây chỉ là quy ước và bạn có thể tùy ý chọn tên biến tùy thích. Nhưng cần lưu ý là tên của thuộc tính tùy chỉnh **có phân biệt chữ hoa/thường**, tức là `--my-color` và `--my-Color` là hai thuộc tính khác nhau.
 
 
 #### Phạm vi (scope)
