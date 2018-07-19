@@ -7,6 +7,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516116299/es6-recursi
 tags: JavaScript, ES6, ES2015, Dành cho người mới
 excerpt: ES6 đã và đang dần được hỗ trợ bởi tất cả các trình duyệt. Hãy cùng điểm qua những tính năng thông dụng nhất nhé.
 author: kcjpop
+draft: true
 ---
 Even Faster Web Sites
 - High Performance JavaScript
