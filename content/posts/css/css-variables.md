@@ -1,3 +1,4 @@
+
 ---
 layout: post.njk
 title: Căn bản về CSS Variables
@@ -16,7 +17,7 @@ _Hình minh họa bởi Aleksei Bitskoff - [www.alekseibitskoff.com](http://www.
 
 Biến (variables) có lẽ là một trong những khái niệm căn bản nhất khi lập trình. Bằng cách sử dụng biến, chúng ta có thể: 1- khai báo một tên, 2- gán giá trị vào biến và sử dụng nó trong suốt ứng dụng.
 
-Đối với CSS, điều này đặc biệt hữu ích khi phải làm việc trên những stylesheet phức tạp và có nhiều quy luật.
+Đối với CSS, điều này đặc biệt hữu ích khi phải làm việc trên những stylesheet phức tạp và có nhiều định nghĩa.
 
 Trước khi CSS variables được giới thiệu, chúng ta phải dựa vào các chương trình tiền xử lý CSS (CSS pre-processors) như SASS, LESS hay Stylus để có thể sử dụng biến. Mỗi chương trình tiền xử lý lại đi kèm với một ngôn ngữ của riêng nó, có thể tương thích hoặc không tương thích với CSS thuần. Chẳng hạn như, đoạn code dưới đây được viết bằng SASS:
 
@@ -69,7 +70,7 @@ Kết quả của đoạn mã ở trên hoàn toàn giống với đoạn SASS b
 - Khi các giá trị như media queries thay đổi, giá trị của biến cũng thay đổi.
 - Giúp mã nguồn dễ đọc và có ý nghĩa hơn, nâng cao tính tùy biến và khả năng bảo trì.
 
-Hiện tại, thuộc tính tùy chỉnh đã được [hỗ trợ mặc định](https://caniuse.com/#feat=css-variables) trên tất cả các trình duyệt hiện đại.
+Hiện tại, thuộc tính tùy chỉnh đã được [hỗ trợ mặc định](https://caniuse.com/#feat=css-variables) trên tất cả các trình duyệt hiện đại. Hoặc bạn có thể dùng [PostCSS](https://github.com/postcss/postcss) như một chương trình tiền xử lý để biên dịch ra CSS cho các trình duyệt cũ.
 
 Hãy cùng xem các cách sử dụng căn bản nhé.
 
