@@ -1,4 +1,3 @@
-
 ---
 layout: post.njk
 title: Căn bản về CSS Variables
