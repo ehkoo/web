@@ -213,7 +213,7 @@ Ngoài cách chỉ định giá trị grid line một cách tường minh, bạn
 }
 ```
 
-Chúng ta có thể đọc đoạn CSS trên như là "`item1` bắt đầu ở cột thứ 3, và tự động giãn ra thành 3 cột". Kết quả bạn nhận được cũng tương tự.
+Chúng ta có thể đọc đoạn CSS trên như là "`item1` bắt đầu ở cột thứ 1, và tự động giãn ra thành 3 cột". Kết quả bạn nhận được cũng tương tự.
 
 <script async src="//jsfiddle.net/tv2r4ead/19/embed/result,html,css/"></script>
 
