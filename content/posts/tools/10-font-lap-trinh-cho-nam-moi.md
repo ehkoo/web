@@ -5,7 +5,7 @@ slug: font-chu-cho-lap-trinh
 date: 2018-01-16
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516254753/jLxMOZg_egcfqa.jpg
 tags: Thủ thuật, Fonts, Programming Fonts
-excerpt: Code font không phù hợp có thể khiến bạn "nhức con mắt bên phải, đỏ con mắt bên trái" và giảm hẳn năng suất làm việc. Hãy thử ngay 10+ code font "ngon bổ rẻ" do Ehkoo chọn lọc này, để cuộc đời lập trình viên của bạn thêm tươi sáng!
+excerpt: Font không phù hợp có thể khiến bạn giảm hẳn năng suất làm việc. Hãy thử ngay 10+ code font "ngon bổ rẻ" do Ehkoo chọn lọc này, để cuộc đời lập trình viên thêm tươi sáng!
 author: kcjpop
 editor: chubbyanh
 ---
