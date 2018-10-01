@@ -5,7 +5,7 @@ slug: font-chu-cho-lap-trinh
 date: 2018-01-16
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1516254753/jLxMOZg_egcfqa.jpg
 tags: Thủ thuật, Fonts, Programming Fonts
-excerpt: 2018 rồi mà bạn vẫn còn dùng Courier New? Dừng lại ngay, bạn đang làm khổ bản thân đấy. Hãy để Ehkoo giới thiệu 10+ code font "ngon bổ rẻ" cho đời lập trình viên của bạn.
+excerpt: Code font không phù hợp có thể khiến bạn "nhức con mắt bên phải, đỏ con mắt bên trái" và giảm hẳn năng suất làm việc. Hãy thử ngay 10+ code font "ngon bổ rẻ" do Ehkoo chọn lọc này, để cuộc đời lập trình viên của bạn thêm tươi sáng!
 author: kcjpop
 editor: chubbyanh
 ---
@@ -17,7 +17,7 @@ Bạn có để ý là mình đang dùng code font (font chữ cho lập trình)
 
 Yếu tố ngỡ là nhỏ xíu này, thực ra lại ảnh hưởng lớn đến năng suất lập trình. Font không phù hợp có thể khiến bạn nhức mắt. Chưa kể, hãy thử tưởng tượng: bạn mòn mỏi dành ít nhất 8 tiếng mỗi ngày, 5 ngày mỗi tuần, ròng rã 12 tháng một năm – chỉ để nhìn chăm chăm vào MỘT FONT DUY NHẤT! Thật sự rất chán!
 
-Năm mới đã đến, hãy cùng Ehkoo thay font mới cho trình soạn thảo của bạn! Sau đây là 10+ font chữ cho lập trình, giúp bạn:
+Nào, hãy cùng Ehkoo thay font mới cho trình soạn thảo của bạn! Sau đây là 10+ font chữ cho lập trình, giúp bạn:
 
 * Viết code dễ dàng hơn, tránh các lỗi typo.
 * Đem đến cảm giác tươi mới cho trình soạn thảo.
