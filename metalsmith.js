@@ -10,10 +10,8 @@ const wordcount = require('metalsmith-word-count')
 const collections = require('metalsmith-collections')
 const feed = require('metalsmith-feed')
 
-const toc = require('./plugins/toc')
 const dates = require('./plugins/metalsmith-date-formatter')
 const related = require('./plugins/related')
-const readJson = require('./plugins/read-json')
 const permalinks = require('./plugins/metalsmith-permalinks')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
@@ -33,34 +31,25 @@ const builder = Metalsmith(__dirname)
       facebook: 'https://facebook.com/ehkoo.dev',
       twitter: 'https://twitter.com/EhkooDev',
       github: 'https://github.com/ehkoo',
-      gitter: 'https://gitter.im/ehkoo/web'
+      gitter: 'https://gitter.im/ehkoo/web',
     },
     site: {
       title: 'Ehkoo',
-      url: process.env.SITE_URL || 'https://ehkoo.com'
-    }
+      url: process.env.SITE_URL || 'https://ehkoo.com',
+    },
   })
   .source(path.resolve(__dirname, 'content'))
   .destination(OUTPUT_PATH)
-  .use(
-    asset({
-      src: './assets',
-      dest: './assets'
-    })
-  )
-  .use(
-    related({
-      max_posts: 6
-    })
-  )
+  .use(asset({ src: './assets', dest: './assets' }))
+  .use(related({ max_posts: 6 }))
   .use(drafts())
   .use(
     tags({
       path: 'chu-de/:tag.html',
       sortBy: 'date',
       reverse: true,
-      layout: 'list.njk'
-    })
+      layout: 'list.njk',
+    }),
   )
   .use(
     collections({
@@ -69,21 +58,17 @@ const builder = Metalsmith(__dirname)
         sortBy: 'date',
         refer: false,
         reverse: true,
-        limit: 20
+        limit: 20,
       },
-      pages: {
-        pattern: 'pages/**/*.md'
-      },
-      series: {
-        pattern: 'series/**/*.md'
-      },
+      pages: { pattern: 'pages/**/*.md' },
+      series: { pattern: 'series/**/*.md' },
       feed: {
         pattern: ['posts/**/*.md', '!posts/wisdom/**/*.md'],
         sortBy: 'date',
         refer: false,
-        reverse: true
-      }
-    })
+        reverse: true,
+      },
+    }),
   )
   .use(
     markdown('full', {
@@ -91,8 +76,8 @@ const builder = Metalsmith(__dirname)
       breaks: true,
       quotes: '“”‘’',
       langPrefix: 'language-',
-      typographer: true
-    })
+      typographer: true,
+    }),
   )
   .use(wordcount())
   .use(
@@ -101,38 +86,17 @@ const builder = Metalsmith(__dirname)
       linksets: [
         {
           match: { collection: 'pages' },
-          pattern: ':slug'
+          pattern: ':slug',
         },
         {
           match: { collection: 'series' },
-          pattern: 'series/:series/:slug'
-        }
-      ]
-    })
+          pattern: 'series/:series/:slug',
+        },
+      ],
+    }),
   )
-  .use(feed({ collection: 'feed' }))
-  .use(
-    dates({
-      dates: [{ key: 'date', format: 'DD/MM/YYYY' }]
-    })
-  )
-  .use(
-    toc({
-      path: 'series/**/*.html',
-      url: '/series/:series/:slug',
-      tocFilename: 'series/:series/toc.json'
-    })
-  )
-  .use(
-    readJson({
-      links: {
-        path: path.resolve(__dirname, 'content/links/links.json'),
-        limit: 10,
-        parser: item => ({ ...item, hostname: url.parse(item.url).hostname })
-      },
-      tools: { path: path.resolve(__dirname, 'content/links/tools.json') }
-    })
-  )
+
+  .use(dates({ dates: [{ key: 'date', format: 'DD/MM/YYYY' }] }))
   .use((files, metalsmith, done) => {
     const { siteUrl, collections } = metalsmith.metadata()
     const TOP_POSTS = 5
@@ -156,7 +120,14 @@ const builder = Metalsmith(__dirname)
 
     done()
   })
-  .use(layouts('nunjucks'))
+  .use(feed({ collection: 'feed' }))
+  .use(
+    layouts({
+      engineOptions: {
+        path: path.resolve(__dirname, 'layouts'),
+      },
+    }),
+  )
 
 builder.build(err => {
   if (err) throw err

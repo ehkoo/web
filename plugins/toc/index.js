@@ -26,9 +26,9 @@ module.exports = options => (files, metalsmith, done) => {
             children: section.children.map(child => ({
               ...child,
               name: md.render(child.name),
-              url: options.url.replace(':series', file.series).replace(':slug', child.slug)
-            }))
-          }))
+              url: options.url.replace(':series', file.series).replace(':slug', child.slug),
+            })),
+          })),
         }
       }
 

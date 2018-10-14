@@ -41,7 +41,7 @@ function plugin(options) {
     defaultLinkset = {
       pattern: options.pattern,
       relative: options.relative,
-      date: options.date
+      date: options.date,
     }
   }
 

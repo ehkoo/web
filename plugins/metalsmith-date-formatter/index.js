@@ -93,7 +93,7 @@ function plugin(options) {
             result[fKey] = moment.utc(time).format(localFormat)
           }
         },
-        file
+        file,
       )
     })
 
@@ -125,6 +125,6 @@ function normalizeDateKeys(dates) {
 
   return {
     keys: !isEmpty(keys) ? keys : null,
-    formats: !isEmpty(formats) ? formats : null
+    formats: !isEmpty(formats) ? formats : null,
   }
 }
