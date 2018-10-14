@@ -1,7 +1,7 @@
-{% extends "layouts/index.njk" %}
+{% extends "index.njk" %}
 
 {% block head %}
-{% include "layouts/el/opengraph.njk" %}
+{% include "el/opengraph.njk" %}
 <link rel="stylesheet" href="/assets/zoom-image/zoom-image.css">
 {% endblock %}
 
@@ -49,15 +49,15 @@
       </div>
 
       {% if form_footer %}
-        {% include "layouts/forms/" + form_footer + ".njk" %}
+        {% include "forms/" + form_footer + ".njk" %}
       {% else %}
-        {% include "layouts/forms/newsletter-footer.njk" %}
+        {% include "forms/newsletter-footer.njk" %}
       {% endif %}
 
       <hr class="mv4 mw5 center db bg-silver">
 
       <div id="js-widgets" class="flex justify-center">
-        {% include "layouts/el/widgets/fb.njk" %}
+        {% include "el/widgets/fb.njk" %}
       </div>
 
       {% if tags %}
@@ -76,20 +76,20 @@
       </div>
 
       <div class="clip-l fixed bottom-2 right-2 z-9999">
-        {% include "layouts/el/jump-top.njk" %}
+        {% include "el/jump-top.njk" %}
       </div>
     </article>
 
     <div class="mv3">
       {% set relatedPosts = related %}
-      {% include "layouts/el/widgets/related.njk" %}
+      {% include "el/widgets/related.njk" %}
     </div>
 
-    <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
+    <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
   </div>
 
   <div class="w-25-ns">
-    {% include "layouts/el/sidebar.njk" %}
+    {% include "el/sidebar.njk" %}
   </div>
 
 </div>

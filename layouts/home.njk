@@ -1,7 +1,7 @@
-{% extends "layouts/index.njk" %}
+{% extends "index.njk" %}
 
 {% block head %}
-{% include "layouts/el/opengraph.njk" %}
+{% include "el/opengraph.njk" %}
 {% endblock %}
 
 {% block content %}
@@ -50,19 +50,19 @@
     {% endfor %}
 
     <div class="home-grid__series bg-dark-blue gold box-shadow-1 pa3 br2">
-      {% include "layouts/el/widgets/react-a-y.njk" %}
+      {% include "el/widgets/react-a-y.njk" %}
     </div>
 
     <div class="home-grid__box-subcription bg-white box-shadow-1 br1 h-100">
-      {% include "layouts/el/widgets/subscription.njk" %}
+      {% include "el/widgets/subscription.njk" %}
     </div>
 
     <div class="box-shadow-1 br1 h-100">
-      {% include "layouts/el/widgets/recruit.njk" %}
+      {% include "el/widgets/recruit.njk" %}
     </div>
 
     <div class="box-shadow-1 br1 h-100">
-      {% include "layouts/el/widgets/social.njk" %}
+      {% include "el/widgets/social.njk" %}
     </div>
   </div>
 
@@ -87,7 +87,7 @@
           </div>
         </div>
         {% else %}
-          {% include "layouts/el/single-post.njk" %}
+          {% include "el/single-post.njk" %}
         {% endif %}
       </div>
     {% endfor %}
@@ -95,7 +95,7 @@
 
     <div class="w-25-ns pt3 pl3">
       <div class="top-1 sticky clip-m">
-        {% include "layouts/el/jump-top.njk" %}
+        {% include "el/jump-top.njk" %}
       </div>
     </div>
   </div>

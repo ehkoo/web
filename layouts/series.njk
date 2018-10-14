@@ -1,7 +1,7 @@
-{% extends "layouts/index.njk" %}
+{% extends "index.njk" %}
 
 {% block head %}
-{% include "layouts/el/opengraph.njk" %}
+{% include "el/opengraph.njk" %}
 <link rel="stylesheet" href="//cdn.rawgit.com/kcjpop/zoom-image/2fa0895c/css/zoom-image.css">
 {% endblock %}
 
@@ -57,7 +57,7 @@
       {% endif %}
     </article>
 
-    <div class="mt4">{% include "layouts/el/widgets/comments.njk" %}</div>
+    <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
   </div>
 </div>
 {% endblock %}
