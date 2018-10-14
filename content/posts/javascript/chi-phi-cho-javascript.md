@@ -30,6 +30,7 @@ Khi nghĩ về chi phí cho JavaScript, hầu hết các lập trình viên ngh�
 Điều này cũng có thể là một vấn đề với cả những nước đã phát triển, vì **kết nối mạng đang sử dụng** của một người dùng có thể không thật sự là 3G, 4G hay WiFi. Bạn có thể đang vào mạng WiFi của một quán cà phê, nhưng đang kết nối với một hotspot di động với tốc độ 2G.
 
 Bạn có thể **giảm** chi phí truyền tải JavaScript bằng cách:
+
 - **Chỉ chuyển đến người dùng phần mã lệnh cần thiết**. Kỹ thuật chia mã (code-splitting) có thể hữu ích ở đây.
 - [**Tối giản hóa**](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer) mã lệnh (sử dụng Uglify cho ES5, [babel-minify](https://github.com/babel/minify) hay [uglify-es](https://www.npmjs.com/package/uglify-es) cho ES2015)
 - [**Nén mã lệnh**](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer) tới mức tối đa, bằng cách dùng [Brotli](https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/) ~ [q11](https://twitter.com/paulcalvano/status/924660429846208514), Zopfli hay gzip. Brotli hoàn toàn qua mặt gzip khi xét về tỉ lệ nén. Giải thuật này đã giúp cho CertSimple giảm 17% dung lượng nén tập tin JS, và LinkedIn tiết kiệm 4% thời gian tải.
@@ -141,11 +142,10 @@ Nhưng hãy cẩn thận -- kỹ thuật này cũng có chi phí riêng của n�
 
 Kỹ thuật Khởi động Tăng tiến có thể là một hướng tiếp cận tốt hơn. Bạn chỉ cần gửi xuống một trang vừa đủ có thể hoạt động, bao gồm chỉ HTML/JS/CSS cần thiết cho định tuyến hiện tại. Khi các tài nguyên khác đã được tải xong, ứng dụng có thể lazy-load vào và mở ra các chức năng khác.
 
-![](http://res.cloudinary.com/duqeezi8j/image/upload/v1510980837/1_zY03Y5nVEY21FXA63Qe8PA_utrthy.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1510980837/1_zY03Y5nVEY21FXA63Qe8PA_utrthy.jpg)
 <small>[Kỹ thuật Khởi động Tăng tiến](https://twitter.com/aerotwist/status/729712502943174657) minh họa bởi Paul Lewis</small>
 
 **Kỹ thuật tải mã lệnh tương ứng với những gì đang được hiển thị chính là cứu cánh. PRPL và Khởi động Tăng tiến là hai khuôn mẫu giúp đạt được mục tiêu này.**
-
 
 ### Kết luận
 
