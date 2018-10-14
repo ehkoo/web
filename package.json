@@ -13,21 +13,19 @@
   },
   "watch": {
     "build:dev": {
-      "patterns": [
-        "content/**/*",
-        "assets/**/*",
-        "layouts/**/*"
-      ],
+      "patterns": ["content/**/*", "assets/**/*", "layouts/**/*"],
       "extensions": "md,css,njk,js,json"
     }
   },
   "scripts": {
     "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js",
     "build:dev": "node metalsmith.js",
-    "start": "npm-watch build:dev",
-    "serve": "http-server dist"
+    "watch": "npm-watch build:dev",
+    "serve": "http-server dist -s",
+    "start": "concurrently npm:watch npm:serve"
   },
   "devDependencies": {
+    "concurrently": "^4.0.1",
     "eslint": "^4.14.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
