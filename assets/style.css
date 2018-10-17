@@ -119,6 +119,8 @@ svg {
 .content h2 {
   font-size: 2.25rem;
   font-weight: 700;
+  border-bottom: .2rem solid #e9ecef;
+  padding-bottom: .3rem;
 }
 
 .content h3 {
