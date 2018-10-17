@@ -70,6 +70,7 @@ const builder = Metalsmith(__dirname)
       },
     }),
   )
+  .use(feed({ collection: 'feed' }))
   .use(
     markdown('full', {
       html: true,
@@ -120,7 +121,6 @@ const builder = Metalsmith(__dirname)
 
     done()
   })
-  .use(feed({ collection: 'feed' }))
   .use(
     layouts({
       engineOptions: {
