@@ -12,7 +12,7 @@ editor: chubbyanh
 
 Chưa bao giờ JavaScript lại phát triển mạnh mẽ như khoảng thời gian gần đây. Hầu như mỗi năm JS lại được cập nhật lên phiên bản mới, với những tính năng hay ho hấp dẫn, hứa hẹn làm cho cuộc sống lập trình viên chúng ta dễ dàng hơn (hoặc ngược lại). Bên cạnh đó, cùng với sự phát triển của Babel, hay cuộc chạy đua vũ trang của các trình duyệt, việc sử dụng những tính năng mới trong JS càng trở nên dễ dàng, đòi hỏi lập trình viên phải luôn cập nhật để tận dụng hết khả năng của ngôn ngữ.
 
-Một hệ quả không ngờ tới của việc JS tiến hóa như tên lửa là các tài liệu có sẵn bỗng nhiên trở nên nhanh chóng lỗi thời. Nhưng không sao cả, đã có Ehkoo ở đây lục tung Internet và những-trang-mà-ai-cũng-biết-là-trang-gì-đó để chọn ra 10+ quyển sách đáng đồng tiền bát gạo nhất dành cho bạn. Và điểm ăn tiền nhất là bạn có thể đọc hầu hết những tài liệu này MIỄN PHÍ.
+Một hệ quả không ngờ tới của việc JS tiến hóa như tên lửa là các tài liệu có sẵn bỗng nhiên trở nên nhanh chóng lỗi thời. Nhưng không sao cả, đã có Ehkoo ở đây lục tung Internet và những-trang-mà-ai-cũng-biết-là-trang-gì-đó để chọn ra 10+ quyển sách đáng đồng tiền bát gạo nhất dành cho bạn. Và điểm ăn tiền nhất là bạn có thể đọc hầu hết những tài liệu này **MIỄN PHÍ**.
 
 ## JavaScript Căn Bản
 
@@ -154,13 +154,13 @@ So với hai quyển sách ở trên, Functional-Light JavaScript nhẹ nhàng h
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_300/v1539888249/ehkoo/refactoring-js.jpg)
 **Tác giả:** Evan Burchard
-**Số trang:** 401
+**Số trang:** 499
 **Năm xuất bản:** 2017
 **Nhà xuất bản:** O'Reilly Media
 
 Mặc dù mỗi dự án sẽ có những tính chất đặc thù, dẫn đến những chiến lược refactoring khác nhau, nhưng quyển sách này có thể cung cấp cho bạn một cái nhìn khái quát khi bắt tay vào sửa chữa code JavaScript. Sách bắt đầu bằng cách đặt câu hỏi mục tiêu refactoring là gì, mục tiêu bạn hướng đến khi refactor, sau đó gợi ý những chiến lược riêng để xử lý chuỗi, hàm, mã chết, hay những tác vụ bất đồng bộ.
 
-Ehkoo khuyên đọc nếu bạn đang có ý định "đập đi xây lại" với dự án hiện tại. Thường thì phá dễ hơn sửa và đôi khi chưa hẳn là giải pháp tốt.
+Ehkoo khuyên đọc nếu bạn đang có ý định "đập đi xây lại" với dự án hiện tại. Thường thì phá dễ hơn sửa và đôi khi chưa hẳn là giải pháp tốt. Bạn có thể download quyển sách này MIỄN PHÍ tại [http://refactoringjs.com/](http://refactoringjs.com/).
 
 ### Simplifying JavaScript - Writing Modern JavaScript with ES5, ES6, and Beyond
 
