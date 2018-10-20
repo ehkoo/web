@@ -3,21 +3,22 @@ layout: post.njk
 title: Những thư viện xử lý ngày tháng trong JavaScript
 slug: nhung-thu-vien-xu-ly-ngay-thang-trong-javascript
 date: 2018-07-23
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1532378387/ehkoo/timemachine_3.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1540025251/4c0012dde7fd141af579e4c899568472_ms91xp.jpg
 tags: JavaScript, Dành cho người mới, DateTime
 excerpt: JavaScript cung cấp lớp Date để xử lý thời gian khi phát triển ứng dụng. Nhưng để làm việc với múi giờ và các thao tác phức tạp hơn thì bạn không thể bỏ qua các thư viện được giới thiệu trong bài viết này.
 author: kcjpop
 editor: chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1532378387/ehkoo/timemachine_3.jpg)
-_Family Vacation - Hình minh họa bởi [Ganesh Rao](http://ganeshnrao.blogspot.com/2010/10/family-vacation.html)_
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/v1540025251/4c0012dde7fd141af579e4c899568472_ms91xp.jpg)
+_Hình minh họa lụm trên Pinterest mà không tìm thấy thông tin tác giả_
 
 Thao tác và hiển thị ngày tháng gần như xuất hiện trong tất cả các ứng dụng JavaScript. Trình duyệt và NodeJS cung cấp lớp `Date` để thể hiện kiểu dữ liệu này, nhưng các phương thức của lớp này lại khá giới hạn. May mắn thay, cộng đồng JavaScript đã phát triển những công cụ giúp cho việc xử lý ngày tháng trở nên dễ dàng và bớt nhàm chán hơn.
 
 Hãy cùng Ehkoo xem qua những thư viện phổ biến nhất nhé.
 
->**Lưu ý:**
->Trong bài viết này Ehkoo sử dụng cụm từ "xử lý ngày tháng" nhưng bạn nên ngầm hiểu là bao gồm xử lý ngày tháng và giờ giấc luôn nhé.
+> **Lưu ý:**
+> Trong bài viết này Ehkoo sử dụng cụm từ "xử lý ngày tháng" nhưng bạn nên ngầm hiểu là bao gồm xử lý ngày tháng và giờ giấc luôn nhé.
 
 ### moment.js
 
@@ -46,8 +47,10 @@ moment.js còn hỗ trợ bản địa hóa (i18n) với rất nhiều định d
 
 ```js
 moment.locale('vi')
-moment().format('LL')              // 24 tháng 7 năm 2018
-moment().startOf('hour').fromNow() // 23 phút trước
+moment().format('LL') // 24 tháng 7 năm 2018
+moment()
+  .startOf('hour')
+  .fromNow() // 23 phút trước
 ```
 
 Một trong những điểm yếu của moment.js là không hỗ trợ tính bất biến, dễ dẫn tới những lỗi không đáng có. Chẳng hạn như:
@@ -62,7 +65,7 @@ Cách để sửa lỗi trên là dùng phương thức `.clone()`.
 
 ```js
 const today = moment().startOf('day')
-const tomorrow = today.clone().add(1, 'day')  // Mất đi tính tự nhiên rồi :(
+const tomorrow = today.clone().add(1, 'day') // Mất đi tính tự nhiên rồi :(
 console.log(today.format() === tomorrow.format()) // false
 ```
 
@@ -75,12 +78,12 @@ module.exports = {
   plugins: [
     // Bỏ hết tất cả định dạng, chỉ chừa lại 'en'
     new MomentLocalesPlugin(),
-  // Hoặc bỏ hết tất cả chỉ chừa lại 'en' và 'vi'
-  // Bạn không thể bỏ 'en' vì đó là mặc định của moment.js
+    // Hoặc bỏ hết tất cả chỉ chừa lại 'en' và 'vi'
+    // Bạn không thể bỏ 'en' vì đó là mặc định của moment.js
     new MomentLocalesPlugin({
-      localesToKeep: ['vi']
-    })
-  ]
+      localesToKeep: ['vi'],
+    }),
+  ],
 }
 ```
 
@@ -94,7 +97,9 @@ Với dung lượng chỉ 2KB gzip, [dayjs](https://github.com/iamkun/dayjs) là
 
 ```js
 dayjs('2018-07-24') // Chuyển chuỗi thành đối tượng ngày tháng
-dayjs().set('month', 3).month() // get & set
+dayjs()
+  .set('month', 3)
+  .month() // get & set
 dayjs().add(1, 'year') // manipulate
 dayjs().isBefore(dayjs()) // query
 
@@ -113,7 +118,9 @@ import 'dayjs/locale/es'
 dayjs.locale('es')
 
 // Chỉ sử dụng định dạng tiếng Thụy Điển cho riêng giá trị này
-dayjs('2018-05-05').locale('sv').format()
+dayjs('2018-05-05')
+  .locale('sv')
+  .format()
 ```
 
 Ngoài ra dayjs còn hỗ trợ plugins, là những modules giúp mở rộng tính năng cho thư viện. Có thể kể đến AdvancedFormat giúp mở rộng thêm các giá trị khi định dạng ngày tháng, RelativeTime giúp hiển thị thời gian thân thiện với người dùng, chẳng hạn như "3 ngày trước"...Bạn có thể xem danh sách đầy đủ các plugins [ở đây](https://github.com/iamkun/dayjs/blob/master/docs/en/Plugin.md).
@@ -155,8 +162,8 @@ import { setDate, setMonth, setYear } from 'date-fns/fp'
 const secondOfMay = compose(
   setDate(2),
   setMonth(4),
-  setYear(2018)
-)(new Date)
+  setYear(2018),
+)(new Date())
 ```
 
 ### instadate
@@ -191,7 +198,7 @@ const asia = tz(require('timezone/Asia'))
 // Từ Sài Gòn, ra bến xe miền Đông...
 const sg = asia('2018-07-22 12:00', 'Asia/Ho_Chi_Minh')
 // Bắt xe đi Hồng Kông
-const hk = asia(sg, "%m/%d/%Y %H:%M:%S", 'Asia/Hong_Kong')
+const hk = asia(sg, '%m/%d/%Y %H:%M:%S', 'Asia/Hong_Kong')
 console.log(hk) // 07/22/2018 13:00:00
 ```
 
@@ -246,21 +253,13 @@ So với s-date, tinytime có thể chỉ cần phân tích chuỗi một lần 
 ```js
 // Không làm thế này...
 function Time({ date }) {
- return (
-    <div>
-      {tinytime('{h}:{mm}:{ss}{a}').render(date)}
-    </div>
-  )
+  return <div>{tinytime('{h}:{mm}:{ss}{a}').render(date)}</div>
 }
 
 // Mà nên làm thế này
-const template = tinytime('{h}:{mm}:{ss}{a}');
+const template = tinytime('{h}:{mm}:{ss}{a}')
 function Time({ date }) {
- return (
-    <div>
-      {template.render(date)}
-    </div>
-  )
+  return <div>{template.render(date)}</div>
 }
 ```
 
