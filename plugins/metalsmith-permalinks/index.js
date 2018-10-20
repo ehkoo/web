@@ -1,7 +1,7 @@
 var debug = require('debug')('metalsmith-permalinks')
 var moment = require('moment')
 var path = require('path')
-var slug = require('slug-component')
+var slug = require('slugify')
 var substitute = require('substitute')
 var utils = require('./utils')
 
