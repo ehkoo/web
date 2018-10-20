@@ -13,16 +13,12 @@
   },
   "watch": {
     "build:dev": {
-      "patterns": [
-        "content/**/*",
-        "assets/**/*",
-        "layouts/**/*"
-      ],
+      "patterns": ["content/**/*", "assets/**/*", "layouts/**/*"],
       "extensions": "md,css,njk,js,json"
     }
   },
   "scripts": {
-    "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js",
+    "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js && cp dist/404/index.html dist/404.html",
     "build:dev": "node metalsmith.js",
     "watch": "npm-watch build:dev",
     "serve": "http-server dist/ -s",
