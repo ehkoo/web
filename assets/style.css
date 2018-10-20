@@ -66,7 +66,7 @@ svg {
   color: #ff4136 !important;
 }
 
-.content code:not([class*='language']) {
+.content p code:not([class*='language']) {
   font-size: 1rem;
   background-color: #dee2e6;
   padding: 0.15rem 0.3rem;
@@ -109,6 +109,18 @@ svg {
   color: #ff4136;
   margin: 1.5rem 0;
   position: relative;
+}
+
+.content h1 code,
+.content h2 code,
+.content h3 code,
+.content h4 code,
+.content h5 code,
+.content h6 code {
+  font-size: 85%;
+  background-color: #f1e6e4;
+  padding: .3rem .5rem;
+  border-radius: .3rem;
 }
 
 .content h1 {
