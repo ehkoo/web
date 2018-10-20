@@ -26,15 +26,18 @@
       </ul>
     </div>
   </header>
-  <main class="container center">
-    {% block content %}{% endblock %}
-  </main>
+  <div class="container center">
+    <main>
+      {% block content %}{% endblock %}
+    </main>
 
-  <footer class="container mt5 mb3 f6 gray center ph3">
-    <p class="lh-copy">&copy; 2017 Ehkoo. Tác giả giữ bản quyền.</p>
-    <p class="lh-copy">Ghi rõ nguồn "ehkoo.com" khi phát hành lại nội dung từ website này. Không sử dụng cho mục đích thương mại khi chưa có sự đồng ý chính thức.</p>
-    <p class="lh-copy">Icons made by <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" rel="noopener noreferrer" target="_blank">CC 3.0 BY.</a></p>
-  </footer>
+    <footer class="mt4 mb3 f6 gray ph3">
+      <p class="lh-copy">&copy; 2017 Ehkoo. Tác giả giữ bản quyền.</p>
+      <p class="lh-copy">Ghi rõ nguồn "ehkoo.com" khi phát hành lại nội dung từ website này. Không sử dụng cho mục đích thương mại khi chưa có sự đồng ý chính thức.</p>
+      <p class="lh-copy">Icons made by <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a rel="noopener noreferrer" target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" rel="noopener noreferrer" target="_blank">CC 3.0 BY.</a></p>
+    </footer>
+  </div>
+
 
   {% block bottom %}{% endblock %}
   {% include "el/bottom.njk" %}
