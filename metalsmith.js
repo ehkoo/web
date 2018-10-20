@@ -1,4 +1,3 @@
-const url = require('url')
 const path = require('path')
 const Metalsmith = require('metalsmith')
 const tags = require('metalsmith-tags')
