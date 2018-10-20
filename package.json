@@ -18,7 +18,7 @@
     }
   },
   "scripts": {
-    "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js && cp dist/404/index.html dist/404.html",
+    "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js && cp dist/404/index.html dist/404.html && node generateRobots.js",
     "build:dev": "node metalsmith.js",
     "watch": "npm-watch build:dev",
     "serve": "http-server dist/ -s",
