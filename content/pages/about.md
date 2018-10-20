@@ -4,6 +4,7 @@ title: Ehkoo là gì?
 slug: gioi-thieu
 permalinks: false
 ---
+
 ### Ê-ku?
 
 Là một trang về lập trình mới keng xà beng, chủ yếu nói về công nghệ web và những chuyện lập trình xung quanh chúng. Ý tưởng thực hiện Ehkoo có từ 2014 nhưng sau đó vì quá làm biếng mà website bỏ lơ không cập nhật. Đến cuối năm 2017 thì bỗng nhiên được hồi sinh mà không rõ lý do.
@@ -30,11 +31,13 @@ Do thiếu người đó mà.
 
 ### Ai đang viết cho Ehkoo?
 
-[@kcjpop](https://github.com/kcjpop)
-
-_Bạn_ &mdash; Ehkoo đang [tìm kiếm đồng sự](/cong-tac) để cùng xây dựng website nè.
+- Ánh -- [@chubbyanh](https://github.com/chubbyanh)
+- Ân -- [@kcjpop](https://github.com/kcjpop)
+- Đức -- [@nguyenhaiduc06](https://github.com/nguyenhaiduc06)
+- **Bạn** -- Ehkoo đang [tìm kiếm đồng sự](/cong-tac) để cùng xây dựng website nè.
 
 ### Bản quyền?
+
 Bản quyền bài viết thuộc về tác giả. Ehkoo chỉ là nơi tập hợp và lưu trữ nội dung. Nội dung trên website khi được chia sẻ/đăng tải lại cần được giữ nguyên, không thay đổi, chỉnh sửa, và phải ghi rõ nguồn từ "ehkoo.com".
 
 Nếu bạn sử dụng nội dung trên Ehkoo cho mục đích thương mại, vui lòng liên hệ `chao [at] ehkoo.com`.
