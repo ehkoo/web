@@ -10,7 +10,7 @@ author: kcjpop
 editor: chubbyanh
 ---
 
-Chưa bao giờ JavaScript lại phát triển mạnh mẽ như thời gian gần đây. Hầu như mỗi năm JS lại được cập nhật lên phiên bản mới, kèm theo những tính năng hay ho hấp dẫn giúp cuộc đời lập trình viên chúng ta "dễ thở" hơn (hoặc ngược lại). Thêm vào đó, sự phát triển của Babel hay cuộc chạy đua vũ trang của các trình duyệt giúp cho những tính năng mới trong JS dễ dàng sử dụng hơn, nhưng cũng đòi hỏi lập trình viên phải cập nhật liên tục để tận dụng triệt để khả năng của ngôn ngữ.
+Chưa bao giờ JavaScript lại phát triển mạnh mẽ như thời gian gần đây. Hầu như mỗi năm JS lại được cập nhật lên phiên bản mới, kèm theo những tính năng hay ho hấp dẫn giúp cuộc đời lập trình viên chúng ta "dễ thở" (hoặc ngược lại ^^'). Thêm vào đó, sự phát triển của Babel hay cuộc chạy đua vũ trang của các trình duyệt giúp cho những tính năng mới trong JS dễ dàng sử dụng hơn, nhưng cũng đòi hỏi lập trình viên phải cập nhật liên tục để tận dụng triệt để khả năng của ngôn ngữ.
 
 Hệ quả là, những tài liệu JavaScript có sẵn bỗng nhanh chóng trở nên lỗi thời. Nhưng không sao, bôi cao sẽ khỏi. Đã có Ehkoo ở đây cào nát Internet và những-trang-mà-ai-cũng-biết-là-trang-gì-đó, để chọn ra 10+ sách học JavaScript đáng đồng tiền bát gạo nhất dành cho bạn. Sách từ cơ bản đến nâng cao, và hoàn toàn **MIỄN PHÍ**.
 
