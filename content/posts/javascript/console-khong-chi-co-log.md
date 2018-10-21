@@ -76,7 +76,8 @@ const fancyThings = {
 console.dir(fancyThings)
 ```
 
-![](https://i.imgur.com/1uwibZr.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540133144/ehkoo/consoledir_1819adud.png)
+
 Riêng `console.dirxml` thì in ra markup của nút DOM. Ví dụ:
 
 ```html
@@ -88,7 +89,10 @@ Riêng `console.dirxml` thì in ra markup của nút DOM. Ví dụ:
 </head>
 
 <body>
-  <h1>hello</h1>
+  <main>
+    <h1>hello</h1>
+    <p>this is a <strong>text</strong></p>
+  </main>
 
   <script>
     console.dirxml(document.body);
@@ -98,7 +102,9 @@ Riêng `console.dirxml` thì in ra markup của nút DOM. Ví dụ:
 </html>
 ```
 
-![](https://i.imgur.com/KITpc0Y.png)
+Kết quả trên Google Chrome:
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540133549/aaa_pivujw.jpg)
 
 ## `console.assert`
 
