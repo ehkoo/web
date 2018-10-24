@@ -1,20 +1,20 @@
 ---
 layout: post.njk
-title: 10+ tài liệu học JavaScript từ cơ bản đến nâng cao
+title: 10+ tài liệu JavaScript từ cơ bản đến nâng cao
 slug: tai-lieu-javascript-tu-co-ban-den-nang-cao
 date: 2018-10-13
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1539423973/ehkoo/best_free_javascript_books.jpg
 tags: JavaScript, Tài liệu, Sách, Dành cho người mới
-excerpt: Dù bạn mới chập chững bắt đầu, hay đã là ninja xuất quỷ nhập thần, thì cũng đừng bỏ qua những tài liệu học JavaScript miễn phí cực HOT được Ehkoo giới thiệu trong bài viết này!  
+excerpt: Dù bạn mới chập chững bắt đầu, hay đã là ninja xuất quỷ nhập thần, thì cũng đừng bỏ qua những tài liệu JavaScript miễn phí cực HOT được Ehkoo giới thiệu trong bài viết này!  
 author: kcjpop
 editor: chubbyanh
 ---
 
 Chưa bao giờ JavaScript lại phát triển mạnh mẽ như thời gian gần đây. Hầu như mỗi năm JS lại được cập nhật lên phiên bản mới, kèm theo những tính năng hay ho hấp dẫn giúp cuộc đời lập trình viên chúng ta "dễ thở" (hoặc ngược lại ^^'). Thêm vào đó, sự phát triển của Babel hay cuộc chạy đua vũ trang của các trình duyệt giúp cho những tính năng mới trong JS dễ dàng sử dụng hơn, nhưng cũng đòi hỏi lập trình viên phải cập nhật liên tục để tận dụng triệt để khả năng của ngôn ngữ.
 
-Hệ quả là, những tài liệu JavaScript có sẵn bỗng nhanh chóng trở nên lỗi thời. Nhưng không sao, bôi cao sẽ khỏi. Đã có Ehkoo ở đây cào nát Internet và những-trang-mà-ai-cũng-biết-là-trang-gì-đó, để chọn ra 10+ sách học JavaScript đáng đồng tiền bát gạo nhất dành cho bạn. Sách từ cơ bản đến nâng cao, và hoàn toàn **MIỄN PHÍ**.
+Hệ quả là, những tài liệu JavaScript có sẵn bỗng nhanh chóng trở nên lỗi thời. Nhưng không sao, bôi cao sẽ khỏi. Đã có Ehkoo ở đây cào nát Internet và những-trang-mà-ai-cũng-biết-là-trang-gì-đó, để chọn ra 10+ tài liệu JavaScript đáng đồng tiền bát gạo nhất dành cho bạn, từ cơ bản đến nâng cao, và hoàn toàn **MIỄN PHÍ**.
 
-## Tài Liệu JavaScript Căn Bản
+## Tài Liệu JavaScript Cơ Bản
 
 ### JavaScript Guide của MDN
 
@@ -202,6 +202,6 @@ Nhìn tựa có vẻ như nói về JS thế hệ mới, nhưng nội dung chín
 
 ## Kết
 
-Với tốc độ thay đổi nhanh còn hơn cả triều cường Sài Gòn sau mưa của JS, thì Ehkoo không chắc danh sách tài liệu học JavaScript nêu ở trên sẽ còn "hợp thời" đến chừng nào. Tuy nhiên, Ehkoo sẽ cố gắng cập nhật thường xuyên. 
+Với tốc độ thay đổi nhanh còn hơn cả triều cường Sài Gòn sau mưa của JS, thì Ehkoo không chắc danh sách tài liệu JavaScript nêu ở trên sẽ còn "hợp thời" đến chừng nào. Tuy nhiên, Ehkoo sẽ cố gắng cập nhật thường xuyên. 
 
 Và, vẫn một lời đã cũ, nếu bạn biết tài liệu/sách JavaScript hay ho thú vị nào khác, đừng quên chia sẻ cho Ehkoo và đồng bọn thông qua phần bình luận phía dưới nhé!
