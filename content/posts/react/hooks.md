@@ -147,7 +147,14 @@ Việc sử dụng Hooks khi tạo components là hoàn toàn tự nguyện. N�
 
 ## Demo
 
-Thật ra cũng không có gì để demo.
+Ehkoo có thử làm một demo nhỏ với React Hook ở đây. Ứng dụng này cho phép bạn xem thông tin của các bộ phim Ghibli bằng cách sử dụng API của [https://ghibliapi.herokuapp.com/](https://ghibliapi.herokuapp.com/). Bạn có thể tham khảo mã nguồn ở đây [https://github.com/ehkoo/react-hooks-demo](https://github.com/ehkoo/react-hooks-demo).
+
+<iframe src="https://codesandbox.io/embed/github/ehkoo/react-hooks-demo/tree/master/?view=editor" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+Một số điểm cần lưu ý:
+
+- Khi sử dụng `useEffect` để lấy dữ liệu, cần kiểm tra dữ liệu đã tồn tại hay chưa. Nếu không thì hàm sẽ gửi request liên tục.
+- Có thể sử dụng tham số thứ hai của hàm `useEffect()` để chỉ định chỉ thực thi hàm khi biến thay đổi giá trị. Xem thêm thông tin [ở đây](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects).
 
 ## Kết
 
