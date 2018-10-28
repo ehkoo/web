@@ -129,6 +129,8 @@ function Counter(props) {
 }
 ```
 
+Hooks thoạt nhìn có vẻ rất là ảo diệu. Làm thế nào React biết được `useState()` được gọi ở component nào để render lại, vì chúng ta có truyền vào tên hàm hay gì đâu? Nhưng theo lời của [acemarke](https://www.reddit.com/r/reactjs/comments/9rbsu5/rfc_react_hooks/e8g9a0i/), ở phía bên dưới `useState()` hoạt động như `this.setState()` và React có cơ chế để theo dõi từng component để rerender cho đúng.
+
 React cung cấp một cơ số hooks có sẵn mà bạn có thể tham khảo [ở đây](https://reactjs.org/docs/hooks-reference.html). Bên cạnh đó, bạn cũng có thể tự viết hook của riêng mình. Phần này dài dòng nên hẹn bạn ở bài viết sau.
 
 ## Lợi ích của Hooks
