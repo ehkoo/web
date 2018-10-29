@@ -10,14 +10,14 @@ author: kcjpop
 editor: chubbyanh
 ---
 
-Trong tuần qua tại React Conf 2018 diễn ra ở bang Nevada, Mỹ, nhóm phát triển React đã giới thiệu React Hooks, cho phép bạn có thể sử dụng state và những hiệu ứng lề (side effects) mà không cần phải khai báo ES6 class. Ý tưởng này hứa hẹn sẽ thay đổi đáng kể bộ mặt của React, làm cho các components trở nên gọn nhẹ hơn, giảm đi đáng kể số lượng code, đồng thời giúp cho React dễ tiếp cận hơn với những lập trình viên ít kinh nghiệm với JavaScript.
+Trong React Conf 2018 diễn ra tuần vừa qua ở bang Nevada, Mỹ, nhóm phát triển React đã giới thiệu React Hooks - cho phép sử dụng state và những hiệu ứng lề (side effects) mà không cần phải khai báo ES6 class. Ý tưởng này hứa hẹn sẽ thay đổi khá nhiều bộ mặt của React, khiến các components trở nên gọn nhẹ hơn, giảm đáng kể số lượng code, đồng thời giúp React dễ tiếp cận hơn với những lập trình viên có ít kinh nghiệm với JavaScript.
 
 Không bỏ lỡ cơ hội đi tắt đón đầu, Ehkoo mời bạn nhào lên "chuyến tàu hứng khởi" để xem React Hooks là gì nhé.
 
 > **GHI CHÚ QUAN TRỌNG**
-> Hooks vẫn còn đang ở giai đoạn RFC nên những hàm hay phương thức trong bài viết này có khả năng sẽ thay đổi trong tương lai, nhưng ý tưởng chung của Hooks chắc chắn vẫn được giữ lại.
+> Hooks vẫn còn đang ở giai đoạn RFC, nên những hàm hay phương thức trong bài viết này có khả năng sẽ thay đổi trong tương lai. Tuy nhiên, ý tưởng chung của Hooks chắc chắn vẫn được giữ lại.
 
-Nếu không thích đọc bài dài dòng, bạn có thể xem qua hai videos dưới đây:
+Nếu không thích đọc dài dòng, bạn có thể xem hai videos dưới đây:
 
 <div class="tc">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V-QO-KO90iQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -26,7 +26,7 @@ _Sophie Alpert và Dan Abramov giới thiệu về React Hooks_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wXLf18DsV-I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-_Ryan Florence giới thiệu dùng Hooks giảm được 90% số lượng code_
+_Ryan Florence cho biết: dùng Hooks giảm được 90% số lượng code_
 
 </div>
 
@@ -36,7 +36,7 @@ _Ryan Florence giới thiệu dùng Hooks giảm được 90% số lượng code
 
 ### Khó khăn khi chia sẻ logic giữa các components
 
-Trong React, việc sử dụng higher-order components và [render props](https://ehkoo.com/bai-viet/render-prop-thay-cho-higher-order-component-reactjs) khá phổ biến khi bạn cần chia sẻ logic giữa các components với nhau. Chẳng hạn, để đưa redux actions thành methods, ta có `connect()`, hoặc khi cần thao tác với `location`, `history`, v.v... bạn sẽ dùng `withRouter()`, hay mới đây nhất là dùng [render props để sử dụng React Context](https://ehkoo.com/bai-viet/react-phat-hanh-phien-ban-16-3). Cho đến một ngày nào đó bạn đụng phải "wrapper hell" như thế này.
+Trong React, việc sử dụng higher-order components và [render props](https://ehkoo.com/bai-viet/render-prop-thay-cho-higher-order-component-reactjs) tương đối phổ biến khi bạn cần chia sẻ logic giữa các components với nhau. Chẳng hạn, để đưa redux actions thành methods, ta có `connect()`, hoặc khi cần thao tác với `location`, `history`, v.v... bạn sẽ dùng `withRouter()`, hay mới đây nhất là dùng [render props để sử dụng React Context](https://ehkoo.com/bai-viet/react-phat-hanh-phien-ban-16-3). Cho đến một ngày nào đó, bạn đụng phải "wrapper hell" như thế này.
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Here&#39;s something for ya. Lol. <a href="https://t.co/ZWWAxMFpbZ">pic.twitter.com/ZWWAxMFpbZ</a></p>&mdash; Grex ⚛️ (@AndrewGrexa) <a href="https://twitter.com/AndrewGrexa/status/1045110734550589441?ref_src=twsrc%5Etfw">September 27, 2018</a></blockquote>
 
@@ -46,7 +46,7 @@ Một trong những quy tắc thông dụng khi muốn lấy dữ liệu bằng 
 
 ### ES6 class thật ra không thân thiện lắm
 
-Ai đã từng viết JS mà không đặt câu hỏi "What `this` is `this`?". Không chỉ với những bạn mới làm quen với JavaScript mà cả những lập trình viên lâu năm cũng không ít lần dính chưởng `Error: 'this' is undefined`. Khi mới làm quen với React có thể bạn đã gặp đoạn code như thế này.
+Ai đã từng viết JS mà không đặt câu hỏi "What `this` is `this`?". Cả người mới làm quen với JavaScript lẫn các lập trình viên kì cựu chắc không ít lần dính chưởng `Error: 'this' is undefined`. Rất có thể bạn đã gặp đoạn code như thế này khi mới làm quen với React.
 
 ```js
 constructor(props) {
@@ -57,7 +57,7 @@ constructor(props) {
 }
 ```
 
-Vấn đề trên có thể được giải quyết bằng cách dùng hàm mũi tên khi khai báo phương thức trong class. Nhưng dù sao thì cũng có chút không tự nhiên đi.
+Vấn đề trên có thể được giải quyết bằng cách dùng hàm mũi tên khi khai báo phương thức trong class, song sẽ có chút không tự nhiên.
 
 Bên cạnh đó, rất khó để thực hiện việc "rung cây" hay loại bỏ code chết (dead code elimination) với các phương thức của class. Cùng với các lifecycles, ứng dụng sau khi build và minify vẫn chiếm dung lượng đáng kể.
 
