@@ -3,14 +3,14 @@ layout: post.njk
 title: Làm game Calculator với kỹ thuật currying và React
 slug: lam-game-calculator-voi-ky-thuat-currying-va-react
 date: 2018-05-04
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1517867795/_curry_advc1m.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1517867795/_curry_advc1m.jpg
 tags: React, JavaScript, Game Making
 excerpt: "Currying là kĩ thuật tạo hàm mới bằng code một cách tự động, giúp việc kết hợp các hàm dễ dàng và nâng cao tính DRY (Don't Repeat Yourself) trong dự án. Nào, mời bạn cùng Ehkoo áp dụng currying để xây dựng một game Calculator đơn giản với React nhé!"
 author: kcjpop
 ---
 [Calculator](http://www.simplemachine.co/game/calculator-the-game/) là một game giải đố của công ty Simple Machine có cách chơi đơn giản nhưng khá "hack não": trong mỗi màn chơi, bạn có một giá trị ban đầu, một giá trị đích, số bước thực hiện cho phép cùng với các nút phép tính. Nhiệm vụ của bạn là đạt được giá trị đích bằng cách bấm CHÍNH XÁC số bước cho phép, như trong hình dưới đây.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1525863051/Dvfg94g_rlozdw.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1525863051/Dvfg94g_rlozdw.png)
 _Sử dụng +4, x4, /4 để đạt được giá trị 4 từ giá trị ban đầu là 3 trong 3 bước_
 
 Game rất thú vị, dùng để thử thách trí tuệ và/hoặc giết thời gian khá tốt. Nhưng hôm nay chúng ta sẽ luyện não theo kiểu khác, bằng cách làm một game tương tự với kỹ thuật currying và React.
@@ -31,7 +31,7 @@ const game = {
 
 Luồng của game có thể được biểu diễn theo sơ đồ:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1525863026/ZlDZJOl_wjhst8.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1525863026/ZlDZJOl_wjhst8.png)
 
 Vấn đề đầu tiên chúng ta gặp phải: làm sao để tạo ra các nút phép tính trong game? Bạn có thể khai báo trước nhiều nút với các hành động định trước, ví dụ như `+4`, `x4`, hay `/4`, nhưng sẽ như thế nào nếu số lượng màn chơi nhiều lên? Có cách nào để tạo ra các nút một cách tự động không?
 
@@ -281,7 +281,7 @@ Chúng ta sẽ lần được đi qua các bước:
 * Kết quả cuối cùng chính là `goal`
 * Trả về thiết lập cho màn chơi
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1525863188/BccW92d_si140s.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1525863188/BccW92d_si140s.png)
 
 Hai hàm bên dưới sẽ rất hữu ích để tạo số ngẫu nhiên trong một khoảng định trước, và lấy ra một phần tử ngẫu nhiên trong mảng.
 

@@ -3,13 +3,13 @@ layout: post.njk
 title: CSS Grid căn bản - Phần 1
 slug: can-ban-css-grid-phan-1
 date: 2018-04-02
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1522150445/cssgrid.025372ef_dcvvub.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1522150445/cssgrid.025372ef_dcvvub.png
 tags: CSS, CSS Grid
 excerpt: "Bạn từng nghe về CSS Grid nhưng chưa có thời gian tìm hiểu cặn kẽ? Không sao, Ehkoo sẽ giúp bạn khám phá NGAY những tính năng vượt trội của CSS Grid trong việc xây dựng layout."
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522150445/cssgrid.025372ef_dcvvub.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1522150445/cssgrid.025372ef_dcvvub.png)
 
 Layout dạng lưới (grid) là một phần gần như không thể thiếu trong bất cứ website nào. Trước đây, để phát triển grid trong CSS, chúng ta thường sử dụng một số cách như sau:
 
@@ -134,13 +134,13 @@ Trước khi tiếp tục, chúng ta cần tìm hiểu khái niệm grid lines. 
 
 Với một grid 3x3, ta có các grid lines như sau:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522576022/i3yuE1s_snye0v.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1522576022/i3yuE1s_snye0v.jpg)
 
 Cần lưu ý là grid line được đánh số từ 1, không phải từ 0 như thường gặp.
 
 **Mẹo nhỏ**: Nếu đang sử dụng Firefox, bạn có thể dùng tính năng debug CSS Grid trong Developer Tool để nhìn thấy grid lines rõ ràng hơn.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1522579953/debugger_zjreqh.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1522579953/debugger_zjreqh.png)
 
 ### Sắp xếp các item trong grid
 

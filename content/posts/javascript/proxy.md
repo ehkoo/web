@@ -3,13 +3,13 @@ layout: post.njk
 title: Tìm hiểu về Proxy trong ES6
 slug: tim-hieu-ve-proxy-trong-es6
 date: 2018-06-24
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1530343978/ehkoo/dragon_knight_by_peridott.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1530343978/ehkoo/dragon_knight_by_peridott.jpg
 tags: JavaScript, ES6, ES2015, Proxy, Dành cho người mới
 excerpt: ES6 giới thiệu lớp Proxy giúp việc lập trình meta trong JavaScript trở nên dễ dàng hơn. Hãy cùng Ehkoo tìm hiểu Proxy là gì và viết thử một demo nho nhỏ nhé.
 author: kcjpop
 editor: chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1530343978/ehkoo/dragon_knight_by_peridott.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1530343978/ehkoo/dragon_knight_by_peridott.jpg)
 _Dragon Knight -- Minh họa bởi [MelDraws](https://meldraws.deviantart.com/art/Dragon-Knight-160860604)_
 
 Nói về ES6 có lẽ chúng ta đã quá quen thuộc với các khái niệm như `const` và `let`, hàm mũi tên, class hay [những tính năng hay ho hấp dẫn khác](https://ehkoo.com/bai-viet/tong-hop-tinh-nang-noi-bat-es6). Ngoài ra, ES6 cũng kèm theo những tính năng ít người biết hơn nhưng cũng rất thú vị, và một trong số đó là Proxy.
@@ -290,7 +290,7 @@ Hành vi này cho phép khai báo thuộc tính boolean trên đối tượng b�
 2. Nếu `prop` là `is_a` hoặc `is_not_a`, bật cờ `inBooleanMode: true`
 3. Nếu cờ `inBooleanMode` đang bật, thuộc tính tiếp theo sẽ là thuộc tính boolean. Do đó ta cập nhật `booleans` của `state` thành `{ ...booleans, [prop]: state.booleanValue }`
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1530343401/ehkoo/proxy_iah0182.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1530343401/ehkoo/proxy_iah0182.png)
 
 ```js
 function enterBooleanMode(receiver, state, booleanValue) {

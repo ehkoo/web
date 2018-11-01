@@ -3,13 +3,13 @@ layout: post.njk
 title: Tất tần tật về Promise và async/await
 slug: tat-tan-tat-ve-promise-va-async-await
 date: 2018-06-02
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg
 tags: JavaScript, Promise, Async, Await, Dành cho người mới
 excerpt: Bạn nghĩ mình đã "rành sáu câu" về Promise và async/await? Nô nô, đời không đơn giản vậy đâu nhé. Cùng đọc về những sai lầm hay gặp khi "hứa hẹn" trong JavaScript nào.
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg)
 _`Promise.race([blueTuktuk, greenMotobike, redTractor])` -- Hình minh họa của [Ken Wong](http://www.kenart.net/)_
 
 > Chời, thời này ai xài Promise nữa. Chuẩn bây giờ là async/await.
@@ -271,7 +271,7 @@ class User {
 
 ### Chạy các Promise tuần tự
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528015633/WeAgTSK_sydkqv.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015633/WeAgTSK_sydkqv.png)
 
 Trong trường hợp muốn chạy các promises một cách tuần tự như sơ đồ ở trên, bạn có thể dùng hàm `Array.prototype.reduce` .
 
@@ -312,7 +312,7 @@ console.log(users) // [], oát-đờ-heo?
 
 Lý do là vì khi promise chưa kịp resolve thì dòng `console.log` đã chạy rồi. Chúng ta có thể sửa bằng cách dùng `Promise.all([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và chỉ resolve khi tất cả các promises này hoàn thành, hoặc reject khi một trong số chúng xảy ra lỗi.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528015654/tE2EKoM_xgraau.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015654/tE2EKoM_xgraau.png)
 
 ```js
 const userIds = [1, 2, 3, 4]
@@ -334,7 +334,7 @@ async function() {
 
 ### Đừng quên Promise.race()
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528015676/PPSnMLL_cix7cx.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015676/PPSnMLL_cix7cx.png)
 
 Ngoài hai kiểu chạy tuần tự và song song ở trên, chúng ta còn có `Promise.race([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và sẽ resolve/reject ngay khi một trong số các promises này hoàn thành/xảy ra lỗi.
 

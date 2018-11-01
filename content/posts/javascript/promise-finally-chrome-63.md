@@ -3,7 +3,7 @@ layout: post.njk
 title: Promise.prototype.finally được giới thiệu từ Google Chrome 63
 slug: promise-finally-duoc-gioi-thieu-tu-google-chrome-63
 date: 2017-10-26
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1516117926/587672-636407233820760106-16x9_zrku2f.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1516117926/587672-636407233820760106-16x9_zrku2f.jpg
 tags: JavaScript, Promise, GoogleChrome
 excerpt: Từ phiên bản 63 trở đi, Promise hỗ trợ phương thức `finally()` giúp thực hiện tác vụ trong cả hai trường hợp `fulfilled` và `rejected`.
 author: kcjpop

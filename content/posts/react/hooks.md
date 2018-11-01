@@ -3,7 +3,7 @@ layout: post.njk
 title: React Hooks là gì?
 slug: react-hooks-la-gi
 date: 2018-10-28
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1540719936/peter-pan-disney_ylzvm3.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540719936/peter-pan-disney_ylzvm3.jpg
 tags: JavaScript, React,  React Hooks
 excerpt: "Lừng lẫy năm châu, chấn động địa cầu, khiến cả cộng đồng JavaScript sôi sục bàn tán cả tuần qua, không gì có thể khác hơn React Hooks."
 author: kcjpop
@@ -32,7 +32,7 @@ _Ryan Florence cho biết: dùng Hooks giảm được 90% số lượng code_
 
 ## Tại sao phải có Hooks?
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1540724318/undefined_nwda0p.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540724318/undefined_nwda0p.jpg)
 
 ### Khó khăn khi chia sẻ logic giữa các components
 
@@ -63,7 +63,7 @@ Bên cạnh đó, rất khó để thực hiện việc "rung cây" hay loại b
 
 ## Vậy React Hooks là gì?
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1540726780/undefined_qcvqtw.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540726780/undefined_qcvqtw.jpg)
 
 Hooks là những hàm cho phép bạn "kết nối" React state và lifecycle vào các components sử dụng hàm. Với Hooks bạn có thể sử dụng state và lifecycles mà không cần dùng ES6 class. Hãy xem ví dụ sau về hook `useState`.
 

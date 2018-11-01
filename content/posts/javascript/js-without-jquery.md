@@ -3,13 +3,13 @@ layout: post.njk
 title: Có thể bạn không cần jQuery
 slug: co-the-ban-khong-can-jquery
 date: 2018-03-05
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1520068065/jquery_fbntr4.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1520068065/jquery_fbntr4.jpg
 tags: JavaScript, jQuery, Dành cho người mới
 excerpt: "Năm nay đã là 2018, liệu jQuery có còn cần thiết trong các dự án front-end?"
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1520068065/jquery_fbntr4.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1520068065/jquery_fbntr4.jpg)
 
 jQuery là một trong những framework được yêu thích và sử dụng bởi phần lớn lập trình viên front-end. jQuery cung cấp hàm và phương thức giúp đơn giản hóa tác vụ thường gặp trong quá trình viết web. Giờ đây, khi các trình duyệt ngày càng được phát triển và hỗ trợ nhiều tính năng hơn, chúng ta có thể thay thế những tác vụ của jQuery bằng các phương thức mặc định.
 
@@ -277,7 +277,7 @@ Bạn có nên từ bỏ jQuery không? Câu trả lời là... hên xui. Nếu 
 
 Tặng bạn một mẩu truyện vui "lụm trên mạng".
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1528048468/zq4bm9kdplg01_qspcbr_rq4c4e.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528048468/zq4bm9kdplg01_qspcbr_rq4c4e.jpg)
 _- Coi gì đó? Phim heo phải hông?_
 _- Hông phải đâu má! Chỉ là..._
 _- Hmm..._

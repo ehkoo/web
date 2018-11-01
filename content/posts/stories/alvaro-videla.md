@@ -4,7 +4,7 @@ title: "Từ ‘thanh niên bán hàng rong’ trở thành ‘kĩ sư phần m�
 slug: alvaro-videla
 date: 2018-04-09
 tags: Kinh nghiệm, Nhân vật, Alvaro Videla
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg
 translation: http://bit.ly/alvaro-videla
 excerpt: Không học đại học CNTT chính quy, lại đến từ một nước thứ ba, làm thế nào Alvaro Videla có thể trở thành lập trình viên cho các công ty sừng sỏ như Apple, VMWare?
 author: chubbyanh
@@ -14,7 +14,7 @@ editor: kcjpop
 >
 > Ehkoo xin trân trọng giới thiệu câu chuyện của Alvaro Videla: từ “thanh niên bán hàng rong”, tôi đã tự học lập trình để trở thành “kĩ sư phần mềm cho các hãng công nghệ hàng đầu” như thế nào.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523269486/1_UCVDYCm03G5MQc9oXCTiGw_rxxrcq.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1523269486/1_UCVDYCm03G5MQc9oXCTiGw_rxxrcq.jpg)
 
 ### Lối rẽ
 
@@ -38,7 +38,7 @@ Chỉ còn một vấn đề “nho nhỏ”: TÔI KHÔNG BIẾT LẬP TRÌNH.
 >
 > Đó là những câu hỏi tôi từng phải đối mặt năm 2006. Và sau đây là cách tôi đã từng bước giải quyết chúng.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg)
 
 ### Xác định mục tiêu và lập kế hoạch hành động
 
@@ -86,7 +86,7 @@ Nhưng sách lập trình cũng không dễ kiếm. Ở thư viện công cộng
 
 Tôi đành email cho một bà dì bên vợ đang sống ở Mỹ, giải thích tình cảnh của chúng tôi, và nhờ dì ấy mua giùm mấy cuốn sách. Vài ngày sau, tôi nhận được email của dì: _“Cháu cần những cuốn nào thì liệt kê ra, dì sẽ đặt mua trên Amazon”_. Trời ơi, tôi sung sướng muốn rụng tim. Nhờ dì ấy, tôi có được hai cuốn sách là _Flash MX Bible_ và _PHP 5 and MySQL Bible_. Cuối cùng, tôi không còn phải lết xác đến quán cafe net nữa, và đã có được những thông tin cơ bản để làm cái ứng dụng web tôi hằng mong muốn.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1280/v1523269438/1_FcabhcW05_q5R9_jC0U1aw_yvkadf.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1523269438/1_FcabhcW05_q5R9_jC0U1aw_yvkadf.jpg)
 
 ### Rải CV và chuẩn bị cho việc phỏng vấn
 

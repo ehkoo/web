@@ -3,13 +3,13 @@ layout: post.njk
 title: Lập trình front-end hưởng lợi gì từ HTTP/2?
 slug: lap-trinh-front-end-duoc-loi-ich-gi-tu-http2
 date: 2018-05-14
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1526386160/sls-rocket-scene-1_ruuwgh.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526386160/sls-rocket-scene-1_ruuwgh.png
 tags: Frontend, HTTP2
 excerpt: "Chúng ta chắc đều biết HTTP/2 sẽ là phiên bản thay thế cho HTTP/1.1. Nhưng chính xác thì HTTP/2 là gì, và đem lại những lợi ích nào cho lập trình viên front-end?"
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526386160/sls-rocket-scene-1_ruuwgh.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526386160/sls-rocket-scene-1_ruuwgh.png)
 
 Mạng Internet mà chúng ta đang sử dụng hàng ngày được dựa trên giao thức truyền tải siêu văn bản (Hypertext Transfer Protocol, hay còn biết với cụm viết tắt thân thuộc hơn: HTTP), được giới thiệu lần đầu tiên vào năm 1991; và phiên bản 1.1 được công bố vào năm 1999. Từ đó đến nay đã gần 20 năm trôi qua. Các website đã tiến hóa từ những trang chỉ đơn thuần gồm chữ và hình thành những ứng dụng web đồ sộ với hàng tá CSS, JavaScript, media... cùng vô vàn tính năng khác. Do đó, năm 2015, phiên bản HTTP/2 được công bố, giúp giải quyết một số hạn chế của HTTP/1.1, đồng thời hứa hẹn sẽ tăng tốc độ tải của các website - đặc biệt là trên các thiết bị di động.
 
@@ -23,10 +23,10 @@ Nhưng với HTTP/2, giữa client với server chỉ còn một kết nối TCP
 
 Hình minh họa dưới đây của [Mariko Kosaka](https://twitter.com/kosamari/status/859958929484337152) sẽ giúp bạn hình dung điểm khác nhau này.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526295127/C-8t64sXYAEf7GG_dcxvqc.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526295127/C-8t64sXYAEf7GG_dcxvqc.jpg)
 _Với HTTP/1.x Chrome chỉ có thể gửi tối đa 6 request đến cùng một domain_
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526295115/C-8t70YXoAEShUL_ykkmgx.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526295115/C-8t70YXoAEShUL_ykkmgx.jpg)
 _Trong khi ở HTTP/2, giữa client và server chỉ còn một kết nối duy nhất_
 
 Bên cạnh đó, dữ liệu truyền tải giữa client và server không còn ở dạng văn bản nữa mà sẽ dưới dạng nhị phân; giúp giảm dung lượng, đồng thời tăng tốc độ truyền.
@@ -98,7 +98,7 @@ Một trong những cách làm phổ biến khi triển khai ứng dụng web l�
 
 Cũng tương tự với inline assets và CSS sprite. Inline assets là cách chúng ta chèn trực tiếp những tài nguyên nhỏ, ví dụ như logo hay icon vào HTML/CSS dưới dạng base64, trong khi CSS sprite là cách nối nhiều hình lại làm một. Hai cách làm này không giúp chúng ta tận dụng được bộ đệm của trình duyệt với HTTP/2.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1526386548/nav_logo107_kh5shk.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526386548/nav_logo107_kh5shk.png)
 _CSS Sprite không còn hữu dụng với HTTP/2_
 
 #### Phân mảnh tên miền (domain sharding)

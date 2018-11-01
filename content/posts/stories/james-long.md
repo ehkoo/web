@@ -4,7 +4,7 @@ title: Tác giả của Prettier chia sẻ cách để code ngày một tốt h�
 slug: james-long-prettier-better-programmer
 date: 2018-03-12
 tags: Kinh nghiệm, Nhân vật, James Long, Prettier
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1520938084/Untitled_ufgjyd.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1520938084/Untitled_ufgjyd.jpg
 translation: https://jlongster.com/How-I-Became-Better-Programmer
 excerpt: "Làm thế nào để trình code ngày càng pro? Để luôn yêu nghề? Đọc ngay chia sẻ của anh James Long, tác giả thư viện Prettier nổi danh trong cộng đồng JavaScript!"
 author: chubbyanh
@@ -17,7 +17,7 @@ editor: kcjpop
 > * Ngày một nâng cao kĩ năng chuyên môn (là code đấy ạ).
 > * Tránh không bị kiệt sức, dẫn đến chán ghét bản thân và đòi bỏ nghề!
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1520938084/Untitled_ufgjyd.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1520938084/Untitled_ufgjyd.jpg)
 _James Long -- cựu nhân viên Mozilla, tác giả của Prettier_
 
 Tôi năm nay 32 tuổi, có hơn 10 năm kinh nghiệm làm lập trình, và cũng đạt được đôi chút thành tựu. Có lẽ vì vậy mà một số bạn coi tôi là “tiền bối”, thậm chí còn nhờ tôi cho lời khuyên về cách để nâng cao kĩ năng lập trình.
@@ -54,7 +54,7 @@ Công nghệ thay đổi liên tục, sóng sau đè sóng trước không ngừ
 
 Chớ dại. Sự thật là, những công nghệ được cập nhật mỗi ngày – thực ra chỉ là sự “làm mới”, diễn giải lại những ý tưởng sẵn có. Còn đột phá mang tính cách mạng thường chỉ xảy ra vài năm một lần. (Xem thêm [chia sẻ của Rich Hickey](https://www.youtube.com/watch?v=f84n5oFoZBc) về Hammock Driven Development).
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1520942910/maxresdefault_qzlr2h.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1520942910/maxresdefault_qzlr2h.jpg)
 _Rich Hickey -- tác giả của Clojure_
 
 Thêm nữa, bạn sẽ làm việc tốt hơn nhiều nếu được nghỉ đầy đủ. Trí tuệ bạn sẽ minh mẫn, đầu óc bạn sáng láng, và cách bạn nhìn nhận vấn đề cũng sẽ tươi mới hơn. Bản thân tôi thường nảy ra nhiều sáng kiến khi đang-không-làm-việc.
@@ -87,7 +87,7 @@ Thực tình tôi rất ghét cảm giác bó tay không biết làm sao để g
 
 Hãy bắt đầu với việc học một ngôn ngữ lập trình mới. Đó là cách hiệu quả nhất để ép bạn phải thoát khỏi những thói quen hiện tại, và nhìn mọi thứ theo một cách khác. Với tôi, hồi mới chập chững vào nghề, điều đúng đắn nhất mà tôi từng làm là học [Scheme](https://en.wikipedia.org/wiki/Scheme_(programming_language)). Đây là một ngôn ngữ siêu đơn giản, và buộc bạn phải làm mọi thứ theo kiểu lập trình hàm, cũng như phải thực sự học hiểu được các nguyên tắc cơ bản để code hoạt động. Mấy năm học Scheme _vẫn còn giúp ích_ cho tôi đến tận ngày nay: cách tôi nhìn code cơ bản là đã thay đổi hoàn toàn.
 
-![(car (cdr life)) means the "first day of the rest of your life"](https://res.cloudinary.com/duqeezi8j/image/upload/v1520942246/J5IXMj1fIlqWhDhp1bWK-t4M2PpMqn5qstGUad6AFBE_oyczfz.jpg)
+![(car (cdr life)) means the "first day of the rest of your life"](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1520942246/J5IXMj1fIlqWhDhp1bWK-t4M2PpMqn5qstGUad6AFBE_oyczfz.jpg)
 _"The Little Schemer" là quyển sách rất tốt để bắt đầu học Scheme_
 
 Sau đây là một số điều đã tác động rất lớn đến sự nghiệp lập trình của tôi, giúp tôi không những phát triển kĩ năng chuyên môn, mà còn sảng khoái tinh thần. Chúng thực sự rất hữu ích cho tôi, nên hi vọng là cũng sẽ giúp ích cho bạn:

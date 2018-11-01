@@ -3,7 +3,7 @@ layout: post.njk
 title: Chi phí cho JavaScript
 slug: chi-phi-cho-javascript
 date: 2017-11-18
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg
 tags: JavaScript, Web Performance, Web Optimization
 excerpt: 5+ bài toán hóc búa khi xử lý JavaScript trên các thiết bị di động; và một số giải pháp do Addy Osmani, Eng. Manager tại Google đề xuất, giúp nâng cao hiệu suất website.
 author: kcjpop
@@ -13,7 +13,7 @@ translation: https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e
 > **Về tác giả:**
 > Addy Osmani là một gương mặt rất quen thuộc trong cộng đồng phát triển web. Anh là tác giả của TodoMVC, Yeoman, và Material Design Lite. Bên cạnh đó anh cũng rất quan tâm đến vấn đề nâng cao hiệu suất của các website. Hiện tại Addy đảm nhiệm vị trí Eng. Manager tại Google. Bạn có thể theo dõi Addy trên Twitter [@addyosmani](https://twitter.com/addyosmani) hay Facebook [@articlesfordevelopers](https://www.facebook.com/articlesfordevelopers/).
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511057423/1_ioAGDTcSCZycQBjrQi5o8w_rihvi1.jpg)
 
 Khi các website chúng ta xây dựng ngày càng phụ thuộc vào JavaScript, thỉnh thoảng chúng ta cũng phải trả giá cho những gì được gửi về phía người dùng, theo những cách không dễ nhìn thấy . Trong bài viết này, tôi sẽ nói về lý do tại sao một chút **kỷ luật** có thể giúp nếu bạn muốn website của mình có thể tải và phản ứng một cách nhanh chóng trên các thiết bị di động.
 
@@ -25,7 +25,7 @@ Khi các website chúng ta xây dựng ngày càng phụ thuộc vào JavaScript
 
 Khi nghĩ về chi phí cho JavaScript, hầu hết các lập trình viên nghĩ về mặt **chi phí tải và thực thi mã lệnh**. Kết nối Internet của người dùng càng chậm thì gửi nhiều bytes JavaScript về phía họ càng lâu.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511058700/1_U00XcnhqoczTuJ8NH8UhOw_ktoece.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511058700/1_U00XcnhqoczTuJ8NH8UhOw_ktoece.png)
 
 Điều này cũng có thể là một vấn đề với cả những nước đã phát triển, vì **kết nối mạng đang sử dụng** của một người dùng có thể không thật sự là 3G, 4G hay WiFi. Bạn có thể đang vào mạng WiFi của một quán cà phê, nhưng đang kết nối với một hotspot di động với tốc độ 2G.
 
@@ -37,33 +37,33 @@ Bạn có thể **giảm** chi phí truyền tải JavaScript bằng cách:
 - **Xóa mã lệnh không dùng tới**. Với [DevTools code coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes), bạn có thể nhận dạng phần mã nào không được thực thi. Để loại bỏ mã nguồn không cần thiết, bạn có thể sử dụng kỹ thuật ["rung cây"](https://webpack.js.org/guides/tree-shaking/) (tree-shaking) của Webpack, các kỹ thuật tối ưu hóa nâng cao của [Closure Compiler](https://developers.google.com/closure/compiler/), và các plugin hỗ trợ tỉa tót mã lệnh như `lodash-babel-plugin` hay `ContextReplacementPlugin` của Webpack dành cho các thư viện như `moment.js`. Sử dụng `babel-preset-env` và `browserlist` để tránh tình trạng chuyển đổi những tính năng ES2015 đã được hỗ trợ mặc định trong các trình duyệt. Những lập trình viên nhiều kinh nghiệm có thể phân tích các bản đóng gói (bundles) của Webpack và tìm cách bỏ đi những thư viện phụ thuộc không cần thiết.
 - **Lưu bộ đệm để giảm tải các yêu cầu mạng**. Xác định thời gian sống tối ưu cho các tập tin JS (`max-age`) và cung cấp các token thẩm định (`ETag`) để tránh phải truyền tải những bytes không cần thiết. Lưu bộ đệm bằng Service Worker có thể giúp ứng dụng của bạn trở nên chủ động hơn trong trường hợp mất kết nối, đồng thời cho phép bạn truy xuất đến những tính năng đặc biệt, chẳng hạn như [bộ đệm lưu trữ mã trong V8](https://v8project.blogspot.com/2015/07/code-caching.html). Hãy tìm hiểu về lưu đệm dài hạn với kỹ thuật băm tên tập tin (filename hashing).
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059041/1_8Spf9To8dzTG3Xy9s57oVA_rqr8y7.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059041/1_8Spf9To8dzTG3Xy9s57oVA_rqr8y7.jpg)
 
 ### 2. Phân tách/Biên dịch
 
 Sau khi đã tải, một trong những chi phí JavaScript **nặng nề** nhất là thời gian để một trình xử lý JS tiến hành phân tách/biên dịch mã nguồn. Trong Chrome DevTools, phân tách và biên dịch là những phần trong thời gian "Scripting" màu vàng, có thể thấy trong bảng Performance.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059144/1__4gNDmBlXxOF2-KmsOrKkw_hvtq4n.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059144/1__4gNDmBlXxOF2-KmsOrKkw_hvtq4n.png)
 
 Phần Bottom-Up/Call Tree cho phép xem chính xác thời gian phân tách và biên dịch mã:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059175/1_GdrVt_BTTzzBOIoyZZsQZQ_oruogc.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059175/1_GdrVt_BTTzzBOIoyZZsQZQ_oruogc.png)
 
 <small>_Trong bản Performance của Chrome DevTools, tìm đến phần Bottom-Up. Khi Runtime Call Stats trong V8 được kích hoạt, chúng ta có thể thấy thời gian cần thiết của những tiến trình như Phân Tách và Biên Dịch_</small>
 
 Nhưng mà, tại sao điều này lại quan trọng?
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059291/1_Dirw7RdQj9Dktc-Ny6-xbA_bw6pov.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059291/1_Dirw7RdQj9Dktc-Ny6-xbA_bw6pov.png)
 
 **Mất nhiều thời gian để phân tách/biên dịch mã nguồn có thể làm chậm đi đáng kể thời gian người dùng có thể tương tác với website. Bạn càng gửi xuống nhiều tập tin JavaScript, trình duyệt càng tốn thời gian để phân tách và biên dịch trước khi website của bạn có thể tương tác được.**
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059346/1_6Y665hpxfWNMu2EXu3VGlw_nvifdv.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059346/1_6Y665hpxfWNMu2EXu3VGlw_nvifdv.png)
 
 > Ăn byte nào trả byte đó, **JavaScript ngày càng trở nên đắt đỏ cho trình duyệt để xử lý hơn là một bức hình hay web font có cùng dung lượng tương ứng** -- _Tom Dale - tác giả của Ember.js_
 
 So với JavaScript, cũng có nhiều chi phí tham gia vào quá trình xử lý một bức ảnh có dung lượng tương tự (chúng vẫn cần phải được giải mã!) nhưng đối với phần cứng của thiết bị di động trung bình, có vẻ như tác động của JS có phần tiêu cực hơn đến khả năng tương tác của website.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059392/1_PRVzNizF9jQ_QADF5lQHpA_ida1me.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059392/1_PRVzNizF9jQ_QADF5lQHpA_ida1me.jpg)
 <small>_Các byte của JavaScript và hình ảnh cần đến những chi phí rất khác nhau. Hình ảnh thường không chặn luồng chính (main thread) hay ngăn cản tương tác với các giao diện trong quá trình giải mã và hiển thị lên màn hình (rasterization). Ngược lại JS có thể làm chậm quá trình tương tác vì các chi phí phân tách, biên dịch và thực thi._</small>
 
 Khi chúng ta nói về phân tách và biên dịch bị chậm, ngữ cảnh rất quan trọng -- vì ở đây chúng ta đang nói về những chiếc điện thoại ở phân khúc trung bình. Người dùng bình dân có thể dùng những thiết bị với CPUs và GPUs chậm chạp, hoàn toàn không có bộ đệm L2/L3 và thậm chí còn bị giới hạn bộ nhớ.
@@ -72,7 +72,7 @@ Khi chúng ta nói về phân tách và biên dịch bị chậm, ngữ cảnh r
 
 Trong bài [JavaScript Start-up Performance](https://medium.com/reloading/javascript-start-up-performance-69200f43b201), tôi có lưu ý về chi phí phân tách một tập tin JavaScript (đơn giản) đã được giải nén có dung lượng khoảng 1MB trên phần cứng bình dân và cao cấp. **Thời gian phân tách/biên tịch mã lệnh giữa chiếc điện thoại nhanh nhất với chiếc điện thoại trung bình khác nhau từ 2 đến 5 lần.**
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059660/1_8BQ3bCYu1AVvJWPR1x8Yig_by3zen.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059660/1_8BQ3bCYu1AVvJWPR1x8Yig_by3zen.jpg)
 
 <small>_**Thời gian phân tách một bản đóng gói JavaScript có dung lượng 1MB (~250KB gzipped)** giữa các thiết bị máy tính cá nhân và di động thuộc nhiều dòng khác nhau. Khi nhìn vào chi phí cho việc phân tách, chúng ta phải xem xét khi tập tin đã **được giải nén**, chẳng hạn như ~250KB gzipped khi giải nén thì khoảng 1MB._</small>
 
@@ -80,12 +80,12 @@ Trong bài [JavaScript Start-up Performance](https://medium.com/reloading/javasc
 
 **Trên một chiếc iPhone 8 cao cấp thì mất khoảng 4 giây để phân tách/biên dịch JS trên CNN.com, so với khoảng 13 giây cho một chiếc điện thoại bình dân (Moto G4)**. Điều này có thể tác động rõ ràng đến khả năng tương tác của người dùng với website.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059819/1_7ysArXJ4nN0rQEMT9yZ_Sg_ygsaoo.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059819/1_7ysArXJ4nN0rQEMT9yZ_Sg_ygsaoo.png)
 <small>_So sánh thời gian phân tách mã nguồn trên chip A11 Bionic của Apple với Snapdragon 617 trên các thiết bị Android bình dân_</small>
 
 Điều này nêu bật tầm quan trọng của việc kiểm thử ứng dụng trên các phần cứng **trung bình** (như chiếc Moto G4) thay vì chiếc điện thoại trong túi của bạn. Nói gì thì nói, ngữ cảnh cũng quan trọng: **tối ưu hóa cho thiết bị và điều kiện kết nối mà người dùng _của bạn_ có.**
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511059937/1_6oEpMEi_pjRNjmtN9i2TCA_myocjq.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511059937/1_6oEpMEi_pjRNjmtN9i2TCA_myocjq.jpg)
 
 Các ứng dụng phân tích thống kê (analytics) có thể đưa ra một cái nhìn về [dòng thiết bị di động](https://crossbrowsertesting.com/blog/development/use-google-analytics-find-devices-customers-use/) mà người dùng thực tế của bạn đang sử dụng. Thông tin này đem đến cơ hội để hiểu hơn về các điều kiện giới hạn của CPU/GPU trên các thiết bị đó.
 
@@ -93,7 +93,7 @@ Các ứng dụng phân tích thống kê (analytics) có thể đưa ra một c
 
 Bằng cách sử dụng HTTP Archive (với khoảng 500K websites) để phân tích hiện trạng JavaScript trên các thiết bị di động, chúng ta có thể thấy rằng 50% website cần đến hơn 14 giây để có thể tương tác. Những trang này bỏ ra đến hơn 4 giây chỉ để phân tách và biên dịch JS.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511060037/1_sVgunAoet0i5FWEI9NSyMg_dojl4x.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511060037/1_sVgunAoet0i5FWEI9NSyMg_dojl4x.jpg)
 
 Thời gian để tải và xử lý JS và các tài nguyên khác đóng một vai trò ở đây, và có lẽ không quá ngạc nhiên khi người dùng phải chờ một lúc trước khi cảm giác website đã có thể sử dụng. Rõ ràng chúng ta có thể làm tốt hơn.
 
@@ -103,7 +103,7 @@ Thời gian để tải và xử lý JS và các tài nguyên khác đóng một
 
 Chi phí không chỉ nằm ở quá trình phân tách và biên dịch. **Quá trình thực thi JavaScript** (chạy mã lệnh sau khi đã phân tách/biên dịch) là một trong những thao tác phải xảy ra trong luồng chính. Thời gian thực thi quá lâu có thể làm trì hoãn thời gian người dùng có thể tương tác với website.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511060134/1_ec0wEKKVl7iQidBks3oDKg_a2tcnm.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511060134/1_ec0wEKKVl7iQidBks3oDKg_a2tcnm.png)
 
 > If script executes for more than 50ms, time-to-interactive is delayed by the entire amount of time it takes to download, compile, and execute the JS — Alex Russell
 >
@@ -117,13 +117,13 @@ Khi bạn đang tìm cách để giảm thiểu thời gian truyền tải, phâ
 
 PRPL là một kỹ thuật để tối ưu hóa khả năng tương tác trên website bằng cách chia nhỏ mã nguồn và lưu bộ đệm một cách quyết liệt.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1510975518/1_VgdNbnl08gcetpqE1t9P9w_a4niqe.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1510975518/1_VgdNbnl08gcetpqE1t9P9w_a4niqe.png)
 
 Hãy xem những tác động nó có thể mang lại.
 
 Chúng ta phân tính thời gian tải của những trang web di động thông dụng và các ứng dụng web tăng tiến (Progressive Web Apps -- PWAs) bằng cách sử dụng Runtime Call Stats trong V8. Như chúng ta có thể thấy, thời gian phân tách (phần màu cam) chiếm một phần lớn trong tổng thời gian của các website này.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1511060274/1_9BMRW5i_bS4By_JSESXX8A_btkwtw.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1511060274/1_9BMRW5i_bS4By_JSESXX8A_btkwtw.png)
 
 [Wego](https://wego.com/), một trang sử dụng PRPL, xoay xở để giữ cho thời gian phân tách ở mức thấp, giúp cho website có thể tương tác nhanh hơn. Những trang còn lại cũng đã thực hiện kỹ thuật chia mã và dự toán hiệu suất (performance budgeting) để giảm chi phí JS.
 
@@ -142,7 +142,7 @@ Nhưng hãy cẩn thận -- kỹ thuật này cũng có chi phí riêng của n�
 
 Kỹ thuật Khởi động Tăng tiến có thể là một hướng tiếp cận tốt hơn. Bạn chỉ cần gửi xuống một trang vừa đủ có thể hoạt động, bao gồm chỉ HTML/JS/CSS cần thiết cho định tuyến hiện tại. Khi các tài nguyên khác đã được tải xong, ứng dụng có thể lazy-load vào và mở ra các chức năng khác.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1510980837/1_zY03Y5nVEY21FXA63Qe8PA_utrthy.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1510980837/1_zY03Y5nVEY21FXA63Qe8PA_utrthy.jpg)
 <small>[Kỹ thuật Khởi động Tăng tiến](https://twitter.com/aerotwist/status/729712502943174657) minh họa bởi Paul Lewis</small>
 
 **Kỹ thuật tải mã lệnh tương ứng với những gì đang được hiển thị chính là cứu cánh. PRPL và Khởi động Tăng tiến là hai khuôn mẫu giúp đạt được mục tiêu này.**
@@ -153,7 +153,7 @@ Kỹ thuật Khởi động Tăng tiến có thể là một hướng tiếp c�
 
 Nhiều nhóm phát triển đã thành công trong việc làm theo các dự toán hiệu suất nghiêm ngặt, để giảm thiểu thời gian truyền tải và phân tách/biên dịch. Bạn có thể xem hướng dẫn “[Can You Afford It?: Real-world Web Performance Budgets](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)” của Alex Russell về dự toán hiệu suất cho các thiết bị di động.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1080/v1510981775/1_U8PJVNrA_tYADQ6_S4HUYw_uza2ix.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1080/v1510981775/1_U8PJVNrA_tYADQ6_S4HUYw_uza2ix.jpg)
 
 Nếu bạn đang phát triển một website hướng đến các thiết bị di động, hãy cố gắng hết sức để xây dựng nó trên phần cứng tiêu biểu, giữ cho thời gian phân tách/biên dịch JavaScript ở mức thấp, và thu nhận một dự toán hiệu suất để chắc chắn rằng nhóm của bạn luôn theo sát chi phí JavaScript.
 

@@ -3,13 +3,13 @@ layout: post.njk
 title: Tìm hiểu Map và Set trong JavaScript
 slug: map-set-javascript-es6-es2015
 date: 2018-03-25
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1521964972/Hanoi-01_1250_tqa22l.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1521964972/Hanoi-01_1250_tqa22l.png
 tags: JavaScript, Map, Set, WeakMap, WeakSet, ES2015, ES6
 excerpt: "ES6 vừa trình làng 2 cấu trúc dữ liệu mới: `Map` và `Set`, nghe đồn là nhanh hơn, được hỗ trợ tốt hơn bởi trình duyệt. Hãy cùng Ehkoo tìm hiểu cách thức hoạt động cũng như ứng dụng của chúng nhé!"
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1521964972/Hanoi-01_1250_tqa22l.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1521964972/Hanoi-01_1250_tqa22l.png)
 _Hà Nội -- minh họa bởi [Jing Zhang](http://mazakii.com/Portfolio/Maps-of-Asia)_
 
 Được giới thiệu từ ES6, `Map`, `Set`, `WeakMap`, và `WeakSet` là những cấu trúc dữ liệu giúp thao tác trên tập hợp. Bài viết này sẽ giới thiệu cách hoạt động cũng như các ứng dụng của chúng.

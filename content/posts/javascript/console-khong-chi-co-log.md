@@ -3,7 +3,7 @@ layout: post.njk
 title: Console không chỉ có log
 slug: console-khong-chi-co-log
 date: 2018-10-20
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1540024419/ehkoo/Apty4iQ.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540024419/ehkoo/Apty4iQ.png
 tags: JavaScript, Dành cho người mới
 excerpt: '`console.log` có lẽ đã quá quen thuộc với dân lập trình JavaScript rồi. Nhưng bạn có biết, `console` còn có những phương thức khác cũng rất hữu ích?'
 author: nguyenhaiduc06
@@ -15,7 +15,7 @@ editor: kcjpop, chubbyanh
 >
 > Nếu bạn cũng muốn bài viết của mình xuất hiện trên Ehkoo, đừng ngần ngại, hãy email cho `chao [at] ehkoo.com` kèm theo link bài nhé. Ehkoo sẽ thảo luận với bạn trước khi đưa bài lên sóng.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1540024312/FqFLDaS.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540024312/FqFLDaS.png)
 
 `console` là công cụ đắc lực hỗ trợ chúng ta trong quá trình phát triển ứng dụng, đặc biệt là khi tìm và sửa lỗi. Tuy nhiên, `console` còn rất nhiều phương thức khác cũng thú vị và hữu ích không kém. Hãy cùng CodeLabo tìm hiểu trong bài viết này nhé!
 
@@ -38,7 +38,7 @@ console.error('Đừng quên share cho mọi người cùng biết nha!')
 
 Ngoài việc in giá trị, `.warn` và `.info` hiển thị kết quả ở một định dạng khác, giúp bạn phân biệt "mức độ nghiêm trọng" của thông điệp, trong khi `.error` in ra stack trace, giúp bạn xác định lỗi xuất hiện ở đâu.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1540027894/Peek_2018-10-20_12-30_gztnkd.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540027894/Peek_2018-10-20_12-30_gztnkd.gif)
 Bạn có thể dùng tính năng lọc để lựa chọn hiển thị kết quả theo từng loại thông điệp. Tính năng này có mặt ở hầu hết các trình duyệt.
 
 ## `console.trace`
@@ -56,7 +56,7 @@ hello()
 
 Kết quả:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540028454/XORli19_vdnete.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540028454/XORli19_vdnete.png)
 
 ## `console.dir` và `console.dirxml`
 
@@ -76,7 +76,7 @@ const fancyThings = {
 console.dir(fancyThings)
 ```
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540133144/ehkoo/consoledir_1819adud.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540133144/ehkoo/consoledir_1819adud.png)
 
 Riêng `console.dirxml` thì in ra markup của nút DOM. Ví dụ:
 
@@ -104,7 +104,7 @@ Riêng `console.dirxml` thì in ra markup của nút DOM. Ví dụ:
 
 Kết quả trên Google Chrome:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540133549/aaa_pivujw.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540133549/aaa_pivujw.jpg)
 
 ## `console.assert`
 
@@ -176,7 +176,7 @@ console.log('blue')
 console.groupEnd()
 ```
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540029061/Do5qXsB_gr8q9c.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029061/Do5qXsB_gr8q9c.png)
 
 ## `console.table`
 
@@ -194,13 +194,13 @@ const s = new Single('Có ai thương em như anh', 'Tóc Tiên', '2018')
 console.table(s)
 ```
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540029213/x19a9s4_mwmtva.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029213/x19a9s4_mwmtva.png)
 
 ## Sử dụng CSS Style
 
 Có bao giờ bạn mở console khi đang xài Facebook và nhận được thông báo như thế này:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540029354/6yVWesk_kvrzvv.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029354/6yVWesk_kvrzvv.jpg)
 
 Họ đã làm điều đó như thế nào? Hóa ra, ta có thể áp dụng CSS style trong `console.log` bằng cách dùng kí tự đặt chỗ `%c`.
 
@@ -214,7 +214,7 @@ console.log(
 
 Mỗi `%c` sẽ định dạng cho những ký tự phía sau nó. Kết quả là:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/bo_1px_solid_rgb:bbbbbb/v1540029449/omGhYJb_oqwo8z.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029449/omGhYJb_oqwo8z.png)
 
 Bên cạnh `%c`, console còn hỗ trợ những kí tự đặt chỗ khác như `%o`, `%f` hay `%d`. Bạn có thể xem chi tiết [ở đây](https://developer.mozilla.org/en-US/docs/Web/API/console#Using_string_substitutions).
 

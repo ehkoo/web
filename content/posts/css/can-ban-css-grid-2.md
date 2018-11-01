@@ -3,13 +3,13 @@ layout: post.njk
 title: CSS Grid căn bản - Phần 2
 slug: can-ban-css-grid-phan-2
 date: 2018-04-15
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1523869903/grid_v0olru.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1523869903/grid_v0olru.png
 tags: CSS, CSS Grid
 excerpt: "Trong phần 2 này, Ehkoo sẽ cùng bạn tìm hiểu những thuộc tính còn lại của CSS Grid."
 author: kcjpop
 editor: chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1523869903/grid_v0olru.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1523869903/grid_v0olru.png)
 _Hình minh họa đẹp xuất sắc từ [Vườn Illustration](https://www.behance.net/gallery/42386173/Tran-Dang-Khoa-Picture-Book) (có chỉnh sửa)_
 
 Ở [bài viết trước](https://ehkoo.com/bai-viet/can-ban-css-grid-phan-1/), Ehkoo đã giới thiệu với bạn cách sử dụng grid căn bản. Chúng ta đã biết cách tạo một grid, quy định số dòng/cột trong grid, thiết lập khoảng cách giữa các dòng/cột, và sắp xếp các phần tử trong grid theo ý muốn.

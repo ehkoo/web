@@ -3,13 +3,13 @@ layout: post.njk
 title: Căn bản về CSS Variables
 slug: can-ban-ve-css-variables
 date: 2018-07-07
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1531667456/ehkoo/fpTuJ9r_kuo40g.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1531667456/ehkoo/fpTuJ9r_kuo40g.jpg
 tags: CSS, CSS Variables, CSS Custom Properties, CSS Next
 excerpt: "Thuộc tính tùy chỉnh -- custom properties, hay còn được biết đến với cái tên thông dụng CSS variables -- là một tính năng mới được giới thiệu gần đây, nhưng đã thay đổi mạnh mẽ cách quản lý và làm việc với các tập tin CSS."
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1531667456/ehkoo/fpTuJ9r_kuo40g.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1531667456/ehkoo/fpTuJ9r_kuo40g.jpg)
 _Hình minh họa bởi Aleksei Bitskoff - [www.alekseibitskoff.com](http://www.alekseibitskoff.com/)_
 
 ### Giới thiệu

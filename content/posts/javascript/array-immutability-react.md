@@ -3,14 +3,14 @@ layout: post.njk
 title: Tuyệt chiêu đảm bảo tính bất biến trong JavaScript
 slug: array-object-immutability-javascript
 date: 2018-01-31
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1517427149/REACTjs-cover_xd5qrm.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1517427149/REACTjs-cover_xd5qrm.jpg
 tags: JavaScript, React, Dành cho người mới
 excerpt: Mảng (array) và object là những cấu trúc dữ liệu thường gặp nhất trong JavaScript. Nhưng liệu bạn đã biết cách xử lý chúng để đạt được tính bất biến (immutability)?
 author: kcjpop
 form_footer: newsletter-footer
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1517427149/REACTjs-cover_xd5qrm.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1517427149/REACTjs-cover_xd5qrm.jpg)
 
 Khi làm việc với React, hẳn bạn đã nghe đến tính bất biến của dữ liệu (immutability). Đặc tính này, nói một cách đơn giản, là khả năng giá trị của dữ liệu không bị thay đổi sau khi đã được khai báo. Tính bất biến giúp cho chương trình trở nên dễ dự đoán, ít xảy ra lỗi và trong một số trường hợp còn tăng hiệu suất của ứng dụng. Do đó, React (và Redux) đều khuyến khích mọi người viết code để hướng đến đặc tính này.
 

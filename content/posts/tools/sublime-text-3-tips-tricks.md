@@ -3,14 +3,14 @@ layout: post.njk
 title: 9+ thủ thuật giúp sử dụng Sublime Text 3 hiệu quả hơn
 slug: sublime-text-3-tips-tricks
 date: 2018-02-23
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1519462144/img_qtzogc.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519462144/img_qtzogc.jpg
 tags: Thủ thuật, Sublime Text 3, Text Editor
 excerpt: Sublime Text 3 vượt trội hơn các trình soạn thảo khác nhờ tốc độ nhanh và kho plugin hữu ích. Những thủ thuật "nhỏ mà có võ" dưới đây sẽ giúp bạn khai thác tối đa tiện ích của Sublime.
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519462144/img_qtzogc.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519462144/img_qtzogc.jpg)
 
 Sublime Text 3 là một trong những trình soạn thảo phổ biến nhất hiện nay. So với Atom hay VSCode, Sublime chiếm ưu thế hơn hẳn nhờ tốc độ nhanh, giao diện đơn giản, và có đầy đủ các tính năng mạnh mẽ. Để khai thác hết khả năng của Sublime, bạn nên lưu ý một số thủ thuật "nhỏ mà có võ" dưới đây.
 
@@ -87,7 +87,7 @@ Sau khi cài đặt, Sublime hỗ trợ đến hơn 50 ngôn ngữ lập trình.
 
 Với lập trình viên front-end, [Emmet](https://packagecontrol.io/packages/Emmet) là plugin không thể thiếu rồi. Emmet cho phép bạn viết HTML "nhanh như chảo chớp" bằng cách dùng biểu thức mô tả HTML, sau đó Emmer sẽ mở rộng biểu thức này. Chẳng hạn, khi bạn viết `#content>p.text*5>lorem`, Emmet sẽ "úm ba la" thành:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519453034/emmet_v6sguq.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519453034/emmet_v6sguq.gif)
 
 Không chỉ hỗ trợ làm việc với HTML, Emmet cũng biểu thức HTML bên trong JSX. Để tìm hiểu thêm về cách viết biểu thức, bạn có thể tham khảo [ở đây](https://docs.emmet.io/).
 
@@ -95,7 +95,7 @@ Không chỉ hỗ trợ làm việc với HTML, Emmet cũng biểu thức HTML b
 
 [JavaScript & NodeJS Snippets](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets), như tên gọi, bao gồm các snippets dành riêng cho JavaScript, giúp bạn gõ một đoạn mã thông dụng nhanh hơn. Ví dụ, thay vì gõ `document.querySelector('selector');`, bạn chỉ cần gõ `qs`, nhấn `Tab`, và Sublime sẽ làm phần việc còn lại giúp bạn. Hoặc `gi` như ví dụ dưới đây.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519453494/js_xjhiwe.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519453494/js_xjhiwe.gif)
 
 Nếu thấy Emmet hơi phức tạp, bạn có thể sử dụng một plugin khác tương tự là [HTML Snippets](https://packagecontrol.io/packages/HTML%20Page%20Snippets). Plugin này có ít tính năng hơn, nhưng dễ sử dụng hơn.
 
@@ -107,12 +107,12 @@ Với CSS, bạn chỉ cần cài [CSS Snippets](https://packagecontrol.io/packa
 
 ### Định dạng mã nguồn
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519453811/6qtoxbb_j3y6mn.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519453811/6qtoxbb_j3y6mn.png)
 Bằng cách sử dụng [HTMLBeautify](https://packagecontrol.io/packages/HTMLBeautify), [CSS Format](https://packagecontrol.io/packages/CSS%20Format), [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)  hoặc [jsfmt](https://packagecontrol.io/packages/jsfmt), bạn có thể chọn tự động định dạng mã nguồn khi lưu files. Nếu là fan của [Prettier](https://prettier.io/), bạn đừng quên plugin [JsPrettier](https://packagecontrol.io/packages/JsPrettier).
 
 ### Canh hàng với Alignment
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519454084/align_my1rf8.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519454084/align_my1rf8.gif)
 
 [Alignment](https://packagecontrol.io/packages/Alignment) giúp bạn canh hàng khi khai báo nhiều biến. Không chỉ hoạt động trên JS, Alignment còn hỗ trợ PHP. Để tùy chỉnh plugin này, bạn có thể xem [hướng dẫn](https://www.granneman.com/webdev/editors/sublime-text/packages/how-to-install-and-use-sublime-alignment/).
 
@@ -124,7 +124,7 @@ Bằng cách sử dụng [HTMLBeautify](https://packagecontrol.io/packages/HTMLB
 
 Trong quá trình viết code, đôi khi chúng ta phải viết thêm tài liệu mô tả về hàm hay lớp đang xây dựng. Mục đích là để quá trình bảo trì ứng dụng dễ dàng hơn, các thành viên mới gia nhập team cũng dễ nắm bắt thông tin hơn. [Doc​Blockr](https://packagecontrol.io/packages/DocBlockr) là plugin giúp bạn viết những tài liệu này nhanh chóng, tiện lợi. Chỉ cần để con trỏ ở trước hàm hay phương thức, gõ `/**` và Tab, DocBlockr sẽ tự động nhận biết các tham số và giá trị trả về.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519395682/docblockr_sxcpwa.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519395682/docblockr_sxcpwa.gif)
 
 DocBlockr không chỉ hỗ trợ JavaScript mà còn dùng được với nhiều ngôn ngữ khác như PHP, CoffeeScript, TypeScript...
 
@@ -133,19 +133,19 @@ DocBlockr không chỉ hỗ trợ JavaScript mà còn dùng được với nhi�
 
 [Git](https://packagecontrol.io/packages/Git)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519455517/TQWRoYv_hkvkxr.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455517/TQWRoYv_hkvkxr.png)
 
 Plugin này giúp bạn sử dụng Git trực tiếp bên trong Sublime, bao gồm khá nhiều chức năng thông dụng, chẳng hạn như thêm files, tạo commits, xem logs... mà không cần rời khỏi trình soạn thảo.
 
 [GitGutter](https://packagecontrol.io/packages/GitGutter)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519455495/BxmEwGr_oh5i02.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455495/BxmEwGr_oh5i02.png)
 
 GitGutter theo dõi repo ở thư mục hiện tại, cho bạn biết trạng thái của mỗi dòng và mang đến một cái nhìn tổng quan về những thay đổi trong tập tin đang được chỉnh sửa.
 
 [GitHubinator](https://packagecontrol.io/packages/GitHubinator)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519455472/t6LDHPe_azuezx.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455472/t6LDHPe_azuezx.gif)
 
 GitHubinator là một plugin cho phép bạn bôi đen code trong Sublime text, và hightlight đoạn code đó trên remote repo của Github (nếu như đoạn code đó tồn tại.)
 
@@ -170,7 +170,7 @@ Sidebar mặc định của Sublime cung cấp số lựa chọn giới hạn đ
 
 ### AdvancedNewFile
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519398149/newfile_jpp0in.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519398149/newfile_jpp0in.gif)
 
 [AdvancedNewFile](https://packagecontrol.io/packages/AdvancedNewFile) là plugin giúp tăng tốc tạo tập tin mới. Bạn chỉ cần nhấn `Ctrl + Alt + N` trong Windows, `Super + Alt + N` trong Mac/Linux để trực tiếp gõ đường dẫn đến tập tin mới. Và yên tâm, nếu tập tin nằm trong thư mục chưa tồn tại, thư mục mới sẽ được tạo ra luôn.
 
@@ -184,7 +184,7 @@ Plugin này sẽ cho bạn một hộp thoại nhỏ để chọn màu từ bả
 
 [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1519462308/Xme7H5J_mjuw0d.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519462308/Xme7H5J_mjuw0d.gif)
 
 Sử dụng plugin này, bạn có thể nhìn thấy trực quan những màu sắc tương ứng với mỗi giá trị màu như HEX, RGBA...ngay trong mã nguồn.
 

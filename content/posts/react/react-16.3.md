@@ -3,14 +3,14 @@ layout: post.njk
 title: Có gì mới trong React phiên bản 16.3.0?
 slug: react-phat-hanh-phien-ban-16-3
 date: 2018-03-30
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1518288221/blog-4_udbwwy.jpg
 tags: React, JavaScript
 excerpt: Trong phiên bản này, khái niệm `context` được nâng cấp, giúp bạn chia sẻ state một cách đơn giản hơn. Bên cạnh đó, StrictMode được giới thiệu, cùng với một số thay đổi về life-cycle hooks và API để thao tác với `ref`.
 author: kcjpop
 form_footer: react-footer
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1518288221/blog-4_udbwwy.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1518288221/blog-4_udbwwy.jpg)
 
 Sau bao ngày chờ đợi ngóng trông, React cuối cùng cũng đã phát hành phiên bản 16.3.  Bạn có thể upgrade trong dự án của mình bằng lệnh.
 

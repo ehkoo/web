@@ -4,7 +4,7 @@ title: Không có bằng cấp 3 lẫn đại học, tôi đã trở thành kĩ 
 slug: evan-priestley-facebook
 date: 2018-02-13
 tags: Kinh nghiệm, Nhân vật, Evan Priestley, Phabricator
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1518530691/to-be-webdev_k23wex.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1518530691/to-be-webdev_k23wex.jpg
 translation: http://www.quora.com/How-did-Evan-Priestley-learn-to-program
 excerpt: Evan Priestley, từng làm việc cho Facebook và là tác giả của phần mềm nguồn mở Phabricator, chia sẻ câu chuyện trở thành lập trình viên của mình.
 author: chubbyanh
@@ -17,7 +17,7 @@ editor: kcjpop
 
 Sau đây là câu chuyện của Evan Priestley, một lập trình viên thậm chí không có cả bằng tốt nghiệp phổ thông lẫn đại học, đã đảm nhiệm vị trí kĩ sư phần mềm tại Facebook từ 2007 đến 2011. Evan từng gây tranh cãi khi công khai nhận xét rằng Facebook “là chương trình có nhiều bug nhất trên thế giới”. Anh cũng nổi danh trên Quora (Top Writer 2012) với những đóng góp xuất sắc cho phần nội dung liên quan đến Phabricator – một ứng dụng mã nguồn mở được viết bằng PHP, giúp quản lý dự án phần mềm dễ dàng hơn.
 
-<div class="tc"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/v1507302455/evan-priestley.jpg" alt=""></div>
+<div class="tc"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1507302455/evan-priestley.jpg" alt=""></div>
 <small class="db tc"><i>Tác giả Evan Priestley</i></small>
 
 ### Và câu chuyện bắt đầu
@@ -45,7 +45,7 @@ Tôi cũng mê chơi game từ rất sớm, đã bỏ ra không biết bao nhiê
 
 Thấy tôi muốn tự viết game quá, nên cũng năm đó, ba mẹ tặng tôi nhân dịp sinh nhật một CD giới thiệu về lập trình (Metrowerks CodeWarrior IDE), kèm theo một đống sách PDF về các ngôn ngữ lập trình và thư viện khác nhau. Tôi nghiêm túc chìm đắm trong đó suốt một năm ròng. Nhờ vậy, tôi đã học C (ở mức độ căn bản) trong vòng 2 tuần, rồi tiếp tục học về C/C++ và viết chương trình, tiếp đến là OpenGL. Lúc đó là OS9 và tôi nghĩ IIsi là máy tính cá nhân của tôi tại thời điểm này.
 
-<div class="tc"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/v1518532541/dnd1999010101_tfbtbh.gif" alt=""></div>
+<div class="tc"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1518532541/dnd1999010101_tfbtbh.gif" alt=""></div>
 <small class="db tc"><i>Metrowerks CodeWarrior IDE, chương trình được Evan sử dụng trong những ngày đầu học lập trình</i></small>
 
 Thế rồi nhiều chuyện liên tiếp xảy ra: chuyển nhà, ba mẹ ly hôn, trường học thì buồn tẻ. Tôi chán nản, và tiếc nuối cho bản thân mình, rất nhiều.
@@ -76,7 +76,7 @@ Tôi đã cày cuốc cực kì chăm chỉ ở Facebook, thậm chí còn cày 
 
 Cũng chính vì vậy, tôi không tán thành cho lắm khẩu hiệu _“Move Fast and Break Things”_ của Facebook. Dường như Facebook (và dường như hầu hết các doanh nghiệp trong ngành công nghệ phần mềm hiện nay) đều tin (ở một mức độ nào đó) vào sự đánh đổi chất lượng cho tốc độ. Cho nên, mọi người sẵn sàng chọn tốc độ, và không mấy ai cảm thấy khó chịu về chuyện không viết code một cách đúng đắn – vì đó là sự đánh đổi dĩ nhiên.
 
-<div class="tc"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/v1518532806/2014_2F04_2F30_2Ffc_2FZuckerberg1.d1a63_cpdufw.jpg" alt=""></div>
+<div class="tc"><img src="https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1518532806/2014_2F04_2F30_2Ffc_2FZuckerberg1.d1a63_cpdufw.jpg" alt=""></div>
 <small class="db tc"><i>Mark Zuckerberg tại hội nghị F8 của Facebook</i></small>
 
 Tôi thì không nghĩ vậy. Khẩu hiệu đó, diễn giải trắng phớ ra, chẳng phải nghĩa là: _“Nếu xây dựng một hệ thống thật tệ hại, chúng ta sẽ có thể triển khai nó thật nhanh. Còn nếu cố xây dựng một hệ thống đủ tốt, chúng ta sẽ không bao giờ có thể triển khai nó?”_

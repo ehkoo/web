@@ -3,12 +3,12 @@ layout: post.njk
 title: Microsoft mở mã nguồn Sonar, công cụ kiểm tra hiệu suất và độ bảo mật cho website
 slug: microsoft-sonar-kiem-tra-hieu-suat-bao-mat-website
 date: 2017-10-27
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1509076448/6mFAXQp_u8j8jh.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1509076448/6mFAXQp_u8j8jh.jpg
 tags: Microsoft, Sonar, Performance, Security, Hiệu Suất, Bảo Mật
 excerpt: Sonar là công cụ giúp kiểm tra hiệu suất của website, bao gồm tính dễ sử dụng, tương thích, bảo mật và hơn thế nữa.
 author: kcjpop
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/v1509076448/6mFAXQp_u8j8jh.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1509076448/6mFAXQp_u8j8jh.jpg)
 
 Nhóm phát triển trình duyệt Microsoft Edge vừa công khai mã nguồn của [Sonar](https://sonarwhal.com/), một công cụ giúp kiểm tra hiệu suất website/PWA và các vấn đề liên quan như tính dễ sử dụng (accessibility), khả năng tương thích (interoperability) và bảo mật.
 
