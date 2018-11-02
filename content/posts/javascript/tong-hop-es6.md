@@ -3,13 +3,13 @@ layout: post.njk
 title: Tổng hợp những tính năng ES6 nổi bật
 slug: tong-hop-tinh-nang-noi-bat-es6
 date: 2018-04-08
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1516116299/es6-recursion-600x360_sifpgq.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1516116299/es6-recursion-600x360_sifpgq.jpg
 tags: JavaScript, ES6, ES2015, Dành cho người mới
 excerpt: ES6 đã và đang dần được hỗ trợ bởi tất cả các trình duyệt. Hãy cùng điểm qua những tính năng thông dụng nhất nhé.
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1509504402/PTLHvdFMQuW7VhAXQc0G_es6_what_to_use_and_what_not_to.png_rgvxgq.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1509504402/PTLHvdFMQuW7VhAXQc0G_es6_what_to_use_and_what_not_to.jpg_rgvxgq.jpg)
 
 Việc hầu hết những tính năng hay ho hấp dẫn của ES6 đều đã được [các trình duyệt hỗ trợ](https://kangax.github.io/compat-table/es6/) quả là tin vui cho giới lập trình web. Nhờ nó mà nhà phát triển có thể xây dựng ứng dụng trực tiếp bằng ES6, không cần phải thông qua các công cụ chuyển đổi như [Babel](http://babeljs.io/) hay [Bublé](https://buble.surge.sh/guide/) nữa, giúp ứng dụng trở nên gọn nhẹ hơn, giảm thiểu kích thước tập tin khi chuyển đến người sử dụng.
 

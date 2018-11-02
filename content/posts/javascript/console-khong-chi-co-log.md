@@ -3,7 +3,7 @@ layout: post.njk
 title: Console không chỉ có log
 slug: console-khong-chi-co-log
 date: 2018-10-20
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540024419/ehkoo/Apty4iQ.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540024419/ehkoo/Apty4iQ.jpg
 tags: JavaScript, Dành cho người mới
 excerpt: '`console.log` có lẽ đã quá quen thuộc với dân lập trình JavaScript rồi. Nhưng bạn có biết, `console` còn có những phương thức khác cũng rất hữu ích?'
 author: nguyenhaiduc06
@@ -15,7 +15,7 @@ editor: kcjpop, chubbyanh
 >
 > Nếu bạn cũng muốn bài viết của mình xuất hiện trên Ehkoo, đừng ngần ngại, hãy email cho `chao [at] ehkoo.com` kèm theo link bài nhé. Ehkoo sẽ thảo luận với bạn trước khi đưa bài lên sóng.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540024312/FqFLDaS.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540024312/FqFLDaS.jpg)
 
 `console` là công cụ đắc lực hỗ trợ chúng ta trong quá trình phát triển ứng dụng, đặc biệt là khi tìm và sửa lỗi. Tuy nhiên, `console` còn rất nhiều phương thức khác cũng thú vị và hữu ích không kém. Hãy cùng CodeLabo tìm hiểu trong bài viết này nhé!
 
@@ -56,7 +56,7 @@ hello()
 
 Kết quả:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540028454/XORli19_vdnete.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540028454/XORli19_vdnete.jpg)
 
 ## `console.dir` và `console.dirxml`
 
@@ -76,7 +76,7 @@ const fancyThings = {
 console.dir(fancyThings)
 ```
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540133144/ehkoo/consoledir_1819adud.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540133144/ehkoo/consoledir_1819adud.jpg)
 
 Riêng `console.dirxml` thì in ra markup của nút DOM. Ví dụ:
 
@@ -176,7 +176,7 @@ console.log('blue')
 console.groupEnd()
 ```
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029061/Do5qXsB_gr8q9c.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029061/Do5qXsB_gr8q9c.jpg)
 
 ## `console.table`
 
@@ -194,7 +194,7 @@ const s = new Single('Có ai thương em như anh', 'Tóc Tiên', '2018')
 console.table(s)
 ```
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029213/x19a9s4_mwmtva.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029213/x19a9s4_mwmtva.jpg)
 
 ## Sử dụng CSS Style
 
@@ -214,7 +214,7 @@ console.log(
 
 Mỗi `%c` sẽ định dạng cho những ký tự phía sau nó. Kết quả là:
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029449/omGhYJb_oqwo8z.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:bbbbbb/v1540029449/omGhYJb_oqwo8z.jpg)
 
 Bên cạnh `%c`, console còn hỗ trợ những kí tự đặt chỗ khác như `%o`, `%f` hay `%d`. Bạn có thể xem chi tiết [ở đây](https://developer.mozilla.org/en-US/docs/Web/API/console#Using_string_substitutions).
 

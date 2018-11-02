@@ -3,14 +3,14 @@ layout: post.njk
 title: Học lập trình web trong năm 2018
 slug: hoc-lap-trinh-web-trong-năm-moi
 date: 2018-01-20
-cover: https://i.imgur.com/CNheflH.png
+cover: https://i.imgur.com/CNheflH.jpg
 tags: Kinh nghiệm
 excerpt: Lalalala
 author: kcjpop
 draft: true
 ---
 
-![](https://i.imgur.com/CNheflH.png)
+![](https://i.imgur.com/CNheflH.jpg)
 <small style="text-align: center; display: block">_Coding photo by Christopher Gower from [Unsplash](https://unsplash.com/photos/m_HRfLhgABo)_</small>
 
 Một trong những mục tiêu năm 2018 của bạn là học lập trình web, cụ thể hơn, trở thành lập trình viên mặt tiền a.k.a "front-end developer". Bạn hào hứng vào Google và gõ "học lập trình web" hoặc "learn web development" nếu bạn thích xài tiếng Anh. Và không hổ danh là trùm tìm kiếm, Google trả về cho bạn 5.2 triệu kết quả tiếng Việt, 42 triệu kết quả tiếng Anh. Quào! Bạn click thử một, hai trang đầu tiên: HTML, CSS, JavaScript, jQuery, MySQL, PHP, Bootstrap, CodeIgniter, Laravel, React, Vue, Angular...Bạn vào lại Google và gõ "đăng ký grabbike".

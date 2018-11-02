@@ -25,7 +25,7 @@ Tiếp theo là tốc độ tải trang. Firefox từ nay đã sử dụng kiế
 
 Về phía nhà lập trình, Quantum giới thiệu hai kiểu nhập liệu mới cho ngày và giờ, `<input type="date">` và `<input type="time">`.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1510883687/Screen-Shot-2017-09-19-at-13.27.05_ywzegf.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1510883687/Screen-Shot-2017-09-19-at-13.27.05_ywzegf.jpg)
 
 Bộ công cụ cho nhà phát triển ([devtools](https://hacks.mozilla.org/2017/09/developer-edition-devtools-update-now-with-photon-ui/)) cũng được thay thế, với những tính năng đáng chú ý như:
 
@@ -41,7 +41,7 @@ Ngoài ra, Quantum còn đóng gói một máy CSS hoàn toàn mới: [Stylo](ht
 ### Những tính năng khác
 
 #### Screenshot
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1510886947/Screenshot_Image_2-600x309_obbra2.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1510886947/Screenshot_Image_2-600x309_obbra2.jpg)
 
 Công cụ Screenshot cho phép người dùng chụp ảnh một phần hay toàn bộ trang web mà không cần phải cài đặt thêm bất cứ phần mềm nào. Hình ảnh được chụp sẽ tự động lưu trên máy chủ của Mozilla trong 2 tuần, nhưng người dùng hoàn toàn có thể chọn thời điểm xóa bất cứ lúc nào.
 

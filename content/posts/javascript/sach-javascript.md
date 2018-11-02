@@ -33,7 +33,7 @@ Tài liệu được cung cấp miễn phí tại [https://developer.mozilla.org
 
 ### Eloquent JavaScript, 3rd Edition
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514494/ehkoo/ejs3e_cover-front.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514494/ehkoo/ejs3e_cover-front.jpg)
 **Tác giả:** Marijn Haverbeke
 **Số trang:** 456
 **Năm xuất bản:** 2018
@@ -53,7 +53,7 @@ Bạn có thể đọc quyển sách này miễn phí tại https://eloquentjava
 
 ### You Don't Know JS
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539800486/ehkoo/chec3ctigbg2wujtaeqd.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539800486/ehkoo/chec3ctigbg2wujtaeqd.jpg)
 **Tác giả:** Kyle Simpson
 **Năm xuất bản:** 2015
 **Nhà xuất bản:** O'Reilly
@@ -85,7 +85,7 @@ Bạn có thể đọc miễn phí ở đây [http://exploringjs.com/es6](http:/
 
 ### Understanding ECMAScript 6
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539714717/ehkoo/understanding-es6.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539714717/ehkoo/understanding-es6.jpg)
 
 **Tác giả:** Nicholas Zakas
 **Số trang:** 322
@@ -97,7 +97,7 @@ Một quyển sách khác về ES6. So với Exploring ES6 thì cuốn này mỏ
 
 ### The Principles of Object-Oriented JavaScript
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514190/ehkoo/OOJS_frontcover_web.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514190/ehkoo/OOJS_frontcover_web.jpg)
 **Tác giả:** Nicholas Zakas
 **Số trang:** 120
 **Năm xuất bản:** 2014
@@ -121,7 +121,7 @@ Rediscovering JavaScript là quyển sách dành cho những bạn đã tìm hi�
 
 ### Professor Frisby's Mostly Adequate Guide to Functional Programming
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514550/ehkoo/mostly-adaquate.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514550/ehkoo/mostly-adaquate.jpg)
 **Tác giả:** Brian Lonsdorf
 
 Lập trình hàm ngày càng được nhiều người quan tâm bởi những lợi ích mà nó mang lại. Nhưng trong quá trình tìm hiểu, có thể bạn sẽ bắt gặp những khái niệm "lạ hoắc lạ huơ" như Functor, IO hay (don't you dare) Monad. Đừng tìm đâu xa, Mostly Adequate là quyển sách bạn muốn đọc ngay. Bằng giọng văn hài hước, cách hành văn dễ hiểu, "Giáo sư Frisby" Brian Lonsdorf sẽ dẫn bạn qua những ví dụ đơn giản nhất, kết hợp với nhau cho đến khi bạn vỗ đùi "hóa ra Monad là rứa".

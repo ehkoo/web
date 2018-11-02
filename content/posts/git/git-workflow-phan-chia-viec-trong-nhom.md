@@ -4,19 +4,19 @@ title: Cách phân nhánh và chia việc trong nhóm với Git
 slug: git-workflow-phan-nhanh-va-chia-viec-trong-nhom
 date: 2018-04-22
 tags: git, Dành cho người mới
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524489964/Untitled_bppkvk.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524489964/Untitled_bppkvk.jpg
 excerpt: Cứ tuần tự làm theo từng bước này, đảm bảo team của bạn sẽ không phải vò đầu bứt tai cấu xé nhau vì code chồng chéo, dự án banh chành nữa ahihi.
 author: kcjpop
 editor: chubbyanh
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524489964/Untitled_bppkvk.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524489964/Untitled_bppkvk.jpg)
 _Icon made by Freepik from [Flaticon](https://www.flaticon.com/packs/kitty-avatars-3)_
 
 Bạn vốn làm việc một mình một cõi, “thầu nguyên con” dự án. Dù phải code sấp mặt nhưng cuộc đời vẫn thật êm xuôi: tốc độ thần thánh 500 dòng/giờ, commit code mới pặc pặc vào `master`, cuối ngày chỉ việc `git push`, tắt máy, rồi dắt gấu đi nhậu (hoặc lội suối băng đèo về nhà thay tã cho con).
 
 Ngờ đâu sếp (hoặc co-founder) xót thương bạn vất vả, bèn tuyển ngay 2 em đào nhí vào trợ giúp. Và mọi chuyện bắt đầu phức tạp từ đây: code trong team bị chồng chéo và xung đột liên tục, branch `master` đang thẳng thớm đẹp xinh bỗng phân nhánh như điên, tốc độ code của bạn giảm trong khi tốc độ chửi thề ngày một tăng nhanh. Bạn không còn thời giờ dắt gấu đi nhậu, cũng không thể lội kịp về nhà thay tã cho con nữa. Cuộc đời bế tắc.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524414315/git-merge-hell-smaller_lxhizg.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524414315/git-merge-hell-smaller_lxhizg.jpg)
 _Nhìn hình này bạn có thấy quen không (nguồn: Xebia.com)?_
 
 Thôi đừng vội lật bàn quýnh cả sếp lẫn đào. Hãy thử làm theo một số quy ước sau đây, đảm bảo team dev nho nhỏ xinh xinh của bạn sẽ không còn “giẫm chân” nhau nữa. Công việc xuôi buồm mát mái, tình đồng nghiệp sẽ lại thương mến thương nè.
@@ -278,7 +278,7 @@ Câu trả lời là _HÊN XUI_, tùy tính chất từng team. Nếu tần su�
 
 Còn nếu team bạn theo chuẩn "move fast, break things", thì có lẽ không cần tag version đâu. Thêm nữa, để tag version phát huy hiệu quả tối đa, thì _CHANGELOG_ cần phải được viết kỹ càng. Đồng thời, đừng quên tag version theo [semver](https://semver.org/) nhé.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524474052/tumblr_lc63ingGof1qz6pqio1_500_mybavi.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524474052/tumblr_lc63ingGof1qz6pqio1_500_mybavi.jpg)
 _Already broken_
 
 ### Kết luận

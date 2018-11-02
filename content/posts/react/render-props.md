@@ -58,7 +58,7 @@ Tuy nhiên, việc dùng HOCs cũng có những hạn chế:
 
 ### Cách dùng Render Prop
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1510109188/blob_ixcygo09d1_wfqumj.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1510109188/blob_ixcygo09d1_wfqumj.jpg)
 
 "Render prop", "render callback", hay "function as a child" là những tên gọi cho kỹ thuật đưa một hàm để render vào làm prop. Bằng cách này, các components có thể chia sẻ dữ liệu theo một cách rõ ràng và không bị ràng buộc lẫn nhau.
 

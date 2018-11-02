@@ -46,7 +46,7 @@ Lưu ý: Mỗi giao diện -- **theme** sẽ có thể có nhiều mẫu màu --
 
 Hoặc bạn có thể thay đổi giao diện và mẫu màu nhanh hơn bằng cách mở Command Palette và tìm đến `UI: Select Theme` hoặc `UI: Select Color Scheme`
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528051401/rYYVNwv_vcddyf.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528051401/rYYVNwv_vcddyf.jpg)
 
 #### Còn bây giờ, mời bạn thưởng lãm những giao diện do Ehkoo tuyển chọn dưới đây.
 
@@ -54,7 +54,7 @@ Hoặc bạn có thể thay đổi giao diện và mẫu màu nhanh hơn bằng 
 
 Một trong những theme đẹp và được tải nhiều nhất hiện nay, [Predawn](https://packagecontrol.io/packages/Predawn) có mẫu màu tối và đi kèm vài tùy chọn cho phép thay đổi kích thước của sidebar và tab.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973435/bed33bfef41e7ae64086cc47ec88c6b1abd08b0f_u7xqxd.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973435/bed33bfef41e7ae64086cc47ec88c6b1abd08b0f_u7xqxd.jpg)
 
 Cài đặt
 
@@ -70,7 +70,7 @@ Cài đặt
 
 Dựa trên hệ thống thiết kế Material Design của Google, [Materialize](https://packagecontrol.io/packages/Materialize) là một giao diện tối, có đi kèm một số mẫu màu và thiết lập. Đáng tiếc là giao diện này hiện không còn được phát triển tiếp.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973472/d7e771c4b9966da6731bc57df6c2fbb317780556_wyazht.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973472/d7e771c4b9966da6731bc57df6c2fbb317780556_wyazht.jpg)
 
 
 Cài đặt
@@ -87,7 +87,7 @@ Cài đặt
 
 Là một bản port của giao diện Seti cho Atom, [Seti UI](https://packagecontrol.io/packages/Seti_UI) trên vẫn giữ được tinh thần của phiên bản gốc: giao diện tối đi kèm với 7 mẫu màu. Seti UI hỗ trợ khá nhiều tùy chỉnh mà bạn có thể tham khảo trong trang chủ của nó.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973493/a71e34c2a47ecd2afd719a2dc9f70e38d2a0d69c_ugf1lc.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973493/a71e34c2a47ecd2afd719a2dc9f70e38d2a0d69c_ugf1lc.jpg)
 
 
 Cài đặt
@@ -107,7 +107,7 @@ Cài đặt
 * Hỗ trợ markdown
 * Tùy chỉnh nhiều màu sắc khác nhau
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973577/Afterglow-default_jvzjbh.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973577/Afterglow-default_jvzjbh.jpg)
 
 
 Cài đặt
@@ -123,7 +123,7 @@ Cài đặt
 
 Giao diện [Darkmatter](https://github.com/patrickemuller/Sublime-Darkmatter-Theme) nổi bật với màu xanh neon chủ đạo.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973597/darkmatter_hrbjt6.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973597/darkmatter_hrbjt6.jpg)
 
 
 Cài đặt
@@ -141,7 +141,7 @@ Cài đặt
 
 [Arc dark](https://github.com/GarthTheChicken/Sublime-Text-3-Arc-Dark-theme)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973626/arc-dark_tujbfc.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973626/arc-dark_tujbfc.jpg)
 
 
 Cài đặt
@@ -158,7 +158,7 @@ Cài đặt
 
 [Dracula](https://github.com/dracula/dracula-theme) là một dự án không chỉ cung cấp giao diện tối cho Sublime mà còn cho cả các trình soạn thảo khác như Atom, VSCode...
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973653/sublime_ac9rv1.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973653/sublime_ac9rv1.jpg)
 
 ### Boxy
 
@@ -250,7 +250,7 @@ Cài đặt
 ### Spacegray
 Một trong những giao diện được ưa chuộng nhất trong cộng đồng, [Spacegray](https://packagecontrol.io/packages/Theme%20-%20Spacegray) kèm theo 3 giao diện: Dark, Light, và Eighties.
 
-![](https://packagecontrol.io/readmes/img/a0b57c3d90be54892fa645dab621920bfe69ca7e.png)
+![](https://packagecontrol.io/readmes/img/a0b57c3d90be54892fa645dab621920bfe69ca7e.jpg)
 
 Cài đặt
 

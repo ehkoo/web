@@ -99,7 +99,7 @@ Không chỉ hỗ trợ làm việc với HTML, Emmet cũng biểu thức HTML b
 
 Nếu thấy Emmet hơi phức tạp, bạn có thể sử dụng một plugin khác tương tự là [HTML Snippets](https://packagecontrol.io/packages/HTML%20Page%20Snippets). Plugin này có ít tính năng hơn, nhưng dễ sử dụng hơn.
 
-![](https://i.imgur.com/kdhj45y.png)
+![](https://i.imgur.com/kdhj45y.jpg)
 
 Bên cạnh đó, cũng đừng quên những gói snippets khi làm việc với các thư viện/framework, chẳng hạn như [ReactJS Snippets](https://packagecontrol.io/packages/ReactJS%20Snippets), [AngularJS Snippets](https://packagecontrol.io/packages/AngularJS%20Snippets), [VueJS Snippets](https://packagecontrol.io/packages/Vuejs%20Snippets)...
 
@@ -107,7 +107,7 @@ Với CSS, bạn chỉ cần cài [CSS Snippets](https://packagecontrol.io/packa
 
 ### Định dạng mã nguồn
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519453811/6qtoxbb_j3y6mn.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519453811/6qtoxbb_j3y6mn.jpg)
 Bằng cách sử dụng [HTMLBeautify](https://packagecontrol.io/packages/HTMLBeautify), [CSS Format](https://packagecontrol.io/packages/CSS%20Format), [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)  hoặc [jsfmt](https://packagecontrol.io/packages/jsfmt), bạn có thể chọn tự động định dạng mã nguồn khi lưu files. Nếu là fan của [Prettier](https://prettier.io/), bạn đừng quên plugin [JsPrettier](https://packagecontrol.io/packages/JsPrettier).
 
 ### Canh hàng với Alignment
@@ -133,13 +133,13 @@ DocBlockr không chỉ hỗ trợ JavaScript mà còn dùng được với nhi�
 
 [Git](https://packagecontrol.io/packages/Git)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455517/TQWRoYv_hkvkxr.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455517/TQWRoYv_hkvkxr.jpg)
 
 Plugin này giúp bạn sử dụng Git trực tiếp bên trong Sublime, bao gồm khá nhiều chức năng thông dụng, chẳng hạn như thêm files, tạo commits, xem logs... mà không cần rời khỏi trình soạn thảo.
 
 [GitGutter](https://packagecontrol.io/packages/GitGutter)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455495/BxmEwGr_oh5i02.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455495/BxmEwGr_oh5i02.jpg)
 
 GitGutter theo dõi repo ở thư mục hiện tại, cho bạn biết trạng thái của mỗi dòng và mang đến một cái nhìn tổng quan về những thay đổi trong tập tin đang được chỉnh sửa.
 
@@ -156,7 +156,7 @@ Gist cho phép bạn gửi đoạn code được chọn lên dịch vụ [Gist](
 
 [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter)
 
-![](https://i.imgur.com/JoWcHAk.png)
+![](https://i.imgur.com/JoWcHAk.jpg)
 
 Trong quá trình code, việc mắc phải những lỗi về cú pháp là không thể tránh khỏi. Plugin này cung cấp một nền tảng để các chương trình kiểm tra lỗi, ví dụ như ESLint, có thể được kết hợp vào Sublime. Sau khi cài đặt Sublime Linter, bạn cần cài riêng các gói [riêng cho từng ngôn ngữ](https://packagecontrol.io/search/sublime%20linter).
 
@@ -164,7 +164,7 @@ Trong quá trình code, việc mắc phải những lỗi về cú pháp là kh�
 
 [Side Bar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 
-![](https://i.imgur.com/BIStuRH.png)
+![](https://i.imgur.com/BIStuRH.jpg)
 
 Sidebar mặc định của Sublime cung cấp số lựa chọn giới hạn để thao tác với tập tin hay tìm kiếm. Sử dụng plugin này, bạn sẽ có thêm khoảng 20 lựa chọn mới, bao gồm Open in browser, Duplicate, Refresh, Reveal...
 
@@ -178,7 +178,7 @@ Sidebar mặc định của Sublime cung cấp số lựa chọn giới hạn đ
 
 [ColorPicker](https://packagecontrol.io/packages/ColorPicker)
 
-![](https://i.imgur.com/FQH17Xn.png)
+![](https://i.imgur.com/FQH17Xn.jpg)
 
 Plugin này sẽ cho bạn một hộp thoại nhỏ để chọn màu từ bảng màu, hoặc bạn cũng có thể sử dụng Eye dropper để chọn màu từ bất kì vị trí nào trên màn hình của bạn.
 
@@ -196,7 +196,7 @@ Sử dụng plugin này, bạn có thể nhìn thấy trực quan những màu s
 
 [Emoji](https://packagecontrol.io/packages/Emoji)
 
-![](https://i.imgur.com/DnpCcWX.png)
+![](https://i.imgur.com/DnpCcWX.jpg)
 
 Sử dụng plugin này, bạn có thể chèn thêm emoji từ Command palette.
 

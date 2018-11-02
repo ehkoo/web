@@ -9,7 +9,7 @@ excerpt: EditorConfig giúp thiết lập format chung cho tất cả các text 
 author: kcjpop
 ---
 
-![Imgur](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1507300408/tweet-editorconfig_lssmtc.png)
+![Imgur](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1507300408/tweet-editorconfig_lssmtc.jpg)
 Mỗi dự án lại có một thiết lập format riêng, cái xài tab, cái thì dùng space. Chưa hết, cũng là space, nhưng ví dụ như JavaScript files chỉ dùng 2, còn PHP files thì dùng tới 4 spaces @.@
 
 Đừng bối rối! ^^' Hãy thử dùng EditorConfig để thiết lập format chung cho tất cả các text editor và IDE xem sao. Nó sẽ giúp nâng cao tính thống nhất, để dễ đọc, hiểu và bảo trì code hơn đấy.

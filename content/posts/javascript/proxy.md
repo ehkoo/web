@@ -290,7 +290,7 @@ Hành vi này cho phép khai báo thuộc tính boolean trên đối tượng b�
 2. Nếu `prop` là `is_a` hoặc `is_not_a`, bật cờ `inBooleanMode: true`
 3. Nếu cờ `inBooleanMode` đang bật, thuộc tính tiếp theo sẽ là thuộc tính boolean. Do đó ta cập nhật `booleans` của `state` thành `{ ...booleans, [prop]: state.booleanValue }`
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1530343401/ehkoo/proxy_iah0182.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1530343401/ehkoo/proxy_iah0182.jpg)
 
 ```js
 function enterBooleanMode(receiver, state, booleanValue) {

@@ -4,11 +4,11 @@ title: "Những sai lầm người mới học Vue cần tránh"
 slug: nhung-sai-lam-nguoi-moi-hoc-vue-can-tranh
 date: 2018-03-03
 tags: Vue, VueJS
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519195814/pirate_degmn3.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519195814/pirate_degmn3.jpg
 excerpt: "Vue rất dễ học, dễ làm nhưng cũng có những điểm cần lưu ý, dù cho bạn là lập trình viên lâu năm hay tay mơ mới vào nghề."
 author: kcjpop
 ---
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519195814/pirate_degmn3.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519195814/pirate_degmn3.jpg)
 
 2018 có lẽ sẽ là [năm của Vue](https://ehkoo.com/bai-viet/lap-trinh-front-end-2017-mot-nam-nhin-lai), khi mà framework này ngày càng nhận được sự hưởng ứng của cộng đồng. Vue hấp dẫn người dùng bởi dung lượng gọn nhẹ nhưng vẫn đầy đủ các công cụ cần thiết để xây dựng một SPA hoàn chỉnh. Bên cạnh đó, Vue cũng tương đối dễ học hơn React hay Angular.
 

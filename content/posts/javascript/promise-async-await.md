@@ -271,7 +271,7 @@ class User {
 
 ### Chạy các Promise tuần tự
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015633/WeAgTSK_sydkqv.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015633/WeAgTSK_sydkqv.jpg)
 
 Trong trường hợp muốn chạy các promises một cách tuần tự như sơ đồ ở trên, bạn có thể dùng hàm `Array.prototype.reduce` .
 
@@ -312,7 +312,7 @@ console.log(users) // [], oát-đờ-heo?
 
 Lý do là vì khi promise chưa kịp resolve thì dòng `console.log` đã chạy rồi. Chúng ta có thể sửa bằng cách dùng `Promise.all([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và chỉ resolve khi tất cả các promises này hoàn thành, hoặc reject khi một trong số chúng xảy ra lỗi.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015654/tE2EKoM_xgraau.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015654/tE2EKoM_xgraau.jpg)
 
 ```js
 const userIds = [1, 2, 3, 4]
@@ -334,7 +334,7 @@ async function() {
 
 ### Đừng quên Promise.race()
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015676/PPSnMLL_cix7cx.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015676/PPSnMLL_cix7cx.jpg)
 
 Ngoài hai kiểu chạy tuần tự và song song ở trên, chúng ta còn có `Promise.race([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và sẽ resolve/reject ngay khi một trong số các promises này hoàn thành/xảy ra lỗi.
 

@@ -4,7 +4,7 @@ title: "Vue phát hành phiên bản 2.5"
 slug: vue-phat-hanh-phien-ban-2-5
 date: 2017-10-14
 tags: Vue, Frontend, VueJS
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1516116654/BWDA0if_cdo4ib.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1516116654/BWDA0if_cdo4ib.jpg
 excerpt: "Những điểm đáng chú ý trong phiên bản này: hỗ trợ TypeScript tốt hơn, cải thiện tính năng bắt lỗi, nâng cao hỗ trợ cho functional componets trong các SFCs và hệ thống render phía server (SSR) trở nên độc lập với môi trường."
 author: kcjpop
 ---
@@ -13,7 +13,7 @@ Tác giả Evan You vừa [thông báo](https://medium.com/the-vue-point/vue-2-5
 
 ### Tích hợp TypeScript tốt hơn
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1508054254/1_vB-z-t961mJnd4a6re02Iw_c9lbd9.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1508054254/1_vB-z-t961mJnd4a6re02Iw_c9lbd9.jpg)
 
 Với sự giúp đỡ từ đội ngũ phát triển TypeScript, việc khai báo kiểu dữ liệu được tích hợp sẵn trong API của Vue mà không cần sử dụng đến decorator `vue-class-component`. Điều này giúp cho phần mở rộng [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) trong VSCode hoạt động tốt hơn, đồng thời nâng cao hiệu quả của Intellisense với những người dùng JavaScript thông thường. Lưu ý, người dùng TypeScript được khuyến cáo nên nâng cấp các thư viện sau lên phiên bản mới nhất để tận dụng tính năng này: `vue-router`, `vuex`, `vuex-router-sync` và `vue-class-component`.
 
@@ -50,7 +50,7 @@ Sử dụng:
 
 ### Nâng cấp functional components trong SFCs
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1508055411/1_jg9qGPkPadGBEa-KUPrMpA_lyz7c6.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1508055411/1_jg9qGPkPadGBEa-KUPrMpA_lyz7c6.jpg)
 
 Với `vue-loader` phiên bản `>= 13.3.0`, functional components được khai báo như Single-File Component (SFC) trong tập tin `*.vue` đã có thể hot-reload, hỗ trợ scoped CSS và biên dịch template. Để khai báo một template được biên dịch như functional component, bạn chỉ cần thêm thuộc tính `functional` như hình trên.
 

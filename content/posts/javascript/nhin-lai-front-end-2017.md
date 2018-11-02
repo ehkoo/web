@@ -51,7 +51,7 @@ Các ứng dụng serverless ngày càng trở nên phổ biến trong năm 2017
 
 Mặc cho thành công của React, [Vue](https://vuejs.org/) của [Evan You](https://medium.com/@youyuxi) tiếp tục nâng cao vị thế của mình trong cộng đồng. Vue mang đến một hệ thống xoay quanh các component và là ứng viên hàng đầu cho các giải pháp thay thế React. Vue được sử dụng bởi các công ty lớn như Gitlab hay Github. Bạn có thể đọc bài tổng kết một năm sử dụng Vue của Gitlab [ở đây](https://about.gitlab.com/2017/11/09/gitlab-vue-one-year-later/).
 
-![](https://res.cloudinary.com/hikerlust/image/upload/v1512803697/1_EauHdmiXdyc-nWQJI3Zw_g_elblci.png)
+![](https://res.cloudinary.com/hikerlust/image/upload/v1512803697/1_EauHdmiXdyc-nWQJI3Zw_g_elblci.jpg)
 
 ### CSS-in-JS và sự chuẩn bị cho cuộc Thánh Chiến CSS
 
