@@ -143,9 +143,9 @@ GitGutter theo dõi repo ở thư mục hiện tại, cho bạn biết trạng t
 
 [GitHubinator](https://packagecontrol.io/packages/GitHubinator)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519455472/t6LDHPe_azuezx.gif)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1541166878/3e8d982a16c2689eec272dfb39baf3f93585593c_mrzmme.jpg)
 
-GitHubinator là một plugin cho phép bạn bôi đen code trong Sublime text, và hightlight đoạn code đó trên remote repo của Github (nếu như đoạn code đó tồn tại.)
+GitHubinator là một plugin cho phép bạn bôi đen code trong Sublime text, và hightlight đoạn code đó trên remote repo của Github (nếu như đoạn code đó tồn tại).
 
 [Gist](https://packagecontrol.io/packages/Gist)
 Gist cho phép bạn gửi đoạn code được chọn lên dịch vụ [Gist](https://gist.github.com) của Github.
@@ -198,7 +198,7 @@ Sử dụng plugin này, bạn có thể nhìn thấy trực quan những màu s
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1541165193/undefined_zuii3s.jpg)
 
-Sử dụng plugin này, bạn có thể chèn thêm emoji từ Command palette. Có lẽ không cần thiết lắm với những ai sử dụng Mac vì bạn có thể mở emoji panel bằng cách nhấn `Control` + `Command` + `Space` rồi.
+Sử dụng plugin này, bạn có thể chèn thêm emoji từ Command palette. Có lẽ không cần thiết lắm với những ai sử dụng Mac vì bạn có thể mở emoji panel bằng cách nhấn `Control + Command + Space` rồi.
 
 ## Kết
 
