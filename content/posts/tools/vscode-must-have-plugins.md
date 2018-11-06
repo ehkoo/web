@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Những plugins không thể thiếu cho VSCode
-slug: nhung-plugins-khong-the-thieu-cho-vs-code
+slug: vscode-must-have-plugins
 date: 2018-05-20
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526803109/the-best-vscode-extensions-2017_ryxbmv_lfuuwm.jpg
 tags: Thủ thuật, VSCode, Plugins, Text Editor
@@ -12,21 +12,21 @@ editor: chubbyanh
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526803109/the-best-vscode-extensions-2017_ryxbmv_lfuuwm.jpg)
 
-VSCode chiếm được nhiều cảm tình của dân lập trình web nhờ hiệu suất ổn định, dễ sử dụng, cộng với vô vàn tính năng  hữu ích được đóng gói sẵn. Bên cạnh đó, kho plugin đồ sộ của VSCode cho phép người dùng tha hồ tùy biến và cải thiện trình soạn thảo theo hướng tiện dụng nhất.
+VSCode chiếm được nhiều cảm tình của dân lập trình web nhờ hiệu suất ổn định, dễ sử dụng, cộng với vô vàn tính năng hữu ích được đóng gói sẵn. Bên cạnh đó, kho plugin đồ sộ của VSCode cho phép người dùng tha hồ tùy biến và cải thiện trình soạn thảo theo hướng tiện dụng nhất.
 
 Ehkoo sẽ giúp bạn "điểm mặt" những plugin không thể thiếu khi làm việc với VSCode nhé.
 
 ### Snippets
 
-Đầu tiên phải kể đến những snippets thông dụng. Mặc dù VSCode đã hỗ trợ khá nhiều snippet trong bộ cài đặt, bạn vẫn cần  snippets của các frameworks/ thư viện như React, Vue hay Angular. Bạn có thể dễ dàng tìm chúng từ [VSCode Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Snippets&sortBy=Downloads), chẳng hạn như:
+Đầu tiên phải kể đến những snippets thông dụng. Mặc dù VSCode đã hỗ trợ khá nhiều snippet trong bộ cài đặt, bạn vẫn cần snippets của các frameworks/ thư viện như React, Vue hay Angular. Bạn có thể dễ dàng tìm chúng từ [VSCode Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Snippets&sortBy=Downloads), chẳng hạn như:
 
-* [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
-* [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
-* [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
-* [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
-* [Vue 2 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
-* [Angular v6 Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
-* [Bootstrap 3 Snippets](https://marketplace.visualstudio.com/items?itemName=wcwhitehead.bootstrap-3-snippets)
+- [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+- [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+- [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
+- [Vue 2 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
+- [Angular v6 Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
+- [Bootstrap 3 Snippets](https://marketplace.visualstudio.com/items?itemName=wcwhitehead.bootstrap-3-snippets)
 
 ### Bracket Pair Colorizer và Indent Rainbow
 
@@ -72,7 +72,7 @@ Thông thường khi đang code gì đó dở dang, chúng ta hay thêm vào TOD
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1527570491/I6jxn2j_tiny4g.jpg)
 
-Plugin này giúp hiển thị comment trong code theo các loại khác nhau,  ví dụ như bạn có thể dùng `*` để đánh dấu thông tin này cần được lưu ý, `?` để thể hiện nghi vấn, hay `TODO` để nhắc nhở những việc cần làm tiếp theo.
+Plugin này giúp hiển thị comment trong code theo các loại khác nhau, ví dụ như bạn có thể dùng `*` để đánh dấu thông tin này cần được lưu ý, `?` để thể hiện nghi vấn, hay `TODO` để nhắc nhở những việc cần làm tiếp theo.
 
 ### Path Intellisense
 

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: 10+ giao diện đẹp xuất sắc cho Sublime Text 3
-slug: 10-giao-dien-theme-dep-xuat-sac-cho-sublime-text-3
+slug: sublime-text-3-themes
 date: 2018-06-03
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528974295/Untitled_p8duff.jpg
 tags: Thủ thuật, Sublime Text 3, Themes, Text Editor
@@ -15,23 +15,24 @@ editor: kcjpop, chubbyanh
 Cùng với font chữ, việc chọn một giao diện (theme) tốt với các mẫu tô màu (color scheme) trực quan cũng góp phần đáng kể giúp tăng năng suất làm việc của lập trình viên. Nếu bạn đang dùng Sublime Text 3 thì đừng quên khám phá những giao diện (themes) và color scheme cực kì bắt mắt, thân thiện của trình soạn thảo này nhé.
 
 **Bạn đừng bỏ qua:**
-* [10+ font chữ cho lập trình - download miễn phí](https://ehkoo.com/bai-viet/font-chu-cho-lap-trinh)
-* [9+ thủ thuật giúp sử dụng Sublime Text 3 hiệu quả hơn](https://ehkoo.com/bai-viet/sublime-text-3-tips-tricks)
+
+- [10+ font chữ cho lập trình - download miễn phí](https://ehkoo.com/bai-viet/font-chu-cho-lap-trinh)
+- [9+ thủ thuật giúp sử dụng Sublime Text 3 hiệu quả hơn](https://ehkoo.com/bai-viet/sublime-text-3-tips-tricks)
 
 #### Ủa, nhưng bạn đã biết cài đặt và thay đổi giao diện trong Sublime Text chưa?
 
 Trước hết, hãy chắc chắn bạn đã cài đặt [Package Control](https://packagecontrol.io/installation). Sau đó, bạn làm theo các bước sau:
 
 1.  Nhấn `Ctrl + Shift + P` trên Windows/Linux hoặc `Cmd + Shift + p` với Mac để mở Command Palette
-2. Tìm và chọn `Package Control: Install Package`, nhấn Enter
-3. Nhập vào tên theme cần cài đặt, nhấn Enter
+2.  Tìm và chọn `Package Control: Install Package`, nhấn Enter
+3.  Nhập vào tên theme cần cài đặt, nhấn Enter
 
-Sau khi cài đặt xong, bạn có thể thiết lập giao diện bằng cách mở Command Palette, tìm và chọn`Preferences - Settings`. Ở tab `Preferences.sublime-settings - User` bên phải, bạn thay đổi giá trị thuộc tính `theme`  bằng tên giao diện muốn đổi. Ví dụ:
+Sau khi cài đặt xong, bạn có thể thiết lập giao diện bằng cách mở Command Palette, tìm và chọn`Preferences - Settings`. Ở tab `Preferences.sublime-settings - User` bên phải, bạn thay đổi giá trị thuộc tính `theme` bằng tên giao diện muốn đổi. Ví dụ:
 
 ```json
 {
-    // Thay đổi giao diện
-    "theme": "Boxy Monokai.sublime-theme",
+  // Thay đổi giao diện
+  "theme": "Boxy Monokai.sublime-theme"
 }
 ```
 
@@ -39,8 +40,8 @@ Lưu ý: Mỗi giao diện -- **theme** sẽ có thể có nhiều mẫu màu --
 
 ```json
 {
-    // Thay đổi mẫu màu
-    "color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
+  // Thay đổi mẫu màu
+  "color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme"
 }
 ```
 
@@ -61,10 +62,9 @@ Cài đặt
 ```json
 {
   "theme": "predawn-DEV.sublime-theme",
-  "color_scheme": "Packages/Predawn/predawn.tmTheme",
+  "color_scheme": "Packages/Predawn/predawn.tmTheme"
 }
 ```
-
 
 ### Materialize
 
@@ -72,14 +72,13 @@ Dựa trên hệ thống thiết kế Material Design của Google, [Materialize
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973472/d7e771c4b9966da6731bc57df6c2fbb317780556_wyazht.jpg)
 
-
 Cài đặt
 
 ```json
 {
   // Materialize
   "theme": "Materialize-Theme.sublime-theme",
-  "color_scheme": "Packages/Materialize/schemes/Material Brogrammer.tmTheme",
+  "color_scheme": "Packages/Materialize/schemes/Material Brogrammer.tmTheme"
 }
 ```
 
@@ -89,33 +88,31 @@ Là một bản port của giao diện Seti cho Atom, [Seti UI](https://packagec
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973493/a71e34c2a47ecd2afd719a2dc9f70e38d2a0d69c_ugf1lc.jpg)
 
-
 Cài đặt
 
 ```json
 {
   // Seti_UI
-  "theme": "Seti_UI-Theme.sublime-theme",
+  "theme": "Seti_UI-Theme.sublime-theme"
 }
 ```
 
-
 ### Afterglow
+
 [Afterglow](https://yabatadesign.github.io/afterglow-theme/) là một giao diện tối được thiết kế khá chi tiết, với các tính năng nổi bật như:
 
-* 3 chiều cao tab khác nhau
-* Hỗ trợ markdown
-* Tùy chỉnh nhiều màu sắc khác nhau
+- 3 chiều cao tab khác nhau
+- Hỗ trợ markdown
+- Tùy chỉnh nhiều màu sắc khác nhau
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973577/Afterglow-default_jvzjbh.jpg)
-
 
 Cài đặt
 
 ```json
 {
   // Afterglow
-  "theme": "afterglow.sublime-theme",
+  "theme": "afterglow.sublime-theme"
 }
 ```
 
@@ -125,24 +122,21 @@ Giao diện [Darkmatter](https://github.com/patrickemuller/Sublime-Darkmatter-Th
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973597/darkmatter_hrbjt6.jpg)
 
-
 Cài đặt
 
 ```json
 {
   // Darkmatter
   "theme": "Darkmatter.sublime-theme",
-  "color_scheme": "Packages/Theme - Darkmatter/Darkmatter.tmTheme",
+  "color_scheme": "Packages/Theme - Darkmatter/Darkmatter.tmTheme"
 }
 ```
-
 
 ### Arc dark
 
 [Arc dark](https://github.com/GarthTheChicken/Sublime-Text-3-Arc-Dark-theme)
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973626/arc-dark_tujbfc.jpg)
-
 
 Cài đặt
 
@@ -240,7 +234,6 @@ Cài đặt
 }
 ```
 
-
 ### Agila
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973057/agila_xhkcvo.jpg)
@@ -248,6 +241,7 @@ Cài đặt
 [Agila](https://packagecontrol.io/packages/Agila%20Theme) đi kèm theo 7 giao diện + mẫu màu. Bên cạnh đó Agila còn cung cấp nhiều thiết lập để bạn tùy chỉnh màu icon, sidebar...
 
 ### Spacegray
+
 Một trong những giao diện được ưa chuộng nhất trong cộng đồng, [Spacegray](https://packagecontrol.io/packages/Theme%20-%20Spacegray) kèm theo 3 giao diện: Dark, Light, và Eighties.
 
 ![](https://packagecontrol.io/readmes/img/a0b57c3d90be54892fa645dab621920bfe69ca7e.jpg)
@@ -279,7 +273,6 @@ Cài đặt
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528972385/numix_fzzh9i.jpg)
 
 Dựa vào giao diện Numix dành cho GTK, [Numix Theme](https://packagecontrol.io/packages/Numix%20Theme) mang đến phong cách thiết kế quen thuộc, đồng thời đi kèm khá nhiều mẫu màu.
-
 
 ### Tổng kết
 
