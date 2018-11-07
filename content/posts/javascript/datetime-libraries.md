@@ -3,14 +3,14 @@ layout: post.njk
 title: Những thư viện xử lý ngày tháng trong JavaScript
 slug: nhung-thu-vien-xu-ly-ngay-thang-trong-javascript
 date: 2018-07-23
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540025251/4c0012dde7fd141af579e4c899568472_ms91xp.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1540025251/4c0012dde7fd141af579e4c899568472_ms91xp.jpg
 tags: JavaScript, Dành cho người mới, DateTime
 excerpt: JavaScript cung cấp lớp Date để xử lý thời gian khi phát triển ứng dụng. Nhưng để làm việc với múi giờ và các thao tác phức tạp hơn thì bạn không thể bỏ qua các thư viện được giới thiệu trong bài viết này.
 author: kcjpop
 editor: chubbyanh
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540025251/4c0012dde7fd141af579e4c899568472_ms91xp.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1540025251/4c0012dde7fd141af579e4c899568472_ms91xp.jpg)
 _Hình minh họa lụm trên Pinterest mà không tìm thấy thông tin tác giả_
 
 Thao tác và hiển thị ngày tháng gần như xuất hiện trong tất cả các ứng dụng JavaScript. Trình duyệt và NodeJS cung cấp lớp `Date` để thể hiện kiểu dữ liệu này, nhưng các phương thức của lớp này lại khá giới hạn. May mắn thay, cộng đồng JavaScript đã phát triển những công cụ giúp cho việc xử lý ngày tháng trở nên dễ dàng và bớt nhàm chán hơn.
