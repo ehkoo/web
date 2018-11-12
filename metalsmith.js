@@ -69,7 +69,6 @@ const builder = Metalsmith(__dirname)
       },
     }),
   )
-  .use(feed({ collection: 'feed' }))
   .use(
     markdown('full', {
       html: true,
@@ -95,7 +94,7 @@ const builder = Metalsmith(__dirname)
       ],
     }),
   )
-
+  .use(feed({ collection: 'feed' }))
   .use(dates({ dates: [{ key: 'date', format: 'DD/MM/YYYY' }] }))
   .use((files, metalsmith, done) => {
     const { siteUrl, collections } = metalsmith.metadata()
