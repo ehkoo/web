@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: 10+ tài liệu JavaScript từ cơ bản đến nâng cao
-slug: tai-lieu-javascript-tu-co-ban-den-nang-cao
+slug: free-javascript-books-beginner-advanced
 date: 2018-10-13
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539423973/ehkoo/best_free_javascript_books.jpg
 tags: JavaScript, Tài liệu, Sách, Dành cho người mới
