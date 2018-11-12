@@ -55,7 +55,7 @@ Hoặc bạn có thể thay đổi giao diện và mẫu màu nhanh hơn bằng 
 
 Một trong những theme đẹp và được tải nhiều nhất hiện nay, [Predawn](https://packagecontrol.io/packages/Predawn) có mẫu màu tối và đi kèm vài tùy chọn cho phép thay đổi kích thước của sidebar và tab.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973435/bed33bfef41e7ae64086cc47ec88c6b1abd08b0f_u7xqxd.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1528973435/bed33bfef41e7ae64086cc47ec88c6b1abd08b0f_u7xqxd.jpg)
 
 Cài đặt
 
@@ -70,7 +70,7 @@ Cài đặt
 
 Dựa trên hệ thống thiết kế Material Design của Google, [Materialize](https://packagecontrol.io/packages/Materialize) là một giao diện tối, có đi kèm một số mẫu màu và thiết lập. Đáng tiếc là giao diện này hiện không còn được phát triển tiếp.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973472/d7e771c4b9966da6731bc57df6c2fbb317780556_wyazht.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1528973472/d7e771c4b9966da6731bc57df6c2fbb317780556_wyazht.jpg)
 
 Cài đặt
 
@@ -136,7 +136,7 @@ Cài đặt
 
 [Arc dark](https://github.com/GarthTheChicken/Sublime-Text-3-Arc-Dark-theme)
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973626/arc-dark_tujbfc.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1528973626/arc-dark_tujbfc.jpg)
 
 Cài đặt
 
@@ -144,7 +144,7 @@ Cài đặt
 {
   // Arc dark
   "theme": "Arc-Dark-Master.sublime-theme",
-  color_scheme": "Packages/User/Arc-Dark/schemes/Arc.tmTheme,
+  "color_scheme": "Packages/User/Arc-Dark/schemes/Arc.tmTheme"
 }
 ```
 
@@ -152,11 +152,11 @@ Cài đặt
 
 [Dracula](https://github.com/dracula/dracula-theme) là một dự án không chỉ cung cấp giao diện tối cho Sublime mà còn cho cả các trình soạn thảo khác như Atom, VSCode...
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973653/sublime_ac9rv1.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,w_1000,f_auto/v1528973653/sublime_ac9rv1.jpg)
 
 ### Boxy
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528972595/boxy_sqqmna.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1528972595/boxy_sqqmna.jpg)
 
 [Boxy](https://packagecontrol.io/packages/Boxy%20Theme) là một trong những theme có khả năng tùy chỉnh nhiều nhất, cung cấp 6 giao diện với nhiều mẫu màu khác nhau.
 
@@ -210,7 +210,7 @@ Cài đặt
 
 Đơn giản mà hiện đại, [Ayu](https://github.com/dempfi/ayu) là một trong số những giao diện đẹp nhất dành cho Sublime Text. Bao gồm 3 themes: Ayu light, Ayu mirage, và Ayu dark.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528973803/pdgadj_sydvjb.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1528973803/pdgadj_sydvjb.jpg)
 
 Cài đặt
 
