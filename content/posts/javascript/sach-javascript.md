@@ -198,7 +198,7 @@ Nhìn tựa có vẻ như nói về JS thế hệ mới, nhưng nội dung chín
 **Năm xuất bản:** 2012
 **Nhà xuất bản:** O'Reilly Media
 
-Điểm chung của 3 quyển sách trên là gì? Đầu tiên là cũ. Thứ hai là Ehkoo chưa đọc :p, nhưng được một [blogger](https://thefullsnack.com/) nhiều tên ít tuổi trong cộng đồng giới thiệu. Nếu bạn đọc thấy không hay thì tìm @huytd ở [WeBuildVN](https://chat.webuild.community/) mà mắng vốn nhé. <img style="display: inline-block;vertical-align: middle;" src="https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539887363/ehkoo/0261c72927d64558.gif">
+Điểm chung của 3 quyển sách trên là gì? Đầu tiên là cũ. Thứ hai là Ehkoo chưa đọc :p, nhưng được một [blogger](https://fullsnack.io/) nhiều tên ít tuổi trong cộng đồng giới thiệu. Nếu bạn đọc thấy không hay thì tìm @huytd ở [WeBuildVN](https://chat.webuild.community/) mà mắng vốn nhé. <img style="display: inline-block;vertical-align: middle;" src="https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539887363/ehkoo/0261c72927d64558.gif">
 
 ## Kết
 
