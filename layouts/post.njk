@@ -1,96 +1,105 @@
 {% extends "index.njk" %}
 
 {% block head %}
-{% include "el/opengraph.njk" %}
-<link rel="stylesheet" href="/assets/zoom-image/zoom-image.css">
+  {% include "el/opengraph.njk" %}
+  <link rel="stylesheet" href="/assets/zoom-image/zoom-image.css">
 {% endblock %}
 
 {% block bottom %}
-<script src="/assets/zoom-image/zoom-image.min.js"></script>
+  <script src="/assets/zoom-image/zoom-image.min.js"></script>
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-column flex-row-l ph2 ph3-ns">
-  <div class="w-75-l pr3-ns">
-    <article class="bg-white pa3 relative box-shadow-1">
-      <h1 class="red fw7 f3 mb4 tracked ttu break-word">{{ title }}</h1>
-      <div class="lh-copy mb3 silver flex flex-column flex-row-ns">
-        <div>
-          {{ date }}
-          {% if author %}
-          &mdash; <a href="https://github.com/{{ author }}" target="_blank">@{{ author }}</a>
-          {% endif %}
+  <div class="flex flex-column flex-row-l ph2 ph3-ns">
+    <div class="w-75-l pr3-ns">
+      <article class="bg-white pa3 relative box-shadow-1">
+        <h1 class="red fw7 f3 mb4 tracked ttu break-word">{{ title }}</h1>
+        <div class="lh-copy mb3 silver flex flex-column flex-row-ns">
+          <div>
+            {{ date }}
+            {% if author %}
+              &mdash;
+              <a href="https://github.com/{{ author }}" target="_blank">@{{ author }}</a>
+            {% endif %}
+          </div>
+
+          <div class="ml-auto-ns">{{ wordCount }}
+            từ &mdash; Đọc trong
+            {{ readingTime }}</div>
         </div>
 
-        <div class="ml-auto-ns">{{ wordCount }} từ &mdash; Đọc trong {{ readingTime }}</div>
-      </div>
-
-      {% if tags %}
-      <div class="lh-copy mv3 flex items-center">
-        <span class="silver mr3 mb2">Tags:</span>
-        <ul class="list">
-        {% for tag in tags %}
-          <li class="dib mh1 mb2"><a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a></li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <div class="lh-copy mv2">
-        <div class="sharethis-inline-share-buttons"></div>
-      </div>
-
-      <div id="js-content" class="content lh-copy dark-gray f5 f4-ns">
-        {% if translation %}
-          <p class="mb3 i mid-gray">Bài viết được dịch từ <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a></p>
+        {% if tags %}
+          <div class="lh-copy mv3 flex items-center">
+            <span class="silver mr3 mb2">Tags:</span>
+            <ul class="list">
+              {% for tag in tags %}
+                <li class="dib mh1 mb2">
+                  <a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         {% endif %}
 
-        {{ contents | safe }}
+        <div class="lh-copy mv2">
+          <div class="sharethis-inline-share-buttons"></div>
+        </div>
+
+        <div id="js-content" class="content lh-copy dark-gray f5 f4-ns">
+          {% if translation %}
+            <p class="mb3 i mid-gray">Bài viết được dịch từ
+              <a href="{{ translation }}" target="_blank" rel="nofollow">{{ translation }}</a>
+            </p>
+          {% endif %}
+
+          {{ contents | safe }}
+        </div>
+
+        {% if form_footer %}
+          {% include "forms/" + form_footer + ".njk" %}
+        {% else %}
+          {% include "forms/newsletter-footer.njk" %}
+        {% endif %}
+
+        <hr class="mv4 mw5 center db bg-silver">
+
+        <div id="js-widgets" class="flex justify-center">
+          {% include "el/widgets/fb.njk" %}
+        </div>
+
+        {% if tags %}
+          <div class="lh-copy mt3 flex items-center">
+            <span class="silver mr3 mb2">Tags:</span>
+            <ul class="list">
+              {% for tag in tags %}
+                <li class="dib mh1 mb2">
+                  <a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        <div class="lh-copy mt3">
+          <div class="sharethis-inline-share-buttons"></div>
+        </div>
+
+        <div class="clip-l fixed bottom-2 right-2 z-9999">
+          {% include "el/jump-top.njk" %}
+        </div>
+      </article>
+
+      <div class="mv3">
+        {% set relatedPosts = related %}
+        {% include "el/widgets/related.njk" %}
       </div>
 
-      {% if form_footer %}
-        {% include "forms/" + form_footer + ".njk" %}
-      {% else %}
-        {% include "forms/newsletter-footer.njk" %}
-      {% endif %}
-
-      <hr class="mv4 mw5 center db bg-silver">
-
-      <div id="js-widgets" class="flex justify-center">
-        {% include "el/widgets/fb.njk" %}
-      </div>
-
-      {% if tags %}
-      <div class="lh-copy mt3 flex items-center">
-        <span class="silver mr3 mb2">Tags:</span>
-        <ul class="list">
-        {% for tag in tags %}
-          <li class="dib mh1 mb2"><a href="/chu-de/{{ tag.slug }}" class="pv1 ph2 white bg-blue">#{{ tag.name }}</a></li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <div class="lh-copy mt3">
-        <div class="sharethis-inline-share-buttons"></div>
-      </div>
-
-      <div class="clip-l fixed bottom-2 right-2 z-9999">
-        {% include "el/jump-top.njk" %}
-      </div>
-    </article>
-
-    <div class="mv3">
-      {% set relatedPosts = related %}
-      {% include "el/widgets/related.njk" %}
+      <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
     </div>
 
-    <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
-  </div>
+    <div class="w-25-ns">
+      {% include "el/sidebar.njk" %}
+    </div>
 
-  <div class="w-25-ns">
-    {% include "el/sidebar.njk" %}
   </div>
-
-</div>
 {% endblock %}
