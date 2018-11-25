@@ -100,6 +100,26 @@ _Ehkoo khuyên xem_
 > **Mách nhỏ**
 > Bạn nên nghía qua [https://squoosh.app/](https://squoosh.app/), công cụ chuyển đổi ảnh trực tuyến vừa được Google giới thiệu tại hội nghị Chrome Dev Summit 2018 vừa qua. Ứng dụng này cho phép bạn chuyển đổi qua lại giữa các định dạng với nhau, hỗ trợ cả WebP và MozJPEG.
 
+Nếu không sử dụng Cloudinary để tự động truyền tải WebP, bạn có thể dùng thẻ `PICTURE` để thực hiện fallback.
+
+```html
+<picture>
+  <source srcset="img.webp" type="image/webp" />
+  <img src="img.jpg" alt="My image" />
+</picture>
+```
+
+Trình duyệt sẽ tự động chọn lấy nguồn ảnh phù hợp, và trong trường hợp xấu nhất, sử dụng hình của thẻ `IMG`. Thẻ `SOURCE` còn hỗ trợ thuộc tính `media`, cho phép bạn quy định media queries khi hình ảnh này được hiển thị.
+
+```html
+<picture>
+  <source srcset="/media/examples/surfer-240-200.jpg" media="(min-width: 800px)" />
+  <img src="/media/examples/painted-hand-298-332.jpg" />
+</picture>
+```
+
+Hiện tại thì thẻ `PICTURE` đã có thể dùng được trên tất cả trình duyệt thường xuân (evergreen) trừ IE ra nhé :p
+
 ### Thu nhỏ hình ảnh
 
 Cái này thì nhờ vào tình hình thực tế của Ehkoo thôi. Website hiện tại đang có giao diện giống như bên dưới.
