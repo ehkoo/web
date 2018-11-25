@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Tối ưu hoá hình ảnh cho Ehkoo
-slug: ehkoo-what-is-webp-and-image-optimization-with-cloudinary
+slug: ehkoo-what-is-webp-image-optimization-cloudinary
 date: 2018-11-24
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1543089888/photo-1536922246289-88c42f957773_dnqitd.jpg
 tags: Web Performance, Image Optimization, WebP, MozJPG
