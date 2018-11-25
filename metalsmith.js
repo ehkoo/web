@@ -15,6 +15,30 @@ const permalinks = require('./plugins/metalsmith-permalinks')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
 
+function transformCloudinary(url, transformations) {
+  const tokens = url.match(/upload\/(.+)\/v/)
+
+  const actions = tokens != null ? tokens[1] : null
+
+  // Transformation string -> object
+  const oldT =
+    actions == null
+      ? {}
+      : actions.split(',').reduce((acc, action) => {
+          const [key, value] = action.split('_')
+          return { ...acc, [key]: value }
+        }, {})
+
+  // Transformation object -> string
+  const newT = Object.entries({ ...oldT, ...transformations })
+    .map(([k, v]) => k + '_' + v, [])
+    .join(',')
+
+  return tokens == null
+    ? url.replace('upload/', 'upload/' + newT + '/')
+    : url.replace(tokens[0], 'upload/' + newT + '/v')
+}
+
 const builder = Metalsmith(__dirname)
   .metadata({
     env: process.env.NODE_ENV,
@@ -79,6 +103,23 @@ const builder = Metalsmith(__dirname)
     }),
   )
   .use(wordcount())
+  .use((files, metalsmith, done) => {
+    const { siteUrl } = metalsmith.metadata()
+
+    files = Object.entries(files).reduce((acc, [key, data]) => {
+      data.fullUrl = `${siteUrl}/${data.path}`
+
+      data.thumbnailUrl = data.cover != null ? transformCloudinary(data.cover, { w: 960, c: 'scale' }) : data.cover
+
+      // Square thumbnail URL
+      data.squareThumbnailUrl =
+        data.cover != null ? transformCloudinary(data.cover, { w: 150, c: 'fill', g: 'center', h: 150 }) : data.cover
+
+      return { ...acc, [key]: data }
+    }, {})
+
+    done()
+  })
   .use(
     permalinks({
       pattern: 'bai-viet/:slug',
@@ -97,24 +138,20 @@ const builder = Metalsmith(__dirname)
   .use(feed({ collection: 'feed' }))
   .use(dates({ dates: [{ key: 'date', format: 'DD/MM/YYYY' }] }))
   .use((files, metalsmith, done) => {
-    const { siteUrl, collections } = metalsmith.metadata()
+    const { collections } = metalsmith.metadata()
     const TOP_POSTS = 5
     // Split latestPosts into first 5 and the rest
     const topPosts = collections.latest.slice(0, TOP_POSTS)
     const olderPosts = collections.latest.slice(TOP_POSTS)
     metalsmith.metadata({ ...metalsmith.metadata(), topPosts, olderPosts })
 
-    files = Object.keys(files).reduce((acc, key) => {
-      const data = files[key]
+    files = Object.entries(files).reduce((acc, [key, data]) => {
       if (data.tag != null) {
         data.title = `Bài viết thuộc chủ đề: ${data.tag}`
         data.excerpt = `Những bài viết thuộc chủ đề ${data.tag} trên Ehkoo`
       }
 
-      data.fullUrl = `${siteUrl}/${data.path}`
-
-      acc[key] = data
-      return acc
+      return { ...acc, [key]: data }
     }, {})
 
     done()

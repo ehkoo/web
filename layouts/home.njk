@@ -10,7 +10,7 @@
     {% for post in topPosts %}
     {% if post.type === 'quote' %}
     <div class="home-grid__article box-shadow-1 bg-white br2">
-      <article class="relative h5 h-100-ns bg-center cover" style="background-image: url({{ post.cover }})">
+      <article class="relative h5 h-100-ns bg-center cover" style="background-image: url({{ post.thumbnailUrl }})">
         <div class="mt1 mr1 gold bg-black fw6 di absolute right-0 pa2 serif i">{{ post.author }}</div>
         <div class="absolute bottom-0 ma2">
           <span class="lh-copy di fw6 f3-ns gold bg-black di serif i pa1 box-break-clone">
@@ -30,11 +30,11 @@
         <p class="lh-copy">{{ post.excerpt}}</p>
         <p class="lh-copy tr mt1"><small class="i gray">{{ post.date }} &ndash; {{ post.readingTime }}</small></p>
       </div>
-      <p class="w-40 ph3"><img src="{{ post.cover }}" alt=""></p>
+      <p class="w-40 ph3"><img src="{{ post.thumbnailUrl }}" alt=""></p>
     </article>
     {% else %}
     <article class="home-grid__article box-shadow-1 bg-white br2 flex flex-column">
-      <div class="home-grid__cover br2 br--top h4 bg-center cover" style="background-image: url({{ post.cover }})">
+      <div class="home-grid__cover br2 br--top h4 bg-center cover" style="background-image: url({{ post.thumbnailUrl }})">
         {% if post.tags %}
           {% set tag = post.tags | first %}
           <a href="/chu-de/{{ tag.slug }}" class="dib pv1 ph2 ma3 white bg-blue f6">#{{ tag.name }}</a>
@@ -76,7 +76,7 @@
         <div class="bg-light-gray mb3 box-shadow-1">
           <div class="flex items-center">
             <div class="w-30 w-50-l">
-              <div class="bg-center cover h5" style="background-image: url({{ post.cover }})"></div>
+              <div class="bg-center cover h5" style="background-image: url({{ post.thumbnailUrl }})"></div>
             </div>
             <div class="w-70 w-50-l">
               <blockquote class="ph3 fw3 f4 f3-ns i mid-gray serif quote">
