@@ -5,7 +5,7 @@ slug: ehkoo-what-is-webp-image-optimization-cloudinary
 date: 2018-11-24
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1543147161/photo-1534367507873-d2d7e24c797f_bnafmj.jpg
 tags: Web Performance, Image Optimization, WebP, MozJPG
-excerpt: '...hay câu chuyện WebP là gì và mần răng để giảm bandwidth của Cloudinary với WebP.'
+excerpt: '...hay câu chuyện WebP là gì, và mần răng để giảm bandwidth của Cloudinary với WebP.'
 author: kcjpop
 editor: chubbyanh
 ---
@@ -15,16 +15,16 @@ _Hình chụp bởi [Alora Griffiths](https://unsplash.com/@aloragriffiths). Ngu
 
 ## Chuyện như chưa bắt đầu
 
-Nếu bạn chưa biết thì [Cloudinary](https://cloudinary.com) là một dịch vụ lưu trữ, quản lý và phân phối media gần như miễn phí. Bạn có thể upload hình ảnh và video lên Cloudinary và phân phối chúng qua hệ thống CDN. Cloudinary dựa vào CDN của những ông lớn như Akamai, Fastly, và CloudFront, tự động chọn lấy nhà phân phối đang có hiệu suất tốt nhất để đảm bảo tài liệu được chuyển đến người sử dụng chỉ trong vòng vài nốt nhạc.
+Nếu bạn chưa biết thì [Cloudinary](https://cloudinary.com) là một dịch vụ lưu trữ, quản lý và phân phối media gần như miễn phí. Bạn có thể upload hình ảnh, video lên Cloudinary rồi phân phối chúng qua hệ thống CDN. Cloudinary dựa vào CDN của những ông lớn như Akamai, Fastly, và CloudFront, tự động chọn lấy nhà phân phối đang có hiệu suất tốt nhất để đảm bảo tài liệu được chuyển đến người sử dụng chỉ trong vòng vài nốt nhạc.
 
-Ngoài chuyện upload, bạn còn có thể trực tiếp chỉnh sửa tài liệu (gọi là "transformation") chỉ bằng cách thay đổi tham số trên URL của tài liệu, chẳng hạn như chỉnh kích thước ảnh, đổi định dạng, crop hình, vân vân và mây mây. Cloudinary còn có những tính năng nâng cao khác mà bạn có thể tìm hiểu thêm [ở đây](https://cloudinary.com/solutions).
+Ngoài chuyện upload, bạn còn có thể trực tiếp chỉnh sửa tài liệu (gọi là "transformation") chỉ bằng việc thay đổi tham số trên URL của tài liệu, chẳng hạn như chỉnh kích thước ảnh, đổi định dạng, crop hình, vân vân và mây mây. Cloudinary còn có những tính năng nâng cao khác mà bạn có thể tìm hiểu thêm [ở đây](https://cloudinary.com/solutions).
 
 > **Công khai dụ dỗ**
-> Nếu bạn muốn đăng ký xài thử Cloudinary, bạn có thể click vào liên kết giới thiệu này [https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/xkykkalctvz2xm29zkev](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/xkykkalctvz2xm29zkev). Với mỗi tài khoản mới được tạo thì Ehkoo sẽ được "ăn theo" 1GB bandwidth. Còn nếu bạn hông muốn thì cũng hông sao.
+> Nếu muốn đăng ký xài thử Cloudinary, bạn có thể click vào liên kết giới thiệu này [https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/xkykkalctvz2xm29zkev](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/xkykkalctvz2xm29zkev). Với mỗi tài khoản mới được tạo thì Ehkoo sẽ được "ăn theo" 1GB bandwidth. Còn nếu bạn hông muốn thì cũng hông sao.
 
 Ehkoo sử dụng Cloudinary từ những ngày đầu tiên. Cloudinary đặc biệt hào phóng khi cung cấp gói Free cho phép chứa 10GB media, 20GB bandwidth, 300k tập tin và 20k thao tác chuyển đổi hàng tháng. Theo ước lượng ban đầu của một trang không ai thèm vào thì gói này là đủ rồi, cho đến một ngày...
 
-Khoảng 3 tuần trước, Ehkoo nhận được một email từ Cloudinary nhắc nhở rằng tài khoản đã sử dụng gần hết bandwidth trong tháng. Bình thường thì website sử dụng khoảng 80-90% bandwidth cho phép nên chuyện này cũng không có gì lạ lắm. Nhưng vì đây là lần đầu tiên nhận được email cảnh báo nên cũng đáng để xem xét thử.
+Khoảng 3 tuần trước, Ehkoo nhận được một email từ Cloudinary nhắc nhở rằng tài khoản đã sử dụng gần hết bandwidth trong tháng. Bình thường thì website sử dụng khoảng 80-90% bandwidth cho phép, nên chuyện này cũng không có gì lạ lắm. Nhưng vì đây là lần đầu tiên nhận được email cảnh báo nên cũng đáng để xem xét thử.
 
 Thống kê cho thấy ngày hôm đó có 8.64k requests, ngốn 1.06GB bandwidth.
 
@@ -62,7 +62,7 @@ Bước đầu tiên quá rõ ràng rồi, chuyển tất cả hình PNG thành 
 +https://res.cloudinary.com/ehkoo/image/upload/v1541164603/imqusj.jpg
 ```
 
-Chỉ có một điểm lưu ý là tập tin JPG không hỗ trợ nền trong suốt (transparent background), nhưng vì web của Ehkoo nền trắng nên cũng không thành vấn đề. Bài học ở đây là nên thiết kế web nền trắng nhé.
+Có một điểm lưu ý là tập tin JPG không hỗ trợ nền trong suốt (transparent background), nhưng vì web của Ehkoo nền trắng nên cũng không thành vấn đề. Bài học ở đây là nên thiết kế web nền trắng nhé.
 
 ### Tự động chuyển qua WebP nếu trình duyệt hỗ trợ
 
@@ -82,7 +82,7 @@ Bằng cách thêm vào tham số `f_auto`, Cloudinary sẽ tự động trả v
 +https://res.cloudinary.com/ehkoo/image/upload/f_auto/v1541164603/imqusj.jpg
 ```
 
-Thêm một lý do nữa là 63% lượng khách truy cập Ehkoo sử dụng Chrome cùng với 11% sử dụng Chrome Mobile, nên chỉ cần hiển thị WebP cho 3/4 tổng lượng truy cập cũng đã là một cải tiến lớn rồi.
+Thêm lý do nữa, là 63% lượng khách truy cập Ehkoo sử dụng Chrome cùng với 11% sử dụng Chrome Mobile, nên chỉ cần hiển thị WebP cho 3/4 tổng lượng truy cập cũng đã là một cải tiến lớn rồi.
 
 **Ngoài lề, liệu WebP có thống trị định dạng hình ảnh sau này?**
 
@@ -138,7 +138,7 @@ Vì container không bao giờ vượt quá 1280px và nội dung chính không 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1543139832/undefined_vn2xhn.jpg)
 _Ngày 1/11 là khi bắt đầu sử dụng WebP đó nha_
 
-Đây là tình hình của Ehkoo trong 30 ngày qua. Sau khi áp dụng tất cả chiêu trò ở trên thì tình hình có vẻ khá khả quan. Lấy con số ra hù nhau một chút:
+Đây là tình hình của Ehkoo trong 30 ngày qua. Sau khi áp dụng tất cả chiêu trò ở trên thì mọi thứ có vẻ khá khả quan. Lấy con số ra hù nhau một chút:
 
 | Ngày  | Requests (1000) | Bandwidth (GB) |
 | ----- | --------------- | -------------- |
@@ -148,14 +148,14 @@ _Ngày 1/11 là khi bắt đầu sử dụng WebP đó nha_
 
 <p class="tc"><em>Số % là so sánh với ngày 29/10 - trước khi áp dụng tối ưu hóa</em></p>
 
-Trong những ngày đỉnh điểm, lượng request tăng lên 2.5 - 3 lần, trong khi bandwidth tiêu thụ chỉ tăng khoảng 1.2 - 1.6 lần. Hiện tại thì Ehkoo chỉ đang sử dụng khoảng 74% tổng lượng bandwidth cho phép.
+Trong những ngày đỉnh điểm, lượng request tăng lên 2.5 - 3 lần, trong khi bandwidth tiêu thụ chỉ tăng khoảng 1.2 - 1.6 lần. Hiện tại, Ehkoo chỉ đang sử dụng khoảng 74% tổng lượng bandwidth cho phép.
 
-Trong khi đó thì số pageviews và sessions vẫn tiếp tục tăng (ơn trời và ơn các bạn nữa 🤗).
+Trong khi đó, số pageviews và sessions vẫn tiếp tục tăng (ơn trời, và ơn các bạn nữa 🤗).
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1543141145/undefined_wsusxt.jpg)
 
 > **Tâm sự mỏng**
-> Đến bây giờ Ehkoo vẫn không biết vì sao traffic ngày 12/11 đột nhiên tăng vọt vì ngày hôm đó không có bài viết nào mới cả. Theo dõi cho thấy lượng lớn truy cập đến từ Facebook, làm băn khoăn mãi không biết có phải bài viết được người nổi tiếng nào chia sẻ lại không.
+> Đến bây giờ Ehkoo vẫn không biết vì sao traffic ngày 12/11 đột nhiên tăng vọt, vì ngày hôm đó không có bài viết nào mới cả. Theo dõi cho thấy lượng lớn truy cập đến từ Facebook, làm Ehkoo băn khoăn mãi không biết có phải bài viết được người nổi tiếng nào chia sẻ lại không.
 
 ## Tạm kết
 
