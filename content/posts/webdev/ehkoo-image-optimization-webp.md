@@ -88,7 +88,7 @@ Thêm lý do nữa, là 63% lượng khách truy cập Ehkoo sử dụng Chrome 
 
 Hên xui. Một trong những những hạn chế của WebP là không hỗ trợ tải ảnh theo kiểu tăng tiến (progressively). Nghĩa là trình duyệt vẫn phải download hết file ảnh trước khi hiển thị. Ở mức độ nào đó thì hạn chế này có thể ảnh hưởng đến trải nghiệm người dùng. [MozJPEG](https://github.com/mozilla/mozjpeg), một định dạng ảnh được phát triển bởi Mozilla, có thể giải quyết hạn chế này, đồng thời vẫn đảm bảo những tính năng hay ho của WebP.
 
-Nếu bạn quan tâm hơn về chủ đề tối ưu hoá hình ảnh, đừng bỏ qua bài thuyết trình dưới đây của Kornel Lesiński tại hội nghị [performance.now()](https://perfnow.nl/) vừa diễn ra hồi đầu tháng 11. Kornel giải thích cách tập tin JPG được mã hoá, trình bày một kỹ thuật sử dụng HTTP2 để tiến hành tải ảnh một cách tăng tiến (ở cả server của bạn lẫn CDN), và một mẹo "kỳ cục" để nâng cao hiệu suất nén của WebP.
+Nếu bạn quan tâm hơn về chủ đề tối ưu hoá hình ảnh, đừng bỏ qua bài thuyết trình dưới đây của Kornel Lesiński tại hội nghị [performance.now()](https://perfnow.nl/) vừa diễn ra hồi đầu tháng 11. Kornel giải thích cách tập tin JPG được mã hoá, trình bày một kỹ thuật sử dụng HTTP2 để tiến hành tải ảnh một cách tăng tiến (ở cả server của bạn lẫn CDN), và một mẹo "kỳ cục" để sử dụng hình được nén bằng AV1 ngay hôm nay.
 
 <div class="tc">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jTXhYj2aCDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
