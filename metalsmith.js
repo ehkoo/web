@@ -103,6 +103,21 @@ const builder = Metalsmith(__dirname)
     }),
   )
   .use(wordcount())
+  .use(
+    permalinks({
+      pattern: 'bai-viet/:slug',
+      linksets: [
+        {
+          match: { collection: 'pages' },
+          pattern: ':slug',
+        },
+        {
+          match: { collection: 'series' },
+          pattern: 'series/:series/:slug',
+        },
+      ],
+    }),
+  )
   .use((files, metalsmith, done) => {
     const { siteUrl } = metalsmith.metadata()
 
@@ -120,21 +135,6 @@ const builder = Metalsmith(__dirname)
 
     done()
   })
-  .use(
-    permalinks({
-      pattern: 'bai-viet/:slug',
-      linksets: [
-        {
-          match: { collection: 'pages' },
-          pattern: ':slug',
-        },
-        {
-          match: { collection: 'series' },
-          pattern: 'series/:series/:slug',
-        },
-      ],
-    }),
-  )
   .use(feed({ collection: 'feed' }))
   .use(dates({ dates: [{ key: 'date', format: 'DD/MM/YYYY' }] }))
   .use((files, metalsmith, done) => {
