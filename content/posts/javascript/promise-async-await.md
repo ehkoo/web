@@ -394,7 +394,7 @@ Promise.resolve()
 
 ### Truyền dữ liệu giữa các promises với nhau
 
-Một trong những yếu điểm của Promise là không có cơ chế mặc định để bạn truyền dữ liệu giữa các promise objects với nhau. Nghĩa là:
+Một trong những điểm hạn chế của Promise là không có cơ chế mặc định để bạn truyền dữ liệu giữa các promise objects với nhau. Nghĩa là:
 
 ```js
 api.getUser('pikalong')
