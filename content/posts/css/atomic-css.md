@@ -7,7 +7,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v
 tags: CSS, Atomic CSS, Functional CSS, Utility-First CSS
 excerpt: Atomic CSS là một hướng tiếp cận khác để đặt tên class và quản lý code trong CSS. So với BEM, atomic CSS giúp cho tập tin CSS nhẹ hơn, lập trình viên đỡ phải suy nghĩ và viết ít CSS lại. Nhưng atomic CSS cũng khá là quái dị.
 author: kcjpop
-editor: chubbyanh
+editor: chubbyanh, huytd, nhducit
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1545725279/shOliZI_ovxxbt.jpg)
@@ -17,7 +17,7 @@ _Concept art trong bộ phim "Our Friend The Atom" (1957) của Walt Disney - [N
 
 ### Specificity war, thâm cung nội chiến
 
-Đời làm web có ai chưa từng viết CSS. Bạn còn nhớ lần đầu bạn viết CSS giống như thế nào không? Có thể là khai báo style cho một thẻ HTML nào đó.
+Bạn còn nhớ lần đầu bạn viết CSS giống như thế nào không? Có thể là khai báo style cho một thẻ HTML nào đó.
 
 ```css
 a {
@@ -47,16 +47,21 @@ Sau đó bạn biết thêm về ID và class:
 Và bạn học được cách xử lý các pseudo selectors, hoặc khai báo cho các phần tử anh chị em con cháu họ hàng, v.v...
 
 ```css
-#header > p:first-child {
+#header > a:first-child {
   color: unicorn;
 }
 
-.user ~ div p .text::before {
+#header p > a.text::before {
+  content: '⛓';
   font-family: Comic Sans;
 }
 ```
 
 Rồi khi bạn đã quen với CSS và bắt tay vào làm dự án thực tế, bạn bàng hoàng nhận ra kẻ thù không ở đâu xa, chúng đang lởn vởn quanh ta í mà. Bạn bước vào cuộc chiến gọi là ["specificity war"](https://css-tricks.com/a-specificity-battle/), đánh nhau tơi bời khói lửa với class được viết bởi các chiến hữu trong team. Quả là một trận đấu kinh hoàng khi ai cũng muốn đè đầu cưỡi cổ (override) người đi trước. Kẻ nắm giữ `!important` trong tay cứ nghĩ đã gần với chiến thắng, nào ngờ xuất hiện tiểu nhân dùng `inline style`. Tình anh em sứt mẻ, chiến hữu quay đầu không nhìn mặt nhau. Bạn ức chế và gào lên "đậu phộng CSS 🥜".
+
+> **Specificity là gì?**
+>
+> Specificity là một trọng số được trình duyệt sử dụng để quyết định CSS style nào sẽ được áp dụng cho các element. Specificity được tính toán dựa vào phân loại selector và số lượng selector áp dụng lên một element. Bạn có thể đọc thêm về chủ đề này [ở đây](http://gockinhnghiem.com/2011/11/09/specificity-trong-css-la-gi/) hoặc trên trang [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity). [http://cssspecificity.com](http://cssspecificity.com) minh hoạ khá cụ thể cách tính specificity.
 
 ### `Block__Element--Modifier`
 
@@ -93,7 +98,7 @@ Dân tay to mặt bự đọc đến đây có lẽ đang âm thầm (hoặc cô
 
 Hoàn toàn không sai. BEM là một phương pháp hiệu quả để chia nhỏ trang thành từng component, và bạn hoàn toàn có thể tránh được cuộc thánh chiến ở trên bằng cách chỉ sử dụng class được đặt tên theo BEM. Ngoài ra, khi một component không còn được dùng nữa, bạn có thể tự tin xoá đi class của nó mà không sợ ảnh hưởng đến các component khác.
 
-Tuy nhiên BEM cũng có những vấn đề "khó chịu" mà bạn có thể xem thêm ở bài viết [Battling BEM CSS: 10 Common Problems And How To Avoid Them](https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/). Kinh nghiệm cá nhân là khi làm việc với BEM, có thể bạn sẽ bỏ kha khá thời gian chỉ để suy nghĩ về ngữ nghĩa (semantics) của class. Bạn sẽ phải cân nhắc block này nên đặt tên là gì, những thành phần con của nó có nên là element hay là một component khác, rồi element này nên có tên chi, nên gọi nó là `wrapper`, `container`, hay `body`, v.v... Đừng coi thường việc đặt tên nhé, một trong những vấn đề khó nhai nhất của khoa học máy tính đấy.
+Tuy nhiên BEM cũng có những vấn đề "khó chịu" mà bạn có thể xem thêm ở bài viết [Battling BEM CSS: 10 Common Problems And How To Avoid Them](https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/). Kinh nghiệm cá nhân là khi làm việc với BEM, có thể bạn sẽ bỏ kha khá thời gian chỉ để suy nghĩ về ngữ nghĩa (semantics) của class. Bạn sẽ phải cân nhắc block này nên đặt tên là gì, những thành phần con của nó có nên là element hay là một component khác, rồi element này nên có tên chi, nên gọi nó là `wrapper`, `container`, hay `body`, v.v... Đừng coi thường việc đặt tên nhé, một trong những vấn đề khó nhai nhất của khoa học máy tính đấy. Ngoài ra tên class thường dính liền với cấu trúc/ nội dung HTML mà nó được sử dụng, dẫn đến việc khi refactor code lại (chuyển thành component tổng quát hơn), chúng ta phải tốn thời gian suy nghĩ tên khác cho hợp lý.
 
 Với mình, việc suy nghĩ thêm về ngữ nghĩa cho CSS class không đem lại hiệu quả đáng kể. Vì không giống như HTML, trình duyệt và crawlers không quan tâm bạn đặt tên class có ý nghĩa hay không. Chúng chỉ có giá trị với lập trình viên, và thường thì chúng ta chỉ muốn viết HTML/CSS sao cho giống với thiết kế từ designers nhất mà thôi.
 
@@ -122,7 +127,7 @@ _Kích thước tập tin CSS của các website lớn, tính đến tháng 11 n
 
 Có thể. Nhưng trước hết hãy xem atomic CSS là gì đã.
 
-Atomic CSS là một cách khai báo các class sao cho chúng chỉ làm một việc duy nhất. Để xây dựng component lớn hơn, chúng ta sẽ kết hợp các class nguyên tử này lại với nhau. Chẳng hạn như:
+Atomic CSS là cách khai báo các class sao cho mỗi class chỉ mô tả một tính năng duy nhất. Để xây dựng component lớn hơn, chúng ta sẽ kết hợp các class nguyên tử này lại với nhau. Chẳng hạn như:
 
 ```css
 .white {
@@ -152,7 +157,7 @@ Trong ví dụ trên, class `white` chỉ làm duy nhất một việc là đổ
 
 Atomic CSS đang được sử dụng bởi các công ty như [npm](https://www.npmjs.com/), [StackOverflow](https://stackoverflow.design/product/guidelines/using-stacks#goals), [Heroku](https://design.herokai.com/purple3), v.v...
 
-### Thuật ngữ: Functional CSS, Atomic CSS, hay Utility-first CSS?
+**Chuyện bên lề: Functional CSS, Atomic CSS, hay Utility-first CSS?**
 
 "Functional CSS" là tên gọi đầu tiên mình bắt gặp khi tìm hiểu về cách viết CSS này. Từ "functional" ngoài nghĩa như trong "functional programming" còn có nghĩa là "hoạt động" (trích [từ điển Oxford](https://en.oxforddictionaries.com/definition/functional)). Do đó "functional CSS" có thể hiểu là "CSS hoạt động được", hoàn toàn không liên quan đến ý tưởng chính: đặt CSS class thành từng hàm nhỏ.
 
@@ -167,6 +172,23 @@ Suy đi xét lại thiệt hơn thì trong bài viết này mình chọn "atomic
 ### Tránh cảnh binh đao
 
 Lợi ích đầu tiên là cũng giống như BEM, atomic CSS chỉ cho phép khai báo các class nên chúng không xảy ra tranh chấp specificity. Đồng thời vì mỗi class chỉ mô tả một tính năng duy nhất, việc các thuộc tính giẫm chân lên nhau được hạn chế ở mức thấp nhất.
+
+Còn vẫn ghét nhau quá, muốn đạp nhau cho chết thì đây:
+
+```html
+<div class="red">
+  Roses are red
+  <div class="blue">
+    Violets are blue
+    <div class="yellow">
+      Honey is sweet
+      <div class="brown">But not as sweet as you</div>
+    </div>
+  </div>
+</div>
+```
+
+_Credit: @huytd_
 
 ### Tập tin CSS nhẹ hơn
 
@@ -302,11 +324,13 @@ Khi cần thêm một giá trị mới, bạn chỉ cần bỏ nó vào `$list`.
 
 ## Kết
 
-Nếu nhóm phát triển của bạn đang dùng BEM hay các phương pháp phát triển CSS khác và hài lòng với chúng, bạn có thể không cần atomic CSS. BEM và atomic CSS không phải là hai hướng phát triển triệt tiêu lẫn nhau, mà chúng bổ sung và giúp bạn làm việc với CSS một cách hiệu quả hơn.
+Nếu nhóm của bạn đang dùng BEM hay các phương pháp phát triển CSS khác và hài lòng với chúng, bạn có thể không cần atomic CSS. Atomic CSS không phải sinh ra là để triệt tiêu BEM, mà bổ sung và giúp bạn làm việc với CSS một cách hiệu quả hơn.
 
 Cuối cùng, hãy xem video này và quyết định có nên xài atomic CSS không nhé ;)
 
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/16W7c0mb-rE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Trân trọng cảm ơn [Huy Tran](https://thefullsnack.com/), [Duc Nguyen Huu](https://nhducit.com/), và đồng bọn trong channel [#frontend @ WeBuild](https://we-build-vn.slack.com/messages/C32HMMUAW/) đã góp ý cho bài viết hoàn thiện hơn.
 
 ## Tham khảo
 
