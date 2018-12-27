@@ -120,7 +120,7 @@ Mỉa mai thay, tính chất "cascading" của CSS vốn được sinh ra để 
 
 Khi dự án của bạn phát triển, nhiều component xuất hiện đồng nghĩa với kích thước tập tin CSS ngày càng to ra. Đáng buồn là, không phải tất cả CSS được gửi xuống cho người dùng sẽ thật sự được sử dụng trong trang.
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1545725390/1_qoyWe6NLqjzVRlDb5YWQAA_nhykgd.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1545725390/1_qoyWe6NLqjzVRlDb5YWQAA_nhykgd.jpg)
 _Kích thước tập tin CSS của các website lớn, tính đến tháng 11 năm 2016. Nguồn: [1]_
 
 ## Vậy atomic CSS giải quyết được những vấn đề trên à?
