@@ -57,7 +57,7 @@ Và bạn học được cách xử lý các pseudo selectors, hoặc khai báo 
 }
 ```
 
-Rồi khi bạn đã quen với CSS và bắt tay vào làm dự án thực tế, bạn bàng hoàng nhận ra kẻ thù không ở đâu xa, chúng đang lởn vởn quanh ta í mà. Bạn bước vào cuộc chiến gọi là ["specificity war"](https://css-tricks.com/a-specificity-battle/), đánh nhau tơi bời khói lửa với class được viết bởi các chiến hữu trong team. Quả là một trận đấu kinh hoàng khi ai cũng muốn đè đầu cưỡi cổ (override) người đi trước. Kẻ nắm giữ `!important` trong tay cứ nghĩ đã gần với chiến thắng, nào ngờ xuất hiện tiểu nhân dùng `inline style`. Tình anh em sứt mẻ, chiến hữu quay đầu không nhìn mặt nhau. Bạn ức chế và gào lên "đậu phộng CSS 🥜".
+Rồi khi bạn đã quen với CSS và bắt tay vào làm dự án thực tế, bạn bàng hoàng nhận ra kẻ thù không ở đâu xa, chúng đang lởn vởn quanh ta í mà. Bạn bước vào cuộc chiến gọi là ["specificity war"](https://css-tricks.com/a-specificity-battle/), đánh nhau tơi bời khói lửa với class được viết bởi các chiến hữu trong team. Quả là một trận đấu kinh hoàng khi ai cũng muốn đè đầu cưỡi cổ (override) người đi trước. Kẻ nắm giữ `!important` trong tay cứ nghĩ đã gần với chiến thắng, nào ngờ xuất hiện tiểu nhân dùng `inline style + !important`. Tình anh em sứt mẻ, chiến hữu quay đầu không nhìn mặt nhau. Bạn ức chế và gào lên "đậu phộng CSS 🥜".
 
 > **Specificity là gì?**
 >
