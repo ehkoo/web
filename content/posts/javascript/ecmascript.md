@@ -5,7 +5,7 @@ slug: essential-ecmascript
 date: 2019-02-18
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1550408317/1_kEpd3JC1gUOkupbYpik4jQ_fwo0sc.jpg
 tags: JavaScript, ECMAScript
-excerpt: Bạn có bao giờ băn khoăn: vì sao ECMAScript thường được nhắc tới khi đề cập những cải tiến của JavaScript? Vì sao ES6+ thường được dùng để nói về JavaScript hiện đại? Vì sao ECMAScript 6 còn được gọi là ECMAScript 2015?... Bài viết này sẽ giải đáp tất cả.
+excerpt: "Bạn có bao giờ băn khoăn: vì sao ECMAScript thường được nhắc tới khi đề cập những cải tiến của JavaScript? Vì sao ES6+ thường được dùng để nói về JavaScript hiện đại? Vì sao ECMAScript 6 còn được gọi là ECMAScript 2015?... Bài viết này sẽ giải đáp tất cả."
 author: trongthanh
 no_comments: true
 ---
