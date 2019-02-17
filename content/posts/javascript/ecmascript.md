@@ -11,7 +11,7 @@ no_comments: true
 ---
 
 > **Bài Của Người Quen**
-> Bài viết gốc được đăng tại website [Int3ractive](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html). Đừng quên ghé qua thăm nha.
+> Bài viết gốc được đăng tại website [Int3ractive](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) của anh Thanh Tran. Đừng quên ghé qua thăm nha.
 >
 > Nếu bạn cũng muốn bài viết của mình xuất hiện trên Ehkoo, đừng ngần ngại, hãy email cho `chao [at] ehkoo.com` kèm theo link bài nhé. Ehkoo sẽ thảo luận với bạn trước khi đưa bài lên sóng.
 
