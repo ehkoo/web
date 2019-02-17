@@ -7,6 +7,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v
 tags: JavaScript, ECMAScript
 excerpt: Bạn có thắc mắc vì sao khi nói đến những cải tiến của JavaScript, người ta thường nói về ECMAScript? Hay khi nói về JavaScript hiện đại, người ta thường dùng chữ ES6+? Tại sao ECMAScript 6 còn được gọi là ECMAScript 2015?... Bài viết này sẽ giải đáp những thắc mắc đó của bạn.
 author: trongthanh
+no_comments: true
 ---
 
 > **Bài Của Người Quen**

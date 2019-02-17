@@ -94,7 +94,9 @@
         {% include "el/widgets/related.njk" %}
       </div>
 
+      {% if no_comments != true %}
       <div class="mt4">{% include "el/widgets/comments.njk" %}</div>
+      {% endif %}
     </div>
 
     <div class="w-25-ns">
