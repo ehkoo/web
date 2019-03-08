@@ -66,7 +66,8 @@ svg {
   color: #ff4136 !important;
 }
 
-.content p code:not([class*='language']) {
+.content p code:not([class*='language']),
+.content li code:not([class*='language']) {
   font-size: 1rem;
   background-color: #dee2e6;
   padding: 0.15rem 0.3rem;
