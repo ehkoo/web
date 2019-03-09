@@ -12,7 +12,7 @@ editor: kcjpop, chubbyanh
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1550909045/vuepress_tfaf8i.jpg)
 
-Gần đây mình có tìm hiểu cách tạo blog bằng Github Pages (GP). Mình bắt đầu bằng cách làm theo theo hướng dẫn trên trang chủ GP, và đúng là chỉ sau vài phút, bạn đã có ngay một trang web "coi cũng được". Tuy nhiên nhìn blog thiên hạ màu mè các kiểu làm mình cũng muốn xem cách thiết kế giao diện và trang trí cho website bắt mắt hơn thì gặp Jekyll. Jekyll đã có sẵn hỗ trợ cho GP, mỗi tội máy tính của bạn phải có Ruby mới dùng được. Mình thì không thích cài những gì mà cả năm mới dùng tới và nếu chỉ để phục vụ mỗi việc tạo blog thì cũng không đáng. Thế là mình mò thêm các giải pháp khác và bắt gặp VuePress. Vô tình mình cũng đang làm việc với Vue nên "sao lại không nhỉ?"
+Gần đây mình có tìm hiểu cách tạo blog bằng Github Pages (GP). Mình bắt đầu bằng cách làm theo theo hướng dẫn trên trang chủ GP, và đúng là chỉ sau vài phút, bạn đã có ngay một trang web "coi cũng được". Tuy nhiên, nhìn blog thiên hạ màu mè các kiểu làm mình cũng muốn tìm hiểu cách thiết kế giao diện và trang trí cho website bắt mắt hơn, thì gặp Jekyll. Jekyll đã có sẵn hỗ trợ cho GP, mỗi tội máy tính của bạn phải có Ruby mới dùng được. Mình thì không thích cài những gì mà cả năm mới dùng tới, vả lại nếu chỉ để phục vụ mỗi việc tạo blog thì cũng không đáng. Thế là mình mò thêm các giải pháp khác và bắt gặp VuePress. Vô tình mình cũng đang làm việc với Vue, nên "sao lại không nhỉ?"
 
 ## VuePress là gì?
 
@@ -60,11 +60,11 @@ VuePress dev server listening at http://localhost:8080/
 [18:50:15] ✔ successfully compiled.
 ```
 
-Hãy thử truy cập vào [http://localhost:8080](http://localhost:8080) và kết quả là...
+Hãy thử truy cập vào [http://localhost:8080](http://localhost:8080), và kết quả là...
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/bo_1px_solid_rgb:eeeeee/v1550919592/gwq0kjncxuh49uqd4o8q.jpg)
 
-Lý do là vì chúng ta chưa tạo tập tin markdown đóng vai trò làm trang chủ. Theo mặc định, VuePress sẽ đọc các tập tin `README.md` và chuyển thành `index.html` tương ứng. Do đó chúng ta sẽ tạo một file `README.md` ở thư mục gốc có nội dung như sau:
+Lý do là vì chúng ta chưa tạo tập tin markdown đóng vai trò làm trang chủ. Theo mặc định, VuePress sẽ đọc các tập tin `README.md` và chuyển thành `index.html` tương ứng. Do đó, chúng ta sẽ tạo một file `README.md` ở thư mục gốc có nội dung như sau:
 
 ```md
 ---
@@ -263,6 +263,6 @@ Như vậy website được built ra sẽ nằm ở thư mục `/docs` thay vì 
 
 ## Tổng kết
 
-Trên đây mình đã trình bày sơ lược các tạo blog bằng VuePress. Mình cũng có xem qua Gastby của React thì có thể do mình không quen nên cảm thấy khá sơ khai và có nhiều thứ phải làm lại hơn. Dù vậy quyền quyết định ở các bạn. Công nghệ không quan trọng, quan trọng là phù hợp với mục tiêu đề ra. Với tiêu chí đơn giản, nhanh gọn và code ít, mình chọn VuePress.
+Trên đây mình đã trình bày sơ lược các tạo blog bằng VuePress. Mình cũng có xem qua Gastby của React, nhưng có lẽ do mình không quen nên cảm thấy khá sơ khai và có nhiều thứ phải làm lại hơn. Dù vậy, quyền quyết định ở các bạn. Công nghệ không quan trọng, quan trọng là phù hợp với mục tiêu đề ra. Với tiêu chí đơn giản, nhanh gọn và code ít, mình chọn VuePress.
 
 > Bạn có thể tham khảo mã nguồn của demo trong bài viết này tại [https://github.com/ehkoo/vuepress-demo](https://github.com/ehkoo/vuepress-demo). Đừng quên thả sao nhé ;)
