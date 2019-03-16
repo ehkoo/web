@@ -39,7 +39,7 @@ Bên cạnh việc sử dụng các đơn vị quen thuộc như `px`, `%`,  `em
 ```
 <script async src="//jsfiddle.net/tv2r4ead/43/embed/result,html,css/"></script>
 
-Tùy vào kích thước của wrapper, `1fr` có thể sẽ có những giá trị khác. Trong trường hợp trên, `1fr` sẽ bằng `500 / 3`(px). Bạn đã thấy tại sao đơn vị này lại có tên là "phân số" chưa?.
+Tùy vào kích thước của wrapper, `1fr` có thể sẽ có những giá trị khác. Trong trường hợp trên, `1fr` sẽ bằng `300 / 3`(px). Bạn đã thấy tại sao đơn vị này lại có tên là "phân số" chưa?.
 
 > **Ủa vậy nó có gì khác so với %?**
 
