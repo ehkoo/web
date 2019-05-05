@@ -1,171 +1,162 @@
-/*
+/**
+ * Darcula theme
+ *
+ * Adapted from a theme based on:
+ * IntelliJ Darcula Theme (https://github.com/bulenkov/Darcula)
+ *
+ * @author Alexandre Paradis <service.paradis@gmail.com>
+ * @version 1.0
+ */
 
-Name:       Base16 Atelier Forest Light
-Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: #a9b7c6;
+   font-family: Consolas, Monaco, 'Andale Mono', monospace;
+   direction: ltr;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   line-height: 1.5;
 
-Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
-Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
 
-*/
-code[class*='language-'],
-pre[class*='language-'] {
-  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier,
-    monospace;
-  font-size: 14px;
-  line-height: 1.375;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  background: #f1efee;
-  color: #68615e;
-}
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #e6e2e0;
-}
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+     color: inherit;
+     background: rgba(33,66,131,.85);
+ }
 
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #e6e2e0;
-}
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+     color: inherit;
+     background: rgba(33,66,131,.85);
+ }
 
-/* Code blocks */
-pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em;
+   margin: .5em 0;
+   overflow: auto;
+ }
 
-/* Inline code */
-:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-}
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #2b2b2b;
+ }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #9c9491;
-}
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em;
+   border-radius: .3em;
+ }
 
-.token.punctuation {
-  color: #68615e;
-}
+ .token.comment,
+ .token.prolog,
+ .token.cdata {
+   color: #808080;
+ }
 
-.token.namespace {
-  opacity: 0.7;
-}
+ .token.delimiter,
+ .token.boolean,
+ .token.keyword,
+ .token.selector,
+ .token.important,
+ .token.atrule {
+   color: #cc7832;
+ }
 
-.token.operator,
-.token.boolean,
-.token.number {
-  color: #df5320;
-}
+ .token.operator,
+ .token.punctuation,
+ .token.attr-name {
+     color: #a9b7c6;
+ }
 
-.token.property {
-  color: #c38418;
-}
+ .token.tag,
+ .token.tag .punctuation,
+ .token.doctype,
+ .token.builtin {
+     color: #e8bf6a;
+ }
 
-.token.tag {
-  color: #407ee7;
-}
+ .token.entity,
+ .token.number,
+ .token.symbol {
+     color: #6897bb;
+ }
 
-.token.string {
-  color: #3d97b8;
-}
+ .token.property,
+ .token.constant,
+ .token.variable {
+     color: #9876aa;
+ }
 
-.token.selector {
-  color: #6666ea;
-}
+ .token.string,
+ .token.char {
+   color: #6a8759;
+ }
 
-.token.attr-name {
-  color: #df5320;
-}
+ .token.attr-value,
+ .token.attr-value .punctuation {
+     color: #a5c261;
+ }
+ .token.attr-value .punctuation:first-child {
+     color: #a9b7c6;
+ }
 
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #3d97b8;
-}
+ .token.url {
+   color: #287bde;
+   text-decoration: underline;
+ }
 
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.unit {
-  color: #7b9726;
-}
+ .token.function {
+   color: #ffc66d;
+ }
 
-.token.statement,
-.token.regex,
-.token.atrule {
-  color: #3d97b8;
-}
+ .token.regex {
+     background: #364135;
+ }
 
-.token.placeholder,
-.token.variable {
-  color: #407ee7;
-}
+ .token.bold {
+   font-weight: bold;
+ }
 
-.token.deleted {
-  text-decoration: line-through;
-}
+ .token.italic {
+   font-style: italic;
+ }
 
-.token.inserted {
-  border-bottom: 1px dotted #1b1918;
-  text-decoration: none;
-}
+ .token.inserted {
+     background: #294436;
+ }
 
-.token.italic {
-  font-style: italic;
-}
+ .token.deleted {
+     background: #484a4a;
+ }
 
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
+ /*code.language-css .token.punctuation {
+   color: #cc7832;
+ }*/
 
-.token.important {
-  color: #f22c40;
-}
+ code.language-css .token.property,
+ code.language-css .token.property + .token.punctuation {
+   color: #a9b7c6;
+ }
 
-.token.entity {
-  cursor: help;
-}
+ code.language-css .token.id {
+   color: #ffc66d;
+ }
 
-pre > code.highlight {
-  outline: 0.4em solid #f22c40;
-  outline-offset: 0.4em;
-}
-
-.line-numbers .line-numbers-rows {
-  border-right-color: #e6e2e0 !important;
-}
-
-.line-numbers-rows > span:before {
-  color: #a8a19f !important;
-}
-
-.line-highlight {
-  background: rgba(27, 25, 24, 0.2) !important;
-  background: -webkit-linear-gradient(left, rgba(27, 25, 24, 0.2) 70%, rgba(27, 25, 24, 0)) !important;
-  background: linear-gradient(to right, rgba(27, 25, 24, 0.2) 70%, rgba(27, 25, 24, 0)) !important;
-}
+ code.language-css .token.selector > .token.class,
+ code.language-css .token.selector > .token.attribute,
+ code.language-css .token.selector > .token.pseudo-class,
+ code.language-css .token.selector > .token.pseudo-element {
+   color: #ffc66d;
+ }
