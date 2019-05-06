@@ -21,7 +21,7 @@ no_comments: true
 
 ## Trailing comma là gì? Tại sao nó từng là lỗi trong JavaScript?
 
-Trailing comma (dấu phẩy đuôi, dấu phẩy cuối) là việc để dư **một dấu phẩy** sau phần tử cuối cùng ở cuối một danh sách. (có thể là phần tử trong Array literal, property trong Object literal, tham số của hàm...). Ví dụ:
+Trailing comma (dấu phẩy đuôi, dấu phẩy cuối) là việc để dư **một dấu phẩy** sau phần tử cuối cùng ở cuối một danh sách (có thể là phần tử trong Array literal, property trong Object literal, tham số của hàm...). Ví dụ:
 
 ```js
 // trailing comma trong Array literal
@@ -43,7 +43,7 @@ function compare(
 ) { /* ... */ }
 ```
 
-Như bạn cũng có thể thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Để dễ hình dung hơn, ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
+Như bạn thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Để dễ hình dung hơn, ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1557078885/trailing-comma-ie8-error_ulcpmq.jpg)
 _Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ [StackOverflow](https://stackoverflow.com/questions/17490014/website-causes-script-error-in-ie8)._
@@ -127,7 +127,7 @@ Phần này danh cho những ai đã có kinh nghiệm cấu hình code editor n
 
 ### ESLint
 
-Nếu bạn đang sử dụng **eslint**, bạn có thể thêm rule: [comma-dangle](https://eslint.org/docs/rules/comma-dangle). Rule này có thể được áp dụng tùy trường hợp, ví dụ để không áp dụng cho tham số hàm:
+Nếu đang sử dụng **eslint**, bạn có thể thêm rule: [comma-dangle](https://eslint.org/docs/rules/comma-dangle). Rule này có thể được áp dụng tùy trường hợp, ví dụ để không áp dụng cho tham số hàm:
 
 ```json
 {
@@ -154,7 +154,7 @@ trailingComma: all
 
 ## Trường hợp danh sách khai báo biến
 
-Khi nói về danh sách có dấu phẩy không thể không nhắc đến trường hợp khai báo nhiều biến cùng lúc với một từ khóa `var` / `let`. Tuy nhiên với danh sách này, cú pháp JavaScript hiện tại không cho phép trailing comma:
+Khi nói về danh sách có dấu phẩy, không thể không nhắc đến trường hợp khai báo nhiều biến cùng lúc với một từ khóa `var` / `let`. Tuy nhiên, với danh sách này, cú pháp JavaScript hiện tại không cho phép trailing comma:
 
 ```js
 // lỗi cú pháp unexpected token...
@@ -202,6 +202,6 @@ Tuy nhiên, đây là cách viết nhiều người (trong đó có tôi) xem l�
 
 Dù không nhìn thấy, các dòng văn bản plain text đều kết thúc bằng ký tự _linefeed_ (`\n`) đối với Linux & macOS và 2 ký tự _carriage return_ và _linefeed_ (`\r\n`) trên Windows. Khi người soạn văn bản (hay code) viết đến cuối file và không gõ Enter lần nữa, dòng cuối cùng của file sẽ không kết thúc bởi ký tự xuống dòng. Do đó khi văn bản mới được đánh vào cuối file, dòng cuối cùng của version trước đó sẽ thay đổi trong change log bởi nó vừa được thêm ký tự xuống dòng.
 
-Do đó cùng nguyên tắc như với trailing comma, lời khuyên là luôn chèn ký tự xuống dòng vào cuối file. Và nếu bạn nghĩ mình sẽ quên, các editor phổ biến (VSCode, SublimeText, Atom...) đều có setting **Insert Final Newline** để tự động làm việc này cho bạn.
+Vì vậy, cùng nguyên tắc như với trailing comma, lời khuyên là luôn chèn ký tự xuống dòng vào cuối file. Và nếu bạn nghĩ mình sẽ quên, các editor phổ biến (VSCode, SublimeText, Atom...) đều có setting **Insert Final Newline** để tự động làm việc này cho bạn.
 
 Nếu team bạn có sử dụng [editorconfig](https://editorconfig.org/), bạn có thể cài đặt rule này: `insert_final_newline = true` để áp dụng cho cả project.
