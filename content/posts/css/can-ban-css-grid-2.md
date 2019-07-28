@@ -100,7 +100,7 @@ Kết quả là chúng ta sẽ có một grid 12 cột, với cột đầu tiên
 
 `align-items` giúp bạn chỉnh nội dung bên trong grid theo trục tung (trục y), trong khi `justify-items` sẽ chỉnh nội dung theo trục hoành (trục x). Để hiểu thêm về các giá trị của hai thuộc tính này, bạn có thể thử qua demo dưới đây.
 
-<script async src="//jsfiddle.net/0he0Ley2/embed/result,css/"></script>
+<script async src="//jsfiddle.net/fynvej4g/embed/result,css/"></script>
 
 Bạn có thể dùng thuộc tính `place-items` để viết nhanh `align-items` và `justify-items` làm một.
 
@@ -130,7 +130,7 @@ Trong trường hợp này,  các phần tử của grid chỉ chiếm `300px` c
 
 Cũng tương tự như trên, `align-content` sẽ phân phối phần tử theo trục tung, trong khi `justify-content` sẽ phân phối theo trục hoành.  Trăm nghe không bằng một demo:
 
-<script async src="//jsfiddle.net/zyh434c2/embed/result,css/"></script>
+<script async src="//jsfiddle.net/b7pu3dkh/embed/result,css/"></script>
 
 Bạn cũng có thể dùng `place-content` như là cách viết ngắn gọn của `align-content` và `justify-content`.
 
