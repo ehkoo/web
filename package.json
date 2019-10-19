@@ -22,7 +22,7 @@
     }
   },
   "scripts": {
-    "build": "rimraf dist/* -rf && NODE_ENV=production node metalsmith.js && cp dist/404/index.html dist/404.html && node generateRobots.js",
+    "build": "NODE_ENV=production node metalsmith.js && cp dist/404/index.html dist/404.html && node generateRobots.js",
     "build:dev": "node metalsmith.js",
     "watch": "npm-watch build:dev",
     "serve": "http-server dist/ -s",
@@ -51,7 +51,6 @@
     "npm-watch": "0.6.0",
     "nunjucks": "3.2.0",
     "prettier": "1.18.2",
-    "rimraf": "3.0.0",
     "slugify": "1.3.5",
     "substitute": "https://github.com/segmentio/substitute/archive/0.0.1.tar.gz"
   }
