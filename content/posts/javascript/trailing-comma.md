@@ -5,7 +5,7 @@ slug: why-trailing-comma-javascript
 date: 2019-04-12
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1557078748/trailing-comma-cover_tv0rjy.jpg
 tags: JavaScript, ECMAScript, Best Practice
-excerpt: "Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice"
+excerpt: 'Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice'
 author: trongthanh
 no_comments: true
 ---
@@ -25,22 +25,17 @@ Trailing comma (dấu phẩy đuôi, dấu phẩy cuối) là việc để dư *
 
 ```js
 // trailing comma trong Array literal
-var categories = [
-  'men',
-  'women',
-  'accessories',
-];
+var categories = ['men', 'women', 'accessories']
 // trailing comma trong Object literal
 var person = {
   name: 'Harry Potter',
   gender: 'male',
   house: 'Gryffindor',
-};
+}
 // trailing comma trong tham số của hàm (và trong lời gọi hàm)
-function compare(
-  param1,
-  param2,
-) { /* ... */ }
+function compare(param1, param2) {
+  /* ... */
+}
 ```
 
 Như bạn thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Để dễ hình dung hơn, ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
@@ -105,9 +100,13 @@ Theo kinh nghiệm cá nhân, hiện tôi vẫn tránh dùng trailing comma tron
 
 ```js
 // Thay vì viết hàm nhận nhiều tham số:
-function getDayString(lunar, solarDay, solarMonth, solarYear) { /* ...*/ }
+function getDayString(lunar, solarDay, solarMonth, solarYear) {
+  /* ...*/
+}
 // Nên thay bằng hàm nhận một tham số là object
-function getDayString(options = {}) { /* ...*/ }
+function getDayString(options = {}) {
+  /* ...*/
+}
 
 // Khi đó lúc gọi hàm ta có thể truyền tham số bằng object literal
 // và sử dụng propety shorthand nếu biến local trùng tên
@@ -131,13 +130,16 @@ Nếu đang sử dụng **eslint**, bạn có thể thêm rule: [comma-dangle](h
 
 ```json
 {
-  "comma-dangle": ["error", {
-    "arrays": "always-multiline",
-    "objects": "always-multiline",
-    "imports": "always-multiline",
-    "exports": "always-multiline",
-    "functions": "never"
-  }]
+  "comma-dangle": [
+    "error",
+    {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }
+  ]
 }
 ```
 
@@ -169,17 +171,17 @@ Thay vì vậy, từ lâu tôi vẫn áp dụng best practice cho việc khai b�
 ```js
 // Với danh sách biến không gán giá trị ban đầu,
 // có thể viết trên cùng một hàng:
-var a, b, c, d, e;
+var a, b, c, d, e
 // Với danh sách biến có gán giá trị ban đầu,
 // luôn luôn xuống dòng và bắt đầu với từ khóa var / let:
-var x = 1;
-var y = 2;
-var z = 3;
+var x = 1
+var y = 2
+var z = 3
 // Trong mọi trường hợp, nếu muốn việc thêm bớt và sắp xếp biến local
 // dễ dàng, luôn xuống dòng và bắt đầu từ khóa var / let:
-var foo = 123;
-var bar = 'hello';
-var baz;
+var foo = 123
+var bar = 'hello'
+var baz
 ```
 
 Việc luôn xuống dòng và bắt đầu bằng từ khóa `var` / `let` sẽ giúp đạt được những lợi ích như đã liệt kê ở trên với trailing comma.
@@ -189,11 +191,7 @@ Việc luôn xuống dòng và bắt đầu bằng từ khóa `var` / `let` sẽ
 Trước đây, đã từng có một kiểu viết danh sách phần tử trong JavaScript khá thịnh hành, đó là ["comma first"](http://ajaxian.com/archives/is-there-something-to-the-crazy-comma-first-style):
 
 ```js
-var gender = [
-    'men'
-  , 'women'
-  , 'accessories'
-  ];
+var gender = ['men', 'women', 'accessories']
 ```
 
 Tuy nhiên, đây là cách viết nhiều người (trong đó có tôi) xem là không chuẩn và vẫn bị một hạn chế đó là dòng đầu tiên không đồng nhất (ngược lại với comma last). Và một khi thành thói quen, có thể bạn sẽ để dư thêm dấu phẩy ở dòng đầu tiên và điều này còn nguy hiểm hơn là để dư dấu phẩy cuối.

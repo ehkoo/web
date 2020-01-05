@@ -1,15 +1,26 @@
 {% if relatedPosts %}
-<section class="br1 bg-white pa3 mb3 box-shadow-1">
-  <h1 class="mb4 mt2 fw7 code tracked ttu blue pb2 f4 bw1 bb b--blue">Bài liên quan</h1>
-  <div class="flex-ns flex-wrap-ns">
-  {% for item in relatedPosts %}
-    <div class="w-50-ns mv2 flex items-center">
-      <div class="pa2">
-        <div style="background-image: url({{ item.squareThumbnailUrl }})" class="br1 bg-center cover w3 h3"></div>
+<div class="mb-4 container mx-auto">
+  <section class="px-2">
+    <h2 class="text-3xl my-4 text-gray-700 font-700">
+      Bài viết liên quan
+    </h2>
+    <div class="flex flex-col md:flex-row flex-wrap">
+    {% for item in relatedPosts %}
+      <div class="md:w-1/2 xl:w-1/4">
+        <a href="{{ item.fullUrl }}" class="block mb-4 px-2">
+          <figure>
+            <img
+              src="{{ item.thumbnailUrl }}"
+              class="rounded-md block mb-2 object-cover h-24"
+              alt="{{ item.title }}"
+              title="{{ item.title }}"
+            />
+          </figure>
+          <h2 class="text-pink-600">{{ item.title }}</h2>
+        </a>
       </div>
-      <a href="{{ item.fullUrl }}"><h5 class="lh-copy f5 fw6 dark-gray">{{ item.title }}</h5></a>
+    {% endfor %}
     </div>
-  {% endfor %}
-  </div>
-</section>
+  </section>
+</div>
 {% endif %}

@@ -22,12 +22,12 @@ Nếu làm việc với JavaScript trong thời gian gần đây, có lẽ bạn
 Nghe có vẻ lùng bùng nhưng nhìn ví dụ dưới đây thì bạn sẽ hiểu ngay thôi.
 
 ```js
-Object('Hello')    // String { "Hello" }
-Object(1)          // Number { 1 }
-Object(true)       // Boolean { true }
-Object([1, 2, 3])  // Array(3) [ 1, 2, 3 ]
+Object('Hello') // String { "Hello" }
+Object(1) // Number { 1 }
+Object(true) // Boolean { true }
+Object([1, 2, 3]) // Array(3) [ 1, 2, 3 ]
 Object({ foo: 1 }) // Object { foo: 1 }
-Object(null)       // Object { }
+Object(null) // Object { }
 ```
 
 Lưu ý là `Object(value)` và `new Object(value)` là như nhau.
@@ -45,7 +45,7 @@ class User {
 
 const u = Object.create(User.prototype)
 console.log(u.constructor === User) // true
-console.log(u.createdAt)            // undefined
+console.log(u.createdAt) // undefined
 
 // So sánh khi dùng từ khoá `new`
 const u2 = new User()
@@ -69,9 +69,9 @@ console.log(tonNgoKhong.prototype) // undefined
 
 Tham số `properties` của `Object.create()` cho phép bạn khai báo những thuộc tính của thể hiện được tạo bằng cách truyền vào các property descriptors.
 
-###  Vậy property descriptor là gì?
+### Vậy property descriptor là gì?
 
-_Property descriptor_ (mô tả thuộc tính) là một object JavaScript thông thường (Plain Old JavaScript Object - POJO), được sử dụng trong `Object.create()`, `Object.defineProperty(), hoặc `Object.defineProperties()` để thay đổi các thuộc tính đã có của một đối tượng, hoặc tạo đối tượng mới. Ví dụ:
+_Property descriptor_ (mô tả thuộc tính) là một object JavaScript thông thường (Plain Old JavaScript Object - POJO), được sử dụng trong `Object.create()`, `Object.defineProperty(), hoặc`Object.defineProperties()` để thay đổi các thuộc tính đã có của một đối tượng, hoặc tạo đối tượng mới. Ví dụ:
 
 ```js
 const u = Object.create(User.prototype, {
@@ -94,7 +94,7 @@ const u = Object.create(User.prototype, {
 })
 
 u.name = 'pitkalong'
-console.log(u.id)   // 2c40c95c-845a-4242-85a0-f603ec83fd2e
+console.log(u.id) // 2c40c95c-845a-4242-85a0-f603ec83fd2e
 console.log(u.name) // PITKALONG
 ```
 
@@ -160,7 +160,7 @@ Object.defineProperty(u, 'age', {
 
 // Khai báo một thuộc tính để chứa dữ liệu ẩn
 Object.defineProperty(u, 'internalName', {
-  writable: true,    // Đừng quên mặc định `writable` có giá trị false
+  writable: true, // Đừng quên mặc định `writable` có giá trị false
   enumerable: false, // Không hiển thị thuộc tính này
 })
 
@@ -226,7 +226,7 @@ const u = Object.create(null, {
 })
 
 const u1 = Object.assign(u, { age: 24 })
-console.log(u1)       // { id: 1, name: 'pitkalong', age: 24 }
+console.log(u1) // { id: 1, name: 'pitkalong', age: 24 }
 console.log(u1 === u) // true
 ```
 
@@ -285,8 +285,8 @@ Bạn có thể dùng `Object.isFrozen(obj)` để kiểm tra một object có b
 ```js
 const config = Object.freeze({ USER: 'u', PASS: 'p' })
 Object.isFrozen(config) // true
-delete config.USER      // Không có lỗi xảy ra, nhưng config.USER vẫn tồn tại
-console.log(config)     // { USER: 'u', PASS: 'p' }
+delete config.USER // Không có lỗi xảy ra, nhưng config.USER vẫn tồn tại
+console.log(config) // { USER: 'u', PASS: 'p' }
 
 // TypeError: Cannot define property SECRET_KEY, object is not extensible
 Object.defineProperty(config, 'SECRET_KEY', { value: 's4cr3d' })
@@ -301,7 +301,7 @@ Cặp đôi hoàn cảnh này thì quá quen thuộc rồi. `Object.keys(obj)` t
 
 ```js
 const u = { id: 1, name: 'pitkalong', age: 24 }
-const keys = Object.keys(u)     // [ 'id', 'name', 'age' ]
+const keys = Object.keys(u) // [ 'id', 'name', 'age' ]
 const values = Object.values(u) // [ 1, 'pitkalong', 24 ]
 ```
 
@@ -332,9 +332,9 @@ const settings = {
 
 return (
   <SettingContainer>
-    {Object.entries(settings).map(([key, value]) =>
+    {Object.entries(settings).map(([key, value]) => (
       <TextInputField key={key} name={key} value={value} />
-    )}
+    ))}
   </SettingContainer>
 )
 ```
@@ -370,23 +370,23 @@ Phương thức `Object.is(value1, value2)` giúp bạn so sánh hai giá trị 
 Điểm khác nhau giữa phương thức này với `==` là `==` có thực hiện ép kiểu nếu `value1` và `value2` không cùng một kiểu giá trị, trong khi `Object.is()` không thực hiện việc chuyển đổi này. `Object.is()` cũng khác `===` vì `===` xem `+0 === -0` và `Number.NaN !== NaN`.
 
 ```js
-Object.is('foo', 'foo')     // true
-Object.is(window, window)   // true
+Object.is('foo', 'foo') // true
+Object.is(window, window) // true
 
-Object.is('foo', 'bar')     // false
-Object.is([], [])           // false
+Object.is('foo', 'bar') // false
+Object.is([], []) // false
 
 const foo = { a: 1 }
 const bar = { a: 1 }
-Object.is(foo, foo)         // true
-Object.is(foo, bar)         // false
+Object.is(foo, foo) // true
+Object.is(foo, bar) // false
 
-Object.is(null, null)       // true
+Object.is(null, null) // true
 
 // Trường hợp đặc biệt
-Object.is(0, -0)            // false
-Object.is(-0, -0)           // true
-Object.is(NaN, 0/0)         // true
+Object.is(0, -0) // false
+Object.is(-0, -0) // true
+Object.is(NaN, 0 / 0) // true
 ```
 
 ## Kết luận
