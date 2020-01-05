@@ -3,7 +3,6 @@ const Metalsmith = require('metalsmith')
 const asset = require('metalsmith-static')
 const drafts = require('metalsmith-drafts')
 const layouts = require('metalsmith-layouts')
-const markdown = require('metalsmith-markdown-remarkable')
 const wordcount = require('metalsmith-word-count')
 const collections = require('metalsmith-collections')
 const feed = require('metalsmith-feed')
@@ -11,6 +10,7 @@ const feed = require('metalsmith-feed')
 const tags = require('./plugins/metalsmith-tags')
 const dates = require('./plugins/metalsmith-date-formatter')
 const related = require('./plugins/related')
+const markdown = require('./plugins/markdown')
 const permalinks = require('./plugins/metalsmith-permalinks')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
@@ -65,7 +65,7 @@ const builder = Metalsmith(__dirname)
   .destination(OUTPUT_PATH)
   .clean(true)
   .use(asset({ src: './assets', dest: './assets' }))
-  .use(related({ max_posts: 6 }))
+  .use(related({ max_posts: 4 }))
   .use(drafts())
   .use(
     tags({
@@ -82,7 +82,7 @@ const builder = Metalsmith(__dirname)
         sortBy: 'date',
         refer: false,
         reverse: true,
-        limit: 20,
+        limit: 22,
       },
       pages: { pattern: 'pages/**/*.md' },
       series: { pattern: 'series/**/*.md' },
@@ -94,15 +94,7 @@ const builder = Metalsmith(__dirname)
       },
     }),
   )
-  .use(
-    markdown('full', {
-      html: true,
-      breaks: true,
-      quotes: '“”‘’',
-      langPrefix: 'language-',
-      typographer: true,
-    }),
-  )
+  .use(markdown())
   .use(wordcount())
   .use(
     permalinks({
@@ -125,11 +117,21 @@ const builder = Metalsmith(__dirname)
     files = Object.entries(files).reduce((acc, [key, data]) => {
       data.fullUrl = `${siteUrl}/${data.path}`
 
-      data.thumbnailUrl = data.cover != null ? transformCloudinary(data.cover, { w: 960, c: 'scale' }) : data.cover
+      data.thumbnailUrl =
+        data.cover != null
+          ? transformCloudinary(data.cover, { w: 960, c: 'scale' })
+          : data.cover
 
       // Square thumbnail URL
       data.squareThumbnailUrl =
-        data.cover != null ? transformCloudinary(data.cover, { w: 150, c: 'fill', g: 'center', h: 150 }) : data.cover
+        data.cover != null
+          ? transformCloudinary(data.cover, {
+              w: 150,
+              c: 'fill',
+              g: 'center',
+              h: 150,
+            })
+          : data.cover
 
       return { ...acc, [key]: data }
     }, {})
@@ -139,13 +141,6 @@ const builder = Metalsmith(__dirname)
   .use(feed({ collection: 'feed' }))
   .use(dates({ dates: [{ key: 'date', format: 'DD/MM/YYYY' }] }))
   .use((files, metalsmith, done) => {
-    const { collections } = metalsmith.metadata()
-    const TOP_POSTS = 5
-    // Split latestPosts into first 5 and the rest
-    const topPosts = collections.latest.slice(0, TOP_POSTS)
-    const olderPosts = collections.latest.slice(TOP_POSTS)
-    metalsmith.metadata({ ...metalsmith.metadata(), topPosts, olderPosts })
-
     files = Object.entries(files).reduce((acc, [key, data]) => {
       if (data.tag != null) {
         data.title = `Bài viết thuộc chủ đề: ${data.tag}`

@@ -10,7 +10,7 @@ author: kcjpop
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg)
-_`Promise.race([blueTuktuk, greenMotobike, redTractor])` -- Hình minh họa của [Ken Wong](http://www.kenart.net/)_
+`Promise.race([blueTuktuk, greenMotobike, redTractor])` -- Hình minh họa của [Ken Wong](http://www.kenart.net/)
 
 > Chời, thời này ai xài Promise nữa. Chuẩn bây giờ là async/await.
 > -- _Ai đó trên mạng_
@@ -38,24 +38,30 @@ api.getUser('pikalong', function(err, user) {
 Ví dụ trên khi được viết lại bằng Promise sẽ là:
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => api.getPostsOfUser(user))
   .then(posts => api.getCommentsOfPosts(posts))
-  .catch(err => { throw err })
+  .catch(err => {
+    throw err
+  })
 ```
 
 Để tạo ra một promise object thì bạn dùng class Promise có sẵn trong trình duyệt như sau:
 
 ```js
-const p = new Promise( /* executor */ function(resolve, reject) {
-  // Thực thi các tác vụ bất đồng bộ ở đây, và gọi `resolve(result)` khi tác
-  // vụ hoàn thành. Nếu xảy ra lỗi, gọi đến `reject(error)`.
-})
+const p = new Promise(
+  /* executor */ function(resolve, reject) {
+    // Thực thi các tác vụ bất đồng bộ ở đây, và gọi `resolve(result)` khi tác
+    // vụ hoàn thành. Nếu xảy ra lỗi, gọi đến `reject(error)`.
+  },
+)
 ```
 
 Trong đó, `executor` là một hàm có hai tham số:
-* `resolve` là hàm sẽ được gọi khi promise hoàn thành
-* `reject` là hàm sẽ được gọi khi có lỗi xảy ra
+
+- `resolve` là hàm sẽ được gọi khi promise hoàn thành
+- `reject` là hàm sẽ được gọi khi có lỗi xảy ra
 
 Ví dụ:
 
@@ -65,13 +71,11 @@ api.getUser = function(username) {
   return new Promise((resolve, reject) => {
     // Gửi AJAX request
     http.get(`/users/${username}`, (err, result) => {
-
       // Nếu có lỗi bên trong callback, chúng ta gọi đến hàm `reject()`
       if (err) return reject(err)
 
       // Ngược lại, dùng `resolve()` để trả dữ liệu về cho `.then()`
       resolve(result)
-
     })
   })
 }
@@ -79,23 +83,27 @@ api.getUser = function(username) {
 
 Như vậy `api.getUser()` sẽ trả về một promise object. Chúng ta có thể truy xuất đến kết quả trả về bằng phương thức `.then()` như sau:
 
-
 ```js
-function onSuccess(user) { console.log(user) }
-function onError(err) { console.error(error) }
+function onSuccess(user) {
+  console.log(user)
+}
+function onError(err) {
+  console.error(error)
+}
 
-api.getUser('pikalong')
-  .then(onSuccess, onError)
+api.getUser('pikalong').then(onSuccess, onError)
 ```
 
 Phương thức `.then(onSuccess, onError)` nhận vào hai hàm: `onSuccess` được gọi khi promise hoàn thành và `onError` được gọi khi có lỗi xảy ra. Bên trong tham số `onSuccess` bạn có thể trả về một giá trị đồng bộ, chẳng hạn như giá trị số, chuỗi, `null`, `undefined`, array hay object; hoặc một **promise object** khác. Các giá trị bất đồng bộ sẽ được bọc bên trong một Promise, cho phép bạn kết nối (chaining) nhiều promises lại với nhau.
 
 ```js
 promise()
-  .then(() => { return 'foo' })
+  .then(() => {
+    return 'foo'
+  })
   .then(result1 => {
-     console.log(result1) // 'foo'
-     return anotherPromise()
+    console.log(result1) // 'foo'
+    return anotherPromise()
   })
   .then(result2 => console.log(result2)) // `result2` sẽ là kết quả của anotherPromise()
   .catch(err => {})
@@ -105,7 +113,7 @@ Trong ví dụ trên, bạn thấy đến phương thức `.catch()`. Phương t
 
 #### Tạo nhanh Promise với `Promise.resolve()` và `Promise.reject()`
 
- Có những trường hợp bạn chỉ cần bọc một giá trị vào promise hay tự động reject. Thay vì dùng cú pháp `new Promise()` dài dòng, bạn có thể dùng hai phương thức tĩnh `Promise.resolve(result)` và `Promise.reject(err)`
+Có những trường hợp bạn chỉ cần bọc một giá trị vào promise hay tự động reject. Thay vì dùng cú pháp `new Promise()` dài dòng, bạn có thể dùng hai phương thức tĩnh `Promise.resolve(result)` và `Promise.reject(err)`
 
 ```js
 const p = Promise.resolve(12)
@@ -153,17 +161,20 @@ Căn bản về Promise và async/await là vậy. Hiện giờ, bạn đã có 
 Một lỗi chúng ta hay mắc phải khi mới làm quen với Promise, đó là tạo ra "kim tự tháp" promises như thế này.
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => {
-     api.getPostsOfUser(user)
-       .then(posts => {
-         api.getCommentsOfPosts(posts)
-         .then(comments => {
-           console.log(comments)
-         })
-         .catch(err => console.log(err))
-       })
-       .catch(err => console.log(err))
+    api
+      .getPostsOfUser(user)
+      .then(posts => {
+        api
+          .getCommentsOfPosts(posts)
+          .then(comments => {
+            console.log(comments)
+          })
+          .catch(err => console.log(err))
+      })
+      .catch(err => console.log(err))
   })
   .catch(err => console.log(err))
 ```
@@ -171,11 +182,14 @@ api.getUser('pikalong')
 Lý do vì chúng ta quên mất tính chất liên kết (chaining) của promise, cho phép bên trong hàm `resolve` có thể trả về một giá trị đồng bộ hoặc **một promise** khác. Do đó cách giải quyết là:
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   // Trả về một promise
   .then(user => api.getPostsOfUser(user))
   .then(posts => api.getCommentsOfPosts(posts))
-  .catch(err => { throw err })
+  .catch(err => {
+    throw err
+  })
 ```
 
 Theo Ehkoo, việc hiểu và sử dụng thành thạo tính liên kết là một trong những điểm **QUAN TRỌNG NHẤT** khi làm việc với Promise. Khi promise lồng vào nhau từ 2 tầng trở lên thì đã đến lúc bạn phải refactor lại rồi.
@@ -190,7 +204,7 @@ Promise.resolve(1)
   .then(console.log)
 ```
 
-Câu trả lời là `1` đó. Phương thức `.then` đòi hỏi tham số của nó phải là một hàm. Nếu bạn đưa vào `.then()`  một giá trị, nó sẽ bị bỏ qua, giải thích tại sao đoạn code trên hiển thị `1`. Trường hợp tương tự:
+Câu trả lời là `1` đó. Phương thức `.then` đòi hỏi tham số của nó phải là một hàm. Nếu bạn đưa vào `.then()` một giá trị, nó sẽ bị bỏ qua, giải thích tại sao đoạn code trên hiển thị `1`. Trường hợp tương tự:
 
 ```js
 Promise.resolve(1)
@@ -276,12 +290,15 @@ class User {
 Trong trường hợp muốn chạy các promises một cách tuần tự như sơ đồ ở trên, bạn có thể dùng hàm `Array.prototype.reduce` .
 
 ```js
-[promise1, promise2, promise3].reduce(function(currentPromise, promise) {
+;[promise1, promise2, promise3].reduce(function(currentPromise, promise) {
   return currentPromise.then(promise)
 }, Promise.resolve())
 
 // Đoạn ở trên khi được viết dài dòng ra
-Promise.resolve().then(promise1).then(promise2).then(promise3)
+Promise.resolve()
+  .then(promise1)
+  .then(promise2)
+  .then(promise3)
 ```
 
 Async/await mang đến giải pháp "xinh đẹp" hơn, cho phép bạn truy xuất đến giá trị của các promises phía trước nếu cần thiết.
@@ -304,7 +321,7 @@ const userIds = [1, 2, 3, 4]
 // api.getUser() là hàm trả về promise
 const users = []
 for (let id of userIds) {
-  api.getUser(id).then(user => ([...users, user]))
+  api.getUser(id).then(user => [...users, user])
 }
 
 console.log(users) // [], oát-đờ-heo?
@@ -317,13 +334,12 @@ Lý do là vì khi promise chưa kịp resolve thì dòng `console.log` đã ch�
 ```js
 const userIds = [1, 2, 3, 4]
 
-Promise.all(usersIds.map(api.getUser))
-  .then(function(arrayOfResults) {
-    const [user1, user2, user3, user4] = arrayOfResults
-  })
+Promise.all(usersIds.map(api.getUser)).then(function(arrayOfResults) {
+  const [user1, user2, user3, user4] = arrayOfResults
+})
 ```
 
-Nếu dùng async/await  thì...
+Nếu dùng async/await thì...
 
 ```js
 async function() {
@@ -343,7 +359,7 @@ Promise.race([
   ping('ns1.example.com'),
   ping('ns2.example.com'),
   ping('ns3.example.com'),
-  ping('ns4.example.com')
+  ping('ns4.example.com'),
 ]).then(result => {})
 ```
 
@@ -352,13 +368,15 @@ Promise.race([
 Xét hai đoạn mã sau:
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => {
     return api.getPostsByUser(user)
   })
   .then(console.log) // posts
 
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => {
     api.getPostsByUser(user)
   })
@@ -372,11 +390,20 @@ api.getUser('pikalong')
 Hàm `reject` trong `.then(resolve, reject)` chỉ có thể chụp được lỗi từ những `.then()` phía trước nó, mà không thể bắt được lỗi xảy ra trong hàm `resolve` cùng cấp.
 
 ```js
-api.getUser('pikalong')
-  .then(user => { throw new Error('Lỗi rồi bạn ei') }, err => { /* Không có gì ở đây cả */ })
+api.getUser('pikalong').then(
+  user => {
+    throw new Error('Lỗi rồi bạn ei')
+  },
+  err => {
+    /* Không có gì ở đây cả */
+  },
+)
 
-api.getUser('pikalong')
-  .then(user => { throw new Error('Lỗi rồi bạn ei') })
+api
+  .getUser('pikalong')
+  .then(user => {
+    throw new Error('Lỗi rồi bạn ei')
+  })
   .catch(err => console.log(err)) // Chụp được rồi bạn ei
 ```
 
@@ -384,8 +411,17 @@ Lưu ý là promise sẽ dừng quá trình thực thi khi bắt được lỗi
 
 ```js
 Promise.resolve()
-  .then(() => { throw 'foo' })
-  .then(() => { throw 'bar' }, err => { console.error("here", err) })
+  .then(() => {
+    throw 'foo'
+  })
+  .then(
+    () => {
+      throw 'bar'
+    },
+    err => {
+      console.error('here', err)
+    },
+  )
   .catch(err => console.error('final', err))
 
 // console:
@@ -397,7 +433,8 @@ Promise.resolve()
 Một trong những điểm hạn chế của Promise là không có cơ chế mặc định để bạn truyền dữ liệu giữa các promise objects với nhau. Nghĩa là:
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => api.getPostsByUser(user))
   .then(posts => {
     // Muốn sử dụng biến user ở trên thì làm sao đây?
@@ -407,24 +444,30 @@ api.getUser('pikalong')
 Một cách là dùng `Promise.all()`.
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => Promise.all([user, api.getPostsByUser(user)]))
   .then(results => {
-     // Dùng kỹ thuật phân rã biến trong ES6. Bạn lưu ý chúng ta dùng 1 dấu , để
-     // tách ra phần tử thứ hai của mảng mà thôi
-     const [ , posts ] = results
+    // Dùng kỹ thuật phân rã biến trong ES6. Bạn lưu ý chúng ta dùng 1 dấu , để
+    // tách ra phần tử thứ hai của mảng mà thôi
+    const [, posts] = results
 
-     // Lại tiếp tục truyền dữ liệu bao gồm [user, posts, comments] xuống promise sau
-     return Promise.all([...results, api.getCommentsOfPosts(posts)])
+    // Lại tiếp tục truyền dữ liệu bao gồm [user, posts, comments] xuống promise sau
+    return Promise.all([...results, api.getCommentsOfPosts(posts)])
   })
 ```
 
 Hoặc, nếu bạn cảm thấy phân tách mảng khó dùng vì phải nhớ thứ tự của các giá trị thì ta có thể dùng object như sau:
 
 ```js
-api.getUser('pikalong')
+api
+  .getUser('pikalong')
   .then(user => api.getPostsByUser(user).then(posts => ({ user, posts })))
-  .then(results => api.getCommentsOfPosts(results.posts).then(comments => ({ ...results, comments })))
+  .then(results =>
+    api
+      .getCommentsOfPosts(results.posts)
+      .then(comments => ({ ...results, comments })),
+  )
   .then(console.log) // { users, posts, comments }
 ```
 
@@ -447,7 +490,7 @@ console.log('before')
 const promise = new Promise(function fn(resolve, reject) {
   console.log('hello')
   // ...
-});
+})
 console.log('after')
 ```
 
@@ -463,7 +506,9 @@ Bạn có thể thấy hàm `executor` của Promise được thực thi ngay l�
 
 ```jsx
 const getUsers = new Promise((resolve, reject) => {
-  return http.get(`/api`, (err, result) =>  err ? reject(err) : resolve(result))
+  return http.get(`/api`, (err, result) =>
+    err ? reject(err) : resolve(result),
+  )
 })
 
 button.onclick = e => getUsers
@@ -472,9 +517,12 @@ button.onclick = e => getUsers
 Cách giải quyết là đưa vào một hàm trả về promise.
 
 ```js
-const getUsers = () => new Promise((resolve, reject) => {
-  return http.get(`/api`, (err, result) =>  err ? reject(err) : resolve(result))
-})
+const getUsers = () =>
+  new Promise((resolve, reject) => {
+    return http.get(`/api`, (err, result) =>
+      err ? reject(err) : resolve(result),
+    )
+  })
 
 button.onclick = e => getUsers()
 ```
