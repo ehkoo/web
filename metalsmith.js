@@ -1,16 +1,18 @@
 const path = require('path')
 const Metalsmith = require('metalsmith')
+
+const feed = require('metalsmith-feed')
 const asset = require('metalsmith-static')
 const drafts = require('metalsmith-drafts')
 const layouts = require('metalsmith-layouts')
 const wordcount = require('metalsmith-word-count')
 const collections = require('metalsmith-collections')
-const feed = require('metalsmith-feed')
 
 const tags = require('./plugins/metalsmith-tags')
 const dates = require('./plugins/metalsmith-date-formatter')
 const related = require('./plugins/related')
 const markdown = require('./plugins/markdown')
+const headings = require('./plugins/headings')
 const permalinks = require('./plugins/metalsmith-permalinks')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
@@ -94,6 +96,7 @@ const builder = Metalsmith(__dirname)
       },
     }),
   )
+  .use(headings)
   .use(markdown())
   .use(wordcount())
   .use(
@@ -127,9 +130,9 @@ const builder = Metalsmith(__dirname)
         data.cover != null
           ? transformCloudinary(data.cover, {
               w: 150,
+              h: 150,
               c: 'fill',
               g: 'center',
-              h: 150,
             })
           : data.cover
 
@@ -152,11 +155,10 @@ const builder = Metalsmith(__dirname)
 
     done()
   })
+
   .use(
     layouts({
-      engineOptions: {
-        path: path.resolve(__dirname, 'layouts'),
-      },
+      engineOptions: { path: path.resolve(__dirname, 'layouts') },
     }),
   )
 

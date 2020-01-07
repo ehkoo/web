@@ -53,7 +53,6 @@ module.exports = function() {
 
   return markdown({
     renderer,
-    highlight: code => require('highlight.js').highlightAuto(code).value,
     pedantic: false,
     gfm: true,
     tables: true,
