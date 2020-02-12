@@ -28,7 +28,7 @@
     "build:dev": "node metalsmith.js",
     "watch": "npm-watch build:dev",
     "serve": "http-server dist/ -s",
-    "start": "concurrently npm:watch npm:serve"
+    "start": "SITE_URL=http://localhost:8080 concurrently npm:watch npm:serve"
   },
   "devDependencies": {
     "concurrently": "5.0.2",
