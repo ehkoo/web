@@ -22,8 +22,7 @@ function heading(text, level, raw, slugger) {
   if (level === 2)
     return `<h2 class="mb-3 text-xl text-pink-600 font-600">${text}</h2>`
 
-  if (level === 3)
-    return `<h3 class="mb-3 text-lg text-pink-600 font-300">${text}</h3>`
+  if (level === 3) return `<h3 class="mb-3 text-lg text-pink-600">${text}</h3>`
 
   return `<h${level} class="mb-3 text-pink-600">${text}</h${level}>`
 }
