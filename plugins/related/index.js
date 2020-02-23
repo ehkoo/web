@@ -1,9 +1,12 @@
-module.exports = function(opts) {
-  opts = opts || {}
-  opts.exclude = opts.exclude || []
-  opts.min_posts = opts.min_posts || 1
-  opts.min_matches = opts.min_matches || 1
-  var tags = opts.attribute || 'tags'
+module.exports = function(params = {}) {
+  const opts = {
+    exclude: [],
+    min_posts: 1,
+    min_matches: 1,
+    attribute: 'tags',
+    ...params,
+  }
+  var tags = opts.attribute
   return function(files, metalsmith, done) {
     setImmediate(done)
     var files2 = files
@@ -16,7 +19,11 @@ module.exports = function(opts) {
             var post2 = files2[file2]
             if (post !== post2) {
               for (tag of post[tags]) {
-                if (typeof post2[tags] !== 'undefined' && !opts.exclude.includes(tag) && post2[tags].includes(tag)) {
+                if (
+                  typeof post2[tags] !== 'undefined' &&
+                  !opts.exclude.includes(tag) &&
+                  post2[tags].includes(tag)
+                ) {
                   count++
                 }
               }
