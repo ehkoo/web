@@ -19,7 +19,7 @@ Hãy khoan bạn ơi, đừng vội nhảy lên chuyến tàu tốc hành async/
 
 Ehkoo sẽ điểm những khái niệm căn bản về Promise, đồng thời so sánh với async/await để xem khi nào thì nên xài hàng nào nhé.
 
-### Nhắc lại, Promise là gì?
+## Nhắc lại, Promise là gì?
 
 Promise là một _cơ chế_ trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào _callback hell_ hay _pyramid of doom_, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng. Các tác vụ bất đồng bộ có thể là gửi AJAX request, gọi hàm bên trong `setTimeout`, `setInterval` hoặc `requestAnimationFrame`, hay thao tác với WebSocket hoặc Worker... Dưới đây là một callback hell điển hình.
 
@@ -111,7 +111,7 @@ promise()
 
 Trong ví dụ trên, bạn thấy đến phương thức `.catch()`. Phương thức này chỉ là _cú pháp bọc đường_ (syntactic sugar) của `.then(null, onError)` mà thôi. Chúng ta sẽ nói thêm về `.catch()` ở bên dưới.
 
-#### Tạo nhanh Promise với `Promise.resolve()` và `Promise.reject()`
+### Tạo nhanh Promise với `Promise.resolve()` và `Promise.reject()`
 
 Có những trường hợp bạn chỉ cần bọc một giá trị vào promise hay tự động reject. Thay vì dùng cú pháp `new Promise()` dài dòng, bạn có thể dùng hai phương thức tĩnh `Promise.resolve(result)` và `Promise.reject(err)`
 
@@ -123,7 +123,7 @@ const p = Promise.resolve(12)
   .catch(err => console.error(err)) // Error: Dừng lại nhanh
 ```
 
-### Còn async/await là cái chi?
+## Còn async/await là cái chi?
 
 Được giới thiệu trong ES8, async/await là một _cơ chế_ giúp bạn thực hiện các thao tác bất đồng bộ một cách _tuần tự_ hơn. Async/await vẫn sử dụng Promise ở bên dưới nhưng mã nguồn của bạn (theo một cách nào đó) sẽ trong sáng và dễ theo dõi.
 
@@ -156,7 +156,7 @@ hello().then(console.log) // 1
 
 Căn bản về Promise và async/await là vậy. Hiện giờ, bạn đã có thể sử dụng Promise và async/await ở tất cả các trình duyệt hiện đại (trừ IE11 ra nhé, bạn vẫn cần polyfill cho nó). Hãy xem những trường hợp cần lưu ý khi sử dụng chúng.
 
-### "Kim tự tháp" Promises
+## "Kim tự tháp" Promises
 
 Một lỗi chúng ta hay mắc phải khi mới làm quen với Promise, đó là tạo ra "kim tự tháp" promises như thế này.
 
@@ -194,7 +194,7 @@ api
 
 Theo Ehkoo, việc hiểu và sử dụng thành thạo tính liên kết là một trong những điểm **QUAN TRỌNG NHẤT** khi làm việc với Promise. Khi promise lồng vào nhau từ 2 tầng trở lên thì đã đến lúc bạn phải refactor lại rồi.
 
-### Luôn đưa vào `.then()` một hàm
+## Luôn đưa vào `.then()` một hàm
 
 Bạn thử đoán xem đoạn code sau sẽ in ra gì?
 
@@ -224,7 +224,7 @@ Promise.resolve(1)
 
 Chúng ta sẽ được kết quả như ý.
 
-### Cẩn thận với `this` khi dùng tham chiếu hàm
+## Cẩn thận với `this` khi dùng tham chiếu hàm
 
 Giả sử bạn có đoạn code sau:
 
@@ -283,7 +283,7 @@ class User {
 }
 ```
 
-### Chạy các Promise tuần tự
+## Chạy các Promise tuần tự
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015633/WeAgTSK_sydkqv.jpg)
 
@@ -311,7 +311,7 @@ async function() {
 }
 ```
 
-### Chạy nhiều Promises cùng lúc với Promise.all()
+## Chạy nhiều Promises cùng lúc với Promise.all()
 
 Lại có trường hợp bạn muốn thực thi và lấy ra kết quả của nhiều promises cùng lúc. Giải pháp "ngây thơ" sẽ là dùng vòng lặp, hoặc `.forEach`.
 
@@ -348,7 +348,7 @@ async function() {
 }
 ```
 
-### Đừng quên Promise.race()
+## Đừng quên Promise.race()
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015676/PPSnMLL_cix7cx.jpg)
 
@@ -363,7 +363,7 @@ Promise.race([
 ]).then(result => {})
 ```
 
-### Cẩn thận với `return` không tường minh
+## Cẩn thận với `return` không tường minh
 
 Xét hai đoạn mã sau:
 
@@ -385,7 +385,7 @@ api
 
 Đoạn mã thứ hai trả về `undefined` vì trong JavaScript nếu một hàm không _công khai_ trả về một giá trị, `undefined` mặc định sẽ được trả về ([nguồn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)). Do đó, bạn cần lưu ý về giá trị `return` khi làm việc với Promise.
 
-### Phân biệt `.then(resolve, reject)` và `.then(resolve).catch(reject)`
+## Phân biệt `.then(resolve, reject)` và `.then(resolve).catch(reject)`
 
 Hàm `reject` trong `.then(resolve, reject)` chỉ có thể chụp được lỗi từ những `.then()` phía trước nó, mà không thể bắt được lỗi xảy ra trong hàm `resolve` cùng cấp.
 
@@ -428,7 +428,7 @@ Promise.resolve()
 // "here bar"
 ```
 
-### Truyền dữ liệu giữa các promises với nhau
+## Truyền dữ liệu giữa các promises với nhau
 
 Một trong những điểm hạn chế của Promise là không có cơ chế mặc định để bạn truyền dữ liệu giữa các promise objects với nhau. Nghĩa là:
 
@@ -481,7 +481,7 @@ async function() {
 }
 ```
 
-### Cẩn thận nha, Promise không lazy
+## Cẩn thận nha, Promise không lazy
 
 Với đoạn code sau:
 
@@ -527,7 +527,7 @@ const getUsers = () =>
 button.onclick = e => getUsers()
 ```
 
-### Cuối cùng, `.finally()`
+## Cuối cùng, `.finally()`
 
 Bên cạnh `.then()` và `.catch()`, chúng ta còn có `.finally(onFinally)`. Phương thức này nhận vào một hàm và sẽ được kích hoạt dù cho promise trước nó hoàn thành hay xảy ra lỗi.
 
@@ -552,11 +552,11 @@ async function() {
 
 Bạn có thể đọc thêm về `Promise.prototype.finally()` [ở đây](https://ehkoo.com/bai-viet/promise-finally-duoc-gioi-thieu-tu-google-chrome-63). Lưu ý là phương thức này hiện chỉ được hỗ trợ bởi Firefox, Chrome và Opera thôi nhé.
 
-### Kết
+## Kết
 
 Bạn có thể thấy Promise và async/await không hoàn toàn thay thế mà hỗ trợ lẫn nhau. Mặc dù chúng ta có thể dùng async/await ở đa số các trường hợp, Promise vẫn là nền tảng cần thiết khi thực thi các tác vụ bất đồng bộ trong JavaScript. Do đó bạn nên xem xét và lựa chọn giải pháp phù hợp, tùy vào tình hình thực tế nhá.
 
-#### Đọc thêm
+### Đọc thêm
 
 [_Using Promises_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) -- MDN
 
