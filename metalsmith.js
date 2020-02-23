@@ -48,7 +48,7 @@ const builder = Metalsmith(__dirname)
     siteName: 'Ehkoo',
     siteDesc:
       'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
-    siteLogo: 'https://ehkoo.com/assets/img/logo.png',
+    siteLogo: 'https://ehkoo.com/assets/logo.png',
     social: {
       twitterHandle: '@ehkoo',
       fbPageId: '122317275146521',
