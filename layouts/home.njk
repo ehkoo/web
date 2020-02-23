@@ -1,5 +1,9 @@
 {% extends "index.njk" %}
 
+{% block head %}
+  {% include "el/opengraph.njk" %}
+{% endblock %}
+
 {% block content %}
 <main class="container mx-auto mb-4">
   <div class="px-2 grid grid-gap-2 grid-template-row-auto grid-template-col-full md:grid-2 xl:grid-4">
