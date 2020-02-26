@@ -3,9 +3,9 @@ layout: post.njk
 title: Lập trình front-end 2017, một năm nhìn lại
 slug: lap-trinh-front-end-2017-mot-nam-nhin-lai
 date: 2017-12-08
-cover: https://res.cloudinary.com/hikerlust/image/upload/v1512800596/1_aVzJTznRRfP1lM7AXe9yLw_pccenq.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/v1582722985/1_aVzJTznRRfP1lM7AXe9yLw_pccenq_ecamqb.jpg
 tags: JavaScript, Frontend, 2017
-excerpt:  Năm 2017 tiếp tục chứng kiến sự phát triển mạnh mẽ của công nghệ front-end. Hãy cùng điểm lại những sự kiện nổi bật diễn ra trong năm vừa qua.
+excerpt: Năm 2017 tiếp tục chứng kiến sự phát triển mạnh mẽ của công nghệ front-end. Hãy cùng điểm lại những sự kiện nổi bật diễn ra trong năm vừa qua.
 author: kcjpop
 translation: https://levelup.gitconnected.com/a-recap-of-front-end-development-in-2017-7072ce99e727
 ---
@@ -14,7 +14,7 @@ translation: https://levelup.gitconnected.com/a-recap-of-front-end-development-i
 
 Lập trình front-end lại một lần nữa phát triển chóng mặt trong năm 2017. Hãy cùng điểm lại những sự kiện nổi bật diễn ra trong năm vừa qua.
 
-![](https://res.cloudinary.com/hikerlust/image/upload/v1512800596/1_aVzJTznRRfP1lM7AXe9yLw_pccenq.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1582722985/1_aVzJTznRRfP1lM7AXe9yLw_pccenq_ecamqb.jpg)
 
 ### React 16 và giấy phép MIT
 
@@ -89,13 +89,13 @@ Việc thiếu kiểu dữ liệu trong JavaScript đã bị một số lập tr
 
 ### Kết: mong chờ gì trong năm 2018
 
-* Cuộc Thánh chiến CSS để tìm ra cách giải quyết styles trong các ứng dụng dựa vào components.
-* Nhiều và nhiều công ty tiếp nhận các giải pháp phát triển ứng dụng thiết bị di động mà có thể chia sẻ chung mã nguồn, ví dụ như React Native hay Flutter.
-* Web trở nên gần với ứng dụng di động native hơn khi hỗ trợ hoạt động ngoại tuyến, hay những trải nghiệm di động khác.
-* WebAssembly có thể có những bước tiến khác, đem đến những trải nghiệm ứng dụng tốt hơn
-* GraphQL tiếp tục thách thức REST
-* React tiếp tục giữ vững vị trí framework front-end phổ biến nhất
-* Flow và TypeScript giúp tổ chức mã gọn gàng và dễ debug/refactor hơn
-* Sự ảnh hưởng của các công nghệ đóng gói như Docker càng rõ rệt hơn với giới front-end.
-* Công nghệ thực tế ảo sẽ có những bước phát triển lớn, với sự hổ trợ của các thư viện như [A-Frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/) và [Google VR](https://developers.google.com/vr/?hl=en).
-* Sự xuất hiện của các ứng dụng xây dựng trên nền blockchain và [web3.js](https://github.com/ethereum/web3.js/)
+- Cuộc Thánh chiến CSS để tìm ra cách giải quyết styles trong các ứng dụng dựa vào components.
+- Nhiều và nhiều công ty tiếp nhận các giải pháp phát triển ứng dụng thiết bị di động mà có thể chia sẻ chung mã nguồn, ví dụ như React Native hay Flutter.
+- Web trở nên gần với ứng dụng di động native hơn khi hỗ trợ hoạt động ngoại tuyến, hay những trải nghiệm di động khác.
+- WebAssembly có thể có những bước tiến khác, đem đến những trải nghiệm ứng dụng tốt hơn
+- GraphQL tiếp tục thách thức REST
+- React tiếp tục giữ vững vị trí framework front-end phổ biến nhất
+- Flow và TypeScript giúp tổ chức mã gọn gàng và dễ debug/refactor hơn
+- Sự ảnh hưởng của các công nghệ đóng gói như Docker càng rõ rệt hơn với giới front-end.
+- Công nghệ thực tế ảo sẽ có những bước phát triển lớn, với sự hổ trợ của các thư viện như [A-Frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/) và [Google VR](https://developers.google.com/vr/?hl=en).
+- Sự xuất hiện của các ứng dụng xây dựng trên nền blockchain và [web3.js](https://github.com/ethereum/web3.js/)
