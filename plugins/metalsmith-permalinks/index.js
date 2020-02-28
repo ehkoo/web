@@ -2,7 +2,6 @@ var debug = require('debug')('metalsmith-permalinks')
 var moment = require('moment')
 var path = require('path')
 var slug = require('slugify')
-var substitute = require('substitute')
 var utils = require('./utils')
 
 var basename = path.basename
@@ -18,6 +17,31 @@ var merge = utils.objectMerge
  */
 
 module.exports = plugin
+
+/**
+ * Substitute `:prop` with the given `obj` in `str`
+ *
+ * @param {String} str
+ * @param {Object or Array} obj
+ * @param {RegExp} expr
+ * @return {String}
+ * @api public
+ */
+
+function substitute(str, obj, expr) {
+  var type = Object.prototype.toString
+  if (!obj) throw new TypeError('expected an object')
+  expr = expr || /:(\w+)/g
+  return str.replace(expr, function(_, prop) {
+    switch (type.call(obj)) {
+      case '[object Object]':
+        return null != obj[prop] ? obj[prop] : _
+      case '[object Array]':
+        var val = obj.shift()
+        return null != val ? val : _
+    }
+  })
+}
 
 /**
  * Metalsmith plugin that renames files so that they're permalinked properly
@@ -117,8 +141,13 @@ function plugin(options) {
 function normalize(options) {
   if ('string' == typeof options) options = { pattern: options }
   options = options || {}
-  options.date = typeof options.date === 'string' ? format(options.date) : format('YYYY/MM/DD')
-  options.relative = options.hasOwnProperty('relative') ? options.relative : true
+  options.date =
+    typeof options.date === 'string'
+      ? format(options.date)
+      : format('YYYY/MM/DD')
+  options.relative = options.hasOwnProperty('relative')
+    ? options.relative
+    : true
   options.linksets = options.linksets || []
   return options
 }
