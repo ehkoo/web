@@ -5,7 +5,7 @@ slug: whats-new-in-javascript-es2020
 date: 2020-02-28
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1571507839/cf0c7c0e69d51d97044a8431da9175e3_dkkaql.jpg
 tags: JavaScript, ES2020, Dành cho người mới
-excerpt: 2020 đã ập vào mặt, và lại một phiên bản nữa của EcmaScript/ JavaScript sắp (hay đã) được các trình duyệt hỗ trợ. Cùng Ehkoo điểm qua những tính năng mới của ES2020 nhé.
+excerpt: 2020 đã ập vào mặt, và lại một phiên bản nữa của EcmaScript/ JavaScript sắp (hay đã) được các trình duyệt hỗ trợ. Cùng Ehkoo điểm qua những tính năng mới của ES2020/ ES11 nhé.
 author: kcjpop
 ---
 
@@ -278,6 +278,25 @@ function foo() {
 ```
 
 **Đọc thêm:** [Top level await](https://v8.dev/features/top-level-await) trên blog của V8.
+
+## Thuộc tính riêng tư
+
+Cuối cùng thì JS class cũng có thuộc tính riêng tư (private properties). Bằng cách thêm `#` vào trước tên thuộc tính hay phương thức, chúng sẽ chỉ có thể được truy cập từ bên trong class đó mà thôi.
+
+```js
+class Message {
+  #message = "Howdy"
+
+  greet() {
+    console.log(this.#message)
+  }
+}
+
+const greeting = new Message()
+
+greeting.greet()
+console.log(greeting.#message)
+```
 
 ## Dấu phân cách số
 
