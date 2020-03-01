@@ -10,7 +10,8 @@ author: kcjpop
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg)
-`Promise.race([blueTuktuk, greenMotobike, redTractor])` -- Hình minh họa của [Ken Wong](http://www.kenart.net/)
+
+_`Promise.race([blueTuktuk, greenMotobike, redTractor])` -- Hình minh họa của [Ken Wong](http://www.kenart.net/)_
 
 > Chời, thời này ai xài Promise nữa. Chuẩn bây giờ là async/await.
 > -- _Ai đó trên mạng_
