@@ -1,0 +1,49 @@
+.font-be {
+  font-family: Be Vietnam, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+.grid {
+  display: grid;
+}
+
+.grid-gap-2 {
+  grid-gap: 2rem;
+}
+
+.grid-template-col-full {
+  grid-template-columns: 100%;
+}
+
+.grid-template-row-auto {
+  grid-template-rows: auto;
+}
+
+.top-1 {
+  top: 1rem;
+}
+
+.bottom-1 {
+  bottom: 1rem;
+}
+
+.left-1 {
+  left: 1rem;
+}
+
+@media screen and (min-width: 48em) {
+  .md\:grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 60em) {
+  .xl\:grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .xl\:row-span-2 {
+    grid-row-end: span 2;
+  }
+  .xl\:col-span-2 {
+    grid-column-end: span 2;
+  }
+}
