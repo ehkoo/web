@@ -12,10 +12,10 @@
 {% endblock %}
 
 {% block content %}
-<main class="container flex flex-col xl:flex-row mx-auto mb-4">
+<main class="container flex flex-col xl:flex-row mx-auto mb-8">
   <aside class="xl:w-1/5">
     <div class="sticky top-1 right-0">
-      <nav class="hidden xl:block xl:mt-14 pl-2 pr-4">
+      <nav class="hidden xl:block xl:mt-24 pl-2 pr-4">
         <a
           id="js-toggle-toc"
           href="#"
@@ -55,14 +55,14 @@
         <ul class="text-sm" id="js-toc">
           {% for h in headings %}
           <li>
-            <a href="#{{ h.id }}" class="block mb-1 text-gray-600">
+            <a href="#{{ h.id }}" class="block mb-2 text-gray-600">
               {{ h.text }}
             </a>
 
             <ul class="ml-2">
             {% for s in h.submenu %}
               <li>
-                <a href="#{{ s.id }}" class="block mb-1 text-gray-600">
+                <a href="#{{ s.id }}" class="block mb-2 text-gray-600">
                   {{ s.text }}
                 </a>
               </li>
@@ -108,7 +108,7 @@
         <a
           id="js-toggle-mobile-nav"
           href="#"
-          class="w-8 h-8 text-white bg-yellow-700 border border-yellow-700 rounded-full flex items-center justify-center"
+          class="w-16 h-16 text-white bg-yellow-700 border border-yellow-700 rounded-full flex items-center justify-center"
         >
           <i data-icon="up" class="w-2">
             <svg
@@ -194,7 +194,7 @@
       <div class="hidden xl:flex xl:mt-8 items-center justify-center">
         <a
           href="#header"
-          class="flex flex-col items-center border border-yellow-700 text-yellow-700 py-1 px-3 rounded-md"
+          class="flex flex-col items-center border border-yellow-700 text-yellow-700 py-2 px-6 rounded-md"
         >
           <i class="w-2">
             <svg

@@ -25,7 +25,7 @@
     <article>
       <figure class="mb-2">
         <img
-          class="rounded-md object-cover h-16 w-full"
+          class="rounded-md object-cover h-32 w-full"
           src="{{ post.thumbnailUrl }}"
           alt=""
         />
@@ -44,7 +44,7 @@
 
   {% if loop.index === 3 %}
     <article class="xl:row-span-2">
-      <div class="bg-gray-300 h-full px-2 mb-2 rounded-md text-gray-700">
+      <div class="bg-gray-300 h-full px-4 mb-2 rounded-md text-gray-700">
         <div class="flex mb-4 items-end">
           <span class="ml-auto text-sm bg-pink-700 text-white px-2 py-half">
             Ebook miễn phí
@@ -55,48 +55,48 @@
           <img src="https://res.cloudinary.com/duqeezi8j/image/upload/v1515693014/react_ywwrxy.png" alt="" />
         </figure>
         <div class="mb-4">
-          <p class="mb-1 text-sm flex">
+          <p class="mb-2 text-sm flex">
             <img
               class="w-3 mr-2"
               src="/assets/emoji/1f1fb-1f1f3.svg"
               alt="VN"
             />
-            <span class="ml2">100% tiếng Việt</span>
+            <span>100% tiếng Việt</span>
           </p>
-          <p class="mb-1 text-sm flex">
+          <p class="mb-2 text-sm flex">
             <img
               class="w-3 mr-2"
               src="/assets/emoji/2728.svg"
               alt=""
             />
-            <span class="ml2">React 16 mới keng xà beng</span>
+            <span>React 16 mới keng xà beng</span>
           </p>
-          <p class="mb-1 text-sm flex">
+          <p class="mb-2 text-sm flex">
             <img
               class="w-3 mr-2"
               src="/assets/emoji/1f916.svg"
               alt=""
             />
-            <span class="ml2">Đầy đủ khái niệm cơ bản/nâng cao</span>
+            <span>Đầy đủ khái niệm cơ bản/nâng cao</span>
           </p>
-          <p class="mb-1 text-sm flex">
+          <p class="mb-2 text-sm flex">
             <img
               class="w-3 mr-2"
               src="/assets/emoji/1f917.svg"
               alt=""
             />
-            <span class="ml2">Hướng dẫn chi tiết, siêu dễ hiểu </span>
+            <span>Hướng dẫn chi tiết, siêu dễ hiểu </span>
           </p>
-          <p class="mb-1 text-sm flex">
+          <p class="mb-2 text-sm flex">
             <img
               class="w-3 mr-2"
               src="/assets/emoji/2692.svg"
               alt=""
             />
-            <span class="ml2">Xây dựng ứng dụng thực tế</span>
+            <span>Xây dựng ứng dụng thực tế</span>
           </p>
         </div>
-        <p class="mb-2 text-sm">
+        <p class="mb-4 text-sm">
           Hãy để lại email và Ehkoo sẽ thông báo cho bạn khi quyển sách này hoàn thành.
         </p>
 
@@ -107,9 +107,9 @@
 
   {% if loop.index === 6 %}
     <article class="xl:col-span-2 bg-gray-300 flex flex-col justify-center rounded-md">
-      <div class="p-2">
+      <div class="p-4">
         <h2 class="text-2xl mb-2">Đăng ký bản tin</h2>
-        <p class="mb-2">
+        <p class="mb-4">
           Quá lười để vào Ehkoo mỗi ngày? Không sao hết, Ehkoo sẽ gửi bài cho bạn mỗi tuần.
         </p>
         {% include "forms/newsletter.njk" %}
@@ -117,7 +117,7 @@
       </div>
     </article>
     <article>
-      <a href="/cong-tac" class="flex flex-col items-center justify-center bg-yellow-400 rounded-md p-2 h-full">
+      <a href="/cong-tac" class="flex flex-col items-center justify-center bg-yellow-400 rounded-md p-4 h-full">
         <div class="mx-auto mb-3 p-2 flex">
           <div>
             <img
@@ -141,8 +141,8 @@
       </a>
     </article>
     <article>
-      <a rel="noopener noreferrer" target="_blank" href="{{ social.facebook }}" class="flex flex-col items-center justify-center p-2 h-full bg-blue-700 rounded-md text-white">
-        <p class="mb-4 w-16 h-16 bg-white block rounded-full flex items-center justify-center">
+      <a rel="noopener noreferrer" target="_blank" href="{{ social.facebook }}" class="flex flex-col items-center justify-center p-4 h-full bg-blue-700 rounded-md text-white">
+        <p class="mb-4 w-32 h-32 bg-white rounded-full flex items-center justify-center">
           <img
             src="/assets/img/like.png"
             alt="Like us on Facebook"
