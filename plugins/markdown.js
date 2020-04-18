@@ -4,11 +4,11 @@ const ent = require('ent')
 const slugify = require('slugify')
 
 function paragraph(text) {
-  return `<p class="mb-3 leading-double">${text}</p>`
+  return `<p class="mb-3 leading-loose">${text}</p>`
 }
 
 function blockquote(text) {
-  return `<blockquote class="mb-3 bg-gray-200 px-3 py-4 border-l-4 border-gray-500">${text}</blockquote>`
+  return `<blockquote class="mb-3 bg-gray-200 p-4 border-l-4 border-gray-500">${text}</blockquote>`
 }
 
 function image(href, title, text) {
@@ -45,7 +45,7 @@ function list(body, isOrdered) {
   const tag = !isOrdered ? 'ul' : 'ol'
   const classes = !isOrdered ? 'list-disc' : 'list-decimal'
 
-  return `<${tag} class="${classes} mb-3 ml-2 leading-double">${body}</${tag}>`
+  return `<${tag} class="${classes} mb-3 ml-4 leading-loose">${body}</${tag}>`
 }
 
 function link(href, title, text) {

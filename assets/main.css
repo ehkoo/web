@@ -1,4 +1,12 @@
 :root {
+  /* Scaling factors */
+  --width-scale: 0.25rem;
+  --height-scale: 0.25rem;
+  --margin-scale: 0.25rem;
+  --padding-scale: 0.25rem;
+  --border-width-scale: 1px;
+
+  /* Colors */
   --transparent: transparent;
   --black: #000;
   --white: #fff;
@@ -124,10 +132,12 @@
   .hidden { media: xl; }
 }
 
-@color --blue-100,
+@color
+  --blue-100,
   --blue-700,
   --gray-200,
   --gray-300,
+  --gray-400,
   --orange-200,
   --pink-700,
   --yellow-400,
@@ -140,7 +150,8 @@
   @border;
 }
 
-@color --blue-700,
+@color
+  --blue-700,
   --gray-500,
   --gray-600,
   --gray-700,
@@ -154,12 +165,9 @@
 
 @position {
   .top-0 {}
-  .top-1 {}
   .right-0 {}
   .bottom-0 {}
-  .bottom-1 {}
   .left-0 {}
-  .left-1 {}
 }
 
 @flex {
@@ -178,8 +186,14 @@
 }
 
 @font {
+  .font-semibold {}
   .font-bold {}
   .font-sans {}
+  .text-xs {}
+  .text-sm {}
+  .text-xl {}
+  .text-2xl {}
+  .text-3xl {}
 }
 
 @margin {
@@ -189,7 +203,7 @@
   .mb-3 {}
   .mb-4 {}
   .mb-8 {}
-  .ml-2 {}
+  .ml-4 {}
   .ml-auto {}
   .mr-1 {}
   .mr-2 {}
@@ -220,6 +234,7 @@
   .px-4 {}
   .py-1 {}
   .py-2 {}
+  .py-4 {}
 }
 
 @rounded {
@@ -228,15 +243,10 @@
 }
 
 @text {
-  .text-xs {}
-  .text-sm {}
-  .text-xl {}
-  .text-2xl {}
-  .text-3xl {}
   .text-center {}
 }
 
-@letter-spacing {
+@tracking {
   .tracking-wider {}
   .tracking-widest {}
 }
@@ -256,6 +266,7 @@
   .w-3 {}
   .w-8 {}
   .w-16 {}
+  .w-32 {}
   .w-full {}
 }
 
@@ -271,4 +282,12 @@
 
 @border {
   .border {}
+}
+
+@leading {
+  .leading-loose {}
+}
+
+@list {
+  .list-disc {}
 }
