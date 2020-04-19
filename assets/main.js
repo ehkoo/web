@@ -1,4 +1,41 @@
-parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"epB2":[function(require,module,exports) {
-window.onload=function(){var e,t,n,o;e=document.getElementById("js-toggle-mobile-nav"),t=e.querySelector('i[data-icon="up"]'),n=e.querySelector('i[data-icon="down"]'),o=document.getElementById("js-mobile-nav"),e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")},!1),function(){var e=document.getElementById("js-toggle-toc"),t=e.querySelector('i[data-icon="up"]'),n=e.querySelector('i[data-icon="down"]'),o=document.getElementById("js-toc");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")},!1)}()};
-},{}]},{},["epB2"], null)
-//# sourceMappingURL=/main.js.map
+window.onload = function ehkoo() {
+  function toggleMobileNav() {
+    const toggler = document.getElementById('js-toggle-mobile-nav')
+    const up = toggler.querySelector('i[data-icon="up"]')
+    const down = toggler.querySelector('i[data-icon="down"]')
+    const nav = document.getElementById('js-mobile-nav')
+
+    toggler.addEventListener(
+      'click',
+      e => {
+        e.preventDefault()
+        up.classList.toggle('hidden')
+        down.classList.toggle('hidden')
+        nav.classList.toggle('hidden')
+        document.body.classList.toggle('overflow-hidden')
+      },
+      false,
+    )
+  }
+
+  function toggleToc() {
+    const toggler = document.getElementById('js-toggle-toc')
+    const up = toggler.querySelector('i[data-icon="up"]')
+    const down = toggler.querySelector('i[data-icon="down"]')
+    const toc = document.getElementById('js-toc')
+
+    toggler.addEventListener(
+      'click',
+      e => {
+        e.preventDefault()
+        up.classList.toggle('hidden')
+        down.classList.toggle('hidden')
+        toc.classList.toggle('hidden')
+      },
+      false,
+    )
+  }
+
+  toggleMobileNav()
+  toggleToc()
+}

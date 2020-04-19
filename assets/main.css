@@ -291,3 +291,12 @@
 @list {
   .list-disc {}
 }
+
+@z-index {
+  .z-10 {}
+  .z-20 {}
+}
+
+@overflow {
+  .overflow-hidden {}
+}
