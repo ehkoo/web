@@ -5,7 +5,6 @@ const feed = require('metalsmith-feed')
 const asset = require('metalsmith-static')
 const drafts = require('metalsmith-drafts')
 const layouts = require('metalsmith-layouts')
-const wordcount = require('metalsmith-word-count')
 const collections = require('metalsmith-collections')
 
 const tags = require('./plugins/metalsmith-tags')
@@ -13,6 +12,7 @@ const dates = require('./plugins/metalsmith-date-formatter')
 const related = require('./plugins/related')
 const markdown = require('./plugins/markdown')
 const headings = require('./plugins/headings')
+const wordcount = require('./plugins/word-count')
 const permalinks = require('./plugins/metalsmith-permalinks')
 
 const OUTPUT_PATH = path.resolve(__dirname, 'dist')
@@ -97,8 +97,8 @@ const builder = Metalsmith(__dirname)
     }),
   )
   .use(headings)
-  .use(markdown())
   .use(wordcount())
+  .use(markdown())
   .use(
     permalinks({
       pattern: 'bai-viet/:slug',
