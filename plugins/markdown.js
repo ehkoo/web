@@ -13,9 +13,11 @@ function blockquote(text) {
 
 function image(href, title, text) {
   return `<figure class="mb-3">
-  <img class="rounded-md mb-2" src="${href}" alt="${title}" title="${title}" />
-${text != null &&
-  `<figcaption class="text-sm text-gray-600 text-center">${text}</figcaption>`}
+  <img class="mb-2" src="${href}" alt="${title}" title="${title}" />
+${
+  text != null &&
+  `<figcaption class="text-sm text-gray-600 text-center">${text}</figcaption>`
+}
 </figure>`
 }
 
@@ -32,7 +34,7 @@ function heading(text, level, raw) {
 }
 
 function code(code, infostring) {
-  return `<pre class="mb-3 text-sm rounded-md">
+  return `<pre class="mb-3 text-sm">
 <code class="language-${infostring}">${ent.encode(code)}</code>
 </pre>`
 }
@@ -55,7 +57,7 @@ function link(href, title, text) {
   }>${text}</a>`
 }
 
-module.exports = function() {
+module.exports = function () {
   const renderer = new marked.Renderer()
   const fns = {
     image,
