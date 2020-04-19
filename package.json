@@ -47,7 +47,6 @@
     "metalsmith-markdown": "1.3.0",
     "metalsmith-serve": "0.0.7",
     "metalsmith-static": "0.0.5",
-    "metalsmith-word-count": "0.0.4",
     "minireset.css": "0.0.6",
     "moment": "2.24.0",
     "npm-check": "5.9.2",
@@ -61,5 +60,6 @@
     "prettier": "2.0.4",
     "serve": "11.3.0",
     "slugify": "1.4.0"
-  }
+  },
+  "dependencies": {}
 }
