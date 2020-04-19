@@ -34,9 +34,13 @@ Tài liệu được cung cấp miễn phí tại [https://developer.mozilla.org
 ### Eloquent JavaScript, 3rd Edition
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514494/ehkoo/ejs3e_cover-front.jpg)
+
 **Tác giả:** Marijn Haverbeke
+
 **Số trang:** 456
+
 **Năm xuất bản:** 2018
+
 **Nhà xuất bản:** No Starch Press
 
 Eloquent JavaScript là một quyển sách đặc biệt, vì nó không chỉ giới thiệu về JS. Đối tượng độc giả mà sách hướng đến là những bạn đang chập chững làm quen với lập trình, do đó tác giả Haverbeke chú trọng giải thích những nguyên tắc của việc lập trình, mối quan hệ giữa ngôn ngữ lập trình và máy tính, v.v... Sách được chia làm ba phần:
@@ -54,8 +58,11 @@ Bạn có thể đọc quyển sách này miễn phí tại https://eloquentjava
 ### You Don't Know JS
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539800486/ehkoo/chec3ctigbg2wujtaeqd.jpg)
+
 **Tác giả:** Kyle Simpson
+
 **Năm xuất bản:** 2015
+
 **Nhà xuất bản:** O'Reilly
 
 You Don't Know JS là loạt sách gồm 6 quyển chuyên về JavaScript.
@@ -76,7 +83,9 @@ Bạn có thể đọc sách miễn phí tại [https://github.com/getify/You-Do
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539536777/ehkoo/exploring-es6.jpg)
 
 **Tác giả:** Axel Rauschmayer
+
 **Số trang:** 641
+
 **Năm xuất bản:** 2015 - 2018
 
 Khi nói đến ES6, có lẽ không quyển sách nào qua được Exploring ES6 của Dr. Axel Rauschmayer - tác giả blog [2ality](http://2ality.com/). Sách dày hơn 600 trang, mô tả chi tiết từng tính năng của ES6, từ `let` với `const` là gì, hàm mũi tên, modules, v.v... đến những chuyện bên lề như tại sao có khi lại gọi ES5 là ES2015. Sách dành cho những bạn đã có kiến thức về JavaScript.
@@ -88,7 +97,9 @@ Bạn có thể đọc miễn phí ở đây [http://exploringjs.com/es6](http:/
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539714717/ehkoo/understanding-es6.jpg)
 
 **Tác giả:** Nicholas Zakas
+
 **Số trang:** 322
+
 **Nhà xuất bản:** LeanPub
 
 Một quyển sách khác về ES6. So với Exploring ES6 thì cuốn này mỏng hơn nhưng cũng bao hàm đầy đủ những tính năng quan trọng của ES6. Bạn có thể đọc sách miễn phí tại [https://leanpub.com/understandinges6](https://leanpub.com/understandinges6).
@@ -98,9 +109,13 @@ Một quyển sách khác về ES6. So với Exploring ES6 thì cuốn này mỏ
 ### The Principles of Object-Oriented JavaScript
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514190/ehkoo/OOJS_frontcover_web.jpg)
+
 **Tác giả:** Nicholas Zakas
+
 **Số trang:** 120
+
 **Năm xuất bản:** 2014
+
 **Nhà xuất bản:** No Starch Press
 
 Lập trình hướng đối tượng (object-oriented programming -- OOP) trong JavaScript có thể hơi khác lạ nếu bạn đến từ những ngôn ngữ thuần OOP như Java hay C#. Nhưng cách thực hiện hướng đối tượng dựa vào bản mẫu (prototype-based) của JS lại làm cho ngôn ngữ này trở nên thú vị, vì cách tiếp cận này vẫn bảo toàn [4 nguyên tắc căn bản của OOP](https://kipalog.com/posts/4-tinh-chat-dac-thu-cua-lap-trinh-huong-doi-tuong): tính khái quát (Abstraction), tính bao đóng (Encapsulation), tính kế thừa (Inheritance), và tính đa hình (Polymorphism).
@@ -110,9 +125,13 @@ Sách mỏng, dễ đọc, giúp bạn hiểu rõ hơn về cách thức objects
 ### Rediscovering JavaScript - Master ES6, ES7, and ES8
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539884891/R6oEbhz.jpg)
+
 **Tác giả:** Venkat Subramaniam
+
 **Số trang:** 257
+
 **Năm xuất bản:** 2018
+
 **Nhà xuất bản:** The Pragmatic Programmers
 
 Rediscovering JavaScript là quyển sách dành cho những bạn đã tìm hiểu về ES6/7/8. Sách giới thiệu những kinh nghiệm thực tế khi làm việc với JS phiên bản mới, chẳng hạn như cách phân rã biến và sử dụng giá trị mặc định khi khai báo hàm, để đảm bảo chữ ký hàm vẫn rõ ràng và dễ sử dụng; hay lời khuyên không nên lạm dụng hàm mũi tên; hoặc những ví dụ về siêu lập trình (metaprogramming) trong JS. Mỗi chương đều có đi kèm bài tập, giúp bạn kiểm tra lại kiến thức của mình.
@@ -122,6 +141,7 @@ Rediscovering JavaScript là quyển sách dành cho những bạn đã tìm hi�
 ### Professor Frisby's Mostly Adequate Guide to Functional Programming
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539514550/ehkoo/mostly-adaquate.jpg)
+
 **Tác giả:** Brian Lonsdorf
 
 Lập trình hàm ngày càng được nhiều người quan tâm bởi những lợi ích mà nó mang lại. Nhưng trong quá trình tìm hiểu, có thể bạn sẽ bắt gặp những khái niệm "lạ hoắc lạ huơ" như Functor, IO hay (don't you dare) Monad. Đừng tìm đâu xa, Mostly Adequate là quyển sách bạn muốn đọc ngay. Bằng giọng văn hài hước, cách hành văn dễ hiểu, "Giáo sư Frisby" Brian Lonsdorf sẽ dẫn bạn qua những ví dụ đơn giản nhất, kết hợp với nhau cho đến khi bạn vỗ đùi "hóa ra Monad là rứa".
@@ -131,7 +151,9 @@ Sách có 12 chương, và bạn có thể đọc miễn phí ở [https://mostl
 ### JavaScript Allongé, the "Six" Edition
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539885991/ehkoo/js-allonge.jpg)
+
 **Tác giả:** Reg “raganwald” Braithwaite
+
 **Nhà xuất bản:** LeanPub
 
 JavaScript Allongé là quyển sách về lập trình với hàm, "vô tình" lại được thể hiện bằng JavaScript. Phiên bản mới của sách sử dụng ES6, ngoài dùng class (de, lập trình hàm mà dùng class) còn đề cập đến mixin, generators, v.v... Bạn nhất định phải đọc quyển sách này cùng với quyển Mostly Adequate ở trên, nếu bạn hứng thú với lập trình hàm!
@@ -141,7 +163,9 @@ Sách có thể đọc miễn phí tại [https://leanpub.com/javascriptallonges
 ### Functional-Light JavaScript: Balanced, Pragmatic FP in JavaScript
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539885613/ehkoo/functional-light.jpg)
+
 **Tác giả:** Kyle Simpson
+
 **Nhà xuất bản:** LeanPub
 
 So với hai quyển sách ở trên, Functional-Light JavaScript nhẹ nhàng hơn và không sử dụng những thuật ngữ chuyên sâu trong lập trình hàm. Thay vào đó, sách chỉ ra cách áp dụng những khái niệm của FP vào thực tế. Lời đề tựa của sách được viết bởi Giáo sư Frisby.
@@ -153,9 +177,13 @@ So với hai quyển sách ở trên, Functional-Light JavaScript nhẹ nhàng h
 ### Refactoring JavaScript - Turning Bad Code into Good Code
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539888249/ehkoo/refactoring-js.jpg)
+
 **Tác giả:** Evan Burchard
+
 **Số trang:** 499
+
 **Năm xuất bản:** 2017
+
 **Nhà xuất bản:** O'Reilly Media
 
 Mặc dù mỗi dự án sẽ có những tính chất đặc thù, dẫn đến những chiến lược refactoring khác nhau, nhưng quyển sách này có thể cung cấp cho bạn một cái nhìn khái quát khi bắt tay vào sửa chữa code JavaScript. Sách bắt đầu bằng cách đặt câu hỏi mục tiêu refactoring là gì, mục tiêu bạn hướng đến khi refactor, sau đó gợi ý những chiến lược riêng để xử lý chuỗi, hàm, mã chết, hay những tác vụ bất đồng bộ.
@@ -165,9 +193,13 @@ Ehkoo khuyên đọc nếu bạn đang có ý định "đập đi xây lại" v�
 ### Simplifying JavaScript - Writing Modern JavaScript with ES5, ES6, and Beyond
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,bo_1px_solid_rgb:333333,c_scale,w_300/v1539889185/ehkoo/7DkReEw.jpg)
+
 **Tác giả:** Joe Morgan
+
 **Số trang:** 255
+
 **Năm xuất bản:** 2018
+
 **Nhà xuất bản:** The Pragmatic Programmers
 
 Nhìn tựa có vẻ như nói về JS thế hệ mới, nhưng nội dung chính của quyển sách này là những mẹo/ lời khuyên để bạn có thể viết JavaScript rõ ràng hơn. Do đó, nếu bạn là người "hốt rác" chuyên nghiệp, đừng bỏ qua quyển sách này.
@@ -177,25 +209,37 @@ Nhìn tựa có vẻ như nói về JS thế hệ mới, nhưng nội dung chín
 ### Even Faster Web Sites: Performance Best Practices for Web Developers
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539423806/ehkoo/even-faster-web-sites.jpg)
+
 **Tác giả:** Steve Souders
+
 **Số trang:** 256
+
 **Năm xuất bản:** 2009
+
 **Nhà xuất bản:** O'Reilly Media
 
 ### High Performance JavaScript
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539513605/ehkoo/high-perf-js.jpg)
+
 **Tác giả:** Nicholas Zakas
+
 **Số trang:** 232
+
 **Năm xuất bản:** 2010
+
 **Nhà xuất bản:** O'Reilly Media, Yahoo! Press
 
 ### Maintainable JavaScript
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_300/v1539513855/ehkoo/maintainable-js.jpg)
+
 **Tác giả:** Nicholas Zakas
+
 **Số trang:** 242
+
 **Năm xuất bản:** 2012
+
 **Nhà xuất bản:** O'Reilly Media
 
 Điểm chung của 3 quyển sách trên là gì? Đầu tiên là cũ. Thứ hai là Ehkoo chưa đọc :p, nhưng được một [blogger](https://fullsnack.io/) nhiều tên ít tuổi trong cộng đồng giới thiệu. Nếu bạn đọc thấy không hay thì tìm @huytd ở [WeBuildVN](https://chat.webuild.community/) mà mắng vốn nhé. <img style="display: inline-block;vertical-align: middle;" src="https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1539887363/ehkoo/0261c72927d64558.gif">

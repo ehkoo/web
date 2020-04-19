@@ -25,10 +25,13 @@ function heading(text, level, raw) {
   const id = slugify(raw, { replacement: '-', remove: null, lower: true })
 
   if (level === 2)
-    return `<h2 id="${id}" class="mb-3 text-xl text-pink-600 font-600">${text}</h2>`
+    return `<h2 id="${id}" class="mb-3 text-2xl text-pink-600 font-600">${text}</h2>`
 
   if (level === 3)
-    return `<h3 id="${id}" class="mb-3 text-lg text-pink-600">${text}</h3>`
+    return `<h3 id="${id}" class="mb-3 text-xl text-pink-600">${text}</h3>`
+
+  if (level === 4)
+    return `<h4 id="${id}" class="mb-3 text-lg text-pink-600">${text}</h4>`
 
   return `<h${level} id="${id}" class="mb-3 text-pink-600">${text}</h${level}>`
 }
