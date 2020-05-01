@@ -11,7 +11,7 @@
   {% if post.type === 'quote' %}
     <article>
       <figure class="relative mb-2">
-        <img
+        <img loading="lazy"
           class="rounded-md object-cover w-full"
           src="{{ post.thumbnailUrl }}"
           alt="{{ post.author }}"
@@ -24,7 +24,7 @@
   {% else %}
     <article>
       <figure class="mb-2">
-        <img
+        <img loading="lazy"
           class="rounded-md object-cover h-32 w-full"
           src="{{ post.thumbnailUrl }}"
           alt=""
@@ -52,11 +52,11 @@
         </div>
         <h2 class="text-2xl mb-2">React từ A tới Y</h2>
         <figure class="p-1 bg-white mb-4">
-          <img src="https://res.cloudinary.com/duqeezi8j/image/upload/v1515693014/react_ywwrxy.png" alt="" />
+          <img loading="lazy" src="https://res.cloudinary.com/duqeezi8j/image/upload/v1515693014/react_ywwrxy.png" alt="" />
         </figure>
         <div class="mb-4">
           <p class="mb-2 text-sm flex">
-            <img
+            <img loading="lazy"
               class="w-3 mr-2"
               src="/assets/emoji/1f1fb-1f1f3.svg"
               alt="VN"
@@ -64,7 +64,7 @@
             <span>100% tiếng Việt</span>
           </p>
           <p class="mb-2 text-sm flex">
-            <img
+            <img loading="lazy"
               class="w-3 mr-2"
               src="/assets/emoji/2728.svg"
               alt=""
@@ -72,7 +72,7 @@
             <span>React 16 mới keng xà beng</span>
           </p>
           <p class="mb-2 text-sm flex">
-            <img
+            <img loading="lazy"
               class="w-3 mr-2"
               src="/assets/emoji/1f916.svg"
               alt=""
@@ -80,7 +80,7 @@
             <span>Đầy đủ khái niệm cơ bản/nâng cao</span>
           </p>
           <p class="mb-2 text-sm flex">
-            <img
+            <img loading="lazy"
               class="w-3 mr-2"
               src="/assets/emoji/1f917.svg"
               alt=""
@@ -88,7 +88,7 @@
             <span>Hướng dẫn chi tiết, siêu dễ hiểu </span>
           </p>
           <p class="mb-2 text-sm flex">
-            <img
+            <img loading="lazy"
               class="w-3 mr-2"
               src="/assets/emoji/2692.svg"
               alt=""
@@ -120,14 +120,14 @@
       <a href="/cong-tac" class="flex flex-col items-center justify-center bg-yellow-400 rounded-md p-4 h-full">
         <div class="mx-auto mb-3 p-2 flex">
           <div>
-            <img
+            <img loading="lazy"
               src="/assets/img/gal.png"
               alt="Gal"
               class="w-full"
             />
           </div>
           <div>
-            <img
+            <img loading="lazy"
               src="/assets/img/guy.png"
               alt="Guy"
               class="w-full"
@@ -143,7 +143,7 @@
     <article>
       <a rel="noopener noreferrer" target="_blank" href="{{ social.facebook }}" class="flex flex-col items-center justify-center p-4 h-full bg-blue-700 rounded-md text-white">
         <p class="mb-4 w-32 h-32 bg-white rounded-full flex items-center justify-center">
-          <img
+          <img loading="lazy"
             src="/assets/img/like.png"
             alt="Like us on Facebook"
             class="box-social__fig"

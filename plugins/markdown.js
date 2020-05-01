@@ -13,7 +13,7 @@ function blockquote(text) {
 
 function image(href, title, text) {
   return `<figure class="mb-3">
-  <img class="mb-2" src="${href}" alt="${title}" title="${title}" />
+  <img loading="lazy" class="mb-2" src="${href}" alt="${title}" title="${title}" />
 ${
   text != null &&
   `<figcaption class="text-sm text-gray-600 text-center">${text}</figcaption>`

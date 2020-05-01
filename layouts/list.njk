@@ -13,7 +13,7 @@
   {% for post in pagination.files %}
     <article>
       <figure class="mb-2">
-        <img
+        <img loading="lazy"
           class="rounded-md object-cover h-32 w-full"
           src="{{ post.thumbnailUrl }}"
           alt=""
@@ -45,14 +45,14 @@
       <a href="/cong-tac" class="flex flex-col items-center justify-center bg-yellow-400 rounded-md p-4 h-full">
         <div class="mx-auto mb-3 p-2 flex">
           <div>
-            <img
+            <img loading="lazy"
               src="/assets/img/gal.png"
               alt="Gal"
               class="w-full"
             />
           </div>
           <div>
-            <img
+            <img loading="lazy"
               src="/assets/img/guy.png"
               alt="Guy"
               class="w-full"
@@ -68,7 +68,7 @@
     <article>
       <a rel="noopener noreferrer" target="_blank" href="{{ social.facebook }}" class="flex flex-col items-center justify-center p-4 h-full bg-blue-700 rounded-md text-white">
         <p class="mb-4 w-32 h-32 bg-white rounded-full flex items-center justify-center">
-          <img
+          <img loading="lazy"
             src="/assets/img/like.png"
             alt="Like us on Facebook"
             class="box-social__fig"
