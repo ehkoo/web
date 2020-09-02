@@ -16,14 +16,14 @@ form_footer: fonts
 
 Bạn có để ý là mình đang dùng code font (font chữ cho lập trình) nào không?
 
-Yếu tố ngỡ là nhỏ xíu này, thực ra lại ảnh hưởng lớn đến năng suất lập trình. Font không phù hợp có thể khiến bạn nhức mắt. Chưa kể, hãy thử tưởng tượng: bạn mòn mỏi dành ít nhất 8 tiếng mỗi ngày, 5 ngày mỗi tuần, ròng rã 12 tháng một năm – chỉ để nhìn chăm chăm vào MỘT FONT DUY NHẤT! Thật sự rất chán!
+Yếu tố ngỡ là nhỏ xíu này thực ra lại ảnh hưởng lớn đến năng suất lập trình. Font không phù hợp có thể khiến bạn nhức mắt. Chưa kể, hãy thử tưởng tượng: bạn mòn mỏi dành ít nhất 8 tiếng mỗi ngày, 5 ngày mỗi tuần, ròng rã 12 tháng một năm – chỉ để nhìn chăm chăm vào MỘT FONT DUY NHẤT! Thật sự rất chán!
 
-Nào, hãy cùng Ehkoo thay font mới cho trình soạn thảo của bạn! Sau đây là 10+ font chữ cho lập trình, giúp bạn:
+Nào, hãy cùng Ehkoo thay font mới cho trình soạn thảo! 10+ font chữ cho lập trình sau đây sẽ giúp bạn:
 
-* Viết code dễ dàng hơn, tránh các lỗi typo.
-* Đem đến cảm giác tươi mới cho trình soạn thảo.
-* Mỗi dòng code viết ra trông xinh đẹp hơn, giúp bạn thêm yêu thương việc viết code ahihi.
-* Download miễn phí ngay và luôn 10+ font chữ cho lập trình đang HOT nhất.
+* Viết code dễ dàng hơn, tránh các lỗi typo
+* Đem đến cảm giác tươi mới cho trình soạn thảo
+* Mỗi dòng code viết ra trông xinh đẹp hơn, giúp bạn thêm yêu thương việc viết code ahihi
+* Download miễn phí ngay và luôn 10+ font chữ cho lập trình đang HOT nhất
 
 ## Như thế nào là một font chữ lập trình tốt?
 
@@ -122,13 +122,13 @@ Là một phần trong bộ font chuẩn của IBM, [IBM Plex](https://github.co
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1598692204/fonts/iosevka.png)
 
 [Iosevka](https://be5invis.github.io/Iosevka/) có thể nói là font chữ ngon lành cành đào nhất mà Ehkoo kiếm được trong năm qua. Không quá mềm mại như Fantasque Sans Mono, cũng không quá cứng cáp như Ubuntu Mono, Iosevka vừa phải và thanh lịch. Font Iosevka cũng có hỗ trợ ligatures nhưng không nhiều lắm, chủ yếu là cho các toán tử trong JavaScript.
-Iosevka cũng đi kèm font Iosevka Term dành riêng cho terminal. Điểm trừ là không có ligatures.
+Iosevka cũng đi kèm font Iosevka Term dành riêng cho terminal.
 
 ### JetBrains Mono (*hàng mới)
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1598692204/fonts/jetbrains-mono.png)
 
-Được phát triển bởi à ùm, công ty JetBrains, [JetBrains Mono](https://www.jetbrains.com/lp/mono/) tổng hợp những tính năng cần thiết nhất của một font chữ lập trình xịn: dễ đọc, rõ ràng, các ký tự không gây nhầm lẫn, hỗ trợ ligatures…
+Được phát triển bởi à ừm, công ty JetBrains, [JetBrains Mono](https://www.jetbrains.com/lp/mono/) tổng hợp những tính năng cần thiết nhất của một font chữ lập trình xịn: dễ đọc, rõ ràng, các ký tự không gây nhầm lẫn, hỗ trợ ligatures…
 
 ### Lotuscoder
 
@@ -172,4 +172,4 @@ Thật ra, lâu lâu đổi qua Source Code Pro cũng được. Chỉ là, theo 
 
 Nói chung, font đẹp hay xấu tùy thuộc phần lớn vào cảm nhận cá nhân. Font tốt cũng cần được kết hợp với cỡ chữ phù hợp, color scheme hợp mắt… thì mới đem lại hiệu quả ưng ý. Nhưng, nếu một ngày nào đó mở máy lên, bạn bỗng cảm thấy chán chường không muốn viết code, thì hãy thử đổi font chữ xem sao.
 
-Chỉ cần điền email của bạn vào form dưới đây, Ehkoo sẽ gửi đủ 10+ code font kể trên đến tận tay cho bạn!
+Chỉ cần điền email của bạn vào form dưới đây, Ehkoo sẽ gửi đủ 10+ code font kể trên đến tận tay bạn!
