@@ -34,7 +34,6 @@ Do thiếu người đó mà.
 - Ánh -- [@chubbyanh](https://github.com/chubbyanh)
 - Ân -- [@kcjpop](https://github.com/kcjpop)
 - Đức -- [@nguyenhaiduc06](https://github.com/nguyenhaiduc06)
-- **Bạn** -- Ehkoo đang [tìm kiếm đồng sự](/cong-tac) để cùng xây dựng website nè.
 
 ### Bản quyền?
 
