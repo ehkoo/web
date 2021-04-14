@@ -426,7 +426,7 @@ Promise.resolve()
   .catch(err => console.error('final', err))
 
 // console:
-// "here bar"
+// "here foo"
 ```
 
 ## Truyền dữ liệu giữa các promises với nhau
