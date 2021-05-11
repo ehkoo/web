@@ -52,7 +52,7 @@
     "npm-check": "5.9.2",
     "npm-watch": "0.7.0",
     "nunjucks": "3.2.2",
-    "postcss": "8.2.2",
+    "postcss": "8.2.10",
     "postcss-atomic": "git+https://github.com/kcjpop/postcss-atomic.git",
     "postcss-cli": "8.3.1",
     "postcss-custom-media": "7.0.8",
