@@ -38,7 +38,7 @@
     "eslint-plugin-prettier": "3.3.0",
     "jstransformer-nunjucks": "1.0.0",
     "jstransformer-nunjucks-node": "0.6.7",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "metalsmith": "2.3.0",
     "metalsmith-collections": "0.9.0",
     "metalsmith-drafts": "1.0.0",
