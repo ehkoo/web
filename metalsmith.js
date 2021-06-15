@@ -1,3 +1,4 @@
+
 const path = require('path')
 const Metalsmith = require('metalsmith')
 
@@ -6,6 +7,8 @@ const asset = require('metalsmith-static')
 const drafts = require('metalsmith-drafts')
 const layouts = require('metalsmith-layouts')
 const collections = require('metalsmith-collections')
+
+const meta = require('./package.json')
 
 const tags = require('./plugins/metalsmith-tags')
 const dates = require('./plugins/metalsmith-date-formatter')
@@ -44,10 +47,9 @@ function transformCloudinary(url, transformations) {
 const builder = Metalsmith(__dirname)
   .metadata({
     env: process.env.NODE_ENV,
-    siteUrl: process.env.SITE_URL || 'https://ehkoo.com',
+    siteUrl: process.env.SITE_URL || meta.homepage,
     siteName: 'Ehkoo',
-    siteDesc:
-      'Tin tức và hướng dẫn lập trình frontend cập nhật liên tục. Đầy đủ các chủ đề về JavaScript, CSS, React, Vue, PWA...',
+    siteDesc: meta.description,
     siteLogo: 'https://ehkoo.com/assets/logo.png',
     social: {
       twitterHandle: '@ehkoo',
@@ -60,7 +62,7 @@ const builder = Metalsmith(__dirname)
     },
     site: {
       title: 'Ehkoo',
-      url: process.env.SITE_URL || 'https://ehkoo.com',
+      url: process.env.SITE_URL || meta.homepage,
     },
   })
   .source(path.resolve(__dirname, 'content'))
