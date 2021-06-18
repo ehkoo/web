@@ -15,5 +15,5 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self' fonts.googleapis.com *.cloudinary.com jsfiddle.net codepen.io *.sharethis.com *.heapanalytics.com"
+    Content-Security-Policy = "default-src 'self' fonts.googleapis.com fonts.gstatic.com *.cloudinary.com jsfiddle.net codepen.io *.sharethis.com *.heapanalytics.com"
     Content-Security-Policy-Report-Only = "policy"
