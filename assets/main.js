@@ -23,20 +23,23 @@ window.onload = function ehkoo() {
 
   function toggleToc() {
     const toggler = document.getElementById('js-toggle-toc')
-    const up = toggler.querySelector('i[data-icon="up"]')
-    const down = toggler.querySelector('i[data-icon="down"]')
-    const toc = document.getElementById('js-toc')
 
-    toggler.addEventListener(
-      'click',
-      e => {
-        e.preventDefault()
-        up.classList.toggle('hidden')
-        down.classList.toggle('hidden')
-        toc.classList.toggle('hidden')
-      },
-      false,
-    )
+    if (toggler) {
+      const up = toggler.querySelector('i[data-icon="up"]')
+      const down = toggler.querySelector('i[data-icon="down"]')
+      const toc = document.getElementById('js-toc')
+
+      toggler.addEventListener(
+        'click',
+        e => {
+          e.preventDefault()
+          up.classList.toggle('hidden')
+          down.classList.toggle('hidden')
+          toc.classList.toggle('hidden')
+        },
+        false,
+      )
+    }
   }
 
   toggleMobileNav()
