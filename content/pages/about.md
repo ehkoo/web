@@ -38,5 +38,3 @@ Do thiếu người đó mà.
 ### Bản quyền?
 
 Bản quyền bài viết thuộc về tác giả. Ehkoo chỉ là nơi tập hợp và lưu trữ nội dung. Nội dung trên website khi được chia sẻ/đăng tải lại cần được giữ nguyên, không thay đổi, chỉnh sửa, và phải ghi rõ nguồn từ "ehkoo.com".
-
-Nếu bạn sử dụng nội dung trên Ehkoo cho mục đích thương mại, vui lòng liên hệ `chao [at] ehkoo.com`.
