@@ -1,5 +1,5 @@
 ---
-import { slugify } from '../lib/posts.js'
+import { slugify } from '../lib.js'
 
 const links = Astro.props.tags.split(/,\s+/).map(t => {
     const tag = slugify(t)
@@ -16,6 +16,6 @@ li {
     }
 }
 </style>
-<ul class="flex gap-2">
+<ul class="flex flex-wrap gap-2">
     {links.map(link => <li><a href={link.href}>#{link.label}</a></li>)}
 </ul>

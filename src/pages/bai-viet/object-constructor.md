@@ -69,7 +69,7 @@ console.log(tonNgoKhong.prototype) // undefined
 
 Tham số `properties` của `Object.create()` cho phép bạn khai báo những thuộc tính của thể hiện được tạo bằng cách truyền vào các property descriptors.
 
-### Vậy property descriptor là gì?
+**Vậy property descriptor là gì?**
 
 _Property descriptor_ (mô tả thuộc tính) là một object JavaScript thông thường (Plain Old JavaScript Object - POJO), được sử dụng trong `Object.create()`, `Object.defineProperty(), hoặc`Object.defineProperties()` để thay đổi các thuộc tính đã có của một đối tượng, hoặc tạo đối tượng mới. Ví dụ:
 

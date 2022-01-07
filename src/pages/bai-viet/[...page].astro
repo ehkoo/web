@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro'
 import PostList from '../../components/PostList.astro'
 import Paginator from '../../components/Paginator.astro'
-import { getAllPosts, POSTS_PER_PAGE } from '../../lib/posts.js'
+import { getAllPosts, POSTS_PER_PAGE } from '../../lib.js'
 
 export async function getStaticPaths({ paginate, rss }) {
   const posts = getAllPosts(Astro.fetchContent('./*.md'))
