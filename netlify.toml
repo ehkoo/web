@@ -15,4 +15,3 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com *.cloudinary.com jsfiddle.net codepen.io heapanalytics.com *.heapanalytics.com; block-all-mixed-content; frame-ancestors 'self' https://jsfiddle.net https://codepen.io"

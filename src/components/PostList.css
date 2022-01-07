@@ -1,0 +1,39 @@
+@import url('../styles/_media.css');
+
+.post-list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+
+  @media (--md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (--lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (--xl) {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-single {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+
+    &-cover {
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-title {
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--oc-indigo-7);
+    }
+  }
+}

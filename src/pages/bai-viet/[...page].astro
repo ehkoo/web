@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro'
+import PostList from '../../components/PostList.astro'
+import Paginator from '../../components/Paginator.astro'
+import { getAllPosts, POSTS_PER_PAGE } from '../../lib.js'
+
+export async function getStaticPaths({ paginate, rss }) {
+  const posts = getAllPosts(Astro.fetchContent('./*.md'))
+
+  rss({
+    title: 'Ehkoo',
+    description: 'Website tiếng Việt chuyên hướng dẫn tùm lum về JavaScript, CSS, React, và chuyện lập trình frontend.',
+    customData: `<language>vi</language>`,
+    dest: "/rss.xml",
+    items: posts.map(item => ({
+      title: item.title,
+      description: item.description,
+      link: item.url,
+      pubDate: item.date,
+    })),
+  });
+
+  return paginate(posts, { pageSize: POSTS_PER_PAGE });
+}
+
+const { page } = Astro.props;
+---
+<Base title={`Tất cả bài viết - Trang ${page.currentPage}`}>
+    <h1 class="mb-4">Tất cả bài viết - Trang {page.currentPage}</h1>
+
+    <div class="mb-4">
+        <PostList posts={page.data} />
+    </div>
+
+    <Paginator page={page} />
+</Base>
