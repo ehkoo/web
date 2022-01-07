@@ -1,7 +1,10 @@
 ---
 const title = Astro.props.content?.title || Astro.props.title
 const { excerpt: desc, cover: imageUrl, slug, isPage } = Astro.props.content ?? {}
-const permalink = new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
+const permalink = slug != null
+    ? new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
+    : Astro.site
+
 ---
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
