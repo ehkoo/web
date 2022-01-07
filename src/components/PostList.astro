@@ -1,0 +1,20 @@
+---
+import './PostList.css'
+import DateTime from './DateTime.astro'
+
+const { posts } = Astro.props
+---
+<div class="post-list">
+    {posts.map(post => (
+        <article class="post-list-single flex flex-column gap-2" key={post.url}>
+            <div>
+                <img class="post-list-single-cover" src={post.cover} alt="">
+            </div>
+            <a class="post-list-single-title text-xl" href={post.url}>{post.title}</a>
+            <p class="mb-4">{post.excerpt}</p>
+            <p class="text-gray-6 text-sm">
+                @{post.author} | <DateTime date={post.date} />
+            </p>
+        </article>
+    ))}
+</div>

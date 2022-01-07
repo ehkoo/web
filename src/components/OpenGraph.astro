@@ -1,0 +1,18 @@
+---
+const { content: { title, excerpt: desc, cover: imageUrl, slug, isPage } } = Astro.props
+const url = new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
+---
+<meta name="description" content={desc}>
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content={url} />
+<meta property="twitter:title" content={title}>
+{imageUrl && <meta property="twitter:image" content={imageUrl}>}
+{desc && <meta property="twitter:description" content={desc}>}
+
+<meta property="og:url" content={url}>
+<meta property="og:site_name" content="Ehkoo">
+<meta property="og:title" content={title}>
+<meta property="og:type" content="website">
+{desc && <meta property="og:description" content={desc}>}
+{imageUrl && <meta property="og:image" content={imageUrl}>}

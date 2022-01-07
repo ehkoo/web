@@ -1,0 +1,29 @@
+{
+  "name": "@ehkoo/web",
+  "version": "4.0.0",
+  "license": "MPL-2.0",
+  "homepage": "https://ehkoo.com",
+  "description": "Website tiếng Việt chuyên hướng dẫn tùm lum về JavaScript, CSS, React, và chuyện lập trình frontend.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ehkoo/web"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && astro preview"
+  },
+  "devDependencies": {
+    "astro": "0.22.3",
+    "autoprefixer": "10.4.0",
+    "postcss-calc": "8.0.0",
+    "postcss-custom-media": "8.0.0",
+    "postcss-each": "1.1.0",
+    "postcss-nested": "5.0.6"
+  },
+  "dependencies": {
+    "@astrojs/renderer-preact": "0.3.1",
+    "slugify": "1.6.5"
+  }
+}

@@ -1,0 +1,46 @@
+---
+import './Post.css'
+import DateTime from './DateTime.astro'
+import TagLinks from './TagLinks.astro'
+import ToC from './ToC.astro'
+
+const { post: { title, author, date, tags, astro, isPage } } = Astro.props
+
+---
+<article id="post" class="post">
+    <div class="post-wrapper">
+        <h1 class="mb-4 mt-4">{title}</h1>
+
+        {!isPage &&
+            (<div class="mb-4">
+                <div class="text-gray-6 text-sm mb-2">
+                    <p><a href={`https://github.com/${author}`} target="_blank" rel="noreferrer nofollow">@{author}</a> đăng ngày <DateTime show="date" date={date} /></p>
+                </div>
+                <div class="flex gap-2 text-gray-6 text-sm">
+                    Tags: <TagLinks tags={tags} />
+                </div>
+            </div>)}
+
+        <div class="post-content">
+            <slot />
+        </div>
+
+        {!isPage &&
+        (<div>
+            <script src="https://utteranc.es/client.js"
+                repo="ehkoo/web"
+                issue-term="pathname"
+                label="web-comments"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </div>)}
+    </div>
+
+   {!isPage &&
+        (<nav class="post-nav">
+            <ToC headers={astro.headers} />
+        </nav>)}
+
+</article>

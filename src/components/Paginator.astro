@@ -1,0 +1,24 @@
+---
+const { page } = Astro.props
+---
+<style>
+.btn {
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+
+    &:not(&--disabled):hover {
+      background-color: var(--oc-indigo-1);
+    }
+
+    &--disabled {
+      color: var(--oc-gray-6);
+    }
+}
+</style>
+<ul class="flex align-center space-between">
+    <li><a href={page.url.prev} class={`btn ${!page.url.prev && 'btn--disabled'}`}>Trang trước</a></li>
+    <li>Trang {page.currentPage} / {page.lastPage}</li>
+    <li><a href={page.url.next} class={`btn ${!page.url.next && 'btn--disabled'}`}>Trang sau</a></li>
+</ul>

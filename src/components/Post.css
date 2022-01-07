@@ -1,0 +1,68 @@
+@import url('../styles/_media.css');
+@import url('https://unpkg.com/prism-themes@1.9.0/themes/prism-gruvbox-light.min.css');
+
+.post {
+  --code-background: #f9f5d7;
+  --code-color: #9d0006;
+  --code-font-size: 0.9em;
+
+  display: grid;
+  gap: 16px;
+
+  @media (--lg) {
+    grid-template-columns: 960px auto;
+  }
+
+  &-wrapper {
+    background-color: var(--oc-gray-0);
+    overflow: hidden;
+    padding: 16px;
+
+    @media (--xl) {
+      padding: 32px 64px;
+    }
+  }
+
+  &-content {
+    code[class*='language-'],
+    pre[class*='language-'] {
+      font-family: var(--font-monospace);
+      font-size: var(--code-font-size);
+    }
+
+    ul,
+    ol {
+      list-style-type: initial;
+      padding-left: 32px;
+    }
+
+    li,
+    p {
+      margin-bottom: 16px;
+
+      & code:not([class*='language-']) {
+        color: var(--code-color);
+        background-color: var(--code-background);
+        padding: 2px;
+        border-radius: 4px;
+        font-size: var(--code-font-size);
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 16px;
+      margin-top: 16px;
+
+      & code {
+        font-size: var(--code-font-size);
+        &::before,
+        &::after {
+          content: '`';
+        }
+      }
+    }
+  }
+}

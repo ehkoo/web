@@ -1,0 +1,35 @@
+---
+const { headers } = Astro.props
+
+const toc = headers.reduce((acc, current, index, arr) => {
+    if (acc.length === 0) return [{ ...current, children: [] }]
+
+    const last = acc[acc.length - 1]
+    if (current.depth > last.depth) last.children.push(current)
+    else acc.push({ ...current, children: [] })
+
+    return acc
+}, [])
+---
+<style>
+.post-toc { position: sticky; top: 16px; }
+</style>
+
+<div class="post-toc pl-2">
+    <h3 class="mb-4">Mục Lục</h3>
+    <ul class="text-sm flex flex-column gap-2">
+        {toc.map(one =>
+            <li>
+                <a href={`#${one.slug}`} class="decoration-none text-gray-7">{one.text}</a>
+                {one.children.length > 0 && <ul class="ml-4 flex flex-column gap-2">
+                    {one.children.map(two =>
+                    <li><a href={`#${two.slug}`} class="decoration-none text-gray-7">{two.text}</a></li>)}
+                </ul>}
+            </li>
+        )}
+        <li>
+            <a href="#top" class="decoration-none">⬆️ Đầu trang</a>
+        </li>
+    </ul>
+
+</div>

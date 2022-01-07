@@ -1,0 +1,38 @@
+---
+import Base from '../../../layouts/Base.astro'
+import PostList from '../../../components/PostList.astro'
+import Paginator from '../../../components/Paginator.astro'
+import { getAllPosts, POSTS_PER_PAGE, slugify } from '../../../lib/posts.js'
+
+export async function getStaticPaths({ paginate }) {
+  const posts = getAllPosts(Astro.fetchContent('../../bai-viet/*.md'))
+
+  const tagsAndPost = posts.flatMap((post) =>
+    post.tags.split(',').map((tag) => [tag, post]),
+  )
+
+  const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
+    acc[tag] = acc[tag] ?? []
+    acc[tag].push(post)
+
+    return acc
+  }, {})
+
+  return Object.entries(postsByTag).map(([tag, posts]) =>paginate(posts, {
+    params: { slug: slugify(tag) },
+    props: { tag },
+    pageSize: POSTS_PER_PAGE,
+  }))
+}
+
+const { page, tag } = Astro.props
+---
+<Base title={`Chủ đề ${tag} - Trang ${page.currentPage}`}>
+    <h1 class="mb-4">Chủ đề {tag} -  Trang {page.currentPage}</h1>
+
+    <div class="mb-4">
+        <PostList posts={page.data} />
+    </div>
+
+    <Paginator page={page} />
+</Base>

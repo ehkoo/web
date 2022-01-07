@@ -1,0 +1,30 @@
+---
+import './Base.css'
+import Header from './Header.astro'
+import Footer from '../components/Footer.astro'
+import OpenGraph from '../components/OpenGraph.astro'
+
+const { title, content } = Astro.props
+---
+<html lang="vi">
+  <head>
+    <Header {content} {title} />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-links">
+        <a class="nav-link" href="/">Trang Chủ</a>
+        <a class="nav-link" href="/gioi-thieu">Giới Thiệu</a>
+        <a class="nav-link" href="/bai-viet">Tất Cả Bài Viết</a>
+      </div>
+    </nav>
+
+    <main class="container mb-4">
+      <slot />
+    </main>
+
+    <footer class="container mb-4">
+      <Footer />
+    </footer>
+  </body>
+</html>
