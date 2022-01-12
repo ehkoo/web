@@ -36,6 +36,8 @@
       padding-left: 32px;
     }
 
+    pre,
+    iframe,
     li,
     p {
       margin-bottom: 16px;
@@ -62,6 +64,18 @@
         &::after {
           content: '`';
         }
+      }
+    }
+
+    blockquote {
+      border-left: 8px solid var(--oc-gray-3);
+      background-color: var(--oc-gray-2);
+      padding: 16px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+
+      p:last-child {
+        margin-bottom: 0;
       }
     }
   }
