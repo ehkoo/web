@@ -15,6 +15,7 @@
     "preview": "astro build && astro preview"
   },
   "devDependencies": {
+    "@wordpress/wordcount": "3.3.1",
     "astro": "0.22.3",
     "autoprefixer": "10.4.0",
     "postcss-calc": "8.0.0",

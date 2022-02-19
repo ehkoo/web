@@ -1,11 +1,14 @@
 ---
+import { count } from '@wordpress/wordcount'
 import './Post.css'
 import DateTime from './DateTime.astro'
 import TagLinks from './TagLinks.astro'
 import ToC from './ToC.astro'
 
-const { post: { title, author, date, tags, astro, isPage } } = Astro.props
 
+const { post: { title, author, date, tags, astro, isPage } } = Astro.props
+const wordCount = count(astro.source, 'words', {})
+const readingTime = Math.ceil(wordCount / 200)
 ---
 <article id="post" class="post">
     <div class="post-wrapper">
@@ -14,7 +17,7 @@ const { post: { title, author, date, tags, astro, isPage } } = Astro.props
         {!isPage &&
             (<div class="mb-4">
                 <div class="text-gray-6 text-sm mb-2">
-                    <p><a href={`https://github.com/${author}`} target="_blank" rel="noreferrer nofollow">@{author}</a> đăng ngày <DateTime show="date" date={date} /></p>
+                    <p><a href={`https://github.com/${author}`} target="_blank" rel="noreferrer nofollow">@{author}</a> đăng ngày <DateTime show="date" date={date} /> • {wordCount} từ  • Đọc trong {readingTime} phút</p>
                 </div>
                 <div class="flex gap-2 text-gray-6 text-sm">
                     Tags: <TagLinks tags={tags} />

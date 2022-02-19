@@ -303,6 +303,13 @@
     "@babel/plugin-syntax-jsx" "^7.16.0"
     "@babel/types" "^7.16.0"
 
+"@babel/runtime@^7.16.0":
+  version "7.17.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.16.0":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.16.0.tgz#d16a35ebf4cd74e202083356fab21dd89363ddd6"
@@ -654,6 +661,14 @@
   dependencies:
     "@types/parse5" "^6.0.1"
     parse5 "^6.0.1"
+
+"@wordpress/wordcount@3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/wordcount/-/wordcount-3.3.1.tgz#17ee7d03650052695c1475616d3273dd3d066a49"
+  integrity sha512-JsIqp8rM+PIRp9V5OoEjoeeWb2Pbd0WCTc6OYWXEstAz4bVQEaD3GAAORKAfWK3GTNvtehq2kX+hjtxgivzKTQ==
+  dependencies:
+    "@babel/runtime" "^7.16.0"
+    lodash "^4.17.21"
 
 ansi-regex@^6.0.1:
   version "6.0.1"
@@ -3016,6 +3031,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 rehype-raw@^6.1.0:
   version "6.1.0"
