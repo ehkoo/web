@@ -6,6 +6,7 @@ cover: https://i.imgur.com/DUDSHph.png
 tags: WebComponents, JavaScript, HTML
 excerpt: 'Cách tốt nhất để chia sẻ code giữa các dự án sử dụng framework khác nhau? Web Components.'
 author: kcjpop
+draft: true
 ---
 
 ![](https://i.imgur.com/DUDSHph.png)
