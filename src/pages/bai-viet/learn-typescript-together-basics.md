@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Cùng học TypeScript: Căn bản về TS'
-date: 2022-02-10
-cover: https://i.imgur.com/eOpH6MX.png
+date: 2022-02-19
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1645291004/ehkoo/eOpH6MX.png
 tags: TypeScript, Dành cho người mới
 excerpt: 'Trong phần đầu tiên của series này, chúng ta hãy tìm hiểu về các kiểu dữ liệu căn bản trong TypeScript (TS) với Ehkoo nhe.'
 author: kcjpop
 ---
 
-![](https://i.imgur.com/eOpH6MX.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1645291004/ehkoo/eOpH6MX.png)
 
 Năm nay đã là năm COVID thứ 2 mà bạn vẫn chưa biết TypeScript (giống mình 🥲) thì quả là một thiếu sót lớn. Như kiểu thời buổi này mang tiếng làm frontend developer mà không biết TS thì bị đồng nghiệp dè bỉu, sếp lớn cười chê, còn nhà tuyển dụng thì bỏ bê không ngó ngàng. Đau khổ lắm (đùa đấy).
 
