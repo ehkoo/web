@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 @import url('./_reset.css');
+@import url('./_fonts.css');
 @import url('./_space.css');
 @import url('./_display.css');
 @import url('./_text.css');
