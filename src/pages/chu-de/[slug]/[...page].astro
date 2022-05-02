@@ -5,7 +5,7 @@ import Paginator from '../../../components/Paginator.astro'
 import { getAllPosts, POSTS_PER_PAGE, slugify } from '../../../lib.js'
 
 export async function getStaticPaths({ paginate }) {
-  const posts = getAllPosts(Astro.fetchContent('../../bai-viet/*.md'))
+  const posts = getAllPosts(await Astro.glob('../../bai-viet/*.md'))
 
   const tagsAndPost = posts.flatMap((post) =>
     post.tags.split(',').map((tag) => [tag, post]),

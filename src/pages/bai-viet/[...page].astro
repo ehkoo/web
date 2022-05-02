@@ -5,7 +5,7 @@ import Paginator from '../../components/Paginator.astro'
 import { getAllPosts, POSTS_PER_PAGE } from '../../lib.js'
 
 export async function getStaticPaths({ paginate, rss }) {
-  const posts = getAllPosts(Astro.fetchContent('./*.md'))
+  const posts = getAllPosts(await Astro.glob('./*.md'))
 
   rss({
     title: 'Ehkoo',

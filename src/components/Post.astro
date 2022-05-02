@@ -5,7 +5,6 @@ import DateTime from './DateTime.astro'
 import TagLinks from './TagLinks.astro'
 import ToC from './ToC.astro'
 
-
 const { post: { title, author, date, tags, astro, isPage } } = Astro.props
 const wordCount = count(astro.source, 'words', {})
 const readingTime = Math.ceil(wordCount / 200)

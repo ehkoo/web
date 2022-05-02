@@ -4,9 +4,12 @@ export const POSTS_PER_PAGE = 12
 function processPosts(posts) {
   return posts
     .sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime()
+      return (
+        new Date(b.frontmatter.date).getTime() -
+        new Date(a.frontmatter.date).getTime()
+      )
     })
-    .filter((p) => p.draft !== true)
+    .filter(p => p.frontmatter.draft !== true)
 }
 
 export function getAllPosts(posts, { limit } = {}) {

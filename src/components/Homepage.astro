@@ -2,7 +2,7 @@
 import PostList from './PostList.astro'
 import { getPostsForHomepage } from '../lib.js'
 
-const posts = getPostsForHomepage(Astro.fetchContent('../pages/bai-viet/*.md'))
+const posts = getPostsForHomepage(await Astro.glob('../pages/bai-viet/*.md'))
 ---
 <style>
 .btn {
