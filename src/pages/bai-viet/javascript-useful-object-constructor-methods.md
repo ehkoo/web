@@ -71,7 +71,7 @@ Tham số `properties` của `Object.create()` cho phép bạn khai báo những
 
 **Vậy property descriptor là gì?**
 
-_Property descriptor_ (mô tả thuộc tính) là một object JavaScript thông thường (Plain Old JavaScript Object - POJO), được sử dụng trong `Object.create()`, `Object.defineProperty(), hoặc`Object.defineProperties()` để thay đổi các thuộc tính đã có của một đối tượng, hoặc tạo đối tượng mới. Ví dụ:
+_Property descriptor_ (mô tả thuộc tính) là một object JavaScript thông thường (Plain Old JavaScript Object - POJO), được sử dụng trong `Object.create()`, `Object.defineProperty()`, hoặc `Object.defineProperties()` để thay đổi các thuộc tính đã có của một đối tượng, hoặc tạo đối tượng mới. Ví dụ:
 
 ```js
 const u = Object.create(User.prototype, {
