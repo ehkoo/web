@@ -9,7 +9,7 @@ function processPosts(posts) {
         new Date(a.frontmatter.date).getTime()
       )
     })
-    .filter(p => p.frontmatter.draft !== true)
+    .filter((p) => p.frontmatter.draft !== true)
 }
 
 export function getAllPosts(posts, { limit } = {}) {

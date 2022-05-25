@@ -1,11 +1,12 @@
 ---
-import Base from './Base.astro'
-import Post from '../components/Post.astro'
+    import Base from './Base.astro'
+    import Post from '../components/Post.astro'
 
-const { content } = Astro.props
+    const { content } = Astro.props
 ---
+
 <Base {content}>
-    <Post post={content}>
-        <slot />
-    </Post>
+<Post post={content}>
+    <slot />
+</Post>
 </Base>

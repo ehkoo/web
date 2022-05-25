@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@wordpress/wordcount": "3.7.0",
-    "astro": "1.0.0-beta.33",
+    "astro": "1.0.0-beta.20",
     "autoprefixer": "10.4.6",
     "postcss-calc": "8.2.4",
     "postcss-custom-media": "8.0.0",
@@ -24,7 +24,6 @@
     "postcss-nested": "5.0.6"
   },
   "dependencies": {
-    "@astrojs/preact": "0.1.2",
     "slugify": "1.6.5"
   }
 }

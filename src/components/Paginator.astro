@@ -1,8 +1,9 @@
 ---
-const { page } = Astro.props
+  const { page } = Astro.props
 ---
+
 <style>
-.btn {
+  .btn {
     font-weight: 500;
     text-decoration: none;
     padding: 8px 16px;
@@ -15,10 +16,10 @@ const { page } = Astro.props
     &--disabled {
       color: var(--oc-gray-6);
     }
-}
+  }
 </style>
 <ul class="flex align-center space-between">
-    <li><a href={page.url.prev} class={`btn ${!page.url.prev && 'btn--disabled'}`}>Trang trước</a></li>
-    <li>Trang {page.currentPage} / {page.lastPage}</li>
-    <li><a href={page.url.next} class={`btn ${!page.url.next && 'btn--disabled'}`}>Trang sau</a></li>
+  <li><a href={page.url.prev} class={`btn ${!page.url.prev && 'btn--disabled' }`}>Trang trước</a></li>
+  <li>Trang {page.currentPage} / {page.lastPage}</li>
+  <li><a href={page.url.next} class={`btn ${!page.url.next && 'btn--disabled' }`}>Trang sau</a></li>
 </ul>

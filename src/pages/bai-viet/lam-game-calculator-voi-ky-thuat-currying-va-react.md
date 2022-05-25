@@ -142,7 +142,6 @@ handleDeleteProduct = (productId) => (e) => {
   e.preventDefault()
   this.props.deleteProduct(productId)
 }
-
 ;<button onClick={this.handleDeleteProduct(productId)}>Delete</button>
 ```
 

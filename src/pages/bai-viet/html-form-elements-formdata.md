@@ -25,7 +25,7 @@ function FormRegister() {
   const [email, setEmail] = useState('')
   const [plan, setPlan] = useState(PLANS[0].value)
 
-  const doSubmit = e => {
+  const doSubmit = (e) => {
     e.preventDefault()
     const input = { plan, email }
     console.log(input)
@@ -41,14 +41,14 @@ function FormRegister() {
           name="email"
           placeholder="kcjpop@ehkoo.com"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
       </label>
 
       <fieldset required>
         <legend>Membership plan*</legend>
-        {PLANS.map(item => (
+        {PLANS.map((item) => (
           <label htmlFor={item.value} key={item.label}>
             <input
               required
@@ -56,7 +56,7 @@ function FormRegister() {
               id={item.value}
               name="plan"
               value={item.value}
-              onChange={e => setPlan(e.target.value)}
+              onChange={(e) => setPlan(e.target.value)}
               checked={item.value === plan}
             />
             {item.label}
@@ -77,7 +77,7 @@ function FormRegister() {
 Thuộc tính [HTMLFormElement.elements](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements) trả về một tập hợp các điều khiển (controls) trong form. Những điều khiển này bao gồm các thẻ `<button>`, `<fieldset>`, `<input>`, `<object>`, `<output>`, `<select>`, và `<textarea>`. Một ngoại lệ là thẻ `<input type="image">` không tính nhe, vì lý do lịch sử 🤷‍♂️. Bạn có thể truy xuất đến một điều khiển thông qua `name` hay `id` của nó. Như trong form ở trên.
 
 ```js
-const doSubmit = e => {
+const doSubmit = (e) => {
   e.preventDefault()
   const plan = e.target.elements.plan.value
   const email = e.target.elements.email.value
@@ -96,7 +96,7 @@ Khi thay đổi vị trí của một control thì thứ tự cũng có thể th
 Nếu bạn muốn "một phát ăn luôn", gom hết tất cả giá trị trong form thì sao nè? Chúng ta có thể dùng `FormData`.
 
 ```js
-const doSubmit = e => {
+const doSubmit = (e) => {
   e.preventDefault()
   const data = new FormData(e.target)
   const input = Object.fromEntries(data.entries())
@@ -110,7 +110,7 @@ Code sau khi sửa lại.
 
 ```jsx
 function FormRegister() {
-  const doSubmit = e => {
+  const doSubmit = (e) => {
     e.preventDefault()
     const input = Object.fromEntries(new FormData(e.target).entries())
     console.log(input)
@@ -131,7 +131,7 @@ function FormRegister() {
 
       <fieldset required>
         <legend>Membership plan*</legend>
-        {PLANS.map(item => (
+        {PLANS.map((item) => (
           <label htmlFor={item.value} key={item.label}>
             <input required type="radio" id={item.value} name="plan" />
             {item.label}

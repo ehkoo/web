@@ -42,6 +42,7 @@ obj = { name: 'bar' } // Error: Assignment to constant variable.
 obj.name = 'bar'
 console.log(obj) // { name: 'bar' }
 ```
+
 Xem thêm bài: [Tổng hợp những tính năng nổi bật trong ES6](https://ehkoo.com/bai-viet/tong-hop-tinh-nang-noi-bat-es6)
 
 ### Thao tác trên object
@@ -155,9 +156,13 @@ const c = [...a, ...b]
 Xóa một phần tử ra khỏi mảng các đối tượng
 
 ```js
-const a = [{ id: 1, name: 'Foo' }, { id: 2, name: 'Bar' }, { id: 3, name: 'Baz' }]
+const a = [
+  { id: 1, name: 'Foo' },
+  { id: 2, name: 'Bar' },
+  { id: 3, name: 'Baz' },
+]
 
-const b = a.filter(obj => obj.id !== 2)
+const b = a.filter((obj) => obj.id !== 2)
 console.log(b) // [ { id: 1, name: 'Foo' }, { id: 3, name: 'Baz' } ]
 ```
 
@@ -183,17 +188,25 @@ Thay đổi dữ liệu của mảng
 
 ```js
 const a = [1, 2, 3]
-const b = a.map(x => x * 2) // [2, 4, 6] 😃
+const b = a.map((x) => x * 2) // [2, 4, 6] 😃
 
-const c = [ { id: 1, name: 'Foo' }, { id: 2, name: 'Bar' }, { id: 3, name: 'Baz' } ]
-const d = c.map(obj => Object.assign(obj, { name: obj.name.toUppercase() }))
+const c = [
+  { id: 1, name: 'Foo' },
+  { id: 2, name: 'Bar' },
+  { id: 3, name: 'Baz' },
+]
+const d = c.map((obj) => Object.assign(obj, { name: obj.name.toUppercase() }))
 console.log(d) // [ { id: 1, name: 'FOO' }, { id: 2, name: 'BAR' }, { id: 3, name: 'BAZ' } ]
 ```
 
 Sắp xếp mảng: tránh dùng phương thức `.sort` để sắp xếp mảng, vì phương thức này thay đổi thứ tự của các phần tử trong mảng được sắp xếp. Thay vào đó:
 
 ```js
-const a = [ { id: 1, name: 'Foo' }, { id: 2, name: 'Bar' }, { id: 3, name: 'Baz' } ]
+const a = [
+  { id: 1, name: 'Foo' },
+  { id: 2, name: 'Bar' },
+  { id: 3, name: 'Baz' },
+]
 const b = [...a].sort((x, y) => y.id - x.id)
 console.log(b) // [ { id: 3, name: 'Baz' }, { id: 2, name: 'Bar' }, { id: 1, name: 'Foo' } ]
 ```
@@ -287,22 +300,23 @@ function Cart(props) {
 
 Functional components có kha khá lợi ích:
 
-* Tương đối thuần khiết, vì được thiết kế theo kiểu một `props` vào, và JSX đi ra. Và không có `this.state`.
-* Không phải quan tâm đến `this`
-* Khuyến khích tách biệt phần code xử lý business logic và phần xây dựng giao diện
-* UI được tách thành những component nhỏ, dễ quản lý hơn
-* (Nghe đồn là) nhanh và ít tốn bộ nhớ hơn so với class components
+- Tương đối thuần khiết, vì được thiết kế theo kiểu một `props` vào, và JSX đi ra. Và không có `this.state`.
+- Không phải quan tâm đến `this`
+- Khuyến khích tách biệt phần code xử lý business logic và phần xây dựng giao diện
+- UI được tách thành những component nhỏ, dễ quản lý hơn
+- (Nghe đồn là) nhanh và ít tốn bộ nhớ hơn so với class components
 
 Và dĩ nhiên cũng có những bất lợi:
 
-* Thiếu đi một số tính năng: không hỗ trợ life-cycle hooks, không có `this.state`, không có `this`
-* Không thân thuộc với lập trình viên OOP 😱
+- Thiếu đi một số tính năng: không hỗ trợ life-cycle hooks, không có `this.state`, không có `this`
+- Không thân thuộc với lập trình viên OOP 😱
 
 ### Demo
 
 Chúng ta có thể áp dụng những kỹ thuật ở trên để xây dựng một trang liệt kê sản phẩm đơn giản. Bạn có thể xem danh sách sản phẩm, sắp xếp sản phẩm theo tên và giá. Bạn cũng có thể tìm kiếm và xóa sản phẩm. Bên cạnh đó, chúng ta có thể làm thêm 2 nút "rảnh đời", có tác dụng chuyển tên tất cả sản phẩm sang chữ in hoa, và tăng giá sản phẩm lên gấp đôi. Cuối cùng, trong trang có một nút Reset để khôi phục dữ liệu về lại trạng thái ban đầu.
 
 Bạn có thể xem demo ở bên dưới:
+
 <iframe src="https://codesandbox.io/embed/github/ehkoo/react-immutability-techniques/tree/master/?view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Mã nguồn có thể tìm thấy tại: [https://github.com/ehkoo/react-immutability-techniques](https://github.com/ehkoo/react-immutability-techniques)

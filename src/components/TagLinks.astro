@@ -1,20 +1,22 @@
 ---
-import { slugify } from '../lib.js'
+    import { slugify } from '../lib.js'
 
-const links = Astro.props.tags.split(/,\s+/).map(t => {
-    const tag = slugify(t)
-    return { label: t, href: `/chu-de/${tag}`}
-})
+    const links = Astro.props.tags.split(/,\s+/).map(t => {
+        const tag = slugify(t)
+        return { label: t, href: `/chu-de/${tag}` }
+    })
 ---
+
 <style>
-li {
-    &::after {
-        content: ", ";
+    li {
+        &::after {
+            content: ", ";
+        }
+
+        &:last-child::after {
+            content: "";
+        }
     }
-    &:last-child::after {
-       content: "";
-    }
-}
 </style>
 <ul class="flex flex-wrap gap-2">
     {links.map(link => <li><a href={link.href}>#{link.label}</a></li>)}
