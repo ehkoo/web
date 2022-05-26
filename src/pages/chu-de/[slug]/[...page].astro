@@ -8,7 +8,7 @@
     const posts = getAllPosts(await Astro.glob('../../bai-viet/*.md'))
 
     const tagsAndPost = posts.flatMap((post) =>
-      post.tags.split(',').map((tag) => [tag, post]),
+      post.frontmatter.tags.split(',').map((tag) => [tag, post]),
     )
 
     const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
