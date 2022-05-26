@@ -33,7 +33,7 @@
     &-title {
       font-weight: 600;
       text-decoration: none;
-      color: var(--oc-indigo-7);
+      color: var(--indigo-7);
     }
   }
 }

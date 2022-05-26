@@ -1,34 +1,38 @@
 ---
-import './Base.css'
-import '../styles/global.css'
-import Header from './Header.astro'
-import Footer from '../components/Footer.astro'
+  import './Base.css'
+  import '../styles/global.css'
+  import Header from './Header.astro'
+  import Footer from '../components/Footer.astro'
 
-const { title, content } = Astro.props
+  const { title, content } = Astro.props
 ---
+
 <html lang="vi">
-  <head>
-    <Header {content} {title} />
-  </head>
-  <body>
-    <nav class="nav">
-      <div class="container nav-links">
-        <a class="nav-link" href="/">Trang Chủ</a>
-        <a class="nav-link" href="/gioi-thieu">Giới Thiệu</a>
-        <a class="nav-link" href="/bai-viet">Tất Cả Bài Viết</a>
-      </div>
-    </nav>
 
-    <main class="container mb-4">
-      <slot />
-    </main>
+<head>
+  <Header {content} {title} />
+</head>
 
-    <footer class="container mb-4">
-      <Footer />
-    </footer>
-    <script type="text/javascript">
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-    heap.load("4035360461");
+<body>
+  <nav class="nav">
+    <div class="container nav-links">
+      <a class="nav-link" href="/">Trang Chủ</a>
+      <a class="nav-link" href="/gioi-thieu">Giới Thiệu</a>
+      <a class="nav-link" href="/bai-viet">Tất Cả Bài Viết</a>
+    </div>
+  </nav>
+
+  <main class="container mb-4">
+    <slot />
+  </main>
+
+  <footer class="container mb-4">
+    <Footer />
+  </footer>
+  <script type="text/javascript">
+      window.heap = window.heap || [], heap.load = function (e, t) { window.heap.appid = e, window.heap.config = t = t || {}; var r = t.forceSSL || "https:" === document.location.protocol, a = document.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = (r ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap-" + e + ".js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(a, n); for (var o = function (e) { return function () { heap.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++)heap[p[c]] = o(p[c]) };
+      heap.load("4035360461");
     </script>
-  </body>
+</body>
+
 </html>

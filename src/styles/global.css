@@ -16,27 +16,6 @@
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
     Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-
-  --oc-gray-0: #f8f9fa;
-  --oc-gray-1: #f1f3f5;
-  --oc-gray-2: #e9ecef;
-  --oc-gray-3: #dee2e6;
-  --oc-gray-4: #ced4da;
-  --oc-gray-5: #adb5bd;
-  --oc-gray-6: #868e96;
-  --oc-gray-7: #495057;
-  --oc-gray-8: #343a40;
-  --oc-gray-9: #212529;
-  --oc-indigo-0: #edf2ff;
-  --oc-indigo-1: #dbe4ff;
-  --oc-indigo-2: #bac8ff;
-  --oc-indigo-3: #91a7ff;
-  --oc-indigo-4: #748ffc;
-  --oc-indigo-5: #5c7cfa;
-  --oc-indigo-6: #4c6ef5;
-  --oc-indigo-7: #4263eb;
-  --oc-indigo-8: #3b5bdb;
-  --oc-indigo-9: #364fc7;
 }
 
 :root {
@@ -47,19 +26,19 @@
     0.4626rem + 1.0309vw + var(--user-font-scale),
     1.125rem
   );
-  color: var(--oc-gray-8);
+  color: var(--gray-8);
 }
 
 a {
-  color: var(--oc-indigo-8);
+  color: var(--indigo-8);
 
   &:hover {
-    color: var(--oc-indigo-6);
+    color: var(--indigo-6);
   }
 }
 
 body {
-  background-color: var(--oc-gray-1);
+  background-color: var(--gray-1);
 }
 
 code {
