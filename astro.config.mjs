@@ -5,7 +5,7 @@ export default defineConfig({
   server: { port: 6001, host: false },
   markdown: {
     shikiConfig: {
-      theme: 'github-light',
+      theme: 'github-dark-dimmed',
     },
   },
 })

@@ -31,8 +31,6 @@
 
     .astro-code {
       padding: 8px;
-      border-radius: 4px;
-      border: 1px solid var(--gray-2);
       font-variant-ligatures: none;
       font-size: var(--code-font-size);
       margin-bottom: 16px;
