@@ -1,11 +1,12 @@
 ---
-const title = Astro.props.content?.title || Astro.props.title
-const { excerpt: desc, cover: imageUrl, slug, isPage } = Astro.props.content ?? {}
-const permalink = slug != null
-    ? new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
-    : Astro.site
+    const title = Astro.props.content?.title || Astro.props.title
+    const { excerpt: desc, cover: imageUrl, slug, isPage } = Astro.props.content ?? {}
+    const permalink = slug != null
+        ? new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
+        : Astro.site
 
 ---
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
@@ -16,22 +17,26 @@ const permalink = slug != null
 
 <meta name="google-site-verification" content="LjLC6GCkUz9twdPnmBQ3plfDR_F_AK93PefchZ5HlkU">
 <meta property="fb:pages" content="122317275146521">
-<meta property="fb:app_id" content="207039013199010"/>
+<meta property="fb:app_id" content="207039013199010" />
 
 <meta name="description" content={desc}>
 
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title}>
-{imageUrl && <meta property="twitter:image" content={imageUrl}>}
-{desc && <meta property="twitter:description" content={desc}>}
+{imageUrl &&
+<meta property="twitter:image" content={imageUrl}>}
+{desc &&
+<meta property="twitter:description" content={desc}>}
 
 <meta property="og:url" content={permalink}>
 <meta property="og:site_name" content="Ehkoo">
 <meta property="og:title" content={title}>
 <meta property="og:type" content="website">
-{desc && <meta property="og:description" content={desc}>}
-{imageUrl && <meta property="og:image" content={imageUrl}>}
+{desc &&
+<meta property="og:description" content={desc}>}
+{imageUrl &&
+<meta property="og:image" content={imageUrl}>}
 
 <link rel="alternate" type="application/rss+xml" title="Các bài viết mới nhất của Ehkoo" href="/rss.xml">
 

@@ -1,20 +1,22 @@
 ---
-import './PostList.css'
-import DateTime from './DateTime.astro'
+    import './PostList.css'
+    import DateTime from './DateTime.astro'
 
-const { posts } = Astro.props
+    const { posts } = Astro.props
 ---
+
 <div class="post-list">
     {posts.map(({ frontmatter, url }) => (
-        <article class="post-list-single flex flex-column gap-2">
-            <div>
-                <img class="post-list-single-cover" src={frontmatter.cover} alt="">
-            </div>
-            <a class="post-list-single-title text-xl" href={url}>{frontmatter.title}</a>
-            <p class="mb-4">{frontmatter.excerpt}</p>
-            <p class="text-gray-6 text-sm">
-                @{frontmatter.author} | <DateTime date={frontmatter.date} />
-            </p>
-        </article>
+    <article class="post-list-single flex flex-column gap-2">
+        <div>
+            <img class="post-list-single-cover" src={frontmatter.cover} alt="">
+        </div>
+        <a class="post-list-single-title text-xl" href={url}>{frontmatter.title}</a>
+        <p class="mb-4">{frontmatter.excerpt}</p>
+        <p class="text-gray-6 text-sm">
+            @{frontmatter.author} |
+            <DateTime date={frontmatter.date} />
+        </p>
+    </article>
     ))}
 </div>
