@@ -1,0 +1,8 @@
+{
+  "cssvar.files": [
+    "./node_modules/open-props/open-props.min.css",
+    "src/styles/global.css"
+  ],
+
+  "cssvar.extensions": ["css", "html", "astro", "js", "jsx"]
+}
