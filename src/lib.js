@@ -31,3 +31,18 @@ export function getPostsForHomepage(posts) {
 export function slugify(str) {
   return baseSlugify(str, { locale: 'vi', lower: true, trim: true })
 }
+
+export function groupPostsByTag(posts) {
+  const tagsAndPost = posts.flatMap((post) =>
+    post.frontmatter.tags.split(',').map((tag) => [tag.trim(), post]),
+  )
+
+  const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
+    acc[tag] = acc[tag] ?? []
+    acc[tag].push(post)
+
+    return acc
+  }, {})
+
+  return postsByTag
+}

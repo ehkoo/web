@@ -2,21 +2,12 @@
   import Base from '../../../layouts/Base.astro'
   import PostList from '../../../components/PostList.astro'
   import Paginator from '../../../components/Paginator.astro'
-  import { getAllPosts, POSTS_PER_PAGE, slugify } from '../../../lib.js'
+  import { getAllPosts, groupPostsByTag, POSTS_PER_PAGE, slugify } from '../../../lib.js'
 
   export async function getStaticPaths({ paginate }) {
     const posts = getAllPosts(await Astro.glob('../../bai-viet/*.md'))
 
-    const tagsAndPost = posts.flatMap((post) =>
-      post.frontmatter.tags.split(',').map((tag) => [tag, post]),
-    )
-
-    const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
-      acc[tag] = acc[tag] ?? []
-      acc[tag].push(post)
-
-      return acc
-    }, {})
+    const postsByTag = groupPostsByTag(posts)
 
     return Object.entries(postsByTag).map(([tag, posts]) => paginate(posts, {
       params: { slug: slugify(tag) },

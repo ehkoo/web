@@ -22,7 +22,7 @@
   &-single {
     background-color: #fff;
     padding: 16px;
-    border-radius: 4px;
+    border-radius: var(--radius-2);
 
     &-cover {
       height: 160px;

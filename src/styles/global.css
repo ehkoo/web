@@ -30,7 +30,7 @@
 }
 
 a {
-  color: var(--indigo-8);
+  color: var(--indigo-7);
 
   &:hover {
     color: var(--indigo-6);
@@ -38,7 +38,7 @@ a {
 }
 
 body {
-  background-color: var(--gray-1);
+  background-color: var(--gray-2);
 }
 
 code {

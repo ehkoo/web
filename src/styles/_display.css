@@ -1,3 +1,7 @@
+.grid {
+  display: grid;
+}
+
 .flex {
   display: flex;
 }
@@ -16,6 +20,10 @@
 
 .space-between {
   justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 4px;
 }
 
 .gap-2 {

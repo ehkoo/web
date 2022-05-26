@@ -1,0 +1,18 @@
+---
+  import './PostsOfTag.css'
+  const { posts, tag } = Astro.props
+---
+
+<div class="posts-of-tag">
+  <h2 class="posts-of-tag-title mb-4">{tag} ({posts.length})</h2>
+
+  <ul class="flex flex-column gap-2">
+    {posts.map(post =>
+    <li class="flex space-between align-center gap-2">
+      <a href={post.url} class="posts-of-tag-link">{post.frontmatter.title}</a>
+
+      <span class="date">{new Intl.DateTimeFormat('vi-VN').format(new Date(post.frontmatter.date))}</span>
+    </li>
+    )}
+  </ul>
+</div>
