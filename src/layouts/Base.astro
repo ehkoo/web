@@ -8,7 +8,6 @@
 
   function isCurrentActive(path) {
     const p = Astro.canonicalURL.pathname
-    console.log(p, path)
     if (p !== '/' && path === '/') return false
 
     return p.includes(path)
