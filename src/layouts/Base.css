@@ -14,7 +14,7 @@
     gap: 8px;
 
     @media (--xl) {
-      gap: 32px;
+      gap: 16px;
     }
   }
 
@@ -22,15 +22,19 @@
     font-weight: 500;
     text-decoration: none;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: var(--radius-2);
 
     @media (--lg) {
       padding-left: 16px;
       padding-right: 16px;
     }
 
-    &:hover {
+    &--active {
       background-color: var(--indigo-1);
+    }
+
+    &:hover:not(&--active) {
+      background-color: var(--indigo-2);
     }
   }
 }

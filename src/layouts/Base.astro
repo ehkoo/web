@@ -5,6 +5,14 @@
   import Footer from '../components/Footer.astro'
 
   const { title, content } = Astro.props
+
+  function isCurrentActive(path) {
+    const p = Astro.canonicalURL.pathname
+    console.log(p, path)
+    if (p !== '/' && path === '/') return false
+
+    return p.includes(path)
+  }
 ---
 
 <html lang="vi">
@@ -16,10 +24,12 @@
 <body>
   <nav class="nav">
     <div class="container nav-links">
-      <a class="nav-link" href="/">Trang Chủ</a>
-      <a class="nav-link" href="/gioi-thieu">Giới Thiệu</a>
-      <a class="nav-link" href="/bai-viet">Tất Cả Bài Viết</a>
-      <a class="nav-link" href="/chu-de">Chủ Đề</a>
+      <a class={`nav-link ${isCurrentActive('/') ? 'nav-link--active' : '' }`} href="/">Trang Chủ</a>
+      <a class={`nav-link ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : '' }`} href="/gioi-thieu">Giới
+        Thiệu</a>
+      <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : '' }`} href="/bai-viet">Tất Cả Bài
+        Viết</a>
+      <a class={`nav-link ${isCurrentActive('/chu-de') ? 'nav-link--active' : '' }`} href="/chu-de">Chủ Đề</a>
     </div>
   </nav>
 
