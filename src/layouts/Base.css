@@ -12,6 +12,11 @@
   &-links {
     display: flex;
     gap: 8px;
+    flex-direction: column;
+
+    @media (--md) {
+      flex-direction: row;
+    }
 
     @media (--xl) {
       gap: 16px;
