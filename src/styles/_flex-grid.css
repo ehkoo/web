@@ -14,8 +14,22 @@
   flex-direction: column;
 }
 
+.flex-row {
+  &-md {
+    @media (--md) {
+      flex-direction: row;
+    }
+  }
+}
+
 .align-center {
   align-items: center;
+
+  &-md {
+    @media (--md) {
+      align-items: center;
+    }
+  }
 }
 
 .space-between {
