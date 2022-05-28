@@ -5,9 +5,9 @@
 @import url('./_text.css');
 @import url('./_color.css');
 
-@custom-media --md (min-width: 960px);
-@custom-media --lg (min-width: 1280px);
-@custom-media --xl (min-width: 1400px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 960px);
+@custom-media --xl (min-width: 1280px);
 
 :root {
   --user-font-scale: 1rem - 16px;
