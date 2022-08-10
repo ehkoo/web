@@ -15,8 +15,10 @@
     "preview": "astro build && astro preview"
   },
   "devDependencies": {
+    "@astrojs/mdx": "0.8.1",
+    "@astrojs/rss": "1.0.0",
     "@wordpress/wordcount": "3.7.0",
-    "astro": "1.0.0-beta.20",
+    "astro": "1.0.1",
     "autoprefixer": "10.4.6",
     "postcss-calc": "8.2.4",
     "postcss-custom-media": "8.0.0",

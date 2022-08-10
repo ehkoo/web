@@ -1,22 +1,22 @@
 ---
-  import Base from '../../../layouts/Base.astro'
-  import PostList from '../../../components/PostList.astro'
-  import Paginator from '../../../components/Paginator.astro'
-  import { getAllPosts, groupPostsByTag, POSTS_PER_PAGE, slugify } from '../../../lib.js'
+import Base from '../../../layouts/Base.astro'
+import PostList from '../../../components/PostList.astro'
+import Paginator from '../../../components/Paginator.astro'
+import { getAllPosts, groupPostsByTag, POSTS_PER_PAGE, slugify } from '../../../lib.js'
 
-  export async function getStaticPaths({ paginate }) {
-    const posts = getAllPosts(await Astro.glob('../../bai-viet/*.md'))
+export async function getStaticPaths({ paginate }) {
+  const posts = getAllPosts(await Astro.glob('../../bai-viet/*.md'))
 
-    const postsByTag = groupPostsByTag(posts)
+  const postsByTag = groupPostsByTag(posts)
 
-    return Object.entries(postsByTag).map(([tag, posts]) => paginate(posts, {
-      params: { slug: slugify(tag) },
-      props: { tag },
-      pageSize: POSTS_PER_PAGE,
-    }))
-  }
+  return Object.entries(postsByTag).map(([tag, posts]) => paginate(posts, {
+    params: { slug: slugify(tag) },
+    props: { tag },
+    pageSize: POSTS_PER_PAGE,
+  }))
+}
 
-  const { page, tag } = Astro.props
+const { page, tag } = Astro.props
 ---
 
 <Base title={`Chủ đề ${tag} - Trang ${page.currentPage}`}>

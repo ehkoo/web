@@ -1,12 +1,12 @@
 ---
-    import Base from './Base.astro'
-    import Post from '../components/Post.astro'
+import Base from './Base.astro'
+import PostSingle from '../components/PostSingle.astro'
 
-    const { content } = Astro.props
+const { content, headings } = Astro.props
 ---
 
 <Base {content}>
-<Post post={content}>
+<PostSingle post={content} headers={headings} raw={Astro.props.rawContent()}>
     <slot />
-</Post>
+</PostSingle>
 </Base>

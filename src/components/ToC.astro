@@ -1,15 +1,15 @@
 ---
-    const { headers } = Astro.props
+const { headers = [] } = Astro.props
 
-    const toc = headers.reduce((acc, current, index, arr) => {
-        if (acc.length === 0) return [{ ...current, children: [] }]
+const toc = headers.reduce((acc, current) => {
+    if (acc.length === 0) return [{ ...current, children: [] }]
 
-        const last = acc[acc.length - 1]
-        if (current.depth > last.depth) last.children.push(current)
-        else acc.push({ ...current, children: [] })
+    const last = acc[acc.length - 1]
+    if (current.depth > last.depth) last.children.push(current)
+    else acc.push({ ...current, children: [] })
 
-        return acc
-    }, [])
+    return acc
+}, [])
 ---
 
 <style>

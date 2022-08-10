@@ -1,13 +1,13 @@
 ---
-    import { count } from '@wordpress/wordcount'
-    import './Post.css'
-    import DateTime from './DateTime.astro'
-    import TagLinks from './TagLinks.astro'
-    import ToC from './ToC.astro'
+import { count } from '@wordpress/wordcount'
+import './Post.css'
+import DateTime from './DateTime.astro'
+import TagLinks from './TagLinks.astro'
+import ToC from './ToC.astro'
 
-    const { post: { title, author, date, tags, astro, isPage } } = Astro.props
-    const wordCount = count(astro.source, 'words', {})
-    const readingTime = Math.ceil(wordCount / 200)
+const { headers, raw, post: { title, author, date, tags, isPage } } = Astro.props
+const wordCount = count(raw, 'words', {})
+const readingTime = Math.ceil(wordCount / 200)
 ---
 
 <article id="post" class="post">
@@ -42,7 +42,7 @@
 
     {!isPage &&
     (<nav class="post-nav">
-        <ToC headers={astro.headers} />
+        <ToC headers={headers} />
     </nav>)}
 
 </article>

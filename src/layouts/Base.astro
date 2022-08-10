@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro'
 const { title, content } = Astro.props
 
 function isCurrentActive(path) {
-  const p = Astro.canonicalURL.pathname
+  const p = Astro.url.pathname
   if (p !== '/' && path === '/') return false
 
   return p.includes(path)

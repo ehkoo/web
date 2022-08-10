@@ -1,10 +1,10 @@
 ---
-    import { slugify } from '../lib.js'
+import { slugify } from '../lib.js'
 
-    const links = Astro.props.tags.split(/,\s+/).map(t => {
-        const tag = slugify(t)
-        return { label: t, href: `/chu-de/${tag}` }
-    })
+const links = Astro.props.tags.split(/,\s+/).map(t => {
+    const tag = slugify(t)
+    return { label: t, href: `/chu-de/${tag}` }
+})
 ---
 
 <style>

@@ -1,23 +1,23 @@
 ---
-  import Base from '../../layouts/Base.astro'
-  import PostsOfTag from '../../components/PostsOfTag.astro';
-  import { getAllPosts, groupPostsByTag } from '../../lib'
+import Base from '../../layouts/Base.astro'
+import PostsOfTag from '../../components/PostsOfTag.astro';
+import { getAllPosts, groupPostsByTag } from '../../lib'
 
-  const posts = getAllPosts(await Astro.glob('../bai-viet/*.md'))
-  const postsByTag = groupPostsByTag(posts)
+const posts = getAllPosts(await Astro.glob('../bai-viet/*.md'))
+const postsByTag = groupPostsByTag(posts)
 
-  const sorted = Object.entries(postsByTag)
-    // Sort posts by published date
-    .map(
-      ([tag, posts]) => [tag, posts.sort((a, b) => new Date(b.frontmatter?.date).getTime() - new Date(a.frontmatter?.date).getTime())]
-    )
-    // Then sort tag by its latest post date
-    .sort(([_, a], [__, b]) => {
-      const [firstOfA] = a
-      const [firstOfB] = b
+const sorted = Object.entries(postsByTag)
+  // Sort posts by published date
+  .map(
+    ([tag, posts]) => [tag, posts.sort((a, b) => new Date(b.frontmatter?.date).getTime() - new Date(a.frontmatter?.date).getTime())]
+  )
+  // Then sort tag by its latest post date
+  .sort(([_, a], [__, b]) => {
+    const [firstOfA] = a
+    const [firstOfB] = b
 
-      return new Date(firstOfB.frontmatter?.date).getTime() - new Date(firstOfA.frontmatter?.date).getTime()
-    })
+    return new Date(firstOfB.frontmatter?.date).getTime() - new Date(firstOfA.frontmatter?.date).getTime()
+  })
 ---
 
 <Base title="Tất cả chủ đề">

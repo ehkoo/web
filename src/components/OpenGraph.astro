@@ -1,6 +1,6 @@
 ---
-  const { content: { title, excerpt: desc, cover: imageUrl, slug, isPage } } = Astro.props
-  const url = new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
+const { content: { title, excerpt: desc, cover: imageUrl, slug, isPage } } = Astro.props
+const url = new URL(isPage ? slug : '/bai-viet/' + slug, Astro.site)
 ---
 
 <meta name="description" content={desc}>
