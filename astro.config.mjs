@@ -1,17 +1,20 @@
-import { defineConfig } from 'astro/config';
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx'
+import { defineConfig } from 'astro/config'
+
+import { remarkReadingTime } from './src/remark-reading-time.mjs'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ehkoo.com',
   server: {
     port: 6001,
-    host: false
+    host: false,
   },
   markdown: {
     shikiConfig: {
-      theme: 'github-dark-dimmed'
-    }
+      theme: 'github-dark-dimmed',
+    },
+    remarkPlugins: [remarkReadingTime],
   },
-  integrations: [mdx()]
-});
+  integrations: [mdx()],
+})

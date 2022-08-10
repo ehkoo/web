@@ -6,7 +6,7 @@ const { content, headings } = Astro.props
 ---
 
 <Base {content}>
-<PostSingle post={content} headers={headings} raw={Astro.props.rawContent()}>
+<PostSingle post={content} headers={headings}>
     <slot />
 </PostSingle>
 </Base>
