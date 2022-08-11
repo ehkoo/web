@@ -27,7 +27,6 @@
     font-weight: 500;
     text-decoration: none;
     padding: 8px;
-    border-radius: var(--radius-2);
 
     @media (--lg) {
       padding-left: 16px;
@@ -35,11 +34,11 @@
     }
 
     &--active {
-      background-color: var(--indigo-1);
+      border-bottom: 2px solid var(--gray-7);
     }
 
     &:hover:not(&--active) {
-      background-color: var(--indigo-2);
+      border-bottom: 2px solid var(--gray-8);
     }
   }
 }

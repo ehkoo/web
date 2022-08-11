@@ -8,39 +8,50 @@ const { headers, post: { readingTime, title, author, date, tags, isPage } } = As
 ---
 
 <article id="post" class="post">
+    <h1 class="post-title mb-4 mt-4">{title}</h1>
+
     <div class="post-wrapper">
-        <h1 class="mb-4 mt-4">{title}</h1>
-
-        {!isPage &&
-        (<div class="mb-4">
-            <div class="text-gray-6 text-sm mb-2">
-                <p><a href={`https://github.com/${author}`} target="_blank" rel="noreferrer nofollow">@{author}</a> đăng
-                    ngày
-                    <DateTime show="date" date={date} /> • {readingTime.words} từ • Đọc trong
-                    {Math.ceil(readingTime.minutes)} phút
-                </p>
+        <div>
+            <div class="post-content">
+                <slot />
             </div>
-            <div class="flex gap-2 text-gray-6 text-sm">
-                Tags:
-                <TagLinks tags={tags} />
-            </div>
-        </div>)}
 
-        <div class="post-content">
-            <slot />
+            {!isPage &&
+            (<>
+                <div class="flex gap-2 text-gray-6 text-sm">
+                    Tags:
+                    <TagLinks tags={tags} />
+                </div>
+                <div>
+                    <script src="https://utteranc.es/client.js" repo="ehkoo/web" issue-term="pathname"
+                        label="web-comments" theme="github-light" crossorigin="anonymous" async>
+                        </script>
+                </div>
+            </>)}
         </div>
 
         {!isPage &&
-        (<div>
-            <script src="https://utteranc.es/client.js" repo="ehkoo/web" issue-term="pathname" label="web-comments"
-                theme="github-light" crossorigin="anonymous" async>
-                </script>
-        </div>)}
+        (<nav class="post-nav">
+            <div class="post-meta text-sm mb-2">
+                <p class="mb-2">
+                    Viết bởi <a class="inline-flex align-center gap-1" href={`https://github.com/${author}`}
+                        target="_blank" rel="noreferrer nofollow"><strong>@{author}</strong> <svg stroke="currentColor"
+                            fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                            stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg></a>
+                </p>
+                <p>• Đăng ngày
+                    <DateTime show="date" date={date} />
+                </p>
+                <p>• Dài <strong>{readingTime.words}</strong> từ</p>
+                <p>• Đọc trong <strong>{Math.ceil(readingTime.minutes)}</strong> phút</p>
+            </div>
+
+            <ToC headers={headers} />
+
+        </nav>)}
     </div>
-
-    {!isPage &&
-    (<nav class="post-nav">
-        <ToC headers={headers} />
-    </nav>)}
-
 </article>

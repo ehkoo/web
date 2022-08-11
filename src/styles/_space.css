@@ -22,4 +22,8 @@
   .pl-$(i) {
     padding-left: calc(var(--spacer) * $(i));
   }
+
+  .p-$(i) {
+    padding: calc(var(--spacer) * $(i));
+  }
 }

@@ -2,6 +2,10 @@
   display: grid;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .flex {
   display: flex;
 }

@@ -16,24 +16,22 @@
   @media (--xl) {
     padding-left: 0;
     padding-right: 0;
-    grid-template-columns: repeat(4, 1fr);
   }
 
   &-single {
-    background-color: #fff;
-    padding: 16px;
-    border-radius: var(--radius-2);
-
     &-cover {
       height: 160px;
       width: 100%;
       object-fit: cover;
+      border-radius: var(--radius-2);
+      /* border-top-left-radius: var(--radius-2);
+      border-top-right-radius: var(--radius-2); */
     }
 
     &-title {
       font-weight: 600;
       text-decoration: none;
-      color: var(--indigo-7);
+      color: var(--gray-7);
     }
   }
 }

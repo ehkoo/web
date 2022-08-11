@@ -19,7 +19,7 @@ const toc = headers.reduce((acc, current) => {
     }
 </style>
 
-<div class="post-toc pl-2">
+<div class="post-toc">
     <h3 class="mb-4">Mục Lục</h3>
     <ul class="text-sm flex flex-column gap-2">
         {toc.map(one =>
@@ -32,7 +32,12 @@ const toc = headers.reduce((acc, current) => {
         </li>
         )}
         <li>
-            <a href="#top" class="decoration-none">⬆️ Đầu trang</a>
+            <a href="#top" class="decoration-none flex align-center gap-1"><svg stroke="currentColor" fill="none"
+                    stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="14 9 9 4 4 9"></polyline>
+                    <path d="M20 20h-7a4 4 0 0 1-4-4V4"></path>
+                </svg> Đầu trang</a>
         </li>
     </ul>
 

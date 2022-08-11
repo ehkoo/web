@@ -11,12 +11,14 @@ const { posts } = Astro.props
         <div>
             <img class="post-list-single-cover" src={frontmatter.cover} alt="">
         </div>
-        <a class="post-list-single-title text-xl" href={url}>{frontmatter.title}</a>
-        <p class="mb-4">{frontmatter.excerpt}</p>
-        <p class="text-gray-6 text-sm">
-            @{frontmatter.author} |
-            <DateTime date={frontmatter.date} />
-        </p>
+        <div class="p-2">
+            <a class="post-list-single-title text-lg" href={url}>{frontmatter.title}</a>
+            <p class="mb-4">{frontmatter.excerpt}</p>
+            <p class="text-gray-6 text-sm">
+                @{frontmatter.author} |
+                <DateTime date={frontmatter.date} />
+            </p>
+        </div>
     </article>
     ))}
 </div>
