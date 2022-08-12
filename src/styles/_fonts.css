@@ -38,9 +38,9 @@
 }
 
 @font-face {
-  font-family: 'Iosevka';
+  font-family: 'RecursiveMonoLnrSt';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/iosevka-regular.woff2') format('woff2');
+  src: url('/fonts/RecursiveMonoLnrSt-Regular.woff2') format('woff2');
 }
