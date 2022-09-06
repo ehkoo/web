@@ -29,12 +29,16 @@ const { posts, tag } = Astro.props
   <h2 class="title mb-4">{tag} ({posts.length})</h2>
 
   <ul class="flex flex-column gap-2">
-    {posts.map(post =>
-    <li class="flex flex-column flex-row-md space-between align-center-md">
-      <a href={post.url} class="link">{post.frontmatter.title}</a>
+    {
+      posts.map((post) => (
+        <li class="flex flex-column flex-row-md space-between align-center-md">
+          <a href={post.url} class="link">
+            {post.frontmatter.title}
+          </a>
 
-      <span class="date">{new Intl.DateTimeFormat('vi-VN').format(new Date(post.frontmatter.date))}</span>
-    </li>
-    )}
+          <span class="date">{new Intl.DateTimeFormat('vi-VN').format(new Date(post.frontmatter.date))}</span>
+        </li>
+      ))
+    }
   </ul>
 </div>

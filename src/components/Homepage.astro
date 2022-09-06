@@ -6,21 +6,21 @@ const posts = getPostsForHomepage(await Astro.glob('../pages/bai-viet/*.md'))
 ---
 
 <style>
-    .btn {
-        font-weight: 500;
-        text-decoration: none;
-        padding: 8px 16px;
-        border-radius: 8px;
-        display: inline-block;
+  .btn {
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
 
-        &:not(&--disabled):hover {
-            background-color: var(--indigo-1);
-        }
+    &:not(&--disabled):hover {
+      background-color: var(--indigo-1);
     }
+  }
 </style>
 <div class="mb-2">
-    <PostList posts={posts} />
+  <PostList posts={posts} />
 </div>
 <div class="text-center">
-    <a href="/bai-viet" class="btn">Tất cả bài viết</a>
+  <a href="/bai-viet" class="btn">Tất cả bài viết</a>
 </div>

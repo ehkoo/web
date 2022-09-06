@@ -2,43 +2,62 @@
 const { headers = [] } = Astro.props
 
 const toc = headers.reduce((acc, current) => {
-    if (acc.length === 0) return [{ ...current, children: [] }]
+  if (acc.length === 0) return [{ ...current, children: [] }]
 
-    const last = acc[acc.length - 1]
-    if (current.depth > last.depth) last.children.push(current)
-    else acc.push({ ...current, children: [] })
+  const last = acc[acc.length - 1]
+  if (current.depth > last.depth) last.children.push(current)
+  else acc.push({ ...current, children: [] })
 
-    return acc
+  return acc
 }, [])
 ---
 
 <style>
-    .post-toc {
-        position: sticky;
-        top: 16px;
-    }
+  .post-toc {
+    position: sticky;
+    top: 16px;
+  }
 </style>
 
 <div class="post-toc">
-    <h3 class="mb-4">Mục Lục</h3>
-    <ul class="text-sm flex flex-column gap-2">
-        {toc.map(one =>
+  <h3 class="mb-4">Mục Lục</h3>
+  <ul class="text-sm flex flex-column gap-2">
+    {
+      toc.map((one) => (
         <li class="flex flex-column gap-2">
-            <a href={`#${one.slug}`} class="decoration-none text-gray-7">{one.text}</a>
-            {one.children.length > 0 && <ul class="ml-4 flex flex-column gap-2">
-                {one.children.map(two =>
-                <li><a href={`#${two.slug}`} class="decoration-none text-gray-7">{two.text}</a></li>)}
-            </ul>}
+          <a href={`#${one.slug}`} class="decoration-none text-gray-7">
+            {one.text}
+          </a>
+          {one.children.length > 0 && (
+            <ul class="ml-4 flex flex-column gap-2">
+              {one.children.map((two) => (
+                <li>
+                  <a href={`#${two.slug}`} class="decoration-none text-gray-7">
+                    {two.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
-        )}
-        <li>
-            <a href="#top" class="decoration-none flex align-center gap-1"><svg stroke="currentColor" fill="none"
-                    stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
-                    width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <polyline points="14 9 9 4 4 9"></polyline>
-                    <path d="M20 20h-7a4 4 0 0 1-4-4V4"></path>
-                </svg> Đầu trang</a>
-        </li>
-    </ul>
-
+      ))
+    }
+    <li>
+      <a href="#top" class="decoration-none flex align-center gap-1"
+        ><svg
+          stroke="currentColor"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+          <polyline points="14 9 9 4 4 9"></polyline>
+          <path d="M20 20h-7a4 4 0 0 1-4-4V4"></path>
+        </svg> Đầu trang</a
+      >
+    </li>
+  </ul>
 </div>

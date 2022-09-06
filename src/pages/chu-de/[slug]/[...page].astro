@@ -9,22 +9,24 @@ export async function getStaticPaths({ paginate }) {
 
   const postsByTag = groupPostsByTag(posts)
 
-  return Object.entries(postsByTag).map(([tag, posts]) => paginate(posts, {
-    params: { slug: slugify(tag) },
-    props: { tag },
-    pageSize: POSTS_PER_PAGE,
-  }))
+  return Object.entries(postsByTag).map(([tag, posts]) =>
+    paginate(posts, {
+      params: { slug: slugify(tag) },
+      props: { tag },
+      pageSize: POSTS_PER_PAGE,
+    }),
+  )
 }
 
 const { page, tag } = Astro.props
 ---
 
 <Base title={`Chủ đề ${tag} - Trang ${page.currentPage}`}>
-<h1 class="mb-4">Chủ đề {tag} - Trang {page.currentPage}</h1>
+  <h1 class="mb-4">Chủ đề {tag} - Trang {page.currentPage}</h1>
 
-<div class="mb-4">
-  <PostList posts={page.data} />
-</div>
+  <div class="mb-4">
+    <PostList posts={page.data} />
+  </div>
 
-<Paginator page={page} />
+  <Paginator page={page} />
 </Base>

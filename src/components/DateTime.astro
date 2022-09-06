@@ -2,9 +2,9 @@
 const d = new Date(Astro.props.date)
 
 const formatted = [
-    String(d.getDate()).padStart(2, '0'),
-    String(d.getMonth() + 1).padStart(2, '0'),
-    d.getFullYear(),
+  String(d.getDate()).padStart(2, '0'),
+  String(d.getMonth() + 1).padStart(2, '0'),
+  d.getFullYear(),
 ].join('/')
 ---
 
