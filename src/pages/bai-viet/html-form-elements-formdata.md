@@ -120,13 +120,7 @@ function FormRegister() {
     <form onSubmit={doSubmit}>
       <label htmlFor="email">
         Email*
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="kcjpop@ehkoo.com"
-          required
-        />
+        <input type="email" id="email" name="email" placeholder="kcjpop@ehkoo.com" required />
       </label>
 
       <fieldset required>

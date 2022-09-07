@@ -347,12 +347,9 @@ async function() {
 Ngoài hai kiểu chạy tuần tự và song song ở trên, chúng ta còn có `Promise.race([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và sẽ resolve/reject ngay khi một trong số các promises này hoàn thành/xảy ra lỗi.
 
 ```js
-Promise.race([
-  ping('ns1.example.com'),
-  ping('ns2.example.com'),
-  ping('ns3.example.com'),
-  ping('ns4.example.com'),
-]).then((result) => {})
+Promise.race([ping('ns1.example.com'), ping('ns2.example.com'), ping('ns3.example.com'), ping('ns4.example.com')]).then(
+  (result) => {},
+)
 ```
 
 ## Cẩn thận với `return` không tường minh
@@ -455,11 +452,7 @@ Hoặc, nếu bạn cảm thấy phân tách mảng khó dùng vì phải nhớ 
 api
   .getUser('pikalong')
   .then((user) => api.getPostsByUser(user).then((posts) => ({ user, posts })))
-  .then((results) =>
-    api
-      .getCommentsOfPosts(results.posts)
-      .then((comments) => ({ ...results, comments })),
-  )
+  .then((results) => api.getCommentsOfPosts(results.posts).then((comments) => ({ ...results, comments })))
   .then(console.log) // { users, posts, comments }
 ```
 
@@ -498,9 +491,7 @@ Bạn có thể thấy hàm `executor` của Promise được thực thi ngay l�
 
 ```jsx
 const getUsers = new Promise((resolve, reject) => {
-  return http.get(`/api`, (err, result) =>
-    err ? reject(err) : resolve(result),
-  )
+  return http.get(`/api`, (err, result) => (err ? reject(err) : resolve(result)))
 })
 
 button.onclick = (e) => getUsers
@@ -511,9 +502,7 @@ Cách giải quyết là đưa vào một hàm trả về promise.
 ```js
 const getUsers = () =>
   new Promise((resolve, reject) => {
-    return http.get(`/api`, (err, result) =>
-      err ? reject(err) : resolve(result),
-    )
+    return http.get(`/api`, (err, result) => (err ? reject(err) : resolve(result)))
   })
 
 button.onclick = (e) => getUsers()

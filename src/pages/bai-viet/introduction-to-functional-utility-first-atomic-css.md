@@ -207,9 +207,7 @@ Vì các atomic classes được đặt tên gần với thuộc tính của ch�
 
 ```html
 <!-- BEM -->
-<button class="btn btn--big btn--green">
-  <span class="btn__price">$9.99</span> Purchase
-</button>
+<button class="btn btn--big btn--green"><span class="btn__price">$9.99</span> Purchase</button>
 
 <!-- atomic CSS -->
 <button class="b1 b--green bg-green white br-5 ma-10 f3 ttu fw-400 padding-10">
@@ -243,10 +241,7 @@ Giả sử một ngày đẹp trời nào đó, đồng chí Nguyễn Văn Xài 
 Nếu dự án của bạn sử dụng React, Vue, hay các thư viện hỗ trợ (web) component khác, việc thay đổi này không thành vấn đề. Còn với thuần HTML thì…coi bộ cực đó. Bạn có thể đặt tên cho UI component bằng `data-`, nhưng như vậy markup sẽ bị rối và ở phía người dùng, các thuộc tính này hoàn toàn không được dùng đến.
 
 ```html
-<button
-  data-ui-name="button-big-green"
-  class="b1 b--green bg-green white br-5 ma-10 f3 ttu fw-400 padding-10"
->
+<button data-ui-name="button-big-green" class="b1 b--green bg-green white br-5 ma-10 f3 ttu fw-400 padding-10">
   <span class="bg-dark o4 white padding-x-12 fw-600 br-left-5">$9.99</span>
   Purchase
 </button>

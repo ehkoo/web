@@ -299,10 +299,7 @@ const List = {
       m('h1', 'List'),
       m(
         'table[border=1][width="100%"]',
-        m(
-          'thead',
-          m('tr', m('th', 'ID'), m('th', 'Name'), m('th', 'Price'), m('th')),
-        ),
+        m('thead', m('tr', m('th', 'ID'), m('th', 'Name'), m('th', 'Price'), m('th'))),
         m(
           'tbody',
           this.items.map((item) =>
@@ -334,8 +331,7 @@ Có một điều quan trọng là khi dùng một mảng các vnode, mỗi vnod
 const CartModel = {
   items: [],
   addItem: (item) => CartModel.items.push(item),
-  getSubTotal: () =>
-    CartModel.items.reduce((total, item) => total + item.price, 0),
+  getSubTotal: () => CartModel.items.reduce((total, item) => total + item.price, 0),
 }
 ```
 

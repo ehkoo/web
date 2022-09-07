@@ -5,8 +5,7 @@ export const get = async () => {
 
   return rss({
     title: 'Ehkoo',
-    description:
-      'Website tiếng Việt chuyên hướng dẫn tùm lum về JavaScript, CSS, React, và chuyện lập trình frontend.',
+    description: 'Website tiếng Việt chuyên hướng dẫn tùm lum về JavaScript, CSS, React, và chuyện lập trình frontend.',
     customData: `<language>vi</language>`,
     site: import.meta.env.SITE,
     items: Object.values(posts).map((item) => ({

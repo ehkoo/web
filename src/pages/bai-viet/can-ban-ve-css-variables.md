@@ -166,10 +166,7 @@ Hàm `var()` còn nhận vào một tham số thứ hai, là giá trị mặc đ
 
 ```css
 .block > h1 {
-  font-size: var(
-    --my-font-size,
-    1.2em
-  ); /* font-size: 1.2em; vì --my-font-size chưa được khai báo */
+  font-size: var(--my-font-size, 1.2em); /* font-size: 1.2em; vì --my-font-size chưa được khai báo */
 }
 ```
 

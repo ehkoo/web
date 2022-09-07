@@ -75,11 +75,7 @@ class Mouse extends React.Component {
   }
 
   render() {
-    return (
-      <div onMouseMove={this.handleMouseMove}>
-        {this.props.render(this.state)}
-      </div>
-    )
+    return <div onMouseMove={this.handleMouseMove}>{this.props.render(this.state)}</div>
   }
 }
 
@@ -107,11 +103,7 @@ hoặc "function as a children".
 class Mouse extends React.Component {
   // ...
   render() {
-    return (
-      <div onMouseMove={this.handleMouseMove}>
-        {this.props.children(this.state)}
-      </div>
-    )
+    return <div onMouseMove={this.handleMouseMove}>{this.props.children(this.state)}</div>
   }
 }
 
@@ -146,9 +138,7 @@ Bạn có thể chuyển đổi từ render prop thành HOC, nhưng không thể
 const withMouse = function (Component) {
   return class extends React.Component {
     render() {
-      return (
-        <Mouse>{(mouse) => <Component {...this.props} mouse={mouse} />}</Mouse>
-      )
+      return <Mouse>{(mouse) => <Component {...this.props} mouse={mouse} />}</Mouse>
     }
   }
 }
@@ -168,10 +158,7 @@ class MyComponent extends React.Component {
         {(state, actions) => (
           <ReactRouter>
             {(router) => (
-              <a
-                href={`/users/${state.users.current.id}`}
-                onClick={router.handleLink}
-              >
+              <a href={`/users/${state.users.current.id}`} onClick={router.handleLink}>
                 View {state.user.current.username}
               </a>
             )}

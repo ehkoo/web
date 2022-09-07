@@ -129,10 +129,8 @@ Trong trường hợp này, các phần tử của grid chỉ chiếm `300px` ch
 
 ```css
 .wrapper {
-  align-content: start | end | center | stretch | space-around | space-between |
-    space-evenly;
-  justify-content: start | end | center | stretch | space-around | space-between
-    | space-evenly;
+  align-content: start | end | center | stretch | space-around | space-between | space-evenly;
+  justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
 }
 ```
 

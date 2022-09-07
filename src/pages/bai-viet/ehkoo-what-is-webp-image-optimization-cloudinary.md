@@ -113,10 +113,7 @@ Trình duyệt sẽ tự động chọn lấy nguồn ảnh phù hợp, và tron
 
 ```html
 <picture>
-  <source
-    srcset="/media/examples/surfer-240-200.jpg"
-    media="(min-width: 800px)"
-  />
+  <source srcset="/media/examples/surfer-240-200.jpg" media="(min-width: 800px)" />
   <img src="/media/examples/painted-hand-298-332.jpg" />
 </picture>
 ```

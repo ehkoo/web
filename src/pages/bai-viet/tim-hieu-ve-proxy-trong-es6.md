@@ -89,8 +89,7 @@ Chúng ta có thể dùng `handler.set()` để kiểm tra tính đúng đắn d
 const u = { age: null }
 const p = new Proxy(u, {
   set(target, prop, val) {
-    if (prop === 'age' && typeof val !== 'number')
-      throw new TypeError('Age must be a number')
+    if (prop === 'age' && typeof val !== 'number') throw new TypeError('Age must be a number')
 
     target[prop] = val
     return true
@@ -110,8 +109,7 @@ const p = new Proxy(
   { foo: 1, bar: true },
   {
     defineProperty(target, property, descriptor) {
-      if (property.startsWith('_'))
-        throw new Error('Properties starting with _ are not allowed')
+      if (property.startsWith('_')) throw new Error('Properties starting with _ are not allowed')
       return Object.defineProperty(...arguments)
     },
   },

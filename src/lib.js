@@ -4,10 +4,7 @@ export const POSTS_PER_PAGE = 12
 function processPosts(posts) {
   return posts
     .sort((a, b) => {
-      return (
-        new Date(b.frontmatter.date).getTime() -
-        new Date(a.frontmatter.date).getTime()
-      )
+      return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
     })
     .filter((p) => p.frontmatter.draft !== true)
 }
@@ -33,9 +30,7 @@ export function slugify(str) {
 }
 
 export function groupPostsByTag(posts) {
-  const tagsAndPost = posts.flatMap((post) =>
-    post.frontmatter.tags.split(',').map((tag) => [tag.trim(), post]),
-  )
+  const tagsAndPost = posts.flatMap((post) => post.frontmatter.tags.split(',').map((tag) => [tag.trim(), post]))
 
   const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
     acc[tag] = acc[tag] ?? []

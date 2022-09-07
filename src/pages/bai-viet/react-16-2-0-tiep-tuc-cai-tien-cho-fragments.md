@@ -220,12 +220,6 @@ npm install --save react@^16.2.0 react-dom@^16.2.0
 hoặc dùng CDN:
 
 ```html
-<script
-  crossorigin
-  src="https://unpkg.com/react@16/umd/react.production.min.js"
-></script>
-<script
-  crossorigin
-  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
-></script>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 ```

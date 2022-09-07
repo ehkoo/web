@@ -125,9 +125,7 @@ class ProductList extends React.Component {
       this.props.products.map((product) => (
         <div key={product.id}>
           // ...
-          <button onClick={this.handleDeleteProduct.bind(this, productId)}>
-            Delete
-          </button>
+          <button onClick={this.handleDeleteProduct.bind(this, productId)}>Delete</button>
         </div>
       ))
     }
@@ -208,11 +206,7 @@ class App extends React.Component {
     // ...
     {
       this.state.operators.map((op) => (
-        <button
-          key={op.label}
-          className="button"
-          onClick={this.doClickButton(op)}
-        >
+        <button key={op.label} className="button" onClick={this.doClickButton(op)}>
           {op.label}
         </button>
       ))

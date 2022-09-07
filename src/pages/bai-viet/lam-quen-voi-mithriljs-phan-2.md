@@ -273,11 +273,7 @@ function App() {
   }
 
   const view = (_) =>
-    m(
-      'div',
-      m('canvas[width=400][height=400]', { oncreate }),
-      m('button', { onclick: doDoubleData }, 'Double data'),
-    )
+    m('div', m('canvas[width=400][height=400]', { oncreate }), m('button', { onclick: doDoubleData }, 'Double data'))
   return { view }
 }
 

@@ -89,11 +89,7 @@ const showSplashScreen = response.settings.showSplashScreen ?? true
 Xem thử đoạn mã sau sử dụng phân rã biến (object destructuring).
 
 ```js
-const {
-  underfinedValue = 'for undefined',
-  nullValue = 'for null',
-  headerText = 'Hello, world',
-} = response.settings
+const { underfinedValue = 'for undefined', nullValue = 'for null', headerText = 'Hello, world' } = response.settings
 
 console.log(underfinedValue) // 'for undefined'
 console.log(nullValue) // null

@@ -171,9 +171,7 @@ function App() {
 Hàm mũi tên cũng rất hữu ích khi thao tác trên mảng và tiến hành chuyển đổi dữ liệu, giúp mã nguồn dễ đọc và rõ ràng hơn.
 
 ```javascript
-const subtotal = products
-  .filter((product) => product.price > 500)
-  .reduce((acc, product) => acc + product.price, 0)
+const subtotal = products.filter((product) => product.price > 500).reduce((acc, product) => acc + product.price, 0)
 ```
 
 > **Tính tương thích:** Trừ IE11, tất cả các trình duyệt còn lại đều hỗ trợ.
@@ -406,8 +404,7 @@ function processItems(items = []) {
 
 // hoặc dùng biến
 const DISCOUNT_RATE = 0.1
-const getDiscountedPrice = (price, discountRate = DISCOUNT_RATE) =>
-  price * (1 + discountRate)
+const getDiscountedPrice = (price, discountRate = DISCOUNT_RATE) => price * (1 + discountRate)
 ```
 
 ### 8. Lớp (class)
