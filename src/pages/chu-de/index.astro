@@ -7,6 +7,7 @@ const posts = getAllPosts(await Astro.glob('../bai-viet/*.md'))
 const postsByTag = groupPostsByTag(posts)
 
 const sorted = Object.entries(postsByTag)
+  // .filter(([tag, posts]) => posts.length > 1)
   // Sort posts by published date
   .map(([tag, posts]) => [
     tag,
@@ -14,6 +15,9 @@ const sorted = Object.entries(postsByTag)
   ])
   // Then sort tag by its latest post date
   .sort(([_, a], [__, b]) => {
+    // Sort by length first
+    if (a.length !== b.length) return b.length - a.length
+
     const [firstOfA] = a
     const [firstOfB] = b
 
