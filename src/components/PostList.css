@@ -1,5 +1,3 @@
-@import url('../styles/_media.css');
-
 .post-list {
   display: grid;
   gap: 16px;
