@@ -1,0 +1,140 @@
+---
+layout: ../../layouts/Post.astro
+title: 'Có gì hot? Tuần 37 - 2022'
+date: 2022-09-17
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663154417/ehkoo/w37-2022.png
+tags: Newsletter
+excerpt: 'Lần đầu tiên Ehkoo ra bản tin nè mấy pa 🥲'
+author: kcjpop
+---
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663154417/ehkoo/w37-2022.png)
+
+Sau bao lần hứa hẹn, cầm lên bỏ xuống, mất ăn mất ngủ, cuối cùng thì cũng ra được bản tin số đầu tiên 🥲 Tất cả cũng là do làm biếng đó mọi người ơi. Nhưng mà _delay_ một xíu chứ chưa _delete_ là được rồi đúng hông, mọi người ủng hộ nhiệt liệt để Ehkoo ra đều đặn mỗi tuần nheeee.
+
+## Safari ra bản 16
+
+Mở đâu sẽ là tin nóng nhất tuần luôn: [Safari ra bản 16](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/), với những tính năng như:
+
+- **Hỗ trợ _một phần_ định dạng ảnh AVIF:** _Một phần_ thôi nha vì chỉ có Safari 16 trên iOS là đọc được AVIF, và chỉ là ảnh tĩnh (_still images_) thôi. Safari trên MacOS thì chắc phải qua tháng 10.
+
+- **Hỗ trợ subgrid, container queries, và vài tính năng CSS mới như là:**
+
+  - `min-resolution`/ `max-resolution` khi khai báo breakpoint, e.g. `@media (min-resolution: 326dpi) { }`
+  - `overscroll-behavior`: thử tưởng tượng trong trang bạn có một cái box hiển thị thanh cuộn với `overflow: auto`, `overscroll-behavior` giúp bạn quy định chuyện gì sẽ xảy ra khi cuộn chuột quá nhanh vượt qua khỏi box đó, liệu có tiếp tục cuộn toàn bộ trang hay không vậy đó.
+  - `:target` khi dùng chung với `:has()`
+
+- **Thêm vào Flexbox Inspector cho devtools:** Trong khi những trình duyệt khác đã có từ mùa quýt 😮‍💨
+
+- **Hỗ trợ SharedWorker:** Còn SharedWorker là gì thì đọc thêm [ở đây](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) nha.
+
+## Next.js ra bản 12.3
+
+Framework ngay cả Taylor Swift cũng xài vừa ra [bản 12.3](https://nextjs.org/blog/next-12-3):
+
+- Không cần khởi động lại dev server khi thay đổi các tập tin `.env`, `jsconfig.json`, và `tsconfig.json` nữa nhe, vì tụi nó được hot reload rồi.
+
+- **Tự động cài đặc TypeScript:** Nếu bạn thêm vào một tập tin `.ts`, Next sẽ tự động cài TypeScript và các gói liên quan.
+
+- **Thay đổi trong `next/future/image`:** Thấy cũng nhiều tính năng mới lắm nhưng vì mình không xài mấy nên mọi người tham khảo [ở đây](https://nextjs.org/docs/api-reference/next/future/image) nha.
+
+- **Có thể dùng SWC để minify code:** Chỉ cần thêm vào đoạn sau vào tập tin `next.config.js`
+
+```js
+// next.config.js
+module.exports = {
+  swcMinify: true,
+}
+```
+
+là tốc độ build của bạn được cải thiện gấp 7 lần so với Terser (đó là nghe quảng cáo vậy).
+
+- **Cập nhật thêm về RFC cho Router và Layouts**: Định viết dài dòng về cái này mà thôi mọi người [đọc ở đây đi](https://vercel.com/blog/next-js-layouts-rfc-in-5-minutes).
+
+- Tự động hỗ trợ dark mode khi tạo dự án với `create-next-app`
+
+- `src/` trở thành thư mục linting mặc định
+
+- Các tùy chọn trong `next.config.js` nay sẽ được kiểm tra bằng `ajv` giúp giảm thiểu thiết lập sai.
+
+## Deno Fresh ra bản 1.1
+
+Framework Trái Chanh Tươi của Deno vừa ra bản 1.1:
+
+- **Tự động hỗ trợ JSX:** Nếu bạn chưa biết thì Fresh sử dụng Preact làm thư viện UI ở phía người dùng cuối. Trước đây để xài JSX, bạn phải `import { h } from "preact"` và khai báo pragma `/** @jsx h */`. Giờ thì không còn cần nữa vì Fresh tự động thiết lập luôn.
+
+- **Giới thiệu hệ thống plugins:** Plugins là một cách mới để bạn mở rộng Fresh. Hiện tại thì bạn vẫn chưa làm được gì nhiều với plugins, ngoại trừ tác động đến bước rendering, và chèn thêm style/ script vào kết quả trả về. Trong tương lai, các plugins có thể thêm vào route mới, middleware, và islands. Fresh hiện đang có một plugin chính thức, [Twind](https://twind.dev/), để tạo các atomic class CSS giống như Teo-quin vậy đó.
+
+- **Hỗ trợ Preact Signals và DevTools:** Những dự án Fresh mới (_nghe kì ghê, đã "fresh" mà còn "mới"_) sẽ được tự động cài đặt Preact Signals. Signals là một cách mới để quản lý state trong Preact. Bên trong mỗi signal là một giá trị và Preact sẽ re-render mỗi khi giá trị này thay đổi. Ví dụ như:
+
+```js
+import { signal, computed } from '@preact/signals'
+
+// Tạo một signal có giá trị ban đầu bằng 0
+const count = signal(0)
+// `double` là một signal khác, phụ thuộc vào `count`, và sẽ thay đổi
+// khi `count` thay đổi.
+const double = computed(() => count.value * 2)
+
+function Counter() {
+  return (
+    /* Chúng ta có thể thay đổi giá trị của `count.value` */
+    <button onClick={() => count.value++}>
+      {/* Preact sẽ tự động phát hiện signals và hiển thị giá trị
+      hiện tại của chung*/}
+      {count} x 2 = {double}
+    </button>
+  )
+}
+```
+
+So với `useState` thì Signal ngắn gọn và thân thiện với lập trình viên hơn nhiều 🤔
+
+> **Ngoài lề:**
+>
+> Bạn cũng có thể dùng Preact Signals cho các dự án React thông qua gói `@preact/signals-react`. Đọc sơ qua thì có cảm giác Signals hao hao bên Solid.js.
+
+Bên cạnh đó, bạn cũng đã có thể dùng Preact Devtools cho dự án Fresh 1.1 (_nói thật thì có mấy ai xài devtools đâu_ 🥲)
+
+- **Render trang 404 ngay từ handler:** Tham số `ctx` trong các route handlers đã có thêm phương thức `renderNotFound()` giúp bạn trả về trang 404 ngay lập tức. Ví dụ như bạn không tìm thấy một bản ghi từ cơ sở dữ liệu đi, bạn có thể trả về 404 liền luôn, rất là tiện.
+
+```ts
+// routes/index.ts
+
+export const handler: Handlers = {
+  GET(req, ctx) {
+    const url = new URL(req.url)
+    const id = url.searchParams.get('id')
+
+    if (!id) return ctx.renderNotFound()
+
+    return ctx.render({ id })
+  },
+}
+```
+
+Ngoài ra phiên bản 1.1 còn hỗ trợ stacked middleware và tính năng thử nghiệm `Deno.serve`. Bạn đọc thêm tại 👉 [https://deno.com/blog/fresh-1.1](https://deno.com/blog/fresh-1.1) cho nhanh.
+
+## Release radar 📡
+
+### Browserlist ra bản 4.21.4
+
+Cũng không có gì mới ngoài chuyện đã bỏ IE 11 ra khỏi thiết lập `defaults`. Bạn có thể vào trang [https://browsersl.ist/](https://browsersl.ist/) để kiểm tra xem thiết lập của mình đúng chưa ha.
+
+### ESLint ra bản 8.23.1
+
+ESLint vừa [thông báo](https://eslint.org/blog/2022/09/eslint-v8.23.1-released/) phát hành bản 8.23.1, cải thiện hiệu suất của luật `indent` và sửa một số lỗi liên quan đến tập tin thiết lập `eslint.config.js`.
+
+## Đọc gì cuối tuần?
+
+Để kết thúc bản tin thì dưới đây là một vài bài viết hay Ehkoo đã đọc trong tuần qua.
+
+- [Building the main navigation for a website](https://web.dev/website-navigation/): Bài của [Manuel Matuzović](https://twitter.com/mmatuzo) hướng dẫn xây dựng thanh điều hướng (_navigation bar_) sao cho dễ tiếp cận (_accessible_) nhất với người dùng. Điểm lưu ý trong bài là thỉnh thoảng sử dụng thuộc tính ARIA sai có thể gây phản tác dụng.
+
+- [The Perfect Development Environment](https://cpojer.net/posts/the-perfect-development-environment): [Christoph Nakazawa](https://twitter.com/cpojer), lập trình viên từng tham gia phát triển Jest, Metro, yarn, v.v., chia sẻ cách ảnh thiết lập môi trường phát triển trên MacOS, bao gồm cài đặt terminal, git alias, VSCode, vân vân và mây mây.
+
+- [Which fonts to use for your charts and tables…](https://blog.datawrapper.de/fonts-for-data-visualization/): Lisa Charlotte Muth giới thiệu những điểm cần lưu ý khi chọn font chữ khi biểu diễn dữ liệu, không chỉ áp dụng cho biểu đồ mà cũng rất hữu ích khi hiển thị bảng.
+
+## Tạm kết
+
+Vậy là xong bản tin tuần 37 rồi ha. Hẹn các bạn tuần sau (hi vọng vậy 🤞).

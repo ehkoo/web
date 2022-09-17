@@ -1,7 +1,7 @@
 .post {
   --sidebar-width: 256px;
-  --code-background: #f9f5d7;
-  --code-color: #9e0005;
+  --code-background: var(--orange-1);
+  --code-color: var(--orange-8);
   --code-font-size: 0.9em;
 
   &-wrapper {
@@ -59,14 +59,6 @@
     li,
     p {
       margin-bottom: 16px;
-
-      code {
-        font-size: var(--code-font-size);
-        padding: 2px;
-        color: var(--code-color);
-        background-color: var(--code-background);
-        font-variant-ligatures: none;
-      }
     }
 
     h1,
@@ -75,6 +67,16 @@
     h4 {
       margin-bottom: 16px;
       margin-top: 16px;
+    }
+
+    /* inline code */
+    :not(pre):not(code) > code {
+      font-size: var(--code-font-size);
+      padding: 2px 4px;
+      border-radius: 4px;
+      color: var(--code-color);
+      background-color: var(--code-background);
+      font-variant-ligatures: none;
     }
 
     blockquote {
