@@ -1,0 +1,134 @@
+---
+layout: ../../layouts/Post.astro
+title: 'Có gì hot? Tuần 38 - 2022'
+date: 2022-09-24
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663658758/ehkoo/w38-2022.png
+tags: Newsletter
+excerpt: 'Wasmtime, Qwik, MemLab, và vài thứ linh tinh khác'
+author: kcjpop
+---
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663658758/ehkoo/w38-2022.png)
+
+## Wasmtime ra bản 1.0
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663924691/ehkoo/bytecode-alliance-logo.svg)
+
+Wasmtime, một trong những trình thực thi (runtime) Web Assembly phổ biến nhất, [vừa ra bản 1.0](https://bytecodealliance.org/articles/wasmtime-1-0-fast-safe-and-production-ready). Mặc dù Wasmtime được coi như đã sẵn sàng cho production khoảng 1 năm về trước rồi, nhưng vài công ty như Shopify, Fastly, Microsoft, etc. trong hội Bytecode Alliance quyết định chơi lớn bằng cách cho chạy thẳng lên production luôn để xem hiệu suất ra sao. May mắn là chưa banh server và Wasmtime chứng minh được khả năng siêu nhanh siêu an toàn của nó.
+
+Nhưng mà Wasmtime để làm gì ha? Wasmtime cho phép bạn chạy Web Assembly bên ngoài trình duyệt luôn, từ đó mở ra bao nhiêu ứng dụng, chẳng hạn như:
+
+- **Microservices và serverless,** vì Web Assembly có thời gian khởi động nhanh hơn rất nhiều so với JS isolates, containers, hay VMs.
+
+- **Chạy code của bên thứ ba một cách an toàn,** vì Web Assembly được sandbox ngay từ đầu và chỉ có thể truy xuất tài nguyên khi được cấp phép một cách tường minh.
+
+- **Là môi trường để thực thi User Defined Functions (UDFs) bên trong cơ sở dữ liệu:** [ScyllaDB](https://www.scylladb.com/) và [TiDB](https://github.com/pingcap/tidb) sử dụng Wasmtime để chạy các hàm do người dùng định nghĩa. Lợi thế ở đây là người dùng có thể sử dụng bất cứ ngôn ngữ nào, dù cho đó là JavaScript, Rust, Python hay Golang, miễn sao nó có cầu nối với Wasmtime là đã tương tác được trực tiếp với database rồi. Nhờ vậy, chúng ta có thể đưa business logic vào thẳng database, giảm thời gian chuyển tải dữ liệu qua lại giữa ứng dụng và cơ sở dữ liệu.
+
+Và còn nhiều ưu điểm nữa mà chắc Ehkoo nên làm một bài viết riêng về Web Assembly và Wasmtime 😅
+
+Hiện tại bạn có thể nhúng Wasmtime vào các ứng dụng Rust, C/C++, Python, .NET, và Go. Sau phiên bản 1.0, nhóm phát triển Wasmtime dự kiến sẽ phát hành đều đặn hơn, khoảng 1 tháng 1 lần.
+
+## Qwik và Qwik City ra bản beta
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663924777/ehkoo/assets_2FYJIGb4i01jvw0SRdL5Bt_2F5f8db18f68c74f6f9919f3877b6246b4.webp)
+
+Nhóm phát triển [Qwik](https://qwik.builder.io/) vừa [thông báo](https://www.builder.io/blog/qwik-and-qwik-city-have-reached-beta) Qwik và Qwik City đã ở giai đoạn beta. Nghĩa là các chức năng và API chính đã hoàn thành và ổn định, các tài liệu kỹ thuật đã được viết hoàn tất, và không có vấn đề gì cản trở việc sử dụng Qwik trên production.
+
+Thật ra Ehkoo cũng mới biết đến Qwik gần đây. Qwik cho phép xây dựng ứng dụng web bằng các components giống như React, nhưng tập trung hơn về server-side rendering (SSR). Một component của Qwik sẽ giống như thế này:
+
+```jsx
+import { component$, useStore } from '@builder.io/qwik'
+
+export const MyComponent = component$((props) => {
+  const state = useStore({ count: 0 })
+
+  return (
+    <div>
+      <p>
+        Hello {props.name}: {state.count}
+      </p>
+      <button
+        onClick$={() => {
+          state.count++
+        }}>
+        Increment
+      </button>
+    </div>
+  )
+})
+```
+
+Qwik được thiết kế để có thể chỉ tạo ra HTML như sản phẩm cuối cùng, gần như không kèm theo JavaScript, nhưng vẫn có thể chuyển thành một ứng dụng với đầy đủ tương tác, kể cả khi mạng chậm hay trên thiết bị có phần cứng hạn chế. Tất cả là nhờ vào _resumability_ thay vì _hydration_ 👇
+
+> Theo Qwik thì vấn đề với _hydration_ nằm ở chỗ, mặc dù ứng dụng đã có HTML (được tạo ra bởi SSR hay SSG), người dùng vẫn phải download toàn bộ JavaScript cùng với trạng thái hiện tại (_state_) của app về, sau đó thực thi JS để gắn các hàm xử lý sự kiện (_event handlers_) vào nút DOM tương ứng. Những thao tác này dư thừa không đáng có vì client phải khởi tạo lại những gì server đã biết.
+>
+> Qwik giải quyết vấn đề trên bằng cách khai báo một hàm xử lý toàn cục để bắt tất cả sự kiện xảy ra trong app. Khi một sự kiện được kích hoạt, hàm toàn cục này sẽ dựa vào trạng thái của ứng dụng để khởi tạo lại event handler tương ứng _một cách lười biếng_. Qwik gọi đây là _resumability (khả năng hồi phục)_. Bạn có thể tìm hiểu thêm chi tiết [ở đây](https://www.builder.io/blog/hydration-is-pure-overhead).
+
+Còn Qwik City là một _meta framework_ để làm ứng dụng với Qwik, bao gồm: điều hướng (_routing_) dựa vào cấu trúc thư mục, fetch dữ liệu, tối ưu hóa bundle, prefetching, streaming, và kèm theo khả năng tương tác với các Hàm Cạnh (_Edge Functions_) của nhiều nhà cung cấp khác nhau. Nghe rất giống kiểu của Next.js, Nuxt, hay SvelteKit ha.
+
+Team Qwik thì toàn "cây đa cây đề" của cộng đồng Angular/ Stecil/ Ionnic nên bạn đừng bất ngờ khi thấy có nét hao hao Angular đâu đây nha. Team này cũng đứng đằng sau [`partytown`](https://www.npmjs.com/package/@builder.io/partytown), một thư viện giúp đẩy các scripts từ bên thứ ba xuống web worker.
+
+## TokenCSS
+
+Vừa xuất hiện tuần qua, [TokenCSS](https://tokencss.com/) là một plugin của PostCSS cho phép bạn sử dụng design tokens trong các tập tin CSS của dự án. Nói ngắn gọn thì, bạn khai báo các token dưới dạng JSON:
+
+```json
+{
+  "extends": ["@tokencss/core"],
+  "color": {
+    "gray": {
+      "0": { "value": "#f8f9fa" },
+      "1": { "value": "#f1f3f5" },
+      "2": { "value": "#e9ecef" },
+      …
+    },
+    "space": {
+      "2xs": { "value": ".25rem" },
+      "xs": { "value": ".5rem" },
+      "sm": { "value": "1rem" },
+      "md": { "value": "1.25rem" },
+      …
+    },
+    "size": {
+      "full": { "value": "100%" },
+      "2xs": { "value": ".25rem" },
+      "xs": { "value": ".5rem" },
+      "sm": { "value": "1rem" },
+      …
+    },
+  },
+}
+```
+
+Sau đó trong tập tin CSS:
+
+```css
+.box {
+  background: gray.2;
+  border-radius: md;
+  width: sm;
+  height: sm;
+}
+```
+
+TokenCSS sẽ thay thế những token trên bằng biến CSS tương ứng.
+
+Hiện tại thì TokenCSS vẫn đang trong quá trình phát triển nên sẽ còn lỗi này nọ. Tuy nhiên cũng đáng để quan tâm đúng hông nè?
+
+## Tin vắn
+
+- Meta vừa mở mã nguồn của [MemLab](https://engineering.fb.com/2022/09/12/open-source/memlab/), một công cụ giúp phát hiện rò rỉ bộ nhớ trong ứng dụng JavaScript
+
+- [John-David Dalton](https://twitter.com/jdalton/status/1571863497969119238) vừa thông báo trên Twitter sẽ viết lại [`lodash`](https://lodash.com/) bằng TypeScript và rollup. Bản viết lại sẽ không có `lodash/fp`, vì "That fad is over."
+
+## Đọc gì cuối tuần?
+
+- [Cache your CORS, for performance & profit](https://httptoolkit.tech/blog/cache-your-cors/): Bài viết giới thiệu cách lưu bộ đệm cho các CORS requests, giúp trình duyệt không phải gửi requests dư thừa và giảm tải cho backend. Đặc biệt hữu ích khi APIs của bạn viết bằng serverless và tính tiền dựa vào số requests 💸
+
+- [React I Love You, But You're Bringing Me Down](https://marmelab.com/blog/2022/09/20/react-i-love-you.html): Thư tình gửi React của François Zaninotto, tác giả của ` react-admin`. Đọc mà đồng (trầm) cảm với những nỗi đau của tác giả khi làm việc với React luôn.
+
+- [Will Serving Real HTML Content Make A Website Faster? Let's Experiment!](https://blog.webpagetest.org/posts/will-html-content-make-site-faster): [Scott Jehl](https://twitter.com/scottjehl) thử nghiệm với Twitter và AirBnB để xem nếu website chỉ trả về thuần HTML thì có nhanh hơn so với dùng JavaScript để tạo HTML trên trang không. Kết luận là dĩ nhiên nhanh hơn, nhưng làm sao để các trang đó có độ tương tác tốt lại là một câu chuyện khác. Với sự xuất hiện của những server-first frameworks như Next.js, Astro, Remix hay mới nhất là Qwik, hi vọng bài toán này sẽ có lời giải trong tương lai gần.
+
+## Kết
+
+Tuần 38 khép lại với sự xuất hiện của Qwik và TokenCSS. Hẹn gặp lại các bạn ở tuần sau nheee. Bái bai 👋
