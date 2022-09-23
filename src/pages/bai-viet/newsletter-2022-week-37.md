@@ -14,6 +14,8 @@ Sau bao lần hứa hẹn, cầm lên bỏ xuống, mất ăn mất ngủ, cuố
 
 ## Safari ra bản 16
 
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663925042/ehkoo/mga-881f0157-w375-w1500-w750_accroche.jpg)
+
 Mở đâu sẽ là tin nóng nhất tuần luôn: [Safari ra bản 16](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/), với những tính năng như:
 
 - **Hỗ trợ _một phần_ định dạng ảnh AVIF:** _Một phần_ thôi nha vì chỉ có Safari 16 trên iOS là đọc được AVIF, và chỉ là ảnh tĩnh (_still images_) thôi. Safari trên MacOS thì chắc phải qua tháng 10.
@@ -58,6 +60,8 @@ là tốc độ build của bạn được cải thiện gấp 7 lần so với 
 - Các tùy chọn trong `next.config.js` nay sẽ được kiểm tra bằng `ajv` giúp giảm thiểu thiết lập sai.
 
 ## Deno Fresh ra bản 1.1
+
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663925118/ehkoo/lemon-squash.svg)
 
 Framework Trái Chanh Tươi của Deno vừa ra bản 1.1:
 

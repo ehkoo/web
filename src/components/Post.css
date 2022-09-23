@@ -69,6 +69,11 @@
       margin-top: 16px;
     }
 
+    h1,
+    h2 {
+      font-weight: 900;
+    }
+
     /* inline code */
     :not(pre):not(code) > code {
       font-size: var(--code-font-size);
