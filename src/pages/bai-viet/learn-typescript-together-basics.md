@@ -4,7 +4,7 @@ title: 'Cùng học TypeScript: Căn bản về TS'
 date: 2022-02-19
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1645291004/ehkoo/eOpH6MX.png
 tags: TypeScript, Dành cho người mới
-excerpt: 'Trong phần đầu tiên của series này, chúng ta hãy tìm hiểu về các kiểu dữ liệu căn bản trong TypeScript (TS) với Ehkoo nhe.'
+excerpt: 'Bài đầu tiên sẽ là các kiểu dữ liệu cơ bản ha'
 author: kcjpop
 ---
 
