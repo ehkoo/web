@@ -1,7 +1,9 @@
 ---
+import { getPostsForHomepage } from '../lib.js'
+
 import DateTime from './DateTime.astro'
 import PostList from './PostList.astro'
-import { getPostsForHomepage } from '../lib.js'
+import FormWeeklyNewsletter from './FormWeeklyNewsletter.astro'
 
 const { posts: all, newsletters } = getPostsForHomepage(
   await Astro.glob('../pages/bai-viet/*.md'),
@@ -60,32 +62,6 @@ const posts = all.slice(3)
       }
     }
   }
-
-  .btn-subscribe {
-    background-color: var(--gray-9);
-    color: #fff;
-    border-radius: 4px;
-    border: none;
-    padding: 8px;
-    &:hover {
-      background-color: var(--gray-8);
-    }
-  }
-
-  .newsletter-email {
-    padding: 8px;
-    border: 1px solid var(--gray-4);
-    border-radius: 4px;
-  }
-
-  .buttondown-link {
-    font-size: var(--font-size-0);
-    text-decoration: none;
-    text-align: center;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 </style>
 
 <div class="mb-4">
@@ -109,11 +85,7 @@ const posts = all.slice(3)
       ))
     }
 
-    <form
-      action="https://buttondown.email/api/emails/embed-subscribe/ehkoo"
-      method="post"
-      target="popupwindow"
-      class="newsletter">
+    <div class="newsletter">
       <h3>Bản tin Ehkoo</h3>
       <p>Cập nhật những tin tức mới nhất về lập trình frontend, mỗi thứ 7 hàng tuần.</p>
 
@@ -132,15 +104,10 @@ const posts = all.slice(3)
 
       <h4>Đăng ký 👇</h4>
 
-      <input type="email" name="email" placeholder="Nhập email của bạn" class="newsletter-email" />
-      <input type="hidden" value="1" name="embed" />
-      <input type="hidden" name="tag" value="WeeklyNewsletter" />
-      <button class="btn-subscribe" type="submit">Nhận bản tin</button>
-
-      <a href="https://buttondown.email" target="_blank" rel="noopener noreferrer" class="buttondown-link">
-        Powered by Buttondown
-      </a>
-    </form>
+      <FormWeeklyNewsletter>
+        <input type="hidden" name="metadata__FormLocation" value="Homepage" />
+      </FormWeeklyNewsletter>
+    </div>
   </div>
 </div>
 
