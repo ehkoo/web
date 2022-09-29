@@ -9,8 +9,10 @@ const { posts, top3, newsletters } = getPostsForHomepage(await Astro.glob('../pa
 <style>
   .top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 16px;
+    @media (--lg) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .newsletter {
@@ -21,23 +23,35 @@ const { posts, top3, newsletters } = getPostsForHomepage(await Astro.glob('../pa
     display: flex;
     justify-content: center;
     flex-direction: column;
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
+
+    @media (--lg) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 4;
+    }
   }
 
   .article {
     display: grid;
-    grid-template-columns: 320px 320px;
     gap: 16px;
 
-    &:nth-child(1) {
-      grid-column-end: 1;
+    @media (--md) {
+      grid-template-columns: 1fr 1fr;
     }
-    &:nth-child(2) {
-      grid-row-start: 2;
+
+    @media (--lg) {
+      grid-template-columns: 320px 320px;
     }
-    &:nth-child(3) {
-      grid-row-start: 3;
+
+    @media (--lg) {
+      &:nth-child(1) {
+        grid-column-end: 1;
+      }
+      &:nth-child(2) {
+        grid-row-start: 2;
+      }
+      &:nth-child(3) {
+        grid-row-start: 3;
+      }
     }
   }
 
@@ -71,11 +85,15 @@ const { posts, top3, newsletters } = getPostsForHomepage(await Astro.glob('../pa
 <div class="mb-4">
   <div class="top">
     {
-      top3.map(({ frontmatter }) => (
+      top3.map(({ frontmatter, url }) => (
         <article class="article">
           <img class="post-list-single-cover" src={frontmatter.cover} alt={frontmatter.title} />
           <div class="flex flex-column gap-1">
-            <h3>{frontmatter.title}</h3>
+            <h3>
+              <a class="no-underline-link" href={url}>
+                {frontmatter.title}
+              </a>
+            </h3>
             <p>{frontmatter.excerpt}</p>
             <p class="text-gray-6 text-sm">
               @{frontmatter.author} | <DateTime date={frontmatter.date} />
