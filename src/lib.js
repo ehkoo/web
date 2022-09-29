@@ -21,15 +21,12 @@ export function getAllPostsByTag(posts) {
   return posts
 }
 
-export function getPostsForHomepage(posts) {
+export function getPostsForHomepage(posts, newsletters) {
   const all = getAllPosts(posts)
 
-  const newsletters = all.filter((post) => post.frontmatter.tags.includes('Newsletter')).slice(0, 3)
-  const others = all
-    .filter((post) => post.frontmatter.tags.includes('Newsletter') === false)
-    .slice(0, 3 + POSTS_PER_PAGE)
+  const processedNewsletter = processPosts(newsletters)
 
-  return { posts: others.slice(3), top3: others.slice(0, 3), newsletters }
+  return { posts: all, newsletters: processedNewsletter.slice(0, 3) }
 }
 
 export function slugify(str) {

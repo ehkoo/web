@@ -10,6 +10,14 @@
   from = "/bai-viet/tai-lieu-javascript-tu-co-ban-den-nang-cao"
   to = "/bai-viet/free-javascript-books-beginner-advanced"
 
+[[redirects]]
+  from = "/bai-viet/newsletter-2022-week-38"
+  to = "/ban-tin/2022-week-38"
+
+[[redirects]]
+  from = "/bai-viet/newsletter-2022-week-37"
+  to = "/ban-tin/2022-week-37"
+
 [[headers]]
   for = "/*"
   [headers.values]

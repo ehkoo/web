@@ -3,7 +3,13 @@ import DateTime from './DateTime.astro'
 import PostList from './PostList.astro'
 import { getPostsForHomepage } from '../lib.js'
 
-const { posts, top3, newsletters } = getPostsForHomepage(await Astro.glob('../pages/bai-viet/*.md'))
+const { posts: all, newsletters } = getPostsForHomepage(
+  await Astro.glob('../pages/bai-viet/*.md'),
+  await Astro.glob('../pages/ban-tin/*.md'),
+)
+
+const top3 = all.slice(0, 3)
+const posts = all.slice(3)
 ---
 
 <style>
