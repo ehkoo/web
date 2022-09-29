@@ -30,6 +30,13 @@ a {
   }
 }
 
+.no-underline-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 body {
   background-color: var(--gray-0);
 }
