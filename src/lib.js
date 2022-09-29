@@ -26,7 +26,7 @@ export function getPostsForHomepage(posts, newsletters) {
 
   const processedNewsletter = processPosts(newsletters)
 
-  return { posts: all, newsletters: processedNewsletter.slice(0, 3) }
+  return { posts: all.slice(0, POSTS_PER_PAGE), newsletters: processedNewsletter.slice(0, 3) }
 }
 
 export function slugify(str) {
