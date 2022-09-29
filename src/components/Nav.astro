@@ -52,8 +52,10 @@ function isCurrentActive(path) {
           padding-right: 16px;
         }
 
+        &::-webkit-details-marker,
         &::marker {
           content: '';
+          display: none;
         }
       }
     }
