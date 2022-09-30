@@ -1,5 +1,6 @@
 import mdx from '@astrojs/mdx'
 import { defineConfig } from 'astro/config'
+import rehypeExternalLinks from 'rehype-external-links'
 
 import { remarkReadingTime } from './src/remark-reading-time.mjs'
 
@@ -15,6 +16,7 @@ export default defineConfig({
       theme: 'github-light',
     },
     remarkPlugins: [remarkReadingTime],
+    rehypePlugins: [rehypeExternalLinks],
   },
   integrations: [mdx()],
 })
