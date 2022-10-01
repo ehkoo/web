@@ -62,6 +62,16 @@ const posts = all.slice(3)
       }
     }
   }
+
+  .newsletter-preview-list {
+    margin-left: 16px;
+    padding-right: 8px;
+    list-style-type: '🔸';
+
+    li {
+      padding-left: 8px;
+    }
+  }
 </style>
 
 <div class="mb-4">
@@ -87,10 +97,10 @@ const posts = all.slice(3)
 
     <div class="newsletter">
       <h3>Bản tin Ehkoo</h3>
-      <p>Cập nhật những tin tức mới nhất về lập trình frontend, mỗi thứ 7 hàng tuần.</p>
+      <p>Cập nhật những tin tức mới nhất về lập trình frontend, mỗi sáng thứ 7 hàng tuần.</p>
 
       <h4>Nghía qua thử 👀</h4>
-      <ul>
+      <ul class="newsletter-preview-list">
         {
           newsletters.map(({ url, frontmatter }) => (
             <li>
@@ -109,6 +119,10 @@ const posts = all.slice(3)
       </FormWeeklyNewsletter>
     </div>
   </div>
+</div>
+
+<div class="mb2">
+  <PostList posts={newsletters} />
 </div>
 
 <div class="mb-2">
