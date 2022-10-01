@@ -1,4 +1,3 @@
-import mdx from '@astrojs/mdx'
 import { defineConfig } from 'astro/config'
 import rehypeExternalLinks from 'rehype-external-links'
 
@@ -18,5 +17,4 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [rehypeExternalLinks],
   },
-  integrations: [mdx()],
 })
