@@ -66,7 +66,8 @@ function isCurrentActive(path) {
       background-color: #fff;
       padding: 16px;
       border-radius: 4px;
-      box-shadow: var(--shadow-4);
+      box-shadow: var(--shadow-5);
+      border: 1px solid var(--gray-2);
       display: flex;
       gap: 1em;
       flex-direction: column;
@@ -78,7 +79,7 @@ function isCurrentActive(path) {
       }
 
       @media (--md) {
-        padding: 8px 16px;
+        padding: 16px 16px;
       }
     }
 
@@ -139,12 +140,12 @@ function isCurrentActive(path) {
       </summary>
 
       <div class="nav-links">
-        <a class={`nav-link ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : ''}`} href="/gioi-thieu"
-          >Giới Thiệu</a
-        >
-        <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet"
-          >Tất Cả Bài Viết</a
-        >
+        <a class={`nav-link ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : ''}`} href="/gioi-thieu">
+          Giới Thiệu
+        </a>
+        <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet">
+          Tất Cả Bài Viết
+        </a>
         <a class={`nav-link ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
 
         <a href="https://www.facebook.com/ehkoo.dev/" target="_blank" rel="noreferrer nofollow" class="nav-link">
@@ -154,7 +155,7 @@ function isCurrentActive(path) {
           Chat <IconExternalLink />
         </a>
         <a href="https://www.buymeacoffee.com/ehkoo" target="_blank" rel="noreferrer nofollow" class="nav-link">
-          Buy me a coffee <IconExternalLink />
+          Buy me a buble tea <IconExternalLink />
         </a>
       </div>
     </details>
