@@ -93,8 +93,10 @@ function isCurrentActive(path) {
       padding-bottom: 8px;
       border-bottom: 2px solid transparent;
 
-      &:hover {
-        border-color: var(--gray-8);
+      @media (hover: hover) {
+        &:hover {
+          border-color: var(--gray-8);
+        }
       }
     }
   }
