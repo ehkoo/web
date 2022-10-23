@@ -35,6 +35,15 @@ function isCurrentActive(path) {
         display: block;
       }
 
+      &-icon {
+        background-color: var(--gray-2);
+        border-radius: var(--radius-2);
+
+        &:hover {
+          background-color: var(--gray-3);
+        }
+      }
+
       summary {
         font-weight: 500;
         user-select: none;
@@ -108,7 +117,7 @@ function isCurrentActive(path) {
 
     <details class="nav-menu">
       <summary>
-        <div class="p-1">
+        <div class="p-1 nav-menu-icon">
           <svg
             viewBox="0 0 24 24"
             width="24"
