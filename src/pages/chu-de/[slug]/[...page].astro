@@ -5,7 +5,9 @@ import Paginator from '../../../components/Paginator.astro'
 import { getAllPosts, groupPostsByTag, POSTS_PER_PAGE, slugify } from '../../../lib.js'
 
 export async function getStaticPaths({ paginate }) {
-  const posts = getAllPosts(await Astro.glob('../../bai-viet/*.md'))
+  const rawPosts = await Astro.glob('../../bai-viet/*.md')
+  const newsletters = await Astro.glob('../../ban-tin/*.md')
+  const posts = getAllPosts([...rawPosts, ...newsletters])
 
   const postsByTag = groupPostsByTag(posts)
 
