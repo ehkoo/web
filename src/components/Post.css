@@ -41,6 +41,12 @@
       font-style: italic;
     }
 
+    video,
+    iframe {
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
     .astro-code {
       padding: 16px;
       font-variant-ligatures: none;
