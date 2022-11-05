@@ -10,7 +10,9 @@ const { posts } = Astro.props
     posts.map(({ frontmatter, url }) => (
       <article class="post-list-single flex flex-column gap-2">
         <div>
-          <img class="post-list-single-cover" src={frontmatter.cover} alt={frontmatter.title} />
+          <a href={url}>
+              <img class="post-list-single-cover" src={frontmatter.cover} alt={frontmatter.title} />
+            </a>
         </div>
         <div class="p-2">
           <h3>

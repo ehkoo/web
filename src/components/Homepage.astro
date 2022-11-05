@@ -79,7 +79,9 @@ const posts = all.slice(3)
     {
       top3.map(({ frontmatter, url }) => (
         <article class="article">
-          <img class="post-list-single-cover" src={frontmatter.cover} alt={frontmatter.title} />
+          <a href={url}>
+            <img class="post-list-single-cover" src={frontmatter.cover} alt={frontmatter.title} />
+          </a>
           <div class="flex flex-column gap-1">
             <h3>
               <a class="no-underline-link" href={url}>
@@ -97,7 +99,7 @@ const posts = all.slice(3)
 
     <div class="newsletter">
       <h3>Bản tin Ehkoo</h3>
-      <p>Cập nhật những tin tức mới nhất về lập trình frontend, mỗi sáng thứ 7 hàng tuần.</p>
+      <p>Cập nhật những tin tức mới nhất về lập trình frontend, được gửi vào mỗi sáng thứ 7 hàng tuần.</p>
 
       <p>Đã có hơn <strong>500+</strong> người đăng ký.</p>
 
