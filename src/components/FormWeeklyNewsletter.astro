@@ -30,7 +30,7 @@
   method="post"
   target="popupwindow"
   class="flex flex-column gap-2">
-  <input type="email" name="email" placeholder="Nhập email của bạn" class="newsletter-email" />
+  <input type="email" name="email" placeholder={Astro.props.placeholder ?? 'Nhập email của bạn'} class="newsletter-email" />
   <input type="hidden" value="1" name="embed" />
   <input type="hidden" name="tag" value="WeeklyNewsletter" />
   <slot />

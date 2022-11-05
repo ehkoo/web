@@ -99,24 +99,16 @@ const posts = all.slice(3)
       <h3>Bản tin Ehkoo</h3>
       <p>Cập nhật những tin tức mới nhất về lập trình frontend, mỗi sáng thứ 7 hàng tuần.</p>
 
-      <h4>Nghía qua thử 👀</h4>
-      <ul class="newsletter-preview-list">
-        {
-          newsletters.map(({ url, frontmatter }) => (
-            <li>
-              <a class="text-sm" href={url}>
-                {frontmatter.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <p>Đã có hơn <strong>500+</strong> người đăng ký.</p>
 
-      <h4>Đăng ký 👇</h4>
+      <div class="mt-4">
+        <h4 class="mb-2">Còn bạn thì sao? 👇</h4>
 
-      <FormWeeklyNewsletter>
-        <input type="hidden" name="metadata__FormLocation" value="Homepage" />
-      </FormWeeklyNewsletter>
+        <FormWeeklyNewsletter placeholder="Nhập ngay email ✉️">
+          <input type="hidden" name="metadata__FormLocation" value="Homepage" />
+        </FormWeeklyNewsletter>
+      </div>
+
     </div>
   </div>
 </div>
