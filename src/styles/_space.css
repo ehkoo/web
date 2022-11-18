@@ -18,6 +18,10 @@
   margin-left: 16px;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 @each $i in 0, 1, 2 {
   .pl-$(i) {
     padding-left: calc(var(--spacer) * $(i));

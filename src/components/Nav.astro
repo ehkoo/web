@@ -23,6 +23,10 @@ function isCurrentActive(path) {
       position: relative;
       flex: 1;
 
+      @media (--md) {
+        display: none;
+      }
+
       .icon-close {
         display: none;
       }
@@ -100,7 +104,14 @@ function isCurrentActive(path) {
       gap: 0.25em;
       padding-top: 8px;
       padding-bottom: 8px;
-      border-bottom: 2px solid transparent;
+      border-bottom: 4px solid transparent;
+
+      &-md {
+        display: none;
+        @media (--md) {
+          display: flex;
+        }
+      }
 
       @media (hover: hover) {
         &:hover {
@@ -112,7 +123,7 @@ function isCurrentActive(path) {
 </style>
 
 <nav class="nav">
-  <div class="container flex align-center gap-2">
+  <div class="container flex align-center gap-4">
     <a class={`nav-link ${isCurrentActive('/') ? 'nav-link--active' : ''}`} href="/" title="Ê-ku">Ehkoo</a>
 
     <details class="nav-menu">
@@ -155,7 +166,7 @@ function isCurrentActive(path) {
           Giới Thiệu
         </a>
         <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet">
-          Tất Cả Bài Viết
+          Bài Viết
         </a>
         <a class={`nav-link ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
 
@@ -173,5 +184,26 @@ function isCurrentActive(path) {
         </a>
       </div>
     </details>
+
+    <a class={`nav-link nav-link-md ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : ''}`} href="/gioi-thieu">
+      Giới Thiệu
+    </a>
+    <a class={`nav-link nav-link-md ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet">
+      Bài Viết
+    </a>
+    <a class={`nav-link nav-link-md ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
+
+    <a href="https://github.com/ehkoo/web" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md ml-auto">
+      <IconExternalLink /> Github
+    </a>
+    <a href="https://www.facebook.com/ehkoo.dev/" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
+      <IconExternalLink /> Fanpage
+    </a>
+    <a href="https://chat.webuild.community/" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
+      <IconExternalLink /> Chat
+    </a>
+    <a href="https://www.buymeacoffee.com/ehkoo" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
+      <IconExternalLink /> Bubble Tea
+    </a>
   </div>
 </nav>
