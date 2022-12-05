@@ -107,8 +107,7 @@ function isCurrentActive(path) {
       border-bottom: 4px solid transparent;
 
       &--name {
-        font-weight: 700;
-        color: var(--red-9);
+        font-weight: 900;
       }
 
       &-md {
@@ -129,7 +128,9 @@ function isCurrentActive(path) {
 
 <nav class="nav">
   <div class="container flex align-center gap-4">
-    <a class={`nav-link nav-link--name ${isCurrentActive('/') ? 'nav-link--active' : ''}`} href="/" title="Ê-ku">Ehkoo</a>
+    <a class={`nav-link nav-link--name ${isCurrentActive('/') ? 'nav-link--active' : ''}`} href="/" title="Ê-ku"
+      >Ehkoo</a
+    >
 
     <details class="nav-menu">
       <summary>
@@ -170,9 +171,7 @@ function isCurrentActive(path) {
         <a class={`nav-link ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : ''}`} href="/gioi-thieu">
           Giới Thiệu
         </a>
-        <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet">
-          Bài Viết
-        </a>
+        <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet"> Bài Viết</a>
         <a class={`nav-link ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
         <a class="nav-link" href="/rss.xml">RSS</a>
 
@@ -200,10 +199,18 @@ function isCurrentActive(path) {
     <a class={`nav-link nav-link-md ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
     <a class={`nav-link nav-link-md`} href="/rss.xml">RSS</a>
 
-    <a href="https://github.com/ehkoo/web" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md ml-auto">
+    <a
+      href="https://github.com/ehkoo/web"
+      target="_blank"
+      rel="noreferrer nofollow"
+      class="nav-link nav-link-md ml-auto">
       <IconExternalLink /> Github
     </a>
-    <a href="https://www.facebook.com/ehkoo.dev/" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
+    <a
+      href="https://www.facebook.com/ehkoo.dev/"
+      target="_blank"
+      rel="noreferrer nofollow"
+      class="nav-link nav-link-md">
       <IconExternalLink /> Fanpage
     </a>
     <a href="https://chat.webuild.community/" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
