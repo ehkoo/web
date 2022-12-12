@@ -85,4 +85,4 @@ Quay lại bug ở trên, mình sẽ đổi thành:
 <input type="text" inputmode="decimal" pattern="[0-9,\.]*" />
 ```
 
-để có thể nhập số với dấu phẩy và dấu chấm. Trường hợp mình cần số nguyên thì dùng `inputmode=numeric` ha.
+để có thể nhập số với dấu phẩy và dấu chấm. Trường hợp mình cần số nguyên thì dùng `inputmode=numeric` ha. Ngoài ra nếu bạn muốn hỗ trợ nhập giá trị âm thì nên đổi thành `pattern="[+-]?[0-9,\.]*"`.
