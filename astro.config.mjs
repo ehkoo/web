@@ -16,5 +16,6 @@ export default defineConfig({
     },
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [rehypeExternalLinks],
+    extendDefaultPlugins: true,
   },
 })
