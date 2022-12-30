@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: Tất tần tật về Promise và async/await
 slug: tat-tan-tat-ve-promise-va-async-await
 date: 2018-06-02
+updated: 2022-12-30
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg
 tags: JavaScript, Promise, Async, Await, Dành cho người mới
 excerpt: Bạn nghĩ mình đã "rành sáu câu" về Promise và async/await? Nô nô, đời không đơn giản vậy đâu nhé. Cùng đọc về những sai lầm hay gặp khi "hứa hẹn" trong JavaScript nào.
@@ -106,7 +107,8 @@ promise()
     console.log(result1) // 'foo'
     return anotherPromise()
   })
-  .then((result2) => console.log(result2)) // `result2` sẽ là kết quả của anotherPromise()
+  // `result2` sẽ là kết quả của anotherPromise()
+  .then((result2) => console.log(result2))
   .catch((err) => {})
 ```
 
@@ -336,7 +338,9 @@ Nếu dùng async/await thì...
 ```js
 async function() {
   const userIds = [1, 2, 3, 4]
-  const [user1, user2, user3, user4] = await Promise.all(usersIds.map(api.getUser))
+  const [user1, user2, user3, user4] = await Promise.all(
+    usersIds.map(api.getUser)
+  )
 }
 ```
 
@@ -347,7 +351,12 @@ async function() {
 Ngoài hai kiểu chạy tuần tự và song song ở trên, chúng ta còn có `Promise.race([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và sẽ resolve/reject ngay khi một trong số các promises này hoàn thành/xảy ra lỗi.
 
 ```js
-Promise.race([ping('ns1.example.com'), ping('ns2.example.com'), ping('ns3.example.com'), ping('ns4.example.com')]).then(
+Promise.race([
+  ping('ns1.example.com'),
+  ping('ns2.example.com'),
+  ping('ns3.example.com'),
+  ping('ns4.example.com')
+]).then(
   (result) => {},
 )
 ```
@@ -531,7 +540,9 @@ async function() {
 }
 ```
 
-Bạn có thể đọc thêm về `Promise.prototype.finally()` [ở đây](https://ehkoo.com/bai-viet/promise-finally-duoc-gioi-thieu-tu-google-chrome-63). Lưu ý là phương thức này hiện chỉ được hỗ trợ bởi Firefox, Chrome và Opera thôi nhé.
+Bạn có thể đọc thêm về `Promise.prototype.finally()` [ở đây](https://ehkoo.com/bai-viet/promise-finally-duoc-gioi-thieu-tu-google-chrome-63). ~Lưu ý là phương thức này hiện chỉ được hỗ trợ bởi Firefox, Chrome và Opera thôi nhé.~
+
+**Cập nhật 2022:** `.finally()` hiện đã có mặt ở tất cả các trình duyệt, và node.js ha.
 
 ## Kết luận
 
