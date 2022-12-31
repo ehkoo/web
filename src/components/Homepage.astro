@@ -1,9 +1,10 @@
 ---
 import { getPostsForHomepage } from '../lib.js'
 
+import s from './PostList.module.css'
 import DateTime from './DateTime.astro'
 import PostList from './PostList.astro'
-import FormWeeklyNewsletter from './FormWeeklyNewsletter.astro'
+import Newsletter from './Newsletter.astro'
 
 const { posts: all, newsletters } = getPostsForHomepage(
   await Astro.glob('../pages/bai-viet/*.md'),
@@ -20,21 +21,6 @@ const posts = all.slice(3)
     gap: 16px;
     @media (--lg) {
       grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .newsletter {
-    background-color: var(--gray-3);
-    border-radius: 4px;
-    padding: 16px;
-    gap: 16px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    @media (--lg) {
-      grid-column: 1 / 3;
-      grid-row: 1 / 4;
     }
   }
 
@@ -62,25 +48,15 @@ const posts = all.slice(3)
       }
     }
   }
-
-  .newsletter-preview-list {
-    margin-left: 16px;
-    padding-right: 8px;
-    list-style-type: '🔸';
-
-    li {
-      padding-left: 8px;
-    }
-  }
 </style>
 
-<div class="mb-4">
+<div class="grid gap-3 mb-2">
   <div class="top">
     {
       top3.map(({ frontmatter, url }) => (
         <article class="article">
           <a href={url}>
-            <img class="post-list-single-cover" src={frontmatter.cover} alt={frontmatter.title} />
+            <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} />
           </a>
           <div class="flex flex-column gap-1">
             <h3>
@@ -97,31 +73,14 @@ const posts = all.slice(3)
       ))
     }
 
-    <div class="newsletter">
-      <h3>Bản tin Ehkoo</h3>
-      <p>Cập nhật những tin tức mới nhất về lập trình frontend, được gửi vào mỗi sáng thứ 7 hàng tuần.</p>
-
-      <p>Đã có hơn <strong>500+</strong> người đăng ký.</p>
-
-      <div class="mt-4">
-        <h4 class="mb-2">Còn bạn thì sao? 👇</h4>
-
-        <FormWeeklyNewsletter placeholder="Nhập ngay email 💌">
-          <input type="hidden" name="metadata__FormLocation" value="Homepage" />
-        </FormWeeklyNewsletter>
-      </div>
-
-    </div>
+    <Newsletter />
   </div>
-</div>
 
-<div class="mb2">
   <PostList posts={newsletters} />
-</div>
 
-<div class="mb-2">
   <PostList posts={posts} />
 </div>
+
 <div class="text-center">
   <a href="/bai-viet">Tất cả bài viết</a>
 </div>

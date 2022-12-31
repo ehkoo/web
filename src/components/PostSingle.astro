@@ -1,10 +1,10 @@
 ---
-import './Post.css'
-
 import DateTime from './DateTime.astro'
 import TagLinks from './TagLinks.astro'
 import ToC from './ToC.astro'
 import IconExternalLink from './IconExternalLink.astro'
+
+import s from './PostSingle.module.css'
 
 const {
   headers,
@@ -12,12 +12,12 @@ const {
 } = Astro.props
 ---
 
-<article id="post" class="post">
-  <h1 class="post-title mb-4 mt-4">{title}</h1>
+<article id="post" class={s.post}>
+  <h1 class:list={[s.title, 'mb-4 mt-4']}>{title}</h1>
 
-  <div class="post-wrapper">
+  <div class={s.wrapper}>
     <div>
-      <div class="post-content">
+      <div class={s.content}>
         <slot />
       </div>
 
@@ -30,6 +30,7 @@ const {
             </div>
             <div>
               <script
+                is:inline
                 src="https://utteranc.es/client.js"
                 repo="ehkoo/web"
                 issue-term="pathname"
@@ -46,8 +47,8 @@ const {
 
     {
       !isPage && (
-        <nav class="post-nav">
-          <div class="post-meta text-sm mb-2">
+        <nav class={s.nav}>
+          <div class:list={[s.meta, 'text-sm mb-2']}>
             <p class="mb-2">
               Viết bởi{' '}
               <a

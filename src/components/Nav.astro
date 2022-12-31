@@ -11,123 +11,123 @@ function isCurrentActive(path) {
 
 <style>
   .nav {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: var(--size-2);
+    padding-bottom: var(--size-2);
 
     @media (--xl) {
       padding-top: 24px;
       padding-bottom: 24px;
     }
+  }
+  .nav-menu {
+    position: relative;
+    flex: 1;
 
-    &-menu {
-      position: relative;
-      flex: 1;
+    @media (--md) {
+      display: none;
+    }
+  }
 
-      @media (--md) {
-        display: none;
-      }
+  .icon-close {
+    display: none;
+  }
 
-      .icon-close {
-        display: none;
-      }
+  .nav-menu[open] .icon-open {
+    display: none;
+  }
 
-      &[open] .icon-open {
-        display: none;
-      }
+  .nav-menu[open] .icon-close {
+    display: block;
+  }
 
-      &[open] .icon-close {
-        display: block;
-      }
+  summary {
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-end;
 
-      &-icon {
-        background-color: var(--gray-2);
-        border-radius: var(--radius-2);
-
-        &:hover {
-          background-color: var(--gray-3);
-        }
-      }
-
-      summary {
-        font-weight: 500;
-        user-select: none;
-        cursor: pointer;
-        padding: 8px;
-        display: flex;
-        justify-content: flex-end;
-
-        @media (--md) {
-          justify-content: flex-start;
-        }
-
-        @media (--lg) {
-          padding-left: 16px;
-          padding-right: 16px;
-        }
-
-        &::-webkit-details-marker,
-        &::marker {
-          content: '';
-          display: none;
-        }
-      }
+    @media (--md) {
+      justify-content: flex-start;
     }
 
-    &-links {
-      position: absolute;
-      right: 0;
-      background-color: #fff;
-      padding: 16px;
-      border-radius: 4px;
-      box-shadow: var(--shadow-5);
-      border: 1px solid var(--gray-2);
-      display: flex;
-      gap: 1em;
-      flex-direction: column;
-      z-index: var(--layer-important);
+    @media (--lg) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 
-      @media (--md) {
-        right: unset;
-        left: 0;
-      }
+  summary::-webkit-details-marker,
+  summary::marker {
+    content: '';
+    display: none;
+  }
 
-      @media (--md) {
-        padding: 16px 16px;
-      }
+  .nav-menu-icon {
+    background-color: var(--gray-2);
+    border-radius: var(--radius-2);
+    padding: var(--size-1);
+
+    &:hover {
+      background-color: var(--gray-3);
+    }
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-5);
+    border: 1px solid var(--gray-2);
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    z-index: var(--layer-important);
+
+    @media (--md) {
+      right: unset;
+      left: 0;
     }
 
-    &-link {
-      font-weight: 500;
-      text-decoration: none;
+    @media (--md) {
+      padding: 16px 16px;
+    }
+  }
+
+  .nav-link {
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 4px solid transparent;
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--gray-8);
+      }
+    }
+  }
+
+  .nav-link--name {
+    font-weight: 900;
+  }
+
+  .nav-link-md {
+    display: none;
+    @media (--md) {
       display: flex;
-      align-items: center;
-      gap: 0.25em;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      border-bottom: 4px solid transparent;
-
-      &--name {
-        font-weight: 900;
-      }
-
-      &-md {
-        display: none;
-        @media (--md) {
-          display: flex;
-        }
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          border-color: var(--gray-8);
-        }
-      }
     }
   }
 </style>
 
 <nav class="nav">
-  <div class="container flex align-center gap-4">
+  <div class="container flex align-center gap-3">
     <a class={`nav-link nav-link--name ${isCurrentActive('/') ? 'nav-link--active' : ''}`} href="/" title="Ê-ku"
       >Ehkoo</a
     >

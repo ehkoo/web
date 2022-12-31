@@ -1,23 +1,14 @@
-const postcssJitProps = require('postcss-jit-props')
 const OpenProps = require('open-props')
-const postcssCustomMedia = require('postcss-custom-media')
+const postcssJitProps = require('postcss-jit-props')
+const postcssPresetEnv = require('postcss-preset-env')
 
 const plugins = [
-  postcssCustomMedia({
-    importFrom: [
-      {
-        customMedia: {
-          '--md': '(min-width: 768px)',
-          '--lg': '(min-width: 960px)',
-          '--xl': '(min-width: 1280px)',
-        },
-      },
-    ],
+  postcssPresetEnv({
+    stage: 1,
   }),
   require('postcss-calc'),
   require('postcss-each'),
   require('postcss-nested'),
-  require('autoprefixer'),
   postcssJitProps(OpenProps),
 ]
 

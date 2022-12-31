@@ -1,4 +1,4 @@
-.post-list {
+.list {
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr;
@@ -15,19 +15,17 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
 
-  &-single {
-    &-cover {
-      height: 160px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: var(--radius-2);
-    }
+.cover {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-2);
+}
 
-    &-title {
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--gray-7);
-    }
-  }
+.title {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--gray-7);
 }

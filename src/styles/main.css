@@ -1,9 +1,6 @@
-@import url('./_reset.css');
-@import url('./_fonts.css');
-@import url('./_space.css');
-@import url('./_flex-grid.css');
-@import url('./_text.css');
-@import url('./_color.css');
+@custom-media --md (width >= 48em);
+@custom-media --lg (width >= 60em);
+@custom-media --xl (width >= 80em);
 
 :root {
   --user-font-scale: 1rem - 16px;

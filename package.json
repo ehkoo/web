@@ -17,14 +17,13 @@
   "devDependencies": {
     "@astrojs/rss": "1.0.3",
     "astro": "1.6.9",
-    "autoprefixer": "10.4.8",
     "mdast-util-to-string": "3.1.0",
     "postcss": "8.4.18",
     "postcss-calc": "8.2.4",
-    "postcss-custom-media": "8.0.2",
     "postcss-each": "1.1.0",
     "postcss-jit-props": "1.0.7",
-    "postcss-nested": "5.0.6",
+    "postcss-nested": "6.0.0",
+    "postcss-preset-env": "7.8.3",
     "reading-time": "1.5.0",
     "rehype-external-links": "2.0.1"
   },
