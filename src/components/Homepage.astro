@@ -2,6 +2,7 @@
 import { getPostsForHomepage } from '../lib.js'
 
 import s from './PostList.module.css'
+import hs from './Homepage.module.css'
 import DateTime from './DateTime.astro'
 import PostList from './PostList.astro'
 import Newsletter from './Newsletter.astro'
@@ -15,46 +16,11 @@ const top3 = all.slice(0, 3)
 const posts = all.slice(3)
 ---
 
-<style>
-  .top {
-    display: grid;
-    gap: 16px;
-    @media (--lg) {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .article {
-    display: grid;
-    gap: 16px;
-
-    @media (--md) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media (--lg) {
-      grid-template-columns: 320px 320px;
-    }
-
-    @media (--lg) {
-      &:nth-child(1) {
-        grid-column-end: 1;
-      }
-      &:nth-child(2) {
-        grid-row-start: 2;
-      }
-      &:nth-child(3) {
-        grid-row-start: 3;
-      }
-    }
-  }
-</style>
-
 <div class="grid gap-3 mb-2">
-  <div class="top">
+  <div class={hs.top}>
     {
       top3.map(({ frontmatter, url }) => (
-        <article class="article">
+        <article class={hs.article}>
           <a href={url}>
             <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} />
           </a>
