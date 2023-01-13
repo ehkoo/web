@@ -88,4 +88,4 @@ Vì giá trị của nhóm `dv*` tùy thuộc vào UI của trình duyệt, và 
 
 ## Kết luận
 
-Làm sao để chọn đúng viewport units? Có lẽ cách tốt nhất là thử trực tiếp trên thiết bị di động và nhiều trình duyệt khác nhau.
+Hi vọng qua bài viết này, bạn đã biết được sự có mặt của những viewport units mới và có thể sử dụng chúng trong công việc. Câu hỏi tiếp theo là làm sao để chọn đúng viewport units 🤔? Có lẽ cách tốt nhất là thử trực tiếp trên thiết bị di động và nhiều trình duyệt khác nhau. Bạn cũng nhớ nên kiểm tra khi xoay màn hình nữa nha.
