@@ -1,18 +1,19 @@
 ---
 layout: ../../layouts/Post.astro
-title:
-slug: html-form-elements-formdata
-date: 2018-01-16
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1516254753/jLxMOZg_egcfqa.jpg
-tags:
-excerpt:
+title: 'Xử lý form với `HTMLFormElement.elements`'
+date: 2023-01-30
+cover: https://images.unsplash.com/photo-1554224155-cfa08c2a758f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1726&q=80
+excerpt: ''
+tags: HTML, React, Bài mì ăn liền
 author: kcjpop
 draft: true
 ---
 
-## #TIL `HTMLFormElement.elements`
+![](https://images.unsplash.com/photo-1554224155-cfa08c2a758f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1726&q=80)
 
-Thật ra là _biết_ cũng mấy bữa rồi mà giờ mới ghi lại. Đại loại khi làm form _"đơn giản"_ trong React thì chúng ta hay viết như thế này.
+_Hình chụp bởi [Kelly Sikkema](https://unsplash.com/@kellysikkema). Nguồn: [Unsplash](https://unsplash.com/photos/8DEDp6S93Po)_
+
+Đại loại khi làm form _"đơn giản"_ trong React thì chúng ta hay viết như thế này.
 
 ```js
 const PLANS = [
@@ -27,8 +28,8 @@ function FormRegister() {
 
   const doSubmit = (e) => {
     e.preventDefault()
-    const input = { plan, email }
-    console.log(input)
+    const payload = { plan, email }
+    console.log(payload)
   }
 
   return (
@@ -37,9 +38,8 @@ function FormRegister() {
         Email*
         <input
           type="email"
-          id="email"
           name="email"
-          placeholder="kcjpop@ehkoo.com"
+          placeholder="hi@local.dev"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -53,7 +53,6 @@ function FormRegister() {
             <input
               required
               type="radio"
-              id={item.value}
               name="plan"
               value={item.value}
               onChange={(e) => setPlan(e.target.value)}
@@ -70,18 +69,26 @@ function FormRegister() {
 }
 ```
 
-Ở trên sử dụng `useState` và [controlled components](https://reactjs.org/docs/forms.html#controlled-components) để lưu lại các giá trị do người dùng nhập vào. Ở form này bạn không thực hiện các thao tác phức tạp hơn như validation, hay giá trị của input này phụ thuộc vào một input khác, v.v…Một cách khác là chúng ta có thể dùng `HTMLFormElement.elements` hoặc `FormData` trong hàm `doSubmit` để lấy hết các giá trị trong form.
+Ở trên sử dụng `useState` và [controlled components](https://reactjs.org/docs/forms.html#controlled-components) để lưu lại các giá trị do người dùng nhập vào. Ở form này bạn không thực hiện các thao tác phức tạp hơn như validation, hay giá trị của input này phụ thuộc vào một input khác, v.v… Khi người dùng gửi (submit) form, chúng ta sẽ dùng hai states `email` và `plan` để tạo payload.
 
-### `HTMLFormElement.elements`
+### Sử dụng `HTMLFormElement.elements`
 
-Thuộc tính [HTMLFormElement.elements](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements) trả về một tập hợp các điều khiển (controls) trong form. Những điều khiển này bao gồm các thẻ `<button>`, `<fieldset>`, `<input>`, `<object>`, `<output>`, `<select>`, và `<textarea>`. Một ngoại lệ là thẻ `<input type="image">` không tính nhe, vì lý do lịch sử 🤷‍♂️. Bạn có thể truy xuất đến một điều khiển thông qua `name` hay `id` của nó. Như trong form ở trên.
+Một cách khác là chúng ta có thể dùng `HTMLFormElement.elements` trong hàm `doSubmit`.
+
+Thuộc tính [HTMLFormElement.elements](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements) trả về một tập hợp các điều khiển (controls) trong form. Những điều khiển này bao gồm các thẻ `<button>`, `<fieldset>`, `<input>`, `<object>`, `<output>`, `<select>`, và `<textarea>`. Một ngoại lệ là thẻ `<input type="image">`, vì lý do lịch sử (MDN nói vậy, còn cụ thể ra sao thì mình cũng không biết 🤷‍♂️).
+
+Bạn có thể truy xuất đến một điều khiển thông qua `name` hay `id` của nó. Chẳng hạn với form ở trên, chúng ta sẽ làm như sau:
 
 ```js
 const doSubmit = (e) => {
   e.preventDefault()
+
+  // `e.target` lúc này chính là `HTMLFormElement`
   const plan = e.target.elements.plan.value
   const email = e.target.elements.email.value
-  const input = { plan, email }
+
+  const payload = { plan, email }
+  console.log(payload)
 }
 ```
 
@@ -91,9 +98,9 @@ Các controls cũng có thể được truy xuất thông qua thứ tự nó xu�
 
 Khi thay đổi vị trí của một control thì thứ tự cũng có thể thay đổi. Do đó sử dụng `name` hay `id` vẫn là chắc ăn nhất.
 
-### `FormData`
+### Hoặc `FormData`
 
-Nếu bạn muốn "một phát ăn luôn", gom hết tất cả giá trị trong form thì sao nè? Chúng ta có thể dùng `FormData`.
+Nếu bạn muốn "một phát ăn luôn", gom hết tất cả giá trị trong form thì sao? Chúng ta có thể dùng `FormData`.
 
 ```js
 const doSubmit = (e) => {
@@ -106,7 +113,7 @@ const doSubmit = (e) => {
 
 ### Kết
 
-Code sau khi sửa lại.
+`FormRegister` sau khi sửa lại trông ngắn gọn và đẹp hơn hẳn.
 
 ```jsx
 function FormRegister() {
@@ -120,14 +127,14 @@ function FormRegister() {
     <form onSubmit={doSubmit}>
       <label htmlFor="email">
         Email*
-        <input type="email" id="email" name="email" placeholder="kcjpop@ehkoo.com" required />
+        <input type="email" name="email" placeholder="hi@local.dev" required />
       </label>
 
       <fieldset required>
         <legend>Membership plan*</legend>
         {PLANS.map((item) => (
           <label htmlFor={item.value} key={item.label}>
-            <input required type="radio" id={item.value} name="plan" />
+            <input required type="radio" name="plan" />
             {item.label}
           </label>
         ))}
@@ -139,4 +146,4 @@ function FormRegister() {
 }
 ```
 
-**🚨 LƯU Ý:** Dùng `form.elements` hay `FormData` rất tiện nếu bạn chỉ muốn thu thập dữ liệu người dùng nhập vào và chuyển qua nơi khác xử lý. Nếu muốn làm những thao tác phức tạp hơn, có lẽ bạn nên dùng `react-hook-form` hoặc `formik`.
+**🚨 LƯU Ý:** Dùng `form.elements` hay `FormData` rất tiện nếu bạn chỉ muốn thu thập dữ liệu và chuyển qua nơi khác xử lý. Nếu muốn làm những thao tác phức tạp hơn, có lẽ bạn nên dùng `react-hook-form` hoặc `formik`.
