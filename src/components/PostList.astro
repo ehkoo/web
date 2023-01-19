@@ -2,7 +2,7 @@
 import DateTime from './DateTime.astro'
 import s from './PostList.module.css'
 
-const { posts } = Astro.props
+const { posts, noExcerpt = false } = Astro.props
 ---
 
 <div class={s.list}>
@@ -19,7 +19,7 @@ const { posts } = Astro.props
           </a>
         </h3>
 
-        <p>{frontmatter.excerpt}</p>
+        {!noExcerpt && <p>{frontmatter.excerpt}</p>}
 
         <p class="text-gray-6 text-sm">
           @{frontmatter.author} |
