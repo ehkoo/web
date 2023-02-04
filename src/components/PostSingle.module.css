@@ -87,10 +87,8 @@
     border-left: 8px solid var(--gray-7);
     padding: 16px;
     border-radius: 4px;
-
-    p:last-child {
-      margin-bottom: 0;
-    }
+    display: grid;
+    gap: 1em;
   }
 
   table,
