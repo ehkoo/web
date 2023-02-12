@@ -5,7 +5,7 @@ import { remarkReadingTime } from './src/remark-reading-time.mjs'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ehkoo.com',
+  site: 'https://ehkoo.com/',
   server: {
     port: 6001,
     host: false,

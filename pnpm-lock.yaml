@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/rss': 1.0.3
+  '@astrojs/rss': 2.1.0
   astro: 2.0.10
   mdast-util-to-string: 3.1.0
   open-props: 1.4.25
@@ -20,7 +20,7 @@ dependencies:
   slugify: 1.6.5
 
 devDependencies:
-  '@astrojs/rss': 1.0.3
+  '@astrojs/rss': 2.1.0
   astro: 2.0.10
   mdast-util-to-string: 3.1.0
   postcss: 8.4.18
@@ -98,10 +98,11 @@ packages:
       prismjs: 1.29.0
     dev: true
 
-  /@astrojs/rss/1.0.3:
-    resolution: {integrity: sha512-SkAUMnp/LpryOR5B69rlF69AjKE3YlIPRmWad5WoRVeAH1CEEvSh8sC8/qhtG9haPFYa9JoX6zp5V5MkUOop3A==}
+  /@astrojs/rss/2.1.0:
+    resolution: {integrity: sha512-PrqtIDDAyu4MyIvhBZEQhftui5fqyO9JPvOe4QnVDhErMIYWXd0pVPpqdnE0SKZ5xykMkphYPAQdWDr7VeCzBg==}
     dependencies:
       fast-xml-parser: 4.0.11
+      kleur: 4.1.5
     dev: true
 
   /@astrojs/telemetry/2.0.0:
