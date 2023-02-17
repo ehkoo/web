@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@astrojs/rss": "2.1.0",
-    "astro": "2.0.10",
+    "astro": "2.0.13",
     "mdast-util-to-string": "3.1.0",
     "postcss": "8.4.18",
     "postcss-calc": "8.2.4",
