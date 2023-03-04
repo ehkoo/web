@@ -45,11 +45,3 @@
   font-display: swap;
   src: url('/fonts/SpaceGrotesk[wght].woff2') format('woff2');
 }
-
-@font-face {
-  font-family: 'RecursiveMonoLnrSt';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/RecursiveMonoLnrSt-Regular.woff2') format('woff2');
-}
