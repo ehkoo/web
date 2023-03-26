@@ -21,12 +21,12 @@ export function getAllPostsByTag(posts) {
   return posts
 }
 
-export function getPostsForHomepage(posts, newsletters) {
-  const all = getAllPosts(posts)
+export function getPostsForHomepage(posts) {
+  return getAllPosts(posts)
+}
 
-  const processedNewsletter = processPosts(newsletters)
-
-  return { posts: all.slice(0, POSTS_PER_PAGE), newsletters: processedNewsletter.slice(0, 3) }
+export function getNewsletters(posts) {
+  return processPosts(posts).slice(0, 3)
 }
 
 export function slugify(str) {
@@ -43,5 +43,58 @@ export function groupPostsByTag(posts) {
     return acc
   }, {})
 
-  return postsByTag
+  return (
+    Object.entries(postsByTag)
+      // Sort posts by published date
+      .map(([tag, posts]) => [
+        tag,
+        posts.sort((a, b) => new Date(b.frontmatter?.date).getTime() - new Date(a.frontmatter?.date).getTime()),
+      ])
+      // Then sort tag by its latest post date
+      .sort(([_, a], [__, b]) => {
+        // Sort by length first
+        if (a.length !== b.length) return b.length - a.length
+
+        const [firstOfA] = a
+        const [firstOfB] = b
+
+        return new Date(firstOfB.frontmatter?.date).getTime() - new Date(firstOfA.frontmatter?.date).getTime()
+      })
+  )
+}
+
+export function groupPostsByYear(posts) {
+  posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+
+  const map = Object.create(null)
+
+  for (const post of posts) {
+    const year = new Date(post.frontmatter.date).getFullYear()
+
+    map[year] = map[year] ?? []
+    map[year].push(post)
+  }
+
+  return map
+}
+
+export function parseDateTime(date) {
+  const d = new Date(date)
+
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+
+  return { day, month, year }
+}
+
+export function timeAgo(d) {
+  const date = new Date(d)
+  const now = new Date()
+  const days = Math.floor((date.valueOf() - now.valueOf()) / 84_600_000)
+  const value = Math.abs(days) < 60 ? days : Math.floor(days / 30)
+  const unit = Math.abs(days) < 60 ? 'day' : 'month'
+
+  const formatter = new Intl.RelativeTimeFormat('vi', { numeric: 'auto', style: 'narrow', value: unit })
+  return formatter.format(value, unit)
 }

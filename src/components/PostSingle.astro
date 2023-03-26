@@ -1,85 +1,76 @@
 ---
-import DateTime from './DateTime.astro'
-import TagLinks from './TagLinks.astro'
-import ToC from './ToC.astro'
-import IconExternalLink from './IconExternalLink.astro'
+import PostMeta from './PostMeta.astro'
+import PostNav from './post/PostNav.astro'
+import FormNewsletter from './newsletter/Form.astro'
 
 import s from './PostSingle.module.css'
 
 const {
   headers,
-  post: { readingTime, title, author, date, updated, tags, isPage },
+  post: { title, isPage },
 } = Astro.props
 ---
 
-<article id="post" class={s.post}>
-  <h1 class:list={[s.title, 'mb-4 mt-4']}>{title}</h1>
+<style>
+  .newsletter {
+    background-color: var(--surface-2);
+    padding: var(--size-3);
+    border-radius: var(--radius-2);
+    margin-inline: calc(-1 * var(--size-3));
+  }
+</style>
+
+<article id="post" class:list={['flow', s.post]}>
+  <h1 class={s.title}>{title}</h1>
+
+  {
+    !isPage && (
+      <>
+        <PostMeta post={Astro.props.post} />
+        <PostNav headers={headers} />
+      </>
+    )
+  }
 
   <div class={s.wrapper}>
-    <div>
+    <div class="flow">
       <div class={s.content}>
         <slot />
       </div>
 
       {
         !isPage && (
-          <>
-            <div class="flex gap-2 text-gray-6 text-sm">
-              Tags:
-              <TagLinks tags={tags} />
-            </div>
-            <div>
-              <script
-                is:inline
-                src="https://utteranc.es/client.js"
-                repo="ehkoo/web"
-                issue-term="pathname"
-                label="web-comments"
-                theme="github-light"
-                crossorigin="anonymous"
-                async
-              />
-            </div>
-          </>
+          <div class="newsletter mb-4">
+            <h3>Bạn thích bài viết này?</h3>
+
+            <p>
+              Đăng ký ngay để nhận những tin tức mới nhất về lập trình frontend trong tuần. Bản tin sẽ được gửi vào mỗi
+              cuối tuần ✌️
+            </p>
+
+            <FormNewsletter>
+              <input type="hidden" name="metadata__FormLocation" value="SinglePost" />
+            </FormNewsletter>
+          </div>
+        )
+      }
+
+      {
+        !isPage && (
+          <div id="comments">
+            <script
+              is:inline
+              src="https://utteranc.es/client.js"
+              repo="ehkoo/web"
+              issue-term="pathname"
+              label="web-comments"
+              theme="github-light"
+              crossorigin="anonymous"
+              async
+            />
+          </div>
         )
       }
     </div>
-
-    {
-      !isPage && (
-        <nav class={s.nav}>
-          <div class:list={[s.meta, 'text-sm mb-2']}>
-            <p class="mb-2">
-              Viết bởi{' '}
-              <a
-                class="inline-flex align-center gap-1"
-                href={`https://github.com/${author}`}
-                target="_blank"
-                rel="noreferrer nofollow">
-                <strong>@{author}</strong> <IconExternalLink />
-              </a>
-            </p>
-            <p>
-              • Đăng ngày
-              <DateTime show="date" date={date} />
-            </p>
-            {updated && (
-              <p>
-                • Cập nhật ngày
-                <DateTime show="date" date={updated} />
-              </p>
-            )}
-            <p>
-              • Dài <strong>{readingTime.words}</strong> từ
-            </p>
-            <p>
-              • Đọc trong <strong>{Math.ceil(readingTime.minutes)}</strong> phút
-            </p>
-          </div>
-
-          <ToC headers={headers} />
-        </nav>
-      )
-    }
   </div>
 </article>

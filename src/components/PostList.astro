@@ -2,30 +2,30 @@
 import DateTime from './DateTime.astro'
 import s from './PostList.module.css'
 
-const { posts, noExcerpt = false } = Astro.props
+const { posts } = Astro.props
 ---
 
-<div class={s.list}>
+<div class="flow">
   {
-    posts.map(({ frontmatter, url }) => (
-      <article class="grid gap-2 align-content-start">
-        <a href={url}>
-          <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} />
-        </a>
+    posts.map(([year, ps]) => (
+      <div class="flow">
+        <div class={s.year}>{year}</div>
+        <div class:list={[s.articles, 'flow']} style="--flow-space: 1.5em;">
+          {ps.map(({ frontmatter, url }) => (
+            <article class={s.article}>
+              <time class={s.date} datetime={frontmatter.date}>
+                <DateTime date={frontmatter.date} />
+              </time>
 
-        <h3>
-          <a class:list={[s.title, 'text-lg no-underline-link']} href={url}>
-            {frontmatter.title}
-          </a>
-        </h3>
+              <a class:list={[s.title, 'no-underline-link']} href={url}>
+                <h3>{frontmatter.title}</h3>
+              </a>
 
-        {!noExcerpt && <p>{frontmatter.excerpt}</p>}
-
-        <p class="text-gray-6 text-sm">
-          @{frontmatter.author} |
-          <DateTime date={frontmatter.date} />
-        </p>
-      </article>
+              <p class={s.author}>@{frontmatter.author}</p>
+            </article>
+          ))}
+        </div>
+      </div>
     ))
   }
 </div>

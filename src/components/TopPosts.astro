@@ -1,0 +1,31 @@
+---
+import { timeAgo } from '../lib'
+import s from './TopPosts.module.css'
+
+const { posts } = Astro.props
+---
+
+<div class="flow">
+  {
+    posts.map(({ frontmatter, url }) => (
+      <>
+        <article class={s.article}>
+          <a href={url}>
+            <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} />
+          </a>
+
+          <div>
+            <a href={url} class="no-underline-link">
+              <h3>{frontmatter.title}</h3>
+            </a>
+            <p class={s.meta}>
+              <time datetime={frontmatter.date}>{timeAgo(frontmatter.date)}</time>
+              {' • '}
+              <span class={s.author}>@{frontmatter.author}</span>
+            </p>
+          </div>
+        </article>
+      </>
+    ))
+  }
+</div>

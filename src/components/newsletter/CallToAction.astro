@@ -1,0 +1,36 @@
+---
+import Form from './Form.astro'
+import Latest from './Latest.astro'
+---
+
+<style>
+  .newsletter {
+    background-color: var(--surface-2);
+    border-radius: var(--radius-2);
+    padding: var(--size-3);
+    gap: var(--size-3);
+
+    @media (--lg) {
+      margin-inline: calc(var(--size-3) * -1);
+    }
+  }
+</style>
+
+<div class="flow newsletter">
+  <h3>Bản tin Ehkoo 💌</h3>
+
+  <Latest posts={Astro.props.posts} />
+
+  <p>
+    Cập nhật những tin tức mới nhất về JavaScript, CSS, React, v.v. Được gửi vào mỗi cuối tuần và đã có hơn
+    <strong>500+</strong> người đăng ký.
+  </p>
+
+  <div>
+    <h4>Còn bạn thì sao? 👇</h4>
+
+    <Form placeholder="Nhập email của bạn">
+      <input type="hidden" name="metadata__FormLocation" value="Homepage" />
+    </Form>
+  </div>
+</div>

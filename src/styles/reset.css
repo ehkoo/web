@@ -1,71 +1,75 @@
-/* From: https://www.joshwcomeau.com/css/custom-css-reset/ */
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* From: https://andy-bell.co.uk/a-modern-css-reset/ */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/*
-    2. Remove default margin
-  */
-* {
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
-/*
-    3. Allow percentage-based heights in the application
-  */
-html,
-body {
-  height: 100%;
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
-/*
-    Typographic tweaks!
-    4. Add accessible line-height
-    5. Improve text rendering
-  */
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
-/*
-    6. Improve media defaults
-  */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
 img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
+picture {
   max-width: 100%;
+  display: block;
 }
-/*
-    7. Remove built-in form typography styles
-  */
+
+/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-/*
-    8. Avoid text overflows
-  */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
 
-ul,
-ol,
-dl {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

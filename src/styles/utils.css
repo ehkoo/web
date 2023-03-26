@@ -1,5 +1,32 @@
-@import url('./_fonts.css');
-@import url('./_space.css');
-@import url('./_flex-grid.css');
-@import url('./_text.css');
-@import url('./_color.css');
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.mb-3 {
+  margin-block-end: var(--size-3);
+}
+
+.no-underline-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding-left: var(--size-3);
+  padding-right: var(--size-3);
+
+  @media (--lg) {
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.has-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+}

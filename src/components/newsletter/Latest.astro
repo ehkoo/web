@@ -1,0 +1,65 @@
+---
+import { timeAgo } from '../../lib'
+---
+
+<style>
+  .latest {
+    display: grid;
+    gap: var(--size-3);
+
+    @media (--md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .cover {
+    border-radius: var(--radius-2);
+  }
+
+  .article {
+    display: grid;
+    gap: var(--size-3);
+    align-items: center;
+    grid-template-columns: var(--homepage-cover-size) 1fr;
+
+    @media (--md) {
+      gap: var(--size-2);
+      justify-items: center;
+      grid-template-columns: 1fr;
+      align-content: first baseline;
+    }
+  }
+
+  .title {
+    font-size: var(--font-size-1);
+    @media (--lg) {
+      display: none;
+    }
+  }
+
+  .time {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+</style>
+
+<div class="latest">
+  {
+    Astro.props.posts.map(({ frontmatter, url }) => (
+      <article class="article">
+        <a href={url}>
+          <img class="cover" src={frontmatter.cover} alt="" />
+        </a>
+        <div>
+          <h3 class="title">{frontmatter.title}</h3>
+
+          <time datetime={frontmatter.date} class="time">
+            {timeAgo(frontmatter.date)}
+          </time>
+        </div>
+      </article>
+    ))
+  }
+</div>

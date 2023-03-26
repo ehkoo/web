@@ -1,34 +1,12 @@
 ---
 import Base from './Base.astro'
 import PostSingle from '../components/PostSingle.astro'
-import FormWeeklyNewsletter from '../components/FormWeeklyNewsletter.astro'
 
 const { content, headings } = Astro.props
 ---
 
-<style>
-  .newsletter {
-    background-color: var(--gray-2);
-    padding: 16px;
-    border-radius: 4px;
-  }
-</style>
-
-<Base {content}>
+<Base>
   <PostSingle post={content} headers={headings}>
     <slot />
-
-    <div class="newsletter mb-4">
-      <h3>Bạn thích bài viết này?</h3>
-
-      <p>
-        Đăng ký ngay để nhận những tin tức mới nhất về lập trình frontend trong tuần. Bản tin sẽ được gửi vào mỗi sáng
-        thứ Bảy ✌️
-      </p>
-
-      <FormWeeklyNewsletter>
-        <input type="hidden" name="metadata__FormLocation" value="SinglePost" />
-      </FormWeeklyNewsletter>
-    </div>
   </PostSingle>
 </Base>

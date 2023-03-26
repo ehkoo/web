@@ -1,5 +1,7 @@
 ---
+import IconEhkoo from './IconEhkoo.astro'
 import IconExternalLink from './IconExternalLink.astro'
+import s from './Nav.module.css'
 
 function isCurrentActive(path) {
   const p = Astro.url.pathname
@@ -9,215 +11,33 @@ function isCurrentActive(path) {
 }
 ---
 
-<style>
-  .nav {
-    padding-top: var(--size-2);
-    padding-bottom: var(--size-2);
+<nav class={s.nav}>
+  <div class="container">
+    <div class:list={[s.links]}>
+      <a href="/" title="Ê-ku">
+        <IconEhkoo />
+      </a>
+      <a class={s.link} href="/gioi-thieu"> Giới Thiệu</a>
+      <a class={s.link} href="/chu-de">Chủ Đề</a>
+      <a class={s.link} href="/rss.xml">RSS</a>
 
-    @media (--xl) {
-      padding-top: 24px;
-      padding-bottom: 24px;
-    }
-  }
-  .nav-menu {
-    position: relative;
-    flex: 1;
-
-    @media (--md) {
-      display: none;
-    }
-  }
-
-  .icon-close {
-    display: none;
-  }
-
-  .nav-menu[open] .icon-open {
-    display: none;
-  }
-
-  .nav-menu[open] .icon-close {
-    display: block;
-  }
-
-  summary {
-    font-weight: 500;
-    user-select: none;
-    cursor: pointer;
-    padding: 8px;
-    display: flex;
-    justify-content: flex-end;
-
-    @media (--md) {
-      justify-content: flex-start;
-    }
-
-    @media (--lg) {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-  }
-
-  summary::-webkit-details-marker,
-  summary::marker {
-    content: '';
-    display: none;
-  }
-
-  .nav-menu-icon {
-    background-color: var(--gray-2);
-    border-radius: var(--radius-2);
-    padding: var(--size-1);
-
-    &:hover {
-      background-color: var(--gray-3);
-    }
-  }
-
-  .nav-links {
-    position: absolute;
-    right: 0;
-    background-color: #fff;
-    padding: 16px;
-    border-radius: 4px;
-    box-shadow: var(--shadow-5);
-    border: 1px solid var(--gray-2);
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
-    z-index: var(--layer-important);
-
-    @media (--md) {
-      right: unset;
-      left: 0;
-    }
-
-    @media (--md) {
-      padding: 16px 16px;
-    }
-  }
-
-  .nav-link {
-    font-weight: 500;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.25em;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-bottom: 4px solid transparent;
-
-    @media (hover: hover) {
-      &:hover {
-        border-color: var(--gray-8);
-      }
-    }
-  }
-
-  .nav-link--name {
-    font-weight: 900;
-  }
-
-  .nav-link-md {
-    display: none;
-    @media (--md) {
-      display: flex;
-    }
-  }
-</style>
-
-<nav class="nav">
-  <div class="container flex align-center gap-3">
-    <a class={`nav-link nav-link--name ${isCurrentActive('/') ? 'nav-link--active' : ''}`} href="/" title="Ê-ku"
-      >Ehkoo</a
-    >
-
-    <details class="nav-menu">
-      <summary>
-        <div class="p-1 nav-menu-icon">
-          <svg
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-open">
-            <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line
-              x1="3"
-              y1="18"
-              x2="21"
-              y2="18"></line>
-          </svg>
-
-          <svg
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-close">
-            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+      <details class={s.details}>
+        <summary>Extra</summary>
+        <div class={s.extraLinks}>
+          <a class={s.link} href="https://github.com/ehkoo/web" target="_blank" rel="noreferrer nofollow">
+            <IconExternalLink color="var(--gray-7)" /> Github
+          </a>
+          <a class={s.link} href="https://www.facebook.com/ehkoo.dev/" target="_blank" rel="noreferrer nofollow">
+            <IconExternalLink color="var(--gray-7)" /> Fanpage
+          </a>
+          <a class={s.link} href="https://chat.webuild.community/" target="_blank" rel="noreferrer nofollow">
+            <IconExternalLink color="var(--gray-7)" /> Chat
+          </a>
+          <a class={s.link} href="https://www.buymeacoffee.com/ehkoo" target="_blank" rel="noreferrer nofollow">
+            <IconExternalLink color="var(--gray-7)" /> Buy me a coffee
+          </a>
         </div>
-      </summary>
-
-      <div class="nav-links">
-        <a class={`nav-link ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : ''}`} href="/gioi-thieu">
-          Giới Thiệu
-        </a>
-        <a class={`nav-link ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet"> Bài Viết</a>
-        <a class={`nav-link ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
-        <a class="nav-link" href="/rss.xml">RSS</a>
-
-        <a href="https://github.com/ehkoo/web" target="_blank" rel="noreferrer nofollow" class="nav-link">
-          <IconExternalLink color="var(--gray-5)" /> Github
-        </a>
-        <a href="https://www.facebook.com/ehkoo.dev/" target="_blank" rel="noreferrer nofollow" class="nav-link">
-          <IconExternalLink color="var(--gray-5)" /> Fanpage
-        </a>
-        <a href="https://chat.webuild.community/" target="_blank" rel="noreferrer nofollow" class="nav-link">
-          <IconExternalLink color="var(--gray-5)" /> Chat
-        </a>
-        <a href="https://www.buymeacoffee.com/ehkoo" target="_blank" rel="noreferrer nofollow" class="nav-link">
-          <IconExternalLink color="var(--gray-5)" /> Buy me a bubble tea
-        </a>
-      </div>
-    </details>
-
-    <a class={`nav-link nav-link-md ${isCurrentActive('/gioi-thieu') ? 'nav-link--active' : ''}`} href="/gioi-thieu">
-      Giới Thiệu
-    </a>
-    <a class={`nav-link nav-link-md ${isCurrentActive('/bai-viet') ? 'nav-link--active' : ''}`} href="/bai-viet">
-      Bài Viết
-    </a>
-    <a class={`nav-link nav-link-md ${isCurrentActive('/chu-de') ? 'nav-link--active' : ''}`} href="/chu-de">Chủ Đề</a>
-    <a class={`nav-link nav-link-md`} href="/rss.xml">RSS</a>
-
-    <a
-      href="https://github.com/ehkoo/web"
-      target="_blank"
-      rel="noreferrer nofollow"
-      class="nav-link nav-link-md ml-auto">
-      <IconExternalLink color="var(--gray-5)" /> Github
-    </a>
-    <a
-      href="https://www.facebook.com/ehkoo.dev/"
-      target="_blank"
-      rel="noreferrer nofollow"
-      class="nav-link nav-link-md">
-      <IconExternalLink color="var(--gray-5)" /> Fanpage
-    </a>
-    <a href="https://chat.webuild.community/" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
-      <IconExternalLink color="var(--gray-5)" /> Chat
-    </a>
-    <a href="https://www.buymeacoffee.com/ehkoo" target="_blank" rel="noreferrer nofollow" class="nav-link nav-link-md">
-      <IconExternalLink color="var(--gray-5)" /> ☕️
-    </a>
+      </details>
+    </div>
   </div>
 </nav>

@@ -8,17 +8,21 @@ const links = Astro.props.tags.split(/,\s+/).map((t) => {
 ---
 
 <style>
-  li {
-    &::after {
-      content: ', ';
-    }
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1ch;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    line-height: 1;
+  }
 
-    &:last-child::after {
-      content: '';
-    }
+  li:not(:last-child) a::after {
+    content: ', ';
   }
 </style>
-<ul class="flex flex-wrap gap-2">
+<ul>
   {
     links.map((link) => (
       <li>

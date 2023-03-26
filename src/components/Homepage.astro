@@ -1,52 +1,26 @@
 ---
-import { getPostsForHomepage } from '../lib.js'
+import { getPostsForHomepage, getNewsletters, groupPostsByYear } from '../lib.js'
 
-import s from './PostList.module.css'
-import hs from './Homepage.module.css'
-import DateTime from './DateTime.astro'
 import PostList from './PostList.astro'
-import Newsletter from './Newsletter.astro'
+import Newsletter from './newsletter/CallToAction.astro'
+import TopPosts from './TopPosts.astro'
 
-const { posts: all, newsletters } = getPostsForHomepage(
-  await Astro.glob('../pages/bai-viet/*.md'),
-  await Astro.glob('../pages/ban-tin/*.md'),
-)
+const TOP_POSTS = 3
 
-const top3 = all.slice(0, 3)
-const posts = all.slice(3)
+const posts = getPostsForHomepage(await Astro.glob('../pages/bai-viet/*.md'))
+const top = posts.slice(0, TOP_POSTS)
+const groups = groupPostsByYear(posts.slice(TOP_POSTS))
+const sortedYears = Object.entries(groups).sort(([a], [b]) => Number(b) - Number(a))
+
+const newsletters = getNewsletters(await Astro.glob('../pages/ban-tin/*.md'))
 ---
 
-<div class="grid gap-3 mb-2">
-  <div class={hs.top}>
-    {
-      top3.map(({ frontmatter, url }) => (
-        <article class={hs.article}>
-          <a href={url}>
-            <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} />
-          </a>
-          <div class="flex flex-column gap-1">
-            <h3>
-              <a class="no-underline-link" href={url}>
-                {frontmatter.title}
-              </a>
-            </h3>
-            <p>{frontmatter.excerpt}</p>
-            <p class="text-gray-6 text-sm">
-              @{frontmatter.author} | <DateTime date={frontmatter.date} />
-            </p>
-          </div>
-        </article>
-      ))
-    }
+<div class="flow" style="--flow-space: 1em;">
+  <h2>Bài viết mới</h2>
+  <TopPosts posts={top} />
 
-    <Newsletter />
-  </div>
+  <Newsletter posts={newsletters} />
 
-  <PostList posts={newsletters} noExcerpt />
-
-  <PostList posts={posts} />
-</div>
-
-<div class="text-center">
-  <a href="/bai-viet">Tất cả bài viết</a>
+  <h2>Những bài cũ hơn</h2>
+  <PostList posts={sortedYears} />
 </div>

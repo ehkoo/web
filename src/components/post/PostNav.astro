@@ -1,0 +1,16 @@
+---
+import ToC from './ToC.astro'
+import s from './PostNav.module.css'
+---
+
+<nav class={s.nav}>
+  <a href="#top" class:list={[s.topLink, 'no-underline-link']}>
+    <img src="/icons/arrow-up.svg" alt="" /> Đầu trang
+  </a>
+
+  <a href="#comments" class:list={[s.topLink, 'no-underline-link']}>
+    <img src="/icons/message-circle.svg" alt="" /> Thảo luận
+  </a>
+
+  <ToC headers={Astro.props.headers} />
+</nav>

@@ -1,0 +1,42 @@
+---
+import s from './ToC.module.css'
+
+const { headers = [] } = Astro.props
+
+const toc = headers.reduce((acc, current) => {
+  if (acc.length === 0) return [{ ...current, children: [] }]
+
+  const last = acc[acc.length - 1]
+  if (current.depth > last.depth) last.children.push(current)
+  else acc.push({ ...current, children: [] })
+
+  return acc
+}, [])
+---
+
+<details class={s.details}>
+  <summary>Mục lục <img src="/icons/list.svg" alt="" /></summary>
+
+  <ul class:list={[s.toc, 'flow']} style="--flow-space: var(--size-2);">
+    {
+      toc.map((one) => (
+        <li class="flow">
+          <a class="no-underline-link" href={`#${one.slug}`}>
+            {one.text}
+          </a>
+          {one.children.length > 0 && (
+            <ul class="flow">
+              {one.children.map((two) => (
+                <li>
+                  <a class="no-underline-link" href={`#${two.slug}`}>
+                    {two.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</details>
