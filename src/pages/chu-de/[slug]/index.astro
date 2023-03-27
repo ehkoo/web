@@ -1,0 +1,24 @@
+---
+import Base from '../../../layouts/Base.astro'
+import PostList from '../../../components/PostList.astro'
+import { getAllPosts, groupPostsByTag, slugify } from '../../../lib.js'
+
+export async function getStaticPaths() {
+  const rawPosts = await Astro.glob('../../bai-viet/*.md')
+  const newsletters = await Astro.glob('../../ban-tin/*.md')
+  const posts = getAllPosts([...rawPosts, ...newsletters])
+
+  const postsByTag = groupPostsByTag(posts)
+
+  return postsByTag.map(([tag, posts]) => ({
+    params: { slug: slugify(tag) },
+    props: { tag, posts: [[tag, posts]] },
+  }))
+}
+
+const { tag, posts } = Astro.props
+---
+
+<Base title={`Chủ đề ${tag}`}>
+  <PostList posts={posts} />
+</Base>
