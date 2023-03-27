@@ -5,7 +5,7 @@ import PostSingle from '../components/PostSingle.astro'
 const { content, headings } = Astro.props
 ---
 
-<Base>
+<Base {content}>
   <PostSingle post={content} headers={headings}>
     <slot />
   </PostSingle>

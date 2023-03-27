@@ -1,14 +1,19 @@
 const OpenProps = require('open-props')
+const postcssGlobalData = require('@csstools/postcss-global-data')
 const postcssJitProps = require('postcss-jit-props')
 const postcssPresetEnv = require('postcss-preset-env')
 
 const plugins = [
-  postcssPresetEnv({
-    stage: 1,
+  postcssGlobalData({
+    files: ['src/styles/queries.css'],
   }),
-  require('postcss-calc'),
-  require('postcss-each'),
-  require('postcss-nested'),
+  postcssPresetEnv({
+    stage: 3,
+    features: {
+      'custom-media-queries': true,
+      'nesting-rules': true,
+    },
+  }),
   postcssJitProps(OpenProps),
 ]
 

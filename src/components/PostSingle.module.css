@@ -14,27 +14,24 @@
 }
 
 .content {
-  ul,
-  ol {
+  :is(ul, ol) {
     list-style-type: initial;
   }
 
-  img {
+  :is(img) {
     border-radius: var(--radius-2);
   }
 
-  em {
+  :is(em) {
     font-style: italic;
   }
 
-  video,
-  iframe {
+  :is(video, iframe) {
     max-width: 100%;
     margin: var(--size-3) auto;
   }
 
-  h1,
-  h2 {
+  :is(h1, h2) {
     font-weight: 900;
   }
 
@@ -48,7 +45,7 @@
     font-variant-ligatures: none;
   }
 
-  blockquote {
+  :is(blockquote) {
     background-color: #fff;
     border: 1px solid var(--gray-3);
     border-left: 8px solid var(--gray-7);
@@ -56,30 +53,32 @@
     border-radius: 4px;
   }
 
-  table,
-  th {
+  :is(table) {
+    width: 100%;
+  }
+
+  :is(table, th) {
     border-collapse: collapse;
     border: 1px solid var(--gray-5);
   }
 
-  thead {
+  :is(thead) {
     background-color: var(--gray-4);
   }
 
-  th,
-  td {
+  :is(th, td) {
     padding: var(--size-1) var(--size-2);
   }
 
-  td {
+  :is(td) {
     border-left: 1px solid var(--gray-4);
   }
 
-  tr:nth-child(2n) td {
+  :is(tr):nth-child(2n) td {
     background-color: var(--gray-2);
   }
 
-  pre {
+  :is(pre) {
     padding: 1rem;
     font-variant-ligatures: none;
     font-size: var(--code-font-size);

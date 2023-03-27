@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Post.astro
-title: 'Nâng cấp CSS media queries'
+title: 'CSS media queries range và custom media queries'
 date: 2022-09-13
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663144503/ehkoo/uoryHpo.png
 tags: CSS, Media Queries
