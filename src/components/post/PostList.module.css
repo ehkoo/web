@@ -2,7 +2,10 @@
   display: grid;
   align-items: first baseline;
   gap: var(--size-2);
-  grid-template: 1fr / 140px 1fr;
+
+  @media (--md) {
+    grid-template: 1fr / 140px 1fr;
+  }
 }
 
 .year {
@@ -23,36 +26,20 @@
   font-weight: 400;
   font-size: var(--font-size-1);
   color: var(--text-secondary);
-  grid-column: 1 / 3;
+}
+
+.cover {
+  display: none;
 
   @media (--md) {
-    grid-row: 1;
-    grid-column: 2;
+    display: initial;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--surface-1);
   }
 }
 
-.date {
+.meta {
   color: var(--text-secondary);
   font-weight: 300;
   font-size: 0.9em;
-  grid-row: 2;
-  grid-column: 2;
-  justify-self: end;
-
-  @media (--md) {
-    justify-self: start;
-    grid-row: 1;
-    grid-column: 1;
-  }
-}
-
-.author {
-  color: var(--text-secondary);
-  font-weight: 300;
-  font-size: 0.9em;
-  grid-row: 2;
-
-  @media (--md) {
-    grid-column: 2;
-  }
 }
