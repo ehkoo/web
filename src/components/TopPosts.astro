@@ -11,7 +11,7 @@ const { posts } = Astro.props
       <>
         <article class={s.article}>
           <a href={url}>
-            <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} />
+            <img class={s.cover} src={frontmatter.cover} alt={frontmatter.title} loading="lazy" decoding="async" />
           </a>
 
           <div>
