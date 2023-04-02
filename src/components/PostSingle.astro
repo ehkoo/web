@@ -4,6 +4,7 @@ import PostNav from './post/PostNav.astro'
 import FormNewsletter from './newsletter/Form.astro'
 
 import s from './PostSingle.module.css'
+import BuyMeACoffee from './BuyMeACoffee.astro'
 
 const {
   headers,
@@ -12,11 +13,11 @@ const {
 ---
 
 <style>
-  .newsletter {
+  .box {
     background-color: var(--surface-2);
     padding: var(--size-3);
     border-radius: var(--radius-2);
-    margin-inline: calc(-1 * var(--size-3));
+    border: 2px solid var(--text-primary);
   }
 </style>
 
@@ -34,18 +35,14 @@ const {
 
   <div class={s.wrapper}>
     <div class="flow">
-      <div class={s.content}>
-        <slot />
-      </div>
-
       {
         !isPage && (
-          <div class="newsletter mb-4">
-            <h3>Bạn thích bài viết này?</h3>
+          <div class="flow box mb-4">
+            <h3>Bản tin Ehkoo hàng tuần 💌</h3>
 
             <p>
-              Đăng ký ngay để nhận những tin tức mới nhất về lập trình frontend trong tuần. Bản tin sẽ được gửi vào mỗi
-              cuối tuần ✌️
+              Đăng ký ngay để nhận những tin và bài viết mới nhất về lập trình frontend, cũng như các thủ thuật hay thư
+              viện mới…
             </p>
 
             <FormNewsletter>
@@ -54,6 +51,12 @@ const {
           </div>
         )
       }
+
+      <div class={s.content}>
+        <slot />
+      </div>
+
+      {!isPage && <BuyMeACoffee />}
 
       {
         !isPage && (

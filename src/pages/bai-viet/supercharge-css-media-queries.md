@@ -50,7 +50,13 @@ Media Queries Range (_Khoảng truy vấn phương tiện_) cho phép bạn khai
 
 Dĩ nhiên là bạn có thể dùng cú pháp này cho `min/max-height` hay `min/max-resolution`.
 
-Hiện tại hầu hết các trình duyệt đã hỗ trợ tính năng này, ngoại trừ Safari 🙁 Cho chắc ăn, chúng ta có thể dùng plugin `postcss-media-minmax` của PostCSS để chuyển đổi từ cú pháp mới qua cú pháp cũ.
+Hiện tại hầu hết các trình duyệt đã hỗ trợ tính năng này, ~ngoại trừ Safari~ 🙁
+
+> **Cập nhật tháng 04 năm 2023**:
+>
+> Safari 16.4 đã hỗ trợ sử dụng CSS range media queries rồi nha 🥳
+
+Cho chắc ăn, chúng ta có thể dùng plugin `postcss-media-minmax` của PostCSS để chuyển đổi từ cú pháp mới qua cú pháp cũ.
 
 ```bash
 $ npm install postcss-media-minmax
