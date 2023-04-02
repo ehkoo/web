@@ -78,14 +78,10 @@ export function groupPostsByYear(posts) {
   return map
 }
 
-export function parseDateTime(date) {
+export function formatDate(date, { dateStyle = 'long' } = {}) {
   const d = new Date(date)
 
-  const year = d.getFullYear()
-  const month = String(d.getMonth() + 1).padStart(2, '0')
-  const day = String(d.getDate()).padStart(2, '0')
-
-  return { day, month, year }
+  return new Intl.DateTimeFormat('vi-VN', { dateStyle }).format(d)
 }
 
 export function timeAgo(d) {

@@ -1,5 +1,5 @@
 ---
-import { timeAgo } from '../../lib'
+import DateTime from '../DateTime.astro'
 ---
 
 <style>
@@ -63,9 +63,7 @@ import { timeAgo } from '../../lib'
         <div>
           <h3 class="title">{frontmatter.title}</h3>
 
-          <time datetime={frontmatter.date} class="time">
-            {timeAgo(frontmatter.date)}
-          </time>
+          <DateTime date={frontmatter.date} className="time" />
         </div>
       </article>
     ))

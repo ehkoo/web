@@ -1,8 +1,10 @@
 ---
-import { parseDateTime } from '../lib'
-const d = parseDateTime(Astro.props.date)
+import { formatDate } from '../lib'
 
-const formatted = Astro.props.render?.(d) ?? [d.year, d.month, d.day].join('-')
+const { className, date, dateStyle = 'long' } = Astro.props
+const formatted = formatDate(date, { dateStyle })
 ---
 
-{formatted}
+<time datetime={date} class={className}>
+  {formatted}
+</time>

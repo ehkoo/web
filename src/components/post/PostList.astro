@@ -1,5 +1,5 @@
 ---
-import DateTime from './DateTime.astro'
+import DateTime from '../DateTime.astro'
 import s from './PostList.module.css'
 
 const { posts } = Astro.props
@@ -13,9 +13,7 @@ const { posts } = Astro.props
         <div class:list={[s.articles, 'flow']} style="--flow-space: 1.5em;">
           {ps.map(({ frontmatter, url }) => (
             <article class={s.article}>
-              <time class={s.date} datetime={frontmatter.date}>
-                <DateTime date={frontmatter.date} />
-              </time>
+              <DateTime className={s.date} date={frontmatter.date} />
 
               <a class:list={[s.title, 'no-underline-link']} href={url}>
                 <h3>{frontmatter.title}</h3>
