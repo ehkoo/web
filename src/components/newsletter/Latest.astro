@@ -61,7 +61,9 @@ import DateTime from '../DateTime.astro'
           <img class="cover" src={frontmatter.cover} alt={frontmatter.title} loading="lazy" decoding="async" />
         </a>
         <div>
-          <h3 class="title">{frontmatter.title}</h3>
+          <a href={url}>
+            <h3 class="title">{frontmatter.title}</h3>
+          </a>
 
           <DateTime date={frontmatter.date} className="time" />
         </div>
