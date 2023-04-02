@@ -35,43 +35,46 @@ const {
 
   <div class={s.wrapper}>
     <div class="flow">
-      {
-        !isPage && (
-          <div class="flow box mb-4">
-            <h3>Bản tin Ehkoo hàng tuần 💌</h3>
-
-            <p>
-              Đăng ký ngay để nhận những tin và bài viết mới nhất về lập trình frontend, cũng như các thủ thuật hay thư
-              viện mới…
-            </p>
-
-            <FormNewsletter>
-              <input type="hidden" name="metadata__FormLocation" value="SinglePost" />
-            </FormNewsletter>
-          </div>
-        )
-      }
-
-      <div class={s.content}>
+      <div class={s.content} id="js-content">
         <slot />
       </div>
 
-      {!isPage && <BuyMeACoffee />}
-
       {
         !isPage && (
-          <div id="comments">
-            <script
-              is:inline
-              src="https://utteranc.es/client.js"
-              repo="ehkoo/web"
-              issue-term="pathname"
-              label="web-comments"
-              theme="github-light"
-              crossorigin="anonymous"
-              async
-            />
-          </div>
+          <>
+            <div class="flow box" id="js-newsletterbox">
+              <h3>Bản tin Ehkoo hàng tuần 💌</h3>
+
+              <p>
+                Đăng ký ngay để nhận những tin và bài viết mới nhất về lập trình frontend, cũng như các thủ thuật hay
+                thư viện mới…
+              </p>
+
+              <FormNewsletter>
+                <input type="hidden" name="metadata__FormLocation" value="SinglePost" />
+              </FormNewsletter>
+            </div>
+
+            <BuyMeACoffee />
+
+            <script type="text/javascript">
+              const a = document.getElementById('js-content'); const b = document.getElementById('js-newsletterbox');
+              const c = a.childNodes[Math.round(a.childNodes.length / 2)]; a.insertBefore(b, c);
+            </script>
+
+            <div id="comments">
+              <script
+                is:inline
+                src="https://utteranc.es/client.js"
+                repo="ehkoo/web"
+                issue-term="pathname"
+                label="web-comments"
+                theme="github-light"
+                crossorigin="anonymous"
+                async
+              />
+            </div>
+          </>
         )
       }
     </div>
