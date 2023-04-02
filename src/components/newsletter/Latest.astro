@@ -58,14 +58,7 @@ import DateTime from '../DateTime.astro'
     Astro.props.posts.map(({ frontmatter, url }) => (
       <article class="article">
         <a href={url}>
-          <img
-            width="140"
-            class="cover"
-            src={frontmatter.cover}
-            alt={frontmatter.title}
-            loading="lazy"
-            decoding="async"
-          />
+          <img class="cover" src={frontmatter.cover} alt={frontmatter.title} loading="lazy" decoding="async" />
         </a>
         <div>
           <h3 class="title">{frontmatter.title}</h3>
