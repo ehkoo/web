@@ -1,6 +1,6 @@
 .article {
   display: grid;
-  align-items: first baseline;
+  align-items: center;
   gap: var(--size-2);
 
   @media (--md) {

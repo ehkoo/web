@@ -26,6 +26,7 @@ import DateTime from '../DateTime.astro'
       gap: var(--size-2);
       justify-items: center;
       grid-template-columns: 1fr;
+      align-content: center;
       align-content: first baseline;
     }
   }
@@ -61,7 +62,7 @@ import DateTime from '../DateTime.astro'
           <img class="cover" src={frontmatter.cover} alt={frontmatter.title} loading="lazy" decoding="async" />
         </a>
         <div>
-          <a href={url}>
+          <a href={url} class="no-underline-link">
             <h3 class="title">{frontmatter.title}</h3>
           </a>
 
