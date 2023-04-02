@@ -43,6 +43,14 @@ import { timeAgo } from '../../lib'
     text-transform: capitalize;
     font-weight: 300;
   }
+
+  .link {
+    text-align: center;
+
+    @media (--lg) {
+      text-align: right;
+    }
+  }
 </style>
 
 <div class="latest">
@@ -63,3 +71,5 @@ import { timeAgo } from '../../lib'
     ))
   }
 </div>
+
+<p class="link">👉 <a href="/chu-de/newsletter">Xem bản tin cũ hơn</a></p>
