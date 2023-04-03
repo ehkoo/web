@@ -57,9 +57,16 @@ const {
 
             <BuyMeACoffee />
 
-            <script type="text/javascript">
-              const a = document.getElementById('js-content'); const b = document.getElementById('js-newsletterbox');
-              const c = a.childNodes[Math.round(a.childNodes.length / 2)]; a.insertBefore(b, c);
+            <script>
+              const content = document.getElementById('js-content');
+              const newsletter = document.getElementById('js-newsletterbox');
+              const headings = content.querySelectorAll('h1, h2, h3, h4')
+
+              // Move the newsletter box before the middle node in `content`
+              if (headings.length > 0) {
+                const middle = headings[Math.round(headings.length / 2)];
+                if (middle) content.insertBefore(newsletter, middle);
+              }
             </script>
 
             <div id="comments">
