@@ -8,7 +8,7 @@
   }
 }
 
-.year {
+.groupName {
   background-color: var(--surface-2);
   font-weight: 700;
   position: sticky;
@@ -16,6 +16,7 @@
   border-radius: var(--radius-2);
   color: var(--text-primary);
   padding: var(--size-2) var(--size-3);
+  text-transform: capitalize;
 
   @media (--lg) {
     margin-inline: calc(var(--size-3) * -1);

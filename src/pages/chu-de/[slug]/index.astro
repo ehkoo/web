@@ -10,10 +10,32 @@ export async function getStaticPaths() {
 
   const postsByTag = groupPostsByTag(posts)
 
-  return postsByTag.map(([tag, posts]) => ({
-    params: { slug: slugify(tag) },
-    props: { tag, posts: [[tag, posts]] },
-  }))
+  const formatter = new Intl.DateTimeFormat('vi-VN', { month: 'long', year: 'numeric' })
+
+  return postsByTag.map(([tag, posts]) => {
+    if (tag === 'Newsletter') {
+      // Group posts by month
+      const byMonth = posts.reduce((acc, post) => {
+        const date = new Date(post.frontmatter.date)
+        const key = formatter.format(date)
+
+        if (key in acc === false) acc[key] = []
+        acc[key].push(post)
+
+        return acc
+      }, {})
+
+      return {
+        params: { slug: slugify(tag) },
+        props: { tag, posts: Object.entries(byMonth) },
+      }
+    }
+
+    return {
+      params: { slug: slugify(tag) },
+      props: { tag, posts: [[tag, posts]] },
+    }
+  })
 }
 
 const { tag, posts } = Astro.props

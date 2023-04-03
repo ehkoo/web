@@ -7,20 +7,22 @@ const { posts } = Astro.props
 
 <div class="flow">
   {
-    posts.map(([year, ps]) => (
+    posts.map(([groupName, ps]) => (
       <div class="flow">
-        <div class={s.year}>{year}</div>
+        <div class={s.groupName}>{groupName}</div>
         <div class:list={[s.articles, 'flow']} style="--flow-space: 1.5em;">
           {ps.map(({ frontmatter, url }) => (
             <article class={s.article}>
-              <img
-                width="140"
-                class={s.cover}
-                src={frontmatter.cover.replace('f_auto', 'f_auto,w_200')}
-                alt={frontmatter.title}
-                loading="lazy"
-                decoding="async"
-              />
+              <a href={url}>
+                <img
+                  width="140"
+                  class={s.cover}
+                  src={frontmatter.cover.replace('f_auto', 'f_auto,w_200')}
+                  alt={frontmatter.title}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
 
               <div class="flow" style="--flow-space: 0.5em;">
                 <a class:list={[s.title, 'no-underline-link']} href={url}>
