@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: Tất tần tật về Promise và async/await
 slug: tat-tan-tat-ve-promise-va-async-await
 date: 2018-06-02
-updated: 2022-12-30
+updated: 2023-05-07
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528015599/Ken-Wong-concept-design-city-people-chaos-illustration-art_rsyvy4.jpg
 tags: JavaScript, Promise, Async, Await, Dành cho người mới
 excerpt: Bạn nghĩ mình đã "rành sáu câu" về Promise và async/await? Nô nô, đời không đơn giản vậy đâu nhé. Cùng đọc về những sai lầm hay gặp khi "hứa hẹn" trong JavaScript nào.
@@ -287,7 +287,9 @@ class User {
 Trong trường hợp muốn chạy các promises một cách tuần tự như sơ đồ ở trên, bạn có thể dùng hàm `Array.prototype.reduce` .
 
 ```js
-;[promise1, promise2, promise3].reduce(function (currentPromise, promise) {
+const ps = [promise1, promise2, promise3]
+
+ps.reduce(function (currentPromise, promise) {
   return currentPromise.then(promise)
 }, Promise.resolve())
 
@@ -298,12 +300,22 @@ Promise.resolve().then(promise1).then(promise2).then(promise3)
 Async/await mang đến giải pháp "xinh đẹp" hơn, cho phép bạn truy xuất đến giá trị của các promises phía trước nếu cần thiết.
 
 ```js
-async function() {
+async function getResults() {
   const res1 = await promise1()
   const res2 = await promise2(res1)
   const res3 = await promise3(res2)
+
+  return [res1, res2, res3]
 }
 ```
+
+**Cập nhật 2023:** Từ ES2023, bạn có thể sử dụng phương thức tĩnh `Array.fromAsync()` để chạy các promise một cách tuần tự.
+
+```js
+const results = await Array.fromAsync([promise1, promise2, promise3])
+```
+
+Bạn có thể [đọc bài viết này](/bai-viet/array-new-methods#arrayfromasync) để hiểu hơn về `Array.fromAsync()`.
 
 ## Chạy nhiều Promises cùng lúc với Promise.all()
 
@@ -351,12 +363,7 @@ async function() {
 Ngoài hai kiểu chạy tuần tự và song song ở trên, chúng ta còn có `Promise.race([promise1, promise2, ...])`. Phương thức này nhận vào một mảng các promises và sẽ resolve/reject ngay khi một trong số các promises này hoàn thành/xảy ra lỗi.
 
 ```js
-Promise.race([
-  ping('ns1.example.com'),
-  ping('ns2.example.com'),
-  ping('ns3.example.com'),
-  ping('ns4.example.com')
-]).then(
+Promise.race([ping('ns1.example.com'), ping('ns2.example.com'), ping('ns3.example.com'), ping('ns4.example.com')]).then(
   (result) => {},
 )
 ```

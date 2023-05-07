@@ -2,21 +2,21 @@
 layout: ../../layouts/Post.astro
 title: 'JavaScript: Những phương thức mới trong Array'
 date: 2023-05-01
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
 tags: JavaScript, Dành cho người mới
 excerpt: ''
 author: kcjpop
 ---
 
-!["Đoàn tàu khởi hành từ ga Jodhpur, Ấn Độ"](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg)
+!["Đoàn tàu khởi hành từ ga Jodhpur, Ấn Độ"](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg)
 
-_Hình của [Anirudh](https://unsplash.com/@underroot) từ [Unsplash](https://unsplash.com/photos/PJUbLL5g9BY)_
+_Hình của [**Anirudh**](https://unsplash.com/@underroot) từ [**Unsplash**](https://unsplash.com/photos/PJUbLL5g9BY)_
 
 ## `Array.fromAsync()`
 
 Chrome ❌ Edge ❌ Firefox ❌ Opera ❌ Safari ✅
 
-Có thể bạn đã biết đến `Array.from()` dùng để tạo mảng từ các đối tượng iterables như Map hay generators, hoặc những đối tượng "giống mảng nhưng hông phải" (_"array-like objects"_, là những đối tượng có thuộc tính `length` như `arguments` hay `NodeList`).
+Có thể bạn đã biết đến `Array.from()` dùng để tạo mảng từ các đối tượng iterables như Map hay generators, hoặc những đối tượng "giống mảng nhưng hông phải" (_array-like objects_, là những đối tượng có thuộc tính `length`, ví dụ như `{ length: 10 }`, `arguments` hay `NodeList`).
 
 ```js
 const arr = Array.from({ length: 10 }, (_, i) => i)
@@ -31,26 +31,51 @@ function foo() {
 }
 ```
 
-Phương thức tĩnh `Array.fromAsync()` cũng tương tự như vậy, nhưng cho phép tạo mảng từ các đối tượng có thể lặp bất đồng bộ (_"async interable objects"_, dịch ra dài dòng ghê) như `ReadableStream` and `AsyncGenerator`, và `Array.fromAsync()` sẽ trả về một Promise.
+Phương thức tĩnh `Array.fromAsync()` cũng tương tự như vậy, nhưng cho phép tạo mảng từ các đối tượng có thể lặp bất đồng bộ (_async interable objects_, dịch ra dài dòng ghê) như `ReadableStream` và `AsyncGenerator`. Phương thức này sẽ trả về một Promise.
 
 ```js
-// TODO
+function* fiveDouble() {
+  let i = 0
+  while (i++ < 5) {
+    yield i * 2
+  }
+}
+
+// Kết quả: 2, 4, 6, 8, 10]
+// Vì `Array.fromAsync` luôn trả về Promise nên chúng ta phải `await`
+await Array.fromAsync(fiveDouble())
 ```
 
 Một cách nào đó thì `Array.fromAsync()` cũng giống như `for await…of` vậy.
 
 ```js
-// TODO
+function fetchPokemons() {
+  const ids = [1, 4, 7]
+
+  return ids.map(async (id) => {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+
+    return res.json()
+  })
+}
+
+// Bạn cũng có thể đưa vào một hàm mapper giống như `Array.from()`
+await Array.fromAsync(fetchPokemons(), (pokemon) => pokemon.name)
+// Kết quả: ["bulbasaur", "charmander", "squirtle"]
+
+for await (const pokemon of fetchPokemons()) {
+  console.log(pokemon.name)
+}
+// > "bulbasaur"
+// > "charmander"
+// > "squirtle"
 ```
 
 So với `Promise.all()` thì `Array.fromAsync()` có khác chút xíu:
 
 - `Array.fromAsync()` sẽ `await` các giá trị một cách tuần tự, trong khi `Promise.all()` được thực thi song song.
-- Khi được áp dụng lên async iterables, `Array.fromAsync()` sẽ duyệt qua các phần tử một cách lười biếng, trong khi `Promise.all()` sẽ chạy hết tất cả phần tử xong gom kết quả cuối cùng lại.
 
-```js
-// TODO
-```
+- Khi được áp dụng lên async iterables, `Array.fromAsync()` sẽ lần lượt duyệt qua các phần tử, và nó chỉ xử lý phần tử tiếp theo sau khi phần tử hiện tại đã chạy xong. Trong khi đó `Promise.all()` lại chạy hết tất cả phần tử xong gom kết quả cuối cùng lại.
 
 ## `Array.prototype.at()`
 
@@ -65,7 +90,7 @@ arr[1] // 'b'
 arr.at(1) // 'b'
 ```
 
-Nhưng điểm khác là `.at()` hỗ trợ chỉ mục âm (_"negative index"_). Nhắc lại là mảng trong JavaScript thực chất là một object có các thuộc tính (_"properties"_) là chữ số.
+Nhưng điểm khác là `.at()` hỗ trợ chỉ mục âm (_negative index_). Nhắc lại là mảng trong JavaScript thực chất là một object có các thuộc tính (_properties_) là chữ số.
 
 ```js
 const arr = ['a', 'b', 'c']
@@ -208,13 +233,16 @@ Từ ES2023 bổ sung các phương thức sau vào `Array.prototype`:
 const a = [0, 7, 12, 9, 21, 8]
 
 // Đảo ngược mảng
-const reversed = a.toReversed() // [ 8, 21, 9, 12, 7, 0 ]
+const reversed = a.toReversed()
+// → [ 8, 21, 9, 12, 7, 0 ]
 
 // Sắp xếp mảng
-const sorted = a.toSorted((x, y) => x - y) // [ 0, 7, 8, 9, 12, 21 ]
+const sorted = a.toSorted((x, y) => x - y)
+// → [ 0, 7, 8, 9, 12, 21 ]
 
 // Xóa phần tử ở chỉ mục 1
-const removed = a.toSpliced(1, 1) // [ 0, 12, 9, 21, 8 ]
+const removed = a.toSpliced(1, 1)
+// → [ 0, 12, 9, 21, 8 ]
 
 a === reversed // false
 a === sorted // false
