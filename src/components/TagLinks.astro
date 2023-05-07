@@ -1,5 +1,5 @@
 ---
-import { slugify } from '../lib.js'
+import { slugify } from '../lib'
 
 const links = Astro.props.tags.split(/,\s+/).map((t) => {
   const tag = slugify(t)

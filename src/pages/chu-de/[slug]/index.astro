@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro'
 import PostList from '../../../components/post/PostList.astro'
-import { getAllPosts, groupPostsByTag, slugify } from '../../../lib.js'
+import { getAllPosts, groupPostsByTag, slugify } from '../../../lib'
 
 export async function getStaticPaths() {
   const rawPosts = await Astro.glob('../../bai-viet/*.md')
