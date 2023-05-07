@@ -43,6 +43,12 @@ import DateTime from '../DateTime.astro'
     color: var(--text-secondary);
     text-transform: capitalize;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+
+    @media (--md) {
+      align-items: center;
+    }
   }
 
   .link {
@@ -67,7 +73,7 @@ import DateTime from '../DateTime.astro'
             <h3 class="title">{frontmatter.title}</h3>
           </a>
 
-          <DateTime date={frontmatter.date} className="time" />
+          <DateTime date={frontmatter.date} className="time js-newletter-date" />
         </div>
       </article>
     ))
@@ -75,3 +81,19 @@ import DateTime from '../DateTime.astro'
 </div>
 
 <p class="link">👉 <a href="/chu-de/newsletter">Xem bản tin cũ hơn</a></p>
+
+<script>
+  import { timeAgo } from '../../lib'
+
+  const dateEls = document.querySelectorAll('time.js-newletter-date')
+
+  for (const node of dateEls) {
+    const date = new Date(node.getAttribute('datetime'))
+    console.log(timeAgo(date))
+
+    const newNode = document.createElement('small')
+    newNode.textContent = `(${timeAgo(date)})`
+
+    node.appendChild(newNode)
+  }
+</script>
