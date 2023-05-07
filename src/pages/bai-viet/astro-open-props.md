@@ -2,13 +2,15 @@
 layout: ../../layouts/Post.astro
 title: 'Tích hợp OpenProps vào dự án Astro'
 date: 2022-09-07
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1645291004/ehkoo/yQbjbbm.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683356089/ehkoo/f630e798064c365211cd53162d28f213.jpg
 tags: Astro, OpenProps, PostCSS, Bài mì ăn liền
 excerpt: 'Hay chính xác hơn là sử dụng PostCSS trong Astro như thế nào'
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1645291004/ehkoo/yQbjbbm.jpg)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683356089/ehkoo/f630e798064c365211cd53162d28f213.jpg)
+
+_Hình minh họa: [**Space Mosaic**](https://dribbble.com/shots/17111564--Space-Mosaic) bởi [**Fábio Lobo**](https://dribbble.com/fabiolobodesign) từ Dribbble_
 
 Bài này ngắn ngủn à 🥲
 

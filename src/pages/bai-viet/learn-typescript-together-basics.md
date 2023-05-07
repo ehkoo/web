@@ -2,13 +2,15 @@
 layout: ../../layouts/Post.astro
 title: 'Cùng học TypeScript: Căn bản về TS'
 date: 2022-02-19
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1645291004/ehkoo/eOpH6MX.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp
 tags: TypeScript, Dành cho người mới
 excerpt: 'Bài đầu tiên sẽ là các kiểu dữ liệu cơ bản ha'
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1645291004/ehkoo/eOpH6MX.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp)
+
+_Hình minh họa: [**Space**](https://dribbble.com/shots/16279707-Space) bởi [**NICKVECTOR**](https://dribbble.com/nickvector) từ Dribbble_
 
 Năm nay đã là năm COVID thứ 2 mà bạn vẫn chưa biết TypeScript (giống mình 🥲) thì quả là một thiếu sót lớn. Như kiểu thời buổi này mang tiếng làm frontend developer mà không biết TS thì bị đồng nghiệp dè bỉu, sếp lớn cười chê, còn nhà tuyển dụng thì bỏ bê không ngó ngàng. Đau khổ lắm (đùa đấy).
 
@@ -46,7 +48,7 @@ npx tsc example.ts
 
 Trong thời gian học bạn cũng có thể chạy trực tiếp TS trên trình duyệt ở trang [https://www.typescriptlang.org/play](https://www.typescriptlang.org/play).
 
-Series này dựa vào quyển [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html), và phần nào mặc định bạn đã có kiến thức căn bản về JavaScript rồi ha.
+Series này dựa vào quyển [**The TypeScript Handbook**](https://www.typescriptlang.org/docs/handbook/intro.html), và phần nào mặc định bạn đã có kiến thức căn bản về JavaScript rồi ha.
 
 ## Mô tả kiểu dữ liệu
 

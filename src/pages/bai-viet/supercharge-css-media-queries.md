@@ -2,13 +2,15 @@
 layout: ../../layouts/Post.astro
 title: 'CSS media queries range và custom media queries'
 date: 2022-09-13
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663144503/ehkoo/uoryHpo.png
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683438302/ehkoo/7c9069af240c1a0bf718768f90d09927.png
 tags: CSS, Media Queries
 excerpt: 'Sử dụng cú pháp đến từ tương lai ngay hôm nay'
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1663144503/ehkoo/uoryHpo.png)
+![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683438302/ehkoo/7c9069af240c1a0bf718768f90d09927.png)
+
+_Hình minh họa: [**The Social Dilemma**](https://dribbble.com/shots/14182464-The-Social-Dilemma) bởi [**Defaced**](https://dribbble.com/defacedstudio) từ Dribbble_
 
 Lại một bài ngắn ngủn nữa 🥲 Lần này chúng ta sẽ nói về những tính năng mới khi viết CSS media queries.
 
