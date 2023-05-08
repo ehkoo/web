@@ -11,6 +11,10 @@
   to = "/bai-viet/free-javascript-books-beginner-advanced"
 
 [[redirects]]
+  from = "/bai-viet/learn-typescript-together-basics"
+  to = "/typescript/basic-types"
+
+[[redirects]]
   from = "/bai-viet/newsletter-2022-week-38"
   to = "/ban-tin/2022-week-38"
 

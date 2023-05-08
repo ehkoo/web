@@ -4,6 +4,7 @@ import { getPostsForHomepage, getNewsletters, groupPostsByYear } from '../lib'
 import PostList from './post/PostList.astro'
 import Newsletter from './newsletter/CallToAction.astro'
 import TopPosts from './TopPosts.astro'
+import LearnTypeScript from './LearnTypeScript.astro'
 
 const TOP_POSTS = 3
 
@@ -20,6 +21,8 @@ const newsletters = getNewsletters(await Astro.glob('../pages/ban-tin/*.md'))
   <TopPosts posts={top} />
 
   <Newsletter posts={newsletters} />
+
+  <LearnTypeScript />
 
   <h2>Những bài cũ hơn</h2>
   <PostList posts={sortedYears} />

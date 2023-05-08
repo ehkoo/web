@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content'
+
+import DateTime from './DateTime.astro'
+
+const posts = await getCollection('typescript', (entry) => !entry.data.draft)
+console.log(posts)
+---
+
+<style>
+  :root {
+    --ts-blue: #3178c6;
+  }
+
+  .posts {
+    border: 0.25rem solid var(--ts-blue);
+    gap: var(--size-3);
+
+    @media (--lg) {
+      margin-inline: calc(var(--size-3) * -1);
+    }
+  }
+
+  .tag {
+    background-color: var(--ts-blue);
+    color: #fff;
+    padding-inline: var(--size-2);
+    margin-inline-start: var(--size-3);
+    font-size: var(--font-xs);
+  }
+
+  .container {
+    padding: var(--size-3);
+  }
+
+  .article {
+    display: grid;
+    align-items: center;
+    gap: var(--size-2);
+
+    @media (--md) {
+      grid-template: 1fr / 140px 1fr;
+    }
+  }
+
+  .title {
+    font-size: var(--font-size-1);
+  }
+
+  .cover {
+    display: none;
+
+    @media (--md) {
+      display: initial;
+      border-radius: var(--radius-2);
+      border: 1px solid var(--surface-1);
+    }
+  }
+
+  .meta {
+    color: var(--text-secondary);
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+</style>
+
+<div class="posts">
+  <span class="tag">series</span>
+
+  <div class="container flow">
+    <h3>Cùng học TypeScript 🥲</h3>
+
+    {
+      posts.map(({ data, slug }) => (
+        <article class="article">
+          <a href={`/learn-typescript-together/${slug}`}>
+            <img class="cover" src={data.cover} alt={data.title} loading="lazy" decoding="async" />
+          </a>
+
+          <div class="flow" style="--flow-space: 0.5em;">
+            <a href={`/learn-typescript-together/${slug}`} class="title no-underline-link">
+              <h3>{data.title}</h3>
+            </a>
+
+            <p class="meta">
+              <DateTime className="date" date={data.date} dateStyle="short" />
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</div>

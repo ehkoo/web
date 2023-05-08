@@ -1,12 +1,10 @@
 ---
-layout: ../../layouts/Post.astro
-title: 'Cùng học TypeScript: Thao tác trên types'
+title: 'Thu hẹp kiểu dữ liệu'
 date: 2022-02-10
-cover: https://i.imgur.com/eOpH6MX.png
+cover: https://www.sounasdesign.com/wp-content/uploads/2021/08/AstronautGame_ObjectifEspace03_sounas.png
 tags: TypeScript, Dành cho người mới
 excerpt: 'Trong phần đầu tiên của series này, chúng ta hãy tìm hiểu về các kiểu dữ liệu căn bản trong TypeScript (TS) với Ehkoo nhe.'
 author: kcjpop
-draft: true
 ---
 
 ## Type assertion
