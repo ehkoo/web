@@ -4,7 +4,12 @@ import { getCollection } from 'astro:content'
 import DateTime from './DateTime.astro'
 
 const posts = await getCollection('typescript', (entry) => !entry.data.draft)
-console.log(posts)
+// const sorted = posts.sort((a, b) => {
+//   const ta = parseInt(a.data.title.substr(0, 3), 10)
+//   const tb = parseInt(b.data.title.substr(0, 3), 10)
+
+//   return ta - tb
+// })
 ---
 
 <style>
@@ -62,6 +67,11 @@ console.log(posts)
     font-weight: 300;
     font-size: 0.9em;
   }
+
+  .date {
+    color: var(--text-secondary);
+    font-size: var(--font-size-0);
+  }
 </style>
 
 <div class="posts">
@@ -82,9 +92,11 @@ console.log(posts)
               <h3>{data.title}</h3>
             </a>
 
-            <p class="meta">
+            <p class="meta">{data.excerpt}</p>
+
+            <strong>
               <DateTime className="date" date={data.date} dateStyle="short" />
-            </p>
+            </strong>
           </div>
         </article>
       ))

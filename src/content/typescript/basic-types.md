@@ -1,9 +1,9 @@
 ---
-title: 'Các kiểu dữ liệu căn bản'
+title: 'Giới thiệu & các kiểu dữ liệu căn bản'
 date: 2022-02-19
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp
 tags: TypeScript, Dành cho người mới
-excerpt: 'Bài đầu tiên sẽ là các kiểu dữ liệu cơ bản ha'
+excerpt: 'TypeScript là gì? Lợi ích khi xài TypeScript? Những kiểu dữ liệu thường gặp nhất'
 author: kcjpop
 ---
 
@@ -36,20 +36,22 @@ TypeScript được thiết kế sao cho dễ tích hợp vào chương trình J
 Để cài đặt TypeScript vào dự án, bạn có thể dùng npm/ yarn/ pnpm.
 
 ```bash
-npm install --save-dev typescript
+$ npm install --save-dev typescript
 ```
 
 Sau khi cài đặt chúng ta có thể sử dụng lệnh `tsc` ở terminal, hoặc bạn có thể dùng thẳng bằng `npx` luôn.
 
 ```bash
-npx tsc example.ts
+$ npx tsc example.ts
 ```
 
-Trong thời gian học bạn cũng có thể chạy trực tiếp TS trên trình duyệt ở trang [https://www.typescriptlang.org/play](https://www.typescriptlang.org/play).
+Trong thời gian học bạn cũng có thể chạy trực tiếp TS trên trình duyệt ở trang [https://www.typescriptlang.org/play](https://www.typescriptlang.org/play). Hoặc nếu bạn xài VSCode thì cứ tạo một tập tin mới, dùng menu **Change Language Mode** để đổi thành TypeScript là có thể viết TS rồi.
 
-Series này dựa vào quyển [**The TypeScript Handbook**](https://www.typescriptlang.org/docs/handbook/intro.html), và phần nào mặc định bạn đã có kiến thức căn bản về JavaScript rồi ha.
+Series này dựa vào quyển [**The TypeScript Handbook**](https://www.typescriptlang.org/docs/handbook/intro.html), và phần nào mặc định bạn đã có kiến thức căn bản về JavaScript rồi ha. Chúng ta sẽ sử dụng phiên bản TypeScript 5.0.4.
 
 ## Mô tả kiểu dữ liệu
+
+### Các kiểu dữ liệu căn bản
 
 Mô tả kiểu dữ liệu (_type annotation_) là cách chúng ta thông báo cho trình biên dịch TS biết giá trị của một biến thuộc kiểu dữ liệu nào. Có 3 kiểu dữ liệu hay gặp trong JavaScript:
 
@@ -64,240 +66,102 @@ Mô tả kiểu dữ liệu (_type annotation_) là cách chúng ta thông báo 
 Để mô tả kiểu dữ liệu khi khai báo biến, bạn dùng cú pháp `tên-biến: kiểu-dữ-liệu` như thế này:
 
 ```ts
-const n: number = 42
-const isMember: boolean = false
-const username: string = 'kcjpop'
+let n: number = 42
+let isMember: boolean = false
+let username: string = 'john'
 ```
+
+Nhờ vào đó, TypeScript có thể ngăn ngừa những lỗi "vớ vẩn" như thế này:
+
+```ts
+n = 'hello'
+// ❌
+// Type 'string' is not assignable to type 'number'.
+```
+
+Hoặc thế này:
+
+```ts
+n.toUpperCase()
+// ❌
+// Property 'toUpperCase' does not exist on type 'number'.
+```
+
+Hay thế này:
+
+```ts
+isMember()
+// ❌
+// This expression is not callable.
+//   Type 'Boolean' has no call signatures.
+```
+
+Đồng thời các trình soạn thảo cũng có thể gợi ý những phương thức có thể dùng, tùy thuộc vào kiểu dữ liệu của biến.
+
+!["Gợi ý những phương thức của biến n có kiểu number"](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1683548253/ehkoo/typescript/ts-code-suggestion.png)
 
 Chúng ta cũng có thể mô tả kiểu cho tham số hàm:
 
 ```ts
-function say(name: string) {
-  return `Hello ${name}`
+function sayHello(name: string, age: number) {
+  return `Hello ${name}, ${age} year(s) old`
 }
 
-say('kcjpop') // → Hello kcjpop
-say(42) // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
-```
+sayHello('kcjpop', 40)
+// → Hello kcjpop, 40 year(s) old
 
-Hoặc giá trị trả về của một hàm:
-
-```ts
-// Hàm trả về string
-function getGreeting(name: string): string {
-  return `Hello ${name}`
-}
-
-// Hàm trả về number
-function double(x: number): number {
-  return x + x
-}
-```
-
-Đối với các hàm không trả về kết quả nào, bạn có thể dùng `void`.
-
-```ts
-// Thật ra hàm này trả về `undefined` đó
-function printGreeting(name: string): void {
-  console.log(`Hello ${name}`)
-}
-```
-
-Và `never` dành cho hàm không bao giờ trả về kết quả.
-
-```ts
-function doSomething(message: string): never {
-  throw new Error(message)
-}
+sayHello(40, 'kcjpop')
+// Error: Argument of type 'number' is not assignable
+// to parameter of type 'string'.
 ```
 
 > 💡 **Tự suy kiểu dữ liệu**
 >
-> Trong những trường hợp quá rõ ràng, TS có thể tự suy luận (infer) kiểu dữ liệu của biến nên bạn có thể không cần
-> mô tả kiểu dữ liệu. Làm như vậy phần nào giúp chương trình dễ đọc hơn.
+> Trong những trường hợp quá rõ ràng, TS có thể tự suy luận (infer) kiểu dữ liệu của biến nên bạn có thể không cần mô tả kiểu dữ liệu. Làm như vậy phần nào giúp chương trình dễ đọc hơn.
 >
 > ```ts
-> const n = 42 // → number
->
-> // TS thừa thông minh để biết hàm trả về kiểu string
-> function getGreeting(name: string) {
->   return `Hello ${name.toUpperCase()}`
-> }
+> let a = 1
+> let b = 'hello'
+> let c = a + b // TS đủ thông minh để biết `c: string`
 > ```
-
-### Mảng và tuple
-
-Đối với mảng, bạn dùng cú pháp `kiểu[]` (thông dụng hơn) hoặc `Array<kiểu>`:
-
-```ts
-const evens: number[] = [0, 2, 4, 6, 8]
-const seasons: Array<string> = ['spring', 'summer', 'autumn', 'winter']
-const xs: boolean[] = [true, false, true, false]
-
-// Khai báo hàm nhận vào một mảng chuỗi
-function joinWithComma(arr: string[]) {
-  return arr.join(', ')
-}
-```
-
-Với cú pháp này, các phần tử trong mảng có cùng một kiểu. TS sẽ báo lỗi nếu bạn thêm vào mảng một phần tử khác kiểu dữ liệu đã khai báo.
-
-```ts
-const a: string[] = ['foo', 'bar']
-// Error: Argument of type 'number' is not assignable to parameter of type 'string'.
-a.push(123)
-```
-
-TS cũng có khái niệm _tuple_, cho phép mảng chứa các phần tử có các kiểu dữ liệu khác nhau. Thường gặp nhất là mảng có 2 phần tử, hay còn gọi là _pair_. Tuple có 3 phần tử thì gọi là _triple_, 4 phần tử thì gọi là _quadruple_. 5 trở lên thì thôi bạn [đọc thêm ở đây](https://en.wikipedia.org/wiki/Tuple#Names_for_tuples_of_specific_lengths) cho nhanh.
-
-Với tuple thì bạn có thể thêm vào giá trị thuộc về một trong các kiểu dữ liệu đã mô tả.
-
-```ts
-const pair: [string, number] = ['kcjpop', 123]
-pair.push('popjck') // ✅ OK
-pair.push(321) // ✅ OK
-
-// Error: Argument of type 'boolean' is not assignable to parameter of type 'string | number'.
-pair.push(false)
-```
-
-> ❓ **`string | number` là cái gì vậy?**
->
-> Trả lời nhanh: là kiểu union đó. Bạn sẽ biết về union ngay trong phần dưới của bài viết này.
-
-### enum
-
-Kiểu `enum` (viết tắt của _enumeration_: kiểu liệt kê) cho phép bạn khai báo một tập hợp các biến không đổi (constant).
-
-```ts
-enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-
-// Sử dụng
-console.log(Direct.Up)
-
-// Hoặc
-const userAction: Direction = Direction.Down
-
-// Hoặc
-function moveCharacter(d: Direction) {
-  // Do something here
-}
-moveCharacter(Direction.Left)
-```
-
-enum giúp mô tả rõ ràng ý định của các constants, cũng như cho phép nhóm những constant liên quan lại với nhau.
-
-Mặc định thì enum sẽ có giá trị số, bắt đầu từ 0. Nghĩa là với enum `Direction` ở trên:
-
-```ts
-console.log(Direction.Up) // 0
-console.log(Direction.Down) // 1
-console.log(Direction.Left) // 2
-console.log(Direction.Right) // 3
-```
-
-Bạn cũng có thể thay đổi giá trị bắt đầu của giá trị trong enum.
-
-```ts
-enum Direction {
-  Up = 1,
-  Down,
-  Left = 6,
-  Right,
-}
-
-console.log(Direction.Up) // 1
-console.log(Direction.Down) // 2
-console.log(Direction.Left) // 6
-console.log(Direction.Right) // 7
-```
-
-TS cũng cho phép bạn sử dụng chuỗi làm giá trị cho enum.
-
-```ts
-enum Direction {
-  Up = 'UP',
-  Down = 'DOWN',
-  Left = 'LEFT',
-  Right = 'RIGHT',
-}
-```
-
-Khác với giá trị số, bạn bắt buộc phải gán giá trị cho tất cả lựa chọn trong chuỗi enum, hoặc TS sẽ la làng lỗi `Enum member must have initializer.` Ngoài ra bạn cũng có thể vừa dùng giá trị số vừa dùng giá trị chuỗi trong enum, nhưng nhìn chung là không có lý do gì để phải làm vậy hết.
-
-### object
-
-Bên cạnh các kiểu giá trị phổ thông, chúng ta cũng rất hay làm việc với object. Bạn có thể mô tả kiểu cho thuộc tính của object như sau:
-
-```ts
-// Bạn cũng có thể dùng , để ngăn cách các thuộc tính, mặc dù ; phổ biến hơn.
-// { id: number, username: string }
-function printUser(user: { id: number; username: string }) {
-  console.log(`Hello ${user.username}`)
-}
-```
-
-Nếu object có một thuộc tính không bắt buộc, bạn có thể thêm `?` vào sau tên thuộc tính đó.
-
-```ts
-function printUser(user: { id: number; username: string; role?: string }) {
-  // Khi bạn truy xuất một thuộc tính không tồn tại, JavaScript sẽ trả về undefined.
-  if (role !== undefined) {
-    console.log(`Hello ${user.username} of role ${user.role}`)
-  } else {
-    console.log(`Hello ${user.username}`)
-  }
-}
-```
-
-### null và undefined
-
-Cũng như JavaScript, TS có 2 kiểu dữ liệu `null` và `undefined`. Tuy nhiên tùy thuộc vào bạn tùy chỉnh `strictNullChecks` trong `tsconfig.json` thế nào mà chúng sẽ hành xử khác nhau.
-
-- `strictNullChecks: true`: Trình biên dịch TS sẽ báo lỗi nếu bạn không kiểm tra biến có phải `null` hay `undefined` không.
-- `strictNullChecks: false`: Gặp nhau làm ngơ
-
-```ts
-// strictNullChecks: true
-function doSomething(x: string | null) {
-  // Error: Object is possibly 'null'.
-  console.log('Hello, ' + x.toUpperCase())
-}
-
-// Sửa lại
-function doSomethingSafer(x: string | null) {
-  if (x === null) {
-    // Do nothing
-  } else {
-    console.log('Hello, ' + x.toUpperCase())
-  }
-}
-```
 
 ### any
 
-TypeScript còn một kiểu dữ liệu `any`, có ý nghĩa là "sao cũng được". Bạn có thể dùng `any` để TS "nhắm mắt làm ngơ", không kiểm tra kiểu dữ liệu của biến.
+Khi bạn **không** khai báo kiểu dữ liệu cho biến và TS không thể tự đoán được, nó sẽ tự gán kiểu dữ liệu `any`, mang ý nghĩa là "sao cũng được".
 
 ```ts
-let x: any = { foo: 1 }
-x.hello() // TS sẽ không kiểm tra hàm `hello` có tồn tại trong `x` không
-x = 123 // Nó cũng không quan tâm bạn gán lại một giá trị số cho `x`
+let a
+// `a` lúc này sẽ có kiểu `any` và TS sẽ cảnh báo là:
+//
+// Variable 'a' implicitly has an 'any' type, but a better type
+// may be inferred from usage
 ```
 
-Khi bạn không khai báo kiểu dữ liệu cho một biến, và TS không thể tự đoán được, nó sẽ tự gán kiểu dữ liệu `any`.
+Cũng tương tự khi bạn không khai báo kiểu cho tham số của hàm:
+
+```ts
+function sayHello(name, age) {
+  return `Hello ${name}, ${age} year(s) old`
+}
+// `name` và `age` đều có kiểu `any` hết.
+```
 
 Bạn có thể thấy xài `any` giống như không xài TS vậy, nên mọi người thường **KHÔNG** khuyến khích sử dụng nó. Tuy nhiên nếu bạn đang bắt đầu tích hợp TS vào một dự án JS cũ thì `any` có thể sẽ hữu ích.
 
-### Union type
+### Kiểu dữ liệu kết hợp (_union type_)
 
-Kiểu dữ liệu kết hợp (_union type_), giống như tên gọi, cho phép bạn kết hợp hai hay nhiều kiểu dữ liệu lại với nhau. Mỗi kiểu dữ liệu trong union sẽ được gọi là một kiểu dữ liệu thành viên (_member_).
+Như tên gọi, cho phép bạn kết hợp hai hay nhiều kiểu dữ liệu lại với nhau bằng cách dùng dấu gạch đứng `|` để phân cách chúng. Mỗi kiểu dữ liệu được gọi là **"thành viên"** (_member_) của union.
 
 ```ts
+let memberId: string | number
+
+// ✅ Ổn
+memberId = 102
+
+// ✅ Không thành vấn đề
+memberId = '59642d1b-619b-46cf-ad99-5eeb4969031f'
+
+// Chúng ta cũng có thể dùng union cho tham số hàm
 function printId(id: string | number) {
   console.log(`Your ID is ${id}`)
 }
@@ -307,22 +171,25 @@ printId(456) // ✅ OK
 printId({ id: 22342 }) // ❌ Error
 ```
 
+Thứ tự của các kiểu dữ liệu thành viên không quan trọng, nên `number | string` hay `string | number` đều như nhau.
+
 Khi dùng union type, TS sẽ kiểm tra để chắc chắn phương thức bạn gọi đến tồn tại trong các kiểu dữ liệu thành viên.
 
 ```ts
-function hasThree(x: string | number[]) {
-  return x.includes(3) // ✅ OK vì `includes` đều có trong `Array.prototype` và `String.prototype`
+function printId(id: string | number) {
+  // ✅ Vì number và string đều có phương thức `.toLocaleString()`
+  console.log(`Your ID is ${id.toLocaleString()}`)
 }
 
 function printId(id: string | number) {
   // ❌ Error
   // Property 'toUpperCase' does not exist on type 'string | number'.
-  // Property 'toUpperCase' does not exist on type 'number'.
+  //   Property 'toUpperCase' does not exist on type 'number'.
   console.log(`Your ID is ${id.toUpperCase()}`)
 }
 ```
 
-Để chương trình chạy đúng và an toàn hơn, chúng ta nên dùng `typeof` để kiểm tra kiểu dữ liệu trước.
+Để chương trình chạy đúng và an toàn hơn, chúng ta nên dùng `typeof` để kiểm tra kiểu dữ liệu trước. Kỹ thuật này gọi là **"thu hẹp kiểu"** (_type narrowing_) và chúng ta sẽ đi sâu hơn ở bài sau.
 
 ```ts
 function printId(id: string | number) {
@@ -334,19 +201,7 @@ function printId(id: string | number) {
 }
 ```
 
-Hoặc kiểm tra mảng với `Array.isArray()`.
-
-```ts
-function sayHi(username: string | string[]) {
-  if (Array.isArray(username)) {
-    console.log(`Hello ${username.join(', ')}`)
-  } else {
-    console.log(`Hi ${username}`)
-  }
-}
-```
-
-### Type alias
+### Đổi tên kiểu bằng type alias
 
 TS cho phép bạn đặt lại tên cho các kiểu dữ liệu bằng từ khóa `type`.
 
@@ -354,82 +209,16 @@ TS cho phép bạn đặt lại tên cho các kiểu dữ liệu bằng từ kh�
 // Đặt một kiểu Username là tên gọi khác của kiểu string
 type Username = string
 
-// Đặt một union type có tên là UserId
+// Đặt một kiểu kết hợp có tên là UserId
 type UserId = string | number
 
-// Đặt ứng dụng
-// Bạn không cần dùng ; hay , nếu mỗi thuộc tính nằm ở một dòng riêng
-type User = {
-  id: UserId
-  name: Username
-  role?: string
-}
-
-function printUser(user: User) {
-  console.log(`Hello ${user.name}`)
+function printId(id: UserId) {
+  console.log(`Your ID is ${id}`)
 }
 ```
 
-Sử dụng type alias giúp giảm trùng lặp và cho phép tái sử dụng các kiểu dữ liệu một cách thống nhất trong toàn bộ ứng dụng. `type` còn có các thao tác khác mà chúng ta sẽ tìm hiểu ở các bài viết sau.
-
-### Interface
-
-Interface là một cách khác để khai báo kiểu cho các object.
-
-```ts
-interface User = {
-  id: string | number
-  name: string
-  role?: string
-}
-
-function printUser(user: User) {
-  console.log(`Hello ${user.name}`)
-}
-```
-
-So với type alias ở trên, `interface` cho phép bạn kế thừa một interface khác.
-
-```ts
-interface Animal {
-  name: string
-}
-
-interface Bear extends Animal {
-  honey: boolean
-}
-
-const pet: Bear = { name: 'Poo', honey: true }
-```
-
-Ngoài ra bạn cũng có thể thêm thuộc tính cho một interface đã được khai báo từ trước.
-
-```ts
-interface Bear {
-  name: string
-}
-
-// ✅ OK. Bear sẽ có hai thuộc tính `name` và `honey`
-interface Bear {
-  honey: boolean
-}
-```
-
-So sánh với `type` thì…
-
-```ts
-type Bear = {
-  name: string
-}
-
-// ❌ Error: Duplicate identifier 'Bear'.
-type Bear = {
-  honey: boolean
-}
-```
-
-Trong hầu hết các trường hợp, bạn nên dùng `interface` để khai báo kiểu cho object nhe.
+Sử dụng type alias giúp code nhìn gọn và dễ hiểu hơn, giảm trùng lặp, và cho phép tái sử dụng các kiểu dữ liệu một cách thống nhất trong toàn bộ ứng dụng. `type` còn có công dụng khác mà chúng ta sẽ tìm hiểu ở những bài viết sau.
 
 ## Tạm kết
 
-Chúng ta đã làm quen với những kiểu dữ liệu cơ bản trong TypeScript: number, string, boolean, any. Bạn cũng đã biết về type alias, kiểu kết hợp _union type_ và khai báo kiểu cho object với interface. Trong bài viết tiếp theo, chúng ta sẽ tìm hiểu về kiểu khi làm việc với class nhé.
+Chúng ta đã làm quen với những kiểu dữ liệu cơ bản trong TypeScript: number, string, boolean, any, v.v., nghía qua cách khai báo kiểu cho tham số hàm, đồng thời nhìn qua kiểu dữ liệu kết hợp union và đặt tên khác cho kiểu với type alias.
