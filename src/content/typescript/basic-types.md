@@ -3,7 +3,7 @@ title: 'Giới thiệu & các kiểu dữ liệu căn bản'
 date: 2022-02-19
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp
 tags: TypeScript, Dành cho người mới
-excerpt: 'TypeScript là gì? Lợi ích khi xài TypeScript? Những kiểu dữ liệu thường gặp nhất'
+excerpt: 'TypeScript là gì? Lợi ích khi xài TypeScript? Những kiểu dữ liệu thường gặp nhất.'
 author: kcjpop
 ---
 
