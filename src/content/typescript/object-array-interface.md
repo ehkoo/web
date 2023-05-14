@@ -5,6 +5,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1683546584/ehko
 tags: TypeScript, Dành cho người mới
 excerpt: 'Sử dụng interface để định nghĩa kiểu cho object, array, hay tuple.'
 author: kcjpop
+draft: true
 ---
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1683546584/ehkoo/01.png)
