@@ -67,11 +67,6 @@ const posts = await getCollection('typescript', (entry) => !entry.data.draft)
     font-weight: 300;
     font-size: 0.9em;
   }
-
-  .date {
-    color: var(--text-secondary);
-    font-size: var(--font-size-0);
-  }
 </style>
 
 <div class="posts">
@@ -93,10 +88,6 @@ const posts = await getCollection('typescript', (entry) => !entry.data.draft)
             </a>
 
             <p class="meta">{data.excerpt}</p>
-
-            <strong>
-              <DateTime className="date" date={data.date} dateStyle="short" />
-            </strong>
           </div>
         </article>
       ))

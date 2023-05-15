@@ -8,9 +8,8 @@ author: kcjpop
 draft: true
 ---
 
-## Type assertion
+## Thu hẹp kiểu trong object
 
-```ts
-// Type '{ id: number; name: string; isAdmin: boolean; }' is not assignable to type 'User'.
-// Object literal may only specify known properties, and 'isAdmin' does not exist in type 'User'.
-```
+## Tập hợp có phân biệt (_Discriminated unions_)
+
+_Tagged unions_ hoặc _sum type_
