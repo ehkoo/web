@@ -89,7 +89,6 @@ import DateTime from '../DateTime.astro'
 
   for (const node of dateEls) {
     const date = new Date(node.getAttribute('datetime'))
-    console.log(timeAgo(date))
 
     const newNode = document.createElement('small')
     newNode.textContent = `(${timeAgo(date)})`
