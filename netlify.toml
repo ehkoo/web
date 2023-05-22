@@ -11,6 +11,10 @@
   to = "/bai-viet/free-javascript-books-beginner-advanced"
 
 [[redirects]]
+  from = "/bai-viet/learn-typescript-together-basics/index.html"
+  to = "/learn-typescript-together/basic-types"
+
+[[redirects]]
   from = "/bai-viet/learn-typescript-together-basics"
   to = "/learn-typescript-together/basic-types"
 
