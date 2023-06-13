@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Post.astro
-title: Atomic CSS, Vì Một Thế Giới Hoà Bình
+title: Atomic CSS, vì một thế giới hoà bình
 slug: introduction-to-functional-utility-first-atomic-css
 date: 2018-12-24
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1545725279/shOliZI_ovxxbt.jpg
