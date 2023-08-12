@@ -1,15 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 
-import DateTime from './DateTime.astro'
-
 const posts = await getCollection('typescript', (entry) => !entry.data.draft)
-// const sorted = posts.sort((a, b) => {
-//   const ta = parseInt(a.data.title.substr(0, 3), 10)
-//   const tb = parseInt(b.data.title.substr(0, 3), 10)
-
-//   return ta - tb
-// })
 ---
 
 <style>
@@ -67,6 +59,14 @@ const posts = await getCollection('typescript', (entry) => !entry.data.draft)
     font-weight: 300;
     font-size: 0.9em;
   }
+
+  .mobile-cover {
+    border-radius: 0.25em;
+
+    @media (--md) {
+      display: none;
+    }
+  }
 </style>
 
 <div class="posts">
@@ -74,6 +74,12 @@ const posts = await getCollection('typescript', (entry) => !entry.data.draft)
 
   <div class="container flow">
     <h3>Cùng học TypeScript 🥲</h3>
+
+    <img
+      class="mobile-cover"
+      src="https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_900/v1691825147/63b6d8a08457f76328179bbe.jpg"
+      alt="Cùng học TypeScript căn bản"
+    />
 
     {
       posts.map(({ data, slug }) => (
