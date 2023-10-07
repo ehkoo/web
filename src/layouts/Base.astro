@@ -19,7 +19,9 @@ const { title, content } = Astro.props
   </head>
 
   <body class="flow" style="--flow-space: 1.5em;">
-    <Nav />
+    <header>
+      <Nav />
+    </header>
 
     <main class="container" style="--flow-space: 1em;">
       <slot />
