@@ -15,22 +15,22 @@
     "preview": "astro build && astro preview"
   },
   "devDependencies": {
-    "@astrojs/rss": "2.1.0",
-    "@csstools/postcss-global-data": "1.0.3",
-    "astro": "2.1.7",
-    "mdast-util-to-string": "3.1.0",
+    "@astrojs/rss": "3.0.0",
+    "@csstools/postcss-global-data": "2.1.0",
+    "astro": "3.3.2",
+    "mdast-util-to-string": "4.0.0",
     "postcss": "8.4.31",
-    "postcss-calc": "8.2.4",
-    "postcss-custom-media": "9.1.2",
+    "postcss-calc": "9.0.1",
+    "postcss-custom-media": "10.0.2",
     "postcss-each": "1.1.0",
-    "postcss-jit-props": "1.0.12",
-    "postcss-nested": "6.0.0",
-    "postcss-preset-env": "8.1.0",
+    "postcss-jit-props": "1.0.14",
+    "postcss-nested": "6.0.1",
+    "postcss-preset-env": "9.2.0",
     "reading-time": "1.5.0",
-    "rehype-external-links": "2.0.1"
+    "rehype-external-links": "3.0.0"
   },
   "dependencies": {
-    "open-props": "1.4.25",
-    "slugify": "1.6.5"
+    "open-props": "1.6.8",
+    "slugify": "1.6.6"
   }
 }
