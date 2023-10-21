@@ -10,6 +10,7 @@
   --link-hover: var(--gray-8);
 
   --homepage-cover-size: 120px;
+  --container-width: 80ch;
 }
 
 body {
@@ -18,8 +19,8 @@ body {
   --font-monospace: 'Jetbrains Mono', Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco,
     Droid Sans Mono, Source Code Pro, monospace;
 
-  --font-sans: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji;
+  --font-sans: 'Hanken Grotesk', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
   font-family: var(--font-sans);
   color: var(--text-primary);
