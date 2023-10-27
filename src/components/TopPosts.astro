@@ -1,19 +1,37 @@
 ---
 import { timeAgo } from '../lib'
-import s from './TopPosts.module.css'
 
 const { posts } = Astro.props
 ---
+
+<style>
+  .article {
+    display: grid;
+    grid-template-columns: 140px auto;
+    gap: var(--size-2);
+    align-items: center;
+  }
+
+  .cover {
+    border-radius: var(--radius-2);
+  }
+
+  .meta {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: 300;
+  }
+</style>
 
 <div class="flow">
   {
     posts.map(({ frontmatter, url }) => (
       <>
-        <article class={s.article}>
+        <article class="article">
           <a href={url}>
             <img
               width="140"
-              class={s.cover}
+              class="cover"
               src={frontmatter.cover}
               alt={frontmatter.title}
               loading="lazy"
@@ -25,10 +43,10 @@ const { posts } = Astro.props
             <a href={url} class="no-underline-link">
               <h3>{frontmatter.title}</h3>
             </a>
-            <p class={s.meta}>
+            <p class="meta">
               <time datetime={frontmatter.date}>{timeAgo(frontmatter.date)}</time>
               {' • '}
-              <span class={s.author}>@{frontmatter.author}</span>
+              <span class="author">@{frontmatter.author}</span>
             </p>
           </div>
         </article>
