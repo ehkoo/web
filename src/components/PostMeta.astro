@@ -3,45 +3,54 @@ import DateTime from './DateTime.astro'
 import TagLinks from './TagLinks.astro'
 import IconExternalLink from './IconExternalLink.astro'
 
-import s from './PostMeta.module.css'
-
 const {
   post: { readingTime, author, date, updated, tags },
 } = Astro.props
 ---
 
-<div class:list={s.meta}>
-  <div class="flow">
-    <p>
-      Viết bởi{' '}
-      <a
-        class="inline-flex align-center gap-1"
-        href={`https://github.com/${author}`}
-        target="_blank"
-        rel="noreferrer nofollow">
-        <strong>@{author}</strong>
-        <IconExternalLink />
-      </a>
-    </p>
-    <p>
-      Đăng ngày
-      <DateTime date={date} />
-    </p>
-    {
-      updated && (
-        <p>
-          Cập nhật ngày
-          <DateTime date={updated} />
-        </p>
-      )
-    }
-  </div>
+<style>
+  .meta {
+    font-size: 0.9em;
+    background-color: var(--surface-2);
+    display: grid;
 
-  <div class="flow">
-    <p>
-      Dài <strong>{readingTime.words}</strong> từ. Đọc trong <strong>{Math.ceil(readingTime.minutes)}</strong> phút
-    </p>
+    gap: var(--size-3);
+    grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+    justify-content: flex-end;
+    padding: var(--size-3);
+    border-radius: var(--radius-2);
+  }
+</style>
 
-    <TagLinks tags={tags} />
-  </div>
+<div class="meta">
+  <p>
+    Viết bởi{' '}
+    <a
+      class="inline-flex align-center gap-1"
+      href={`https://github.com/${author}`}
+      target="_blank"
+      rel="noreferrer nofollow">
+      <strong>@{author}</strong>
+      <IconExternalLink />
+    </a>
+  </p>
+
+  <p>
+    Đăng ngày
+    <DateTime date={date} />
+  </p>
+  {
+    updated && (
+      <p>
+        Cập nhật ngày
+        <DateTime date={updated} />
+      </p>
+    )
+  }
+
+  <p>
+    Dài <strong>{readingTime.words}</strong> từ. Đọc trong <strong>{Math.ceil(readingTime.minutes)}</strong> phút.
+  </p>
+
+  <TagLinks tags={tags} />
 </div>
