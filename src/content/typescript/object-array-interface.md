@@ -3,7 +3,7 @@ title: 'Object, array, và interface'
 date: 2023-05-08
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1683546584/ehkoo/01.png
 tags: TypeScript, Dành cho người mới
-excerpt: 'Sử dụng interface để định nghĩa kiểu cho object hay array, đồng thời nghía qua khái niệm tuple ha.'
+excerpt: 'Sử dụng interface để định nghĩa kiểu cho object hay array, đồng thời nghía qua khái niệm tuple.'
 author: kcjpop
 ---
 

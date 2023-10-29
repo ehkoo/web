@@ -16,14 +16,64 @@ const sortedYears = Object.entries(groups).sort(([a], [b]) => Number(b) - Number
 const newsletters = getNewsletters(await Astro.glob('../pages/ban-tin/*.md'))
 ---
 
-<div class="flow" style="--flow-space: 1em;">
-  <h2>Bài viết mới</h2>
-  <TopPosts posts={top} />
+<style>
+  .home {
+    display: grid;
+    gap: var(--size-4);
+  }
+
+  .box {
+    background-color: var(--box-bg-color);
+    border: var(--box-border);
+  }
+
+  .new-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
+    gap: var(--size-3);
+  }
+
+  .subgrid {
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: var(--size-3);
+  }
+
+  .welcome {
+    padding-block-start: var(--size-3);
+  }
+</style>
+
+<div class="home">
+  <div class="flow box welcome">
+    <h2>Chào mừng bạn đến với Ehkoo 👋</h2>
+    <p>
+      Bên cạnh những chủ đề thường gặp như <a href="/chu-de/css"><strong>HTML, CSS</strong></a> hay
+      <a href="/chu-de/javascript"><strong>JavaScript</strong></a>, Ehkoo còn chia sẻ với bạn những
+      <a href="/chu-de/danh-cho-nguoi-moi"><strong>kinh nghiệm</strong></a>
+      cho người mới bắt đầu, sử dụng <a href="/chu-de/git"><strong>git</strong></a>, hay trình soạn thảo hiệu quả hơn 👉
+      <a href="/chu-de"><strong>Xem tất cả.</strong></a>
+    </p>
+  </div>
+
+  <div class="box new-posts">
+    <div class="subgrid">
+      <h3>🗞️ Bản tin</h3>
+      <TopPosts posts={newsletters} />
+    </div>
+
+    <div class="subgrid">
+      <h3>📝 Bài viết mới</h3>
+      <TopPosts posts={top} />
+    </div>
+  </div>
 
   <Newsletter posts={newsletters} />
 
   <LearnTypeScript />
 
-  <h2>Những bài cũ hơn</h2>
-  <PostList posts={sortedYears} />
+  <div class="flow box">
+    <h2>Những bài khác</h2>
+    <PostList posts={sortedYears} />
+  </div>
 </div>

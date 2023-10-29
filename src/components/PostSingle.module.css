@@ -3,6 +3,7 @@
   --code-background: var(--orange-1);
   --code-color: var(--orange-8);
   --code-font-size: 0.9em;
+  margin-block-start: var(--size-3);
 }
 
 .content * + * {
@@ -43,6 +44,7 @@
     color: var(--code-color);
     background-color: var(--code-background);
     font-variant-ligatures: none;
+    word-break: break-word;
   }
 
   :is(blockquote) {
