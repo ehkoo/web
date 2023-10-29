@@ -103,6 +103,7 @@ export function transformImage(url, transformations) {
  * Resize a post's cover to provided `width` and `height`
  */
 export function resizePostCover(post, { width, height }) {
-  post.frontmatter.cover = transformImage(post.frontmatter.cover, { c: 'fill', w: width, h: height })
-  return post
+  const copy = { ...post }
+  copy.frontmatter.cover = transformImage(post.frontmatter.cover, { c: 'fill', w: width, h: height })
+  return copy
 }
