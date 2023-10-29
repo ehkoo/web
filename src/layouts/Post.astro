@@ -1,12 +1,46 @@
 ---
 import Base from './Base.astro'
 import PostSingle from '../components/PostSingle.astro'
+import Picture from '../components/Picture.astro'
+import { transformImage } from '../lib'
 
-const { content, headings } = Astro.props
+const { content, headings, frontmatter } = Astro.props
+
+const figure = frontmatter?.figure
+const cover = figure?.src ?? frontmatter?.cover
+
+const sources =
+  cover != null
+    ? [
+        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'scale', w: 960 }) },
+        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1200 }) },
+      ]
+    : []
 ---
 
 <Base {content}>
+  <style>
+    .caption {
+      font-style: italic;
+    }
+  </style>
   <PostSingle post={content} headers={headings}>
+    {
+      figure != null && (
+        <figure>
+          <Picture {sources} src={cover} alt={figure.alt} />
+          {figure.author && figure.credit ? (
+            <figcaption class="caption">
+              {figure.alt}. Credit: <a href={figure.author.url}>{figure.author.name}</a> @{' '}
+              <a href={figure.credit.url}>{figure.credit.from}</a>
+            </figcaption>
+          ) : (
+            <figcaption class="caption">{figure.alt}</figcaption>
+          )}
+        </figure>
+      )
+    }
+
     <slot />
   </PostSingle>
 </Base>

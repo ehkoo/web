@@ -2,15 +2,20 @@
 layout: ../../layouts/Post.astro
 title: 'Những phương thức mới của mảng trong JavaScript'
 date: 2023-05-01
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
 tags: JavaScript, Dành cho người mới
 excerpt: ''
+cover: &cover https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
 author: kcjpop
+figure:
+  src: *cover
+  alt: 'Đoàn tàu khởi hành từ ga Jodhpur, Ấn Độ'
+  author:
+    name: Anirudh
+    url: https://unsplash.com/@underroot
+  credit:
+    from: Unsplash
+    url: https://unsplash.com/photos/PJUbLL5g9BY
 ---
-
-!["Đoàn tàu khởi hành từ ga Jodhpur, Ấn Độ"](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg)
-
-_Hình của [**Anirudh**](https://unsplash.com/@underroot) từ [**Unsplash**](https://unsplash.com/photos/PJUbLL5g9BY)_
 
 ## `Array.fromAsync()`
 
