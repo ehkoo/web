@@ -1,0 +1,44 @@
+---
+import { timeAgo } from '../lib'
+
+import Picture from './Picture.astro'
+
+const { url, cover, title, author, publishedDate } = Astro.props
+---
+
+<style>
+  .article {
+    display: grid;
+    grid-template-columns: var(--homepage-cover-size) 1fr;
+    gap: var(--size-2);
+    align-items: center;
+
+    & :global(picture, img) {
+      border-radius: var(--radius-2);
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  .meta {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: 300;
+  }
+</style>
+
+<article class="article">
+  <a href={url}>
+    <Picture src={cover} alt={title} />
+  </a>
+
+  <div>
+    <a href={url} class="no-underline-link">
+      <h4>{title}</h4>
+    </a>
+    <p class="meta">
+      <time datetime={publishedDate}>{timeAgo(publishedDate)}</time>
+      {' • '}
+      <span class="author">@{author}</span>
+    </p>
+  </div>
+</article>

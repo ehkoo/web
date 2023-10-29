@@ -41,6 +41,14 @@ export async function getStaticPaths() {
 const { tag, posts } = Astro.props
 ---
 
+<style>
+  .py-3 {
+    padding-block: var(--size-3);
+  }
+</style>
+
 <Base title={`Chủ đề ${tag}`}>
-  <PostList posts={posts} />
+  <div class="py-3">
+    <PostList posts={posts} />
+  </div>
 </Base>

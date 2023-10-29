@@ -1,0 +1,9 @@
+---
+const { src, alt, sources = [] } = Astro.props
+---
+
+<picture>
+  {sources.map(({ media, srcset }) => <source {media} {srcset} />)}
+
+  <img {src} {alt} loading="lazy" decoding="async" />
+</picture>
