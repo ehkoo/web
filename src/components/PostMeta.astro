@@ -1,5 +1,4 @@
 ---
-import DateTime from './DateTime.astro'
 import TagLinks from './TagLinks.astro'
 import IconExternalLink from './IconExternalLink.astro'
 
@@ -20,10 +19,14 @@ const {
     padding: var(--size-3);
     border-radius: var(--radius-2);
   }
+
+  .author {
+    font-style: normal;
+  }
 </style>
 
 <div class="meta">
-  <p>
+  <address class="author">
     Viết bởi{' '}
     <a
       class="inline-flex align-center gap-1"
@@ -33,17 +36,18 @@ const {
       <strong>@{author}</strong>
       <IconExternalLink />
     </a>
-  </p>
+  </address>
 
   <p>
-    Đăng ngày
-    <DateTime date={date} />
+    Đăng ngày <time datetime={date}><x-datetime date-style="long" ts={date}></x-datetime></time>
   </p>
   {
     updated && (
       <p>
-        Cập nhật ngày
-        <DateTime date={updated} />
+        Cập nhật ngày{' '}
+        <time datetime={updated}>
+          <x-datetime date-style="long" ts={updated} />
+        </time>
       </p>
     )
   }

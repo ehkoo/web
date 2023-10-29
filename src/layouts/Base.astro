@@ -39,5 +39,10 @@ const { title, content } = Astro.props
       data-cf-beacon='{"token":"c0a29b8f08ab479fb93bbe25ef7d71b6"}'
     ></script>
     <!-- End Cloudflare Web Analytics -->
+
+    <script>
+      import { XDateTime } from '../lib/x-datetime'
+      customElements.define('x-datetime', XDateTime)
+    </script>
   </body>
 </html>

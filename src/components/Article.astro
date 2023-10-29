@@ -1,6 +1,4 @@
 ---
-import { timeAgo } from '../lib'
-
 import Picture from './Picture.astro'
 
 const { url, cover, title, author, publishedDate } = Astro.props
@@ -31,12 +29,12 @@ const { url, cover, title, author, publishedDate } = Astro.props
     <Picture src={cover} alt={title} />
   </a>
 
-  <div>
+  <div class="flow" style="--flow-space: var(--size-2)">
     <a href={url} class="no-underline-link">
       <h4>{title}</h4>
     </a>
     <p class="meta">
-      <time datetime={publishedDate}>{timeAgo(publishedDate)}</time>
+      <time datetime={publishedDate}><x-datetime ts={publishedDate}></x-datetime></time>
       {' • '}
       <span class="author">@{author}</span>
     </p>

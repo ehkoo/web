@@ -1,5 +1,4 @@
 ---
-import DateTime from '../DateTime.astro'
 import s from './PostList.module.css'
 
 const { posts } = Astro.props
@@ -30,7 +29,9 @@ const { posts } = Astro.props
                 </a>
 
                 <p class={s.meta}>
-                  <DateTime className={s.date} date={frontmatter.date} dateStyle="short" />
+                  <time class={s.date} datetime={frontmatter.date}>
+                    <x-datetime ts={frontmatter.date} />
+                  </time>
                   {' • '}
                   <span class={s.author}>@{frontmatter.author}</span>
                 </p>
