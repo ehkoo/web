@@ -12,8 +12,8 @@ const cover = figure?.src ?? frontmatter?.cover
 const sources =
   cover != null
     ? [
-        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'scale', w: 960 }) },
-        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1200 }) },
+        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'scale', w: 960, h: null }) },
+        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1200, h: null }) },
       ]
     : []
 
