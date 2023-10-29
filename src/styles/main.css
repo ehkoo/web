@@ -9,6 +9,8 @@
   --link-primary: var(--gray-7);
   --link-hover: var(--gray-8);
 
+  --border-thickness: 2px;
+
   --homepage-cover-size: 120px;
   --container-width: 80ch;
 }
@@ -31,6 +33,7 @@ body {
 
 a {
   color: var(--link-primary);
+  text-decoration-thickness: var(--border-thickness);
 
   &:hover {
     color: var(--link-hover);

@@ -6,11 +6,8 @@
   margin-block-end: var(--size-3);
 }
 
-.no-underline-link {
+.no-underline-link:not(:hover) {
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .container {
