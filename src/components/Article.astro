@@ -1,6 +1,8 @@
 ---
 import { timeAgo } from '../lib'
 
+import Picture from './Picture.astro'
+
 const { url, cover, title, author, publishedDate } = Astro.props
 ---
 
@@ -10,10 +12,11 @@ const { url, cover, title, author, publishedDate } = Astro.props
     grid-template-columns: var(--homepage-cover-size) 1fr;
     gap: var(--size-2);
     align-items: center;
-  }
 
-  .cover {
-    border-radius: var(--radius-2);
+    & :global(picture, img) {
+      border-radius: var(--radius-2);
+      aspect-ratio: 4 / 3;
+    }
   }
 
   .meta {
@@ -25,7 +28,7 @@ const { url, cover, title, author, publishedDate } = Astro.props
 
 <article class="article">
   <a href={url}>
-    <img width="140" class="cover" src={cover} alt={title} loading="lazy" decoding="async" />
+    <Picture src={cover} alt={title} />
   </a>
 
   <div>

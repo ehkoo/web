@@ -80,3 +80,29 @@ export function groupPostsByYear(posts) {
 
   return map
 }
+
+/**
+ * Apply Cloudinary transformations to an URL
+ */
+export function transformImage(url, transformations) {
+  const matches = url.match('upload/(.*)/v')
+  if (matches === null) return url
+
+  const tokens = Object.fromEntries(matches[1].split(',').map((s) => s.split('_')))
+  const newTokens = { ...tokens, ...transformations }
+
+  return url.replace(
+    matches[1],
+    Object.entries(newTokens)
+      .map(([k, v]) => `${k}_${v}`)
+      .join(','),
+  )
+}
+
+/**
+ * Resize a post's cover to provided `width` and `height`
+ */
+export function resizePostCover(post, { width, height }) {
+  post.frontmatter.cover = transformImage(post.frontmatter.cover, { c: 'fill', w: width, h: height })
+  return post
+}
