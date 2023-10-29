@@ -94,6 +94,7 @@ export function transformImage(url, transformations) {
   return url.replace(
     matches[1],
     Object.entries(newTokens)
+      .filter(([k, v]) => v != null)
       .map(([k, v]) => `${k}_${v}`)
       .join(','),
   )

@@ -16,6 +16,8 @@ const sources =
         { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1200 }) },
       ]
     : []
+
+const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 1200, h: null }) : cover
 ---
 
 <Base {content}>
@@ -26,9 +28,9 @@ const sources =
   </style>
   <PostSingle post={content} headers={headings}>
     {
-      figure != null && (
+      figure != null && fallbackCover != null && (
         <figure>
-          <Picture {sources} src={cover} alt={figure.alt} />
+          <Picture {sources} src={fallbackCover} alt={figure.alt} />
           {figure.author && figure.credit ? (
             <figcaption class="caption">
               {figure.alt}. Nguồn ảnh: <a href={figure.author.url}>{figure.author.name}</a> @{' '}
