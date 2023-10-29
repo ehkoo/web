@@ -4,10 +4,10 @@ title: 'Những phương thức mới của mảng trong JavaScript'
 date: 2023-05-01
 tags: JavaScript, Dành cho người mới
 excerpt: ''
-cover: &cover https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
 author: kcjpop
 figure:
-  src: *cover
+  src: &cover
   alt: 'Đoàn tàu khởi hành từ ga Jodhpur, Ấn Độ'
   author:
     name: Anirudh

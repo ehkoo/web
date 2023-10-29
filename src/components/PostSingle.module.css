@@ -6,7 +6,12 @@
   margin-block-start: var(--size-3);
 }
 
-.content * + * {
+.content ul > * + *,
+.content ol > * + * {
+  margin-block-start: 0.5em;
+}
+
+.content > * + * {
   margin-block-start: 1em;
 }
 

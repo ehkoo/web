@@ -3,13 +3,19 @@ layout: ../../layouts/Post.astro
 title: 'Vì sao bạn nên cẩn thận với input type=number?'
 date: 2022-11-24
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1669298648/input-number-inputmode_uiw15l.jpg
-tags: HTML, inputmode
+tags: HTML, Thủ thuật
 excerpt: 'Và tìm hiểu xem `inputmode` trong HTML là gì nhe'
 author: kcjpop
+figure:
+  src: &cover
+  alt: 'Máy tính cũ ở trung tâm điều khiển của NASA'
+  author:
+    name: Ugi K.
+    url: https://unsplash.com/@wizzyfx
+  credit:
+    from: Unsplash
+    url: https://unsplash.com/photos/black-and-white-ip-desk-phone-on-brown-wooden-desk-anaUCgS2fqE
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1669298648/input-number-inputmode_uiw15l.jpg)
-_Photo by [Ugi K.](https://unsplash.com/@wizzyfx?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/old-computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
 
 Tiêu đề nghe hầm hố vậy thôi chứ bài này ngắn lắm à 😅
 
