@@ -1,7 +1,9 @@
 {
+  "extends": "eslint:recommended",
   "plugins": ["prettier"],
   "parserOptions": {
-    "ecmaVersion": 9
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
   "env": {
     "browser": true,

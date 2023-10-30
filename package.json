@@ -14,11 +14,12 @@
     "build": "astro build",
     "preview": "astro build && astro preview"
   },
-  "devDependencies": {
+  "dependencies": {
     "@astrojs/rss": "3.0.0",
     "@csstools/postcss-global-data": "2.1.0",
     "astro": "3.4.0",
     "mdast-util-to-string": "4.0.0",
+    "open-props": "1.6.10",
     "postcss": "8.4.31",
     "postcss-calc": "9.0.1",
     "postcss-custom-media": "10.0.2",
@@ -27,10 +28,11 @@
     "postcss-nested": "6.0.1",
     "postcss-preset-env": "9.2.0",
     "reading-time": "1.5.0",
-    "rehype-external-links": "3.0.0"
-  },
-  "dependencies": {
-    "open-props": "1.6.10",
+    "rehype-external-links": "3.0.0",
     "slugify": "1.6.6"
+  },
+  "devDependencies": {
+    "eslint": "8.52.0",
+    "eslint-plugin-prettier": "5.0.1"
   }
 }

@@ -54,7 +54,7 @@ export function groupPostsByTag(posts) {
         posts.sort((a, b) => new Date(b.frontmatter?.date).getTime() - new Date(a.frontmatter?.date).getTime()),
       ])
       // Then sort tag by its latest post date
-      .sort(([_, a], [__, b]) => {
+      .sort(([, a], [, b]) => {
         // Sort by length first
         if (a.length !== b.length) return b.length - a.length
 
@@ -94,7 +94,7 @@ export function transformImage(url, transformations) {
   return url.replace(
     matches[1],
     Object.entries(newTokens)
-      .filter(([k, v]) => v != null)
+      .filter(([, v]) => v != null)
       .map(([k, v]) => `${k}_${v}`)
       .join(','),
   )
