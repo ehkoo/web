@@ -17,15 +17,15 @@ const toc = headers.reduce((acc, current) => {
     cursor: pointer;
     position: relative;
 
-    :is(summary) {
+    :global(summary) {
       user-select: none;
       display: inline-flex;
       align-items: center;
       gap: 1ch;
     }
 
-    :is(summary)::-webkit-details-marker,
-    :is(summary)::marker {
+    :global(summary)::-webkit-details-marker,
+    :global(summary)::marker {
       content: '';
       display: none;
     }
