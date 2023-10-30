@@ -26,7 +26,7 @@ const { url, cover, title, author, publishedDate } = Astro.props
 </style>
 
 <article class="article">
-  <a href={url}>
+  <a href={url} title={title}>
     <Picture src={cover} alt={title} />
   </a>
 
