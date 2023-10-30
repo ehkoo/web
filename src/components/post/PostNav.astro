@@ -1,14 +1,29 @@
 ---
 import ToC from './ToC.astro'
-import s from './PostNav.module.css'
 ---
 
-<nav class={s.nav}>
-  <a href="#top" class:list={[s.topLink, 'no-underline-link']}>
+<style>
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--surface-0);
+    font-weight: 600;
+    padding-block: var(--size-3);
+  }
+
+  .top-link {
+    display: inline-flex;
+    align-items: center;
+  }
+</style>
+<nav class="nav">
+  <a href="#top" class="top-link no-underline-link">
     <img src="/icons/arrow-up.svg" alt="" /> Đầu trang
   </a>
 
-  <a href="#comments" class:list={[s.topLink, 'no-underline-link']}>
+  <a href="#comments" class="top-link no-underline-link">
     <img src="/icons/message-circle.svg" alt="" /> Thảo luận
   </a>
 

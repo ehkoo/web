@@ -1,6 +1,4 @@
 ---
-import s from './ToC.module.css'
-
 const { headers = [] } = Astro.props
 
 const toc = headers.reduce((acc, current) => {
@@ -14,10 +12,56 @@ const toc = headers.reduce((acc, current) => {
 }, [])
 ---
 
-<details class={s.details}>
+<style>
+  .details {
+    cursor: pointer;
+    position: relative;
+
+    :is(summary) {
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 1ch;
+    }
+
+    :is(summary)::-webkit-details-marker,
+    :is(summary)::marker {
+      content: '';
+      display: none;
+    }
+  }
+
+  .toc {
+    position: absolute;
+    right: 0;
+    display: grid;
+    grid-template-columns: max-content;
+    background-color: var(--surface-0);
+    box-shadow: var(--shadow-4);
+    border: 1px solid var(--gray-2);
+    border-radius: var(--radius-2);
+    padding: var(--size-3);
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 400;
+    list-style-type: none;
+  }
+
+  .toc ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .toc ul li {
+    padding-left: var(--size-3);
+  }
+</style>
+
+<details class="details">
   <summary>Mục lục <img src="/icons/list.svg" alt="" /></summary>
 
-  <ul class:list={[s.toc, 'flow']} style="--flow-space: var(--size-2);">
+  <ul class="toc flow" style="--flow-space: var(--size-2);">
     {
       toc.map((one) => (
         <li class="flow">
