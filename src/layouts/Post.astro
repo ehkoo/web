@@ -25,6 +25,32 @@ const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 120
     .caption {
       font-style: italic;
     }
+
+    /* To style browser compatibility data */
+    :global(browser-compat) {
+      font-weight: 600;
+      font-size: 0.9em;
+      background-color: var(--gray-1);
+      border-radius: var(--radius-2);
+      padding: var(--size-2);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+      gap: 1ch;
+
+      &::part(no_support) {
+        color: var(--red-9);
+        &::after {
+          content: '❌';
+        }
+      }
+
+      &::part(support) {
+        color: var(--green-9);
+        &::after {
+          content: '✅';
+        }
+      }
+    }
   </style>
   <PostSingle post={content} headers={headings}>
     {
@@ -45,4 +71,9 @@ const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 120
 
     <slot />
   </PostSingle>
+
+  <script type="module" is:inline>
+    import { XBrowserCompat } from 'https://unpkg.com/@kcjpop/x-browser-compat'
+    window.customElements.define('browser-compat', XBrowserCompat)
+  </script>
 </Base>

@@ -19,7 +19,7 @@ figure:
 
 ## `Array.fromAsync()`
 
-Chrome ❌ Edge ❌ Firefox ❌ Opera ❌ Safari ✅
+<browser-compat path="javascript.builtins.Array.fromAsync" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 Có thể bạn đã biết đến `Array.from()` dùng để tạo mảng từ các đối tượng iterables như Map hay generators, hoặc những đối tượng "giống mảng nhưng hông phải" (_array-like objects_, là những đối tượng có thuộc tính `length`, ví dụ như `{ length: 10 }`, `arguments` hay `NodeList`).
 
@@ -84,7 +84,7 @@ So với `Promise.all()` thì `Array.fromAsync()` có khác chút xíu:
 
 ## `Array.prototype.at()`
 
-Chrome ✅ Edge ✅ Firefox ✅ Opera ✅ Safari ✅
+<browser-compat path="javascript.builtins.Array.at" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 Phương thức `.at(index)` giúp bạn truy xuất một phần tử trong mảng bằng chỉ mục của nó. Tương tự như sử dụng `arr[index]` vậy.
 
@@ -123,7 +123,7 @@ arr.at(-2) // 'b'
 
 ## `Array.prototype.group() / .groupToMap()`
 
-Chrome ❌ Edge ❌ Firefox ❌ Opera ❌ Safari ✅
+<browser-compat path="javascript.builtins.Array.groupToMap" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 `.group(callbackFn, thisArg)` giúp bạn nhóm các phần tử của mảng theo một khóa chung nào đó, tương tự như hàm [`groupBy`](https://lodash.com/docs/4.17.15#groupBy) của `lodash` vậy.
 
@@ -172,7 +172,7 @@ usersByRole.has('supermod') // false
 
 ## `Array.prototype.with()`
 
-Chrome ✅ Edge ✅ Firefox ✅ Opera ✅ Safari ✅
+<browser-compat path="javascript.builtins.Array.with" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 Để thay thế giá trị của một phần tử tại vị trí nào đó, cách thường gặp nhất là dùng `[]` để truy cập và gán trực tiếp.
 
@@ -192,7 +192,7 @@ arr === replaced // false
 
 ## `Array.prototype.findLast() / .findLastIndex()`
 
-Chrome ✅ Edge ✅ Firefox ✅ Opera ✅ Safari ✅
+<browser-compat path="javascript.builtins.Array.findLast" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 Để tìm kiếm một phần tử trong mảng, chúng ta có thể dùng `.find(fn)` hoặc `.findIndex(fn)`. Hai phương thức này trả về phần tử hoặc vị trí của phần tử đầu tiên thỏa mãn điều kiện của hàm `fn`, **tính từ đầu mảng**. Ví dụ:
 
@@ -215,7 +215,7 @@ arr.findLastIndex((x) => x % 2 === 1) // 4
 
 ## `Array.prototype.toReversed() / .toSorted() / .toSpliced()`
 
-Chrome ✅ Edge ✅ Firefox ❌ Opera ✅ Safari ✅
+<browser-compat path="javascript.builtins.Array.toReversed" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 Các phương thức `.reverse()`, `.sort()`, và `.splice()` thay đổi (mutate) mảng gốc khi được gọi.
 
@@ -258,7 +258,7 @@ Các phương thức `.toReversed()`, `.toSorted()`, và `.toSpliced()` đều �
 
 ## `Array.prototype.toLocaleString()`
 
-Chrome ✅ Edge ✅ Firefox ✅ Opera ✅ Safari ✅
+<browser-compat path="javascript.builtins.Array.toLocaleString" browsers="firefox,chrome, chrome_android, edge, safari, safari_ios, opera, node"></browser-compat>
 
 Phương thức `.toLocaleString(locales, options)` đã xuất hiện từ lâu nhưng mình mới biết và cũng ít xài nên coi như "cũ người mới ta" vậy 😅 Phương thức này gọi đến hàm `.toLocaleString()` cho mỗi phần tử trong mảng, sau đó ghép các kết quả lại bằng dấu phẩy `,`, tùy thuộc vào ngôn ngữ được định dạng. Ví dụ:
 
