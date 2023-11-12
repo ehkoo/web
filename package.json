@@ -17,7 +17,7 @@
   "dependencies": {
     "@astrojs/rss": "3.0.0",
     "@csstools/postcss-global-data": "2.1.0",
-    "astro": "3.4.0",
+    "astro": "3.5.3",
     "mdast-util-to-string": "4.0.0",
     "open-props": "1.6.10",
     "postcss": "8.4.31",
