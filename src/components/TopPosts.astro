@@ -11,7 +11,7 @@ const { posts } = Astro.props
       cover={frontmatter.cover}
       title={frontmatter.title}
       author={frontmatter.author}
-      publishedDate={frontmatter.date}
+      publishedDate={frontmatter.updated ?? frontmatter.date}
     />
   ))
 }
