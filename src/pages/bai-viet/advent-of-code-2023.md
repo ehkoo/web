@@ -2,6 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'Ghi chép về Advent of Code 2023'
 date: 2023-12-02
+updated: 2023-12-05
 tags: JavaScript
 excerpt: 'Những điều "hay ho" khi tham gia AoC năm 2023 bằng JavaScript'
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1701506775/ehkoo/photo-1606482512375-f18fa35048c6.jpg
