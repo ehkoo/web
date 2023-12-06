@@ -18,7 +18,7 @@ figure:
     url: https://unsplash.com/photos/pink-and-blue-plastic-bottle-on-brown-wooden-table-CwIOnANQW-A
 ---
 
-Đến hẹn lại lên, chương trình [**Advent of Code**](https://adventofcode.com/2023) năm nay lại bắt đầu từ ngày 1.12 kéo dài đến 23.12. Mọi năm mình hay thử giải bằng một ngôn ngữ mới nhưng năm nay quyết định quay lại với JavaScript để xem có cần phải sử dụng tính năng gì đặc biệt của ngôn ngữ để giải hay không.
+Đến hẹn lại lên, chương trình [**Advent of Code**](https://adventofcode.com/2023) năm nay lại bắt đầu từ ngày 1.12 kéo dài đến 25.12. Mọi năm mình hay thử giải bằng một ngôn ngữ mới nhưng năm nay quyết định quay lại với JavaScript để xem có cần phải sử dụng tính năng gì đặc biệt của ngôn ngữ hay không.
 
 Ngoài ra mình cũng sẽ thử học qua Parsing Expression Grammar (PEG) bằng cách dùng thư viện [`peggy`](https://peggyjs.org/). Mọi người nếu thấy mình viết chưa chuẩn thì để lại bình luận nhe.
 
