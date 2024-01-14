@@ -31,7 +31,7 @@ Do thiếu người đó mà.
 
 ### Ai đang viết cho Ehkoo?
 
-- Ánh -- [@chubbyanh](https://github.com/chubbyanh)
+- Ánh -- [@isreu](https://github.com/isreu)
 - Ân -- [@kcjpop](https://github.com/kcjpop)
 - Đức -- [@nguyenhaiduc06](https://github.com/nguyenhaiduc06)
 
