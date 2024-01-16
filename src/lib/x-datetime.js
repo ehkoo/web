@@ -11,7 +11,9 @@ export class XDateTime extends HTMLElement {
   render() {
     const ts = this.getAttribute('ts')
     if (ts != null) {
-      this.shadow.innerHTML = timeAgo(ts, { dateStyle: this.getAttribute('date-style') ?? 'short' })
+      this.shadow.innerHTML = timeAgo(ts, {
+        dateStyle: this.getAttribute('date-style') ?? 'short',
+      })
     }
   }
 }
