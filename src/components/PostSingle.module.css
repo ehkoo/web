@@ -92,4 +92,17 @@
     background-color: var(--gray-2) !important;
     border-radius: 4px;
   }
+
+  :is(iframe) {
+    border: none;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  /* web component to render a browser-like frame.
+   * nice to have for iframe demos.
+   */
+  :is(browser-window) {
+    display: block;
+  }
 }

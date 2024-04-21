@@ -72,6 +72,10 @@ const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 120
     <slot />
   </PostSingle>
 
+  <script>
+    import '@zachleat/browser-window'
+  </script>
+
   <script type="module" is:inline>
     import { XBrowserCompat } from 'https://unpkg.com/@kcjpop/x-browser-compat'
     window.customElements.define('browser-compat', XBrowserCompat)

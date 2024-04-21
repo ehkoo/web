@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>align-content Playground</title>
+        <style>
+            body {
+                font-family: monospace;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1ch;
+            }
+
+            form {
+                display: grid;
+                gap: 2ch;
+                align-content: start;
+                accent-color: #333;
+            }
+
+            fieldset {
+                border: 2px solid #333;
+                border-radius: 0.5em;
+                display: grid;
+            }
+
+            /* Theo mặc định div có giá trị display: block */
+            div {
+                padding: 1ch;
+                border: 2px solid #333;
+                border-radius: 0.5em;
+                width: 40ch;
+                height: 30ch;
+            }
+
+            p {
+                background-color: #333;
+                color: #eee;
+                padding: 1ch;
+                border-radius: 0.25em;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Basic positional alignment</legend>
+                <label><input name="value" type="radio" value="start" checked /> start</label>
+                <label><input name="value" type="radio" value="center" /> center</label>
+                <label><input name="value" type="radio" value="end" /> end</label>
+                <label><input name="value" type="radio" value="flex-start" /> flex-start</label>
+                <label><input name="value" type="radio" value="flex-end" /> flex-end</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Baseline alignment</legend>
+                <label><input name="value" type="radio" value="baseline" /> baseline</label>
+                <label><input name="value" type="radio" value="first baseline" /> first baseline</label>
+                <label><input name="value" type="radio" value="last baseline" /> last baseline</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Distributed alignment</legend>
+                <label><input name="value" type="radio" value="space-between" /> space-between</label>
+                <label><input name="value" type="radio" value="space-around" /> space-around</label>
+                <label><input name="value" type="radio" value="space-evenly" /> space-evenly</label>
+                <label><input name="value" type="radio" value="stretch" /> stretch</label>
+            </fieldset>
+        </form>
+
+        <div id="target">
+            <p>Nô nức đông vui</p>
+            <p>Vua mở hội trên kinh đô</p>
+            <p>Nhung gấm xinh tươi</p>
+            <p>Người ta đang hân hoan cùng dạo phố</p>
+        </div>
+
+        <script>
+            const target = document.getElementById('target')
+
+            for (const node of document.querySelectorAll('input[name=value]')) {
+                node.addEventListener('change', (e) => {
+                    target.style.alignContent = e.currentTarget.value
+                })
+            }
+        </script>
+    </body>
+</html>

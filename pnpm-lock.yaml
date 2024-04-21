@@ -14,6 +14,9 @@ importers:
       '@csstools/postcss-global-data':
         specifier: 2.1.0
         version: 2.1.0(postcss@8.4.31)
+      '@zachleat/browser-window':
+        specifier: 1.0.14
+        version: 1.0.14
       astro:
         specifier: 4.6.3
         version: 4.6.3
@@ -884,6 +887,9 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@zachleat/browser-window@1.0.14':
+    resolution: {integrity: sha512-J1OXn+9VE2aWoswlzhsZxbJFgZ5MbgJQa5jIoqsclZ2KVeIE+qT61XmuoEjGQfMt2SADk0gbTokcnjcVZWcBMg==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -3402,6 +3408,8 @@ snapshots:
   '@types/unist@3.0.2': {}
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@zachleat/browser-window@1.0.14': {}
 
   acorn-jsx@5.3.2(acorn@8.11.3):
     dependencies:
