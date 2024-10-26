@@ -1,7 +1,7 @@
-export function formatDate(date, { dateStyle = 'short' } = {}) {
+export function formatDate(date, opts) {
   const d = new Date(date)
 
-  return new Intl.DateTimeFormat('vi-VN', { dateStyle }).format(d)
+  return d.toLocaleDateString('vi-VN', opts)
 }
 
 export function timeAgo(d, formatDateOptions) {

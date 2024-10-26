@@ -1,4 +1,5 @@
 import baseSlugify from 'slugify'
+import { formatDate } from './date-time'
 
 export * from './date-time'
 
@@ -6,10 +7,16 @@ export const POSTS_PER_PAGE = 12
 
 function processPosts(posts) {
   return posts
+
     .sort((a, b) => {
       return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     })
     .filter((p) => p.data.draft !== true)
+    .map((p) => {
+      p.data.formattedDate = formatDate(p.data.date)
+      p.data.url = `/bai-viet/${p.slug}`
+      return p
+    })
 }
 
 export function getAllPosts(posts, { limit } = {}) {
@@ -107,4 +114,21 @@ export function resizePostCover(post, { width, height }) {
   const copy = { ...post }
   copy.data.cover = transformImage(post.data.cover, { c: 'fill', w: width, h: height })
   return copy
+}
+
+export function getPrimaryTag(tags) {
+  if (Array.isArray(tags)) {
+    const tag = tags.at(0)
+    const variant = tag.toLocaleLowerCase()
+    const specials = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue']
+
+    if (specials.includes(tag)) {
+      if (tag === 'JavaScript') return { tag: 'JS', variant: 'js' }
+      return { tag, variant }
+    }
+
+    return { tag: tag.length > 3 ? tag.substring(0, 1) : tag, variant }
+  }
+
+  return { tag: tags.slice(0, 3), variant: 'unknown' }
 }

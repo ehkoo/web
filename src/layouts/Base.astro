@@ -3,12 +3,12 @@ import 'open-props'
 
 import '../styles/reset.css'
 import '../styles/fonts.css'
-import '../styles/utils.css'
 import '../styles/main.css'
 
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
+import Sidebar from '@/components/Sidebar.astro'
 
 const { title, content } = Astro.props
 ---
@@ -16,28 +16,48 @@ const { title, content } = Astro.props
 <html lang="vi">
   <head>
     <Header {content} {title} />
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 20ch 60ch;
+        gap: 1ch;
+        padding: var(--size-2);
+
+        @media (width > 92ch) {
+          max-width: 100ch;
+        }
+      }
+
+      .header {
+        @media (width > 60rem) {
+          grid-column: 1 / 3;
+        }
+      }
+    </style>
   </head>
 
-  <body>
-    <header>
+  <body class="wrapper">
+    <header class="header">
       <Nav />
     </header>
 
-    <main class="container">
+    <Sidebar />
+
+    <main>
       <slot />
     </main>
 
-    <footer class="container">
+    <!--
+    <footer>
       <Footer />
-    </footer>
+    </footer> -->
 
     <!-- Cloudflare Web Analytics -->
     <script
       is:inline
       defer
       src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token":"c0a29b8f08ab479fb93bbe25ef7d71b6"}'
-    ></script>
+      data-cf-beacon='{"token":"c0a29b8f08ab479fb93bbe25ef7d71b6"}'></script>
     <!-- End Cloudflare Web Analytics -->
 
     <script>

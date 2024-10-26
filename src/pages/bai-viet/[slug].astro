@@ -1,0 +1,50 @@
+---
+import { Markdown } from '@astropub/md'
+import { getCollection } from 'astro:content'
+import Base from '@/layouts/Base.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('bai-viet')
+  return posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { entry: post },
+    }
+  })
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<style>
+  .header :global(code) {
+    --code-background: var(--stone-2);
+    --code-color: var(--stone-9);
+    --code-font-size: 0.85em;
+
+    font-size: var(--code-font-size);
+    padding: 2px 4px;
+    border-radius: var(--radius-1);
+    color: var(--code-color);
+    background-color: var(--code-background);
+    font-variant-ligatures: none;
+    word-break: break-word;
+  }
+</style>
+
+<Base>
+  <article class="flow">
+    <header>
+      <h1 class="header"><Markdown.Inline of={entry.data.title} /></h1>
+    </header>
+
+    <div class="global:content">
+      <Content />
+    </div>
+  </article>
+
+  <script>
+    import '@zachleat/browser-window'
+  </script>
+</Base>

@@ -1,5 +1,6 @@
 ---
 title: 'Tìm hiểu về subgrid'
+draft: true
 date: 2024-04-22
 tags: CSS, CSS Grid
 excerpt: 'Subgrid là cách để các phần tử của một grid sử dụng lại khai báo của grid cha.'
