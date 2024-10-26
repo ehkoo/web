@@ -1,4 +1,6 @@
 ---
+import { getCollection } from 'astro:content'
+
 import { getPostsForHomepage, getNewsletters, groupPostsByYear, resizePostCover } from '../lib'
 
 import PostList from './post/PostList.astro'
@@ -9,14 +11,13 @@ import LearnTypeScript from './LearnTypeScript.astro'
 const TOP_POSTS = 3
 
 const resizeCover = (post) => resizePostCover(post, { width: 400, height: 300 })
-
-const posts = getPostsForHomepage(await Astro.glob('../pages/bai-viet/*.md'))
+const posts = getPostsForHomepage(await getCollection('bai-viet'))
 const top = posts.slice(0, TOP_POSTS).map(resizeCover)
 
 const groups = groupPostsByYear(posts.slice(TOP_POSTS).map(resizeCover))
 const sortedYears = Object.entries(groups).sort(([a], [b]) => Number(b) - Number(a))
 
-const newsletters = getNewsletters(await Astro.glob('../pages/ban-tin/*.md')).map(resizeCover)
+const newsletters = getNewsletters(await getCollection('ban-tin')).map(resizeCover)
 ---
 
 <style>
@@ -62,21 +63,21 @@ const newsletters = getNewsletters(await Astro.glob('../pages/ban-tin/*.md')).ma
   <div class="box new-posts">
     <div class="subgrid">
       <h3>🗞️ Bản tin</h3>
-      <TopPosts posts={newsletters} />
+      <!-- <TopPosts posts={newsletters} /> -->
     </div>
 
     <div class="subgrid">
       <h3>📝 Bài viết mới</h3>
-      <TopPosts posts={top} />
+      <!-- <TopPosts posts={top} /> -->
     </div>
   </div>
 
   <Newsletter posts={newsletters} />
 
-  <LearnTypeScript />
+  <!-- <LearnTypeScript /> -->
 
   <div class="flow box">
     <h2>Những bài khác</h2>
-    <PostList posts={sortedYears} />
+    <!-- <PostList posts={sortedYears} /> -->
   </div>
 </div>

@@ -7,9 +7,9 @@ export const POSTS_PER_PAGE = 12
 function processPosts(posts) {
   return posts
     .sort((a, b) => {
-      return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     })
-    .filter((p) => p.frontmatter.draft !== true)
+    .filter((p) => p.data.draft !== true)
 }
 
 export function getAllPosts(posts, { limit } = {}) {
@@ -37,7 +37,7 @@ export function slugify(str) {
 }
 
 export function groupPostsByTag(posts) {
-  const tagsAndPost = posts.flatMap((post) => post.frontmatter.tags.split(',').map((tag) => [tag.trim(), post]))
+  const tagsAndPost = posts.flatMap((post) => post.data.tags.split(',').map((tag) => [tag.trim(), post]))
 
   const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
     acc[tag] = acc[tag] ?? []
@@ -51,7 +51,7 @@ export function groupPostsByTag(posts) {
       // Sort posts by published date
       .map(([tag, posts]) => [
         tag,
-        posts.sort((a, b) => new Date(b.frontmatter?.date).getTime() - new Date(a.frontmatter?.date).getTime()),
+        posts.sort((a, b) => new Date(b.data?.date).getTime() - new Date(a.data?.date).getTime()),
       ])
       // Then sort tag by its latest post date
       .sort(([, a], [, b]) => {
@@ -61,18 +61,18 @@ export function groupPostsByTag(posts) {
         const [firstOfA] = a
         const [firstOfB] = b
 
-        return new Date(firstOfB.frontmatter?.date).getTime() - new Date(firstOfA.frontmatter?.date).getTime()
+        return new Date(firstOfB.data?.date).getTime() - new Date(firstOfA.data?.date).getTime()
       })
   )
 }
 
 export function groupPostsByYear(posts) {
-  posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+  posts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
 
   const map = Object.create(null)
 
   for (const post of posts) {
-    const year = new Date(post.frontmatter.date).getFullYear()
+    const year = new Date(post.data.date).getFullYear()
 
     map[year] = map[year] ?? []
     map[year].push(post)
@@ -105,6 +105,6 @@ export function transformImage(url, transformations) {
  */
 export function resizePostCover(post, { width, height }) {
   const copy = { ...post }
-  copy.frontmatter.cover = transformImage(post.frontmatter.cover, { c: 'fill', w: width, h: height })
+  copy.data.cover = transformImage(post.data.cover, { c: 'fill', w: width, h: height })
   return copy
 }
