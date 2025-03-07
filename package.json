@@ -3,7 +3,7 @@
   "version": "5.0.0",
   "license": "MPL-2.0",
   "homepage": "https://ehkoo.com",
-  "description": "Website tiếng Việt chuyên hướng dẫn tùm lum về JavaScript, CSS, React, và chuyện lập trình frontend.",
+  "description": "Website tiếng Việt chuyên hướng dẫn lung tung về HTML, CSS, và JavaScript. Lâu lâu cũng nói qua những công nghệ khác nữa.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ehkoo/web"
@@ -15,10 +15,10 @@
     "preview": "astro build && astro preview"
   },
   "dependencies": {
-    "@astrojs/rss": "4.0.9",
+    "@astrojs/rss": "4.0.11",
     "@csstools/postcss-global-data": "3.0.0",
     "@zachleat/browser-window": "1.0.14",
-    "astro": "4.16.7",
+    "astro": "5.4.2",
     "mdast-util-to-string": "4.0.0",
     "open-props": "1.7.7",
     "postcss": "8.4.47",
