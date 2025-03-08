@@ -1,7 +1,7 @@
 ---
 title: Hướng dẫn học MithrilJS cơ bản - Phần 2
 slug: lam-quen-voi-mithriljs-phan-2
-date: 2017-10-11
+date: 2017-10-3
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1080/v1516117521/EzgdmaCQuT84bgDL4fhXZS_io5iab.jpg
 tags: JavaScript, Frontend, MithrilJS
 excerpt: Phần 2 của loạt bài về mithrilJS sẽ đi sâu về component và các hook trong vòng đời của chúng. Bên cạnh đó cũng giới thiệu cách tích hợp thư viện ngoài vào ứng dụng.

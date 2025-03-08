@@ -1,11 +1,11 @@
 ---
-title: 'Vì sao bạn nên cẩn thận với input type=number?'
+title: 'Vì sao bạn nên cẩn thận với `input type="number"`?'
 date: 2022-11-24
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1669298648/input-number-inputmode_uiw15l.jpg
 tags:
   - HTML
   - Thủ thuật
-excerpt: 'Và tìm hiểu xem `inputmode` trong HTML là gì nhe'
+excerpt: 'Ô nhập số có thể gây nên những vấn đề bất ngờ về trải nghiệm người dùng. Hãy xem những vấn đề đó là gì và làm sao để khắc phục với thuộc tính `inputmode` nhe.'
 author: kcjpop
 figure:
   src: &cover

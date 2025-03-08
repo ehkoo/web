@@ -1,11 +1,11 @@
 ---
-title: 'Những viewport units mới trong CSS'
+title: 'Những đơn vị mới trong CSS dành cho viewport'
 date: 2023-01-11
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1673459845/ehkoo/photo-1472201248592-1241c92256ff.jpg
 tags:
   - CSS
   - Bài mì ăn liền
-excerpt: 'Bự, Nhỏ, và Linh Động (đậy)'
+excerpt: 'Các đơn vị như lvw, svw, hay dvw giúp tính toán kích thước của màn hình dễ dàng hơn.'
 author: kcjpop
 ---
 
@@ -17,7 +17,7 @@ _Hình chụp bởi [Gareth Harper](https://unsplash.com/@garethharper). Nguồn
 
 Bài viết này sẽ dùng "_viewport_" để chỉ không gian (thường là hình chữ nhật) trên màn hình mà người dùng đang nhìn thấy. Đối với desktop thì đó là kích thước của trình duyệt, còn trên mobile thì toàn bộ màn hình. Ngoài ra nội dung dưới đây có thể _không chính xác 100%_ theo định nghĩa vì đã bị giản lược theo cách mình hiểu, nên mọi người thấy chỗ nào chưa đúng/ có thể gây hiểu lầm thì để lại bình luận nha.
 
-## Viewport units là gì?
+## Đơn vị dành cho viewport là gì?
 
 Hồi đâu gần 10 năm trước, các trình duyệt (kể cả IE 11) đã hỗ trợ (hầu hết) viewport units trong CSS, bao gồm:
 
@@ -32,15 +32,15 @@ Vấn đề là giá trị của `vw` và `vh` được tính theo kích thướ
 >
 > Tìm hiểu về "initial containing block" thì mình đụng đến chuyện cần phải tính width/ height của document. Dẫn tới câu hỏi làm sao để truy cập vào thẻ `<html>` trong JavaScript.
 >
-> Câu trả lời là: `document.documentElement` chính là thẻ `<html>`, và 2 thuộc tính `document.documentElement.clientWidth`/ `document.documentElement.clientHeight` sẽ trả về chiều dài và chiều cao mà không tính scrollbar vào. Chỉ áp dụng cho `<html>` và `document.body` ở _quirks mode_ thôi.
+> Câu trả lời là: `document.documentElement` chính là thẻ `<html>`, và 2 thuộc tính `document.documentElement.clientWidth`/ `document.documentElement.clientHeight` sẽ trả về chiều dài và chiều cao mà không tính thanh cuộn (scrollbars) vào. Chỉ áp dụng cho `<html>` và `document.body` ở _quirks mode_ thôi.
 
 Thành ra sẽ có trường hợp `width: 100vw` hay `height: 100vh` nhưng vẫn bị _"nước tràn bờ đê"_. Ngoài ra còn có trường hợp khi thanh địa chỉ ẩn/ hiện trên mobile nữa, như hình dưới đây.
 
 ![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1673460127/ehkoo/100vh_problem.png)
 
-## Những viewport units mới
+## Những đơn vị mới
 
-Chrome 108 vừa phát hành hồi đầu tháng 12 năm 2022 đánh dấu sự có mặt của 3 nhóm viewport units mới trên tất cả các trình duyệt: **Large**, **Small**, và **Dynamic**.
+Chrome 108 vừa phát hành hồi đầu tháng 12 năm 2022 đánh dấu sự có mặt của 3 nhóm đơn vị mới dành cho viewport trên tất cả các trình duyệt: **Large**, **Small**, và **Dynamic**.
 
 ### Large viewport units
 

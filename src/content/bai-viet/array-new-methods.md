@@ -4,7 +4,7 @@ date: 2023-05-01
 tags:
   - JavaScript
   - Dành cho người mới
-excerpt: ''
+excerpt: 'Kiểu dữ liệu mảng (array) vừa được cập nhật thêm các phương thức mới như `.fromAsync()`, `.at()` hay `.with()`, giúp JS mạnh mẽ hơn và rút ngắn đáng kể mã nguồn.'
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1682681556/ehkoo/photo-1592844002373-a55ecd7af140.jpg
 author: kcjpop
 figure:

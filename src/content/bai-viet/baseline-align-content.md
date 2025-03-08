@@ -1,5 +1,5 @@
 ---
-title: 'Canh giữa dễ như bỡn với `align-content`'
+title: 'Canh giữa nội dung dễ dàng với `align-content`'
 date: 2024-04-21
 tags:
   - CSS
