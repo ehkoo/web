@@ -117,18 +117,10 @@ export function resizePostCover(post, { width, height }) {
 }
 
 export function getPrimaryTag(tags) {
-  if (Array.isArray(tags)) {
-    const tag = tags.at(0)
-    const variant = tag.toLocaleLowerCase()
-    const specials = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue']
+  let list = Array.isArray(tags) ? tags : tags.split(',')
 
-    if (specials.includes(tag)) {
-      if (tag === 'JavaScript') return { tag: 'JS', variant: 'js' }
-      return { tag, variant }
-    }
+  const tag = list.at(0)
+  const variant = tag.toLocaleLowerCase()
 
-    return { tag: tag.length > 3 ? tag.substring(0, 1) : tag, variant }
-  }
-
-  return { tag: tags.slice(0, 3), variant: 'unknown' }
+  return { tag, variant }
 }

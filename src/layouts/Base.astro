@@ -18,13 +18,13 @@ const { title, content } = Astro.props
     <Header {content} {title} />
     <style>
       .wrapper {
-        display: grid;
-        grid-template-columns: 20ch 60ch;
-        gap: 1ch;
         padding: var(--size-2);
+        display: grid;
+        gap: var(--size-5);
 
-        @media (width > 92ch) {
-          max-width: 100ch;
+        @media (width > 60rem) {
+          grid-template-columns: 20ch 70ch;
+          gap: 1ch;
         }
       }
 

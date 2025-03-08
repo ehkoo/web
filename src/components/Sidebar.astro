@@ -5,9 +5,12 @@ import IconExternalLink from './IconExternalLink.astro'
 
 <style>
   .sidebar {
-    position: sticky;
-    top: var(--size-3);
     align-self: flex-start;
+
+    @media (width > 60rem) {
+      position: sticky;
+      top: var(--size-3);
+    }
   }
 
   .links {

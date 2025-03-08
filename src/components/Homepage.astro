@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 
-import Avatar from './Avatar.astro'
+import Badge from './Badge.astro'
 
 import { getPostsForHomepage, getNewsletters, groupPostsByYear, resizePostCover, getPrimaryTag } from '../lib'
 
@@ -16,8 +16,10 @@ const posts = getPostsForHomepage(await getCollection('bai-viet'))
 
 <style>
   .posts {
+    --flow-space: 0.5em;
+
     display: grid;
-    gap: var(--size-3);
+    gap: 2rem;
   }
 
   .article :global(code) {
@@ -34,36 +36,16 @@ const posts = getPostsForHomepage(await getCollection('bai-viet'))
     font-size: var(--font-size-3);
   }
 
-  .post {
-    display: grid;
-    grid-template-columns: 1fr 4rem;
-    gap: 1ch;
-  }
-
-  .content {
-    --flow-space: 0.5rem;
-    border: var(--border-size-2) solid var(--gray-7);
-    border-radius: var(--radius-3);
-    padding: 1rem;
-    background-color: #fff;
-    line-height: 1.5;
+  .excerpt {
+    color: var(--stone-8);
   }
 
   .meta {
     color: var(--stone-8);
-    font-size: 0.9rem;
+    font-size: 0.9em;
     display: flex;
     gap: 1ch;
-  }
-
-  .published_at {
-    margin-inline-start: auto;
-  }
-
-  .cover {
-    border-radius: var(--radius-3);
-    border: var(--border-size-2) solid var(--gray-7);
-    aspect-ratio: 4 / 3;
+    font-style: normal;
   }
 
   .link {
@@ -73,34 +55,39 @@ const posts = getPostsForHomepage(await getCollection('bai-viet'))
       text-decoration: underline;
     }
   }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1ch;
+  }
 </style>
 
 <div class="posts">
   {
-    posts.map(({ data }, index) => {
+    posts.map(({ data }) => {
       const { tag, variant } = getPrimaryTag(data.tags)
 
       return (
-        <article class="post">
-          <div class="flow content">
-            <a href={data.url} class="link">
-              <h2 class="title">{data.title}</h2>
-            </a>
+        <article class="flow article">
+          <a href={data.url} class="link header">
+            <h2 class="title">
+              <Markdown.Inline of={data.title} />
+            </h2>
+          </a>
 
-            {/* {index < 3 && <img class="cover" src={data.cover} alt="" width="1280" />} */}
+          <p class="excerpt">
+            <Markdown.Inline of={data.excerpt} />
+          </p>
 
-            <p>{data.excerpt}</p>
+          <address class="meta">
+            <Badge variant={variant}>#{tag}</Badge>
 
-            <address class="meta">
-              <span>@kcjpop</span>
-              <a href="#">#CSS</a>
-              <time datetime="" class="published_at">
-                {data.formattedDate}
-              </time>
-            </address>
-          </div>
-
-          <Avatar variant={variant}>{tag}</Avatar>
+            <time datetime="" class="published_at">
+              {data.formattedDate}
+            </time>
+          </address>
         </article>
       )
     })

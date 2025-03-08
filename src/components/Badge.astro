@@ -1,0 +1,37 @@
+---
+const { variant } = Astro.props
+---
+
+<style>
+  .badge {
+    border-radius: var(--radius-1);
+    padding-inline: var(--size-1);
+    background-color: var(--_bg, var(--stone-3));
+    color: var(--_fg, currentColor);
+
+    &[data-variant='css'] {
+      --_bg: var(--indigo-2);
+      --_fg: var(--indigo-9);
+    }
+    &[data-variant='javascript'] {
+      --_bg: var(--yellow-3);
+      --_fg: var(--stone-9);
+    }
+    &[data-variant='html'] {
+      --_bg: var(--pink-2);
+      --_fg: var(--pink-9);
+    }
+    &[data-variant='react'] {
+      --_bg: var(--blue-2);
+      --_fg: var(--blue-9);
+    }
+    &[data-variant='vue'] {
+      --_bg: var(--green-2);
+      --_fg: var(--green-9);
+    }
+  }
+</style>
+
+<span class="badge" data-variant={variant}>
+  <slot />
+</span>
