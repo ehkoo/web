@@ -15,6 +15,10 @@
 
   --homepage-cover-size: 120px;
   --container-width: 80ch;
+
+  --code-background: var(--stone-2);
+  --code-color: var(--stone-9);
+  --code-font-size: 0.85em;
 }
 
 body {

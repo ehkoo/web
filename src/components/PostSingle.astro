@@ -1,4 +1,5 @@
 ---
+import {Markdown} from '@astropub/md'
 import PostMeta from './PostMeta.astro'
 import PostNav from './post/PostNav.astro'
 import FormNewsletter from './newsletter/Form.astro'
@@ -22,7 +23,9 @@ const {
 </style>
 
 <article id="post" class:list={['flow', s.post]}>
-  <h1 class={s.title}>{title}</h1>
+  <h1 class={s.title}>
+    <Markdown.Inline of={title} />
+  </h1>
 
   {
     !isPage && (
