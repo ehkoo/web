@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config'
+import markdownIntegration from '@astropub/md'
 import rehypeExternalLinks from 'rehype-external-links'
 
 import { remarkReadingTime } from './src/remark-reading-time.mjs'
@@ -10,6 +11,7 @@ export default defineConfig({
     port: 6001,
     host: false,
   },
+  integrations: [markdownIntegration()],
   markdown: {
     shikiConfig: {
       theme: 'github-light',

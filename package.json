@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "4.0.11",
+    "@astropub/md": "1.0.0",
     "@csstools/postcss-global-data": "3.0.0",
     "@zachleat/browser-window": "1.0.14",
     "astro": "5.4.2",
