@@ -7,14 +7,13 @@ export const POSTS_PER_PAGE = 12
 
 function processPosts(posts) {
   return posts
-
     .sort((a, b) => {
       return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     })
     .filter((p) => p.data.draft !== true)
     .map((p) => {
       p.data.formattedDate = formatDate(p.data.date)
-      p.data.url = `/bai-viet/${p.slug}`
+      p.data.url = `/bai-viet/${p.id}`
       return p
     })
 }

@@ -12,7 +12,7 @@ import TopPosts from './TopPosts.astro'
 import LearnTypeScript from './LearnTypeScript.astro'
 
 const resizeCover = (post) => resizePostCover(post, { width: 400, height: 300 })
-const posts = getPostsForHomepage(await getCollection('bai-viet'))
+const posts = getPostsForHomepage(await getCollection('post'))
 ---
 
 <style>
