@@ -2,7 +2,6 @@
 import { getCollection, render } from 'astro:content'
 import Post from '@/layouts/Post.astro'
 import Picture from '@/components/Picture.astro'
-import { transformImage } from '@/lib'
 
 export async function getStaticPaths() {
   const posts = await getCollection('post')
@@ -17,37 +16,10 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await render(entry)
-
-const figure = entry.data?.figure
-const cover = figure?.src ?? entry.data?.cover
-
-const sources =
-  cover != null
-    ? [
-        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'scale', w: 960, h: null }) },
-        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1200, h: null }) },
-      ]
-    : []
-
-const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 1200, h: null }) : cover
 ---
 
 <Post title={entry.data.title} header={entry.data.title}>
-  {
-    figure != null && fallbackCover != null && (
-      <figure>
-        <Picture {sources} src={fallbackCover} alt={figure.alt} />
-        {figure.author && figure.credit ? (
-          <figcaption class="caption">
-            {figure.alt}. Nguồn ảnh: <a href={figure.author.url}>{figure.author.name}</a> @{' '}
-            <a href={figure.credit.url}>{figure.credit.from}</a>
-          </figcaption>
-        ) : (
-          <figcaption class="caption">{figure.alt}</figcaption>
-        )}
-      </figure>
-    )
-  }
+  <Picture figure={entry.data?.figure} cover={entry.data?.cover} />
 
   <Content />
 

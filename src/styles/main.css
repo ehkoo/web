@@ -92,6 +92,10 @@ code {
     margin: var(--size-3) auto;
   }
 
+  & :is(figcaption) {
+    color: var(--stone-8);
+  }
+
   & :is(h1, h2) {
     font-weight: 700;
     margin-block-start: 1.5em;
