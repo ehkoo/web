@@ -1,83 +1,35 @@
 ---
-import Base from './Base.astro'
-import PostSingle from '../components/PostSingle.astro'
-import Picture from '../components/Picture.astro'
-import { transformImage } from '../lib'
-
-const { content, headings, frontmatter } = Astro.props
-
-const figure = frontmatter?.figure
-const cover = figure?.src ?? frontmatter?.cover
-
-const sources =
-  cover != null
-    ? [
-        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'scale', w: 960, h: null }) },
-        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1200, h: null }) },
-      ]
-    : []
-
-const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 1200, h: null }) : cover
+import { Markdown } from '@astropub/md'
+import Base from '@/layouts/Base.astro'
 ---
 
-<Base {content}>
-  <style>
-    .caption {
-      font-style: italic;
-    }
+<style>
+  .header {
+    line-height: 1.2;
+  }
+  .header :global(code) {
+    --code-background: var(--stone-2);
+    --code-color: var(--stone-9);
+    --code-font-size: 0.85em;
 
-    /* To style browser compatibility data */
-    :global(browser-compat) {
-      font-weight: 600;
-      font-size: 0.9em;
-      background-color: var(--gray-1);
-      border-radius: var(--radius-2);
-      padding: var(--size-2);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
-      gap: 1ch;
+    font-size: var(--code-font-size);
+    padding: 2px 4px;
+    border-radius: var(--radius-1);
+    color: var(--code-color);
+    background-color: var(--code-background);
+    font-variant-ligatures: none;
+    word-break: break-word;
+  }
+</style>
 
-      &::part(no_support) {
-        color: var(--red-9);
-        &::after {
-          content: '❌';
-        }
-      }
+<Base title={Astro.props.title}>
+  <article class="flow">
+    <header>
+      <h1 class="header"><Markdown.Inline of={Astro.props.header} /></h1>
+    </header>
 
-      &::part(support) {
-        color: var(--green-9);
-        &::after {
-          content: '✅';
-        }
-      }
-    }
-  </style>
-  <PostSingle post={content} headers={headings}>
-    {
-      figure != null && fallbackCover != null && (
-        <figure>
-          <Picture {sources} src={fallbackCover} alt={figure.alt} />
-          {figure.author && figure.credit ? (
-            <figcaption class="caption">
-              {figure.alt}. Nguồn ảnh: <a href={figure.author.url}>{figure.author.name}</a> @{' '}
-              <a href={figure.credit.url}>{figure.credit.from}</a>
-            </figcaption>
-          ) : (
-            <figcaption class="caption">{figure.alt}</figcaption>
-          )}
-        </figure>
-      )
-    }
-
-    <slot />
-  </PostSingle>
-
-  <script>
-    import '@zachleat/browser-window'
-  </script>
-
-  <script type="module" is:inline>
-    import { XBrowserCompat } from 'https://unpkg.com/@kcjpop/x-browser-compat'
-    window.customElements.define('browser-compat', XBrowserCompat)
-  </script>
+    <div class="global:content">
+      <slot />
+    </div>
+  </article>
 </Base>

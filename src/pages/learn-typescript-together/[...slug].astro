@@ -1,20 +1,22 @@
 ---
-import { getCollection } from 'astro:content'
-import PostLayout from '../../layouts/Post.astro'
+import { getCollection, render } from 'astro:content'
+import Post from '@/layouts/Post.astro'
 
 export async function getStaticPaths() {
-  const entries = await getCollection('typescript', (entry) => !entry.data.draft)
+  const posts = await getCollection('typescript')
 
-  return entries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }))
+  return posts.flatMap((post) => {
+    return {
+      params: { slug: post.id },
+      props: { entry: post },
+    }
+  })
 }
 
 const { entry } = Astro.props
-const { Content, headings, remarkPluginFrontmatter } = await entry.render()
+const { Content } = await render(entry)
 ---
 
-<PostLayout content={remarkPluginFrontmatter} headings={headings}>
+<Post>
   <Content />
-</PostLayout>
+</Post>

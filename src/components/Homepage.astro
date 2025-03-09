@@ -6,11 +6,6 @@ import Badge from './Badge.astro'
 
 import { getPostsForHomepage, getNewsletters, groupPostsByYear, resizePostCover, getPrimaryTag } from '../lib'
 
-import PostList from './post/PostList.astro'
-import Newsletter from './newsletter/CallToAction.astro'
-import TopPosts from './TopPosts.astro'
-import LearnTypeScript from './LearnTypeScript.astro'
-
 const resizeCover = (post) => resizePostCover(post, { width: 400, height: 300 })
 const posts = getPostsForHomepage(await getCollection('post'))
 ---
@@ -35,6 +30,7 @@ const posts = getPostsForHomepage(await getCollection('post'))
   .title {
     font-weight: 700;
     font-size: var(--font-size-3);
+    line-height: 1.2;
   }
 
   .excerpt {
