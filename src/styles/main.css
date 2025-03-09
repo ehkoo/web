@@ -32,7 +32,7 @@ body {
 
   font-family: var(--font-sans);
   color: var(--text-primary);
-  font-feature-settings: 'ss01', 'ss02', 'ss03', 'ss04';
+  font-feature-settings: 'ss02', 'ss03', 'ss04';
   font-size: 1rem;
   font-size: var(--font-size-base);
 }
