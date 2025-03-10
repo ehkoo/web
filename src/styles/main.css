@@ -28,8 +28,12 @@ body {
   font-family: var(--font-sans);
   color: var(--text-primary);
   font-feature-settings: 'ss02', 'ss03', 'ss04';
-  font-size: 1rem;
+
   font-size: clamp(1rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+
+  @media (width > 60rem) {
+    font-size: 1rem;
+  }
 }
 
 a {
