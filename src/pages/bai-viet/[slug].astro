@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content'
+import PostWithComment from '@/layouts/PostWithComment.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('post')
+
+  return posts.flatMap((post) => {
+    return {
+      params: { slug: post.id },
+      props: { entry: post },
+    }
+  })
+}
+
+const { entry } = Astro.props
+---
+
+<PostWithComment entry={entry} />

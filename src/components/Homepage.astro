@@ -1,82 +1,209 @@
 ---
-import { getPostsForHomepage, getNewsletters, groupPostsByYear, resizePostCover } from '../lib'
-
-import PostList from './post/PostList.astro'
-import Newsletter from './newsletter/CallToAction.astro'
-import TopPosts from './TopPosts.astro'
-import LearnTypeScript from './LearnTypeScript.astro'
-
-const TOP_POSTS = 3
+import { Markdown } from '@astropub/md'
+import Picture from '@/components/Picture.astro'
+import { getPostsForHomepage, resizePostCover } from '@/lib'
 
 const resizeCover = (post) => resizePostCover(post, { width: 400, height: 300 })
-
-const posts = getPostsForHomepage(await Astro.glob('../pages/bai-viet/*.md'))
-const top = posts.slice(0, TOP_POSTS).map(resizeCover)
-
-const groups = groupPostsByYear(posts.slice(TOP_POSTS).map(resizeCover))
-const sortedYears = Object.entries(groups).sort(([a], [b]) => Number(b) - Number(a))
-
-const newsletters = getNewsletters(await Astro.glob('../pages/ban-tin/*.md')).map(resizeCover)
+const posts = await getPostsForHomepage()
 ---
 
 <style>
-  .home {
+  .posts {
+    --flow-space: 0.5em;
+
     display: grid;
-    gap: var(--size-4);
+    column-gap: var(--size-4);
+    row-gap: calc(2 * var(--size-4));
+    grid-template-columns: repeat(auto-fill, minmax(30ch, 1fr));
   }
 
-  .box {
-    background-color: var(--box-bg-color);
-    border: var(--box-border);
+  .topic {
+    --topic-border-size: 2px;
+    --topic-border-color: var(--stone-8);
+    --topic-padding-size: var(--size-3);
+    --topic-radius: var(--radius-2);
+
+    border: var(--topic-border-size) solid var(--topic-border-color);
+    padding-inline: var(--topic-padding-size);
+    padding-block-end: var(--topic-padding-size);
+    border-radius: var(--topic-radius);
   }
 
-  .new-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
-    gap: var(--size-3);
+  .topic-title {
+    --_padding-size: 0.5ch;
+
+    &[data-variant='css'] {
+      --_bg: var(--indigo-2);
+      --_fg: var(--indigo-9);
+    }
+    &[data-variant='javascript'] {
+      --_bg: var(--yellow-3);
+      --_fg: var(--stone-9);
+    }
+    &[data-variant='html'] {
+      --_bg: var(--pink-2);
+      --_fg: var(--pink-9);
+    }
+    &[data-variant='react'] {
+      --_bg: var(--blue-2);
+      --_fg: var(--blue-9);
+    }
+    &[data-variant='vue'] {
+      --_bg: var(--green-2);
+      --_fg: var(--green-9);
+    }
+    &[data-variant='vue'] {
+      --_bg: var(--green-2);
+      --_fg: var(--green-9);
+    }
+    &[data-variant='typescript'] {
+      --_bg: #3178c6;
+      --_fg: #ffffff;
+    }
+    &[data-variant='git'] {
+      --_bg: #fff;
+      --_fg: #da4b34;
+    }
+
+    background-color: var(--_bg, var(--surface-0));
+    color: var(--_fg, currentColor);
+    border-radius: var(--topic-radius);
+    font-size: var(--font-size-2);
+    text-align: center;
+    margin-block-start: calc((1ex + var(--_padding-size) + var(--topic-border-size)) * -1);
+    margin-inline: 1ch;
+    border: var(--topic-border-size) solid var(--_fg, var(--topic-border-color));
+    padding-block: var(--_padding-size);
   }
 
-  .subgrid {
-    display: grid;
-    grid-template-columns: subgrid;
-    gap: var(--size-3);
+  .article {
+    & :global(code) {
+      font-size: var(--code-font-size);
+      background-color: var(--code-background);
+      color: var(--code-color);
+      font-weight: 600;
+      padding-inline: var(--size-1);
+      border-radius: var(--radius-1);
+    }
+
+    & :global(figure) {
+      margin-inline: calc(-1 * var(--topic-padding-size));
+    }
   }
 
-  .welcome {
-    padding-block-start: var(--size-3);
+  .title {
+    font-weight: 700;
+    font-size: var(--font-size-3);
+    line-height: 1.2;
+    margin-block-start: var(--size-2);
+  }
+
+  .excerpt {
+    color: var(--stone-8);
+  }
+
+  .meta {
+    color: var(--stone-8);
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1ch;
+
+    font-style: normal;
+  }
+
+  .link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1ch;
+  }
+
+  .related-separator {
+    border: none;
+    height: 1px;
+    background-color: var(--stone-3);
+    width: 15ch;
+    margin-block: var(--size-4);
+  }
+
+  .related-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .related-posts {
+    margin-inline-start: 0;
+    padding-inline-start: var(--size-4);
+
+    & :global(li)::marker {
+      content: '→ ';
+      color: var(--stone-7);
+    }
   }
 </style>
 
-<div class="home">
-  <div class="flow box welcome">
-    <h2>Chào mừng bạn đến với Ehkoo 👋</h2>
-    <p>
-      Bên cạnh những chủ đề thường gặp như <a href="/chu-de/css"><strong>HTML, CSS</strong></a> hay
-      <a href="/chu-de/javascript"><strong>JavaScript</strong></a>, Ehkoo còn chia sẻ với bạn những
-      <a href="/chu-de/danh-cho-nguoi-moi"><strong>kinh nghiệm</strong></a>
-      cho người mới bắt đầu, sử dụng <a href="/chu-de/git"><strong>git</strong></a>, hay trình soạn thảo hiệu quả hơn 👉
-      <a href="/chu-de"><strong>Xem tất cả.</strong></a>
-    </p>
-  </div>
+<div class="posts">
+  {
+    posts.map(([tag, posts]) => {
+      const [p, ...rest] = posts
+      const post = resizeCover(p)
+      const { data } = post
 
-  <div class="box new-posts">
-    <div class="subgrid">
-      <h3>🗞️ Bản tin</h3>
-      <TopPosts posts={newsletters} />
-    </div>
+      return (
+        <section class="flow topic">
+          <h2 data-variant={tag.toLowerCase()} class="topic-title">
+            #{tag}
+          </h2>
 
-    <div class="subgrid">
-      <h3>📝 Bài viết mới</h3>
-      <TopPosts posts={top} />
-    </div>
-  </div>
+          <article class="flow article">
+            <a href={data.url} class="link header">
+              <h3 class="title">
+                <Markdown.Inline of={data.title} />
+              </h3>
+            </a>
 
-  <Newsletter posts={newsletters} />
+            <address class="meta">
+              <author>@{data.author}</author>
 
-  <LearnTypeScript />
+              <time datetime="" class="published_at">
+                {data.formattedDate}
+              </time>
+            </address>
 
-  <div class="flow box">
-    <h2>Những bài khác</h2>
-    <PostList posts={sortedYears} />
-  </div>
+            <Picture figure={data?.figure} cover={data?.cover} showCaption={false} />
+
+            <p class="excerpt">
+              <Markdown.Inline of={data.excerpt} />
+            </p>
+          </article>
+
+          {rest.length > 0 && (
+            <>
+              <hr class="related-separator" />
+              <h3 class="related-title">Bài cùng chủ đề</h3>
+
+              <ul class="related-posts flow">
+                {rest.map((post) => (
+                  <li>
+                    <a class="no-underline-link" href={post.data.url}>
+                      {post.data.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </section>
+      )
+    })
+  }
 </div>

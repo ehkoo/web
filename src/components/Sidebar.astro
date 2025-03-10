@@ -1,0 +1,85 @@
+---
+import NavLinks from './NavLinks.astro'
+---
+
+<style>
+  .aside {
+    @media (width > 60rem) {
+      position: sticky;
+      top: var(--size-3);
+    }
+  }
+
+  .menu {
+    position: relative;
+
+    --list-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'/%3E%3Cline x1='40' y1='128' x2='216' y2='128' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3E%3Cline x1='40' y1='64' x2='216' y2='64' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3E%3Cline x1='40' y1='192' x2='216' y2='192' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3E%3C/svg%3E");
+    --close-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'/%3E%3Cline x1='200' y1='56' x2='56' y2='200' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3E%3Cline x1='200' y1='200' x2='56' y2='56' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3E%3C/svg%3E");
+    --marker: var(--list-icon);
+
+    &[open] {
+      --marker: var(--close-icon);
+    }
+
+    @media (width > 60rem) {
+      display: none;
+    }
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 20ch;
+    background-color: var(--surface-0);
+    padding: var(--size-3);
+    box-shadow: var(--shadow-2);
+    border: 1px solid var(--stone-3);
+    border-radius: var(--radius-2);
+  }
+
+  .summary {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1ch;
+
+    &::before {
+      content: '';
+      background-image: var(--marker);
+      display: block;
+      width: 1em;
+      height: 1em;
+    }
+
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  .navlinks {
+    display: none;
+
+    @media (width > 60rem) {
+      display: block;
+    }
+  }
+</style>
+
+<aside class:list={['aside', Astro.props.class]}>
+  <details class="menu">
+    <summary class="summary">Menu</summary>
+
+    <div class="links">
+      <NavLinks />
+    </div>
+  </details>
+
+  <div class="navlinks">
+    <NavLinks />
+  </div>
+</aside>

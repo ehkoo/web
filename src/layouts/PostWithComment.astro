@@ -1,0 +1,32 @@
+---
+import { render } from 'astro:content'
+
+import Post from './Post.astro'
+import Picture from '@/components/Picture.astro'
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<Post title={entry.data.title} header={entry.data.title}>
+  <Picture figure={entry.data?.figure} cover={entry.data?.cover} />
+
+  <Content />
+
+  <div id="comments">
+    {/* @ts-ignore */}
+    <script
+      is:inline
+      src="https://utteranc.es/client.js"
+      repo="ehkoo/web"
+      issue-term="pathname"
+      label="web-comments"
+      theme="github-light"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+
+  <script>
+    import '@zachleat/browser-window'
+  </script>
+</Post>

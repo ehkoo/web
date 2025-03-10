@@ -1,9 +1,9 @@
 {
   "name": "@ehkoo/web",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "license": "MPL-2.0",
   "homepage": "https://ehkoo.com",
-  "description": "Website tiếng Việt chuyên hướng dẫn tùm lum về JavaScript, CSS, React, và chuyện lập trình frontend.",
+  "description": "Website tiếng Việt chuyên hướng dẫn lung tung về HTML, CSS, và JavaScript. Lâu lâu cũng nói qua những công nghệ khác nữa.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ehkoo/web"
@@ -15,25 +15,26 @@
     "preview": "astro build && astro preview"
   },
   "dependencies": {
-    "@astrojs/rss": "4.0.5",
-    "@csstools/postcss-global-data": "2.1.0",
+    "@astrojs/rss": "4.0.11",
+    "@astropub/md": "1.0.0",
+    "@csstools/postcss-global-data": "3.0.0",
     "@zachleat/browser-window": "1.0.14",
-    "astro": "4.6.3",
+    "astro": "5.4.2",
     "mdast-util-to-string": "4.0.0",
-    "open-props": "1.7.3",
-    "postcss": "8.4.31",
-    "postcss-calc": "9.0.1",
-    "postcss-custom-media": "10.0.2",
+    "open-props": "1.7.7",
+    "postcss": "8.4.47",
+    "postcss-calc": "10.0.2",
+    "postcss-custom-media": "11.0.4",
     "postcss-each": "1.1.0",
     "postcss-jit-props": "1.0.14",
-    "postcss-nested": "6.0.1",
-    "postcss-preset-env": "9.2.0",
+    "postcss-nested": "6.2.0",
+    "postcss-preset-env": "10.0.8",
     "reading-time": "1.5.0",
     "rehype-external-links": "3.0.0",
     "slugify": "1.6.6"
   },
   "devDependencies": {
-    "eslint": "9.1.0",
-    "eslint-plugin-prettier": "5.1.3"
+    "eslint": "9.13.0",
+    "eslint-plugin-prettier": "5.2.1"
   }
 }

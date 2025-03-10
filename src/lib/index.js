@@ -1,84 +1,67 @@
 import baseSlugify from 'slugify'
+import { getCollection } from 'astro:content'
+
+import { formatDate } from './date-time'
 
 export * from './date-time'
 
-export const POSTS_PER_PAGE = 12
+/**
+ * Get posts to show in Homepage
+ */
+export async function getPostsForHomepage() {
+  const MAX_POST = 6
+
+  const posts = await Promise.all([getCollection('post'), getCollection('newsletter'), getCollection('typescript')])
+    .then((posts) => [].concat(...posts))
+    .then(processPosts)
+
+  // Group posts by their primary tag
+  const postsByTag = new Map()
+  for (const post of posts) {
+    const tag = getPrimaryTag(post.data.tags)
+
+    const coll = postsByTag.get(tag) ?? []
+    if (coll.length < MAX_POST) {
+      coll.push(post)
+    }
+
+    postsByTag.set(tag, coll)
+  }
+
+  return Array.from(postsByTag.entries()).sort(([, [a]], [, [b]]) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  })
+}
+
+function getPrimaryTag(tags) {
+  let list = Array.isArray(tags) ? tags : tags.split(',')
+
+  return list.at(0)
+}
 
 function processPosts(posts) {
   return posts
     .sort((a, b) => {
-      return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     })
-    .filter((p) => p.frontmatter.draft !== true)
+    .filter((p) => p.data.draft !== true)
+    .map((p) => {
+      p.data.formattedDate = p.data?.date ? formatDate(p.data.date) : undefined
+      p.data.url = getPostUrl(p)
+
+      return p
+    })
 }
 
-export function getAllPosts(posts, { limit } = {}) {
-  const processed = processPosts(posts)
+function getPostUrl(post) {
+  if (post.collection === 'typescript') return `/hoc-typescript/${post.id}`
+  if (post.collection === 'newsletter') return `/ban-tin/${post.id}`
 
-  if (limit) return processed.slice(0, limit)
-
-  return processed
-}
-
-export function getAllPostsByTag(posts) {
-  return posts
-}
-
-export function getPostsForHomepage(posts) {
-  return getAllPosts(posts)
-}
-
-export function getNewsletters(posts) {
-  return processPosts(posts).slice(0, 3)
+  return `/bai-viet/${post.id}`
 }
 
 export function slugify(str) {
   return baseSlugify(str, { locale: 'vi', lower: true, trim: true })
-}
-
-export function groupPostsByTag(posts) {
-  const tagsAndPost = posts.flatMap((post) => post.frontmatter.tags.split(',').map((tag) => [tag.trim(), post]))
-
-  const postsByTag = tagsAndPost.reduce((acc, [tag, post]) => {
-    acc[tag] = acc[tag] ?? []
-    acc[tag].push(post)
-
-    return acc
-  }, {})
-
-  return (
-    Object.entries(postsByTag)
-      // Sort posts by published date
-      .map(([tag, posts]) => [
-        tag,
-        posts.sort((a, b) => new Date(b.frontmatter?.date).getTime() - new Date(a.frontmatter?.date).getTime()),
-      ])
-      // Then sort tag by its latest post date
-      .sort(([, a], [, b]) => {
-        // Sort by length first
-        if (a.length !== b.length) return b.length - a.length
-
-        const [firstOfA] = a
-        const [firstOfB] = b
-
-        return new Date(firstOfB.frontmatter?.date).getTime() - new Date(firstOfA.frontmatter?.date).getTime()
-      })
-  )
-}
-
-export function groupPostsByYear(posts) {
-  posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
-
-  const map = Object.create(null)
-
-  for (const post of posts) {
-    const year = new Date(post.frontmatter.date).getFullYear()
-
-    map[year] = map[year] ?? []
-    map[year].push(post)
-  }
-
-  return map
 }
 
 /**
@@ -105,6 +88,6 @@ export function transformImage(url, transformations) {
  */
 export function resizePostCover(post, { width, height }) {
   const copy = { ...post }
-  copy.frontmatter.cover = transformImage(post.frontmatter.cover, { c: 'fill', w: width, h: height })
+  copy.data.cover = transformImage(post.data.cover, { c: 'fill', w: width, h: height })
   return copy
 }

@@ -4,99 +4,19 @@ import IconExternalLink from './IconExternalLink.astro'
 ---
 
 <style>
-  .nav {
-    background-color: var(--surface-2);
-  }
-
-  .links {
-    line-height: 0;
-    display: flex;
-    align-items: center;
-    gap: var(--size-3);
-    font-size: var(--font-size-1);
-    font-weight: 600;
-    padding-block: var(--size-3);
-  }
-
-  .details {
-    cursor: pointer;
-    position: relative;
-    margin-inline-start: auto;
-
-    :global(summary) {
-      user-select: none;
-    }
-
-    :global(summary)::-webkit-details-marker,
-    :global(summary)::marker {
-      content: '';
-      display: none;
-    }
-
-    @media (--md) {
-      margin-inline-start: unset;
-    }
-  }
-
-  .link {
-    display: inline-flex;
-    align-items: center;
-    gap: 1ch;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .extra-links {
-    position: absolute;
-    background-color: var(--surface-0);
-    padding: var(--size-3);
-    top: 2ch;
-    right: 0;
-
-    display: grid;
-    grid-template-columns: max-content;
-    gap: var(--size-2);
-
-    border: 2px solid var(--gray-7);
-    border-radius: var(--radius-2);
-    z-index: 1;
-
-    @media (--md) {
-      left: 0;
-      right: unset;
-    }
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 </style>
 
-<nav class="nav">
-  <div class="container">
-    <div class="links">
+<nav>
+  <ul class="list" role="list">
+    <li>
       <a href="/" title="Ê-ku">
         <IconEhkoo />
       </a>
-      <a class="link" href="/gioi-thieu"> Giới Thiệu</a>
-      <a class="link" href="/chu-de/newsletter">Bản Tin</a>
-      <a class="link" href="/rss.xml">RSS</a>
-
-      <details class="details">
-        <summary>Extra ▾</summary>
-        <div class="extra-links">
-          <a class="link" href="https://github.com/ehkoo/web" target="_blank" rel="noreferrer nofollow">
-            <IconExternalLink /> Github
-          </a>
-          <a class="link" href="https://www.facebook.com/ehkoo.dev/" target="_blank" rel="noreferrer nofollow">
-            <IconExternalLink /> Facebook fanpage
-          </a>
-          <a class="link" href="https://chat.webuild.community/" target="_blank" rel="noreferrer nofollow">
-            <IconExternalLink /> Thảo luận ở Slack WeBuild
-          </a>
-          <a class="link" href="https://www.buymeacoffee.com/ehkoo" target="_blank" rel="noreferrer nofollow">
-            <IconExternalLink /> Ủng hộ cà phê ☕️
-          </a>
-        </div>
-      </details>
-    </div>
-  </div>
+    </li>
+  </ul>
 </nav>
