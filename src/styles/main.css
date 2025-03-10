@@ -11,18 +11,13 @@
   --link-primary: var(--gray-7);
   --link-hover: var(--gray-8);
 
-  --border-thickness: 2px;
-
-  --homepage-cover-size: 120px;
-  --container-width: 80ch;
-
   --code-background: var(--stone-2);
   --code-color: var(--stone-9);
   --code-font-size: 0.85em;
 }
 
 body {
-  --font-size-base: 1rem;
+  --user-font-scale: 1rem - 16px;
 
   --font-monospace: 'Jetbrains Mono', Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco,
     Droid Sans Mono, Source Code Pro, monospace;
@@ -34,7 +29,7 @@ body {
   color: var(--text-primary);
   font-feature-settings: 'ss02', 'ss03', 'ss04';
   font-size: 1rem;
-  font-size: var(--font-size-base);
+  font-size: clamp(1rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 }
 
 a {
@@ -182,18 +177,6 @@ code {
 
 .no-underline-link:not(:hover) {
   text-decoration: none;
-}
-
-.container {
-  max-width: 100%;
-  padding-left: var(--size-3);
-  padding-right: var(--size-3);
-
-  @media (--lg) {
-    max-width: var(--container-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .has-icon {
