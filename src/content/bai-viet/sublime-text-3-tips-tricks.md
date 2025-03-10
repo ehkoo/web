@@ -3,7 +3,9 @@ title: 9+ thủ thuật giúp sử dụng Sublime Text 3 hiệu quả hơn
 slug: sublime-text-3-tips-tricks
 date: 2018-02-23
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1519462144/img_qtzogc.jpg
-tags: Thủ thuật, Sublime Text 3, Text Editor
+tags:
+  - Trình soạn thảo
+  - SublimeText
 excerpt: Sublime Text 3 vượt trội hơn các trình soạn thảo khác nhờ tốc độ nhanh và kho plugin hữu ích. Những thủ thuật "nhỏ mà có võ" dưới đây sẽ giúp bạn khai thác tối đa tiện ích của Sublime.
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh

@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content'
 import PostWithComment from '@/layouts/PostWithComment.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('post')
+  const posts = await getCollection('newsletter')
 
   return posts.flatMap((post) => {
     return {

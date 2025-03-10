@@ -1,7 +1,7 @@
 ---
 import { transformImage } from '@/lib'
 
-const { figure, cover: baseCover } = Astro.props
+const { figure, cover: baseCover, showCaption = true } = Astro.props
 
 const cover = figure?.src ?? baseCover
 const sources =
@@ -26,13 +26,17 @@ const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 120
         <img src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" />
       </picture>
 
-      {figure.author && figure.credit ? (
-        <figcaption>
-          {figure.alt}. Nguồn ảnh: <a href={figure.author.url}>{figure.author.name}</a> //{' '}
-          <a href={figure.credit.url}>{figure.credit.from}</a>
-        </figcaption>
-      ) : (
-        <figcaption>{figure.alt}</figcaption>
+      {showCaption && (
+        <>
+          {figure.author && figure.credit ? (
+            <figcaption>
+              {figure.alt}. Nguồn ảnh: <a href={figure.author.url}>{figure.author.name}</a> //{' '}
+              <a href={figure.credit.url}>{figure.credit.from}</a>
+            </figcaption>
+          ) : (
+            <figcaption>{figure.alt}</figcaption>
+          )}
+        </>
       )}
     </figure>
   )

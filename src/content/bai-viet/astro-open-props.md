@@ -9,11 +9,16 @@ tags:
   - Bài mì ăn liền
 excerpt: 'Hay chính xác hơn là sử dụng PostCSS trong Astro như thế nào'
 author: kcjpop
+figure:
+  src: &cover
+  alt: 'Space Mosaic'
+  author:
+    name: 'Fábio Lobo'
+    url: https://dribbble.com/fabiolobodesign
+  credit:
+    from: 'Dribbble'
+    url: 'https://dribbble.com/shots/17111564--Space-Mosaic'
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683356089/ehkoo/f630e798064c365211cd53162d28f213.jpg)
-
-_Hình minh họa: [**Space Mosaic**](https://dribbble.com/shots/17111564--Space-Mosaic) bởi [**Fábio Lobo**](https://dribbble.com/fabiolobodesign) từ Dribbble_
 
 Bài này ngắn ngủn à 🥲
 

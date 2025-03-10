@@ -3,7 +3,10 @@ title: 10+ giao diện đẹp xuất sắc cho Sublime Text 3
 slug: sublime-text-3-themes
 date: 2018-06-03
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528974295/Untitled_p8duff.jpg
-tags: Thủ thuật, Sublime Text 3, Themes, Text Editor
+tags:
+  - Trình soạn thảo
+  - SublimeText
+  - Themes
 excerpt: 'Cùng tân trang Sublime Text 3 bằng những giao diện (themes) đẹp mắt để nâng cao hiệu suất làm việc nào!'
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh

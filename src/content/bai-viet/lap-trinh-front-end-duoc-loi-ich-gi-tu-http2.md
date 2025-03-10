@@ -3,7 +3,9 @@ title: Lập trình front-end hưởng lợi gì từ HTTP/2?
 slug: lap-trinh-front-end-duoc-loi-ich-gi-tu-http2
 date: 2018-05-14
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1526386160/sls-rocket-scene-1_ruuwgh.jpg
-tags: Frontend, HTTP2
+tags:
+  - Web Performance
+  - HTTP/2
 excerpt: 'Chúng ta chắc đều biết HTTP/2 sẽ là phiên bản thay thế cho HTTP/1.1. Nhưng chính xác thì HTTP/2 là gì, và đem lại những lợi ích nào cho lập trình viên front-end?'
 author: kcjpop
 ---

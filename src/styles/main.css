@@ -39,12 +39,14 @@ body {
 
 a {
   color: var(--link-primary);
-  text-decoration-thickness: var(--border-thickness);
   border-radius: var(--radius-2);
-  display: inline-block;
 
   &:hover {
     color: var(--link-hover);
+  }
+
+  &:focus-visible {
+    text-decoration: none;
   }
 }
 
@@ -68,6 +70,8 @@ code {
 }
 
 .global\:content {
+  max-width: 75ch;
+
   & > * + * {
     margin-block-start: 1em;
   }
