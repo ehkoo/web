@@ -3,11 +3,13 @@ title: 'Từ ‘thanh niên bán hàng rong’ trở thành ‘kĩ sư phần m�
 slug: alvaro-videla
 date: 2018-04-09
 tags: Kinh nghiệm, Nhân vật, Alvaro Videla
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1280/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1523268558/1_gQ4StAYHw5j5sVAGSNbIKw_gmrtid.jpg
 translation: http://bit.ly/alvaro-videla
 excerpt: Không học đại học CNTT chính quy, lại đến từ một nước thứ ba, làm thế nào Alvaro Videla có thể trở thành lập trình viên cho các công ty sừng sỏ như Apple, VMWare?
 author: chubbyanh
 editor: kcjpop
+figure:
+  src: &cover
 ---
 
 > [Alvaro Videla](http://alvaro-videla.com/) - lập trình viên kì cựu từng làm việc cho các hãng công nghệ hàng đầu thế giới như Apple, VMWare, EMC, và là đồng tác giả cuốn sách [RabbitMQ in Action](https://www.manning.com/books/rabbitmq-in-action). Tuy nhiên, anh chưa từng học đại học ngành CNTT. Để bước vào thế giới công nghệ đôi khi phù hoa không kém gì showbiz, và để có một vị trí vững chắc ở đó, Alvaro Videla đã phải tự mình vạch một lối đi riêng với rất nhiều nỗ lực và ý chí.

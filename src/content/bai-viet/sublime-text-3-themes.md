@@ -2,7 +2,7 @@
 title: 10+ giao diện đẹp xuất sắc cho Sublime Text 3
 slug: sublime-text-3-themes
 date: 2018-06-03
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528974295/Untitled_p8duff.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1528974295/Untitled_p8duff.jpg
 tags:
   - Trình soạn thảo
   - SublimeText
@@ -10,9 +10,9 @@ tags:
 excerpt: 'Cùng tân trang Sublime Text 3 bằng những giao diện (themes) đẹp mắt để nâng cao hiệu suất làm việc nào!'
 author: nguyenhaiduc06
 editor: kcjpop, chubbyanh
+figure:
+  src: &cover
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1528974295/Untitled_p8duff.jpg)
 
 Cùng với font chữ, việc chọn một giao diện (theme) tốt với các mẫu tô màu (color scheme) trực quan cũng góp phần đáng kể giúp tăng năng suất làm việc của lập trình viên. Nếu bạn đang dùng Sublime Text 3 thì đừng quên khám phá những giao diện (themes) và color scheme cực kì bắt mắt, thân thiện của trình soạn thảo này nhé.
 

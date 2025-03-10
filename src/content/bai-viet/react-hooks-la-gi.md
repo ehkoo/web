@@ -2,13 +2,15 @@
 title: React Hooks là gì?
 slug: react-hooks-la-gi
 date: 2018-10-28
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1540719936/peter-pan-disney_ylzvm3.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1540719936/peter-pan-disney_ylzvm3.jpg
 tags:
   - React
   - JavaScript
 excerpt: 'Lừng lẫy năm châu, chấn động địa cầu, khiến cả cộng đồng JavaScript sôi sục bàn tán cả tuần qua, không gì có thể khác hơn React Hooks.'
 author: kcjpop
 editor: chubbyanh
+figure:
+  src: &cover
 ---
 
 Trong React Conf 2018 diễn ra tuần vừa qua ở bang Nevada, Mỹ, nhóm phát triển React đã giới thiệu React Hooks - cho phép sử dụng state và những hiệu ứng lề (side effects) mà không cần phải khai báo ES6 class. Ý tưởng này hứa hẹn sẽ thay đổi khá nhiều bộ mặt của React, khiến các components trở nên gọn nhẹ hơn, giảm đáng kể số lượng code, đồng thời giúp React dễ tiếp cận hơn với những lập trình viên có ít kinh nghiệm với JavaScript.

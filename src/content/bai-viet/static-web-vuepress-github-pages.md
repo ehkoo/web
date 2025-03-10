@@ -9,9 +9,9 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v
 excerpt: 'Nếu đã làm việc với Vue, đừng bỏ qua VuePress khi bạn muốn tạo blog, trang tài liệu hay bất cứ web tĩnh nào.'
 author: nqdai1992
 editor: kcjpop, chubbyanh
+figure:
+  src: &cover
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/c_scale,f_auto,w_1000/v1550909045/vuepress_tfaf8i.jpg)
 
 Gần đây mình có tìm hiểu cách tạo blog bằng Github Pages (GP). Mình bắt đầu bằng cách làm theo theo hướng dẫn trên trang chủ GP, và đúng là chỉ sau vài phút, bạn đã có ngay một trang web "coi cũng được". Tuy nhiên, nhìn blog thiên hạ màu mè các kiểu làm mình cũng muốn tìm hiểu cách thiết kế giao diện và trang trí cho website bắt mắt hơn, thì gặp Jekyll. Jekyll đã có sẵn hỗ trợ cho GP, mỗi tội máy tính của bạn phải có Ruby mới dùng được. Mình thì không thích cài những gì mà cả năm mới dùng tới, vả lại nếu chỉ để phục vụ mỗi việc tạo blog thì cũng không đáng. Thế là mình mò thêm các giải pháp khác và bắt gặp VuePress. Vô tình mình cũng đang làm việc với Vue, nên "sao lại không nhỉ?"
 

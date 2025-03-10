@@ -3,14 +3,13 @@ title: Cách phân nhánh và chia việc trong nhóm với Git
 slug: git-workflow-phan-nhanh-va-chia-viec-trong-nhom
 date: 2018-04-22
 tags: git, Dành cho người mới
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524489964/Untitled_bppkvk.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1524489964/Untitled_bppkvk.jpg
 excerpt: Cứ tuần tự làm theo từng bước này, đảm bảo team của bạn sẽ không phải vò đầu bứt tai cấu xé nhau vì code chồng chéo, dự án banh chành nữa ahihi.
 author: kcjpop
 editor: chubbyanh
+figure:
+  src: &cover
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1524489964/Untitled_bppkvk.jpg)
-_Icon made by Freepik from [Flaticon](https://www.flaticon.com/packs/kitty-avatars-3)_
 
 Bạn vốn làm việc một mình một cõi, “thầu nguyên con” dự án. Dù phải code sấp mặt nhưng cuộc đời vẫn thật êm xuôi: tốc độ thần thánh 500 dòng/giờ, commit code mới pặc pặc vào `master`, cuối ngày chỉ việc `git push`, tắt máy, rồi dắt gấu đi nhậu (hoặc lội suối băng đèo về nhà thay tã cho con).
 

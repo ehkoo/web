@@ -2,15 +2,21 @@
 title: Tối ưu hoá hình ảnh cho Ehkoo
 slug: ehkoo-what-is-webp-image-optimization-cloudinary
 date: 2018-11-24
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1543147161/photo-1534367507873-d2d7e24c797f_bnafmj.jpg
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1543147161/photo-1534367507873-d2d7e24c797f_bnafmj.jpg
 tags: Web Performance, Image Optimization, WebP, MozJPG
 excerpt: '...hay câu chuyện WebP là gì, và mần răng để giảm bandwidth của Cloudinary với WebP.'
 author: kcjpop
 editor: chubbyanh
+figure:
+  src: &cover
+  alt: 'Một người phụ nữ đang nâng tạ'
+  author:
+    name: 'Alora Griffiths'
+    url: https://unsplash.com/@aloragriffiths
+  credit:
+    from: 'Unsplash'
+    url: 'https://unsplash.com/photos/TTrTW-pFxKw'
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1543147161/photo-1534367507873-d2d7e24c797f_bnafmj.jpg)
-_Hình chụp bởi [Alora Griffiths](https://unsplash.com/@aloragriffiths). Nguồn: [Unsplash](https://unsplash.com/photos/TTrTW-pFxKw)_
 
 ## Chuyện như chưa bắt đầu
 
