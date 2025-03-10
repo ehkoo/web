@@ -54,7 +54,7 @@ function processPosts(posts) {
 }
 
 function getPostUrl(post) {
-  if (post.collection === 'typescript') return `/learn-typescript-together/${post.id}`
+  if (post.collection === 'typescript') return `/hoc-typescript/${post.id}`
   if (post.collection === 'newsletter') return `/ban-tin/${post.id}`
 
   return `/bai-viet/${post.id}`

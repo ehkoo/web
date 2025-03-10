@@ -1,15 +1,20 @@
 ---
 title: 'Giới thiệu & các kiểu dữ liệu căn bản'
 date: 2022-02-19
-cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp
+cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1000/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp
 tags: TypeScript, Dành cho người mới
 excerpt: 'TypeScript là gì? Những lợi ích khi dùng TypeScript? Giới thiệu những kiểu dữ liệu thường gặp nhất.'
 author: kcjpop
+figure:
+  src: &cover
+  alt: 'Space'
+  author:
+    name: 'NICKVECTOR'
+    url: https://dribbble.com/nickvector
+  credit:
+    from: 'Dribbble'
+    url: 'https://dribbble.com/shots/16279707-Space'
 ---
-
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,c_scale,w_1200/v1683355597/ehkoo/dd614a2e93f10fe4d845522b4dff85f4.webp)
-
-_Hình minh họa: [**Space**](https://dribbble.com/shots/16279707-Space) bởi [**NICKVECTOR**](https://dribbble.com/nickvector) từ Dribbble_
 
 Năm nay đã là năm COVID thứ 2 mà bạn vẫn chưa biết TypeScript (giống mình 🥲) thì quả là một thiếu sót lớn. Như kiểu thời buổi này mang tiếng làm frontend developer mà không biết TS thì bị đồng nghiệp dè bỉu, sếp lớn cười chê, còn nhà tuyển dụng thì bỏ bê không ngó ngàng. Đau khổ lắm (đùa đấy).
 

@@ -1,4 +1,12 @@
 [[redirects]]
+  from = "/learn-typescript-together/basic-types"
+  to = "/hoc-typescript/basic-types"
+
+[[redirects]]
+  from = "/learn-typescript-together/object-array-interface"
+  to = "/hoc-typescript/object-array-interface"
+
+[[redirects]]
   from = "/bai-viet/10-giao-dien-theme-dep-xuat-sac-cho-sublime-text-3"
   to = "/bai-viet/sublime-text-3-themes"
 
