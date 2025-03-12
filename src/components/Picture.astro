@@ -7,26 +7,26 @@ const cover = figure?.src ?? baseCover
 const sources =
   cover != null
     ? [
-        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'scale', w: 640, h: null }) },
-        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'scale', w: 1024, h: null }) },
+        { media: '(width < 40em)', srcset: transformImage(cover, { w: 640, h: 360 }) },
+        { media: '(width < 64em)', srcset: transformImage(cover, { w: 1024, h: 576 }) },
       ]
     : []
 
-const fallbackCover = cover != null ? transformImage(cover, { c: 'scale', w: 1200, h: null }) : cover
+const fallbackCover = cover != null ? transformImage(cover, { w: 1024, h: 576 }) : cover
 ---
 
 {
-  figure != null && fallbackCover != null && (
+  fallbackCover != null && (
     <figure class="flow">
       <picture>
         {sources.map(({ media, srcset }) => (
           <source {media} {srcset} />
         ))}
 
-        <img src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" />
+        <img src={fallbackCover} alt={figure?.alt} loading="lazy" decoding="async" />
       </picture>
 
-      {showCaption && figure.alt && (
+      {showCaption && figure?.alt && (
         <figcaption>
           <strong>{figure.alt}.</strong>
 

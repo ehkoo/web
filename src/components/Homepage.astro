@@ -3,7 +3,7 @@ import { Markdown } from '@astropub/md'
 import Picture from '@/components/Picture.astro'
 import { getPostsForHomepage, resizePostCover } from '@/lib'
 
-const resizeCover = (post) => resizePostCover(post, { width: 400, height: 300 })
+const resizeCover = (post) => resizePostCover(post, { width: 400, height: 225 })
 const posts = await getPostsForHomepage()
 ---
 
