@@ -1,6 +1,9 @@
 ---
 import { Markdown } from '@astropub/md'
 import Base from '@/layouts/Base.astro'
+
+const title = Astro.props.title ?? Astro.props.content.title ?? Astro.props.frontmatter.title
+const header = Astro.props.header ?? title
 ---
 
 <style>
@@ -22,10 +25,10 @@ import Base from '@/layouts/Base.astro'
   }
 </style>
 
-<Base title={Astro.props.title}>
+<Base title={title}>
   <article class="flow">
     <header>
-      <h1 class="header"><Markdown.Inline of={Astro.props.header} /></h1>
+      <h1 class="header"><Markdown.Inline of={header} /></h1>
     </header>
 
     <div class="global:content">

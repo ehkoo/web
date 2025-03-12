@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Base.astro
+layout: ../layouts/Post.astro
 isPage: true
 slug: gioi-thieu
 title: Ehkoo là gì?
