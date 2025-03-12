@@ -16,17 +16,17 @@ const fallbackCover = cover != null ? transformImage(cover, { w: 1024, h: 576 })
 ---
 
 {
-  fallbackCover != null && (
+  figure != null && fallbackCover != null && (
     <figure class="flow">
       <picture>
         {sources.map(({ media, srcset }) => (
           <source {media} {srcset} />
         ))}
 
-        <img src={fallbackCover} alt={figure?.alt} loading="lazy" decoding="async" />
+        <img src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" />
       </picture>
 
-      {showCaption && figure?.alt && (
+      {showCaption && figure.alt && (
         <figcaption>
           <strong>{figure.alt}.</strong>
 
