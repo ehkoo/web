@@ -17,8 +17,6 @@
 }
 
 body {
-  --user-font-scale: 1rem - 16px;
-
   --font-monospace: 'Jetbrains Mono', Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco,
     Droid Sans Mono, Source Code Pro, monospace;
 
@@ -29,7 +27,7 @@ body {
   color: var(--text-primary);
   font-feature-settings: 'ss02', 'ss03', 'ss04';
 
-  font-size: clamp(1rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+  font-size: 1.125rem;
 
   @media (width > 60rem) {
     font-size: 1rem;

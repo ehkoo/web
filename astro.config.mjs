@@ -20,4 +20,12 @@ export default defineConfig({
     rehypePlugins: [rehypeExternalLinks],
     extendDefaultPlugins: true,
   },
+  vite: {
+    server: {
+      allowedHosts: [
+        // Allow .trycloudflare.com so we can use `untun` to test mobile layout
+        '.trycloudflare.com',
+      ],
+    },
+  },
 })
