@@ -17,13 +17,20 @@ const fallbackCover = cover != null ? transformImage(cover, { w: 1024, h: 576 })
 
 {
   figure != null && fallbackCover != null && (
+    <style>
+
+      .image {
+        aspect-ratio: 16 / 9;
+        background-color: rgba(206, 212, 218, 0.5);
+      }
+    </style>
     <figure class="flow">
-      <picture>
+      <picture class="picture">
         {sources.map(({ media, srcset }) => (
           <source {media} {srcset} />
         ))}
 
-        <img src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" />
+        <img role="img" class="image" src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" />
       </picture>
 
       {showCaption && figure.alt && (
