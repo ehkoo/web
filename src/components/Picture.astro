@@ -7,12 +7,12 @@ const cover = figure?.src ?? baseCover
 const sources =
   cover != null
     ? [
-        { media: '(width < 40em)', srcset: transformImage(cover, { w: 640, h: 360 }) },
-        { media: '(width < 64em)', srcset: transformImage(cover, { w: 1024, h: 576 }) },
+        { media: '(width < 40em)', srcset: transformImage(cover, { c: 'fill', w: 640, h: 360 }) },
+        { media: '(width < 64em)', srcset: transformImage(cover, { c: 'fill', w: 1024, h: 576 }) },
       ]
     : []
 
-const fallbackCover = cover != null ? transformImage(cover, { w: 1024, h: 576 }) : cover
+const fallbackCover = cover != null ? transformImage(cover, { c: 'fill', w: 1024, h: 576 }) : cover
 ---
 
 {
