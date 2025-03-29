@@ -14,13 +14,20 @@ const posts = await getPostsForHomepage()
     display: grid;
     column-gap: var(--size-4);
     row-gap: calc(2 * var(--size-4));
-    grid-template-columns: repeat(auto-fill, minmax(34ch, 1fr));
+
+    @media (width > 60rem) {
+      grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    }
+
+    @media (width > 80rem) {
+      grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+    }
   }
 
   .topic {
     --topic-border-size: 2px;
     --topic-border-color: var(--stone-8);
-    --topic-padding-size: var(--size-3);
+    --topic-padding-size: var(--size-4);
     --topic-radius: var(--radius-2);
 
     border: var(--topic-border-size) solid var(--topic-border-color);
@@ -77,29 +84,43 @@ const posts = await getPostsForHomepage()
   }
 
   .article {
+    --flow-space: var(--size-4);
+
+    display: grid;
+    align-items: center;
+    gap: var(--size-3);
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+
+    @media (width > 60rem) {
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    }
+
+    & :global(header) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1ch;
+
+      grid-column: 1 / -1;
+    }
+
     & :global(code) {
       font-size: var(--code-font-size);
       background-color: var(--code-background);
       color: var(--code-color);
-      font-weight: 600;
       padding-inline: var(--size-1);
       border-radius: var(--radius-1);
     }
 
-    & :global(figure) {
-      margin-inline: calc(-1 * var(--topic-padding-size));
+    & :global(picture > img) {
+      border-radius: var(--size-3);
     }
   }
 
   .title {
     font-weight: 700;
-    font-size: var(--font-size-3);
-    line-height: 1.2;
-    margin-block-start: var(--size-2);
-  }
-
-  .excerpt {
-    color: var(--stone-8);
+    line-height: 1.25;
+    font-size: var(--font-size-bigger);
   }
 
   .meta {
@@ -120,24 +141,17 @@ const posts = await getPostsForHomepage()
     }
   }
 
-  .header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1ch;
-  }
-
   .related-separator {
     border: none;
-    height: 1px;
-    background-color: var(--stone-3);
-    width: 15ch;
-    margin-block: var(--size-4);
+    border-block-end: 2px dashed var(--stone-4);
+    width: 90%;
+    margin-block: var(--size-5);
   }
 
   .related-title {
-    font-size: 1rem;
+    font-size: var(--font-size-big);
     margin: 0;
+    margin-block-end: var(--size-3);
   }
 
   .related-posts {
@@ -164,26 +178,32 @@ const posts = await getPostsForHomepage()
             #{tag}
           </h2>
 
-          <article class="flow article">
-            <a href={data.url} class="link header">
-              <h3 class="title">
-                <Markdown.Inline of={data.title} />
-              </h3>
-            </a>
+          <article class="article">
+            <header>
+              <a href={data.url} class="link">
+                <h3 class="title">
+                  <Markdown.Inline of={data.title} />
+                </h3>
+              </a>
+            </header>
 
-            <address class="meta">
-              <author>@{data.author}</author>
+            <div class="flow article-container">
+              <p class="excerpt">
+                <Markdown.Inline of={data.excerpt} />
+              </p>
 
-              <time datetime="" class="published_at">
-                {data.formattedDate}
-              </time>
-            </address>
+              <footer>
+                <address class="meta">
+                  <author>@{data.author}</author>
+
+                  <time datetime="" class="published_at">
+                    {data.formattedDate}
+                  </time>
+                </address>
+              </footer>
+            </div>
 
             <Picture figure={data?.figure} cover={data?.cover} showCaption={false} />
-
-            <p class="excerpt">
-              <Markdown.Inline of={data.excerpt} />
-            </p>
           </article>
 
           {rest.length > 0 && (

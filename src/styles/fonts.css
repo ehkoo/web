@@ -1,39 +1,7 @@
 @font-face {
-  font-family: 'Haskoy';
+  font-family: 'Podkova';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400 800;
   font-display: swap;
-  src: url('/fonts/Haskoy-variable.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Haskoy';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Haskoy-variable.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Haskoy';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Haskoy-variable.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Haskoy';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Haskoy-variable.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Haskoy';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/Haskoy-variable.woff2') format('woff2');
+  src: url('/fonts/Podkova[wght].woff2') format('woff2-variations');
 }
