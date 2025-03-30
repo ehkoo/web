@@ -50,7 +50,7 @@ Nhưng nhiều khi chúng ta sử dụng flex/ grid chỉ với duy nhất mục
 }
 ```
 
-Theo lý thuyết thì các giá trị để phân bố phần tử con (_distributed alignment_) như `space-between`, `space-evently`, và phân bố dựa vào baseline (_baseline alignment_) cũng phải được hỗ trợ, nhưng mình thử qua trên Firefox và Chrome thì chỉ thấy dùng với baseline là được thôi. Safari có chút phản ứng khi dùng `align-content: space-evenly` nhưng có gì đó không đúng lắm.
+Theo lý thuyết thì các giá trị để phân bố phần tử con _(distributed alignment)_ như `space-between`, `space-evently`, và phân bố dựa vào baseline _(baseline alignment)_ cũng phải được hỗ trợ, nhưng mình thử qua trên Firefox và Chrome thì chỉ thấy dùng với baseline là được thôi. Safari có chút phản ứng khi dùng `align-content: space-evenly` nhưng có gì đó không đúng lắm.
 
 Trăm nghe không bằng một thấy, bạn có thể xem qua ví dụ dưới đây để thử nghiệm các giá trị khác nhau của `align-content` khi được áp dụng cho nội dung dạng block.
 
