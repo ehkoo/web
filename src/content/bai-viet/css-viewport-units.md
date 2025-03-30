@@ -2,6 +2,15 @@
 title: 'Những đơn vị mới trong CSS dành cho viewport'
 date: 2023-01-11
 cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1673459845/ehkoo/photo-1472201248592-1241c92256ff.jpg
+figure:
+  src: &cover
+  alt: 'Một khung cửa sổ màu xanh dương được gắn trên tường.'
+  author:
+    name: 'Gareth Harper'
+    url: https://unsplash.com/@garethharper
+  credit:
+    from: Unsplash
+    url: https://unsplash.com/photos/yACpBcInUos
 tags:
   - CSS
   - Bài mì ăn liền
@@ -9,13 +18,9 @@ excerpt: 'Các đơn vị như lvw, svw, hay dvw giúp tính toán kích thướ
 author: kcjpop
 ---
 
-![](https://res.cloudinary.com/duqeezi8j/image/upload/f_auto/v1673459845/ehkoo/photo-1472201248592-1241c92256ff.jpg)
-
-_Hình chụp bởi [Gareth Harper](https://unsplash.com/@garethharper). Nguồn: [Unsplash](https://unsplash.com/photos/yACpBcInUos)_
-
 **Cảnh báo**
 
-Bài viết này sẽ dùng "_viewport_" để chỉ không gian (thường là hình chữ nhật) trên màn hình mà người dùng đang nhìn thấy. Đối với desktop thì đó là kích thước của trình duyệt, còn trên mobile thì toàn bộ màn hình. Ngoài ra nội dung dưới đây có thể _không chính xác 100%_ theo định nghĩa vì đã bị giản lược theo cách mình hiểu, nên mọi người thấy chỗ nào chưa đúng/ có thể gây hiểu lầm thì để lại bình luận nha.
+Bài viết này sẽ dùng _"viewport"_ để chỉ không gian (thường là hình chữ nhật) trên màn hình mà người dùng đang nhìn thấy. Đối với desktop thì đó là kích thước của trình duyệt, còn trên mobile thì toàn bộ màn hình. Ngoài ra nội dung dưới đây có thể _không chính xác 100%_ theo định nghĩa vì đã bị giản lược theo cách mình hiểu, nên mọi người thấy chỗ nào chưa đúng/ có thể gây hiểu lầm thì để lại bình luận nha.
 
 ## Đơn vị dành cho viewport là gì?
 
@@ -82,8 +87,8 @@ So sánh giữa large và small viewport units.
 
 Cuối cùng là vũ đoàn **LiDo**, bao gồm `dvw`, `dvh`, `dvmin`, và `dvmax`, theo ý nghĩa là:
 
-- Nếu UI của trình duyệt hiển thị => dynamic viewport units = small viewport units
-- Ngược lại, nếu UI của trình duyệt ẩn đi => dynamic viewport units = large viewport units
+- Nếu UI của trình duyệt hiển thị → dynamic viewport units = small viewport units
+- Ngược lại, nếu UI của trình duyệt ẩn đi → dynamic viewport units = large viewport units
 
 Vì giá trị của nhóm `dv*` tùy thuộc vào UI của trình duyệt, và UI của trình duyệt thì thay đổi liên tục, nên cần phải cân nhắc khi dùng các giá trị này vì chúng có thể làm web chậm hơn, cũng như tạo ra chuyển động (animation) không cần thiết làm ảnh hưởng đến những người nhạy cảm về tiền đình.
 

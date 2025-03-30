@@ -8,7 +8,7 @@ cover: https://res.cloudinary.com/duqeezi8j/image/upload/f_auto,w_1280/v17136971
 author: kcjpop
 figure:
   src: &cover
-  alt: 'Một bức tường được lợp bằng nhiều mảnh ngói khác màu ở Luân Đôn, Vương quốc Anh'
+  alt: 'Một bức tường được lợp bằng nhiều mảnh ngói khác màu ở Luân Đôn, Vương quốc Anh.'
   author:
     name: 'Andrew Ridley'
     url: https://unsplash.com/@aridley88
