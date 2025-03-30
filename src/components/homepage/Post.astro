@@ -1,0 +1,94 @@
+---
+import { Markdown } from '@astropub/md'
+import Picture from '@/components/Picture.astro'
+
+const { post } = Astro.props
+---
+
+<style>
+  .article {
+    --flow-space: var(--size-4);
+
+    display: grid;
+    align-items: center;
+    gap: var(--size-3);
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+
+    @media (width > 60rem) {
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    }
+
+    & :global(header) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1ch;
+
+      grid-column: 1 / -1;
+    }
+
+    & :global(code) {
+      font-size: var(--code-font-size);
+      background-color: var(--code-background);
+      color: var(--code-color);
+      padding-inline: var(--size-1);
+      border-radius: var(--radius-1);
+    }
+
+    & :global(picture > img) {
+      border-radius: var(--size-3);
+    }
+  }
+
+  .link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: var(--font-size-bigger);
+  }
+
+  .meta {
+    color: var(--stone-8);
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1ch;
+
+    font-style: normal;
+  }
+</style>
+
+<article class="article">
+  <header>
+    <a href={post.url} class="link">
+      <h3 class="title">
+        <Markdown.Inline of={post.title} />
+      </h3>
+    </a>
+  </header>
+
+  <div class="flow article-container">
+    <p class="excerpt">
+      <Markdown.Inline of={post.excerpt} />
+    </p>
+
+    <footer>
+      <address class="meta">
+        <author>@{post.author}</author>
+
+        <time datetime="" class="published_at">
+          {post.formattedDate}
+        </time>
+      </address>
+    </footer>
+  </div>
+
+  <Picture figure={post?.figure} cover={post?.cover} showCaption={false} />
+</article>

@@ -1,0 +1,46 @@
+---
+const { posts } = Astro.props
+---
+
+<style>
+  .separator {
+    border: none;
+    border-block-end: 2px dashed var(--stone-4);
+    width: 90%;
+    margin-block: var(--size-4);
+  }
+
+  .title {
+    font-size: var(--font-size-big);
+    margin: 0;
+    margin-block-end: var(--size-3);
+  }
+
+  .posts {
+    margin-inline-start: 0;
+    padding-inline-start: var(--size-4);
+
+    & :global(li)::marker {
+      content: '→ ';
+      color: var(--stone-7);
+    }
+  }
+</style>
+
+<hr class="separator" />
+
+<div>
+  <h3 class="title">Bài cùng chủ đề</h3>
+
+  <ul class="posts flow">
+    {
+      posts.map((post) => (
+        <li>
+          <a class="no-underline-link" href={post.data.url}>
+            {post.data.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

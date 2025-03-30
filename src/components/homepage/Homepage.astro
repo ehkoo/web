@@ -1,0 +1,106 @@
+---
+import { getPostsForHomepage, resizePostCover } from '@/lib'
+import RelatedPosts from './RelatedPosts.astro'
+import Post from './Post.astro'
+
+const resizeCover = (post) => resizePostCover(post, { width: 400, height: 225 })
+const posts = await getPostsForHomepage()
+---
+
+<style>
+  .posts {
+    --flow-space: 0.5em;
+
+    display: grid;
+    column-gap: var(--size-4);
+    row-gap: calc(2 * var(--size-4));
+
+    @media (width > 60rem) {
+      grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    }
+
+    @media (width > 80rem) {
+      grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+    }
+  }
+
+  .topic {
+    --topic-border-size: 2px;
+    --topic-border-color: var(--stone-8);
+    --topic-padding-size: var(--size-4);
+    --topic-radius: var(--radius-2);
+
+    border: var(--topic-border-size) solid var(--topic-border-color);
+    padding-inline: var(--topic-padding-size);
+    padding-block-end: var(--topic-padding-size);
+    border-radius: var(--topic-radius);
+  }
+
+  .topic-title {
+    --_padding-size: 0.5ch;
+
+    &[data-variant='css'] {
+      --_bg: var(--indigo-2);
+      --_fg: var(--indigo-9);
+    }
+    &[data-variant='javascript'] {
+      --_bg: var(--yellow-3);
+      --_fg: var(--stone-9);
+    }
+    &[data-variant='html'] {
+      --_bg: var(--pink-2);
+      --_fg: var(--pink-9);
+    }
+    &[data-variant='react'] {
+      --_bg: var(--blue-2);
+      --_fg: var(--blue-9);
+    }
+    &[data-variant='vue'] {
+      --_bg: var(--green-2);
+      --_fg: var(--green-9);
+    }
+    &[data-variant='vue'] {
+      --_bg: var(--green-2);
+      --_fg: var(--green-9);
+    }
+    &[data-variant='typescript'] {
+      --_bg: #3178c6;
+      --_fg: #ffffff;
+    }
+    &[data-variant='git'] {
+      --_bg: #fff;
+      --_fg: #da4b34;
+    }
+
+    background-color: var(--_bg, var(--surface-0));
+    color: var(--_fg, currentColor);
+    border-radius: var(--topic-radius);
+    font-size: var(--font-size-2);
+    text-align: center;
+    margin-block-start: calc((1ex + var(--_padding-size) + var(--topic-border-size)) * -1);
+    margin-inline: 1ch;
+    border: var(--topic-border-size) solid var(--_fg, var(--topic-border-color));
+    padding-block: var(--_padding-size);
+  }
+</style>
+
+<div class="posts">
+  {
+    posts.map(([tag, posts]) => {
+      const [p, ...rest] = posts
+      const post = resizeCover(p)
+
+      return (
+        <section class="flow topic">
+          <h2 data-variant={tag.toLowerCase()} class="topic-title">
+            #{tag}
+          </h2>
+
+          <Post post={post.data} />
+
+          {rest.length > 0 && <RelatedPosts posts={rest} />}
+        </section>
+      )
+    })
+  }
+</div>
