@@ -1,7 +1,7 @@
 ---
 import { transformImage } from '@/lib'
 
-const { figure, cover: baseCover, showCaption = true } = Astro.props
+const { figure, cover: baseCover, showCaption = true, alt = '' } = Astro.props
 
 const cover = figure?.src ?? baseCover
 const sources =
@@ -30,7 +30,7 @@ const fallbackCover = cover != null ? transformImage(cover, { c: 'fill', w: 1024
           <source {media} {srcset} />
         ))}
 
-        <img role="img" class="image" src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" />
+        <img role="img" class="image" src={fallbackCover} alt={figure.alt} loading="lazy" decoding="async" alt={alt} />
       </picture>
 
       {showCaption && figure.alt && (
