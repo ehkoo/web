@@ -19,7 +19,7 @@
     "@astropub/md": "1.0.0",
     "@csstools/postcss-global-data": "3.0.0",
     "@zachleat/browser-window": "1.0.15",
-    "astro": "5.12.8",
+    "astro": "5.13.1",
     "mdast-util-to-string": "4.0.0",
     "open-props": "1.7.13",
     "postcss": "8.4.47",
