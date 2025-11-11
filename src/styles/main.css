@@ -22,17 +22,17 @@
 }
 
 body {
-  --font-monospace: 'Sometype Mono', Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono,
-    Source Code Pro, monospace;
+  --font-monospace: Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
 
   --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
     Segoe UI Emoji;
 
   font-family: var(--font-sans);
-  color: var(--text-primary);
   font-feature-settings: 'ss02', 'ss03', 'ss04';
-
   font-size: var(--font-size-base);
+
+  color: var(--text-primary);
+  background-color: var(--surface-0);
 }
 
 a {
@@ -48,16 +48,14 @@ a {
   }
 }
 
+/* Focus ring
+ */
 *:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px var(--indigo-6);
 }
 
-body {
-  background-color: var(--surface-0);
-}
-
-code {
+:where(code) {
   font-family: var(--font-monospace);
 }
 

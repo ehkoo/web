@@ -1,12 +1,19 @@
 ---
 import { Markdown } from '@astropub/md'
 import Base from '@/layouts/Base.astro'
+import { formatDate } from '@/lib'
 
-const title = Astro.props.title ?? Astro.props.content.title ?? Astro.props.frontmatter.title
-const header = Astro.props.header ?? title
+const { post } = Astro.props
+
+const title = post.title
+const header = post.header ?? title
 ---
 
 <style>
+  .article {
+    max-width: 70ch;
+  }
+
   .header {
     line-height: 1.2;
   }
@@ -21,14 +28,36 @@ const header = Astro.props.header ?? title
     color: var(--code-color);
     background-color: var(--code-background);
     font-variant-ligatures: none;
-    word-break: break-word;
+    white-space: nowrap;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .author {
+    font-style: normal;
   }
 </style>
 
 <Base title={title}>
-  <article class="flow">
-    <header>
+  <article class="article flow">
+    <header class="flow">
       <h1 class="header"><Markdown.Inline of={header} /></h1>
+
+      <div class="meta">
+        <address class="author">
+          Tác giả: @{post.author}
+        </address>
+
+        <span>
+          Đăng ngày: <time datetime={post.date} class="published_at">
+            {formatDate(post.date)}
+          </time>
+        </span>
+      </div>
     </header>
 
     <div class="global:content">

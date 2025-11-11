@@ -83,7 +83,7 @@ const { post } = Astro.props
       <address class="meta">
         <author>@{post.author}</author>
 
-        <time datetime="" class="published_at">
+        <time datetime={post.date} class="published_at">
           {post.formattedDate}
         </time>
       </address>

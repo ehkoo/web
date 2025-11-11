@@ -8,7 +8,7 @@ const { entry } = Astro.props
 const { Content } = await render(entry)
 ---
 
-<Post title={entry.data.title} header={entry.data.title}>
+<Post post={entry.data}>
   <Picture figure={entry.data?.figure} cover={entry.data?.cover} />
 
   <Content />
