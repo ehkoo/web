@@ -11,30 +11,28 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro build && astro preview"
+    "build": "astro build"
   },
   "dependencies": {
-    "@astrojs/rss": "4.0.11",
+    "@astrojs/rss": "4.0.13",
     "@astropub/md": "1.0.0",
-    "@csstools/postcss-global-data": "3.0.0",
+    "@csstools/postcss-global-data": "3.1.0",
     "@zachleat/browser-window": "1.0.15",
-    "astro": "5.14.3",
+    "astro": "5.15.5",
     "mdast-util-to-string": "4.0.0",
-    "open-props": "1.7.13",
-    "postcss": "8.4.47",
-    "postcss-calc": "10.0.2",
-    "postcss-custom-media": "11.0.4",
+    "open-props": "1.7.16",
+    "postcss": "8.5.6",
+    "postcss-calc": "10.1.1",
+    "postcss-custom-media": "11.0.6",
     "postcss-each": "1.1.0",
-    "postcss-jit-props": "1.0.14",
-    "postcss-nested": "6.2.0",
-    "postcss-preset-env": "10.0.8",
+    "postcss-jit-props": "1.0.16",
+    "postcss-preset-env": "10.4.0",
     "reading-time": "1.5.0",
     "rehype-external-links": "3.0.0",
     "slugify": "1.6.6"
   },
   "devDependencies": {
-    "eslint": "9.22.0",
-    "eslint-plugin-prettier": "5.2.3"
+    "eslint": "9.39.1",
+    "eslint-plugin-prettier": "5.5.4"
   }
 }

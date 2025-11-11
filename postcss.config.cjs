@@ -11,7 +11,6 @@ const plugins = [
     stage: 3,
     features: {
       'custom-media-queries': true,
-      'nesting-rules': true,
     },
   }),
   postcssJitProps(OpenProps),
