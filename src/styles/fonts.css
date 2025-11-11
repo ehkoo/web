@@ -1,7 +1,14 @@
 @font-face {
-  font-family: 'Podkova';
+  font-family: 'Work Sans';
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 400 900;
   font-display: swap;
-  src: url('/fonts/Podkova[wght].woff2') format('woff2-variations');
+  src: url('/fonts/WorkSans-VariableFont_wght.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/WorkSans-Italic-VariableFont_wght.woff2') format('woff2-variations');
 }
