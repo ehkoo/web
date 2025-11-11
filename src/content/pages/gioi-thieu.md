@@ -1,11 +1,8 @@
 ---
-layout: ../layouts/Post.astro
-isPage: true
-slug: gioi-thieu
-title: Ehkoo là gì?
+title: 'Giới thiệu'
 ---
 
-### Ê-ku?
+### Ê-ku là gì?
 
 Là một trang về lập trình mới keng xà beng, chủ yếu nói về công nghệ web và những chuyện lập trình xung quanh chúng. Ý tưởng thực hiện Ehkoo có từ 2014 nhưng sau đó vì quá làm biếng mà website bỏ lơ không cập nhật. Đến cuối năm 2017 thì bỗng nhiên được hồi sinh mà không rõ lý do.
 

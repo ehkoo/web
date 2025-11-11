@@ -7,6 +7,7 @@ const { post } = Astro.props
 
 const title = post.title
 const header = post.header ?? title
+const showMeta = post.author && post.date
 ---
 
 <style>
@@ -47,17 +48,20 @@ const header = post.header ?? title
     <header class="flow">
       <h1 class="header"><Markdown.Inline of={header} /></h1>
 
-      <div class="meta">
-        <address class="author">
-          Tác giả: @{post.author}
-        </address>
+      {
+        showMeta && (
+          <div class="meta">
+            <address class="author">Tác giả: @{post.author}</address>
 
-        <span>
-          Đăng ngày: <time datetime={post.date} class="published_at">
-            {formatDate(post.date)}
-          </time>
-        </span>
-      </div>
+            <span>
+              Đăng ngày:{' '}
+              <time datetime={post.date} class="published_at">
+                {formatDate(post.date)}
+              </time>
+            </span>
+          </div>
+        )
+      }
     </header>
 
     <div class="global:content">

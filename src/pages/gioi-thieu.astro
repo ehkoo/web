@@ -1,0 +1,12 @@
+---
+import { getEntry, render } from 'astro:content'
+
+import Post from '@/layouts/Post.astro'
+
+const entry = await getEntry('page', 'gioi-thieu')
+const { Content } = await render(entry)
+---
+
+<Post post={entry.data}>
+  <Content />
+</Post>
