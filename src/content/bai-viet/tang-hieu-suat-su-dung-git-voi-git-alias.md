@@ -13,6 +13,9 @@ author: kcjpop
 Dưới đây là một số alias mà Ehkoo thường dùng:
 
 ```bash
+# Kéo code mới từ server về và rebase những commit ở local lên trước
+git config --global alias.pr "pull --rebase"
+
 git config --global alias.a "add"
 
 # Đánh dấu tất cả tập tin trong thư mục hiện tại, chuẩn bị commit
