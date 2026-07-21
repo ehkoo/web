@@ -14,7 +14,7 @@
     "build": "astro build"
   },
   "dependencies": {
-    "@astrojs/rss": "4.0.13",
+    "@astrojs/rss": "4.0.19",
     "@astropub/md": "1.0.0",
     "@csstools/postcss-global-data": "3.1.0",
     "@zachleat/browser-window": "1.0.15",
