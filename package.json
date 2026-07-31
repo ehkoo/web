@@ -21,7 +21,7 @@
     "astro": "5.18.1",
     "mdast-util-to-string": "4.0.0",
     "open-props": "1.7.16",
-    "postcss": "8.5.6",
+    "postcss": "8.5.18",
     "postcss-calc": "10.1.1",
     "postcss-custom-media": "11.0.6",
     "postcss-each": "1.1.0",
